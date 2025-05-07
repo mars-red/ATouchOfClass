@@ -1,0 +1,15 @@
+{
+  "tall_door_open": {
+    "sounds": [{
+        "name": "atouchofclass:tall_door_open",
+        "pitch": 2.0
+      }]
+  },
+
+  "tall_door_close": {
+    "sounds": [{
+        "name": "atouchofclass:tall_door_close",
+        "pitch": 2.0
+      }]
+  }
+}
