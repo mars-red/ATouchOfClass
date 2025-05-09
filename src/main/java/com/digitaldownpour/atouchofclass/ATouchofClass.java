@@ -12,6 +12,7 @@ public class ATouchofClass {
     public static final String MODID = "atouchofclass";
 
     public ATouchofClass(IEventBus bus) {
+        ModItems.register(bus);
         ModBlocks.register(bus);
         ModSounds.SOUNDS.register(bus);
 

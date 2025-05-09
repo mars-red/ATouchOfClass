@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": "minecraft:gold_nugget"
+  },
+  "pattern": [
+    "N",
+    "N"
+  ],
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:door_key"
+  }
+}

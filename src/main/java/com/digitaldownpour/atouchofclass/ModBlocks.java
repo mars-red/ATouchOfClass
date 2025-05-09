@@ -30,7 +30,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ATouchofClass.MODID);
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ATouchofClass.MODID);
 
     public static final DeferredHolder<Block, TallDoorBlock> TALL_DOOR = BLOCKS.register("tall_door",
             registryName -> new TallDoorBlock(BlockBehaviour.Properties.of()
@@ -40,12 +39,11 @@ public class ModBlocks {
                     .noOcclusion()
                     .pushReaction(PushReaction.DESTROY)));
 
-    public static final DeferredItem<BlockItem> TALL_DOOR_ITEM = ITEMS.registerSimpleBlockItem("tall_door",
+    public static final DeferredItem<BlockItem> TALL_DOOR_ITEM = ModItems.ITEMS.registerSimpleBlockItem("tall_door",
             TALL_DOOR);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
-        ITEMS.register(eventBus);
 
         eventBus.addListener(ModBlocks::addCreative);
     }
