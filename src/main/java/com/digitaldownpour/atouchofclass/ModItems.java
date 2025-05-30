@@ -1,5 +1,6 @@
 package com.digitaldownpour.atouchofclass;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -11,7 +12,13 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ATouchofClass.MODID);
 
-    public static final DeferredItem<Item> DOOR_KEY = ModItems.ITEMS.registerSimpleItem("door_key");
+    //public static final DeferredItem<Item> DOOR_KEY = ITEMS.registerSimpleItem("door_key");
+    public static final DeferredItem<DoorKeyItem> DOOR_KEY = ITEMS.registerItem(
+            "door_key",
+            DoorKeyItem::new,
+            new Item.Properties()
+                    //.component(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE.get(), new KeyableInfo("", ""))
+    );
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

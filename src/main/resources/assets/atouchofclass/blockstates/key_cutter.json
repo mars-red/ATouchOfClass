@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/key_cutter"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/key_cutter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/key_cutter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/key_cutter",
+      "y": 270
+    }
+  }
+}

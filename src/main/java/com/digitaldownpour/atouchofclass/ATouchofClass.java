@@ -12,9 +12,11 @@ public class ATouchofClass {
     public static final String MODID = "atouchofclass";
 
     public ATouchofClass(IEventBus bus) {
+        ModComponents.register(bus);
         ModItems.register(bus);
         ModBlocks.register(bus);
         ModSounds.SOUNDS.register(bus);
+        ModMenus.register(bus);
 
         bus.addListener(this::commonSetup);
         bus.addListener(this::clientSetup);
