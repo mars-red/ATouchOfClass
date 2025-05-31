@@ -1,6 +1,7 @@
 package com.digitaldownpour.atouchofclass;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -20,15 +21,26 @@ public class ModItems {
                     //.component(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE.get(), new KeyableInfo("", ""))
     );
 
+    public static DeferredItem<TallDoorItem> TALL_DOOR_ITEM = ITEMS.register(
+            "tall_door",
+                (key) -> new TallDoorItem(ModBlocks.TALL_DOOR.get(),
+                        new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<BlockItem> KEY_CUTTER_ITEM = ITEMS.registerSimpleBlockItem("key_cutter", ModBlocks.KEY_CUTTER);
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
-
         eventBus.addListener(ModItems::addCreative);
     }
 
     private static void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(DOOR_KEY);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(TALL_DOOR_ITEM);
+            event.accept(KEY_CUTTER_ITEM);
         }
     }
 }

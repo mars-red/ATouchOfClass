@@ -13,8 +13,8 @@ public class ATouchofClass {
 
     public ATouchofClass(IEventBus bus) {
         ModComponents.register(bus);
-        ModItems.register(bus);
         ModBlocks.register(bus);
+        ModItems.register(bus);
         ModSounds.SOUNDS.register(bus);
         ModMenus.register(bus);
 
