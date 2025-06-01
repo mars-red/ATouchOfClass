@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:dark_oak_planks",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "DG ",
+    "DG ",
+    "DG "
+  ],
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:tall_sidelight"
+  }
+}

@@ -2,6 +2,7 @@ package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.blocks.KeyCutterBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallDoorBlock;
+import com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import net.minecraft.core.registries.Registries;
@@ -30,7 +31,17 @@ public class ModBlocks {
                     .mapColor(MapColor.WOOD)
                     .strength(3.0F)
                     .noOcclusion()
-                    .pushReaction(PushReaction.DESTROY)));
+            )
+    );
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_SIDELIGHT = BLOCKS.register("tall_sidelight",
+            registryName -> new TallSidelightBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.NONE)
+                    .strength(3.0F)
+                    .noOcclusion()
+            )
+    );
 
     public static final DeferredHolder<Block, KeyCutterBlock> KEY_CUTTER = BLOCKS.register("key_cutter",
             registryName -> new KeyCutterBlock(BlockBehaviour.Properties.of()
@@ -38,19 +49,22 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_LIGHT_GRAY)
                     .noOcclusion()
                     .strength(3.0F)
-            ));
+            )
+    );
 
     public static final Supplier<BlockEntityType<KeyCutterBlockEntity>> KEY_CUTTER_BE = BLOCK_ENTITY_TYPES.register("key_cutter_be",
             () -> new BlockEntityType<>(
                     KeyCutterBlockEntity::new,
                     KEY_CUTTER.get()
-            ));
+            )
+    );
 
     public static final Supplier<BlockEntityType<TallDoorBlockEntity>> TALL_DOOR_BE = BLOCK_ENTITY_TYPES.register("tall_door_be",
             () -> new BlockEntityType<>(
                     TallDoorBlockEntity::new,
                     TALL_DOOR.get()
-            ));
+            )
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
