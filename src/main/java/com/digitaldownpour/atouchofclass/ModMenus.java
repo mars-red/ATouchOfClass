@@ -1,5 +1,9 @@
 package com.digitaldownpour.atouchofclass;
 
+import com.digitaldownpour.atouchofclass.gui.KeyCutterMenuScreen;
+import com.digitaldownpour.atouchofclass.network.ClientPayloadHandler;
+import com.digitaldownpour.atouchofclass.network.ServerPayloadHandler;
+import com.digitaldownpour.atouchofclass.network.SyncKeyCutterMenuPayload;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.inventory.MenuType;

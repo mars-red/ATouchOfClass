@@ -1,5 +1,9 @@
 package com.digitaldownpour.atouchofclass;
 
+import com.digitaldownpour.atouchofclass.blocks.KeyCutterBlock;
+import com.digitaldownpour.atouchofclass.blocks.TallDoorBlock;
+import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
+import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;

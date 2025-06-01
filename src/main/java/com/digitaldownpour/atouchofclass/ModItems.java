@@ -1,5 +1,7 @@
 package com.digitaldownpour.atouchofclass;
 
+import com.digitaldownpour.atouchofclass.items.DoorKeyItem;
+import com.digitaldownpour.atouchofclass.items.TallDoorItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;

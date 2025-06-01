@@ -1,17 +1,13 @@
 package com.digitaldownpour.atouchofclass;
 
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.network.chat.Component;
+import com.digitaldownpour.atouchofclass.components.KeyableInfo;
+import com.digitaldownpour.atouchofclass.items.ObservableItemStackHandler;
+import com.digitaldownpour.atouchofclass.items.SlotChangeListener;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.inventory.ContainerListener;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.SlotItemHandler;
@@ -20,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class KeyCutterMenu extends AbstractContainerMenu {
     private HashSet<String> keyableTypes = new HashSet<String>(Arrays.asList(
