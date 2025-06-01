@@ -42,6 +42,12 @@ public class ModBlocks {
                     KEY_CUTTER.get()
             ));
 
+    public static final Supplier<BlockEntityType<TallDoorBlockEntity>> TALL_DOOR_BE = BLOCK_ENTITY_TYPES.register("tall_door_be",
+            () -> new BlockEntityType<>(
+                    TallDoorBlockEntity::new,
+                    TALL_DOOR.get()
+            ));
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         BLOCK_ENTITY_TYPES.register(eventBus);

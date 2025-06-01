@@ -18,13 +18,12 @@ public class ModItems {
             "door_key",
             DoorKeyItem::new,
             new Item.Properties()
-                    //.component(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE.get(), new KeyableInfo("", ""))
     );
 
     public static DeferredItem<TallDoorItem> TALL_DOOR_ITEM = ITEMS.register(
             "tall_door",
-                (key) -> new TallDoorItem(ModBlocks.TALL_DOOR.get(),
-                        new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+            (key) -> new TallDoorItem(ModBlocks.TALL_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
     );
 
     public static final DeferredItem<BlockItem> KEY_CUTTER_ITEM = ITEMS.registerSimpleBlockItem("key_cutter", ModBlocks.KEY_CUTTER);

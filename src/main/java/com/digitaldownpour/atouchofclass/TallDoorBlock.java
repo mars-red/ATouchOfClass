@@ -3,13 +3,17 @@ package com.digitaldownpour.atouchofclass;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -22,8 +26,9 @@ import net.minecraft.world.level.block.state.properties.DoorHingeSide;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.Nullable;
 
-public class TallDoorBlock extends Block {
+public class TallDoorBlock extends Block implements EntityBlock {
     public static final VoxelShape Z_COLLISION_SHAPE = Block.box((double) 0.0F, (double) 0.0F, (double) 0.0F, (double) 16.0F, (double) 16.0F, (double) 4.0F);
     public static final VoxelShape X_COLLISION_SHAPE = Block.box((double) 0.0F, (double) 0.0F, (double) 0.0F, (double) 4.0F, (double) 16.0F, (double) 16.0F);
 
@@ -115,10 +120,34 @@ public class TallDoorBlock extends Block {
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (!level.isClientSide) {
             BlockPos basePos = pos.below(state.getValue(PART));
-            toggleDoor(level, basePos);
-            return InteractionResult.SUCCESS;
+            if (level.getBlockEntity(basePos) instanceof TallDoorBlockEntity be) {
+                String keyCode = be.getKeyCode();
+                if (keyCode == null || keyCode.isEmpty()) {
+                    toggleDoor(level, basePos);
+                    return InteractionResult.SUCCESS;
+                }
+
+                return InteractionResult.FAIL;
+            }
         }
         return InteractionResult.CONSUME;
+    }
+
+    @Override
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        if (stack.has(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE) && !level.isClientSide) {
+            BlockPos basePos = pos.below(state.getValue(PART));
+            if (level.getBlockEntity(basePos) instanceof TallDoorBlockEntity be) {
+                String doorKeyCode = be.getKeyCode();
+                String keyCode = stack.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE).keyCode();
+                if (doorKeyCode == null || doorKeyCode.isEmpty() || doorKeyCode.equals(keyCode)) {
+                    toggleDoor(level, basePos);
+                    return InteractionResult.SUCCESS;
+                }
+            }
+        }
+
+        return InteractionResult.TRY_WITH_EMPTY_HAND;
     }
 
     private void toggleDoor(Level world, BlockPos basePos) {
@@ -194,5 +223,8 @@ public class TallDoorBlock extends Block {
                     && belowState.getValue(PART) == part - 1;
         }    }
 
-    // Optionally, override onPlace() and onRemove() to automatically place/remove top and middle parts
+    @Override
+    public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
+        return new TallDoorBlockEntity(blockPos, blockState);
+    }
 }
