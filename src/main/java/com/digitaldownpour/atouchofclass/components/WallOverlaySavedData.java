@@ -12,8 +12,6 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.saveddata.SavedData;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
-import java.util.HashMap;
 import java.util.Map;
 
 public class WallOverlaySavedData extends SavedData {
@@ -48,8 +46,12 @@ public class WallOverlaySavedData extends SavedData {
             Direction face,
             @org.jetbrains.annotations.Nullable ResourceLocation texture
     ) {
-
+        store.setFace(pos, face, texture);
         setDirty();
+    }
+
+    public Map<BlockPos, WallOverlayData> getChunkSnapshot(ChunkPos chunkPos) {
+        return store.getChunkIfPresent(chunkPos);
     }
 
     public static WallOverlaySavedData load(

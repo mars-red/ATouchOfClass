@@ -9,8 +9,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashMap;
 import java.util.Map;
 
-import static javax.swing.UIManager.get;
-
 public class WallOverlayStore {
     protected final Map<
         ChunkPos,
@@ -46,6 +44,35 @@ public class WallOverlayStore {
         return overlaysByChunk.computeIfAbsent(chunkPos, ignored -> new HashMap<>());
     }
 
+    public Map<BlockPos, WallOverlayData> getChunkIfPresent(ChunkPos chunkPos) {
+        Map<BlockPos, WallOverlayData> overlays = overlaysByChunk.get(chunkPos);
+        return overlays == null ? Map.of() : Map.copyOf(overlays);
+    }
+
+    public void replaceChunk(
+            ChunkPos chunkPos,
+            Map<BlockPos, WallOverlayData> overlays
+    ) {
+        if (overlays.isEmpty()) {
+            overlaysByChunk.remove(chunkPos);
+            return;
+        }
+
+        Map<BlockPos, WallOverlayData> replacement = new HashMap<>();
+        overlays.forEach((pos, overlay) -> {
+            BlockPos immutablePos = pos.immutable();
+            if (new ChunkPos(immutablePos).equals(chunkPos) && overlay.hasAny()) {
+                replacement.put(immutablePos, overlay);
+            }
+        });
+
+        if (replacement.isEmpty()) {
+            overlaysByChunk.remove(chunkPos);
+        } else {
+            overlaysByChunk.put(chunkPos, replacement);
+        }
+    }
+
     public Map<ChunkPos, Map<BlockPos, WallOverlayData>> getChunks() {
         return overlaysByChunk;
     }
@@ -66,12 +93,12 @@ public class WallOverlayStore {
 
     public void setOverlay(BlockPos pos, WallOverlayData overlay) {
         BlockPos immutablePos = pos.immutable();
-        Map<BlockPos, WallOverlayData> chunkOverlays = overlaysByChunk.computeIfAbsent(new ChunkPos(immutablePos), ignored -> new HashMap<>());
 
         if (overlay.hasAny()) {
+            Map<BlockPos, WallOverlayData> chunkOverlays = overlaysByChunk.computeIfAbsent(new ChunkPos(immutablePos), ignored -> new HashMap<>());
             chunkOverlays.put(immutablePos, overlay);
         } else {
-            chunkOverlays.remove(immutablePos);
+            removeOverlay(immutablePos);
         }
     }
 

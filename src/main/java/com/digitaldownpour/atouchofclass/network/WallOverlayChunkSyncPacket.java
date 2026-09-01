@@ -1,10 +1,9 @@
 package com.digitaldownpour.atouchofclass.network;
 
 import com.digitaldownpour.atouchofclass.ATouchofClass;
+import com.digitaldownpour.atouchofclass.components.ClientWallOverlayData;
 import com.digitaldownpour.atouchofclass.components.WallOverlayData;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
@@ -15,10 +14,10 @@ import net.minecraft.world.level.ChunkPos;
 import net.neoforged.neoforge.network.codec.NeoForgeStreamCodecs;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
+import java.util.HashMap;
 import java.util.List;
-import java.util.Optional;
+import java.util.Map;
 
 public record WallOverlayChunkSyncPacket(
         ChunkPos chunkPos,
@@ -43,7 +42,7 @@ public record WallOverlayChunkSyncPacket(
     }
 
     private static final int MAX_OVERLAYS_PER_PACKET = 4096;
-    public static final CustomPacketPayload.Type<WallOverlayChunkSyncPacket> TYPE = new WallOverlayChunkSyncPacket.Type<>(ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "key_cutter_menu_payload"));
+    public static final CustomPacketPayload.Type<WallOverlayChunkSyncPacket> TYPE = new WallOverlayChunkSyncPacket.Type<>(ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "wall_overlay_chunk_sync_packet"));
 
     public static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "wall_overlay_chunk_sync");
 
@@ -82,7 +81,9 @@ public record WallOverlayChunkSyncPacket(
     }
 
     public static void handle(final WallOverlayChunkSyncPacket data, final IPayloadContext context) {
-        //
+        Map<BlockPos, WallOverlayData> overlays = new HashMap<>();
+        data.overlays.forEach(entry -> overlays.put(entry.pos(), entry.data()));
+        ClientWallOverlayData.replaceChunk(data.chunkPos, overlays);
     }
 
 }

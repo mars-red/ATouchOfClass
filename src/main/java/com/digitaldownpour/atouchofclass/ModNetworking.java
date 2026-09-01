@@ -7,17 +7,30 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.ChunkPos;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.DirectionalPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
-public class ModNetworking {
+@EventBusSubscriber(
+        modid = ATouchofClass.MODID,
+        bus = EventBusSubscriber.Bus.MOD
+)public class ModNetworking {
 
     @SubscribeEvent // on the mod event bus
     public static void register(RegisterPayloadHandlersEvent event) {
 
         final PayloadRegistrar registrar = event.registrar("1");
+
+        registrar.playBidirectional(
+                SyncKeyCutterMenuPayload.TYPE,
+                SyncKeyCutterMenuPayload.STREAM_CODEC,
+                new DirectionalPayloadHandler<>(
+                        ClientPayloadHandler::handleDataOnMain,
+                        ServerPayloadHandler::handleDataOnMain
+                )
+        );
 
         registrar.playToClient(
                 WallOverlayUpdatePacket.TYPE,

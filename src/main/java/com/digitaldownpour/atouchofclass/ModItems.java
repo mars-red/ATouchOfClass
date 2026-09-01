@@ -2,8 +2,10 @@ package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.items.DoorKeyItem;
 import com.digitaldownpour.atouchofclass.items.TallDoorItem;
+import com.digitaldownpour.atouchofclass.items.WallpaperItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -15,7 +17,15 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ATouchofClass.MODID);
 
-    //public static final DeferredItem<Item> DOOR_KEY = ITEMS.registerSimpleItem("door_key");
+    public static final DeferredItem<WallpaperItem> WALLPAPER_ITEM = ITEMS.registerItem(
+      "wallpaper",
+            (properties) -> new WallpaperItem(
+                    properties,
+                    ResourceLocation.fromNamespaceAndPath("atouchofclass", "block/cornflower_wallpaper")
+            ),
+            new Item.Properties()
+    );
+
     public static final DeferredItem<DoorKeyItem> DOOR_KEY = ITEMS.registerItem(
             "door_key",
             DoorKeyItem::new,
@@ -40,6 +50,9 @@ public class ModItems {
     private static void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(DOOR_KEY);
+        }
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(WALLPAPER_ITEM);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(TALL_DOOR_ITEM);

@@ -6,10 +6,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ChunkPos;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
-import java.util.HashMap;
 
 @OnlyIn(Dist.CLIENT)
 public class ClientWallOverlayData {
@@ -22,5 +20,12 @@ public class ClientWallOverlayData {
 
     public static void setFace(BlockPos pos, Direction face, ResourceLocation texture) {
         store.setFace(pos, face, texture);
+    }
+
+    public static void replaceChunk(
+            ChunkPos chunkPos,
+            Map<BlockPos, WallOverlayData> overlays
+    ) {
+        store.replaceChunk(chunkPos, overlays);
     }
 }

@@ -22,7 +22,7 @@ public record WallOverlayUpdatePacket(
         boolean remove
 ) implements CustomPacketPayload {
 
-    public static final Type<WallOverlayUpdatePacket> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "key_cutter_menu_payload"));
+    public static final Type<WallOverlayUpdatePacket> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "wall_overlay_update"));
 
     public static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "walloverlay_sync");
 
