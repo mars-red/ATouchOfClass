@@ -2,7 +2,6 @@ package com.digitaldownpour.atouchofclass.network;
 
 import com.digitaldownpour.atouchofclass.ATouchofClass;
 import com.digitaldownpour.atouchofclass.components.ClientWallOverlayData;
-import com.digitaldownpour.atouchofclass.components.WallOverlaySavedData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.FriendlyByteBuf;

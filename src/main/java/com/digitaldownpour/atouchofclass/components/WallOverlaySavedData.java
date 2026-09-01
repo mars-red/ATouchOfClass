@@ -13,6 +13,7 @@ import net.minecraft.world.level.saveddata.SavedData;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
+import java.util.Set;
 
 public class WallOverlaySavedData extends SavedData {
     private final WallOverlayStore store =
@@ -48,6 +49,23 @@ public class WallOverlaySavedData extends SavedData {
     ) {
         store.setFace(pos, face, texture);
         setDirty();
+    }
+
+    public boolean hasFace(BlockPos pos, Direction face) {
+        return store.getFace(pos, face) != null;
+    }
+
+    public Set<Direction> removeAllFaces(BlockPos pos) {
+        Set<Direction> faces = store.getFaces(pos);
+        if (faces.isEmpty()) {
+            return faces;
+        }
+
+        for (Direction face : faces) {
+            store.setFace(pos, face, null);
+        }
+        setDirty();
+        return faces;
     }
 
     public Map<BlockPos, WallOverlayData> getChunkSnapshot(ChunkPos chunkPos) {

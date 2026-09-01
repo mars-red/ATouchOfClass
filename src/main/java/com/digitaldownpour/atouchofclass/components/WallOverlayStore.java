@@ -8,6 +8,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class WallOverlayStore {
     protected final Map<
@@ -77,11 +78,22 @@ public class WallOverlayStore {
         return overlaysByChunk;
     }
 
-//    @javax.annotation.Nullable
-//    public WallOverlayData getOverlay(BlockPos pos) {
-//        BlockPos immutablePos = pos.immutable();
-//        return getChunk(new ChunkPos(immutablePos)).get(pos.immutable());
-//    }
+    @Nullable
+    public ResourceLocation getFace(BlockPos pos, Direction face) {
+        WallOverlayData overlay = getOverlay(pos);
+        return overlay == null ? null : overlay.getFace(face);
+    }
+
+    public Set<Direction> getFaces(BlockPos pos) {
+        WallOverlayData overlay = getOverlay(pos);
+        return overlay == null ? Set.of() : Set.copyOf(overlay.getFaces());
+    }
+
+    @Nullable
+    private WallOverlayData getOverlay(BlockPos pos) {
+        Map<BlockPos, WallOverlayData> overlays = overlaysByChunk.get(new ChunkPos(pos));
+        return overlays == null ? null : overlays.get(pos);
+    }
 
     private WallOverlayData getOrCreateOverlay(BlockPos immutablePos) {
 

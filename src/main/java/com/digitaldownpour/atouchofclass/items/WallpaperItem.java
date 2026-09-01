@@ -1,9 +1,7 @@
 package com.digitaldownpour.atouchofclass.items;
 
 import com.digitaldownpour.atouchofclass.ModNetworking;
-import com.digitaldownpour.atouchofclass.components.WallOverlayData;
 import com.digitaldownpour.atouchofclass.components.WallOverlaySavedData;
-import com.digitaldownpour.atouchofclass.network.WallOverlayChunkSyncPacket;
 import com.digitaldownpour.atouchofclass.network.WallOverlayUpdatePacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
