@@ -1,7 +1,7 @@
 package com.digitaldownpour.atouchofclass.entities;
 
+import com.digitaldownpour.atouchofclass.ModEntities;
 import com.digitaldownpour.atouchofclass.components.KeyableInfo;
-import com.digitaldownpour.atouchofclass.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -13,7 +13,7 @@ public class TallDoorBlockEntity extends BlockEntity {
     private String keyableName = "";
 
     public TallDoorBlockEntity(BlockPos pos, BlockState blockState) {
-        super(ModBlocks.TALL_DOOR_BE.get(), pos, blockState);
+        super(ModEntities.TALL_DOOR_BE.get(), pos, blockState);
     }
 
     public String getKeyCode() {

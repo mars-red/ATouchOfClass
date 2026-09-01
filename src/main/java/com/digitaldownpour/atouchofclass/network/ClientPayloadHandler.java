@@ -6,4 +6,5 @@ public class ClientPayloadHandler {
     public static void handleDataOnMain(final SyncKeyCutterMenuPayload data, final IPayloadContext context) {
         //
     }
+
 }

@@ -9,4 +9,8 @@ public class ServerPayloadHandler {
             menu.craft(data.keyCode(), data.keyableName());
         }
     }
+
+    public static void handleDataOnMain(final WallOverlayChunkSyncPacket data, final IPayloadContext context) {
+        //
+    }
 }

@@ -2,6 +2,7 @@ package com.digitaldownpour.atouchofclass.entities;
 
 import com.digitaldownpour.atouchofclass.KeyCutterMenu;
 import com.digitaldownpour.atouchofclass.ModBlocks;
+import com.digitaldownpour.atouchofclass.ModEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.MenuProvider;
@@ -25,7 +26,7 @@ public class KeyCutterBlockEntity extends BlockEntity implements MenuProvider {
     };
 
     public KeyCutterBlockEntity(BlockPos pos, BlockState blockState) {
-        super(ModBlocks.KEY_CUTTER_BE.get(), pos, blockState);
+        super(ModEntities.KEY_CUTTER_BE.get(), pos, blockState);
     }
 
     public ItemStackHandler getItems()
