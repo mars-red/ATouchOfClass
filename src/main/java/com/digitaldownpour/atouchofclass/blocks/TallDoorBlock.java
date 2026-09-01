@@ -32,8 +32,14 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class TallDoorBlock extends Block implements EntityBlock {
-    public static final VoxelShape Z_COLLISION_SHAPE = Block.box((double) 0.0F, (double) 0.0F, (double) 0.0F, (double) 16.0F, (double) 16.0F, (double) 4.0F);
-    public static final VoxelShape X_COLLISION_SHAPE = Block.box((double) 0.0F, (double) 0.0F, (double) 0.0F, (double) 4.0F, (double) 16.0F, (double) 16.0F);
+    private static final VoxelShape NORTH_SHAPE =
+            Block.box(0, 0, 0, 16, 16, 3);
+    private static final VoxelShape WEST_SHAPE =
+            Block.box(0, 0, 0, 3, 16, 16);
+    private static final VoxelShape SOUTH_SHAPE =
+            Block.box(0, 0, 13, 16, 16, 16);
+    private static final VoxelShape EAST_SHAPE =
+            Block.box(13, 0, 0, 16, 16, 16);
 
     public static final IntegerProperty PART = IntegerProperty.create("part", 0, 2); // 0 = bottom, 1 = middle, 2 = top
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
@@ -49,6 +55,16 @@ public class TallDoorBlock extends Block implements EntityBlock {
                 .setValue(HINGE, DoorHingeSide.LEFT));
     }
 
+    private static VoxelShape shapeForFacing(Direction facing) {
+        return switch (facing) {
+            case NORTH -> NORTH_SHAPE;
+            case EAST -> EAST_SHAPE;
+            case SOUTH -> SOUTH_SHAPE;
+            case WEST -> WEST_SHAPE;
+            default -> Shapes.block();
+        };
+    }
+
     @Override
     protected boolean isCollisionShapeFullBlock(BlockState state, BlockGetter level, BlockPos pos) {
         return false;
@@ -59,8 +75,18 @@ public class TallDoorBlock extends Block implements EntityBlock {
         if (state.getValue(OPEN)) {
             return Shapes.empty();
         } else {
-            return ((Direction)state.getValue(FACING)).getAxis() == Direction.Axis.Z ? Z_COLLISION_SHAPE : X_COLLISION_SHAPE;
+            return shapeForFacing(state.getValue(FACING));
         }
+    }
+
+    @Override
+    protected VoxelShape getShape(
+            BlockState state,
+            BlockGetter level,
+            BlockPos pos,
+            CollisionContext context
+    ) {
+        return shapeForFacing(state.getValue(FACING));
     }
 
     @Override
