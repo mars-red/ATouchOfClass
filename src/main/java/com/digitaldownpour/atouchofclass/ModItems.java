@@ -3,6 +3,7 @@ package com.digitaldownpour.atouchofclass;
 import com.digitaldownpour.atouchofclass.items.DoorKeyItem;
 import com.digitaldownpour.atouchofclass.items.TallDoorItem;
 import com.digitaldownpour.atouchofclass.items.WallpaperItem;
+import com.digitaldownpour.atouchofclass.items.WainscotingItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -23,6 +24,12 @@ public class ModItems {
                     properties,
                     ResourceLocation.fromNamespaceAndPath("atouchofclass", "block/cornflower_wallpaper")
             ),
+            new Item.Properties()
+    );
+
+    public static final DeferredItem<WainscotingItem> WAINSCOTING_ITEM = ITEMS.registerItem(
+            "wainscoting",
+            WainscotingItem::new,
             new Item.Properties()
     );
 
@@ -53,6 +60,7 @@ public class ModItems {
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(WALLPAPER_ITEM);
+            event.accept(WAINSCOTING_ITEM);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(TALL_DOOR_ITEM);

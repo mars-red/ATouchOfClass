@@ -3,7 +3,6 @@ package com.digitaldownpour.atouchofclass;
 import com.digitaldownpour.atouchofclass.blocks.KeyCutterBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallDoorBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock;
-import com.digitaldownpour.atouchofclass.blocks.WallOverlayBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import net.minecraft.core.registries.Registries;
@@ -50,14 +49,6 @@ public class ModBlocks {
                     .strength(3.0F)
             )
     );
-
-    public static final DeferredBlock<WallOverlayBlock> WALL_OVERLAY = BLOCKS.register("walloverlay",
-            key -> new WallOverlayBlock(BlockBehaviour.Properties.of()
-                    .setId(ResourceKey.create(Registries.BLOCK, key))
-                    .strength(0.2f)
-                    .noOcclusion()
-                    .noCollission()
-            ));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
