@@ -21,7 +21,6 @@ public class ATouchofClass {
 
         bus.addListener(this::commonSetup);
         bus.addListener(this::clientSetup);
-        //bus.addListener(ModNetworking::onClientPayload);
 
     }
 
