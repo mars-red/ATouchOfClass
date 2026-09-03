@@ -42,7 +42,7 @@ public class ModItems {
     public static final DeferredItem<BucketOfPlasterItem> BUCKET_OF_PLASTER = ITEMS.registerItem(
             "bucket_of_plaster",
             BucketOfPlasterItem::new,
-            new Item.Properties().stacksTo(1)
+            new Item.Properties().durability(BucketOfPlasterItem.APPLICATIONS)
     );
 
     public static final DeferredItem<DoorKeyItem> DOOR_KEY = ITEMS.registerItem(
