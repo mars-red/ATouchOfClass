@@ -1,6 +1,7 @@
 package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.blocks.KeyCutterBlock;
+import com.digitaldownpour.atouchofclass.blocks.CasingBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallDoorBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
@@ -22,6 +23,14 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ATouchofClass.MODID);
+
+    public static final DeferredBlock<CasingBlock> CASING = BLOCKS.register("casing",
+            registryName -> new CasingBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.SNOW)
+                    .strength(2.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.WOOD)
+                    .noOcclusion()));
 
     public static final DeferredHolder<Block, TallDoorBlock> TALL_DOOR = BLOCKS.register("tall_door",
             registryName -> new TallDoorBlock(BlockBehaviour.Properties.of()

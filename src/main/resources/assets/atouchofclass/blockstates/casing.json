@@ -1,0 +1,76 @@
+{
+  "variants": {
+    "facing=south,edge=right": {
+      "model": "atouchofclass:block/casing"
+    },
+    "facing=south,edge=left": {
+      "model": "atouchofclass:block/casing_south_left"
+    },
+    "facing=south,edge=top": {
+      "model": "atouchofclass:block/casing_south_top"
+    },
+    "facing=south,edge=bottom": {
+      "model": "atouchofclass:block/casing_south_bottom"
+    },
+    "facing=west,edge=right": {
+      "model": "atouchofclass:block/casing_west_right"
+    },
+    "facing=west,edge=left": {
+      "model": "atouchofclass:block/casing_west_left"
+    },
+    "facing=west,edge=top": {
+      "model": "atouchofclass:block/casing_west_top"
+    },
+    "facing=west,edge=bottom": {
+      "model": "atouchofclass:block/casing_west_bottom"
+    },
+    "facing=north,edge=right": {
+      "model": "atouchofclass:block/casing_north_right"
+    },
+    "facing=north,edge=left": {
+      "model": "atouchofclass:block/casing_north_left"
+    },
+    "facing=north,edge=top": {
+      "model": "atouchofclass:block/casing_north_top"
+    },
+    "facing=north,edge=bottom": {
+      "model": "atouchofclass:block/casing_north_bottom"
+    },
+    "facing=east,edge=right": {
+      "model": "atouchofclass:block/casing_east_right"
+    },
+    "facing=east,edge=left": {
+      "model": "atouchofclass:block/casing_east_left"
+    },
+    "facing=east,edge=top": {
+      "model": "atouchofclass:block/casing_east_top"
+    },
+    "facing=east,edge=bottom": {
+      "model": "atouchofclass:block/casing_east_bottom"
+    },
+    "facing=up,edge=right": {
+      "model": "atouchofclass:block/casing_up_right"
+    },
+    "facing=up,edge=left": {
+      "model": "atouchofclass:block/casing_up_left"
+    },
+    "facing=up,edge=top": {
+      "model": "atouchofclass:block/casing_up_top"
+    },
+    "facing=up,edge=bottom": {
+      "model": "atouchofclass:block/casing_up_bottom"
+    },
+    "facing=down,edge=right": {
+      "model": "atouchofclass:block/casing_down_right"
+    },
+    "facing=down,edge=left": {
+      "model": "atouchofclass:block/casing_down_left"
+    },
+    "facing=down,edge=top": {
+      "model": "atouchofclass:block/casing_down_top"
+    },
+    "facing=down,edge=bottom": {
+      "model": "atouchofclass:block/casing_down_bottom"
+    }
+  }
+}
