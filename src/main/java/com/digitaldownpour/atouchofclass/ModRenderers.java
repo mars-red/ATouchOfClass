@@ -172,6 +172,23 @@ import java.util.Map;
                         .setOverlay(overlay)
                         .setLight(packedLight)
                         .setNormal(-1, 0, 0);
-            }        }
+            }
+            case UP -> {
+                float y = 1 + inset;
+
+                vc.addVertex(mat, 0, y, 0).setUv(u0, v0).setColor(255, 255, 255, 255).setOverlay(overlay).setLight(packedLight).setNormal(0, 1, 0);
+                vc.addVertex(mat, 0, y, 1).setUv(u0, v1).setColor(255, 255, 255, 255).setOverlay(overlay).setLight(packedLight).setNormal(0, 1, 0);
+                vc.addVertex(mat, 1, y, 1).setUv(u1, v1).setColor(255, 255, 255, 255).setOverlay(overlay).setLight(packedLight).setNormal(0, 1, 0);
+                vc.addVertex(mat, 1, y, 0).setUv(u1, v0).setColor(255, 255, 255, 255).setOverlay(overlay).setLight(packedLight).setNormal(0, 1, 0);
+            }
+            case DOWN -> {
+                float y = -inset;
+
+                vc.addVertex(mat, 0, y, 1).setUv(u0, v1).setColor(255, 255, 255, 255).setOverlay(overlay).setLight(packedLight).setNormal(0, -1, 0);
+                vc.addVertex(mat, 0, y, 0).setUv(u0, v0).setColor(255, 255, 255, 255).setOverlay(overlay).setLight(packedLight).setNormal(0, -1, 0);
+                vc.addVertex(mat, 1, y, 0).setUv(u1, v0).setColor(255, 255, 255, 255).setOverlay(overlay).setLight(packedLight).setNormal(0, -1, 0);
+                vc.addVertex(mat, 1, y, 1).setUv(u1, v1).setColor(255, 255, 255, 255).setOverlay(overlay).setLight(packedLight).setNormal(0, -1, 0);
+            }
+        }
     }
 }

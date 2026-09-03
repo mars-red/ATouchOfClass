@@ -1,49 +1,21 @@
 package com.digitaldownpour.atouchofclass.items;
 
-import com.digitaldownpour.atouchofclass.ModNetworking;
-import com.digitaldownpour.atouchofclass.components.WallOverlaySavedData;
-import com.digitaldownpour.atouchofclass.network.WallOverlayUpdatePacket;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-public abstract class WallOverlayItemBase extends Item {
-    private final ResourceLocation overlayTexture;
-
+public abstract class WallOverlayItemBase extends BlockOverlayItemBase {
     protected WallOverlayItemBase(Properties properties, ResourceLocation overlayTexture) {
-        super(properties);
-        this.overlayTexture = overlayTexture;
+        super(properties, overlayTexture);
     }
 
     @Override
     public @NotNull InteractionResult useOn(UseOnContext context) {
-        Level level = context.getLevel();
-
-        if (level.isClientSide) {
-            return InteractionResult.SUCCESS;
-        }
-
-        BlockPos pos = context.getClickedPos();
-        Direction face = context.getClickedFace();
-
         // Wall overlays can only be placed on the four horizontal faces.
-        if (face.getAxis().isVertical()) {
+        if (context.getClickedFace().getAxis().isVertical()) {
             return InteractionResult.PASS;
         }
-
-        ServerLevel serverLevel = (ServerLevel) level;
-        WallOverlaySavedData.get(serverLevel).setFace(pos, face, overlayTexture);
-
-        boolean remove = overlayTexture == null;
-        WallOverlayUpdatePacket packet = new WallOverlayUpdatePacket(pos, face, overlayTexture, remove);
-        ModNetworking.sendToTracking(serverLevel, pos, packet);
-
-        return InteractionResult.SUCCESS_SERVER;
+        return super.useOn(context);
     }
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "atouchofclass:quicklime_powder",
+    "minecraft:water_bucket",
+    "minecraft:sand"
+  ],
+  "result": {
+    "count": 1,
+    "id": "atouchofclass:bucket_of_plaster"
+  }
+}

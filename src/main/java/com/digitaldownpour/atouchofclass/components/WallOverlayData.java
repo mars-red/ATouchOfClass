@@ -16,17 +16,8 @@ import java.util.Set;
 
 public class WallOverlayData {
 
-    private static final int MAX_HORIZONTAL_FACES = 4;
-
     private final EnumMap<Direction, ResourceLocation> faces =
             new EnumMap<>(Direction.class);
-
-    private static final Direction[] HORIZONTAL_DIRECTIONS = {
-            Direction.NORTH,
-            Direction.EAST,
-            Direction.SOUTH,
-            Direction.WEST
-    };
 
     private static final String TAG_FACES = "faces";
 
@@ -34,7 +25,7 @@ public class WallOverlayData {
         CompoundTag tag = new CompoundTag();
         CompoundTag facesTag = new CompoundTag();
 
-        for (Direction direction : HORIZONTAL_DIRECTIONS) {
+        for (Direction direction : Direction.values()) {
             ResourceLocation texture = faces.get(direction);
 
             if (texture != null) {
@@ -58,7 +49,7 @@ public class WallOverlayData {
 
         CompoundTag facesTag = tag.getCompound(TAG_FACES);
 
-        for (Direction direction : HORIZONTAL_DIRECTIONS) {
+        for (Direction direction : Direction.values()) {
             String key = direction.getSerializedName();
 
             if (!facesTag.contains(key)) {
@@ -98,7 +89,7 @@ public class WallOverlayData {
     private static final StreamCodec<ByteBuf, List<FaceEntry>>
             FACE_LIST_STREAM_CODEC =
             FaceEntry.STREAM_CODEC.apply(
-                    ByteBufCodecs.list(4)
+                    ByteBufCodecs.list(6)
             );
 
     public static final StreamCodec<ByteBuf, WallOverlayData> STREAM_CODEC =
@@ -111,10 +102,6 @@ public class WallOverlayData {
             Direction direction,
             @Nullable ResourceLocation texture
     ) {
-        if (direction.getAxis().isVertical()) {
-            return;
-        }
-
         if (texture == null) {
             faces.remove(direction);
         } else {
@@ -152,14 +139,6 @@ public class WallOverlayData {
 
         for (FaceEntry entry : entries) {
             Direction direction = entry.direction();
-
-            /*
-             * Never trust decoded data merely because the codec decoded it.
-             * This also rejects UP and DOWN.
-             */
-            if (direction.getAxis().isVertical()) {
-                continue;
-            }
 
             data.setFace(
                     direction,

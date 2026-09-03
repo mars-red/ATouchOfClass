@@ -21,10 +21,6 @@ public class WallOverlayStore {
             Direction face,
             @Nullable ResourceLocation texture
     ) {
-        if (face.getAxis().isVertical()) {
-            return;
-        }
-
         BlockPos immutablePos = pos.immutable();
 
         WallOverlayData overlay = getOrCreateOverlay(immutablePos);

@@ -1,6 +1,7 @@
 package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.items.DoorKeyItem;
+import com.digitaldownpour.atouchofclass.items.BucketOfPlasterItem;
 import com.digitaldownpour.atouchofclass.items.TallDoorItem;
 import com.digitaldownpour.atouchofclass.items.WallpaperItem;
 import com.digitaldownpour.atouchofclass.items.WainscotingItem;
@@ -33,6 +34,17 @@ public class ModItems {
             new Item.Properties()
     );
 
+    public static final DeferredItem<Item> QUICKLIME_POWDER = ITEMS.registerSimpleItem(
+            "quicklime_powder",
+            new Item.Properties()
+    );
+
+    public static final DeferredItem<BucketOfPlasterItem> BUCKET_OF_PLASTER = ITEMS.registerItem(
+            "bucket_of_plaster",
+            BucketOfPlasterItem::new,
+            new Item.Properties().stacksTo(1)
+    );
+
     public static final DeferredItem<DoorKeyItem> DOOR_KEY = ITEMS.registerItem(
             "door_key",
             DoorKeyItem::new,
@@ -61,6 +73,10 @@ public class ModItems {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(WALLPAPER_ITEM);
             event.accept(WAINSCOTING_ITEM);
+            event.accept(BUCKET_OF_PLASTER);
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(QUICKLIME_POWDER);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(TALL_DOOR_ITEM);
