@@ -1,16 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "D": "#minecraft:wooden_slabs"
-  },
-  "pattern": [
-    "DD ",
-    "DD ",
-    "   "
+  "ingredients": [
+    "#minecraft:wooden_slabs",
+    "atouchofclass:bucket_of_plaster"
   ],
   "result": {
-    "count": 12,
+    "count": 2,
     "id": "atouchofclass:wainscoting"
   }
 }
