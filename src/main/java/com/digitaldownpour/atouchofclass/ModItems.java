@@ -19,14 +19,11 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ATouchofClass.MODID);
 
-    public static final DeferredItem<WallpaperItem> WALLPAPER_ITEM = ITEMS.registerItem(
-      "wallpaper",
-            (properties) -> new WallpaperItem(
-                    properties,
-                    ResourceLocation.fromNamespaceAndPath("atouchofclass", "block/cornflower_wallpaper")
-            ),
-            new Item.Properties()
-    );
+    public static final DeferredItem<WallpaperItem> CORNFLOWER_WALLPAPER = registerWallpaper("cornflower_wallpaper");
+    public static final DeferredItem<WallpaperItem> SCALLOPED_WALLPAPER = registerWallpaper("scalloped_wallpaper");
+    public static final DeferredItem<WallpaperItem> OGEE_LATTICE_WALLPAPER = registerWallpaper("ogee_lattice_wallpaper");
+    public static final DeferredItem<WallpaperItem> STRIPED_WALLPAPER = registerWallpaper("striped_wallpaper");
+    public static final DeferredItem<WallpaperItem> GOTHIC_WALLPAPER = registerWallpaper("gothic_wallpaper");
 
     public static final DeferredItem<WainscotingItem> WAINSCOTING_ITEM = ITEMS.registerItem(
             "wainscoting",
@@ -71,7 +68,11 @@ public class ModItems {
             event.accept(DOOR_KEY);
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-            event.accept(WALLPAPER_ITEM);
+            event.accept(CORNFLOWER_WALLPAPER);
+            event.accept(SCALLOPED_WALLPAPER);
+            event.accept(OGEE_LATTICE_WALLPAPER);
+            event.accept(STRIPED_WALLPAPER);
+            event.accept(GOTHIC_WALLPAPER);
             event.accept(WAINSCOTING_ITEM);
             event.accept(BUCKET_OF_PLASTER);
         }
@@ -83,5 +84,16 @@ public class ModItems {
             event.accept(TALL_SIDELIGHT_ITEM);
             event.accept(KEY_CUTTER_ITEM);
         }
+    }
+
+    private static DeferredItem<WallpaperItem> registerWallpaper(String name) {
+        return ITEMS.registerItem(
+                name,
+                properties -> new WallpaperItem(
+                        properties,
+                        ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "block/" + name)
+                ),
+                new Item.Properties()
+        );
     }
 }
