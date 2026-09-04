@@ -1,0 +1,76 @@
+{
+  "variants": {
+    "facing=south,corner=top_right": {
+      "model": "atouchofclass:block/corner_block"
+    },
+    "facing=south,corner=top_left": {
+      "model": "atouchofclass:block/corner_block_south_top_left"
+    },
+    "facing=south,corner=bottom_right": {
+      "model": "atouchofclass:block/corner_block_south_bottom_right"
+    },
+    "facing=south,corner=bottom_left": {
+      "model": "atouchofclass:block/corner_block_south_bottom_left"
+    },
+    "facing=west,corner=top_right": {
+      "model": "atouchofclass:block/corner_block_west_top_right"
+    },
+    "facing=west,corner=top_left": {
+      "model": "atouchofclass:block/corner_block_west_top_left"
+    },
+    "facing=west,corner=bottom_right": {
+      "model": "atouchofclass:block/corner_block_west_bottom_right"
+    },
+    "facing=west,corner=bottom_left": {
+      "model": "atouchofclass:block/corner_block_west_bottom_left"
+    },
+    "facing=north,corner=top_right": {
+      "model": "atouchofclass:block/corner_block_north_top_right"
+    },
+    "facing=north,corner=top_left": {
+      "model": "atouchofclass:block/corner_block_north_top_left"
+    },
+    "facing=north,corner=bottom_right": {
+      "model": "atouchofclass:block/corner_block_north_bottom_right"
+    },
+    "facing=north,corner=bottom_left": {
+      "model": "atouchofclass:block/corner_block_north_bottom_left"
+    },
+    "facing=east,corner=top_right": {
+      "model": "atouchofclass:block/corner_block_east_top_right"
+    },
+    "facing=east,corner=top_left": {
+      "model": "atouchofclass:block/corner_block_east_top_left"
+    },
+    "facing=east,corner=bottom_right": {
+      "model": "atouchofclass:block/corner_block_east_bottom_right"
+    },
+    "facing=east,corner=bottom_left": {
+      "model": "atouchofclass:block/corner_block_east_bottom_left"
+    },
+    "facing=up,corner=top_right": {
+      "model": "atouchofclass:block/corner_block_up_top_right"
+    },
+    "facing=up,corner=top_left": {
+      "model": "atouchofclass:block/corner_block_up_top_left"
+    },
+    "facing=up,corner=bottom_right": {
+      "model": "atouchofclass:block/corner_block_up_bottom_right"
+    },
+    "facing=up,corner=bottom_left": {
+      "model": "atouchofclass:block/corner_block_up_bottom_left"
+    },
+    "facing=down,corner=top_right": {
+      "model": "atouchofclass:block/corner_block_down_top_right"
+    },
+    "facing=down,corner=top_left": {
+      "model": "atouchofclass:block/corner_block_down_top_left"
+    },
+    "facing=down,corner=bottom_right": {
+      "model": "atouchofclass:block/corner_block_down_bottom_right"
+    },
+    "facing=down,corner=bottom_left": {
+      "model": "atouchofclass:block/corner_block_down_bottom_left"
+    }
+  }
+}
