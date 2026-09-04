@@ -2,6 +2,7 @@ package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.blocks.KeyCutterBlock;
 import com.digitaldownpour.atouchofclass.blocks.CasingBlock;
+import com.digitaldownpour.atouchofclass.blocks.CrownMouldingBlock;
 import com.digitaldownpour.atouchofclass.blocks.WindowApronBlock;
 import com.digitaldownpour.atouchofclass.blocks.PlinthBlock;
 import com.digitaldownpour.atouchofclass.blocks.CornerBlock;
@@ -26,6 +27,14 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ATouchofClass.MODID);
+
+    public static final DeferredBlock<CrownMouldingBlock> CROWN_MOULDING = BLOCKS.register("crown_moulding",
+            registryName -> new CrownMouldingBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.SNOW)
+                    .strength(2.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.WOOD)
+                    .noOcclusion()));
 
     public static final DeferredBlock<WindowApronBlock> WINDOW_APRON = BLOCKS.register("window_apron",
             registryName -> new WindowApronBlock(BlockBehaviour.Properties.of()
