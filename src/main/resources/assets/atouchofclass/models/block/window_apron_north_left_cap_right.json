@@ -1,0 +1,105 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "white": "minecraft:block/white_concrete",
+    "particle": "minecraft:block/white_concrete"
+  },
+  "elements": [
+    {
+      "faces": {
+        "north": {
+          "texture": "#white"
+        },
+        "south": {
+          "texture": "#white"
+        },
+        "east": {
+          "texture": "#white"
+        },
+        "west": {
+          "texture": "#white"
+        },
+        "up": {
+          "texture": "#white"
+        },
+        "down": {
+          "texture": "#white"
+        }
+      },
+      "to": [
+        16,
+        9,
+        16
+      ],
+      "from": [
+        14,
+        0,
+        11
+      ]
+    },
+    {
+      "faces": {
+        "north": {
+          "texture": "#white"
+        },
+        "south": {
+          "texture": "#white"
+        },
+        "east": {
+          "texture": "#white"
+        },
+        "west": {
+          "texture": "#white"
+        },
+        "up": {
+          "texture": "#white"
+        },
+        "down": {
+          "texture": "#white"
+        }
+      },
+      "to": [
+        14,
+        7,
+        16
+      ],
+      "from": [
+        10,
+        0,
+        13
+      ]
+    },
+    {
+      "faces": {
+        "north": {
+          "texture": "#white"
+        },
+        "south": {
+          "texture": "#white"
+        },
+        "east": {
+          "texture": "#white"
+        },
+        "west": {
+          "texture": "#white"
+        },
+        "up": {
+          "texture": "#white"
+        },
+        "down": {
+          "texture": "#white"
+        }
+      },
+      "to": [
+        10,
+        6,
+        16
+      ],
+      "from": [
+        8,
+        0,
+        14
+      ]
+    }
+  ]
+}

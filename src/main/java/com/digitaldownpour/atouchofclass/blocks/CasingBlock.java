@@ -54,7 +54,7 @@ public class CasingBlock extends Block {
         return facing.getAxis().isVertical() ? Direction.EAST : facing.getCounterClockWise();
     }
 
-    private static Direction edgeDirection(Direction facing, Edge edge) {
+    protected static Direction edgeDirection(Direction facing, Edge edge) {
         return switch (edge) {
             case RIGHT -> right(facing);
             case LEFT -> right(facing).getOpposite();

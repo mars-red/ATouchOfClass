@@ -58,6 +58,7 @@ public class ModItems {
 
     public static final DeferredItem<BlockItem> KEY_CUTTER_ITEM = ITEMS.registerSimpleBlockItem("key_cutter", ModBlocks.KEY_CUTTER);
     public static final DeferredItem<BlockItem> CASING_ITEM = ITEMS.registerSimpleBlockItem("casing", ModBlocks.CASING);
+    public static final DeferredItem<BlockItem> WINDOW_APRON_ITEM = ITEMS.registerSimpleBlockItem("window_apron", ModBlocks.WINDOW_APRON);
     public static final DeferredItem<BlockItem> PLINTH_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("plinth_block", ModBlocks.PLINTH_BLOCK);
     public static final DeferredItem<BlockItem> CORNER_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("corner_block", ModBlocks.CORNER_BLOCK);
 
@@ -87,6 +88,7 @@ public class ModItems {
             event.accept(TALL_SIDELIGHT_ITEM);
             event.accept(KEY_CUTTER_ITEM);
             event.accept(CASING_ITEM);
+            event.accept(WINDOW_APRON_ITEM);
             event.accept(PLINTH_BLOCK_ITEM);
             event.accept(CORNER_BLOCK_ITEM);
         }
