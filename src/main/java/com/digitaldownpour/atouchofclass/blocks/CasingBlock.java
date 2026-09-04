@@ -23,6 +23,10 @@ public class CasingBlock extends Block {
     private final java.util.Map<BlockState, VoxelShape> shapes = new java.util.HashMap<>();
 
     public CasingBlock(Properties properties) {
+        this(properties, 3, 7);
+    }
+
+    protected CasingBlock(Properties properties, int depth, int width) {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.SOUTH).setValue(EDGE, Edge.RIGHT));
         for (BlockState state : stateDefinition.getPossibleStates()) {
@@ -30,8 +34,8 @@ public class CasingBlock extends Block {
             Direction edge = edgeDirection(facing, state.getValue(EDGE));
             double[] min = {0, 0, 0};
             double[] max = {16, 16, 16};
-            restrict(min, max, facing.getOpposite(), 3);
-            restrict(min, max, edge, 7);
+            restrict(min, max, facing.getOpposite(), depth);
+            restrict(min, max, edge, width);
             shapes.put(state, Block.box(min[0], min[1], min[2], max[0], max[1], max[2]));
         }
     }

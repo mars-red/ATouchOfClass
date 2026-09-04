@@ -2,6 +2,7 @@ package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.blocks.KeyCutterBlock;
 import com.digitaldownpour.atouchofclass.blocks.CasingBlock;
+import com.digitaldownpour.atouchofclass.blocks.PlinthBlock;
 import com.digitaldownpour.atouchofclass.blocks.CornerBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallDoorBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock;
@@ -24,6 +25,14 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ATouchofClass.MODID);
+
+    public static final DeferredBlock<PlinthBlock> PLINTH_BLOCK = BLOCKS.register("plinth_block",
+            registryName -> new PlinthBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.SNOW)
+                    .strength(2.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.WOOD)
+                    .noOcclusion()));
 
     public static final DeferredBlock<CornerBlock> CORNER_BLOCK = BLOCKS.register("corner_block",
             registryName -> new CornerBlock(BlockBehaviour.Properties.of()
