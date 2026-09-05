@@ -1,0 +1,13 @@
+{
+  "values": [
+    "atouchofclass:copper_wall_sconce",
+    "atouchofclass:waxed_copper_wall_sconce",
+    "atouchofclass:exposed_copper_wall_sconce",
+    "atouchofclass:waxed_exposed_copper_wall_sconce",
+    "atouchofclass:weathered_copper_wall_sconce",
+    "atouchofclass:waxed_weathered_copper_wall_sconce",
+    "atouchofclass:oxidized_copper_wall_sconce",
+    "atouchofclass:waxed_oxidized_copper_wall_sconce"
+  ],
+  "replace": false
+}

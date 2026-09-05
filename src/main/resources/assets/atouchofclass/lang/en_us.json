@@ -19,5 +19,13 @@
   "item.atouchofclass.gothic_wallpaper": "Gothic Wallpaper",
   "item.atouchofclass.wainscoting": "Wainscoting",
   "item.atouchofclass.quicklime_powder": "Quicklime Powder",
-  "item.atouchofclass.bucket_of_plaster": "Bucket of Plaster"
+  "item.atouchofclass.bucket_of_plaster": "Bucket of Plaster",
+  "block.atouchofclass.copper_wall_sconce": "Copper Wall Sconce",
+  "block.atouchofclass.waxed_copper_wall_sconce": "Waxed Copper Wall Sconce",
+  "block.atouchofclass.exposed_copper_wall_sconce": "Exposed Copper Wall Sconce",
+  "block.atouchofclass.waxed_exposed_copper_wall_sconce": "Waxed Exposed Copper Wall Sconce",
+  "block.atouchofclass.weathered_copper_wall_sconce": "Weathered Copper Wall Sconce",
+  "block.atouchofclass.waxed_weathered_copper_wall_sconce": "Waxed Weathered Copper Wall Sconce",
+  "block.atouchofclass.oxidized_copper_wall_sconce": "Oxidized Copper Wall Sconce",
+  "block.atouchofclass.waxed_oxidized_copper_wall_sconce": "Waxed Oxidized Copper Wall Sconce"
 }

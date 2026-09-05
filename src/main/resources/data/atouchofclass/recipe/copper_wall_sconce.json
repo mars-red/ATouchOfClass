@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "id": "atouchofclass:copper_wall_sconce",
+    "count": 2
+  },
+  "pattern": [
+    " CG",
+    " CT",
+    " CC"
+  ],
+  "key": {
+    "G": "minecraft:white_stained_glass",
+    "T": "minecraft:torch",
+    "C": "minecraft:copper_ingot"
+  },
+  "category": "misc"
+}

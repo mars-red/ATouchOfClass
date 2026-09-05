@@ -1,5 +1,8 @@
 package com.digitaldownpour.atouchofclass;
 
+import com.digitaldownpour.atouchofclass.blocks.WallSconceBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringWallSconceBlock;
+import net.minecraft.world.level.block.WeatheringCopper.WeatherState;
 import com.digitaldownpour.atouchofclass.blocks.KeyCutterBlock;
 import com.digitaldownpour.atouchofclass.blocks.CasingBlock;
 import com.digitaldownpour.atouchofclass.blocks.CrownMouldingBlock;
@@ -95,6 +98,26 @@ public class ModBlocks {
             )
     );
 
+    public static final DeferredBlock<WallSconceBlock> COPPER_WALL_SCONCE = registerSconce("copper_wall_sconce", WeatherState.UNAFFECTED, false);
+    public static final DeferredBlock<WallSconceBlock> EXPOSED_COPPER_WALL_SCONCE = registerSconce("exposed_copper_wall_sconce", WeatherState.EXPOSED, false);
+    public static final DeferredBlock<WallSconceBlock> WEATHERED_COPPER_WALL_SCONCE = registerSconce("weathered_copper_wall_sconce", WeatherState.WEATHERED, false);
+    public static final DeferredBlock<WallSconceBlock> OXIDIZED_COPPER_WALL_SCONCE = registerSconce("oxidized_copper_wall_sconce", WeatherState.OXIDIZED, false);
+    public static final DeferredBlock<WallSconceBlock> WAXED_COPPER_WALL_SCONCE = registerSconce("waxed_copper_wall_sconce", WeatherState.UNAFFECTED, true);
+    public static final DeferredBlock<WallSconceBlock> WAXED_EXPOSED_COPPER_WALL_SCONCE = registerSconce("waxed_exposed_copper_wall_sconce", WeatherState.EXPOSED, true);
+    public static final DeferredBlock<WallSconceBlock> WAXED_WEATHERED_COPPER_WALL_SCONCE = registerSconce("waxed_weathered_copper_wall_sconce", WeatherState.WEATHERED, true);
+    public static final DeferredBlock<WallSconceBlock> WAXED_OXIDIZED_COPPER_WALL_SCONCE = registerSconce("waxed_oxidized_copper_wall_sconce", WeatherState.OXIDIZED, true);
+
+    private static DeferredBlock<WallSconceBlock> registerSconce(String name, WeatherState age, boolean waxed) {
+        return BLOCKS.register(name, key -> {
+            BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, key))
+                    .mapColor(age.ordinal() < 2 ? MapColor.COLOR_ORANGE : MapColor.COLOR_CYAN)
+                    .strength(3.0F, 6.0F).requiresCorrectToolForDrops()
+                    .sound(net.minecraft.world.level.block.SoundType.COPPER)
+                    .noOcclusion().lightLevel(state -> 15);
+            return waxed ? new WallSconceBlock(properties) : new WeatheringWallSconceBlock(age, properties);
+        });
+    }
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

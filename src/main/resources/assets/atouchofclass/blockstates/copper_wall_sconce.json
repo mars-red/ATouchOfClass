@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/copper_wall_sconce",
+      "uvlock": true,
+      "y": 0
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/copper_wall_sconce",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/copper_wall_sconce",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/copper_wall_sconce",
+      "uvlock": true,
+      "y": 270
+    }
+  }
+}

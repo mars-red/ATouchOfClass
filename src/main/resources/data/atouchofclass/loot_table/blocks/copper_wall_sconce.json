@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "atouchofclass:copper_wall_sconce"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:block"
+}

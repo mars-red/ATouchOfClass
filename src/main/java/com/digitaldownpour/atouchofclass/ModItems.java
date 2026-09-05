@@ -63,6 +63,15 @@ public class ModItems {
     public static final DeferredItem<BlockItem> PLINTH_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("plinth_block", ModBlocks.PLINTH_BLOCK);
     public static final DeferredItem<BlockItem> CORNER_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("corner_block", ModBlocks.CORNER_BLOCK);
 
+    public static final DeferredItem<BlockItem> COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("copper_wall_sconce", ModBlocks.COPPER_WALL_SCONCE);
+    public static final DeferredItem<BlockItem> EXPOSED_COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("exposed_copper_wall_sconce", ModBlocks.EXPOSED_COPPER_WALL_SCONCE);
+    public static final DeferredItem<BlockItem> WEATHERED_COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("weathered_copper_wall_sconce", ModBlocks.WEATHERED_COPPER_WALL_SCONCE);
+    public static final DeferredItem<BlockItem> OXIDIZED_COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("oxidized_copper_wall_sconce", ModBlocks.OXIDIZED_COPPER_WALL_SCONCE);
+    public static final DeferredItem<BlockItem> WAXED_COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("waxed_copper_wall_sconce", ModBlocks.WAXED_COPPER_WALL_SCONCE);
+    public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_wall_sconce", ModBlocks.WAXED_EXPOSED_COPPER_WALL_SCONCE);
+    public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_wall_sconce", ModBlocks.WAXED_WEATHERED_COPPER_WALL_SCONCE);
+    public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_wall_sconce", ModBlocks.WAXED_OXIDIZED_COPPER_WALL_SCONCE);
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
         eventBus.addListener(ModItems::addCreative);
@@ -73,6 +82,14 @@ public class ModItems {
             event.accept(DOOR_KEY);
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(COPPER_WALL_SCONCE);
+            event.accept(EXPOSED_COPPER_WALL_SCONCE);
+            event.accept(WEATHERED_COPPER_WALL_SCONCE);
+            event.accept(OXIDIZED_COPPER_WALL_SCONCE);
+            event.accept(WAXED_COPPER_WALL_SCONCE);
+            event.accept(WAXED_EXPOSED_COPPER_WALL_SCONCE);
+            event.accept(WAXED_WEATHERED_COPPER_WALL_SCONCE);
+            event.accept(WAXED_OXIDIZED_COPPER_WALL_SCONCE);
             event.accept(CORNFLOWER_WALLPAPER);
             event.accept(SCALLOPED_WALLPAPER);
             event.accept(OGEE_LATTICE_WALLPAPER);

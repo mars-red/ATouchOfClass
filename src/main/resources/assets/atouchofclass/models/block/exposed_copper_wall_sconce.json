@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "copper": "minecraft:block/exposed_copper"
+  },
+  "parent": "atouchofclass:block/wall_sconce"
+}

@@ -1,0 +1,13 @@
+{
+  "values": {
+    "atouchofclass:copper_wall_sconce": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_wall_sconce"
+    },
+    "atouchofclass:exposed_copper_wall_sconce": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_wall_sconce"
+    },
+    "atouchofclass:weathered_copper_wall_sconce": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_wall_sconce"
+    }
+  }
+}

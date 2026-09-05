@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "id": "atouchofclass:waxed_copper_wall_sconce",
+    "count": 1
+  },
+  "ingredients": [
+    "atouchofclass:copper_wall_sconce",
+    "minecraft:honeycomb"
+  ],
+  "category": "misc"
+}

@@ -1,0 +1,32 @@
+{
+  "requirements": [
+    [
+      "has_sconce",
+      "has_the_recipe"
+    ]
+  ],
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atouchofclass:waxed_weathered_copper_wall_sconce"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atouchofclass:waxed_weathered_copper_wall_sconce"
+      }
+    },
+    "has_sconce": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "atouchofclass:weathered_copper_wall_sconce"
+          }
+        ]
+      }
+    }
+  }
+}
