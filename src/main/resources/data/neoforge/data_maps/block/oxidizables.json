@@ -8,6 +8,24 @@
     },
     "atouchofclass:weathered_copper_wall_sconce": {
       "next_oxidation_stage": "atouchofclass:oxidized_copper_wall_sconce"
+    },
+    "atouchofclass:copper_chain": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_chain"
+    },
+    "atouchofclass:exposed_copper_chain": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_chain"
+    },
+    "atouchofclass:weathered_copper_chain": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_chain"
+    },
+    "atouchofclass:copper_chandelier": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_chandelier"
+    },
+    "atouchofclass:exposed_copper_chandelier": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_chandelier"
+    },
+    "atouchofclass:weathered_copper_chandelier": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_chandelier"
     }
   }
 }

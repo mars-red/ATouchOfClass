@@ -74,6 +74,23 @@ public class ModItems {
     public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_wall_sconce", ModBlocks.WAXED_WEATHERED_COPPER_WALL_SCONCE);
     public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_wall_sconce", ModBlocks.WAXED_OXIDIZED_COPPER_WALL_SCONCE);
 
+    public static final DeferredItem<BlockItem> COPPER_CHAIN = ITEMS.registerSimpleBlockItem("copper_chain", ModBlocks.COPPER_CHAIN);
+    public static final DeferredItem<BlockItem> EXPOSED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("exposed_copper_chain", ModBlocks.EXPOSED_COPPER_CHAIN);
+    public static final DeferredItem<BlockItem> WEATHERED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("weathered_copper_chain", ModBlocks.WEATHERED_COPPER_CHAIN);
+    public static final DeferredItem<BlockItem> OXIDIZED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("oxidized_copper_chain", ModBlocks.OXIDIZED_COPPER_CHAIN);
+    public static final DeferredItem<BlockItem> WAXED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_copper_chain", ModBlocks.WAXED_COPPER_CHAIN);
+    public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_chain", ModBlocks.WAXED_EXPOSED_COPPER_CHAIN);
+    public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_chain", ModBlocks.WAXED_WEATHERED_COPPER_CHAIN);
+    public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_chain", ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN);
+    public static final DeferredItem<BlockItem> COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("copper_chandelier", ModBlocks.COPPER_CHANDELIER);
+    public static final DeferredItem<BlockItem> EXPOSED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("exposed_copper_chandelier", ModBlocks.EXPOSED_COPPER_CHANDELIER);
+    public static final DeferredItem<BlockItem> WEATHERED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("weathered_copper_chandelier", ModBlocks.WEATHERED_COPPER_CHANDELIER);
+    public static final DeferredItem<BlockItem> OXIDIZED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("oxidized_copper_chandelier", ModBlocks.OXIDIZED_COPPER_CHANDELIER);
+    public static final DeferredItem<BlockItem> WAXED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("waxed_copper_chandelier", ModBlocks.WAXED_COPPER_CHANDELIER);
+    public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_chandelier", ModBlocks.WAXED_EXPOSED_COPPER_CHANDELIER);
+    public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_chandelier", ModBlocks.WAXED_WEATHERED_COPPER_CHANDELIER);
+    public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_chandelier", ModBlocks.WAXED_OXIDIZED_COPPER_CHANDELIER);
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
         eventBus.addListener(ModItems::addCreative);
@@ -84,6 +101,22 @@ public class ModItems {
             event.accept(DOOR_KEY);
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(COPPER_CHAIN);
+            event.accept(EXPOSED_COPPER_CHAIN);
+            event.accept(WEATHERED_COPPER_CHAIN);
+            event.accept(OXIDIZED_COPPER_CHAIN);
+            event.accept(WAXED_COPPER_CHAIN);
+            event.accept(WAXED_EXPOSED_COPPER_CHAIN);
+            event.accept(WAXED_WEATHERED_COPPER_CHAIN);
+            event.accept(WAXED_OXIDIZED_COPPER_CHAIN);
+            event.accept(COPPER_CHANDELIER);
+            event.accept(EXPOSED_COPPER_CHANDELIER);
+            event.accept(WEATHERED_COPPER_CHANDELIER);
+            event.accept(OXIDIZED_COPPER_CHANDELIER);
+            event.accept(WAXED_COPPER_CHANDELIER);
+            event.accept(WAXED_EXPOSED_COPPER_CHANDELIER);
+            event.accept(WAXED_WEATHERED_COPPER_CHANDELIER);
+            event.accept(WAXED_OXIDIZED_COPPER_CHANDELIER);
             event.accept(COPPER_WALL_SCONCE);
             event.accept(EXPOSED_COPPER_WALL_SCONCE);
             event.accept(WEATHERED_COPPER_WALL_SCONCE);

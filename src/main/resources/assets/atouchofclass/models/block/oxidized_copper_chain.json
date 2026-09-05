@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "copper": "minecraft:block/oxidized_copper"
+  },
+  "parent": "atouchofclass:block/copper_chain_base"
+}

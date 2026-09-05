@@ -1,0 +1,18 @@
+{
+  "result": {
+    "id": "atouchofclass:copper_chandelier",
+    "count": 1
+  },
+  "pattern": [
+    " C ",
+    "CGC",
+    "QGQ"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": "minecraft:quartz",
+    "G": "minecraft:glowstone_dust",
+    "C": "minecraft:copper_ingot"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "atouchofclass:block/exposed_copper_chain"
+    },
+    "axis=x": {
+      "x": 90,
+      "y": 90,
+      "model": "atouchofclass:block/exposed_copper_chain"
+    },
+    "axis=z": {
+      "model": "atouchofclass:block/exposed_copper_chain",
+      "x": 90
+    }
+  }
+}

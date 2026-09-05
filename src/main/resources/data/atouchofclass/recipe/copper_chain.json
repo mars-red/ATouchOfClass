@@ -1,0 +1,16 @@
+{
+  "result": {
+    "id": "atouchofclass:copper_chain",
+    "count": 1
+  },
+  "pattern": [
+    "N",
+    "N",
+    "N"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": "#c:nuggets/copper"
+  }
+}

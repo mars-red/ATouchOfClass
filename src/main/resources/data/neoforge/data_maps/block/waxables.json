@@ -11,6 +11,30 @@
     },
     "atouchofclass:oxidized_copper_wall_sconce": {
       "waxed": "atouchofclass:waxed_oxidized_copper_wall_sconce"
+    },
+    "atouchofclass:copper_chain": {
+      "waxed": "atouchofclass:waxed_copper_chain"
+    },
+    "atouchofclass:exposed_copper_chain": {
+      "waxed": "atouchofclass:waxed_exposed_copper_chain"
+    },
+    "atouchofclass:weathered_copper_chain": {
+      "waxed": "atouchofclass:waxed_weathered_copper_chain"
+    },
+    "atouchofclass:oxidized_copper_chain": {
+      "waxed": "atouchofclass:waxed_oxidized_copper_chain"
+    },
+    "atouchofclass:copper_chandelier": {
+      "waxed": "atouchofclass:waxed_copper_chandelier"
+    },
+    "atouchofclass:exposed_copper_chandelier": {
+      "waxed": "atouchofclass:waxed_exposed_copper_chandelier"
+    },
+    "atouchofclass:weathered_copper_chandelier": {
+      "waxed": "atouchofclass:waxed_weathered_copper_chandelier"
+    },
+    "atouchofclass:oxidized_copper_chandelier": {
+      "waxed": "atouchofclass:waxed_oxidized_copper_chandelier"
     }
   }
 }
