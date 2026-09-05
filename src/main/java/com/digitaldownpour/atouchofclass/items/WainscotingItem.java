@@ -6,7 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 public class WainscotingItem extends WallOverlayItemBase {
     private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(
             ATouchofClass.MODID,
-            "item/wainscoting_1"
+            "item/wainscoting_2"
     );
 
     public WainscotingItem(Properties properties) {
