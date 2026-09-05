@@ -1,0 +1,144 @@
+{
+  "variants": {
+    "facing=north,slope=flat": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing",
+      "y": 0
+    },
+    "facing=east,slope=flat": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing",
+      "y": 90
+    },
+    "facing=south,slope=flat": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing",
+      "y": 180
+    },
+    "facing=west,slope=flat": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing",
+      "y": 270
+    },
+    "facing=north,slope=upper_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_upper_left",
+      "y": 0
+    },
+    "facing=east,slope=upper_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_upper_left",
+      "y": 90
+    },
+    "facing=south,slope=upper_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_upper_left",
+      "y": 180
+    },
+    "facing=west,slope=upper_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_upper_left",
+      "y": 270
+    },
+    "facing=north,slope=lower_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_lower_right",
+      "y": 0
+    },
+    "facing=east,slope=lower_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_lower_right",
+      "y": 90
+    },
+    "facing=south,slope=lower_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_lower_right",
+      "y": 180
+    },
+    "facing=west,slope=lower_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_lower_right",
+      "y": 270
+    },
+    "facing=north,slope=lower_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_lower_left",
+      "y": 0
+    },
+    "facing=east,slope=lower_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_lower_left",
+      "y": 90
+    },
+    "facing=south,slope=lower_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_lower_left",
+      "y": 180
+    },
+    "facing=west,slope=lower_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_lower_left",
+      "y": 270
+    },
+    "facing=north,slope=upper_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_upper_right",
+      "y": 0
+    },
+    "facing=east,slope=upper_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_upper_right",
+      "y": 90
+    },
+    "facing=south,slope=upper_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_upper_right",
+      "y": 180
+    },
+    "facing=west,slope=upper_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_upper_right",
+      "y": 270
+    },
+    "facing=north,slope=transition_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_transition_right",
+      "y": 0
+    },
+    "facing=east,slope=transition_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_transition_right",
+      "y": 90
+    },
+    "facing=south,slope=transition_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_transition_right",
+      "y": 180
+    },
+    "facing=west,slope=transition_right": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_transition_right",
+      "y": 270
+    },
+    "facing=north,slope=transition_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_transition_left",
+      "y": 0
+    },
+    "facing=east,slope=transition_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_transition_left",
+      "y": 90
+    },
+    "facing=south,slope=transition_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_transition_left",
+      "y": 180
+    },
+    "facing=west,slope=transition_left": {
+      "uvlock": true,
+      "model": "atouchofclass:block/oak_railing_transition_left",
+      "y": 270
+    }
+  }
+}

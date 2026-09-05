@@ -1,6 +1,7 @@
 package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.blocks.WallSconceBlock;
+import com.digitaldownpour.atouchofclass.blocks.OakRailingBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperChainBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperChandelierBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperChainBlock;
@@ -35,6 +36,12 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ATouchofClass.MODID);
+
+    public static final DeferredBlock<OakRailingBlock> OAK_RAILING =
+            BLOCKS.register("oak_railing", key -> new OakRailingBlock(
+                    BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                            .mapColor(MapColor.WOOD).strength(2.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.WOOD).noOcclusion()));
 
     public static final DeferredBlock<CrownMouldingBlock> CROWN_MOULDING = BLOCKS.register("crown_moulding",
             registryName -> new CrownMouldingBlock(BlockBehaviour.Properties.of()

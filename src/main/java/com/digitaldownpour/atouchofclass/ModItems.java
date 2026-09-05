@@ -19,6 +19,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ATouchofClass.MODID);
 
+    public static final DeferredItem<BlockItem> OAK_RAILING = ITEMS.registerSimpleBlockItem("oak_railing", ModBlocks.OAK_RAILING);
+
     public static final DeferredItem<Item> COPPER_NUGGET = ITEMS.registerSimpleItem("copper_nugget", new Item.Properties());
 
     public static final DeferredItem<WallpaperItem> CORNFLOWER_WALLPAPER = registerWallpaper("cornflower_wallpaper");
@@ -139,6 +141,7 @@ public class ModItems {
             event.accept(QUICKLIME_POWDER);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(OAK_RAILING);
             event.accept(TALL_DOOR_ITEM);
             event.accept(TALL_SIDELIGHT_ITEM);
             event.accept(KEY_CUTTER_ITEM);

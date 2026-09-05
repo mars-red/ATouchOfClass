@@ -1,6 +1,7 @@
 package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.blocks.WindowApronBlock;
+import com.digitaldownpour.atouchofclass.blocks.PlinthBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
@@ -38,12 +39,14 @@ public class WindowApronGameTests {
                     facing.getClockWise(), facing.getCounterClockWise()}) {
                 for (net.minecraft.world.level.block.Block block : new net.minecraft.world.level.block.Block[] {
                         ModBlocks.WINDOW_APRON.get(), ModBlocks.PLINTH_BLOCK.get()}) {
+                    var baseboardProperty = block instanceof PlinthBlock
+                            ? PlinthBlock.BASEBOARD : WindowApronBlock.BASEBOARD;
                     helper.setBlock(pos, block.defaultBlockState()
                             .setValue(com.digitaldownpour.atouchofclass.blocks.CasingBlock.FACING, facing));
                     helper.setBlock(pos.relative(facing), ModBlocks.BASEBOARD.get().defaultBlockState()
                             .setValue(com.digitaldownpour.atouchofclass.blocks.BaseboardBlock.FACING, other));
                     BlockState connected = helper.getLevel().getBlockState(helper.absolutePos(pos));
-                    helper.assertTrue(connected.getValue(WindowApronBlock.BASEBOARD),
+                    helper.assertTrue(connected.getValue(baseboardProperty),
                             "Front baseboard must enable the combined variant");
                     net.minecraft.world.level.block.state.properties.Property<?> property =
                             block.getStateDefinition().getProperty("baseboard_return");
@@ -51,7 +54,7 @@ public class WindowApronGameTests {
                             "Return must follow the perpendicular baseboard");
                     helper.setBlock(pos.relative(facing), Blocks.AIR);
                     BlockState cleared = helper.getLevel().getBlockState(helper.absolutePos(pos));
-                    helper.assertTrue(!cleared.getValue(WindowApronBlock.BASEBOARD),
+                    helper.assertTrue(!cleared.getValue(baseboardProperty),
                             "Removing front baseboard must clear the connection");
                     helper.setBlock(pos, Blocks.AIR);
                 }
