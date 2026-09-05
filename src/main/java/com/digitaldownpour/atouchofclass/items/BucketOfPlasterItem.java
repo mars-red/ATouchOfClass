@@ -7,13 +7,14 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.ChunkPos;
+import net.minecraft.world.level.GameType;
 import org.jetbrains.annotations.NotNull;
 
 public class BucketOfPlasterItem extends BlockOverlayItemBase {
@@ -74,12 +75,14 @@ public class BucketOfPlasterItem extends BlockOverlayItemBase {
     }
 
     private static void consumeApplication(UseOnContext context) {
+        if (!(context.getPlayer() instanceof ServerPlayer player)
+                || player.gameMode.getGameModeForPlayer() != GameType.SURVIVAL) {
+            return;
+        }
+
         ItemStack stack = context.getItemInHand();
         if (isLastApplication(stack)) {
-            Player player = context.getPlayer();
-            if (player != null) {
-                player.setItemInHand(context.getHand(), new ItemStack(Items.BUCKET));
-            }
+            player.setItemInHand(context.getHand(), new ItemStack(Items.BUCKET));
         } else {
             stack.setDamageValue(stack.getDamageValue() + 1);
         }
