@@ -10,6 +10,7 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -28,7 +29,7 @@ public class WindowApronBlock extends CasingBlock {
 
     public WindowApronBlock(Properties properties) {
         super(properties, 5, 8);
-        registerDefaultState(defaultBlockState().setValue(EDGE, Edge.TOP).setValue(CAP, Cap.NONE).setValue(BASEBOARD, false));
+        registerDefaultState(defaultBlockState().setValue(EDGE, Edge.TOP).setValue(CAP, Cap.NONE).setValue(BASEBOARD, false).setValue(BaseboardReturn.FACING, Direction.UP));
         for (BlockState state : stateDefinition.getPossibleStates()) {
             Direction facing = state.getValue(FACING);
             Direction top = edgeDirection(facing, state.getValue(EDGE));
@@ -42,7 +43,7 @@ public class WindowApronBlock extends CasingBlock {
                 shape = Shapes.or(shape, tier(facing, Direction.DOWN,
                         facing.getClockWise(), 16, 2, 0, 4));
             }
-            apronShapes.put(state, shape);
+            apronShapes.put(state, Shapes.or(shape, BaseboardReturn.shape(state.getValue(BaseboardReturn.FACING))));
         }
     }
 
@@ -96,13 +97,14 @@ public class WindowApronBlock extends CasingBlock {
 
     private BlockState withBaseboard(BlockState state, BlockGetter level, BlockPos pos) {
         Direction facing = state.getValue(FACING);
-        boolean connected = false;
+        Direction returnFacing = BaseboardReturn.find(level, pos, facing);
+        boolean connected = returnFacing != Direction.UP;
         if (facing.getAxis().isHorizontal()) {
             Direction side = facing.getClockWise();
-            connected = hasBaseboardAlongApron(level, pos, side, state)
+            connected = connected || hasBaseboardAlongApron(level, pos, side, state)
                     || hasBaseboardAlongApron(level, pos, side.getOpposite(), state);
         }
-        return state.setValue(BASEBOARD, connected);
+        return state.setValue(BASEBOARD, connected).setValue(BaseboardReturn.FACING, returnFacing);
     }
 
     private boolean hasBaseboardAlongApron(BlockGetter level, BlockPos pos, Direction side, BlockState state) {
@@ -119,6 +121,7 @@ public class WindowApronBlock extends CasingBlock {
                     || neighbor.getValue(EDGE) != state.getValue(EDGE)) {
                 return false;
             }
+            if (BaseboardReturn.find(level, cursor, facing) != Direction.UP) return true;
             cursor.move(side);
         }
     }
@@ -141,17 +144,24 @@ public class WindowApronBlock extends CasingBlock {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
-        builder.add(CAP, BASEBOARD);
+        builder.add(CAP, BASEBOARD, BaseboardReturn.FACING);
     }
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        BlockState mirrored = super.mirror(state, mirror);
+        BlockState mirrored = super.mirror(state, mirror).setValue(BaseboardReturn.FACING,
+                mirror.mirror(state.getValue(BaseboardReturn.FACING)));
         if (state.getValue(CAP) == Cap.NONE) return mirrored;
         Direction oldRight = right(state.getValue(FACING), edgeDirection(state.getValue(FACING), state.getValue(EDGE)));
         Direction outward = state.getValue(CAP) == Cap.RIGHT ? oldRight : oldRight.getOpposite();
         Direction newRight = right(mirrored.getValue(FACING), edgeDirection(mirrored.getValue(FACING), mirrored.getValue(EDGE)));
         return mirrored.setValue(CAP, mirror.mirror(outward) == newRight ? Cap.RIGHT : Cap.LEFT);
+    }
+
+    @Override
+    protected BlockState rotate(BlockState state, Rotation rotation) {
+        return super.rotate(state, rotation).setValue(BaseboardReturn.FACING,
+                rotation.rotate(state.getValue(BaseboardReturn.FACING)));
     }
 
     public enum Cap implements StringRepresentable {
