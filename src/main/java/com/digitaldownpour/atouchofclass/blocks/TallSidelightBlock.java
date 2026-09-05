@@ -107,8 +107,11 @@ public class TallSidelightBlock extends Block {
             BlockPos basePos = pos.below(part); // Calculate bottom position
 
             for (int i = 0; i < 3; i++) {
+                if (i == part) continue;
                 BlockPos p = basePos.above(i);
-                if (world.getBlockState(p).getBlock() == this) {
+                BlockState otherPart = world.getBlockState(p);
+                if (otherPart.is(this) && otherPart.getValue(PART) == i) {
+                    // Only the originally broken section rolls loot; companion sections never do.
                     world.destroyBlock(p, false);
                 }
             }
