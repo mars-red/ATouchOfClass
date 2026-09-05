@@ -2,17 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "result": {
     "id": "atouchofclass:copper_wall_sconce",
-    "count": 2
+    "count": 1
   },
   "pattern": [
-    " CG",
-    " CT",
-    " CC"
+    "CG",
+    "CT",
+    "CC"
   ],
   "key": {
-    "G": "minecraft:white_stained_glass",
+    "G": "minecraft:white_stained_glass_pane",
     "T": "minecraft:torch",
-    "C": "minecraft:copper_ingot"
+    "C": "#c:nuggets/copper"
   },
   "category": "misc"
 }

@@ -19,6 +19,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ATouchofClass.MODID);
 
+    public static final DeferredItem<Item> COPPER_NUGGET = ITEMS.registerSimpleItem("copper_nugget", new Item.Properties());
+
     public static final DeferredItem<WallpaperItem> CORNFLOWER_WALLPAPER = registerWallpaper("cornflower_wallpaper");
     public static final DeferredItem<WallpaperItem> SCALLOPED_WALLPAPER = registerWallpaper("scalloped_wallpaper");
     public static final DeferredItem<WallpaperItem> OGEE_LATTICE_WALLPAPER = registerWallpaper("ogee_lattice_wallpaper");
@@ -99,6 +101,7 @@ public class ModItems {
             event.accept(BUCKET_OF_PLASTER);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(COPPER_NUGGET);
             event.accept(QUICKLIME_POWDER);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {

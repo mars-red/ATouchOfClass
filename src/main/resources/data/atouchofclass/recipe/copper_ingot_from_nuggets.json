@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["NNN", "NNN", "NNN"],
+  "key": { "N": "#c:nuggets/copper" },
+  "result": { "id": "minecraft:copper_ingot", "count": 1 }
+}
