@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=south,shape=straight": {
+      "model": "atouchofclass:block/baseboard"
+    },
+    "facing=south,shape=inner_left": {
+      "model": "atouchofclass:block/baseboard_south_inner_left"
+    },
+    "facing=south,shape=inner_right": {
+      "model": "atouchofclass:block/baseboard_south_inner_right"
+    },
+    "facing=south,shape=outer_left": {
+      "model": "atouchofclass:block/baseboard_south_outer_left"
+    },
+    "facing=south,shape=outer_right": {
+      "model": "atouchofclass:block/baseboard_south_outer_right"
+    },
+    "facing=west,shape=straight": {
+      "model": "atouchofclass:block/baseboard_west_straight"
+    },
+    "facing=west,shape=inner_left": {
+      "model": "atouchofclass:block/baseboard_west_inner_left"
+    },
+    "facing=west,shape=inner_right": {
+      "model": "atouchofclass:block/baseboard_west_inner_right"
+    },
+    "facing=west,shape=outer_left": {
+      "model": "atouchofclass:block/baseboard_west_outer_left"
+    },
+    "facing=west,shape=outer_right": {
+      "model": "atouchofclass:block/baseboard_west_outer_right"
+    },
+    "facing=north,shape=straight": {
+      "model": "atouchofclass:block/baseboard_north_straight"
+    },
+    "facing=north,shape=inner_left": {
+      "model": "atouchofclass:block/baseboard_north_inner_left"
+    },
+    "facing=north,shape=inner_right": {
+      "model": "atouchofclass:block/baseboard_north_inner_right"
+    },
+    "facing=north,shape=outer_left": {
+      "model": "atouchofclass:block/baseboard_north_outer_left"
+    },
+    "facing=north,shape=outer_right": {
+      "model": "atouchofclass:block/baseboard_north_outer_right"
+    },
+    "facing=east,shape=straight": {
+      "model": "atouchofclass:block/baseboard_east_straight"
+    },
+    "facing=east,shape=inner_left": {
+      "model": "atouchofclass:block/baseboard_east_inner_left"
+    },
+    "facing=east,shape=inner_right": {
+      "model": "atouchofclass:block/baseboard_east_inner_right"
+    },
+    "facing=east,shape=outer_left": {
+      "model": "atouchofclass:block/baseboard_east_outer_left"
+    },
+    "facing=east,shape=outer_right": {
+      "model": "atouchofclass:block/baseboard_east_outer_right"
+    }
+  }
+}

@@ -62,6 +62,7 @@ public class ModItems {
     public static final DeferredItem<BlockItem> CASING_ITEM = ITEMS.registerSimpleBlockItem("casing", ModBlocks.CASING);
     public static final DeferredItem<BlockItem> WINDOW_APRON_ITEM = ITEMS.registerSimpleBlockItem("window_apron", ModBlocks.WINDOW_APRON);
     public static final DeferredItem<BlockItem> CROWN_MOULDING_ITEM = ITEMS.registerSimpleBlockItem("crown_moulding", ModBlocks.CROWN_MOULDING);
+    public static final DeferredItem<BlockItem> BASEBOARD_ITEM = ITEMS.registerSimpleBlockItem("baseboard", ModBlocks.BASEBOARD);
     public static final DeferredItem<BlockItem> PLINTH_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("plinth_block", ModBlocks.PLINTH_BLOCK);
     public static final DeferredItem<BlockItem> CORNER_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("corner_block", ModBlocks.CORNER_BLOCK);
 
@@ -144,6 +145,7 @@ public class ModItems {
             event.accept(CASING_ITEM);
             event.accept(WINDOW_APRON_ITEM);
             event.accept(CROWN_MOULDING_ITEM);
+            event.accept(BASEBOARD_ITEM);
             event.accept(PLINTH_BLOCK_ITEM);
             event.accept(CORNER_BLOCK_ITEM);
         }

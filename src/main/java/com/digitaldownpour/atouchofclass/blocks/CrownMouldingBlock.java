@@ -29,15 +29,17 @@ public class CrownMouldingBlock extends Block {
     private final Map<BlockState, VoxelShape> crownShapes = new HashMap<>();
 
     public CrownMouldingBlock(Properties properties) {
+        this(properties, Direction.UP, new int[][] {{5, 0, 2}, {3, 2, 6}, {2, 6, 8}, {3, 8, 9}});
+    }
+
+    protected CrownMouldingBlock(Properties properties, Direction top, int[][] tiers) {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.SOUTH).setValue(SHAPE, StairsShape.STRAIGHT));
         for (BlockState state : stateDefinition.getPossibleStates()) {
             Direction facing = state.getValue(FACING);
-            Direction top = Direction.UP;
             StairsShape shape = state.getValue(SHAPE);
             Direction side = isLeft(shape) ? right(state).getOpposite() : right(state);
             VoxelShape result = Shapes.empty();
-            int[][] tiers = {{5, 0, 2}, {3, 2, 6}, {2, 6, 8}, {3, 8, 9}};
             for (int[] tier : tiers) {
                 VoxelShape strip = strip(facing.getOpposite(), top, tier[0], tier[1], tier[2]);
                 if (shape != StairsShape.STRAIGHT) {
