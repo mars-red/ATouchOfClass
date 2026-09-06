@@ -21,6 +21,9 @@ public class ModItems {
 
     public static final DeferredItem<BlockItem> OAK_RAILING = ITEMS.registerSimpleBlockItem("oak_railing", ModBlocks.OAK_RAILING);
 
+    public static final DeferredItem<BlockItem> OAK_BALUSTRADE = ITEMS.registerSimpleBlockItem("oak_balustrade", ModBlocks.OAK_BALUSTRADE);
+    public static final DeferredItem<BlockItem> OAK_BALUSTER = ITEMS.registerSimpleBlockItem("oak_baluster", ModBlocks.OAK_BALUSTER);
+
     public static final DeferredItem<Item> COPPER_NUGGET = ITEMS.registerSimpleItem("copper_nugget", new Item.Properties());
 
     public static final DeferredItem<WallpaperItem> CORNFLOWER_WALLPAPER = registerWallpaper("cornflower_wallpaper");
@@ -142,6 +145,8 @@ public class ModItems {
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(OAK_RAILING);
+            event.accept(OAK_BALUSTRADE);
+            event.accept(OAK_BALUSTER);
             event.accept(TALL_DOOR_ITEM);
             event.accept(TALL_SIDELIGHT_ITEM);
             event.accept(KEY_CUTTER_ITEM);

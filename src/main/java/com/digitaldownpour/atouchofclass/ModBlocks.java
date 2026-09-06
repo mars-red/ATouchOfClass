@@ -2,6 +2,8 @@ package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.blocks.WallSconceBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakRailingBlock;
+import com.digitaldownpour.atouchofclass.blocks.OakBalustradeBlock;
+import com.digitaldownpour.atouchofclass.blocks.OakBalusterBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperChainBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperChandelierBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperChainBlock;
@@ -43,6 +45,16 @@ public class ModBlocks {
                             .mapColor(MapColor.WOOD).strength(2.0F)
                             .sound(net.minecraft.world.level.block.SoundType.WOOD).noOcclusion()));
 
+    public static final DeferredBlock<OakBalustradeBlock> OAK_BALUSTRADE =
+            BLOCKS.register("oak_balustrade", key -> new OakBalustradeBlock(
+                    BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                            .mapColor(MapColor.WOOD).strength(2.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<OakBalusterBlock> OAK_BALUSTER =
+            BLOCKS.register("oak_baluster", key -> new OakBalusterBlock(
+                    BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                            .mapColor(MapColor.WOOD).strength(2.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.WOOD).noOcclusion()));
     public static final DeferredBlock<CrownMouldingBlock> CROWN_MOULDING = BLOCKS.register("crown_moulding",
             registryName -> new CrownMouldingBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))

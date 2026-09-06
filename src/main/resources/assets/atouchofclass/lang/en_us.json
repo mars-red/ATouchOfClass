@@ -1,5 +1,7 @@
 {
-  "block.atouchofclass.oak_railing": "Oak Railing",
+  "block.atouchofclass.oak_railing": "Wall Mounted Oak Railing",
+  "block.atouchofclass.oak_balustrade": "Oak Balustrade",
+  "block.atouchofclass.oak_baluster": "Oak Baluster",
   "item.atouchofclass.copper_nugget": "Copper Nugget",
   "itemGroup.atouchofclass": "Example Mod Tab",
   "block.atouchofclass.tall_door": "Tall Door",

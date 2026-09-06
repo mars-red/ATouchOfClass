@@ -1,0 +1,15 @@
+{
+  "result": {
+    "id": "atouchofclass:oak_baluster",
+    "count": 8
+  },
+  "category": "building",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "O",
+    "O"
+  ],
+  "key": {
+    "O": "minecraft:stripped_oak_log"
+  }
+}
