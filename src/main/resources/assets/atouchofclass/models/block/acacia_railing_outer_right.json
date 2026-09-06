@@ -1,0 +1,227 @@
+{
+  "elements": [
+    {
+      "from": [
+        11.25,
+        12.5,
+        11.25
+      ],
+      "to": [
+        16,
+        15.5,
+        14.25
+      ],
+      "faces": {
+        "north": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "south": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "east": {
+          "texture": "#end"
+        },
+        "west": {
+          "texture": "#end"
+        },
+        "up": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "down": {
+          "rotation": 90,
+          "texture": "#oak"
+        }
+      }
+    },
+    {
+      "from": [
+        11.25,
+        12.5,
+        14.25
+      ],
+      "to": [
+        14.25,
+        15.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#end"
+        },
+        "south": {
+          "texture": "#end"
+        },
+        "east": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "west": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "up": {
+          "rotation": 0,
+          "texture": "#oak"
+        },
+        "down": {
+          "rotation": 0,
+          "texture": "#oak"
+        }
+      }
+    },
+    {
+      "from": [
+        11.75,
+        15.5,
+        11.75
+      ],
+      "to": [
+        16,
+        16,
+        13.75
+      ],
+      "faces": {
+        "north": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "south": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "east": {
+          "texture": "#end"
+        },
+        "west": {
+          "texture": "#end"
+        },
+        "up": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "down": {
+          "rotation": 90,
+          "texture": "#oak"
+        }
+      }
+    },
+    {
+      "from": [
+        11.75,
+        15.5,
+        13.75
+      ],
+      "to": [
+        13.75,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#end"
+        },
+        "south": {
+          "texture": "#end"
+        },
+        "east": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "west": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "up": {
+          "rotation": 0,
+          "texture": "#oak"
+        },
+        "down": {
+          "rotation": 0,
+          "texture": "#oak"
+        }
+      }
+    },
+    {
+      "from": [
+        11.75,
+        12,
+        11.75
+      ],
+      "to": [
+        16,
+        12.5,
+        13.75
+      ],
+      "faces": {
+        "north": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "south": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "east": {
+          "texture": "#end"
+        },
+        "west": {
+          "texture": "#end"
+        },
+        "up": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "down": {
+          "rotation": 90,
+          "texture": "#oak"
+        }
+      }
+    },
+    {
+      "from": [
+        11.75,
+        12,
+        13.75
+      ],
+      "to": [
+        13.75,
+        12.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#end"
+        },
+        "south": {
+          "texture": "#end"
+        },
+        "east": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "west": {
+          "rotation": 90,
+          "texture": "#oak"
+        },
+        "up": {
+          "rotation": 0,
+          "texture": "#oak"
+        },
+        "down": {
+          "rotation": 0,
+          "texture": "#oak"
+        }
+      }
+    }
+  ],
+  "textures": {
+    "copper": "minecraft:block/copper_block",
+    "particle": "minecraft:block/stripped_acacia_log",
+    "end": "minecraft:block/stripped_acacia_log_top",
+    "oak": "minecraft:block/stripped_acacia_log"
+  },
+  "parent": "minecraft:block/block"
+}

@@ -1,0 +1,16 @@
+{
+  "result": {
+    "id": "atouchofclass:jungle_balustrade",
+    "count": 2
+  },
+  "category": "building",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "O",
+    "B"
+  ],
+  "key": {
+    "O": "minecraft:jungle_slab",
+    "B": "atouchofclass:jungle_baluster"
+  }
+}

@@ -24,6 +24,17 @@ public class ModItems {
     public static final DeferredItem<BlockItem> OAK_BALUSTRADE = ITEMS.registerSimpleBlockItem("oak_balustrade", ModBlocks.OAK_BALUSTRADE);
     public static final DeferredItem<BlockItem> OAK_BALUSTER = ITEMS.registerSimpleBlockItem("oak_baluster", ModBlocks.OAK_BALUSTER);
 
+    public static final java.util.List<DeferredItem<BlockItem>> WOOD_RAILINGS = registerWoodRailings();
+    private static java.util.List<DeferredItem<BlockItem>> registerWoodRailings() {
+        var items=new java.util.ArrayList<DeferredItem<BlockItem>>();
+        ModBlocks.WOOD_RAILINGS.forEach((wood,family)->{
+            items.add(ITEMS.registerSimpleBlockItem(wood+"_railing",family.railing()));
+            items.add(ITEMS.registerSimpleBlockItem(wood+"_balustrade",family.balustrade()));
+            items.add(ITEMS.registerSimpleBlockItem(wood+"_baluster",family.baluster()));
+        });
+        return java.util.List.copyOf(items);
+    }
+
     public static final DeferredItem<Item> COPPER_NUGGET = ITEMS.registerSimpleItem("copper_nugget", new Item.Properties());
 
     public static final DeferredItem<WallpaperItem> CORNFLOWER_WALLPAPER = registerWallpaper("cornflower_wallpaper");
@@ -147,6 +158,7 @@ public class ModItems {
             event.accept(OAK_RAILING);
             event.accept(OAK_BALUSTRADE);
             event.accept(OAK_BALUSTER);
+            WOOD_RAILINGS.forEach(event::accept);
             event.accept(TALL_DOOR_ITEM);
             event.accept(TALL_SIDELIGHT_ITEM);
             event.accept(KEY_CUTTER_ITEM);

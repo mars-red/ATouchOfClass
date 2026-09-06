@@ -1,0 +1,42 @@
+{
+  "elements": [
+    {
+      "to": [
+        13.75,
+        16,
+        13.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#oak"
+        },
+        "east": {
+          "texture": "#oak"
+        },
+        "down": {
+          "texture": "#end"
+        },
+        "south": {
+          "texture": "#oak"
+        },
+        "up": {
+          "texture": "#end"
+        },
+        "west": {
+          "texture": "#oak"
+        }
+      },
+      "from": [
+        11.75,
+        0,
+        11.75
+      ]
+    }
+  ],
+  "parent": "minecraft:block/block",
+  "textures": {
+    "end": "minecraft:block/stripped_bamboo_block_top",
+    "particle": "minecraft:block/stripped_bamboo_block",
+    "oak": "minecraft:block/stripped_bamboo_block"
+  }
+}

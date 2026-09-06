@@ -55,6 +55,8 @@ public class ModBlocks {
                     BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
                             .mapColor(MapColor.WOOD).strength(2.0F)
                             .sound(net.minecraft.world.level.block.SoundType.WOOD).noOcclusion()));
+    public static final java.util.Map<String, WoodRailingVariants.Family> WOOD_RAILINGS = WoodRailingVariants.register();
+
     public static final DeferredBlock<CrownMouldingBlock> CROWN_MOULDING = BLOCKS.register("crown_moulding",
             registryName -> new CrownMouldingBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))

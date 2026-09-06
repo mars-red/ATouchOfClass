@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "OOO",
+    "C C"
+  ],
+  "key": {
+    "O": "minecraft:dark_oak_planks",
+    "C": "minecraft:copper_ingot"
+  },
+  "result": {
+    "id": "atouchofclass:dark_oak_railing",
+    "count": 6
+  }
+}

@@ -1,0 +1,1004 @@
+{
+  "variants": {
+    "facing=west,shape=inner_right,slope=upper_right,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=east,shape=outer_left,slope=lower_left,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=east,shape=inner_left,slope=lower_right,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=south,shape=inner_left,slope=flat,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_left"
+    },
+    "facing=east,shape=outer_right,slope=lower_right,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=outer_left,slope=upper_left,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=west,shape=inner_left,slope=flat,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_left"
+    },
+    "facing=east,shape=inner_right,slope=lower_right,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=east,shape=outer_right,slope=upper_right,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=east,shape=outer_left,slope=lower_right,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=west,shape=inner_left,slope=upper_right,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=south,shape=inner_left,slope=lower_right,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=outer_right,slope=upper_right,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=west,shape=inner_right,slope=lower_left,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=straight,slope=upper_left,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=east,shape=inner_right,slope=flat,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_right"
+    },
+    "facing=east,shape=inner_right,slope=flat,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_right"
+    },
+    "facing=south,shape=outer_right,slope=lower_right,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=south,shape=inner_right,slope=lower_left,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=straight,slope=lower_right,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=straight,slope=upper_right,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=west,shape=outer_right,slope=flat,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_right"
+    },
+    "facing=south,shape=inner_left,slope=upper_right,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=east,shape=outer_right,slope=lower_left,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=east,shape=outer_left,slope=flat,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_left"
+    },
+    "facing=north,shape=inner_right,slope=upper_left,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=east,shape=outer_right,slope=flat,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_right"
+    },
+    "facing=west,shape=outer_right,slope=lower_left,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=south,shape=inner_right,slope=lower_right,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=south,shape=straight,slope=lower_right,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=east,shape=straight,slope=upper_right,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=south,shape=outer_right,slope=flat,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_right"
+    },
+    "facing=east,shape=inner_left,slope=upper_right,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=north,shape=outer_left,slope=flat,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_left"
+    },
+    "facing=west,shape=inner_left,slope=upper_left,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=south,shape=inner_right,slope=upper_left,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=east,shape=inner_left,slope=lower_left,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=south,shape=inner_left,slope=lower_left,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=inner_left,slope=upper_right,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=south,shape=outer_left,slope=lower_right,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=east,shape=outer_left,slope=flat,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_left"
+    },
+    "facing=south,shape=inner_right,slope=upper_right,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=west,shape=outer_left,slope=upper_left,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=east,shape=inner_left,slope=flat,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_left"
+    },
+    "facing=east,shape=inner_right,slope=upper_left,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=west,shape=straight,slope=flat,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_straight"
+    },
+    "facing=north,shape=outer_left,slope=upper_left,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=west,shape=outer_right,slope=upper_left,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=south,shape=outer_left,slope=lower_right,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=west,shape=inner_right,slope=lower_right,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=inner_left,slope=flat,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_left"
+    },
+    "facing=east,shape=outer_right,slope=upper_right,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=west,shape=inner_right,slope=upper_left,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=north,shape=straight,slope=lower_right,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=east,shape=inner_left,slope=upper_right,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=west,shape=straight,slope=flat,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_straight"
+    },
+    "facing=north,shape=outer_left,slope=upper_right,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=north,shape=outer_right,slope=lower_right,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=outer_right,slope=flat,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_right"
+    },
+    "facing=south,shape=outer_right,slope=upper_right,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=south,shape=outer_right,slope=lower_right,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=south,shape=outer_right,slope=upper_right,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=east,shape=outer_left,slope=lower_right,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=south,shape=inner_left,slope=upper_left,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=east,shape=outer_right,slope=lower_left,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=north,shape=inner_left,slope=flat,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_left"
+    },
+    "facing=west,shape=outer_left,slope=lower_right,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=west,shape=outer_right,slope=lower_left,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=south,shape=outer_right,slope=lower_left,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=north,shape=inner_left,slope=lower_left,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=outer_left,slope=flat,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_left"
+    },
+    "facing=north,shape=straight,slope=upper_left,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=east,shape=inner_left,slope=flat,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_left"
+    },
+    "facing=west,shape=inner_left,slope=lower_right,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=inner_right,slope=flat,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_right"
+    },
+    "facing=west,shape=inner_left,slope=lower_left,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=south,shape=outer_left,slope=lower_left,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=east,shape=straight,slope=upper_left,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=south,shape=inner_right,slope=upper_right,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=west,shape=outer_left,slope=lower_left,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=south,shape=inner_left,slope=lower_left,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=north,shape=outer_left,slope=upper_right,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=west,shape=outer_right,slope=upper_right,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=north,shape=straight,slope=lower_left,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=north,shape=inner_right,slope=lower_right,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=west,shape=outer_left,slope=lower_left,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=inner_right,slope=upper_left,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=north,shape=outer_right,slope=upper_right,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=north,shape=inner_left,slope=upper_right,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=east,shape=outer_left,slope=upper_right,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=north,shape=inner_left,slope=upper_left,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=east,shape=inner_right,slope=lower_left,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=east,shape=straight,slope=lower_right,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=east,shape=inner_left,slope=lower_left,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=east,shape=outer_right,slope=lower_right,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=south,shape=inner_left,slope=upper_left,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=east,shape=outer_left,slope=upper_left,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=east,shape=straight,slope=upper_left,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=west,shape=inner_left,slope=lower_right,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=inner_left,slope=lower_right,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=straight,slope=flat,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_straight"
+    },
+    "facing=south,shape=inner_right,slope=lower_right,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=west,shape=inner_right,slope=flat,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_right"
+    },
+    "facing=north,shape=outer_left,slope=flat,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_left"
+    },
+    "facing=north,shape=inner_right,slope=upper_right,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=south,shape=straight,slope=flat,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_straight"
+    },
+    "facing=west,shape=outer_left,slope=upper_right,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=north,shape=inner_right,slope=lower_left,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=east,shape=inner_right,slope=lower_right,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=straight,slope=upper_right,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=north,shape=outer_left,slope=lower_left,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=east,shape=outer_left,slope=upper_left,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=west,shape=straight,slope=lower_left,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=straight,slope=upper_left,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=north,shape=straight,slope=flat,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_straight"
+    },
+    "facing=north,shape=outer_left,slope=lower_right,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=east,shape=straight,slope=flat,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_straight"
+    },
+    "facing=north,shape=inner_right,slope=upper_right,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=south,shape=outer_left,slope=flat,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_left"
+    },
+    "facing=south,shape=straight,slope=lower_left,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=south,shape=inner_right,slope=flat,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_right"
+    },
+    "facing=north,shape=straight,slope=lower_right,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=outer_right,slope=lower_left,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=outer_right,slope=flat,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_right"
+    },
+    "facing=north,shape=straight,slope=upper_left,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=north,shape=outer_right,slope=upper_left,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=west,shape=inner_right,slope=flat,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_right"
+    },
+    "facing=west,shape=straight,slope=lower_left,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=straight,slope=lower_right,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=inner_left,slope=upper_left,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=east,shape=inner_left,slope=upper_left,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=west,shape=inner_left,slope=lower_left,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=south,shape=outer_left,slope=upper_left,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=south,shape=outer_left,slope=upper_right,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=west,shape=outer_right,slope=upper_right,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=east,shape=inner_right,slope=upper_right,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=south,shape=outer_left,slope=lower_left,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=east,shape=outer_left,slope=lower_left,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=south,shape=straight,slope=lower_left,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=east,shape=straight,slope=lower_right,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=straight,slope=lower_left,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=inner_right,slope=upper_right,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=south,shape=inner_right,slope=flat,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_right"
+    },
+    "facing=south,shape=outer_left,slope=upper_right,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=south,shape=straight,slope=upper_left,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=east,shape=straight,slope=lower_left,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=outer_right,slope=lower_right,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=outer_right,slope=flat,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_right"
+    },
+    "facing=south,shape=outer_right,slope=upper_left,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=east,shape=inner_left,slope=upper_left,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=east,shape=outer_right,slope=upper_left,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=west,shape=outer_left,slope=lower_right,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=south,shape=straight,slope=lower_right,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=inner_left,slope=upper_right,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=north,shape=inner_right,slope=lower_right,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=south,shape=inner_right,slope=upper_left,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=west,shape=inner_left,slope=upper_left,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=south,shape=outer_right,slope=lower_left,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=east,shape=inner_left,slope=lower_right,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=north,shape=outer_right,slope=upper_left,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=north,shape=inner_left,slope=lower_right,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=west,shape=inner_right,slope=lower_left,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=inner_left,slope=flat,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_left"
+    },
+    "facing=east,shape=straight,slope=flat,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_straight"
+    },
+    "facing=north,shape=inner_right,slope=lower_left,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=north,shape=outer_left,slope=lower_left,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=north,shape=inner_right,slope=upper_left,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=south,shape=straight,slope=upper_right,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=west,shape=outer_left,slope=upper_right,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=south,shape=straight,slope=upper_right,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=south,shape=outer_left,slope=upper_left,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=south,shape=inner_right,slope=lower_left,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=south,shape=inner_left,slope=lower_right,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=east,shape=outer_right,slope=upper_left,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=east,shape=outer_left,slope=upper_right,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=north,shape=outer_right,slope=lower_right,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=west,shape=inner_right,slope=lower_right,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=south,shape=outer_left,slope=flat,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_left"
+    },
+    "facing=south,shape=straight,slope=upper_left,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=east,shape=straight,slope=upper_right,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=south,shape=inner_left,slope=upper_right,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=west,shape=outer_right,slope=upper_left,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=east,shape=inner_right,slope=upper_left,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left_top"
+    },
+    "facing=west,shape=straight,slope=upper_right,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right"
+    },
+    "facing=west,shape=outer_left,slope=flat,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_left"
+    },
+    "facing=east,shape=outer_right,slope=flat,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_right"
+    },
+    "facing=west,shape=outer_right,slope=lower_right,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=west,shape=straight,slope=upper_right,top_join=true": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=east,shape=inner_right,slope=lower_left,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=east,shape=straight,slope=lower_left,top_join=false": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=south,shape=outer_right,slope=flat,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_outer_right"
+    },
+    "facing=south,shape=outer_right,slope=upper_left,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=north,shape=inner_left,slope=lower_left,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=west,shape=outer_left,slope=upper_left,top_join=false": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_left"
+    },
+    "facing=north,shape=outer_right,slope=lower_left,top_join=false": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_left"
+    },
+    "facing=north,shape=outer_left,slope=lower_right,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_lower_right"
+    },
+    "facing=east,shape=inner_right,slope=upper_right,top_join=true": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_upper_right_top"
+    },
+    "facing=south,shape=inner_left,slope=flat,top_join=true": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_left"
+    },
+    "facing=south,shape=straight,slope=flat,top_join=false": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_straight"
+    },
+    "facing=north,shape=inner_right,slope=flat,top_join=true": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/warped_balustrade_inner_right"
+    }
+  }
+}

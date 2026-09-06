@@ -1,0 +1,15 @@
+{
+  "result": {
+    "id": "atouchofclass:warped_baluster",
+    "count": 32
+  },
+  "category": "building",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "O",
+    "O"
+  ],
+  "key": {
+    "O": "minecraft:stripped_warped_stem"
+  }
+}

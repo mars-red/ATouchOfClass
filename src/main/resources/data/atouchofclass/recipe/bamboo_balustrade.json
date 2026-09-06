@@ -1,0 +1,16 @@
+{
+  "result": {
+    "id": "atouchofclass:bamboo_balustrade",
+    "count": 2
+  },
+  "category": "building",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "O",
+    "B"
+  ],
+  "key": {
+    "O": "minecraft:bamboo_slab",
+    "B": "atouchofclass:bamboo_baluster"
+  }
+}

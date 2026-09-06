@@ -1,0 +1,42 @@
+{
+  "elements": [
+    {
+      "to": [
+        4.25,
+        16,
+        13.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#oak"
+        },
+        "east": {
+          "texture": "#oak"
+        },
+        "down": {
+          "texture": "#end"
+        },
+        "south": {
+          "texture": "#oak"
+        },
+        "up": {
+          "texture": "#end"
+        },
+        "west": {
+          "texture": "#oak"
+        }
+      },
+      "from": [
+        2.25,
+        0,
+        11.75
+      ]
+    }
+  ],
+  "parent": "minecraft:block/block",
+  "textures": {
+    "end": "minecraft:block/stripped_acacia_log_top",
+    "particle": "minecraft:block/stripped_acacia_log",
+    "oak": "minecraft:block/stripped_acacia_log"
+  }
+}
