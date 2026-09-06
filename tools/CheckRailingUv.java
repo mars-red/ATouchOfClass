@@ -36,14 +36,18 @@ public final class CheckRailingUv {
             require(close(area,w*h),"Lost or overlapping surface at a tile boundary");
         }
         seam(8,16,false,8,0,true,1);
-        seam(16,8,true,0,8,false,1);
         seam(8,16,false,8,0,true,-1);
-        seam(16,8,false,0,8,true,-1);
         for(int slope:new int[]{-1,1}) {
             double[] a=RailingUvMapping.coordinates(3,6,13,slope,false,true);
             double[] b=RailingUvMapping.coordinates(4,6+slope,13,slope,false,true);
             require(close(a[0],b[0])&&!close(a[1],b[1]),"Grain does not follow the 45-degree rail");
+            require(close(Math.abs(b[1]-a[1]),Math.sqrt(2)),"Diagonal grain scale differs from vanilla");
+            for(double[] delta:new double[][]{{1,0},{0,1},{1,-slope}}) {
+                double[] c=RailingUvMapping.coordinates(3+delta[0],6+delta[1],13,slope,false,true);
+                require(close(Math.hypot(c[0]-a[0],c[1]-a[1]),Math.hypot(delta[0],delta[1])),
+                        "Texture rotation must preserve distances in every direction");
+            }
         }
-        System.out.println("UV checks passed: 2,000 clipped faces, atlas bounds, area preservation, corner seams, and 45-degree grain.");
+        System.out.println("UV checks passed: 2,000 clipped faces, atlas bounds, area preservation, vertical seams, and scale-preserving 45-degree grain.");
     }
 }

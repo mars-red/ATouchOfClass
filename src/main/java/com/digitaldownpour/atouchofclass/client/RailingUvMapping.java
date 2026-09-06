@@ -15,11 +15,13 @@ public final class RailingUvMapping {
     }
 
     public static double[] coordinates(double x, double y, double z, int slope, boolean lower, boolean wallFace) {
-        // A 32-unit diagonal texture period permits the two corner variants to
-        // repeat seamlessly without per-position models or per-frame UV work.
-        double phase = lower ? 8 : 0;
-        double u = wallFace ? (y - slope*x)/2 + phase : z - 11.25;
-        double v = (x + slope*y)/2 + phase;
+        // A true 45-degree rotation preserves vanilla texel density. Keep the
+        // vertical corner pair aligned; horizontal joins may have a grain seam.
+        // Everything remains baked, with no per-position or per-frame UV work.
+        double divisor = Math.sqrt(2);
+        double phase = lower ? 16 / divisor : 0;
+        double u = wallFace ? (y - slope*x)/divisor + phase : z - 11.25;
+        double v = (x + slope*y)/divisor + slope*phase;
         return new double[] {u, v};
     }
 

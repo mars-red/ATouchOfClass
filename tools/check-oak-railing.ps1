@@ -137,3 +137,29 @@ foreach ($name in @('transition_left','transition_right')) {
 }
 Write-Output 'Transition checks passed: texture separation, matching hitboxes, level ends, internal continuity, and joins to both diagonal directions.'
 
+
+foreach ($name in @('inner_left','inner_right','outer_left','outer_right')) {
+    $m=Get-Content "$project/src/main/resources/assets/atouchofclass/models/block/oak_railing_$name.json" -Raw | ConvertFrom-Json
+    $inner=$name.StartsWith('inner');$left=$name.EndsWith('left')
+    $table=[regex]::Match($shapeSource,('(?s)'+$name.ToUpperInvariant()+' = \{(.*?)\n    \};')).Groups[1].Value
+    $rows=[regex]::Matches($table,'\{([^{}]+)\}')
+    Assert-Railing ($rows.Count -eq $m.elements.Count -and $rows.Count -eq $(if($inner){12}else{6})) 'Wall corner must have compact matching geometry.'
+    for($i=0;$i -lt $rows.Count;$i++) {
+        $e=$m.elements[$i]
+        $expected=@($rows[$i].Groups[1].Value.Split(',') | ForEach-Object { [double]::Parse($_.Trim(),[Globalization.CultureInfo]::InvariantCulture) })
+        $actual=@($e.from)+@($e.to)
+        for($j=0;$j -lt 6;$j++) { Assert-Railing ($expected[$j] -eq $actual[$j]) 'Corner selection geometry must match the model.' }
+        for($j=0;$j -lt 3;$j++) { Assert-Railing ($e.from[$j] -ge 0 -and $e.to[$j] -le 16 -and $e.from[$j] -lt $e.to[$j]) 'Wall corner must stay within its cell.' }
+        Assert-Railing ($null -eq $e.rotation) 'Wall corner must use simple unrotated cuboids.'
+    }
+    $edgeX=if($inner -eq $left){15.999}else{0.001}
+    $turnZ=if($inner){0.001}else{15.999}
+    for($y=12.125;$y -lt 16;$y+=0.25) {
+        for($t=0.125;$t -lt 16;$t+=0.25) {
+            Assert-Railing ((Occupied $m $edgeX $y $t) -eq (Occupied $model $edgeX $y $t)) 'Corner primary end must meet straight railing.'
+            $z=if($left){16-$t}else{$t}
+            Assert-Railing ((Occupied $m $t $y $turnZ) -eq (Occupied $model 0.001 $y $z)) 'Perpendicular corner end must meet straight railing.'
+        }
+    }
+}
+Write-Output 'Wall-corner checks passed: matching compact hitboxes, block bounds, and both perpendicular rail interfaces.'

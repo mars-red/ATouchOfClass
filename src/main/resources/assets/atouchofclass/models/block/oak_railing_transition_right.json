@@ -1,10 +1,11 @@
 {
+  "grain_slope": -1,
   "textures": {
     "copper": "minecraft:block/copper_block",
-    "oak": "minecraft:block/stripped_oak_log",
-    "end": "minecraft:block/stripped_oak_log_top",
     "horizontal": "minecraft:block/stripped_oak_log",
-    "particle": "minecraft:block/stripped_oak_log"
+    "particle": "minecraft:block/stripped_oak_log",
+    "end": "minecraft:block/stripped_oak_log_top",
+    "oak": "minecraft:block/stripped_oak_log"
   },
   "elements": [
     {
@@ -884,8 +885,7 @@
       }
     }
   ],
+  "grain_lower": false,
   "parent": "minecraft:block/block",
-  "loader": "atouchofclass:railing",
-  "grain_slope": -1,
-  "grain_lower": false
+  "loader": "atouchofclass:railing"
 }

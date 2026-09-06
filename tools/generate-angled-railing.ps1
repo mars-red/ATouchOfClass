@@ -83,6 +83,42 @@ foreach ($name in @('transition_right','transition_left')) {
     @{loader='atouchofclass:railing'; grain_slope=$(if ($name -eq 'transition_right') { -1 } else { 1 }); grain_lower=$false; parent='minecraft:block/block'; textures=@{horizontal='minecraft:block/stripped_oak_log'; end='minecraft:block/stripped_oak_log_top'; oak='minecraft:block/stripped_oak_log'; copper='minecraft:block/copper_block'; particle='minecraft:block/stripped_oak_log'}; elements=@($parts.ToArray())} |
         ConvertTo-Json -Depth 12 | Set-Content "$assets/models/block/oak_railing_$name.json" -Encoding utf8
 }
+foreach ($name in @('inner_left','inner_right','outer_left','outer_right')) {
+    $inner = $name.StartsWith('inner')
+    $mirror = $name.EndsWith('right')
+    $parts = [Collections.Generic.List[object]]::new()
+    foreach ($profile in @(@(12.5,15.5,11.25,14.25),@(15.5,16,11.75,13.75),@(12,12.5,11.75,13.75))) {
+        $y0=$profile[0]; $y1=$profile[1]; $z0=$profile[2]; $z1=$profile[3]
+        $turn0=16-$z1; $turn1=16-$z0
+        $bands = if ($inner) {
+            @(,@($turn1,$y0,$z0,16,$y1,$z1); ,@($turn0,$y0,0,$turn1,$y1,$z1))
+        } else {
+            @(,@(0,$y0,$z0,$turn1,$y1,$z1); ,@($turn0,$y0,$z1,$turn1,$y1,16))
+        }
+        for ($i=0; $i -lt 2; $i++) {
+            $b=$bands[$i]; $faces=[ordered]@{}
+            foreach ($side in @('north','south','east','west','up','down')) {
+                $end = if ($i -eq 0) { $side -in @('east','west') } else { $side -in @('north','south') }
+                $faces[$side]=@{texture=$(if ($end) { '#end' } else { '#oak' })}
+                if (-not $end) { $faces[$side].rotation = $(if ($i -eq 1 -and $side -in @('up','down')) { 0 } else { 90 }) }
+            }
+            $parts.Add([pscustomobject]@{from=@($b[0],$b[1],$b[2]);to=@($b[3],$b[4],$b[5]);faces=$faces})
+        }
+    }
+    if ($inner) {
+        foreach ($i in @(4,6,8)) { $parts.Add(($flatModel.elements[$i] | ConvertTo-Json -Depth 12 | ConvertFrom-Json)) }
+        foreach ($i in @(3,5,7)) {
+            $e=$flatModel.elements[$i] | ConvertTo-Json -Depth 12 | ConvertFrom-Json
+            $a=@($e.from); $b=@($e.to)
+            $e.from=@((16-$b[2]),$a[1],$a[0]); $e.to=@((16-$a[2]),$b[1],$b[0])
+            $parts.Add($e)
+        }
+    }
+    if ($mirror) { foreach ($e in $parts) { $old=$e.from[0];$e.from[0]=16-$e.to[0];$e.to[0]=16-$old } }
+    $all[$name]=@($parts | ForEach-Object { ,(@($_.from)+@($_.to)) })
+    @{parent='minecraft:block/block';textures=@{oak='minecraft:block/stripped_oak_log';end='minecraft:block/stripped_oak_log_top';copper='minecraft:block/copper_block';particle='minecraft:block/stripped_oak_log'};elements=@($parts.ToArray())} |
+        ConvertTo-Json -Depth 12 | Set-Content "$assets/models/block/oak_railing_$name.json" -Encoding utf8
+}
 $variants = [ordered]@{}
 foreach ($slope in @('flat') + @($all.Keys)) {
     $modelName = if ($slope -eq 'flat') { 'oak_railing' } else { "oak_railing_$slope" }

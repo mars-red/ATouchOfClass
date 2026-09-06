@@ -25,7 +25,8 @@ import java.util.Map;
 public class OakRailingBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<OakRailingBlock> CODEC = simpleCodec(OakRailingBlock::new);
     public enum Slope implements StringRepresentable {
-        FLAT, UPPER_LEFT, LOWER_RIGHT, LOWER_LEFT, UPPER_RIGHT, TRANSITION_LEFT, TRANSITION_RIGHT;
+        FLAT, UPPER_LEFT, LOWER_RIGHT, LOWER_LEFT, UPPER_RIGHT, TRANSITION_LEFT, TRANSITION_RIGHT,
+        INNER_LEFT, INNER_RIGHT, OUTER_LEFT, OUTER_RIGHT;
 
         @Override
         public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
@@ -35,6 +36,8 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
                 case UPPER_LEFT -> UPPER_RIGHT; case UPPER_RIGHT -> UPPER_LEFT;
                 case LOWER_LEFT -> LOWER_RIGHT; case LOWER_RIGHT -> LOWER_LEFT;
                 case TRANSITION_LEFT -> TRANSITION_RIGHT; case TRANSITION_RIGHT -> TRANSITION_LEFT;
+                case INNER_LEFT -> INNER_RIGHT; case INNER_RIGHT -> INNER_LEFT;
+                case OUTER_LEFT -> OUTER_RIGHT; case OUTER_RIGHT -> OUTER_LEFT;
                 default -> FLAT;
             };
         }
@@ -103,6 +106,17 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
+        // Clicking a level rail's end continues its orientation into the outside
+        // corner cell, even though that cell has no wall directly behind it.
+        Direction clicked = context.getClickedFace();
+        BlockPos sourcePos = context.getClickedPos().relative(clicked.getOpposite());
+        BlockState source = context.getLevel().getBlockState(sourcePos);
+        if (clicked.getAxis().isHorizontal() && source.is(this) && levelRail(source)
+                && clicked.getAxis() != source.getValue(FACING).getAxis()) {
+            BlockState state = defaultBlockState().setValue(FACING, source.getValue(FACING));
+            if (state.canSurvive(context.getLevel(), context.getClickedPos()))
+                return withSlope(state, context.getLevel(), context.getClickedPos());
+        }
         for (Direction direction : context.getNearestLookingDirections()) {
             if (direction.getAxis().isHorizontal()) {
                 BlockState state = defaultBlockState().setValue(FACING, direction.getOpposite());
@@ -115,17 +129,61 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        Direction facing = state.getValue(FACING);
-        BlockPos support = pos.relative(facing.getOpposite());
-        return level.getBlockState(support).isFaceSturdy(level, support, facing);
+        return directWall(level, pos, state.getValue(FACING))
+                || outsideSide(level, pos, state.getValue(FACING)) != null;
     }
 
     @Override
     protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks,
                                      BlockPos pos, Direction direction, BlockPos neighborPos,
                                      BlockState neighborState, RandomSource random) {
-        return direction == state.getValue(FACING).getOpposite() && !state.canSurvive(level, pos)
+        return !state.canSurvive(level, pos)
                 ? Blocks.AIR.defaultBlockState() : withSlope(state, level, pos);
+    }
+
+    private static boolean levelRail(BlockState state) {
+        Slope slope = state.getValue(SLOPE);
+        return slope == Slope.FLAT || slope == Slope.INNER_LEFT || slope == Slope.INNER_RIGHT
+                || slope == Slope.OUTER_LEFT || slope == Slope.OUTER_RIGHT;
+    }
+
+    private boolean directWall(BlockGetter level, BlockPos pos, Direction facing) {
+        BlockPos wall = pos.relative(facing.getOpposite());
+        return level.getBlockState(wall).isFaceSturdy(level, wall, facing);
+    }
+
+    private boolean anchoredRail(BlockGetter level, BlockPos pos, Direction facing) {
+        BlockState state = level.getBlockState(pos);
+        return state.is(this) && state.getValue(FACING) == facing && levelRail(state)
+                && directWall(level, pos, facing);
+    }
+
+    @Nullable
+    private Direction outsideSide(BlockGetter level, BlockPos pos, Direction facing) {
+        if (directWall(level, pos, facing)) return null;
+        for (Direction side : new Direction[] {facing.getCounterClockWise(), facing.getClockWise()}) {
+            BlockPos wall = pos.relative(side).relative(facing.getOpposite());
+            BlockState support = level.getBlockState(wall);
+            if (!support.isFaceSturdy(level, wall, facing) || !support.isFaceSturdy(level, wall, side.getOpposite())) continue;
+            if (anchoredRail(level, pos.relative(side), facing)
+                    || anchoredRail(level, pos.relative(facing.getOpposite()), side.getOpposite())) return side;
+        }
+        return null;
+    }
+
+    private Slope wallCorner(BlockGetter level, BlockPos pos, Direction facing) {
+        Direction side = outsideSide(level, pos, facing);
+        if (side != null) return side == facing.getCounterClockWise() ? Slope.OUTER_LEFT : Slope.OUTER_RIGHT;
+        // A perpendicular rail in front enters this cell from the second wall.
+        BlockState front = level.getBlockState(pos.relative(facing));
+        if (front.is(this) && levelRail(front)) {
+            Direction other = front.getValue(FACING);
+            if (other.getAxis() != facing.getAxis() && directWall(level, pos, other)
+                    && directWall(level, pos.relative(facing), other)) {
+                return other == facing.getClockWise() ? Slope.INNER_LEFT : Slope.INNER_RIGHT;
+            }
+        }
+        return Slope.FLAT;
     }
 
     private Slope corner(BlockGetter level, BlockPos pos, Direction facing) {
@@ -181,6 +239,7 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
             else if ((r == Slope.UPPER_LEFT || r == Slope.LOWER_LEFT) && left == Slope.FLAT)
                 slope = Slope.TRANSITION_RIGHT;
         }
+        if (slope == Slope.FLAT) slope = wallCorner(level, pos, facing);
         return state.setValue(SLOPE, slope);
     }
     private boolean matches(BlockGetter level, BlockPos pos, Direction facing) {
