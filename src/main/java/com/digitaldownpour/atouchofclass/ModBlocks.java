@@ -55,6 +55,11 @@ public class ModBlocks {
                     BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
                             .mapColor(MapColor.WOOD).strength(2.0F)
                             .sound(net.minecraft.world.level.block.SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<com.digitaldownpour.atouchofclass.blocks.OakNewelPostBlock> OAK_NEWEL_POST =
+            BLOCKS.register("oak_newel_post",key->new com.digitaldownpour.atouchofclass.blocks.OakNewelPostBlock(
+                    BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK,key))
+                            .mapColor(MapColor.WOOD).strength(2.0F).sound(net.minecraft.world.level.block.SoundType.WOOD)
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK).noOcclusion()));
     public static final java.util.Map<String, WoodRailingVariants.Family> WOOD_RAILINGS = WoodRailingVariants.register();
 
     public static final DeferredBlock<CrownMouldingBlock> CROWN_MOULDING = BLOCKS.register("crown_moulding",

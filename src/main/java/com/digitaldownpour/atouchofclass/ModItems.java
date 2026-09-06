@@ -24,6 +24,7 @@ public class ModItems {
     public static final DeferredItem<BlockItem> OAK_BALUSTRADE = ITEMS.registerSimpleBlockItem("oak_balustrade", ModBlocks.OAK_BALUSTRADE);
     public static final DeferredItem<BlockItem> OAK_BALUSTER = ITEMS.registerSimpleBlockItem("oak_baluster", ModBlocks.OAK_BALUSTER);
 
+    public static final DeferredItem<BlockItem> OAK_NEWEL_POST = ITEMS.registerSimpleBlockItem("oak_newel_post",ModBlocks.OAK_NEWEL_POST);
     public static final java.util.List<DeferredItem<BlockItem>> WOOD_RAILINGS = registerWoodRailings();
     private static java.util.List<DeferredItem<BlockItem>> registerWoodRailings() {
         var items=new java.util.ArrayList<DeferredItem<BlockItem>>();
@@ -158,6 +159,7 @@ public class ModItems {
             event.accept(OAK_RAILING);
             event.accept(OAK_BALUSTRADE);
             event.accept(OAK_BALUSTER);
+            event.accept(OAK_NEWEL_POST);
             WOOD_RAILINGS.forEach(event::accept);
             event.accept(TALL_DOOR_ITEM);
             event.accept(TALL_SIDELIGHT_ITEM);
