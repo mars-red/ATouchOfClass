@@ -74,3 +74,4 @@ $table
     static VoxelShape baluster(StairsShape shape,Direction facing) {return POST[shape.ordinal()][direction(facing)];}
 }
 "@ | Set-Content "$root/src/main/java/com/digitaldownpour/atouchofclass/blocks/FloorOakGeometry.java"
+& "$PSScriptRoot/generate-sloped-balustrade.ps1"
