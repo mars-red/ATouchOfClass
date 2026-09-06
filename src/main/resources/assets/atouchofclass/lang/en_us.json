@@ -82,5 +82,16 @@
   "block.atouchofclass.warped_railing": "Wall Mounted Warped Railing",
   "block.atouchofclass.warped_baluster": "Warped Baluster",
   "block.atouchofclass.warped_balustrade": "Warped Balustrade",
-  "block.atouchofclass.oak_newel_post": "Oak Newel Post"
+  "block.atouchofclass.oak_newel_post": "Oak Newel Post",
+  "block.atouchofclass.spruce_newel_post": "Spruce Newel Post",
+  "block.atouchofclass.birch_newel_post": "Birch Newel Post",
+  "block.atouchofclass.jungle_newel_post": "Jungle Newel Post",
+  "block.atouchofclass.acacia_newel_post": "Acacia Newel Post",
+  "block.atouchofclass.dark_oak_newel_post": "Dark Oak Newel Post",
+  "block.atouchofclass.mangrove_newel_post": "Mangrove Newel Post",
+  "block.atouchofclass.cherry_newel_post": "Cherry Newel Post",
+  "block.atouchofclass.pale_oak_newel_post": "Pale Oak Newel Post",
+  "block.atouchofclass.bamboo_newel_post": "Bamboo Newel Post",
+  "block.atouchofclass.crimson_newel_post": "Crimson Newel Post",
+  "block.atouchofclass.warped_newel_post": "Warped Newel Post"
 }

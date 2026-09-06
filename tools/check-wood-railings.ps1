@@ -7,7 +7,7 @@ try {
     $woods=@('spruce','birch','jungle','acacia','dark_oak','mangrove','cherry','pale_oak','bamboo','crimson','warped')
     foreach($wood in $woods) {
         $stripped=switch($wood){'bamboo'{'stripped_bamboo_block'} 'crimson'{'stripped_crimson_stem'} 'warped'{'stripped_warped_stem'} default{"stripped_${wood}_log"}}
-        foreach($source in Get-ChildItem "$resources/assets/atouchofclass/models/block" -Filter 'oak_*.json' | Where-Object {$_.BaseName -match '^oak_(railing|baluster|balustrade)($|_)'}) {
+        foreach($source in Get-ChildItem "$resources/assets/atouchofclass/models/block" -Filter 'oak_*.json' | Where-Object {$_.BaseName -match '^oak_(railing|baluster|balustrade|newel_post)($|_)'}) {
             $file=$source.FullName.Replace($source.Name,($source.Name -replace '^oak_',"${wood}_"))
             $model=Get-Content $file -Raw | ConvertFrom-Json
             $oak=Get-Content $source.FullName -Raw | ConvertFrom-Json
@@ -20,7 +20,7 @@ try {
                 }
             }
         }
-        foreach($kind in @('railing','baluster','balustrade')) {
+        foreach($kind in @('railing','baluster','balustrade','newel_post')) {
             $id="${wood}_$kind"
             $state=Get-Content "$resources/assets/atouchofclass/blockstates/$id.json" -Raw | ConvertFrom-Json
             foreach($variant in $state.variants.PSObject.Properties.Value) {
@@ -41,5 +41,5 @@ try {
             if($item.model.model -notmatch "^atouchofclass:(item|block)/${wood}_"){throw "Wrong species in item $id"}
         }
     }
-    Write-Output 'All 33 blocks passed: model parity, existing vanilla textures and ingredients, blockstate model references, recipes, items, and loot.'
+    Write-Output 'All 44 blocks passed: model parity, existing vanilla textures and ingredients, blockstate model references, recipes, items, and loot.'
 } finally {$vanilla.Dispose()}

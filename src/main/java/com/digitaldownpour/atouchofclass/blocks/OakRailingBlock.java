@@ -228,19 +228,31 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
         Slope slope = baseSlope(state, level, pos);
         Direction facing = state.getValue(FACING), right = facing.getClockWise();
         BlockPos leftPos = pos.relative(right.getOpposite()), rightPos = pos.relative(right);
-        if (slope == Slope.FLAT && matches(level, leftPos, facing) && matches(level, rightPos, facing)
+        if (slope == Slope.FLAT && (matches(level, leftPos, facing) || newel(level,leftPos))
+                && (matches(level, rightPos, facing) || newel(level,rightPos))
                 && !matches(level, pos.above(), facing) && !matches(level, pos.below(), facing)) {
             // Derive connections from physical neighbors, not transition states, so
             // transitions cannot spread along an otherwise horizontal run.
-            Slope left = baseSlope(level.getBlockState(leftPos), level, leftPos);
-            Slope r = baseSlope(level.getBlockState(rightPos), level, rightPos);
+            Slope left = matches(level,leftPos,facing)?baseSlope(level.getBlockState(leftPos), level, leftPos):Slope.FLAT;
+            Slope r = matches(level,rightPos,facing)?baseSlope(level.getBlockState(rightPos), level, rightPos):Slope.FLAT;
             if ((left == Slope.UPPER_RIGHT || left == Slope.LOWER_RIGHT) && r == Slope.FLAT)
                 slope = Slope.TRANSITION_LEFT;
             else if ((r == Slope.UPPER_LEFT || r == Slope.LOWER_LEFT) && left == Slope.FLAT)
                 slope = Slope.TRANSITION_RIGHT;
         }
+        // The top diagonal can finish directly against a newel without an
+        // intervening level railing. Reuse the existing 45-degree transition.
+        if (!matches(level,pos.above(),facing)) {
+            if (slope == Slope.UPPER_LEFT && newel(level,rightPos)) slope=Slope.TRANSITION_LEFT;
+            else if (slope == Slope.UPPER_RIGHT && newel(level,leftPos)) slope=Slope.TRANSITION_RIGHT;
+        }
         if (slope == Slope.FLAT) slope = wallCorner(level, pos, facing);
         return state.setValue(SLOPE, slope);
+    }
+    private boolean newel(BlockGetter level,BlockPos pos) {
+        BlockState other=level.getBlockState(pos);
+        return other.getBlock() instanceof OakNewelPostBlock
+                && other.getValue(OakNewelPostBlock.HALF)==net.minecraft.world.level.block.state.properties.DoubleBlockHalf.LOWER;
     }
     private boolean matches(BlockGetter level, BlockPos pos, Direction facing) {
         BlockState other = level.getBlockState(pos);

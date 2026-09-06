@@ -13,6 +13,33 @@ import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 @GameTestHolder(ATouchofClass.MODID)
 @PrefixGameTestTemplate(false)
 public class OakRailingGameTests {
+    @GameTest(template="chandelier_test")
+    public static void diagonalTopsTransitionAgainstNewels(GameTestHelper helper) {
+        var rails=new java.util.ArrayList<OakRailingBlock>();
+        rails.add(ModBlocks.OAK_RAILING.get());
+        ModBlocks.WOOD_RAILINGS.values().forEach(family->rails.add(family.railing().get()));
+        for(var block:rails)for(Direction facing:Direction.Plane.HORIZONTAL)for(boolean right:new boolean[]{true,false}) {
+            BlockPos pos=new BlockPos(2,3,2);
+            Direction downhill=right?facing.getClockWise():facing.getCounterClockWise();
+            BlockPos middle=pos.relative(downhill),bottom=middle.below(),post=pos.relative(downhill.getOpposite());
+            var state=block.defaultBlockState().setValue(OakRailingBlock.FACING,facing);
+            for(BlockPos p:new BlockPos[]{pos,middle,bottom}) helper.setBlock(p.relative(facing.getOpposite()),Blocks.STONE);
+            helper.setBlock(bottom,state);helper.setBlock(middle,state);helper.setBlock(pos,state);
+            var original=right?OakRailingBlock.Slope.UPPER_RIGHT:OakRailingBlock.Slope.UPPER_LEFT;
+            var transition=right?OakRailingBlock.Slope.TRANSITION_RIGHT:OakRailingBlock.Slope.TRANSITION_LEFT;
+            helper.assertTrue(helper.getLevel().getBlockState(helper.absolutePos(pos)).getValue(OakRailingBlock.SLOPE)==original,"Expected diagonal top before adding newel");
+            helper.setBlock(post.below(),Blocks.STONE);
+            // A different species still provides a valid contact panel.
+            helper.setBlock(post,ModBlocks.WOOD_RAILINGS.get("birch").newelPost().get());
+            helper.assertTrue(helper.getLevel().getBlockState(helper.absolutePos(pos)).getValue(OakRailingBlock.SLOPE)==transition,"Newel must activate top transition for every wood and direction");
+            helper.setBlock(post,Blocks.AIR);
+            helper.assertTrue(helper.getLevel().getBlockState(helper.absolutePos(pos)).getValue(OakRailingBlock.SLOPE)==original,"Removing newel must restore diagonal");
+            for(BlockPos p:new BlockPos[]{pos,middle,bottom}) helper.setBlock(p,Blocks.AIR);
+            for(BlockPos p:new BlockPos[]{pos,middle,bottom}) helper.setBlock(p.relative(facing.getOpposite()),Blocks.AIR);
+            helper.setBlock(post.below(),Blocks.AIR);
+        }
+        helper.succeed();
+    }
     @GameTest(template = "chandelier_test")
     public static void insideCornersJoinAndResetInEveryOrientation(GameTestHelper helper) {
         for (Direction facing : Direction.Plane.HORIZONTAL) {

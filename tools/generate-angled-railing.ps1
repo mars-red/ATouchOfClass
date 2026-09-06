@@ -48,23 +48,27 @@ foreach ($name in @('transition_right','transition_left')) {
         foreach ($face in $e.faces.PSObject.Properties) {
             if ($face.Value.texture -eq '#oak') { $face.Value.texture = '#horizontal' }
         }
+        if ($original.from[1] -eq 15.5 -and $original.faces.north.texture -eq '#oak') { $e.to[0] = 11 }
         $parts.Add($e)
     }
     # A six-unit ramp drops six units from Y=14 to Y=8, giving a 45-degree slope.
-    # Gradually widen its cross-section
-    # from the level profile to the stepped diagonal profile at the far edge.
+    # Keep the full six-unit diagonal cross-section throughout the ramp.
+    # Extend the level cap through the first step and tuck its core beneath it.
     $ramp = @(
         for ($x = 10; $x -lt 16; $x++) {
             $t = ($x + 0.5 - 10) / 6
             $center = 14 - 6 * $t
-            $coreHalf = 1.5 + 0.75 * $t
-            $outerHalf = 2 + $t
+            $coreHalf = 2.25
+            $outerHalf = 3
             foreach ($band in @(@(-$coreHalf,$coreHalf,11.25,14.25), @(-$outerHalf,-$coreHalf,11.75,13.75), @($coreHalf,$outerHalf,11.75,13.75))) {
-                ,@($x, ($center + $band[0]), $band[2], ($x + 1), ([Math]::Min([double]16,[double]($center + $band[1]))), $band[3])
+                if ($x -eq 10 -and $band[0] -eq $coreHalf) { continue }
+                $top = $center + $band[1]
+                if ($x -eq 10 -and $band[2] -eq 11.25) { $top = 15.5 }
+                ,@($x, ($center + $band[0]), $band[2], ($x + 1), $top, $band[3])
             }
         }
     )
-    $mountBottom = 14 - 6 * (2.5 / 6) - (2 + 2.5 / 6)
+    $mountBottom = 14 - 6 * (2.5 / 6) - 3
     $hardware = @(
         ,@(12, ($mountBottom - 2), 15.25, 13, ($mountBottom + 1), 16)
         ,@(12, ($mountBottom - 1.25), 12.75, 13, ($mountBottom - 0.25), 15.25)
@@ -111,7 +115,8 @@ foreach ($name in @('inner_left','inner_right','outer_left','outer_right')) {
             $e=$flatModel.elements[$i] | ConvertTo-Json -Depth 12 | ConvertFrom-Json
             $a=@($e.from); $b=@($e.to)
             $e.from=@((16-$b[2]),$a[1],$a[0]); $e.to=@((16-$a[2]),$b[1],$b[0])
-            $parts.Add($e)
+            if ($original.from[1] -eq 15.5 -and $original.faces.north.texture -eq '#oak') { $e.to[0] = 11 }
+        $parts.Add($e)
         }
     }
     if ($mirror) { foreach ($e in $parts) { $old=$e.from[0];$e.from[0]=16-$e.to[0];$e.to[0]=16-$old } }

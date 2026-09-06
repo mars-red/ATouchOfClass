@@ -37,6 +37,17 @@
     "atouchofclass:warped_railing",
     "atouchofclass:warped_baluster",
     "atouchofclass:warped_balustrade",
-    "atouchofclass:oak_newel_post"
+    "atouchofclass:oak_newel_post",
+    "atouchofclass:spruce_newel_post",
+    "atouchofclass:birch_newel_post",
+    "atouchofclass:jungle_newel_post",
+    "atouchofclass:acacia_newel_post",
+    "atouchofclass:dark_oak_newel_post",
+    "atouchofclass:mangrove_newel_post",
+    "atouchofclass:cherry_newel_post",
+    "atouchofclass:pale_oak_newel_post",
+    "atouchofclass:bamboo_newel_post",
+    "atouchofclass:crimson_newel_post",
+    "atouchofclass:warped_newel_post"
   ]
 }

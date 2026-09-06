@@ -1,4 +1,11 @@
 {
+  "parent": "minecraft:block/block",
+  "textures": {
+    "end": "minecraft:block/stripped_crimson_stem_top",
+    "copper": "minecraft:block/copper_block",
+    "oak": "minecraft:block/stripped_crimson_stem",
+    "particle": "minecraft:block/stripped_crimson_stem"
+  },
   "elements": [
     {
       "from": [
@@ -408,12 +415,5 @@
         3.5
       ]
     }
-  ],
-  "textures": {
-    "copper": "minecraft:block/copper_block",
-    "particle": "minecraft:block/stripped_crimson_stem",
-    "end": "minecraft:block/stripped_crimson_stem_top",
-    "oak": "minecraft:block/stripped_crimson_stem"
-  },
-  "parent": "minecraft:block/block"
+  ]
 }

@@ -95,9 +95,9 @@ foreach ($name in @('transition_left','transition_right')) {
         $expected=@($rows[$i].Groups[1].Value.Split(',') | ForEach-Object { [double]::Parse($_.Trim(), [Globalization.CultureInfo]::InvariantCulture) })
         $actual=@($e.from)+@($e.to)
         for ($j=0; $j -lt 6; $j++) { Assert-Railing ($expected[$j] -eq $actual[$j]) 'Transition hitbox must match model.' }
-        Assert-Railing ($null -eq $e.rotation -and $e.from[1] -ge 0 -and $e.to[1] -le 16) 'Transition must remain unrotated and inside its block.'
+        Assert-Railing ($null -eq $e.rotation -and $e.from[1] -ge 0 -and $e.to[1] -le 16) 'Transition must not project above the horizontal top.'
         if ($e.faces.north.texture -eq '#horizontal') {
-            Assert-Railing ($(if ($name -eq 'transition_right') { $e.from[0] -eq 0 -and $e.to[0] -eq 10 } else { $e.from[0] -eq 6 -and $e.to[0] -eq 16 })) 'Level portion must span ten units.'
+            Assert-Railing ($(if ($name -eq 'transition_right') { $e.from[0] -eq 0 -and $e.to[0] -eq $(if ($e.from[1] -eq 15.5) {11} else {10}) } else { $e.from[0] -eq $(if ($e.from[1] -eq 15.5) {5} else {6}) -and $e.to[0] -eq 16 })) 'Level portion must span ten units.'
         }
     }
     $flatX = if ($name -eq 'transition_right') { 0.001 } else { 15.999 }
@@ -108,7 +108,16 @@ foreach ($name in @('transition_left','transition_right')) {
     }
     $rampCore = @($m.elements | Where-Object { $_.faces.north.texture -eq '#oak' -and $_.from[2] -eq 11.25 } | Sort-Object { $_.from[0] })
     Assert-Railing ($rampCore.Count -eq 6) 'Transition must have six one-unit ramp steps.'
+    foreach($core in $rampCore) {
+        $shoulder=if($name -eq 'transition_right'){$core.from[0] -eq 10}else{$core.from[0] -eq 5}
+        Assert-Railing (($core.to[1]-$core.from[1]) -eq $(if($shoulder){4.25}else{4.5})) 'Only the first core should tuck beneath the level cap.'
+        $slice=@($m.elements | Where-Object {$_.faces.north.texture -eq '#oak' -and $_.from[0] -eq $core.from[0]})
+        $bottom=($slice | ForEach-Object {$_.from[1]} | Measure-Object -Minimum).Minimum
+        $top=($slice | ForEach-Object {$_.to[1]} | Measure-Object -Maximum).Maximum
+        Assert-Railing (($top-$bottom) -eq $(if($shoulder){5}else{6})) 'Only the shoulder is trimmed beneath the horizontal cap.'
+    }
     for ($i=1; $i -lt $rampCore.Count; $i++) {
+        if (($name -eq 'transition_right' -and $i -eq 1) -or ($name -eq 'transition_left' -and $i -eq 5)) { continue }
         $previous = ($rampCore[$i-1].from[1] + $rampCore[$i-1].to[1]) / 2
         $current = ($rampCore[$i].from[1] + $rampCore[$i].to[1]) / 2
         Assert-Railing ([Math]::Abs([Math]::Abs($current-$previous)-1) -lt 0.000001) 'Ramp must rise or fall one unit per unit of run (45 degrees).'

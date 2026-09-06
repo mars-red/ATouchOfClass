@@ -1,12 +1,15 @@
 {
-  "grain_slope": 1,
   "textures": {
-    "copper": "minecraft:block/copper_block",
-    "horizontal": "minecraft:block/stripped_pale_oak_log",
-    "particle": "minecraft:block/stripped_pale_oak_log",
     "end": "minecraft:block/stripped_pale_oak_log_top",
-    "oak": "minecraft:block/stripped_pale_oak_log"
+    "copper": "minecraft:block/copper_block",
+    "particle": "minecraft:block/stripped_pale_oak_log",
+    "oak": "minecraft:block/stripped_pale_oak_log",
+    "horizontal": "minecraft:block/stripped_pale_oak_log"
   },
+  "grain_lower": false,
+  "grain_slope": 1,
+  "loader": "atouchofclass:railing",
+  "parent": "minecraft:block/block",
   "elements": [
     {
       "to": [
@@ -75,7 +78,7 @@
         }
       },
       "from": [
-        6.0,
+        5,
         15.5,
         11.75
       ]
@@ -215,12 +218,12 @@
     {
       "from": [
         5,
-        11.9375,
+        11.25,
         11.25
       ],
       "to": [
         6,
-        15.0625,
+        15.5,
         14.25
       ],
       "faces": {
@@ -247,77 +250,13 @@
     {
       "from": [
         5,
-        11.416666666666666,
+        10.5,
         11.75
       ],
       "to": [
         6,
-        11.9375,
+        11.25,
         13.75
-      ],
-      "faces": {
-        "north": {
-          "texture": "#oak"
-        },
-        "south": {
-          "texture": "#oak"
-        },
-        "east": {
-          "texture": "#oak"
-        },
-        "west": {
-          "texture": "#oak"
-        },
-        "up": {
-          "texture": "#oak"
-        },
-        "down": {
-          "texture": "#oak"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        15.0625,
-        11.75
-      ],
-      "to": [
-        6,
-        15.583333333333334,
-        13.75
-      ],
-      "faces": {
-        "north": {
-          "texture": "#oak"
-        },
-        "south": {
-          "texture": "#oak"
-        },
-        "east": {
-          "texture": "#oak"
-        },
-        "west": {
-          "texture": "#oak"
-        },
-        "up": {
-          "texture": "#oak"
-        },
-        "down": {
-          "texture": "#oak"
-        }
-      }
-    },
-    {
-      "from": [
-        4,
-        10.8125,
-        11.25
-      ],
-      "to": [
-        5,
-        14.1875,
-        14.25
       ],
       "faces": {
         "north": {
@@ -344,43 +283,75 @@
       "from": [
         4,
         10.25,
-        11.75
-      ],
-      "to": [
-        5,
-        10.8125,
-        13.75
-      ],
-      "faces": {
-        "north": {
-          "texture": "#oak"
-        },
-        "south": {
-          "texture": "#oak"
-        },
-        "east": {
-          "texture": "#oak"
-        },
-        "west": {
-          "texture": "#oak"
-        },
-        "up": {
-          "texture": "#oak"
-        },
-        "down": {
-          "texture": "#oak"
-        }
-      }
-    },
-    {
-      "from": [
-        4,
-        14.1875,
-        11.75
+        11.25
       ],
       "to": [
         5,
         14.75,
+        14.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#oak"
+        },
+        "south": {
+          "texture": "#oak"
+        },
+        "east": {
+          "texture": "#oak"
+        },
+        "west": {
+          "texture": "#oak"
+        },
+        "up": {
+          "texture": "#oak"
+        },
+        "down": {
+          "texture": "#oak"
+        }
+      }
+    },
+    {
+      "from": [
+        4,
+        9.5,
+        11.75
+      ],
+      "to": [
+        5,
+        10.25,
+        13.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#oak"
+        },
+        "south": {
+          "texture": "#oak"
+        },
+        "east": {
+          "texture": "#oak"
+        },
+        "west": {
+          "texture": "#oak"
+        },
+        "up": {
+          "texture": "#oak"
+        },
+        "down": {
+          "texture": "#oak"
+        }
+      }
+    },
+    {
+      "from": [
+        4,
+        14.75,
+        11.75
+      ],
+      "to": [
+        5,
+        15.5,
         13.75
       ],
       "faces": {
@@ -407,12 +378,12 @@
     {
       "from": [
         3,
-        9.6875,
+        9.25,
         11.25
       ],
       "to": [
         4,
-        13.3125,
+        13.75,
         14.25
       ],
       "faces": {
@@ -439,12 +410,12 @@
     {
       "from": [
         3,
-        9.083333333333334,
+        8.5,
         11.75
       ],
       "to": [
         4,
-        9.6875,
+        9.25,
         13.75
       ],
       "faces": {
@@ -471,12 +442,12 @@
     {
       "from": [
         3,
-        13.3125,
+        13.75,
         11.75
       ],
       "to": [
         4,
-        13.916666666666666,
+        14.5,
         13.75
       ],
       "faces": {
@@ -503,12 +474,12 @@
     {
       "from": [
         2,
-        8.5625,
+        8.25,
         11.25
       ],
       "to": [
         3,
-        12.4375,
+        12.75,
         14.25
       ],
       "faces": {
@@ -535,12 +506,12 @@
     {
       "from": [
         2,
-        7.916666666666666,
+        7.5,
         11.75
       ],
       "to": [
         3,
-        8.5625,
+        8.25,
         13.75
       ],
       "faces": {
@@ -567,12 +538,12 @@
     {
       "from": [
         2,
-        12.4375,
+        12.75,
         11.75
       ],
       "to": [
         3,
-        13.083333333333334,
+        13.5,
         13.75
       ],
       "faces": {
@@ -599,12 +570,12 @@
     {
       "from": [
         1,
-        7.4375,
+        7.25,
         11.25
       ],
       "to": [
         2,
-        11.5625,
+        11.75,
         14.25
       ],
       "faces": {
@@ -631,12 +602,12 @@
     {
       "from": [
         1,
-        6.75,
+        6.5,
         11.75
       ],
       "to": [
         2,
-        7.4375,
+        7.25,
         13.75
       ],
       "faces": {
@@ -663,12 +634,12 @@
     {
       "from": [
         1,
-        11.5625,
+        11.75,
         11.75
       ],
       "to": [
         2,
-        12.25,
+        12.5,
         13.75
       ],
       "faces": {
@@ -695,12 +666,12 @@
     {
       "from": [
         0,
-        6.3125,
+        6.25,
         11.25
       ],
       "to": [
         1,
-        10.6875,
+        10.75,
         14.25
       ],
       "faces": {
@@ -727,12 +698,12 @@
     {
       "from": [
         0,
-        5.583333333333334,
+        5.5,
         11.75
       ],
       "to": [
         1,
-        6.3125,
+        6.25,
         13.75
       ],
       "faces": {
@@ -759,12 +730,12 @@
     {
       "from": [
         0,
-        10.6875,
+        10.75,
         11.75
       ],
       "to": [
         1,
-        11.416666666666666,
+        11.5,
         13.75
       ],
       "faces": {
@@ -791,12 +762,12 @@
     {
       "from": [
         3,
-        7.083333333333334,
+        6.5,
         15.25
       ],
       "to": [
         4,
-        10.083333333333334,
+        9.5,
         16
       ],
       "faces": {
@@ -823,12 +794,12 @@
     {
       "from": [
         3,
-        7.833333333333334,
+        7.25,
         12.75
       ],
       "to": [
         4,
-        8.833333333333334,
+        8.25,
         15.25
       ],
       "faces": {
@@ -855,12 +826,12 @@
     {
       "from": [
         3,
-        8.833333333333334,
+        8.25,
         12.75
       ],
       "to": [
         4,
-        9.083333333333334,
+        8.5,
         13.75
       ],
       "faces": {
@@ -884,8 +855,5 @@
         }
       }
     }
-  ],
-  "grain_lower": false,
-  "parent": "minecraft:block/block",
-  "loader": "atouchofclass:railing"
+  ]
 }

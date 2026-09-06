@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "O",
+    "O",
+    "O"
+  ],
+  "key": {
+    "O": "minecraft:stripped_birch_log"
+  },
+  "result": {
+    "id": "atouchofclass:birch_newel_post",
+    "count": 8
+  }
+}

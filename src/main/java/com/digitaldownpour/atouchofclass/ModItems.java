@@ -32,6 +32,7 @@ public class ModItems {
             items.add(ITEMS.registerSimpleBlockItem(wood+"_railing",family.railing()));
             items.add(ITEMS.registerSimpleBlockItem(wood+"_balustrade",family.balustrade()));
             items.add(ITEMS.registerSimpleBlockItem(wood+"_baluster",family.baluster()));
+            items.add(ITEMS.registerSimpleBlockItem(wood+"_newel_post",family.newelPost()));
         });
         return java.util.List.copyOf(items);
     }

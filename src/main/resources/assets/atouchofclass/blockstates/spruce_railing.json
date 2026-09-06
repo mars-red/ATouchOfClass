@@ -1,224 +1,224 @@
 {
   "variants": {
     "facing=north,slope=flat": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing",
       "y": 0,
-      "model": "atouchofclass:block/spruce_railing"
+      "uvlock": true
     },
     "facing=east,slope=flat": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing",
       "y": 90,
-      "model": "atouchofclass:block/spruce_railing"
+      "uvlock": true
     },
     "facing=south,slope=flat": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing",
       "y": 180,
-      "model": "atouchofclass:block/spruce_railing"
+      "uvlock": true
     },
     "facing=west,slope=flat": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing",
       "y": 270,
-      "model": "atouchofclass:block/spruce_railing"
+      "uvlock": true
     },
     "facing=north,slope=upper_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_upper_left",
       "y": 0,
-      "model": "atouchofclass:block/spruce_railing_upper_left"
+      "uvlock": true
     },
     "facing=east,slope=upper_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_upper_left",
       "y": 90,
-      "model": "atouchofclass:block/spruce_railing_upper_left"
+      "uvlock": true
     },
     "facing=south,slope=upper_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_upper_left",
       "y": 180,
-      "model": "atouchofclass:block/spruce_railing_upper_left"
+      "uvlock": true
     },
     "facing=west,slope=upper_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_upper_left",
       "y": 270,
-      "model": "atouchofclass:block/spruce_railing_upper_left"
+      "uvlock": true
     },
     "facing=north,slope=lower_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_lower_right",
       "y": 0,
-      "model": "atouchofclass:block/spruce_railing_lower_right"
+      "uvlock": true
     },
     "facing=east,slope=lower_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_lower_right",
       "y": 90,
-      "model": "atouchofclass:block/spruce_railing_lower_right"
+      "uvlock": true
     },
     "facing=south,slope=lower_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_lower_right",
       "y": 180,
-      "model": "atouchofclass:block/spruce_railing_lower_right"
+      "uvlock": true
     },
     "facing=west,slope=lower_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_lower_right",
       "y": 270,
-      "model": "atouchofclass:block/spruce_railing_lower_right"
+      "uvlock": true
     },
     "facing=north,slope=lower_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_lower_left",
       "y": 0,
-      "model": "atouchofclass:block/spruce_railing_lower_left"
+      "uvlock": true
     },
     "facing=east,slope=lower_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_lower_left",
       "y": 90,
-      "model": "atouchofclass:block/spruce_railing_lower_left"
+      "uvlock": true
     },
     "facing=south,slope=lower_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_lower_left",
       "y": 180,
-      "model": "atouchofclass:block/spruce_railing_lower_left"
+      "uvlock": true
     },
     "facing=west,slope=lower_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_lower_left",
       "y": 270,
-      "model": "atouchofclass:block/spruce_railing_lower_left"
+      "uvlock": true
     },
     "facing=north,slope=upper_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_upper_right",
       "y": 0,
-      "model": "atouchofclass:block/spruce_railing_upper_right"
+      "uvlock": true
     },
     "facing=east,slope=upper_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_upper_right",
       "y": 90,
-      "model": "atouchofclass:block/spruce_railing_upper_right"
+      "uvlock": true
     },
     "facing=south,slope=upper_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_upper_right",
       "y": 180,
-      "model": "atouchofclass:block/spruce_railing_upper_right"
+      "uvlock": true
     },
     "facing=west,slope=upper_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_upper_right",
       "y": 270,
-      "model": "atouchofclass:block/spruce_railing_upper_right"
+      "uvlock": true
     },
     "facing=north,slope=transition_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_transition_right",
       "y": 0,
-      "model": "atouchofclass:block/spruce_railing_transition_right"
+      "uvlock": true
     },
     "facing=east,slope=transition_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_transition_right",
       "y": 90,
-      "model": "atouchofclass:block/spruce_railing_transition_right"
+      "uvlock": true
     },
     "facing=south,slope=transition_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_transition_right",
       "y": 180,
-      "model": "atouchofclass:block/spruce_railing_transition_right"
+      "uvlock": true
     },
     "facing=west,slope=transition_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_transition_right",
       "y": 270,
-      "model": "atouchofclass:block/spruce_railing_transition_right"
+      "uvlock": true
     },
     "facing=north,slope=transition_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_transition_left",
       "y": 0,
-      "model": "atouchofclass:block/spruce_railing_transition_left"
+      "uvlock": true
     },
     "facing=east,slope=transition_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_transition_left",
       "y": 90,
-      "model": "atouchofclass:block/spruce_railing_transition_left"
+      "uvlock": true
     },
     "facing=south,slope=transition_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_transition_left",
       "y": 180,
-      "model": "atouchofclass:block/spruce_railing_transition_left"
+      "uvlock": true
     },
     "facing=west,slope=transition_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_transition_left",
       "y": 270,
-      "model": "atouchofclass:block/spruce_railing_transition_left"
+      "uvlock": true
     },
     "facing=north,slope=inner_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_inner_left",
       "y": 0,
-      "model": "atouchofclass:block/spruce_railing_inner_left"
+      "uvlock": true
     },
     "facing=east,slope=inner_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_inner_left",
       "y": 90,
-      "model": "atouchofclass:block/spruce_railing_inner_left"
+      "uvlock": true
     },
     "facing=south,slope=inner_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_inner_left",
       "y": 180,
-      "model": "atouchofclass:block/spruce_railing_inner_left"
+      "uvlock": true
     },
     "facing=west,slope=inner_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_inner_left",
       "y": 270,
-      "model": "atouchofclass:block/spruce_railing_inner_left"
+      "uvlock": true
     },
     "facing=north,slope=inner_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_inner_right",
       "y": 0,
-      "model": "atouchofclass:block/spruce_railing_inner_right"
+      "uvlock": true
     },
     "facing=east,slope=inner_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_inner_right",
       "y": 90,
-      "model": "atouchofclass:block/spruce_railing_inner_right"
+      "uvlock": true
     },
     "facing=south,slope=inner_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_inner_right",
       "y": 180,
-      "model": "atouchofclass:block/spruce_railing_inner_right"
+      "uvlock": true
     },
     "facing=west,slope=inner_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_inner_right",
       "y": 270,
-      "model": "atouchofclass:block/spruce_railing_inner_right"
+      "uvlock": true
     },
     "facing=north,slope=outer_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_outer_left",
       "y": 0,
-      "model": "atouchofclass:block/spruce_railing_outer_left"
+      "uvlock": true
     },
     "facing=east,slope=outer_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_outer_left",
       "y": 90,
-      "model": "atouchofclass:block/spruce_railing_outer_left"
+      "uvlock": true
     },
     "facing=south,slope=outer_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_outer_left",
       "y": 180,
-      "model": "atouchofclass:block/spruce_railing_outer_left"
+      "uvlock": true
     },
     "facing=west,slope=outer_left": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_outer_left",
       "y": 270,
-      "model": "atouchofclass:block/spruce_railing_outer_left"
+      "uvlock": true
     },
     "facing=north,slope=outer_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_outer_right",
       "y": 0,
-      "model": "atouchofclass:block/spruce_railing_outer_right"
+      "uvlock": true
     },
     "facing=east,slope=outer_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_outer_right",
       "y": 90,
-      "model": "atouchofclass:block/spruce_railing_outer_right"
+      "uvlock": true
     },
     "facing=south,slope=outer_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_outer_right",
       "y": 180,
-      "model": "atouchofclass:block/spruce_railing_outer_right"
+      "uvlock": true
     },
     "facing=west,slope=outer_right": {
-      "uvlock": true,
+      "model": "atouchofclass:block/spruce_railing_outer_right",
       "y": 270,
-      "model": "atouchofclass:block/spruce_railing_outer_right"
+      "uvlock": true
     }
   }
 }

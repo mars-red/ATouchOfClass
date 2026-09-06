@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "O",
+    "O",
+    "O"
+  ],
+  "key": {
+    "O": "minecraft:stripped_crimson_stem"
+  },
+  "result": {
+    "id": "atouchofclass:crimson_newel_post",
+    "count": 8
+  }
+}

@@ -1,4 +1,11 @@
 {
+  "parent": "minecraft:block/block",
+  "textures": {
+    "end": "minecraft:block/stripped_jungle_log_top",
+    "copper": "minecraft:block/copper_block",
+    "oak": "minecraft:block/stripped_jungle_log",
+    "particle": "minecraft:block/stripped_jungle_log"
+  },
   "elements": [
     {
       "from": [
@@ -408,12 +415,5 @@
         3.5
       ]
     }
-  ],
-  "textures": {
-    "copper": "minecraft:block/copper_block",
-    "particle": "minecraft:block/stripped_jungle_log",
-    "end": "minecraft:block/stripped_jungle_log_top",
-    "oak": "minecraft:block/stripped_jungle_log"
-  },
-  "parent": "minecraft:block/block"
+  ]
 }
