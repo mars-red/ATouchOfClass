@@ -12,16 +12,34 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Base item for placing an overlay on any face of a block.
  */
 public abstract class BlockOverlayItemBase extends Item {
+    private static final Map<ResourceLocation, Item> ITEMS_BY_TEXTURE =
+            new ConcurrentHashMap<>();
+
     private final ResourceLocation overlayTexture;
 
     protected BlockOverlayItemBase(Properties properties, ResourceLocation overlayTexture) {
         super(properties);
         this.overlayTexture = overlayTexture;
+        ITEMS_BY_TEXTURE.put(overlayTexture, this);
+    }
+
+    /**
+     * Looks up the overlay item responsible for placing the given overlay
+     * texture, so the corresponding item can be dropped when the overlay
+     * is removed from a block.
+     */
+    @Nullable
+    public static Item getItemForTexture(@Nullable ResourceLocation texture) {
+        return texture == null ? null : ITEMS_BY_TEXTURE.get(texture);
     }
 
     @Override

@@ -55,17 +55,32 @@ public class WallOverlaySavedData extends SavedData {
         return store.getFace(pos, face) != null;
     }
 
-    public Set<Direction> removeAllFaces(BlockPos pos) {
+    @org.jetbrains.annotations.Nullable
+    public ResourceLocation getFaceTexture(BlockPos pos, Direction face) {
+        return store.getFace(pos, face);
+    }
+
+    /**
+     * Removes every overlay face at the given position, returning the
+     * texture that was present on each removed face so callers can
+     * determine which items to drop.
+     */
+    public Map<Direction, ResourceLocation> removeAllFaces(BlockPos pos) {
         Set<Direction> faces = store.getFaces(pos);
         if (faces.isEmpty()) {
-            return faces;
+            return Map.of();
         }
 
+        Map<Direction, ResourceLocation> removed = new java.util.EnumMap<>(Direction.class);
         for (Direction face : faces) {
+            ResourceLocation texture = store.getFace(pos, face);
+            if (texture != null) {
+                removed.put(face, texture);
+            }
             store.setFace(pos, face, null);
         }
         setDirty();
-        return faces;
+        return removed;
     }
 
     public Map<BlockPos, WallOverlayData> getChunkSnapshot(ChunkPos chunkPos) {
