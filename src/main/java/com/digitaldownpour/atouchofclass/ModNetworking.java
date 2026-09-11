@@ -43,6 +43,18 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
                 WallOverlayChunkSyncPacket.STREAM_CODEC,
                 WallOverlayChunkSyncPacket::handle
         );
+
+        registrar.playToClient(
+                OpenElevatorFloorsPayload.TYPE,
+                OpenElevatorFloorsPayload.STREAM_CODEC,
+                ClientPayloadHandler::handleDataOnMain
+        );
+
+        registrar.playToServer(
+                SelectElevatorFloorPayload.TYPE,
+                SelectElevatorFloorPayload.STREAM_CODEC,
+                ServerPayloadHandler::handleDataOnMain
+        );
     }
 
     /**

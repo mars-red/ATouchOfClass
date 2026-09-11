@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/elevator_destination_control"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/elevator_destination_control",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/elevator_destination_control",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/elevator_destination_control",
+      "y": 270
+    }
+  }
+}
