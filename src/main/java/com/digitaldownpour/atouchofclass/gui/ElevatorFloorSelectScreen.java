@@ -44,7 +44,7 @@ public class ElevatorFloorSelectScreen extends Screen {
             int floorIndex = floorIndices.get(i);
             int y = startY + i * BUTTON_SPACING;
             addRenderableWidget(Button.builder(
-                            Component.translatable("gui.atouchofclass.elevator_floor_select.floor", floorIndex),
+                            Component.translatable("gui.atouchofclass.elevator_floor_select.floor", floorIndex + 1),
                             button -> selectFloor(floorIndex))
                     .bounds(x, y, BUTTON_WIDTH, BUTTON_HEIGHT)
                     .build());

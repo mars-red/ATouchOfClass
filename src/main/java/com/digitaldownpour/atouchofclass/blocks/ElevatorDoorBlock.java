@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
@@ -19,6 +20,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,11 +30,20 @@ import java.util.List;
  * control, lock manager) drives the SLIDE_STEP property, via ElevatorAnimator.
  * Part 0 (bottom) must sit directly on an ElevatorFloorBlock, which is what
  * lets the rest of the elevator system discover which cab a door belongs to.
+ *
+ * <p>Doors placed side by side along the wall (perpendicular to FACING) form
+ * one double-sliding-door opening: the MIRROR property is recomputed
+ * reactively from the contiguous run of door columns whenever one is placed
+ * or removed, so the low-coordinate half of the run retracts toward the low
+ * side and the high-coordinate half retracts toward the high side - each
+ * leaf visually slides away from the shared center line instead of all
+ * leaves retracting the same direction.</p>
  */
 public class ElevatorDoorBlock extends Block {
     public static final IntegerProperty PART = IntegerProperty.create("part", 0, 2); // 0 = bottom, 1 = middle, 2 = top
     public static final IntegerProperty SLIDE_STEP = IntegerProperty.create("slide_step", 0, 4);
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final BooleanProperty MIRROR = BooleanProperty.create("mirror");
 
     public static final int MAX_SLIDE_STEP = 4;
     private static final double THICKNESS_MIN = 6;
@@ -43,20 +54,81 @@ public class ElevatorDoorBlock extends Block {
         registerDefaultState(stateDefinition.any()
                 .setValue(PART, 0)
                 .setValue(SLIDE_STEP, 0)
-                .setValue(FACING, Direction.NORTH));
+                .setValue(FACING, Direction.NORTH)
+                .setValue(MIRROR, false));
     }
 
-    private static VoxelShape shapeFor(Direction facing, int slideStep) {
+    private static VoxelShape shapeFor(Direction facing, int slideStep, boolean mirror) {
         double openFraction = slideStep / (double) MAX_SLIDE_STEP;
         double visibleWidth = 16 * (1 - openFraction);
         if (visibleWidth <= 0) {
             return Shapes.empty();
         }
+        double lo = mirror ? 16 - visibleWidth : 0;
+        double hi = mirror ? 16 : visibleWidth;
         return switch (facing) {
-            case NORTH, SOUTH -> Block.box(0, 0, THICKNESS_MIN, visibleWidth, 16, THICKNESS_MAX);
-            case EAST, WEST -> Block.box(THICKNESS_MIN, 0, 0, THICKNESS_MAX, 16, visibleWidth);
+            case NORTH, SOUTH -> Block.box(lo, 0, THICKNESS_MIN, hi, 16, THICKNESS_MAX);
+            case EAST, WEST -> Block.box(THICKNESS_MIN, 0, lo, THICKNESS_MAX, 16, hi);
             default -> Shapes.block();
         };
+    }
+
+    /** The horizontal axis along which side-by-side door columns of the same facing line up. */
+    private static Direction perpAxis(Direction facing) {
+        return switch (facing) {
+            case EAST, WEST -> Direction.SOUTH;
+            default -> Direction.EAST;
+        };
+    }
+
+    private static boolean isDoorBase(Level level, BlockPos pos, Direction facing) {
+        BlockState s = level.getBlockState(pos);
+        return s.getBlock() instanceof ElevatorDoorBlock && s.getValue(PART) == 0 && s.getValue(FACING) == facing;
+    }
+
+    /** Finds the contiguous run of PART-0 door columns (same facing) touching basePos, in ascending order. */
+    private static List<BlockPos> findRun(Level level, BlockPos basePos, Direction facing) {
+        Direction axis = perpAxis(facing);
+        List<BlockPos> run = new ArrayList<>();
+        run.add(basePos);
+        BlockPos cursor = basePos;
+        while (true) {
+            BlockPos next = cursor.relative(axis.getOpposite());
+            if (!isDoorBase(level, next, facing)) {
+                break;
+            }
+            run.add(0, next);
+            cursor = next;
+        }
+        cursor = basePos;
+        while (true) {
+            BlockPos next = cursor.relative(axis);
+            if (!isDoorBase(level, next, facing)) {
+                break;
+            }
+            run.add(next);
+            cursor = next;
+        }
+        return run;
+    }
+
+    /** Recomputes MIRROR for every column in the run touching basePos: low half unmirrored, high half mirrored. */
+    private static void refreshMirrorForRun(Level level, BlockPos basePos, Direction facing) {
+        List<BlockPos> run = findRun(level, basePos, facing);
+        int size = run.size();
+        for (int i = 0; i < size; i++) {
+            applyMirror(level, run.get(i), i >= size / 2);
+        }
+    }
+
+    private static void applyMirror(Level level, BlockPos basePos, boolean mirror) {
+        for (int part = 0; part < 3; part++) {
+            BlockPos p = basePos.above(part);
+            BlockState s = level.getBlockState(p);
+            if (s.getBlock() instanceof ElevatorDoorBlock && s.getValue(MIRROR) != mirror) {
+                level.setBlock(p, s.setValue(MIRROR, mirror), 3);
+            }
+        }
     }
 
     @Override
@@ -66,17 +138,17 @@ public class ElevatorDoorBlock extends Block {
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return shapeFor(state.getValue(FACING), state.getValue(SLIDE_STEP));
+        return shapeFor(state.getValue(FACING), state.getValue(SLIDE_STEP), state.getValue(MIRROR));
     }
 
     @Override
     protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return shapeFor(state.getValue(FACING), state.getValue(SLIDE_STEP));
+        return shapeFor(state.getValue(FACING), state.getValue(SLIDE_STEP), state.getValue(MIRROR));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(PART, SLIDE_STEP, FACING);
+        builder.add(PART, SLIDE_STEP, FACING, MIRROR);
     }
 
     @Override
@@ -85,7 +157,8 @@ public class ElevatorDoorBlock extends Block {
         return super.getStateForPlacement(context)
                 .setValue(FACING, facing)
                 .setValue(SLIDE_STEP, 0)
-                .setValue(PART, 0);
+                .setValue(PART, 0)
+                .setValue(MIRROR, false);
     }
 
     @Override
@@ -94,6 +167,7 @@ public class ElevatorDoorBlock extends Block {
             Direction facing = state.getValue(FACING);
             level.setBlock(pos.above(), state.setValue(PART, 1).setValue(FACING, facing), 3);
             level.setBlock(pos.above(2), state.setValue(PART, 2).setValue(FACING, facing), 3);
+            refreshMirrorForRun(level, pos, facing);
         }
     }
 
@@ -110,9 +184,22 @@ public class ElevatorDoorBlock extends Block {
                     level.destroyBlock(p, false);
                 }
             }
+            if (part == 0) {
+                Direction facing = state.getValue(FACING);
+                Direction axis = perpAxis(facing);
+                BlockPos lowNeighbor = basePos.relative(axis.getOpposite());
+                BlockPos highNeighbor = basePos.relative(axis);
+                if (isDoorBase(level, lowNeighbor, facing)) {
+                    refreshMirrorForRun(level, lowNeighbor, facing);
+                }
+                if (isDoorBase(level, highNeighbor, facing)) {
+                    refreshMirrorForRun(level, highNeighbor, facing);
+                }
+            }
         }
         super.onRemove(state, level, pos, newState, isMoving);
     }
+
 
     @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
