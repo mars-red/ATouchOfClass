@@ -42,7 +42,9 @@ public class ElevatorFloorSelectScreen extends Screen {
         int x = (width - BUTTON_WIDTH) / 2;
         for (int i = 0; i < floorIndices.size(); i++) {
             int floorIndex = floorIndices.get(i);
-            int y = startY + i * BUTTON_SPACING;
+            // floorIndices is ascending by floor (lowest first); render bottom-to-top so the
+            // on-screen button order mirrors the physical floor stack (highest floor on top).
+            int y = startY + (floorIndices.size() - 1 - i) * BUTTON_SPACING;
             addRenderableWidget(Button.builder(
                             Component.translatable("gui.atouchofclass.elevator_floor_select.floor", floorIndex + 1),
                             button -> selectFloor(floorIndex))

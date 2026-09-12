@@ -1,3 +1,6 @@
 {
-  "parent": "atouchofclass:block/elevator_door_part0_step0"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "atouchofclass:item/elevator_door"
+  }
 }
