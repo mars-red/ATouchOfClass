@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "ICI",
+    "IQI",
+    "III"
+  ],
+  "key": {
+    "C": "minecraft:charcoal",
+    "Q": "minecraft:quartz",
+    "I": "minecraft:iron_ingot"
+  },
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:brushed_stainless_steel"
+  }
+}

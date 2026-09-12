@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "SRS",
+    "SRS"
+  ],
+  "key": {
+    "S": "atouchofclass:brushed_stainless_steel",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:elevator_shaft_panel"
+  }
+}
