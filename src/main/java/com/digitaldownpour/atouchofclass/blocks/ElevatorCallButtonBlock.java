@@ -13,8 +13,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
@@ -22,14 +24,14 @@ import com.digitaldownpour.atouchofclass.elevator.ElevatorLockManager;
 import com.digitaldownpour.atouchofclass.elevator.ElevatorUtil;
 
 /**
- * Exterior (or waiting-area) call button. Must sit directly atop an
- * ElevatorFloorBlock; this is what lets it discover which shaft/floor it
- * belongs to, purely by recomputation - nothing is stored beyond the
- * visible STATUS light, which is itself just a reactive projection of
- * shaft validity and lock state, never authoritative on its own. Occupies a
- * full 16x16x16 cube - only the FACING face (toward the player at
- * placement time) shows the status light texture; the other five faces are
- * plain brushed steel, matching the rest of the shaft's construction.
+ * Exterior (or waiting-area) call button. The lower half must sit directly
+ * atop an ElevatorFloorBlock; this is what lets it discover which
+ * shaft/floor it belongs to, purely by recomputation - nothing is stored
+ * beyond the visible STATUS light, which is itself just a reactive
+ * projection of shaft validity and lock state, never authoritative on its
+ * own. The block is two tiles tall: PART=0 is a plain brushed-steel base
+ * and PART=1 (directly above it) carries the FACING status light texture,
+ * matching the rest of the shaft's construction on its other five faces.
  */
 public class ElevatorCallButtonBlock extends Block {
     public enum Status implements StringRepresentable {
@@ -41,33 +43,62 @@ public class ElevatorCallButtonBlock extends Block {
 
     public static final EnumProperty<Status> STATUS = EnumProperty.create("status", Status.class);
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
+    /** 0 = lower (base) part, 1 = upper part carrying the status light. */
+    public static final IntegerProperty PART = IntegerProperty.create("part", 0, 1);
 
     public ElevatorCallButtonBlock(Properties properties) {
         super(properties);
-        registerDefaultState(stateDefinition.any().setValue(STATUS, Status.IDLE).setValue(FACING, Direction.NORTH));
+        registerDefaultState(stateDefinition.any()
+                .setValue(STATUS, Status.IDLE)
+                .setValue(FACING, Direction.NORTH)
+                .setValue(PART, 0));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(STATUS, FACING);
+        builder.add(STATUS, FACING, PART);
     }
 
     @Override
+    @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockPos pos = context.getClickedPos();
+        Level level = context.getLevel();
+        if (pos.getY() >= level.getMaxY() || !level.getBlockState(pos.above()).canBeReplaced(context)) {
+            return null;
+        }
         return super.getStateForPlacement(context)
-                .setValue(FACING, context.getHorizontalDirection().getOpposite());
+                .setValue(FACING, context.getHorizontalDirection().getOpposite())
+                .setValue(PART, 0);
     }
 
     @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        return level.getBlockState(pos.below()).getBlock() instanceof ElevatorFloorBlock;
+        if (state.getValue(PART) == 0) {
+            return level.getBlockState(pos.below()).getBlock() instanceof ElevatorFloorBlock;
+        }
+        BlockState below = level.getBlockState(pos.below());
+        return below.getBlock() instanceof ElevatorCallButtonBlock && below.getValue(PART) == 0;
     }
 
     @Override
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide && state.getValue(PART) == 0 && !oldState.is(state.getBlock())) {
+            level.setBlock(pos.above(), state.setValue(PART, 1), 3);
             refreshStatus(level, pos);
         }
+    }
+
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+        if (!level.isClientSide && state.getBlock() != newState.getBlock()) {
+            BlockPos otherPos = state.getValue(PART) == 0 ? pos.above() : pos.below();
+            BlockState otherState = level.getBlockState(otherPos);
+            if (otherState.getBlock() == this) {
+                level.removeBlock(otherPos, isMoving);
+            }
+        }
+        super.onRemove(state, level, pos, newState, isMoving);
     }
 
     @Override
@@ -78,20 +109,27 @@ public class ElevatorCallButtonBlock extends Block {
         }
     }
 
-    /** Recomputes and applies the button's status light without side effects on the lock itself. */
+    /** Recomputes and applies the button's status light to both parts without side effects on the lock itself. */
     public static void refreshStatus(Level level, BlockPos pos) {
         BlockState state = level.getBlockState(pos);
         if (!(state.getBlock() instanceof ElevatorCallButtonBlock)) {
             return;
         }
-        Status status = computeStatus(level, pos);
-        if (state.getValue(STATUS) != status) {
+        BlockPos basePos = state.getValue(PART) == 0 ? pos : pos.below();
+        Status status = computeStatus(level, basePos);
+        applyStatus(level, basePos, status);
+        applyStatus(level, basePos.above(), status);
+    }
+
+    private static void applyStatus(Level level, BlockPos pos, Status status) {
+        BlockState state = level.getBlockState(pos);
+        if (state.getBlock() instanceof ElevatorCallButtonBlock && state.getValue(STATUS) != status) {
             level.setBlock(pos, state.setValue(STATUS, status), 3);
         }
     }
 
-    private static Status computeStatus(Level level, BlockPos pos) {
-        Optional<ElevatorUtil.Footprint> footprint = ElevatorUtil.floodFillFloor(level, pos.below());
+    private static Status computeStatus(Level level, BlockPos basePos) {
+        Optional<ElevatorUtil.Footprint> footprint = ElevatorUtil.floodFillFloor(level, basePos.below());
         if (footprint.isEmpty()) {
             return Status.INVALID;
         }
@@ -108,7 +146,8 @@ public class ElevatorCallButtonBlock extends Block {
         if (level.isClientSide) {
             return InteractionResult.SUCCESS;
         }
-        com.digitaldownpour.atouchofclass.elevator.ElevatorFlow.handleCallButtonPress(level, pos);
+        BlockPos basePos = state.getValue(PART) == 0 ? pos : pos.below();
+        com.digitaldownpour.atouchofclass.elevator.ElevatorFlow.handleCallButtonPress(level, basePos);
         return InteractionResult.SUCCESS;
     }
 }

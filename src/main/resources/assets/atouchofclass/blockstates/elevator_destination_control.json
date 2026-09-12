@@ -1,17 +1,29 @@
 {
   "variants": {
-    "facing=north": {
+    "part=0,facing=north": {
+      "model": "atouchofclass:block/elevator_destination_control_base"
+    },
+    "part=0,facing=east": {
+      "model": "atouchofclass:block/elevator_destination_control_base"
+    },
+    "part=0,facing=south": {
+      "model": "atouchofclass:block/elevator_destination_control_base"
+    },
+    "part=0,facing=west": {
+      "model": "atouchofclass:block/elevator_destination_control_base"
+    },
+    "part=1,facing=north": {
       "model": "atouchofclass:block/elevator_destination_control"
     },
-    "facing=east": {
+    "part=1,facing=east": {
       "model": "atouchofclass:block/elevator_destination_control",
       "y": 90
     },
-    "facing=south": {
+    "part=1,facing=south": {
       "model": "atouchofclass:block/elevator_destination_control",
       "y": 180
     },
-    "facing=west": {
+    "part=1,facing=west": {
       "model": "atouchofclass:block/elevator_destination_control",
       "y": 270
     }
