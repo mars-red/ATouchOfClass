@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "atouchofclass:block/elevator_shaft_panel"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/elevator_shaft_panel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/elevator_shaft_panel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/elevator_shaft_panel",
+      "y": 270
     }
   }
 }

@@ -1,6 +1,9 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "atouchofclass:block/elevator_shaft_panel"
+    "particle": "atouchofclass:block/brushed_stainless_steel",
+    "top": "atouchofclass:block/brushed_stainless_steel",
+    "side": "atouchofclass:block/brushed_stainless_steel",
+    "front": "atouchofclass:block/elevator_shaft_panel"
   }
 }
