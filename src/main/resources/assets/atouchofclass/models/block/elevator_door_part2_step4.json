@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "atouchofclass:block/brushed_stainless_steel_door",
+    "0": "atouchofclass:block/brushed_stainless_steel_door"
+  },
+  "elements": []
+}

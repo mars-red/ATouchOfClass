@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": "minecraft:black_dye",
+    "R": "minecraft:resin_clump",
+    "S": "minecraft:redstone"
+  },
+  "pattern": [
+    " B ",
+    "RSR",
+    "RSR"
+  ],
+  "result": {
+    "count": 2,
+    "id": "atouchofclass:elevator_floor"
+  }
+}

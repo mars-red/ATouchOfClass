@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "SQS",
+    "SRS"
+  ],
+  "key": {
+    "S": "atouchofclass:brushed_stainless_steel",
+    "Q": "minecraft:quartz",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:elevator_destination_control"
+  }
+}

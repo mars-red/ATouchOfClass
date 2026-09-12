@@ -93,5 +93,19 @@
   "block.atouchofclass.pale_oak_newel_post": "Pale Oak Newel Post",
   "block.atouchofclass.bamboo_newel_post": "Bamboo Newel Post",
   "block.atouchofclass.crimson_newel_post": "Crimson Newel Post",
-  "block.atouchofclass.warped_newel_post": "Warped Newel Post"
+  "block.atouchofclass.warped_newel_post": "Warped Newel Post",
+  "block.atouchofclass.elevator_shaft_panel": "Elevator Shaft Panel",
+  "block.atouchofclass.elevator_floor": "Elevator Floor",
+  "block.atouchofclass.elevator_door": "Elevator Door",
+  "block.atouchofclass.elevator_call_button": "Elevator Call Button",
+  "block.atouchofclass.elevator_destination_control": "Elevator Destination Control",
+  "block.atouchofclass.brushed_stainless_steel": "Brushed Stainless Steel",
+  "item.atouchofclass.elevator_shaft_panel": "Elevator Shaft Panel",
+  "item.atouchofclass.elevator_floor": "Elevator Floor",
+  "item.atouchofclass.elevator_door": "Elevator Door",
+  "item.atouchofclass.elevator_call_button": "Elevator Call Button",
+  "item.atouchofclass.elevator_destination_control": "Elevator Destination Control",
+  "item.atouchofclass.brushed_stainless_steel": "Brushed Stainless Steel",
+  "gui.atouchofclass.elevator_floor_select.title": "Select Floor",
+  "gui.atouchofclass.elevator_floor_select.floor": "Floor %s"
 }

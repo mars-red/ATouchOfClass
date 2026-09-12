@@ -11,5 +11,9 @@
         "name": "atouchofclass:tall_door_close",
         "pitch": 2.0
       }]
+  },
+
+  "elevator_ding": {
+    "sounds": ["atouchofclass:elevator_ding"]
   }
 }

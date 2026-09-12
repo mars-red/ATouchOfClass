@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "particle": "atouchofclass:block/brushed_stainless_steel",
+    "top": "atouchofclass:block/brushed_stainless_steel",
+    "side": "atouchofclass:block/brushed_stainless_steel",
+    "front": "atouchofclass:block/elevator_call_button_locked"
+  }
+}

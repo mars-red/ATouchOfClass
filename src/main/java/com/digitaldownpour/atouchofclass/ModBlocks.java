@@ -19,6 +19,11 @@ import com.digitaldownpour.atouchofclass.blocks.PlinthBlock;
 import com.digitaldownpour.atouchofclass.blocks.CornerBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallDoorBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock;
+import com.digitaldownpour.atouchofclass.blocks.ElevatorShaftPanelBlock;
+import com.digitaldownpour.atouchofclass.blocks.ElevatorFloorBlock;
+import com.digitaldownpour.atouchofclass.blocks.ElevatorDoorBlock;
+import com.digitaldownpour.atouchofclass.blocks.ElevatorCallButtonBlock;
+import com.digitaldownpour.atouchofclass.blocks.ElevatorDestinationControlBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import net.minecraft.core.registries.Registries;
@@ -134,6 +139,65 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_LIGHT_GRAY)
                     .noOcclusion()
                     .strength(3.0F)
+            )
+    );
+
+    public static final DeferredHolder<Block, ElevatorShaftPanelBlock> ELEVATOR_SHAFT_PANEL = BLOCKS.register("elevator_shaft_panel",
+            registryName -> new ElevatorShaftPanelBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.METAL)
+                    .strength(3.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.METAL)
+                    .requiresCorrectToolForDrops()
+            )
+    );
+
+    public static final DeferredHolder<Block, ElevatorFloorBlock> ELEVATOR_FLOOR = BLOCKS.register("elevator_floor",
+            registryName -> new ElevatorFloorBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.METAL)
+                    .strength(3.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.METAL)
+                    .requiresCorrectToolForDrops()
+            )
+    );
+
+    public static final DeferredHolder<Block, ElevatorDoorBlock> ELEVATOR_DOOR = BLOCKS.register("elevator_door",
+            registryName -> new ElevatorDoorBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.METAL)
+                    .strength(3.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.METAL)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+            )
+    );
+
+    public static final DeferredHolder<Block, ElevatorCallButtonBlock> ELEVATOR_CALL_BUTTON = BLOCKS.register("elevator_call_button",
+            registryName -> new ElevatorCallButtonBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.METAL)
+                    .strength(2.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.METAL)
+            )
+    );
+
+    public static final DeferredHolder<Block, ElevatorDestinationControlBlock> ELEVATOR_DESTINATION_CONTROL = BLOCKS.register("elevator_destination_control",
+            registryName -> new ElevatorDestinationControlBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.METAL)
+                    .strength(2.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.METAL)
+            )
+    );
+
+    public static final DeferredHolder<Block, Block> BRUSHED_STAINLESS_STEEL = BLOCKS.register("brushed_stainless_steel",
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.METAL)
+                    .strength(3.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.METAL)
+                    .requiresCorrectToolForDrops()
             )
     );
 

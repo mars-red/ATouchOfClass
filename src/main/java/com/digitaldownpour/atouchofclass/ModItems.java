@@ -77,6 +77,12 @@ public class ModItems {
     public static DeferredItem<BlockItem> TALL_SIDELIGHT_ITEM = ITEMS.registerSimpleBlockItem("tall_sidelight", ModBlocks.TALL_SIDELIGHT);
 
     public static final DeferredItem<BlockItem> KEY_CUTTER_ITEM = ITEMS.registerSimpleBlockItem("key_cutter", ModBlocks.KEY_CUTTER);
+    public static final DeferredItem<BlockItem> ELEVATOR_SHAFT_PANEL_ITEM = ITEMS.registerSimpleBlockItem("elevator_shaft_panel", ModBlocks.ELEVATOR_SHAFT_PANEL);
+    public static final DeferredItem<BlockItem> ELEVATOR_FLOOR_ITEM = ITEMS.registerSimpleBlockItem("elevator_floor", ModBlocks.ELEVATOR_FLOOR);
+    public static final DeferredItem<BlockItem> ELEVATOR_DOOR_ITEM = ITEMS.registerSimpleBlockItem("elevator_door", ModBlocks.ELEVATOR_DOOR);
+    public static final DeferredItem<BlockItem> ELEVATOR_CALL_BUTTON_ITEM = ITEMS.registerSimpleBlockItem("elevator_call_button", ModBlocks.ELEVATOR_CALL_BUTTON);
+    public static final DeferredItem<BlockItem> ELEVATOR_DESTINATION_CONTROL_ITEM = ITEMS.registerSimpleBlockItem("elevator_destination_control", ModBlocks.ELEVATOR_DESTINATION_CONTROL);
+    public static final DeferredItem<BlockItem> BRUSHED_STAINLESS_STEEL_ITEM = ITEMS.registerSimpleBlockItem("brushed_stainless_steel", ModBlocks.BRUSHED_STAINLESS_STEEL);
     public static final DeferredItem<BlockItem> CASING_ITEM = ITEMS.registerSimpleBlockItem("casing", ModBlocks.CASING);
     public static final DeferredItem<BlockItem> WINDOW_APRON_ITEM = ITEMS.registerSimpleBlockItem("window_apron", ModBlocks.WINDOW_APRON);
     public static final DeferredItem<BlockItem> CROWN_MOULDING_ITEM = ITEMS.registerSimpleBlockItem("crown_moulding", ModBlocks.CROWN_MOULDING);
@@ -171,6 +177,12 @@ public class ModItems {
             event.accept(BASEBOARD_ITEM);
             event.accept(PLINTH_BLOCK_ITEM);
             event.accept(CORNER_BLOCK_ITEM);
+            event.accept(ELEVATOR_SHAFT_PANEL_ITEM);
+            event.accept(ELEVATOR_FLOOR_ITEM);
+            event.accept(ELEVATOR_DOOR_ITEM);
+            event.accept(ELEVATOR_CALL_BUTTON_ITEM);
+            event.accept(ELEVATOR_DESTINATION_CONTROL_ITEM);
+            event.accept(BRUSHED_STAINLESS_STEEL_ITEM);
         }
     }
 
