@@ -1,8 +1,10 @@
 package com.digitaldownpour.atouchofclass.elevator;
 
+import com.digitaldownpour.atouchofclass.ModSounds;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorDoorBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +30,7 @@ public final class ElevatorAnimator {
         final Direction direction;
         final Runnable onComplete;
         long nextStepTick;
+        boolean openingSoundPlayed;
 
         Animation(ServerLevel level, List<BlockPos> doorBases, Direction direction, Runnable onComplete, long nextStepTick) {
             this.level = level;
@@ -77,6 +80,10 @@ public final class ElevatorAnimator {
                 int target = anim.direction == Direction.OPEN ? ElevatorDoorBlock.MAX_SLIDE_STEP : 0;
                 if (step == target) {
                     continue;
+                }
+                if (anim.direction == Direction.OPEN && !anim.openingSoundPlayed) {
+                    level.playSound(null, base, ModSounds.ELEVATOR_DING.value(), SoundSource.BLOCKS, 0.6F, 1.0F);
+                    anim.openingSoundPlayed = true;
                 }
                 step += anim.direction == Direction.OPEN ? 1 : -1;
                 ElevatorDoorBlock.setSlideStep(level, base, step);

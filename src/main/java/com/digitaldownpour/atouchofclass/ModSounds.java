@@ -19,4 +19,7 @@ public class ModSounds {
 
     public static final Holder<SoundEvent> TALL_DOOR_CLOSE =
             SOUNDS.register("tall_door_close", SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> ELEVATOR_DING =
+            SOUNDS.register("elevator_ding", SoundEvent::createVariableRangeEvent);
 }
