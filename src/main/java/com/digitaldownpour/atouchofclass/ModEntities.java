@@ -39,7 +39,7 @@ public class ModEntities {
     public static final Supplier<BlockEntityType<TallDoorBlockEntity>> TALL_DOOR_BE = BLOCK_ENTITY_TYPES.register("tall_door_be",
             () -> new BlockEntityType<>(
                     TallDoorBlockEntity::new,
-                    ModBlocks.TALL_DOOR.get()
+                    ModBlocks.TALL_MANGROVE_DOOR.get()
             )
     );
 

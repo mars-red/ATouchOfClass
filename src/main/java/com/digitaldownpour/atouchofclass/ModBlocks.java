@@ -146,23 +146,11 @@ public class ModBlocks {
                     .sound(net.minecraft.world.level.block.SoundType.WOOD)
                     .noOcclusion()));
 
-    public static final DeferredHolder<Block, TallDoorBlock> TALL_DOOR = BLOCKS.register("tall_door",
-            registryName -> new TallDoorBlock(BlockBehaviour.Properties.of()
-                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                    .mapColor(MapColor.WOOD)
-                    .strength(3.0F)
-                    .noOcclusion()
-            )
-    );
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_MANGROVE_DOOR =
+            registerTallDoor("tall_mangrove_door", MapColor.COLOR_RED);
 
-    public static final DeferredHolder<Block, TallSidelightBlock> TALL_SIDELIGHT = BLOCKS.register("tall_sidelight",
-            registryName -> new TallSidelightBlock(BlockBehaviour.Properties.of()
-                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                    .mapColor(MapColor.NONE)
-                    .strength(3.0F)
-                    .noOcclusion()
-            )
-    );
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_MANGROVE_SIDELIGHT =
+            registerTallSidelight("tall_mangrove_sidelight", MapColor.COLOR_RED);
 
     public static final DeferredHolder<Block, KeyCutterBlock> KEY_CUTTER = BLOCKS.register("key_cutter",
             registryName -> new KeyCutterBlock(BlockBehaviour.Properties.of()
@@ -289,6 +277,22 @@ public class ModBlocks {
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
+    }
+
+    private static DeferredHolder<Block, TallDoorBlock> registerTallDoor(String name, MapColor mapColor) {
+        return BLOCKS.register(name, registryName -> new TallDoorBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .mapColor(mapColor)
+                .strength(3.0F)
+                .noOcclusion()));
+    }
+
+    private static DeferredHolder<Block, TallSidelightBlock> registerTallSidelight(String name, MapColor mapColor) {
+        return BLOCKS.register(name, registryName -> new TallSidelightBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .mapColor(mapColor)
+                .strength(3.0F)
+                .noOcclusion()));
     }
 
     private static void addCreative(BuildCreativeModeTabContentsEvent event) {
