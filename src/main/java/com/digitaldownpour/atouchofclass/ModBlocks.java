@@ -44,6 +44,37 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ATouchofClass.MODID);
 
+    // Entries in this list are maintained by tools/generate-basic-block.ps1.
+    private static final java.util.List<String> BASIC_BLOCK_NAMES = java.util.List.of(
+            "acacia_parquet",
+            "bamboo_parquet",
+            "birch_parquet",
+            "calcite_tile",
+            "cherry_parquet",
+            "crimson_parquet",
+            "dark_oak_parquet",
+            "jungle_parquet",
+            "mangrove_parquet",
+            "marble_tile",
+            "oak_parquet",
+            "octagonal_inset_tile",
+            "pale_oak_parquet",
+            "spruce_parquet",
+            "warped_parquet"
+    );
+    public static final java.util.Map<String, DeferredBlock<Block>> BASIC_BLOCKS = registerBasicBlocks();
+
+    private static java.util.Map<String, DeferredBlock<Block>> registerBasicBlocks() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<Block>>();
+        BASIC_BLOCK_NAMES.forEach(name -> blocks.put(name, BLOCKS.register(name,
+                registryName -> new Block(BlockBehaviour.Properties.of()
+                        .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                        .mapColor(MapColor.STONE)
+                        .strength(1.5F, 6.0F)
+                        .requiresCorrectToolForDrops()))));
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
     public static final DeferredBlock<OakRailingBlock> OAK_RAILING =
             BLOCKS.register("oak_railing", key -> new OakRailingBlock(
                     BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))

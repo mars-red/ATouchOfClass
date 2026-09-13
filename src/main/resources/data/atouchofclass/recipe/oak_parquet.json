@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": "minecraft:oak_planks"
+  },
+  "pattern": [
+    "P P",
+    " P ",
+    "P P"
+  ],
+  "result": {
+    "count": 5,
+    "id": "atouchofclass:oak_parquet"
+  }
+}

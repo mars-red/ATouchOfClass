@@ -19,6 +19,14 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ATouchofClass.MODID);
 
+    public static final java.util.List<DeferredItem<BlockItem>> BASIC_BLOCK_ITEMS = registerBasicBlockItems();
+
+    private static java.util.List<DeferredItem<BlockItem>> registerBasicBlockItems() {
+        var items = new java.util.ArrayList<DeferredItem<BlockItem>>();
+        ModBlocks.BASIC_BLOCKS.forEach((name, block) -> items.add(ITEMS.registerSimpleBlockItem(name, block)));
+        return java.util.List.copyOf(items);
+    }
+
     public static final DeferredItem<BlockItem> OAK_RAILING = ITEMS.registerSimpleBlockItem("oak_railing", ModBlocks.OAK_RAILING);
 
     public static final DeferredItem<BlockItem> OAK_BALUSTRADE = ITEMS.registerSimpleBlockItem("oak_balustrade", ModBlocks.OAK_BALUSTRADE);
@@ -163,6 +171,7 @@ public class ModItems {
             event.accept(QUICKLIME_POWDER);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            BASIC_BLOCK_ITEMS.forEach(event::accept);
             event.accept(OAK_RAILING);
             event.accept(OAK_BALUSTRADE);
             event.accept(OAK_BALUSTER);

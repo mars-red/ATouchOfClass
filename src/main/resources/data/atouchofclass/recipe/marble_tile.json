@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": "minecraft:calcite",
+    "B": "minecraft:black_dye",
+    "G": "minecraft:green_dye"
+  },
+  "pattern": [
+    "CGC",
+    "CBC",
+    "CCC"
+  ],
+  "result": {
+    "count": 7,
+    "id": "atouchofclass:marble_tile"
+  }
+}

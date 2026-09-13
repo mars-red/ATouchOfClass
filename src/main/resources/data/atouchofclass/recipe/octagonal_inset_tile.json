@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": "minecraft:deepslate",
+    "C": "minecraft:calcite"
+  },
+  "pattern": [
+    "DCD",
+    "CDC",
+    "DCD"
+  ],
+  "result": {
+    "count": 9,
+    "id": "atouchofclass:octagonal_inset_tile"
+  }
+}
