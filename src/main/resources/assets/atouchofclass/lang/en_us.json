@@ -134,5 +134,9 @@
     "block.atouchofclass.tall_spruce_door":  "Tall Spruce Door",
     "item.atouchofclass.tall_spruce_door":  "Tall Spruce Door",
     "block.atouchofclass.tall_spruce_sidelight":  "Tall Spruce Sidelight",
-    "item.atouchofclass.tall_spruce_sidelight":  "Tall Spruce Sidelight"
+    "item.atouchofclass.tall_spruce_sidelight":  "Tall Spruce Sidelight",
+    "block.atouchofclass.tall_jungle_door":  "Tall Jungle Door",
+    "item.atouchofclass.tall_jungle_door":  "Tall Jungle Door",
+    "block.atouchofclass.tall_jungle_sidelight":  "Tall Jungle Sidelight",
+    "item.atouchofclass.tall_jungle_sidelight":  "Tall Jungle Sidelight"
 }
