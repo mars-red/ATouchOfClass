@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "atouchofclass:tall_mangrove_door"
+    "atouchofclass:tall_mangrove_door",
+    "atouchofclass:tall_birch_door"
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "multipart": [
+    { "when": { "part": 0, "facing": "north" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_bottom", "y": 0 } },
+    { "when": { "part": 0, "facing": "east" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_bottom", "y": 90 } },
+    { "when": { "part": 0, "facing": "south" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_bottom", "y": 180 } },
+    { "when": { "part": 0, "facing": "west" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_bottom", "y": 270 } },
+
+    { "when": { "part": 1, "facing": "north" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_middle", "y": 0 } },
+    { "when": { "part": 1, "facing": "east" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_middle", "y": 90 } },
+    { "when": { "part": 1, "facing": "south" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_middle", "y": 180 } },
+    { "when": { "part": 1, "facing": "west" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_middle", "y": 270 } },
+
+    { "when": { "part": 2, "facing": "north" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_top", "y": 0 } },
+    { "when": { "part": 2, "facing": "east" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_top", "y": 90 } },
+    { "when": { "part": 2, "facing": "south" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_top", "y": 180 } },
+    { "when": { "part": 2, "facing": "west" }, "apply": { "model": "atouchofclass:block/tall_birch_sidelight_top", "y": 270 } }
+  ]
+}

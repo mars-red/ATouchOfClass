@@ -20,7 +20,9 @@ import java.util.List;
 public class KeyCutterMenu extends AbstractContainerMenu {
     private HashSet<String> keyableTypes = new HashSet<String>(Arrays.asList(
             ATouchofClass.MODID + ":door_key",
-            ATouchofClass.MODID + ":tall_mangrove_door"
+            // TALL_DOOR_VARIANT_KEY_CUTTER_ENTRIES
+            ATouchofClass.MODID + ":tall_mangrove_door",
+            ATouchofClass.MODID + ":tall_birch_door"
     ));
 
     private final List<SlotChangeListener> listeners = new ArrayList<>();

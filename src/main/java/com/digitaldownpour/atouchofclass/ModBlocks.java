@@ -152,6 +152,15 @@ public class ModBlocks {
     public static final DeferredHolder<Block, TallSidelightBlock> TALL_MANGROVE_SIDELIGHT =
             registerTallSidelight("tall_mangrove_sidelight", MapColor.COLOR_RED);
 
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_BIRCH_DOOR =
+            registerTallDoor("tall_birch_door", MapColor.SAND);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_BIRCH_SIDELIGHT =
+            registerTallSidelight("tall_birch_sidelight", MapColor.SAND);
+
+    // TALL_DOOR_VARIANT_REGISTRATIONS
+    // TALL_SIDELIGHT_VARIANT_REGISTRATIONS
+
     public static final DeferredHolder<Block, KeyCutterBlock> KEY_CUTTER = BLOCKS.register("key_cutter",
             registryName -> new KeyCutterBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))

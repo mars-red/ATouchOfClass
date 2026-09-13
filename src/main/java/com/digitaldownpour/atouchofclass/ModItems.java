@@ -85,6 +85,18 @@ public class ModItems {
     public static final DeferredItem<BlockItem> TALL_MANGROVE_SIDELIGHT_ITEM =
             ITEMS.registerSimpleBlockItem("tall_mangrove_sidelight", ModBlocks.TALL_MANGROVE_SIDELIGHT);
 
+    public static final DeferredItem<TallDoorItem> TALL_BIRCH_DOOR_ITEM = ITEMS.register(
+            "tall_birch_door",
+            key -> new TallDoorItem(ModBlocks.TALL_BIRCH_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<BlockItem> TALL_BIRCH_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_birch_sidelight", ModBlocks.TALL_BIRCH_SIDELIGHT);
+
+    // TALL_DOOR_VARIANT_ITEM_REGISTRATIONS
+    // TALL_SIDELIGHT_VARIANT_ITEM_REGISTRATIONS
+
     public static final DeferredItem<BlockItem> KEY_CUTTER_ITEM = ITEMS.registerSimpleBlockItem("key_cutter", ModBlocks.KEY_CUTTER);
     public static final DeferredItem<BlockItem> ELEVATOR_SHAFT_PANEL_ITEM = ITEMS.registerSimpleBlockItem("elevator_shaft_panel", ModBlocks.ELEVATOR_SHAFT_PANEL);
     public static final DeferredItem<BlockItem> ELEVATOR_FLOOR_ITEM = ITEMS.registerSimpleBlockItem("elevator_floor", ModBlocks.ELEVATOR_FLOOR);
@@ -180,6 +192,10 @@ public class ModItems {
             WOOD_RAILINGS.forEach(event::accept);
             event.accept(TALL_MANGROVE_DOOR_ITEM);
             event.accept(TALL_MANGROVE_SIDELIGHT_ITEM);
+            event.accept(TALL_BIRCH_DOOR_ITEM);
+            event.accept(TALL_BIRCH_SIDELIGHT_ITEM);
+            // TALL_DOOR_VARIANT_CREATIVE_ENTRIES
+            // TALL_SIDELIGHT_VARIANT_CREATIVE_ENTRIES
             event.accept(KEY_CUTTER_ITEM);
             event.accept(CASING_ITEM);
             event.accept(WINDOW_APRON_ITEM);
