@@ -65,6 +65,16 @@ public class TallDoorBlock extends Block implements EntityBlock {
         };
     }
 
+    private static VoxelShape shapeForState(BlockState state) {
+        Direction facing = state.getValue(FACING);
+        if (state.getValue(OPEN)) {
+            facing = state.getValue(HINGE) == DoorHingeSide.LEFT
+                    ? facing.getCounterClockWise()
+                    : facing.getClockWise();
+        }
+        return shapeForFacing(facing);
+    }
+
     @Override
     protected boolean isCollisionShapeFullBlock(BlockState state, BlockGetter level, BlockPos pos) {
         return false;
@@ -72,11 +82,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
 
     @Override
     protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        if (state.getValue(OPEN)) {
-            return Shapes.empty();
-        } else {
-            return shapeForFacing(state.getValue(FACING));
-        }
+        return shapeForState(state);
     }
 
     @Override
@@ -86,7 +92,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
             BlockPos pos,
             CollisionContext context
     ) {
-        return shapeForFacing(state.getValue(FACING));
+        return shapeForState(state);
     }
 
     @Override
