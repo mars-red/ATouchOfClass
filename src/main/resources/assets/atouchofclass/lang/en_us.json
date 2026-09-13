@@ -138,5 +138,9 @@
     "block.atouchofclass.tall_jungle_door":  "Tall Jungle Door",
     "item.atouchofclass.tall_jungle_door":  "Tall Jungle Door",
     "block.atouchofclass.tall_jungle_sidelight":  "Tall Jungle Sidelight",
-    "item.atouchofclass.tall_jungle_sidelight":  "Tall Jungle Sidelight"
+    "item.atouchofclass.tall_jungle_sidelight":  "Tall Jungle Sidelight",
+    "block.atouchofclass.tall_acacia_door":  "Tall Acacia Door",
+    "item.atouchofclass.tall_acacia_door":  "Tall Acacia Door",
+    "block.atouchofclass.tall_acacia_sidelight":  "Tall Acacia Sidelight",
+    "item.atouchofclass.tall_acacia_sidelight":  "Tall Acacia Sidelight"
 }
