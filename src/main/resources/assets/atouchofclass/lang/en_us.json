@@ -154,5 +154,9 @@
     "block.atouchofclass.tall_bamboo_door":  "Tall Bamboo Door",
     "item.atouchofclass.tall_bamboo_door":  "Tall Bamboo Door",
     "block.atouchofclass.tall_bamboo_sidelight":  "Tall Bamboo Sidelight",
-    "item.atouchofclass.tall_bamboo_sidelight":  "Tall Bamboo Sidelight"
+    "item.atouchofclass.tall_bamboo_sidelight":  "Tall Bamboo Sidelight",
+    "block.atouchofclass.tall_pale_oak_door":  "Tall Pale Oak Door",
+    "item.atouchofclass.tall_pale_oak_door":  "Tall Pale Oak Door",
+    "block.atouchofclass.tall_pale_oak_sidelight":  "Tall Pale Oak Sidelight",
+    "item.atouchofclass.tall_pale_oak_sidelight":  "Tall Pale Oak Sidelight"
 }

@@ -1,0 +1,31 @@
+{
+  "parent": "block/block",
+  "ambientocclusion": false,
+  "texture_size": [32, 32],
+  "render_type": "cutout",
+  "textures": {
+    "0": "atouchofclass:block/tall_pale_oak_sidelight_bottom",
+    "particle": "atouchofclass:block/tall_pale_oak_sidelight_bottom"
+  },
+  "elements": [{
+    "from": [0, 0, 0],
+    "to": [16, 16, 3],
+    "faces": {
+      "down": {
+        "texture": "#0"
+      },
+      "north": {
+        "texture": "#0"
+      },
+      "south": {
+        "texture": "#0"
+      },
+      "east": {
+        "texture": "#0"
+      },
+      "west": {
+        "texture": "#0"
+      }
+    }
+  }]
+}
