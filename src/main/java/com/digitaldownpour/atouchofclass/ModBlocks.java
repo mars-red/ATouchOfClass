@@ -173,6 +173,9 @@ public class ModBlocks {
     public static final DeferredHolder<Block, TallDoorBlock> TALL_DARK_OAK_DOOR =
             registerTallDoor("tall_dark_oak_door", MapColor.WOOD);
 
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_CHERRY_DOOR =
+            registerTallDoor("tall_cherry_door", MapColor.WOOD);
+
     // TALL_DOOR_VARIANT_REGISTRATIONS
     public static final DeferredHolder<Block, TallSidelightBlock> TALL_OAK_SIDELIGHT =
             registerTallSidelight("tall_oak_sidelight", MapColor.WOOD);
@@ -188,6 +191,9 @@ public class ModBlocks {
 
     public static final DeferredHolder<Block, TallSidelightBlock> TALL_DARK_OAK_SIDELIGHT =
             registerTallSidelight("tall_dark_oak_sidelight", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_CHERRY_SIDELIGHT =
+            registerTallSidelight("tall_cherry_sidelight", MapColor.WOOD);
 
     // TALL_SIDELIGHT_VARIANT_REGISTRATIONS
 

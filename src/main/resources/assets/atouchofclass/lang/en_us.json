@@ -146,5 +146,9 @@
     "block.atouchofclass.tall_dark_oak_door":  "Tall Dark Oak Door",
     "item.atouchofclass.tall_dark_oak_door":  "Tall Dark Oak Door",
     "block.atouchofclass.tall_dark_oak_sidelight":  "Tall Dark Oak Sidelight",
-    "item.atouchofclass.tall_dark_oak_sidelight":  "Tall Dark Oak Sidelight"
+    "item.atouchofclass.tall_dark_oak_sidelight":  "Tall Dark Oak Sidelight",
+    "block.atouchofclass.tall_cherry_door":  "Tall Cherry Door",
+    "item.atouchofclass.tall_cherry_door":  "Tall Cherry Door",
+    "block.atouchofclass.tall_cherry_sidelight":  "Tall Cherry Sidelight",
+    "item.atouchofclass.tall_cherry_sidelight":  "Tall Cherry Sidelight"
 }

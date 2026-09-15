@@ -25,6 +25,7 @@ public class KeyCutterMenu extends AbstractContainerMenu {
             ATouchofClass.MODID + ":tall_jungle_door",
             ATouchofClass.MODID + ":tall_acacia_door",
             ATouchofClass.MODID + ":tall_dark_oak_door",
+            ATouchofClass.MODID + ":tall_cherry_door",
             // TALL_DOOR_VARIANT_KEY_CUTTER_ENTRIES
             ATouchofClass.MODID + ":tall_mangrove_door",
             ATouchofClass.MODID + ":tall_birch_door"
