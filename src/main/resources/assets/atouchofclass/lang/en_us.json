@@ -150,5 +150,9 @@
     "block.atouchofclass.tall_cherry_door":  "Tall Cherry Door",
     "item.atouchofclass.tall_cherry_door":  "Tall Cherry Door",
     "block.atouchofclass.tall_cherry_sidelight":  "Tall Cherry Sidelight",
-    "item.atouchofclass.tall_cherry_sidelight":  "Tall Cherry Sidelight"
+    "item.atouchofclass.tall_cherry_sidelight":  "Tall Cherry Sidelight",
+    "block.atouchofclass.tall_bamboo_door":  "Tall Bamboo Door",
+    "item.atouchofclass.tall_bamboo_door":  "Tall Bamboo Door",
+    "block.atouchofclass.tall_bamboo_sidelight":  "Tall Bamboo Sidelight",
+    "item.atouchofclass.tall_bamboo_sidelight":  "Tall Bamboo Sidelight"
 }
