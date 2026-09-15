@@ -43,6 +43,7 @@ public class ModEntities {
                     ModBlocks.TALL_SPRUCE_DOOR.get(),
                     ModBlocks.TALL_JUNGLE_DOOR.get(),
                     ModBlocks.TALL_ACACIA_DOOR.get(),
+                    ModBlocks.TALL_DARK_OAK_DOOR.get(),
                     // TALL_DOOR_VARIANT_BLOCK_ENTITY_ENTRIES
                     ModBlocks.TALL_MANGROVE_DOOR.get(),
                     ModBlocks.TALL_BIRCH_DOOR.get()

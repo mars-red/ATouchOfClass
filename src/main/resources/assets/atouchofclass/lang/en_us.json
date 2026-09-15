@@ -142,5 +142,9 @@
     "block.atouchofclass.tall_acacia_door":  "Tall Acacia Door",
     "item.atouchofclass.tall_acacia_door":  "Tall Acacia Door",
     "block.atouchofclass.tall_acacia_sidelight":  "Tall Acacia Sidelight",
-    "item.atouchofclass.tall_acacia_sidelight":  "Tall Acacia Sidelight"
+    "item.atouchofclass.tall_acacia_sidelight":  "Tall Acacia Sidelight",
+    "block.atouchofclass.tall_dark_oak_door":  "Tall Dark Oak Door",
+    "item.atouchofclass.tall_dark_oak_door":  "Tall Dark Oak Door",
+    "block.atouchofclass.tall_dark_oak_sidelight":  "Tall Dark Oak Sidelight",
+    "item.atouchofclass.tall_dark_oak_sidelight":  "Tall Dark Oak Sidelight"
 }
