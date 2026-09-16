@@ -1,6 +1,17 @@
 {
-  "replace": false,
-  "values": [
-    "atouchofclass:tall_door"
-  ]
+    "replace":  false,
+    "values":  [
+                   "atouchofclass:tall_mangrove_door",
+                   "atouchofclass:tall_birch_door",
+                   "atouchofclass:tall_oak_door",
+                   "atouchofclass:tall_spruce_door",
+                   "atouchofclass:tall_jungle_door",
+                   "atouchofclass:tall_acacia_door",
+                   "atouchofclass:tall_dark_oak_door",
+                   "atouchofclass:tall_cherry_door",
+                   "atouchofclass:tall_bamboo_door",
+                   "atouchofclass:tall_pale_oak_door",
+                   "atouchofclass:tall_crimson_door",
+                   "atouchofclass:tall_warped_door"
+               ]
 }

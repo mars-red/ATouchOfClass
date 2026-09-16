@@ -39,7 +39,19 @@ public class ModEntities {
     public static final Supplier<BlockEntityType<TallDoorBlockEntity>> TALL_DOOR_BE = BLOCK_ENTITY_TYPES.register("tall_door_be",
             () -> new BlockEntityType<>(
                     TallDoorBlockEntity::new,
-                    ModBlocks.TALL_DOOR.get()
+                    ModBlocks.TALL_OAK_DOOR.get(),
+                    ModBlocks.TALL_SPRUCE_DOOR.get(),
+                    ModBlocks.TALL_JUNGLE_DOOR.get(),
+                    ModBlocks.TALL_ACACIA_DOOR.get(),
+                    ModBlocks.TALL_DARK_OAK_DOOR.get(),
+                    ModBlocks.TALL_CHERRY_DOOR.get(),
+                    ModBlocks.TALL_BAMBOO_DOOR.get(),
+                    ModBlocks.TALL_PALE_OAK_DOOR.get(),
+                    ModBlocks.TALL_CRIMSON_DOOR.get(),
+                    ModBlocks.TALL_WARPED_DOOR.get(),
+                    // TALL_DOOR_VARIANT_BLOCK_ENTITY_ENTRIES
+                    ModBlocks.TALL_MANGROVE_DOOR.get(),
+                    ModBlocks.TALL_BIRCH_DOOR.get()
             )
     );
 

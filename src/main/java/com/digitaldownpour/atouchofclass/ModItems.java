@@ -76,13 +76,116 @@ public class ModItems {
             new Item.Properties()
     );
 
-    public static DeferredItem<TallDoorItem> TALL_DOOR_ITEM = ITEMS.register(
-            "tall_door",
-            (key) -> new TallDoorItem(ModBlocks.TALL_DOOR.get(),
+    public static final DeferredItem<TallDoorItem> TALL_MANGROVE_DOOR_ITEM = ITEMS.register(
+            "tall_mangrove_door",
+            (key) -> new TallDoorItem(ModBlocks.TALL_MANGROVE_DOOR.get(),
                     new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
     );
 
-    public static DeferredItem<BlockItem> TALL_SIDELIGHT_ITEM = ITEMS.registerSimpleBlockItem("tall_sidelight", ModBlocks.TALL_SIDELIGHT);
+    public static final DeferredItem<BlockItem> TALL_MANGROVE_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_mangrove_sidelight", ModBlocks.TALL_MANGROVE_SIDELIGHT);
+
+    public static final DeferredItem<TallDoorItem> TALL_BIRCH_DOOR_ITEM = ITEMS.register(
+            "tall_birch_door",
+            key -> new TallDoorItem(ModBlocks.TALL_BIRCH_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<BlockItem> TALL_BIRCH_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_birch_sidelight", ModBlocks.TALL_BIRCH_SIDELIGHT);
+
+    public static final DeferredItem<TallDoorItem> TALL_OAK_DOOR_ITEM = ITEMS.register(
+            "tall_oak_door",
+            key -> new TallDoorItem(ModBlocks.TALL_OAK_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<TallDoorItem> TALL_SPRUCE_DOOR_ITEM = ITEMS.register(
+            "tall_spruce_door",
+            key -> new TallDoorItem(ModBlocks.TALL_SPRUCE_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<TallDoorItem> TALL_JUNGLE_DOOR_ITEM = ITEMS.register(
+            "tall_jungle_door",
+            key -> new TallDoorItem(ModBlocks.TALL_JUNGLE_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<TallDoorItem> TALL_ACACIA_DOOR_ITEM = ITEMS.register(
+            "tall_acacia_door",
+            key -> new TallDoorItem(ModBlocks.TALL_ACACIA_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<TallDoorItem> TALL_DARK_OAK_DOOR_ITEM = ITEMS.register(
+            "tall_dark_oak_door",
+            key -> new TallDoorItem(ModBlocks.TALL_DARK_OAK_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<TallDoorItem> TALL_CHERRY_DOOR_ITEM = ITEMS.register(
+            "tall_cherry_door",
+            key -> new TallDoorItem(ModBlocks.TALL_CHERRY_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<TallDoorItem> TALL_BAMBOO_DOOR_ITEM = ITEMS.register(
+            "tall_bamboo_door",
+            key -> new TallDoorItem(ModBlocks.TALL_BAMBOO_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<TallDoorItem> TALL_PALE_OAK_DOOR_ITEM = ITEMS.register(
+            "tall_pale_oak_door",
+            key -> new TallDoorItem(ModBlocks.TALL_PALE_OAK_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<TallDoorItem> TALL_CRIMSON_DOOR_ITEM = ITEMS.register(
+            "tall_crimson_door",
+            key -> new TallDoorItem(ModBlocks.TALL_CRIMSON_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    public static final DeferredItem<TallDoorItem> TALL_WARPED_DOOR_ITEM = ITEMS.register(
+            "tall_warped_door",
+            key -> new TallDoorItem(ModBlocks.TALL_WARPED_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
+    // TALL_DOOR_VARIANT_ITEM_REGISTRATIONS
+    public static final DeferredItem<BlockItem> TALL_OAK_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_oak_sidelight", ModBlocks.TALL_OAK_SIDELIGHT);
+
+    public static final DeferredItem<BlockItem> TALL_SPRUCE_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_spruce_sidelight", ModBlocks.TALL_SPRUCE_SIDELIGHT);
+
+    public static final DeferredItem<BlockItem> TALL_JUNGLE_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_jungle_sidelight", ModBlocks.TALL_JUNGLE_SIDELIGHT);
+
+    public static final DeferredItem<BlockItem> TALL_ACACIA_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_acacia_sidelight", ModBlocks.TALL_ACACIA_SIDELIGHT);
+
+    public static final DeferredItem<BlockItem> TALL_DARK_OAK_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_dark_oak_sidelight", ModBlocks.TALL_DARK_OAK_SIDELIGHT);
+
+    public static final DeferredItem<BlockItem> TALL_CHERRY_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_cherry_sidelight", ModBlocks.TALL_CHERRY_SIDELIGHT);
+
+    public static final DeferredItem<BlockItem> TALL_BAMBOO_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_bamboo_sidelight", ModBlocks.TALL_BAMBOO_SIDELIGHT);
+
+    public static final DeferredItem<BlockItem> TALL_PALE_OAK_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_pale_oak_sidelight", ModBlocks.TALL_PALE_OAK_SIDELIGHT);
+
+    public static final DeferredItem<BlockItem> TALL_CRIMSON_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_crimson_sidelight", ModBlocks.TALL_CRIMSON_SIDELIGHT);
+
+    public static final DeferredItem<BlockItem> TALL_WARPED_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_warped_sidelight", ModBlocks.TALL_WARPED_SIDELIGHT);
+
+    // TALL_SIDELIGHT_VARIANT_ITEM_REGISTRATIONS
 
     public static final DeferredItem<BlockItem> KEY_CUTTER_ITEM = ITEMS.registerSimpleBlockItem("key_cutter", ModBlocks.KEY_CUTTER);
     public static final DeferredItem<BlockItem> ELEVATOR_SHAFT_PANEL_ITEM = ITEMS.registerSimpleBlockItem("elevator_shaft_panel", ModBlocks.ELEVATOR_SHAFT_PANEL);
@@ -177,8 +280,32 @@ public class ModItems {
             event.accept(OAK_BALUSTER);
             event.accept(OAK_NEWEL_POST);
             WOOD_RAILINGS.forEach(event::accept);
-            event.accept(TALL_DOOR_ITEM);
-            event.accept(TALL_SIDELIGHT_ITEM);
+            event.accept(TALL_MANGROVE_DOOR_ITEM);
+            event.accept(TALL_MANGROVE_SIDELIGHT_ITEM);
+            event.accept(TALL_BIRCH_DOOR_ITEM);
+            event.accept(TALL_BIRCH_SIDELIGHT_ITEM);
+            event.accept(TALL_OAK_DOOR_ITEM);
+            event.accept(TALL_SPRUCE_DOOR_ITEM);
+            event.accept(TALL_JUNGLE_DOOR_ITEM);
+            event.accept(TALL_ACACIA_DOOR_ITEM);
+            event.accept(TALL_DARK_OAK_DOOR_ITEM);
+            event.accept(TALL_CHERRY_DOOR_ITEM);
+            event.accept(TALL_BAMBOO_DOOR_ITEM);
+            event.accept(TALL_PALE_OAK_DOOR_ITEM);
+            event.accept(TALL_CRIMSON_DOOR_ITEM);
+            event.accept(TALL_WARPED_DOOR_ITEM);
+            // TALL_DOOR_VARIANT_CREATIVE_ENTRIES
+            event.accept(TALL_OAK_SIDELIGHT_ITEM);
+            event.accept(TALL_SPRUCE_SIDELIGHT_ITEM);
+            event.accept(TALL_JUNGLE_SIDELIGHT_ITEM);
+            event.accept(TALL_ACACIA_SIDELIGHT_ITEM);
+            event.accept(TALL_DARK_OAK_SIDELIGHT_ITEM);
+            event.accept(TALL_CHERRY_SIDELIGHT_ITEM);
+            event.accept(TALL_BAMBOO_SIDELIGHT_ITEM);
+            event.accept(TALL_PALE_OAK_SIDELIGHT_ITEM);
+            event.accept(TALL_CRIMSON_SIDELIGHT_ITEM);
+            event.accept(TALL_WARPED_SIDELIGHT_ITEM);
+            // TALL_SIDELIGHT_VARIANT_CREATIVE_ENTRIES
             event.accept(KEY_CUTTER_ITEM);
             event.accept(CASING_ITEM);
             event.accept(WINDOW_APRON_ITEM);

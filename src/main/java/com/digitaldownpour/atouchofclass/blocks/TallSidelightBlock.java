@@ -126,7 +126,7 @@ public class TallSidelightBlock extends Block {
             return level.getBlockState(pos.below()).isSolid();
         } else {
             BlockState belowState = level.getBlockState(pos.below());
-            return belowState.getBlock() instanceof TallSidelightBlock
+            return belowState.is(this)
                     && belowState.getValue(PART) == part - 1;
         }
     }

@@ -1,0 +1,50 @@
+{
+  "parent": "block/block",
+  "ambientocclusion": false,
+  "texture_size": [32, 32],
+  "textures": {
+    "0": "atouchofclass:block/tall_mangrove_door_bottom",
+    "particle": "atouchofclass:block/tall_mangrove_door_bottom"
+  },
+  "elements": [{
+    "from": [0, 0, 0],
+    "to": [16, 16, 3],
+    "faces": {
+      "down": {
+        "texture": "#0"
+      },
+      "up": {
+        "texture": "#0"
+      },
+      "north": {
+        "texture": "#0"
+      },
+      "south": {
+        "texture": "#0"
+      },
+      "east": {
+        "texture": "#0"
+      },
+      "west": {
+        "texture": "#0"
+      }
+    }
+  }],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [37, 41, 0],
+      "translation": [-1.25, 4.5, 0],
+      "scale": [0.6, 0.6, 0.6]
+    },
+    "firstperson_righthand": {
+      "rotation": [46, -4, 4],
+      "translation": [0, 3, 0],
+      "scale": [0.5, 0.5, 0.4]
+    },
+    "gui": {
+      "rotation": [101, 0, -58],
+      "translation": [5, -1, -2.75],
+      "scale": [0.8, 0.8, 0.8]
+    }
+  }
+}

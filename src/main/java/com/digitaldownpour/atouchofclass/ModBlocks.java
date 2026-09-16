@@ -146,23 +146,80 @@ public class ModBlocks {
                     .sound(net.minecraft.world.level.block.SoundType.WOOD)
                     .noOcclusion()));
 
-    public static final DeferredHolder<Block, TallDoorBlock> TALL_DOOR = BLOCKS.register("tall_door",
-            registryName -> new TallDoorBlock(BlockBehaviour.Properties.of()
-                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                    .mapColor(MapColor.WOOD)
-                    .strength(3.0F)
-                    .noOcclusion()
-            )
-    );
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_MANGROVE_DOOR =
+            registerTallDoor("tall_mangrove_door", MapColor.COLOR_RED);
 
-    public static final DeferredHolder<Block, TallSidelightBlock> TALL_SIDELIGHT = BLOCKS.register("tall_sidelight",
-            registryName -> new TallSidelightBlock(BlockBehaviour.Properties.of()
-                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                    .mapColor(MapColor.NONE)
-                    .strength(3.0F)
-                    .noOcclusion()
-            )
-    );
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_MANGROVE_SIDELIGHT =
+            registerTallSidelight("tall_mangrove_sidelight", MapColor.COLOR_RED);
+
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_BIRCH_DOOR =
+            registerTallDoor("tall_birch_door", MapColor.SAND);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_BIRCH_SIDELIGHT =
+            registerTallSidelight("tall_birch_sidelight", MapColor.SAND);
+
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_OAK_DOOR =
+            registerTallDoor("tall_oak_door", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_SPRUCE_DOOR =
+            registerTallDoor("tall_spruce_door", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_JUNGLE_DOOR =
+            registerTallDoor("tall_jungle_door", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_ACACIA_DOOR =
+            registerTallDoor("tall_acacia_door", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_DARK_OAK_DOOR =
+            registerTallDoor("tall_dark_oak_door", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_CHERRY_DOOR =
+            registerTallDoor("tall_cherry_door", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_BAMBOO_DOOR =
+            registerTallDoor("tall_bamboo_door", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_PALE_OAK_DOOR =
+            registerTallDoor("tall_pale_oak_door", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_CRIMSON_DOOR =
+            registerTallDoor("tall_crimson_door", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_WARPED_DOOR =
+            registerTallDoor("tall_warped_door", MapColor.WOOD);
+
+    // TALL_DOOR_VARIANT_REGISTRATIONS
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_OAK_SIDELIGHT =
+            registerTallSidelight("tall_oak_sidelight", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_SPRUCE_SIDELIGHT =
+            registerTallSidelight("tall_spruce_sidelight", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_JUNGLE_SIDELIGHT =
+            registerTallSidelight("tall_jungle_sidelight", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_ACACIA_SIDELIGHT =
+            registerTallSidelight("tall_acacia_sidelight", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_DARK_OAK_SIDELIGHT =
+            registerTallSidelight("tall_dark_oak_sidelight", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_CHERRY_SIDELIGHT =
+            registerTallSidelight("tall_cherry_sidelight", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_BAMBOO_SIDELIGHT =
+            registerTallSidelight("tall_bamboo_sidelight", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_PALE_OAK_SIDELIGHT =
+            registerTallSidelight("tall_pale_oak_sidelight", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_CRIMSON_SIDELIGHT =
+            registerTallSidelight("tall_crimson_sidelight", MapColor.WOOD);
+
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_WARPED_SIDELIGHT =
+            registerTallSidelight("tall_warped_sidelight", MapColor.WOOD);
+
+    // TALL_SIDELIGHT_VARIANT_REGISTRATIONS
 
     public static final DeferredHolder<Block, KeyCutterBlock> KEY_CUTTER = BLOCKS.register("key_cutter",
             registryName -> new KeyCutterBlock(BlockBehaviour.Properties.of()
@@ -289,6 +346,22 @@ public class ModBlocks {
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
+    }
+
+    private static DeferredHolder<Block, TallDoorBlock> registerTallDoor(String name, MapColor mapColor) {
+        return BLOCKS.register(name, registryName -> new TallDoorBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .mapColor(mapColor)
+                .strength(3.0F)
+                .noOcclusion()));
+    }
+
+    private static DeferredHolder<Block, TallSidelightBlock> registerTallSidelight(String name, MapColor mapColor) {
+        return BLOCKS.register(name, registryName -> new TallSidelightBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .mapColor(mapColor)
+                .strength(3.0F)
+                .noOcclusion()));
     }
 
     private static void addCreative(BuildCreativeModeTabContentsEvent event) {

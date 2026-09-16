@@ -190,7 +190,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
 
     private void toggleDoor(Level world, BlockPos basePos) {
         BlockState bottomState = world.getBlockState(basePos);
-        if (!(bottomState.getBlock() instanceof TallDoorBlock)) return;
+        if (!bottomState.is(this)) return;
 
         boolean newOpen = !bottomState.getValue(OPEN);
 
@@ -209,7 +209,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
         BlockPos neighborBasePos = basePos.relative(offsetDir);
 
         BlockState neighborState = world.getBlockState(neighborBasePos);
-        if (neighborState.getBlock() instanceof TallDoorBlock
+        if (neighborState.is(this)
                 && neighborState.getValue(PART) == 0
                 && neighborState.getValue(FACING) == facing
                 && neighborState.getValue(HINGE) != hinge) {
@@ -257,7 +257,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
             return level.getBlockState(pos.below()).isSolid();
         } else {
             BlockState belowState = level.getBlockState(pos.below());
-            return belowState.getBlock() instanceof TallDoorBlock
+            return belowState.is(this)
                     && belowState.getValue(PART) == part - 1;
         }    }
 
