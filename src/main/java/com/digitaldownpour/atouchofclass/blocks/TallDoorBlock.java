@@ -2,6 +2,7 @@ package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.ModComponents;
 import com.digitaldownpour.atouchofclass.ModSounds;
+import com.digitaldownpour.atouchofclass.items.KeyRingItem;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -173,6 +174,19 @@ public class TallDoorBlock extends Block implements EntityBlock {
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        if (stack.getItem() instanceof KeyRingItem) {
+            if (level.isClientSide) return InteractionResult.SUCCESS;
+            BlockPos basePos = pos.below(state.getValue(PART));
+            if (level.getBlockEntity(basePos) instanceof TallDoorBlockEntity be) {
+                String code = be.getKeyCode();
+                if (code == null || code.isEmpty()
+                        || KeyRingItem.matchesCode(stack, code)) {
+                    toggleDoor(level, basePos);
+                    return InteractionResult.SUCCESS;
+                }
+            }
+            return InteractionResult.FAIL;
+        }
         if (stack.has(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE) && !level.isClientSide) {
             BlockPos basePos = pos.below(state.getValue(PART));
             if (level.getBlockEntity(basePos) instanceof TallDoorBlockEntity be) {

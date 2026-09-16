@@ -1,0 +1,10 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:has_component",
+    "component": "minecraft:container",
+    "ignore_default": true,
+    "on_true": { "type": "minecraft:model", "model": "atouchofclass:item/key_ring_filled" },
+    "on_false": { "type": "minecraft:model", "model": "atouchofclass:item/key_ring_empty" }
+  }
+}

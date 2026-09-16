@@ -27,7 +27,7 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
                 SyncKeyCutterMenuPayload.TYPE,
                 SyncKeyCutterMenuPayload.STREAM_CODEC,
                 new DirectionalPayloadHandler<>(
-                        ClientPayloadHandler::handleDataOnMain,
+                        (payload, context) -> ClientPayloadHandler.handleDataOnMain(payload, context),
                         ServerPayloadHandler::handleDataOnMain
                 )
         );
@@ -47,7 +47,7 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
         registrar.playToClient(
                 OpenElevatorFloorsPayload.TYPE,
                 OpenElevatorFloorsPayload.STREAM_CODEC,
-                ClientPayloadHandler::handleDataOnMain
+                (payload, context) -> ClientPayloadHandler.handleDataOnMain(payload, context)
         );
 
         registrar.playToServer(
