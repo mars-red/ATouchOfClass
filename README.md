@@ -1,4 +1,26 @@
 
+Key rings
+=========
+
+Craft a Key Ring with four iron nuggets in a diamond pattern (top, left, right,
+and bottom of a crafting grid). Hold it and right-click in the air to open its
+16 slots beside your inventory. Click, drag, or shift-click to transfer keys.
+Only door keys with a non-empty code set on a key cutter are accepted; each slot
+holds one key. The open ring stays locked in its inventory slot until you close
+the menu, and its contents travel with it and are saved with the item.
+The inventory and held-item texture shows a bare silver ring when empty and
+gold keys on the ring whenever it contains keys. This updates automatically
+when adding the first key or removing the last one.
+Key rings can be renamed in an anvil, whether empty or filled. Place the ring in
+the left input slot, enter a name, and take the output (a fresh rename costs one
+experience level). Renaming preserves every key and its code; the custom name
+also appears as the ring's container title. Clear the anvil name field to restore
+the default name.
+
+Use a ring on any part of a tall door to open or close it. Any matching key on
+the ring grants access; an empty ring or one without a matching code cannot
+operate a locked door. Individual keys continue to work as before.
+
 Installation information
 =======
 

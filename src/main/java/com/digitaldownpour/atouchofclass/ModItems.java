@@ -1,6 +1,7 @@
 package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.items.DoorKeyItem;
+import com.digitaldownpour.atouchofclass.items.KeyRingItem;
 import com.digitaldownpour.atouchofclass.items.BucketOfPlasterItem;
 import com.digitaldownpour.atouchofclass.items.TallDoorItem;
 import com.digitaldownpour.atouchofclass.items.WallpaperItem;
@@ -69,6 +70,8 @@ public class ModItems {
             BucketOfPlasterItem::new,
             new Item.Properties().durability(BucketOfPlasterItem.APPLICATIONS)
     );
+
+    public static final DeferredItem<KeyRingItem> KEY_RING = ITEMS.registerItem("key_ring", KeyRingItem::new, new Item.Properties());
 
     public static final DeferredItem<DoorKeyItem> DOOR_KEY = ITEMS.registerItem(
             "door_key",
@@ -235,6 +238,7 @@ public class ModItems {
     private static void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(DOOR_KEY);
+            event.accept(KEY_RING);
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(COPPER_CHAIN);
