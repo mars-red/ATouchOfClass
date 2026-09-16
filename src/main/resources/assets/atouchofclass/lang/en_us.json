@@ -162,5 +162,9 @@
     "block.atouchofclass.tall_crimson_door":  "Tall Crimson Door",
     "item.atouchofclass.tall_crimson_door":  "Tall Crimson Door",
     "block.atouchofclass.tall_crimson_sidelight":  "Tall Crimson Sidelight",
-    "item.atouchofclass.tall_crimson_sidelight":  "Tall Crimson Sidelight"
+    "item.atouchofclass.tall_crimson_sidelight":  "Tall Crimson Sidelight",
+    "block.atouchofclass.tall_warped_door":  "Tall Warped Door",
+    "item.atouchofclass.tall_warped_door":  "Tall Warped Door",
+    "block.atouchofclass.tall_warped_sidelight":  "Tall Warped Sidelight",
+    "item.atouchofclass.tall_warped_sidelight":  "Tall Warped Sidelight"
 }

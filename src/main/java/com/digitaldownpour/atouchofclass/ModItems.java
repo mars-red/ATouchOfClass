@@ -148,6 +148,12 @@ public class ModItems {
                     new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
     );
 
+    public static final DeferredItem<TallDoorItem> TALL_WARPED_DOOR_ITEM = ITEMS.register(
+            "tall_warped_door",
+            key -> new TallDoorItem(ModBlocks.TALL_WARPED_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
     // TALL_DOOR_VARIANT_ITEM_REGISTRATIONS
     public static final DeferredItem<BlockItem> TALL_OAK_SIDELIGHT_ITEM =
             ITEMS.registerSimpleBlockItem("tall_oak_sidelight", ModBlocks.TALL_OAK_SIDELIGHT);
@@ -175,6 +181,9 @@ public class ModItems {
 
     public static final DeferredItem<BlockItem> TALL_CRIMSON_SIDELIGHT_ITEM =
             ITEMS.registerSimpleBlockItem("tall_crimson_sidelight", ModBlocks.TALL_CRIMSON_SIDELIGHT);
+
+    public static final DeferredItem<BlockItem> TALL_WARPED_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_warped_sidelight", ModBlocks.TALL_WARPED_SIDELIGHT);
 
     // TALL_SIDELIGHT_VARIANT_ITEM_REGISTRATIONS
 
@@ -284,6 +293,7 @@ public class ModItems {
             event.accept(TALL_BAMBOO_DOOR_ITEM);
             event.accept(TALL_PALE_OAK_DOOR_ITEM);
             event.accept(TALL_CRIMSON_DOOR_ITEM);
+            event.accept(TALL_WARPED_DOOR_ITEM);
             // TALL_DOOR_VARIANT_CREATIVE_ENTRIES
             event.accept(TALL_OAK_SIDELIGHT_ITEM);
             event.accept(TALL_SPRUCE_SIDELIGHT_ITEM);
@@ -294,6 +304,7 @@ public class ModItems {
             event.accept(TALL_BAMBOO_SIDELIGHT_ITEM);
             event.accept(TALL_PALE_OAK_SIDELIGHT_ITEM);
             event.accept(TALL_CRIMSON_SIDELIGHT_ITEM);
+            event.accept(TALL_WARPED_SIDELIGHT_ITEM);
             // TALL_SIDELIGHT_VARIANT_CREATIVE_ENTRIES
             event.accept(KEY_CUTTER_ITEM);
             event.accept(CASING_ITEM);
