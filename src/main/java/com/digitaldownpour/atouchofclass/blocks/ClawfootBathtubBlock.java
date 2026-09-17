@@ -35,7 +35,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.EnumMap;
 import java.util.Map;
 
-/** A six-section, 2-by-2.5-block clawfoot bathtub with a synchronized fill state. */
+/** A nine-section, 1.5-by-2.5-block clawfoot bathtub with a synchronized fill state. */
 public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
     public enum Part implements StringRepresentable {
         FOOT("foot", 0),
@@ -61,7 +61,8 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
     }
 
     public enum Side implements StringRepresentable {
-        LEFT("left", 0),
+        LEFT("left", -1),
+        CENTER("center", 0),
         RIGHT("right", 1);
 
         private final String name;
@@ -91,26 +92,35 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
 
     static {
         registerShapes(Part.FOOT, Side.LEFT, new double[][] {
-                {2, 3, 0, 16, 5, 14}, {1, 4, 0, 3, 12, 14},
-                {1, 4, 12, 16, 12, 16}, {2, 0, 10, 5, 4, 14}
+                {14, 3, 0, 16, 5, 14}, {13, 4, 0, 16, 12, 14},
+                {14, 4, 14, 16, 12, 16}, {13, 0, 10, 16, 4, 14}
+        });
+        registerShapes(Part.FOOT, Side.CENTER, new double[][] {
+                {0, 3, 0, 16, 5, 14}, {0, 4, 12, 16, 12, 16}
         });
         registerShapes(Part.FOOT, Side.RIGHT, new double[][] {
-                {0, 3, 0, 14, 5, 14}, {13, 4, 0, 15, 12, 14},
-                {0, 4, 12, 15, 12, 16}, {11, 0, 10, 14, 4, 14}
+                {0, 3, 0, 2, 5, 14}, {0, 4, 0, 3, 12, 14},
+                {0, 4, 14, 2, 12, 16}, {0, 0, 10, 3, 4, 14}
         });
         registerShapes(Part.MIDDLE, Side.LEFT, new double[][] {
-                {2, 3, 0, 16, 5, 16}, {1, 4, 0, 3, 12, 16}
+                {14, 3, 0, 16, 5, 16}, {13, 4, 0, 16, 12, 16}
+        });
+        registerShapes(Part.MIDDLE, Side.CENTER, new double[][] {
+                {0, 3, 0, 16, 5, 16}
         });
         registerShapes(Part.MIDDLE, Side.RIGHT, new double[][] {
-                {0, 3, 0, 14, 5, 16}, {13, 4, 0, 15, 12, 16}
+                {0, 3, 0, 2, 5, 16}, {0, 4, 0, 3, 12, 16}
         });
         registerShapes(Part.HEAD, Side.LEFT, new double[][] {
-                {2, 3, 8, 16, 5, 16}, {1, 4, 8, 3, 12, 16},
-                {1, 4, 8, 16, 16, 11}, {2, 0, 9, 5, 4, 13}
+                {14, 3, 8, 16, 5, 16}, {13, 4, 10, 16, 12, 16},
+                {14, 4, 8, 16, 16, 11}, {13, 0, 9, 16, 4, 13}
+        });
+        registerShapes(Part.HEAD, Side.CENTER, new double[][] {
+                {0, 3, 8, 16, 5, 16}, {0, 4, 8, 16, 16, 11}
         });
         registerShapes(Part.HEAD, Side.RIGHT, new double[][] {
-                {0, 3, 8, 14, 5, 16}, {13, 4, 8, 15, 12, 16},
-                {0, 4, 8, 15, 16, 11}, {11, 0, 9, 14, 4, 13}
+                {0, 3, 8, 2, 5, 16}, {0, 4, 10, 3, 12, 16},
+                {0, 4, 8, 2, 16, 11}, {0, 0, 9, 3, 4, 13}
         });
     }
 
@@ -146,7 +156,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
         registerDefaultState(stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(PART, Part.FOOT)
-                .setValue(SIDE, Side.LEFT)
+                .setValue(SIDE, Side.CENTER)
                 .setValue(FILLED, false));
     }
 
@@ -162,7 +172,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
         BlockState footState = defaultBlockState()
                 .setValue(FACING, facing)
                 .setValue(PART, Part.FOOT)
-                .setValue(SIDE, Side.LEFT)
+                .setValue(SIDE, Side.CENTER)
                 .setValue(FILLED, false);
 
         for (Part part : Part.values()) {
@@ -183,12 +193,12 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
-        if (!level.isClientSide && state.getValue(PART) == Part.FOOT) {
+        if (!level.isClientSide && state.getValue(PART) == Part.FOOT
+                && state.getValue(SIDE) == Side.CENTER) {
             Direction facing = state.getValue(FACING);
-            level.setBlock(partPos(pos, facing, Part.FOOT, Side.RIGHT),
-                    state.setValue(SIDE, Side.RIGHT), Block.UPDATE_ALL);
-            for (Part part : new Part[] {Part.MIDDLE, Part.HEAD}) {
-                for (Side side : Side.values()) {
+            for (Part part : Part.values()) {
+                for (Side side : new Side[] {Side.CENTER, Side.LEFT, Side.RIGHT}) {
+                    if (part == Part.FOOT && side == Side.CENTER) continue;
                     level.setBlock(partPos(pos, facing, part, side),
                             state.setValue(PART, part).setValue(SIDE, side), Block.UPDATE_ALL);
                 }
@@ -204,12 +214,13 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
         Part part = state.getValue(PART);
         Side side = state.getValue(SIDE);
         Direction facing = state.getValue(FACING);
-        if (side == Side.RIGHT) {
-            BlockState left = level.getBlockState(pos.relative(facing.getCounterClockWise()));
-            if (!left.is(this)
-                    || left.getValue(PART) != part
-                    || left.getValue(SIDE) != Side.LEFT
-                    || left.getValue(FACING) != facing) {
+        if (side != Side.CENTER) {
+            Direction towardCenter = side == Side.LEFT ? facing.getClockWise() : facing.getCounterClockWise();
+            BlockState center = level.getBlockState(pos.relative(towardCenter));
+            if (!center.is(this)
+                    || center.getValue(PART) != part
+                    || center.getValue(SIDE) != Side.CENTER
+                    || center.getValue(FACING) != facing) {
                 return false;
             }
         }
@@ -233,7 +244,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
         if (!level.isClientSide && !replacement.is(this)) {
             Direction facing = state.getValue(FACING);
-            BlockPos footPos = footLeftPos(state, pos);
+            BlockPos footPos = footCenterPos(state, pos);
             for (Part part : Part.values()) {
                 for (Side side : Side.values()) {
                     BlockPos otherPos = partPos(footPos, facing, part, side);
@@ -266,7 +277,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
     private InteractionResult toggleFilled(BlockState state, Level level, BlockPos pos) {
         if (!level.isClientSide) {
             Direction facing = state.getValue(FACING);
-            BlockPos footPos = footLeftPos(state, pos);
+            BlockPos footPos = footCenterPos(state, pos);
             boolean filled = !state.getValue(FILLED);
             for (Part part : Part.values()) {
                 for (Side side : Side.values()) {
@@ -287,14 +298,14 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
         return InteractionResult.SUCCESS;
     }
 
-    private static BlockPos footLeftPos(BlockState state, BlockPos pos) {
+    private static BlockPos footCenterPos(BlockState state, BlockPos pos) {
         Direction facing = state.getValue(FACING);
         return pos.relative(facing.getOpposite(), state.getValue(PART).offset())
                 .relative(facing.getCounterClockWise(), state.getValue(SIDE).offset());
     }
 
-    private static BlockPos partPos(BlockPos footLeftPos, Direction facing, Part part, Side side) {
-        return footLeftPos.relative(facing, part.offset())
+    private static BlockPos partPos(BlockPos footCenterPos, Direction facing, Part part, Side side) {
+        return footCenterPos.relative(facing, part.offset())
                 .relative(facing.getClockWise(), side.offset());
     }
 
