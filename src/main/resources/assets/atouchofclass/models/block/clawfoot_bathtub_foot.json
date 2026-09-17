@@ -1,16 +1,293 @@
 {
-  "parent":"atouchofclass:block/clawfoot_bathtub_template",
-  "elements":[
-    {"from":[2,3,0],"to":[16,5,14],"faces":{"north":{"texture":"#shadow"},"east":{"texture":"#shadow"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#shadow"},"down":{"texture":"#shadow"}}},
-    {"from":[1,4,0],"to":[3,12,14],"faces":{"north":{"texture":"#porcelain"},"east":{"texture":"#shadow"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}},
-    {"from":[1,4,12],"to":[16,12,16],"faces":{"north":{"texture":"#shadow"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}},
-    {"from":[0.5,11,0],"to":[3.5,12.5,15],"faces":{"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}},
-    {"from":[0.5,11,12.5],"to":[16,12.5,16],"faces":{"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}},
-    {"from":[2,0,10],"to":[5,4,14],"faces":{"north":{"texture":"#brass"},"east":{"texture":"#brass"},"south":{"texture":"#brass"},"west":{"texture":"#brass"},"up":{"texture":"#brass"},"down":{"texture":"#brass"}}},
-    {"from":[1,0,12],"to":[5,1.5,16],"faces":{"north":{"texture":"#brass"},"east":{"texture":"#brass"},"south":{"texture":"#brass"},"west":{"texture":"#brass"},"up":{"texture":"#brass"},"down":{"texture":"#brass"}}},
-    {"from":[14.5,12,13],"to":[16,16,15],"faces":{"north":{"texture":"#brass"},"east":{"texture":"#brass"},"south":{"texture":"#brass"},"west":{"texture":"#brass"},"up":{"texture":"#brass"},"down":{"texture":"#brass"}}},
-    {"from":[14.5,14.5,10.5],"to":[16,16,14],"faces":{"north":{"texture":"#brass"},"east":{"texture":"#brass"},"south":{"texture":"#brass"},"west":{"texture":"#brass"},"up":{"texture":"#brass"},"down":{"texture":"#brass"}}},
-    {"from":[10,13,13],"to":[13,14,15],"faces":{"north":{"texture":"#brass"},"east":{"texture":"#brass"},"south":{"texture":"#brass"},"west":{"texture":"#brass"},"up":{"texture":"#brass"},"down":{"texture":"#brass"}}},
-    {"from":[11,12,13.5],"to":[12,15,14.5],"faces":{"north":{"texture":"#brass"},"east":{"texture":"#brass"},"south":{"texture":"#brass"},"west":{"texture":"#brass"},"up":{"texture":"#brass"},"down":{"texture":"#brass"}}}
+  "parent": "atouchofclass:block/clawfoot_bathtub_template",
+  "elements": [
+    {
+      "from": [
+        0,
+        3,
+        0
+      ],
+      "to": [
+        16,
+        5,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#shadow"
+        },
+        "east": {
+          "texture": "#shadow"
+        },
+        "south": {
+          "texture": "#shadow"
+        },
+        "west": {
+          "texture": "#shadow"
+        },
+        "up": {
+          "texture": "#shadow"
+        },
+        "down": {
+          "texture": "#shadow"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        4,
+        12
+      ],
+      "to": [
+        16,
+        12,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#porcelain"
+        },
+        "east": {
+          "texture": "#porcelain"
+        },
+        "south": {
+          "texture": "#porcelain"
+        },
+        "west": {
+          "texture": "#porcelain"
+        },
+        "up": {
+          "texture": "#porcelain"
+        },
+        "down": {
+          "texture": "#porcelain"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        11,
+        12.5
+      ],
+      "to": [
+        16,
+        12.5,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#porcelain"
+        },
+        "east": {
+          "texture": "#porcelain"
+        },
+        "south": {
+          "texture": "#porcelain"
+        },
+        "west": {
+          "texture": "#porcelain"
+        },
+        "up": {
+          "texture": "#porcelain"
+        },
+        "down": {
+          "texture": "#porcelain"
+        }
+      }
+    },
+    {
+      "from": [
+        7.25,
+        12,
+        13
+      ],
+      "to": [
+        8.75,
+        16,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#brass"
+        },
+        "east": {
+          "texture": "#brass"
+        },
+        "south": {
+          "texture": "#brass"
+        },
+        "west": {
+          "texture": "#brass"
+        },
+        "up": {
+          "texture": "#brass"
+        },
+        "down": {
+          "texture": "#brass"
+        }
+      }
+    },
+    {
+      "from": [
+        7.25,
+        14.5,
+        10.5
+      ],
+      "to": [
+        8.75,
+        16,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#brass"
+        },
+        "east": {
+          "texture": "#brass"
+        },
+        "south": {
+          "texture": "#brass"
+        },
+        "west": {
+          "texture": "#brass"
+        },
+        "up": {
+          "texture": "#brass"
+        },
+        "down": {
+          "texture": "#brass"
+        }
+      }
+    },
+    {
+      "from": [
+        3,
+        13,
+        13
+      ],
+      "to": [
+        6,
+        14,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#brass"
+        },
+        "east": {
+          "texture": "#brass"
+        },
+        "south": {
+          "texture": "#brass"
+        },
+        "west": {
+          "texture": "#brass"
+        },
+        "up": {
+          "texture": "#brass"
+        },
+        "down": {
+          "texture": "#brass"
+        }
+      }
+    },
+    {
+      "from": [
+        4,
+        12,
+        13.5
+      ],
+      "to": [
+        5,
+        15,
+        14.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#brass"
+        },
+        "east": {
+          "texture": "#brass"
+        },
+        "south": {
+          "texture": "#brass"
+        },
+        "west": {
+          "texture": "#brass"
+        },
+        "up": {
+          "texture": "#brass"
+        },
+        "down": {
+          "texture": "#brass"
+        }
+      }
+    },
+    {
+      "from": [
+        10,
+        13,
+        13
+      ],
+      "to": [
+        13,
+        14,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#brass"
+        },
+        "east": {
+          "texture": "#brass"
+        },
+        "south": {
+          "texture": "#brass"
+        },
+        "west": {
+          "texture": "#brass"
+        },
+        "up": {
+          "texture": "#brass"
+        },
+        "down": {
+          "texture": "#brass"
+        }
+      }
+    },
+    {
+      "from": [
+        11,
+        12,
+        13.5
+      ],
+      "to": [
+        12,
+        15,
+        14.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#brass"
+        },
+        "east": {
+          "texture": "#brass"
+        },
+        "south": {
+          "texture": "#brass"
+        },
+        "west": {
+          "texture": "#brass"
+        },
+        "up": {
+          "texture": "#brass"
+        },
+        "down": {
+          "texture": "#brass"
+        }
+      }
+    }
   ]
 }

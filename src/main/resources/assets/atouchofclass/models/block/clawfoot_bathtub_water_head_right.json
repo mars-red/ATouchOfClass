@@ -6,11 +6,21 @@
   },
   "elements": [
     {
-      "from": [0, 7.5, 11],
-      "to": [13, 7.75, 16],
+      "from": [
+        0,
+        7.5,
+        11
+      ],
+      "to": [
+        1,
+        7.75,
+        16
+      ],
       "shade": false,
       "faces": {
-        "up": { "texture": "#water" }
+        "up": {
+          "texture": "#water"
+        }
       }
     }
   ]
