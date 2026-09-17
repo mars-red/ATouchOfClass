@@ -25,6 +25,7 @@ import com.digitaldownpour.atouchofclass.blocks.ElevatorDoorBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorCallButtonBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorDestinationControlBlock;
 import com.digitaldownpour.atouchofclass.blocks.ToiletBlock;
+import com.digitaldownpour.atouchofclass.blocks.ClawfootBathtubBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import net.minecraft.core.registries.Registries;
@@ -233,6 +234,17 @@ public class ModBlocks {
 
     public static final DeferredHolder<Block, ToiletBlock> TOILET = BLOCKS.register("toilet",
             registryName -> new ToiletBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.SNOW)
+                    .strength(1.5F, 6.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.STONE)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+            )
+    );
+
+    public static final DeferredHolder<Block, ClawfootBathtubBlock> CLAWFOOT_BATHTUB = BLOCKS.register("clawfoot_bathtub",
+            registryName -> new ClawfootBathtubBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
                     .mapColor(MapColor.SNOW)
                     .strength(1.5F, 6.0F)

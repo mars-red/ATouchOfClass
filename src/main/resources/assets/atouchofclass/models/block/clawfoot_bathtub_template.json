@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "porcelain": "minecraft:block/white_concrete",
+    "shadow": "minecraft:block/light_gray_concrete",
+    "brass": "minecraft:block/raw_gold_block",
+    "particle": "minecraft:block/white_concrete"
+  }
+}

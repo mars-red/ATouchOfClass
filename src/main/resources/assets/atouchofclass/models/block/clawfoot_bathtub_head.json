@@ -1,0 +1,12 @@
+{
+  "parent":"atouchofclass:block/clawfoot_bathtub_template",
+  "elements":[
+    {"from":[2,3,8],"to":[16,5,16],"faces":{"north":{"texture":"#shadow"},"east":{"texture":"#shadow"},"south":{"texture":"#shadow"},"west":{"texture":"#porcelain"},"up":{"texture":"#shadow"},"down":{"texture":"#shadow"}}},
+    {"from":[1,4,8],"to":[3,12,16],"faces":{"north":{"texture":"#porcelain"},"east":{"texture":"#shadow"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}},
+    {"from":[1,4,8],"to":[16,16,11],"faces":{"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#shadow"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}},
+    {"from":[0.5,15,7.5],"to":[16,16,11.5],"faces":{"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}},
+    {"from":[0.5,11,8],"to":[3.5,12.5,16],"faces":{"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}},
+    {"from":[2,0,9],"to":[5,4,13],"faces":{"north":{"texture":"#brass"},"east":{"texture":"#brass"},"south":{"texture":"#brass"},"west":{"texture":"#brass"},"up":{"texture":"#brass"},"down":{"texture":"#brass"}}},
+    {"from":[1,0,8],"to":[5,1.5,12],"faces":{"north":{"texture":"#brass"},"east":{"texture":"#brass"},"south":{"texture":"#brass"},"west":{"texture":"#brass"},"up":{"texture":"#brass"},"down":{"texture":"#brass"}}}
+  ]
+}
