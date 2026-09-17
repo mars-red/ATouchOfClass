@@ -8,6 +8,8 @@
     "block.atouchofclass.oak_baluster":  "Oak Baluster",
     "item.atouchofclass.copper_nugget":  "Copper Nugget",
     "itemGroup.atouchofclass":  "Example Mod Tab",
+    "block.atouchofclass.calcite_slab":  "Calcite Slab",
+    "item.atouchofclass.calcite_slab":  "Calcite Slab",
     "block.atouchofclass.calcite_countertop":  "Calcite Countertop",
     "block.atouchofclass.calcite_sink":  "Calcite Sink",
     "block.atouchofclass.dark_oak_door_cabinet":  "Dark Oak Door Cabinet",

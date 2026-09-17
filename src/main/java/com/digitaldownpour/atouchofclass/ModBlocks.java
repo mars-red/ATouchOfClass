@@ -35,6 +35,8 @@ import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -69,6 +71,11 @@ public class ModBlocks {
             "warped_parquet"
     );
     public static final java.util.Map<String, DeferredBlock<Block>> BASIC_BLOCKS = registerBasicBlocks();
+
+    public static final DeferredBlock<SlabBlock> CALCITE_SLAB =
+            BLOCKS.register("calcite_slab", registryName -> new SlabBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
     public static final DeferredBlock<CountertopBlock> CALCITE_COUNTERTOP =
             BLOCKS.register("calcite_countertop", registryName -> new CountertopBlock(

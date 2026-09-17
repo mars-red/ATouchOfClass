@@ -22,6 +22,8 @@ public class ModItems {
 
     public static final java.util.List<DeferredItem<BlockItem>> BASIC_BLOCK_ITEMS = registerBasicBlockItems();
 
+    public static final DeferredItem<BlockItem> CALCITE_SLAB =
+            ITEMS.registerSimpleBlockItem("calcite_slab", ModBlocks.CALCITE_SLAB);
     public static final DeferredItem<BlockItem> CALCITE_COUNTERTOP =
             ITEMS.registerSimpleBlockItem("calcite_countertop", ModBlocks.CALCITE_COUNTERTOP);
     public static final DeferredItem<BlockItem> CALCITE_SINK =
@@ -304,6 +306,7 @@ public class ModItems {
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             BASIC_BLOCK_ITEMS.forEach(event::accept);
+            event.accept(CALCITE_SLAB);
             event.accept(CALCITE_COUNTERTOP);
             event.accept(CALCITE_SINK);
             event.accept(DARK_OAK_DOOR_CABINET);
