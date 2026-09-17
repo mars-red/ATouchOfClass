@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "porcelain": "minecraft:block/white_concrete",
+    "shadow": "minecraft:block/light_gray_concrete",
+    "particle": "minecraft:block/white_concrete"
+  },
+  "elements": [
+    {
+      "name": "closed_lid", "from": [3, 9, 2], "to": [13, 10, 12],
+      "faces": {"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}
+    },
+    {
+      "name": "closed_lid_front", "from": [4, 9, 1.5], "to": [12, 10, 2],
+      "faces": {"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}
+    },
+    {
+      "name": "left_hinge", "from": [3.5, 9, 11.5], "to": [5.5, 10.5, 12.5],
+      "faces": {"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}
+    },
+    {
+      "name": "right_hinge", "from": [10.5, 9, 11.5], "to": [12.5, 10.5, 12.5],
+      "faces": {"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}
+    }
+  ]
+}

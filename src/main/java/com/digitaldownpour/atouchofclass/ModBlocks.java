@@ -24,6 +24,7 @@ import com.digitaldownpour.atouchofclass.blocks.ElevatorFloorBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorDoorBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorCallButtonBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorDestinationControlBlock;
+import com.digitaldownpour.atouchofclass.blocks.ToiletBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import net.minecraft.core.registries.Registries;
@@ -227,6 +228,17 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_LIGHT_GRAY)
                     .noOcclusion()
                     .strength(3.0F)
+            )
+    );
+
+    public static final DeferredHolder<Block, ToiletBlock> TOILET = BLOCKS.register("toilet",
+            registryName -> new ToiletBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.SNOW)
+                    .strength(1.5F, 6.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.STONE)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
             )
     );
 

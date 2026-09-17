@@ -170,5 +170,8 @@
     "block.atouchofclass.tall_warped_door":  "Tall Warped Door",
     "item.atouchofclass.tall_warped_door":  "Tall Warped Door",
     "block.atouchofclass.tall_warped_sidelight":  "Tall Warped Sidelight",
-    "item.atouchofclass.tall_warped_sidelight":  "Tall Warped Sidelight"
+    "item.atouchofclass.tall_warped_sidelight":  "Tall Warped Sidelight",
+    "block.atouchofclass.toilet":  "Porcelain Toilet",
+    "item.atouchofclass.toilet":  "Porcelain Toilet",
+    "item.atouchofclass.clay_toilet":  "Clay Toilet"
 }
