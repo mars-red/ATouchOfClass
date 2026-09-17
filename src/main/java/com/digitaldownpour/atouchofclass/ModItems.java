@@ -65,6 +65,11 @@ public class ModItems {
             new Item.Properties()
     );
 
+    public static final DeferredItem<Item> CLAY_TOILET = ITEMS.registerSimpleItem(
+            "clay_toilet",
+            new Item.Properties()
+    );
+
     public static final DeferredItem<BucketOfPlasterItem> BUCKET_OF_PLASTER = ITEMS.registerItem(
             "bucket_of_plaster",
             BucketOfPlasterItem::new,
@@ -191,6 +196,7 @@ public class ModItems {
     // TALL_SIDELIGHT_VARIANT_ITEM_REGISTRATIONS
 
     public static final DeferredItem<BlockItem> KEY_CUTTER_ITEM = ITEMS.registerSimpleBlockItem("key_cutter", ModBlocks.KEY_CUTTER);
+    public static final DeferredItem<BlockItem> TOILET_ITEM = ITEMS.registerSimpleBlockItem("toilet", ModBlocks.TOILET);
     public static final DeferredItem<BlockItem> ELEVATOR_SHAFT_PANEL_ITEM = ITEMS.registerSimpleBlockItem("elevator_shaft_panel", ModBlocks.ELEVATOR_SHAFT_PANEL);
     public static final DeferredItem<BlockItem> ELEVATOR_FLOOR_ITEM = ITEMS.registerSimpleBlockItem("elevator_floor", ModBlocks.ELEVATOR_FLOOR);
     public static final DeferredItem<BlockItem> ELEVATOR_DOOR_ITEM = ITEMS.registerSimpleBlockItem("elevator_door", ModBlocks.ELEVATOR_DOOR);
@@ -241,6 +247,7 @@ public class ModItems {
             event.accept(KEY_RING);
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(TOILET_ITEM);
             event.accept(COPPER_CHAIN);
             event.accept(EXPOSED_COPPER_CHAIN);
             event.accept(WEATHERED_COPPER_CHAIN);
@@ -276,6 +283,7 @@ public class ModItems {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(COPPER_NUGGET);
             event.accept(QUICKLIME_POWDER);
+            event.accept(CLAY_TOILET);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             BASIC_BLOCK_ITEMS.forEach(event::accept);

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "C C",
+    "CWC",
+    "CCC"
+  ],
+  "key": {
+    "C": "minecraft:clay_ball",
+    "W": "minecraft:white_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "atouchofclass:clay_toilet"
+  }
+}

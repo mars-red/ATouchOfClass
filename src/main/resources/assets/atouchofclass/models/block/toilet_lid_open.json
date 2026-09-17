@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "porcelain": "minecraft:block/white_concrete",
+    "shadow": "minecraft:block/light_gray_concrete",
+    "particle": "minecraft:block/white_concrete"
+  },
+  "elements": [
+    {
+      "name": "seat_left", "from": [2.5, 9, 1.5], "to": [4.5, 9.75, 12],
+      "faces": {"north":{"texture":"#porcelain"},"east":{"texture":"#shadow"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}
+    },
+    {
+      "name": "seat_right", "from": [11.5, 9, 1.5], "to": [13.5, 9.75, 12],
+      "faces": {"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#shadow"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}
+    },
+    {
+      "name": "seat_front", "from": [4.5, 9, 1.5], "to": [11.5, 9.75, 3.5],
+      "faces": {"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#shadow"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}
+    },
+    {
+      "name": "seat_back", "from": [4.5, 9, 10.5], "to": [11.5, 9.75, 12],
+      "faces": {"north":{"texture":"#shadow"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}
+    },
+    {
+      "name": "raised_lid", "from": [3, 10, 11.25], "to": [13, 15.25, 12],
+      "faces": {"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#shadow"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}
+    },
+    {
+      "name": "lid_inset", "from": [4, 11, 11.1], "to": [12, 14.25, 11.25],
+      "faces": {"north":{"texture":"#shadow"},"east":{"texture":"#shadow"},"south":{"texture":"#shadow"},"west":{"texture":"#shadow"},"up":{"texture":"#shadow"},"down":{"texture":"#shadow"}}
+    },
+    {
+      "name": "left_hinge", "from": [3.5, 9.5, 11], "to": [5.5, 10.5, 12.5],
+      "faces": {"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}
+    },
+    {
+      "name": "right_hinge", "from": [10.5, 9.5, 11], "to": [12.5, 10.5, 12.5],
+      "faces": {"north":{"texture":"#porcelain"},"east":{"texture":"#porcelain"},"south":{"texture":"#porcelain"},"west":{"texture":"#porcelain"},"up":{"texture":"#porcelain"},"down":{"texture":"#shadow"}}
+    }
+  ]
+}
