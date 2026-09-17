@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "translucent",
+  "textures": {
+    "water": "minecraft:block/light_blue_stained_glass"
+  },
+  "elements": [
+    {
+      "from": [0, 7.5, 11],
+      "to": [13, 7.75, 16],
+      "shade": false,
+      "faces": {
+        "up": { "texture": "#water" }
+      }
+    }
+  ]
+}
