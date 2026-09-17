@@ -22,6 +22,15 @@ public class ModItems {
 
     public static final java.util.List<DeferredItem<BlockItem>> BASIC_BLOCK_ITEMS = registerBasicBlockItems();
 
+    public static final DeferredItem<BlockItem> CALCITE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("calcite_countertop", ModBlocks.CALCITE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> CALCITE_SINK =
+            ITEMS.registerSimpleBlockItem("calcite_sink", ModBlocks.CALCITE_SINK);
+    public static final DeferredItem<BlockItem> DARK_OAK_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("dark_oak_door_cabinet", ModBlocks.DARK_OAK_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> DARK_OAK_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("dark_oak_drawer_cabinet", ModBlocks.DARK_OAK_DRAWER_CABINET);
+
     private static java.util.List<DeferredItem<BlockItem>> registerBasicBlockItems() {
         var items = new java.util.ArrayList<DeferredItem<BlockItem>>();
         ModBlocks.BASIC_BLOCKS.forEach((name, block) -> items.add(ITEMS.registerSimpleBlockItem(name, block)));
@@ -295,6 +304,10 @@ public class ModItems {
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             BASIC_BLOCK_ITEMS.forEach(event::accept);
+            event.accept(CALCITE_COUNTERTOP);
+            event.accept(CALCITE_SINK);
+            event.accept(DARK_OAK_DOOR_CABINET);
+            event.accept(DARK_OAK_DRAWER_CABINET);
             event.accept(OAK_RAILING);
             event.accept(OAK_BALUSTRADE);
             event.accept(OAK_BALUSTER);

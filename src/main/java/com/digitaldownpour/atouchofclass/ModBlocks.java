@@ -26,6 +26,10 @@ import com.digitaldownpour.atouchofclass.blocks.ElevatorCallButtonBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorDestinationControlBlock;
 import com.digitaldownpour.atouchofclass.blocks.ToiletBlock;
 import com.digitaldownpour.atouchofclass.blocks.ClawfootBathtubBlock;
+import com.digitaldownpour.atouchofclass.blocks.CabinetBlock;
+import com.digitaldownpour.atouchofclass.blocks.DoorCabinetBlock;
+import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
+import com.digitaldownpour.atouchofclass.blocks.SinkBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import net.minecraft.core.registries.Registries;
@@ -66,6 +70,35 @@ public class ModBlocks {
     );
     public static final java.util.Map<String, DeferredBlock<Block>> BASIC_BLOCKS = registerBasicBlocks();
 
+    public static final DeferredBlock<CountertopBlock> CALCITE_COUNTERTOP =
+            BLOCKS.register("calcite_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.QUARTZ)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.CALCITE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> CALCITE_SINK =
+            BLOCKS.register("calcite_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.QUARTZ)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.CALCITE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    private static final java.util.List<DeferredHolder<Block, ? extends CabinetBlock>> CABINET_REGISTRATIONS =
+            new java.util.ArrayList<>();
+
+    public static final DeferredBlock<DoorCabinetBlock> DARK_OAK_DOOR_CABINET =
+            registerDoorCabinet("dark_oak_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> DARK_OAK_DRAWER_CABINET =
+            registerCabinet("dark_oak_drawer_cabinet");
+
     private static java.util.Map<String, DeferredBlock<Block>> registerBasicBlocks() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<Block>>();
         BASIC_BLOCK_NAMES.forEach(name -> blocks.put(name, BLOCKS.register(name,
@@ -75,6 +108,35 @@ public class ModBlocks {
                         .strength(1.5F, 6.0F)
                         .requiresCorrectToolForDrops()))));
         return java.util.Collections.unmodifiableMap(blocks);
+    }
+
+    private static DeferredBlock<CabinetBlock> registerCabinet(String name) {
+        DeferredBlock<CabinetBlock> cabinet = BLOCKS.register(name, registryName -> new CabinetBlock(
+                BlockBehaviour.Properties.of()
+                        .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                        .mapColor(MapColor.COLOR_BROWN)
+                        .strength(2.0F)
+                        .sound(net.minecraft.world.level.block.SoundType.WOOD)
+                        .noOcclusion()));
+        CABINET_REGISTRATIONS.add(cabinet);
+        return cabinet;
+    }
+
+    private static DeferredBlock<DoorCabinetBlock> registerDoorCabinet(String name) {
+        DeferredBlock<DoorCabinetBlock> cabinet = BLOCKS.register(name, registryName -> new DoorCabinetBlock(
+                BlockBehaviour.Properties.of()
+                        .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                        .mapColor(MapColor.COLOR_BROWN)
+                        .strength(2.0F)
+                        .sound(net.minecraft.world.level.block.SoundType.WOOD)
+                        .noOcclusion()));
+        CABINET_REGISTRATIONS.add(cabinet);
+        return cabinet;
+    }
+
+    /** All cabinet variants, used to attach the shared storage block entity automatically. */
+    public static java.util.List<DeferredHolder<Block, ? extends CabinetBlock>> cabinetBlocks() {
+        return java.util.Collections.unmodifiableList(CABINET_REGISTRATIONS);
     }
 
     public static final DeferredBlock<OakRailingBlock> OAK_RAILING =

@@ -5,6 +5,7 @@ import com.digitaldownpour.atouchofclass.blocks.TallDoorBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
+import com.digitaldownpour.atouchofclass.entities.CabinetBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -33,6 +34,13 @@ public class ModEntities {
             () -> new BlockEntityType<>(
                     KeyCutterBlockEntity::new,
                     ModBlocks.KEY_CUTTER.get()
+            )
+    );
+
+    public static final Supplier<BlockEntityType<CabinetBlockEntity>> CABINET_BE = BLOCK_ENTITY_TYPES.register("cabinet_be",
+            () -> new BlockEntityType<>(
+                    CabinetBlockEntity::new,
+                    ModBlocks.cabinetBlocks().stream().map(DeferredHolder::get).toArray(Block[]::new)
             )
     );
 
