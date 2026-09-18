@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:smooth_stone_slab"
+  },
+  "result": {
+    "count": 6,
+    "id": "atouchofclass:smooth_stone_countertop"
+  }
+}

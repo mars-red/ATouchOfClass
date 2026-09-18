@@ -97,6 +97,27 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()
                             .noOcclusion()));
 
+    public static final DeferredBlock<CountertopBlock> SMOOTH_STONE_COUNTERTOP =
+            BLOCKS.register("smooth_stone_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> SMOOTH_STONE_SINK =
+            BLOCKS.register("smooth_stone_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    // COUNTERTOP_SINK_VARIANT_REGISTRATIONS
+
     private static final java.util.List<DeferredHolder<Block, ? extends CabinetBlock>> CABINET_REGISTRATIONS =
             new java.util.ArrayList<>();
 
@@ -105,6 +126,13 @@ public class ModBlocks {
 
     public static final DeferredBlock<CabinetBlock> DARK_OAK_DRAWER_CABINET =
             registerCabinet("dark_oak_drawer_cabinet");
+
+    public static final DeferredBlock<DoorCabinetBlock> PALE_OAK_DOOR_CABINET =
+            registerDoorCabinet("pale_oak_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> PALE_OAK_DRAWER_CABINET =
+            registerCabinet("pale_oak_drawer_cabinet");
+    // CABINET_VARIANT_REGISTRATIONS
 
     private static java.util.Map<String, DeferredBlock<Block>> registerBasicBlocks() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<Block>>();

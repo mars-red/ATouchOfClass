@@ -1,8 +1,8 @@
 {
-    "item.atouchofclass.key_ring": "Key Ring",
-    "tooltip.atouchofclass.key_ring.contents": "%s / %s keys",
-    "tooltip.atouchofclass.key_ring.use": "Right-click in the air to manage keys; use on a door to unlock.",
-    "container.atouchofclass.key_ring.hint": "Coded keys only - one key per slot",
+    "item.atouchofclass.key_ring":  "Key Ring",
+    "tooltip.atouchofclass.key_ring.contents":  "%s / %s keys",
+    "tooltip.atouchofclass.key_ring.use":  "Right-click in the air to manage keys; use on a door to unlock.",
+    "container.atouchofclass.key_ring.hint":  "Coded keys only - one key per slot",
     "block.atouchofclass.oak_railing":  "Wall Mounted Oak Railing",
     "block.atouchofclass.oak_balustrade":  "Oak Balustrade",
     "block.atouchofclass.oak_baluster":  "Oak Baluster",
@@ -186,5 +186,13 @@
     "item.atouchofclass.clay_toilet":  "Clay Toilet",
     "block.atouchofclass.clawfoot_bathtub":  "Clawfoot Bathtub",
     "item.atouchofclass.clawfoot_bathtub":  "Clawfoot Bathtub",
-    "item.atouchofclass.clay_clawfoot_bathtub":  "Clay Clawfoot Bathtub"
+    "item.atouchofclass.clay_clawfoot_bathtub":  "Clay Clawfoot Bathtub",
+    "block.atouchofclass.smooth_stone_countertop":  "Smooth Stone Countertop",
+    "item.atouchofclass.smooth_stone_countertop":  "Smooth Stone Countertop",
+    "block.atouchofclass.smooth_stone_sink":  "Smooth Stone Sink",
+    "item.atouchofclass.smooth_stone_sink":  "Smooth Stone Sink",
+    "block.atouchofclass.pale_oak_door_cabinet":  "Pale Oak Door Cabinet",
+    "item.atouchofclass.pale_oak_door_cabinet":  "Pale Oak Door Cabinet",
+    "block.atouchofclass.pale_oak_drawer_cabinet":  "Pale Oak Drawer Cabinet",
+    "item.atouchofclass.pale_oak_drawer_cabinet":  "Pale Oak Drawer Cabinet"
 }

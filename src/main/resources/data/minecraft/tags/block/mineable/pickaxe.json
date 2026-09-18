@@ -41,9 +41,11 @@
                    "atouchofclass:mangrove_parquet",
                    "atouchofclass:pale_oak_parquet",
                    "atouchofclass:spruce_parquet",
-                   "atouchofclass:warped_parquet"
-                   ,"atouchofclass:toilet",
-                   "atouchofclass:clawfoot_bathtub"
+                   "atouchofclass:warped_parquet",
+                   "atouchofclass:toilet",
+                   "atouchofclass:clawfoot_bathtub",
+                   "atouchofclass:smooth_stone_countertop",
+                   "atouchofclass:smooth_stone_sink"
                ],
     "replace":  false
 }
