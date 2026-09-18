@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:granite_slab"
+  },
+  "result": {
+    "count": 6,
+    "id": "atouchofclass:granite_countertop"
+  }
+}

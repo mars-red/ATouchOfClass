@@ -1,0 +1,42 @@
+{
+    "parent":  "minecraft:block/block",
+    "ambientocclusion":  true,
+    "textures":  {
+                     "particle":  "minecraft:block/brown_concrete",
+                     "material":  "minecraft:block/brown_concrete"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                         "to":  [
+                                    16,
+                                    2,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#material"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#material"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#material"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#material"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#material"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#material"
+                                                }
+                                   }
+                     }
+                 ]
+}

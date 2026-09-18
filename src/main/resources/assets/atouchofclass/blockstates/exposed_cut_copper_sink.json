@@ -1,0 +1,19 @@
+{
+    "variants":  {
+                     "facing=north":  {
+                                          "model":  "atouchofclass:block/exposed_cut_copper_sink"
+                                      },
+                     "facing=east":  {
+                                         "model":  "atouchofclass:block/exposed_cut_copper_sink",
+                                         "y":  90
+                                     },
+                     "facing=south":  {
+                                          "model":  "atouchofclass:block/exposed_cut_copper_sink",
+                                          "y":  180
+                                      },
+                     "facing=west":  {
+                                         "model":  "atouchofclass:block/exposed_cut_copper_sink",
+                                         "y":  270
+                                     }
+                 }
+}

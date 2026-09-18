@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:dark_prismarine_slab"
+  },
+  "result": {
+    "count": 6,
+    "id": "atouchofclass:dark_prismarine_countertop"
+  }
+}

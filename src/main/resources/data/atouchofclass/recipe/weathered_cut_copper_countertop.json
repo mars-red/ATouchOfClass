@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:weathered_cut_copper_slab"
+  },
+  "result": {
+    "count": 6,
+    "id": "atouchofclass:weathered_cut_copper_countertop"
+  }
+}

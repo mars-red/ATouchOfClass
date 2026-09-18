@@ -41,6 +41,190 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("pale_oak_door_cabinet", ModBlocks.PALE_OAK_DOOR_CABINET);
     public static final DeferredItem<BlockItem> PALE_OAK_DRAWER_CABINET =
             ITEMS.registerSimpleBlockItem("pale_oak_drawer_cabinet", ModBlocks.PALE_OAK_DRAWER_CABINET);
+    public static final DeferredItem<BlockItem> STONE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("stone_countertop", ModBlocks.STONE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> STONE_SINK =
+            ITEMS.registerSimpleBlockItem("stone_sink", ModBlocks.STONE_SINK);
+    public static final DeferredItem<BlockItem> STONE_BRICK_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("stone_brick_countertop", ModBlocks.STONE_BRICK_COUNTERTOP);
+    public static final DeferredItem<BlockItem> STONE_BRICK_SINK =
+            ITEMS.registerSimpleBlockItem("stone_brick_sink", ModBlocks.STONE_BRICK_SINK);
+    public static final DeferredItem<BlockItem> NETHER_BRICK_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("nether_brick_countertop", ModBlocks.NETHER_BRICK_COUNTERTOP);
+    public static final DeferredItem<BlockItem> NETHER_BRICK_SINK =
+            ITEMS.registerSimpleBlockItem("nether_brick_sink", ModBlocks.NETHER_BRICK_SINK);
+    public static final DeferredItem<BlockItem> QUARTZ_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("quartz_countertop", ModBlocks.QUARTZ_COUNTERTOP);
+    public static final DeferredItem<BlockItem> QUARTZ_SINK =
+            ITEMS.registerSimpleBlockItem("quartz_sink", ModBlocks.QUARTZ_SINK);
+    public static final DeferredItem<BlockItem> POLISHED_GRANITE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("polished_granite_countertop", ModBlocks.POLISHED_GRANITE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> POLISHED_GRANITE_SINK =
+            ITEMS.registerSimpleBlockItem("polished_granite_sink", ModBlocks.POLISHED_GRANITE_SINK);
+    public static final DeferredItem<BlockItem> POLISHED_DIORITE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("polished_diorite_countertop", ModBlocks.POLISHED_DIORITE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> POLISHED_DIORITE_SINK =
+            ITEMS.registerSimpleBlockItem("polished_diorite_sink", ModBlocks.POLISHED_DIORITE_SINK);
+    public static final DeferredItem<BlockItem> END_STONE_BRICK_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("end_stone_brick_countertop", ModBlocks.END_STONE_BRICK_COUNTERTOP);
+    public static final DeferredItem<BlockItem> END_STONE_BRICK_SINK =
+            ITEMS.registerSimpleBlockItem("end_stone_brick_sink", ModBlocks.END_STONE_BRICK_SINK);
+    public static final DeferredItem<BlockItem> SMOOTH_QUARTZ_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("smooth_quartz_countertop", ModBlocks.SMOOTH_QUARTZ_COUNTERTOP);
+    public static final DeferredItem<BlockItem> SMOOTH_QUARTZ_SINK =
+            ITEMS.registerSimpleBlockItem("smooth_quartz_sink", ModBlocks.SMOOTH_QUARTZ_SINK);
+    public static final DeferredItem<BlockItem> GRANITE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("granite_countertop", ModBlocks.GRANITE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> GRANITE_SINK =
+            ITEMS.registerSimpleBlockItem("granite_sink", ModBlocks.GRANITE_SINK);
+    public static final DeferredItem<BlockItem> ANDESITE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("andesite_countertop", ModBlocks.ANDESITE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> ANDESITE_SINK =
+            ITEMS.registerSimpleBlockItem("andesite_sink", ModBlocks.ANDESITE_SINK);
+    public static final DeferredItem<BlockItem> RED_NETHER_BRICK_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("red_nether_brick_countertop", ModBlocks.RED_NETHER_BRICK_COUNTERTOP);
+    public static final DeferredItem<BlockItem> RED_NETHER_BRICK_SINK =
+            ITEMS.registerSimpleBlockItem("red_nether_brick_sink", ModBlocks.RED_NETHER_BRICK_SINK);
+    public static final DeferredItem<BlockItem> POLISHED_ANDESITE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("polished_andesite_countertop", ModBlocks.POLISHED_ANDESITE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> POLISHED_ANDESITE_SINK =
+            ITEMS.registerSimpleBlockItem("polished_andesite_sink", ModBlocks.POLISHED_ANDESITE_SINK);
+    public static final DeferredItem<BlockItem> DIORITE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("diorite_countertop", ModBlocks.DIORITE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> DIORITE_SINK =
+            ITEMS.registerSimpleBlockItem("diorite_sink", ModBlocks.DIORITE_SINK);
+    public static final DeferredItem<BlockItem> POLISHED_BLACKSTONE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("polished_blackstone_countertop", ModBlocks.POLISHED_BLACKSTONE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> POLISHED_BLACKSTONE_SINK =
+            ITEMS.registerSimpleBlockItem("polished_blackstone_sink", ModBlocks.POLISHED_BLACKSTONE_SINK);
+    public static final DeferredItem<BlockItem> POLISHED_BLACKSTONE_BRICK_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("polished_blackstone_brick_countertop", ModBlocks.POLISHED_BLACKSTONE_BRICK_COUNTERTOP);
+    public static final DeferredItem<BlockItem> POLISHED_BLACKSTONE_BRICK_SINK =
+            ITEMS.registerSimpleBlockItem("polished_blackstone_brick_sink", ModBlocks.POLISHED_BLACKSTONE_BRICK_SINK);
+    public static final DeferredItem<BlockItem> POLISHED_DEEPSLATE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("polished_deepslate_countertop", ModBlocks.POLISHED_DEEPSLATE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> POLISHED_DEEPSLATE_SINK =
+            ITEMS.registerSimpleBlockItem("polished_deepslate_sink", ModBlocks.POLISHED_DEEPSLATE_SINK);
+    public static final DeferredItem<BlockItem> DEEPSLATE_BRICK_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("deepslate_brick_countertop", ModBlocks.DEEPSLATE_BRICK_COUNTERTOP);
+    public static final DeferredItem<BlockItem> DEEPSLATE_BRICK_SINK =
+            ITEMS.registerSimpleBlockItem("deepslate_brick_sink", ModBlocks.DEEPSLATE_BRICK_SINK);
+    public static final DeferredItem<BlockItem> DEEPSLATE_TILE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("deepslate_tile_countertop", ModBlocks.DEEPSLATE_TILE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> DEEPSLATE_TILE_SINK =
+            ITEMS.registerSimpleBlockItem("deepslate_tile_sink", ModBlocks.DEEPSLATE_TILE_SINK);
+    public static final DeferredItem<BlockItem> RESIN_BRICK_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("resin_brick_countertop", ModBlocks.RESIN_BRICK_COUNTERTOP);
+    public static final DeferredItem<BlockItem> RESIN_BRICK_SINK =
+            ITEMS.registerSimpleBlockItem("resin_brick_sink", ModBlocks.RESIN_BRICK_SINK);
+    public static final DeferredItem<BlockItem> PRISMARINE_BRICK_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("prismarine_brick_countertop", ModBlocks.PRISMARINE_BRICK_COUNTERTOP);
+    public static final DeferredItem<BlockItem> PRISMARINE_BRICK_SINK =
+            ITEMS.registerSimpleBlockItem("prismarine_brick_sink", ModBlocks.PRISMARINE_BRICK_SINK);
+    public static final DeferredItem<BlockItem> DARK_PRISMARINE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("dark_prismarine_countertop", ModBlocks.DARK_PRISMARINE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> DARK_PRISMARINE_SINK =
+            ITEMS.registerSimpleBlockItem("dark_prismarine_sink", ModBlocks.DARK_PRISMARINE_SINK);
+    public static final DeferredItem<BlockItem> PURPUR_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("purpur_countertop", ModBlocks.PURPUR_COUNTERTOP);
+    public static final DeferredItem<BlockItem> PURPUR_SINK =
+            ITEMS.registerSimpleBlockItem("purpur_sink", ModBlocks.PURPUR_SINK);
+    public static final DeferredItem<BlockItem> WHITE_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("white_concrete_countertop", ModBlocks.WHITE_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> WHITE_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("white_concrete_sink", ModBlocks.WHITE_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> LIGHT_GRAY_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("light_gray_concrete_countertop", ModBlocks.LIGHT_GRAY_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> LIGHT_GRAY_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("light_gray_concrete_sink", ModBlocks.LIGHT_GRAY_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> GRAY_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("gray_concrete_countertop", ModBlocks.GRAY_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> GRAY_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("gray_concrete_sink", ModBlocks.GRAY_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> BLACK_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("black_concrete_countertop", ModBlocks.BLACK_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> BLACK_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("black_concrete_sink", ModBlocks.BLACK_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> BROWN_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("brown_concrete_countertop", ModBlocks.BROWN_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> BROWN_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("brown_concrete_sink", ModBlocks.BROWN_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> RED_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("red_concrete_countertop", ModBlocks.RED_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> RED_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("red_concrete_sink", ModBlocks.RED_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> ORANGE_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("orange_concrete_countertop", ModBlocks.ORANGE_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> ORANGE_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("orange_concrete_sink", ModBlocks.ORANGE_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> YELLOW_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("yellow_concrete_countertop", ModBlocks.YELLOW_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> YELLOW_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("yellow_concrete_sink", ModBlocks.YELLOW_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> LIME_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("lime_concrete_countertop", ModBlocks.LIME_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> LIME_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("lime_concrete_sink", ModBlocks.LIME_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> GREEN_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("green_concrete_countertop", ModBlocks.GREEN_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> GREEN_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("green_concrete_sink", ModBlocks.GREEN_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> CYAN_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("cyan_concrete_countertop", ModBlocks.CYAN_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> CYAN_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("cyan_concrete_sink", ModBlocks.CYAN_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> LIGHT_BLUE_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("light_blue_concrete_countertop", ModBlocks.LIGHT_BLUE_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> LIGHT_BLUE_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("light_blue_concrete_sink", ModBlocks.LIGHT_BLUE_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> BLUE_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("blue_concrete_countertop", ModBlocks.BLUE_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> BLUE_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("blue_concrete_sink", ModBlocks.BLUE_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> PURPLE_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("purple_concrete_countertop", ModBlocks.PURPLE_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> PURPLE_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("purple_concrete_sink", ModBlocks.PURPLE_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> MAGENTA_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("magenta_concrete_countertop", ModBlocks.MAGENTA_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> MAGENTA_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("magenta_concrete_sink", ModBlocks.MAGENTA_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> PINK_CONCRETE_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("pink_concrete_countertop", ModBlocks.PINK_CONCRETE_COUNTERTOP);
+    public static final DeferredItem<BlockItem> PINK_CONCRETE_SINK =
+            ITEMS.registerSimpleBlockItem("pink_concrete_sink", ModBlocks.PINK_CONCRETE_SINK);
+    public static final DeferredItem<BlockItem> CUT_COPPER_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("cut_copper_countertop", ModBlocks.CUT_COPPER_COUNTERTOP);
+    public static final DeferredItem<BlockItem> CUT_COPPER_SINK =
+            ITEMS.registerSimpleBlockItem("cut_copper_sink", ModBlocks.CUT_COPPER_SINK);
+    public static final DeferredItem<BlockItem> EXPOSED_CUT_COPPER_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("exposed_cut_copper_countertop", ModBlocks.EXPOSED_CUT_COPPER_COUNTERTOP);
+    public static final DeferredItem<BlockItem> EXPOSED_CUT_COPPER_SINK =
+            ITEMS.registerSimpleBlockItem("exposed_cut_copper_sink", ModBlocks.EXPOSED_CUT_COPPER_SINK);
+    public static final DeferredItem<BlockItem> WEATHERED_CUT_COPPER_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("weathered_cut_copper_countertop", ModBlocks.WEATHERED_CUT_COPPER_COUNTERTOP);
+    public static final DeferredItem<BlockItem> WEATHERED_CUT_COPPER_SINK =
+            ITEMS.registerSimpleBlockItem("weathered_cut_copper_sink", ModBlocks.WEATHERED_CUT_COPPER_SINK);
+    public static final DeferredItem<BlockItem> OXIDIZED_CUT_COPPER_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("oxidized_cut_copper_countertop", ModBlocks.OXIDIZED_CUT_COPPER_COUNTERTOP);
+    public static final DeferredItem<BlockItem> OXIDIZED_CUT_COPPER_SINK =
+            ITEMS.registerSimpleBlockItem("oxidized_cut_copper_sink", ModBlocks.OXIDIZED_CUT_COPPER_SINK);
+    public static final DeferredItem<BlockItem> WAXED_CUT_COPPER_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("waxed_cut_copper_countertop", ModBlocks.WAXED_CUT_COPPER_COUNTERTOP);
+    public static final DeferredItem<BlockItem> WAXED_CUT_COPPER_SINK =
+            ITEMS.registerSimpleBlockItem("waxed_cut_copper_sink", ModBlocks.WAXED_CUT_COPPER_SINK);
+    public static final DeferredItem<BlockItem> WAXED_EXPOSED_CUT_COPPER_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("waxed_exposed_cut_copper_countertop", ModBlocks.WAXED_EXPOSED_CUT_COPPER_COUNTERTOP);
+    public static final DeferredItem<BlockItem> WAXED_EXPOSED_CUT_COPPER_SINK =
+            ITEMS.registerSimpleBlockItem("waxed_exposed_cut_copper_sink", ModBlocks.WAXED_EXPOSED_CUT_COPPER_SINK);
+    public static final DeferredItem<BlockItem> WAXED_WEATHERED_CUT_COPPER_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("waxed_weathered_cut_copper_countertop", ModBlocks.WAXED_WEATHERED_CUT_COPPER_COUNTERTOP);
+    public static final DeferredItem<BlockItem> WAXED_WEATHERED_CUT_COPPER_SINK =
+            ITEMS.registerSimpleBlockItem("waxed_weathered_cut_copper_sink", ModBlocks.WAXED_WEATHERED_CUT_COPPER_SINK);
+    public static final DeferredItem<BlockItem> WAXED_OXIDIZED_CUT_COPPER_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("waxed_oxidized_cut_copper_countertop", ModBlocks.WAXED_OXIDIZED_CUT_COPPER_COUNTERTOP);
+    public static final DeferredItem<BlockItem> WAXED_OXIDIZED_CUT_COPPER_SINK =
+            ITEMS.registerSimpleBlockItem("waxed_oxidized_cut_copper_sink", ModBlocks.WAXED_OXIDIZED_CUT_COPPER_SINK);
     // FURNITURE_VARIANT_ITEM_REGISTRATIONS
 
     private static java.util.List<DeferredItem<BlockItem>> registerBasicBlockItems() {
@@ -325,6 +509,98 @@ public class ModItems {
             event.accept(SMOOTH_STONE_SINK);
             event.accept(PALE_OAK_DOOR_CABINET);
             event.accept(PALE_OAK_DRAWER_CABINET);
+            event.accept(STONE_COUNTERTOP);
+            event.accept(STONE_SINK);
+            event.accept(STONE_BRICK_COUNTERTOP);
+            event.accept(STONE_BRICK_SINK);
+            event.accept(NETHER_BRICK_COUNTERTOP);
+            event.accept(NETHER_BRICK_SINK);
+            event.accept(QUARTZ_COUNTERTOP);
+            event.accept(QUARTZ_SINK);
+            event.accept(POLISHED_GRANITE_COUNTERTOP);
+            event.accept(POLISHED_GRANITE_SINK);
+            event.accept(POLISHED_DIORITE_COUNTERTOP);
+            event.accept(POLISHED_DIORITE_SINK);
+            event.accept(END_STONE_BRICK_COUNTERTOP);
+            event.accept(END_STONE_BRICK_SINK);
+            event.accept(SMOOTH_QUARTZ_COUNTERTOP);
+            event.accept(SMOOTH_QUARTZ_SINK);
+            event.accept(GRANITE_COUNTERTOP);
+            event.accept(GRANITE_SINK);
+            event.accept(ANDESITE_COUNTERTOP);
+            event.accept(ANDESITE_SINK);
+            event.accept(RED_NETHER_BRICK_COUNTERTOP);
+            event.accept(RED_NETHER_BRICK_SINK);
+            event.accept(POLISHED_ANDESITE_COUNTERTOP);
+            event.accept(POLISHED_ANDESITE_SINK);
+            event.accept(DIORITE_COUNTERTOP);
+            event.accept(DIORITE_SINK);
+            event.accept(POLISHED_BLACKSTONE_COUNTERTOP);
+            event.accept(POLISHED_BLACKSTONE_SINK);
+            event.accept(POLISHED_BLACKSTONE_BRICK_COUNTERTOP);
+            event.accept(POLISHED_BLACKSTONE_BRICK_SINK);
+            event.accept(POLISHED_DEEPSLATE_COUNTERTOP);
+            event.accept(POLISHED_DEEPSLATE_SINK);
+            event.accept(DEEPSLATE_BRICK_COUNTERTOP);
+            event.accept(DEEPSLATE_BRICK_SINK);
+            event.accept(DEEPSLATE_TILE_COUNTERTOP);
+            event.accept(DEEPSLATE_TILE_SINK);
+            event.accept(RESIN_BRICK_COUNTERTOP);
+            event.accept(RESIN_BRICK_SINK);
+            event.accept(PRISMARINE_BRICK_COUNTERTOP);
+            event.accept(PRISMARINE_BRICK_SINK);
+            event.accept(DARK_PRISMARINE_COUNTERTOP);
+            event.accept(DARK_PRISMARINE_SINK);
+            event.accept(PURPUR_COUNTERTOP);
+            event.accept(PURPUR_SINK);
+            event.accept(WHITE_CONCRETE_COUNTERTOP);
+            event.accept(WHITE_CONCRETE_SINK);
+            event.accept(LIGHT_GRAY_CONCRETE_COUNTERTOP);
+            event.accept(LIGHT_GRAY_CONCRETE_SINK);
+            event.accept(GRAY_CONCRETE_COUNTERTOP);
+            event.accept(GRAY_CONCRETE_SINK);
+            event.accept(BLACK_CONCRETE_COUNTERTOP);
+            event.accept(BLACK_CONCRETE_SINK);
+            event.accept(BROWN_CONCRETE_COUNTERTOP);
+            event.accept(BROWN_CONCRETE_SINK);
+            event.accept(RED_CONCRETE_COUNTERTOP);
+            event.accept(RED_CONCRETE_SINK);
+            event.accept(ORANGE_CONCRETE_COUNTERTOP);
+            event.accept(ORANGE_CONCRETE_SINK);
+            event.accept(YELLOW_CONCRETE_COUNTERTOP);
+            event.accept(YELLOW_CONCRETE_SINK);
+            event.accept(LIME_CONCRETE_COUNTERTOP);
+            event.accept(LIME_CONCRETE_SINK);
+            event.accept(GREEN_CONCRETE_COUNTERTOP);
+            event.accept(GREEN_CONCRETE_SINK);
+            event.accept(CYAN_CONCRETE_COUNTERTOP);
+            event.accept(CYAN_CONCRETE_SINK);
+            event.accept(LIGHT_BLUE_CONCRETE_COUNTERTOP);
+            event.accept(LIGHT_BLUE_CONCRETE_SINK);
+            event.accept(BLUE_CONCRETE_COUNTERTOP);
+            event.accept(BLUE_CONCRETE_SINK);
+            event.accept(PURPLE_CONCRETE_COUNTERTOP);
+            event.accept(PURPLE_CONCRETE_SINK);
+            event.accept(MAGENTA_CONCRETE_COUNTERTOP);
+            event.accept(MAGENTA_CONCRETE_SINK);
+            event.accept(PINK_CONCRETE_COUNTERTOP);
+            event.accept(PINK_CONCRETE_SINK);
+            event.accept(CUT_COPPER_COUNTERTOP);
+            event.accept(CUT_COPPER_SINK);
+            event.accept(EXPOSED_CUT_COPPER_COUNTERTOP);
+            event.accept(EXPOSED_CUT_COPPER_SINK);
+            event.accept(WEATHERED_CUT_COPPER_COUNTERTOP);
+            event.accept(WEATHERED_CUT_COPPER_SINK);
+            event.accept(OXIDIZED_CUT_COPPER_COUNTERTOP);
+            event.accept(OXIDIZED_CUT_COPPER_SINK);
+            event.accept(WAXED_CUT_COPPER_COUNTERTOP);
+            event.accept(WAXED_CUT_COPPER_SINK);
+            event.accept(WAXED_EXPOSED_CUT_COPPER_COUNTERTOP);
+            event.accept(WAXED_EXPOSED_CUT_COPPER_SINK);
+            event.accept(WAXED_WEATHERED_CUT_COPPER_COUNTERTOP);
+            event.accept(WAXED_WEATHERED_CUT_COPPER_SINK);
+            event.accept(WAXED_OXIDIZED_CUT_COPPER_COUNTERTOP);
+            event.accept(WAXED_OXIDIZED_CUT_COPPER_SINK);
             // FURNITURE_VARIANT_CREATIVE_ENTRIES
             event.accept(OAK_RAILING);
             event.accept(OAK_BALUSTRADE);

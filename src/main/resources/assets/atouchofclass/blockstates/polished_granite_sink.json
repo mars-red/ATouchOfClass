@@ -1,0 +1,19 @@
+{
+    "variants":  {
+                     "facing=north":  {
+                                          "model":  "atouchofclass:block/polished_granite_sink"
+                                      },
+                     "facing=east":  {
+                                         "model":  "atouchofclass:block/polished_granite_sink",
+                                         "y":  90
+                                     },
+                     "facing=south":  {
+                                          "model":  "atouchofclass:block/polished_granite_sink",
+                                          "y":  180
+                                      },
+                     "facing=west":  {
+                                         "model":  "atouchofclass:block/polished_granite_sink",
+                                         "y":  270
+                                     }
+                 }
+}

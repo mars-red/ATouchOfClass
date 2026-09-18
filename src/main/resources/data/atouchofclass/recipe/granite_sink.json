@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "S S",
+    " S "
+  ],
+  "key": {
+    "S": "minecraft:granite_slab"
+  },
+  "result": {
+    "count": 6,
+    "id": "atouchofclass:granite_sink"
+  }
+}
