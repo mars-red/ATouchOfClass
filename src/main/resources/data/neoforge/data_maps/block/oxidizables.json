@@ -45,6 +45,15 @@
     "atouchofclass:weathered_copper_floor_lamp": {
       "next_oxidation_stage": "atouchofclass:oxidized_copper_floor_lamp"
     },
+    "atouchofclass:copper_table_lamp": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_table_lamp"
+    },
+    "atouchofclass:exposed_copper_table_lamp": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_table_lamp"
+    },
+    "atouchofclass:weathered_copper_table_lamp": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_table_lamp"
+    },
     "atouchofclass:copper_bowl_ceiling_light": {
       "next_oxidation_stage": "atouchofclass:exposed_copper_bowl_ceiling_light"
     },

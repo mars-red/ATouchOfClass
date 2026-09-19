@@ -2,12 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "CTC",
+    "WT ",
     " C ",
     "CCC"
   ],
   "key": {
     "C": "minecraft:copper_ingot",
+    "W": "minecraft:white_wool",
     "T": "minecraft:torch"
   },
   "result": {

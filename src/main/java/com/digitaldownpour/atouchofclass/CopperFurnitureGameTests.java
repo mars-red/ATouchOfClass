@@ -151,6 +151,24 @@ public class CopperFurnitureGameTests {
         helper.succeed();
     }
 
+    @GameTest(template = "chandelier_test")
+    public static void tableLampsOxidizeAndWax(GameTestHelper helper) {
+        verifyFamily(helper,
+                new Block[]{
+                        ModBlocks.COPPER_TABLE_LAMP.get(),
+                        ModBlocks.EXPOSED_COPPER_TABLE_LAMP.get(),
+                        ModBlocks.WEATHERED_COPPER_TABLE_LAMP.get(),
+                        ModBlocks.OXIDIZED_COPPER_TABLE_LAMP.get()
+                },
+                new Block[]{
+                        ModBlocks.WAXED_COPPER_TABLE_LAMP.get(),
+                        ModBlocks.WAXED_EXPOSED_COPPER_TABLE_LAMP.get(),
+                        ModBlocks.WAXED_WEATHERED_COPPER_TABLE_LAMP.get(),
+                        ModBlocks.WAXED_OXIDIZED_COPPER_TABLE_LAMP.get()
+                }, false);
+        helper.succeed();
+    }
+
     private static void verifyFamily(GameTestHelper helper, Block[] stages, Block[] waxedStages, boolean oriented) {
         BlockPos mapColorPos = helper.absolutePos(new BlockPos(1, 2, 1));
 

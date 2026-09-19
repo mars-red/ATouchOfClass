@@ -9,11 +9,13 @@ import com.digitaldownpour.atouchofclass.blocks.CopperChandelierBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperLampPostBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperFloorLampBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperCeilingLightBlock;
+import com.digitaldownpour.atouchofclass.blocks.CopperTableLampBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperChainBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperChandelierBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperLampPostBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperFloorLampBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperCeilingLightBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperTableLampBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringWallSconceBlock;
 import net.minecraft.world.level.block.WeatheringCopper.WeatherState;
 import com.digitaldownpour.atouchofclass.blocks.KeyCutterBlock;
@@ -1440,6 +1442,28 @@ public class ModBlocks {
                     .noOcclusion().lightLevel(state -> 15);
             return waxed ? new CopperCeilingLightBlock(coffered, properties)
                     : new WeatheringCopperCeilingLightBlock(age, coffered, properties);
+        });
+    }
+
+    public static final DeferredBlock<CopperTableLampBlock> COPPER_TABLE_LAMP = registerCopperTableLamp("copper_table_lamp", WeatherState.UNAFFECTED, false);
+    public static final DeferredBlock<CopperTableLampBlock> EXPOSED_COPPER_TABLE_LAMP = registerCopperTableLamp("exposed_copper_table_lamp", WeatherState.EXPOSED, false);
+    public static final DeferredBlock<CopperTableLampBlock> WEATHERED_COPPER_TABLE_LAMP = registerCopperTableLamp("weathered_copper_table_lamp", WeatherState.WEATHERED, false);
+    public static final DeferredBlock<CopperTableLampBlock> OXIDIZED_COPPER_TABLE_LAMP = registerCopperTableLamp("oxidized_copper_table_lamp", WeatherState.OXIDIZED, false);
+    public static final DeferredBlock<CopperTableLampBlock> WAXED_COPPER_TABLE_LAMP = registerCopperTableLamp("waxed_copper_table_lamp", WeatherState.UNAFFECTED, true);
+    public static final DeferredBlock<CopperTableLampBlock> WAXED_EXPOSED_COPPER_TABLE_LAMP = registerCopperTableLamp("waxed_exposed_copper_table_lamp", WeatherState.EXPOSED, true);
+    public static final DeferredBlock<CopperTableLampBlock> WAXED_WEATHERED_COPPER_TABLE_LAMP = registerCopperTableLamp("waxed_weathered_copper_table_lamp", WeatherState.WEATHERED, true);
+    public static final DeferredBlock<CopperTableLampBlock> WAXED_OXIDIZED_COPPER_TABLE_LAMP = registerCopperTableLamp("waxed_oxidized_copper_table_lamp", WeatherState.OXIDIZED, true);
+
+    private static DeferredBlock<CopperTableLampBlock> registerCopperTableLamp(String name, WeatherState age, boolean waxed) {
+        return BLOCKS.register(name, key -> {
+            BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, key))
+                    .mapColor(age.ordinal() < 2 ? MapColor.COLOR_ORANGE : MapColor.COLOR_CYAN)
+                    .strength(3.0F, 6.0F).requiresCorrectToolForDrops()
+                    .sound(net.minecraft.world.level.block.SoundType.COPPER)
+                    .noOcclusion().lightLevel(state -> 15);
+            return waxed ? new CopperTableLampBlock(properties)
+                    : new WeatheringCopperTableLampBlock(age, properties);
         });
     }
 
