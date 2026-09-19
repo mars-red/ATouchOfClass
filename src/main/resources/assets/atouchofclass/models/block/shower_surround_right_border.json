@@ -1,0 +1,20 @@
+{
+  "parent": "block/block",
+  "ambientocclusion": false,
+  "render_type": "translucent",
+  "textures": {
+    "border": "minecraft:block/light_blue_stained_glass",
+    "particle": "minecraft:block/white_stained_glass"
+  },
+  "elements": [
+    {
+      "from": [15, 0, 0],
+      "to": [16, 16, 1],
+      "faces": {
+        "north": { "texture": "#border" }, "south": { "texture": "#border" },
+        "east": { "texture": "#border" }, "west": { "texture": "#border" },
+        "up": { "texture": "#border" }, "down": { "texture": "#border" }
+      }
+    }
+  ]
+}

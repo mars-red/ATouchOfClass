@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "G": "minecraft:glass_pane"
+  },
+  "pattern": [
+    "G",
+    "G",
+    "G"
+  ],
+  "result": {
+    "count": 1,
+    "id": "atouchofclass:glass_shower_surround"
+  }
+}

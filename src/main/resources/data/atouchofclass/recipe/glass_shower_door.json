@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "G": "minecraft:glass_pane",
+    "I": "minecraft:iron_nugget"
+  },
+  "pattern": [
+    "IG",
+    " G",
+    "IG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "atouchofclass:glass_shower_door"
+  }
+}
