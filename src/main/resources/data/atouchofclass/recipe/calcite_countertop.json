@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS"
+  ],
+  "key": {
+    "S": "atouchofclass:calcite_slab"
+  },
+  "result": {
+    "count": 6,
+    "id": "atouchofclass:calcite_countertop"
+  }
+}

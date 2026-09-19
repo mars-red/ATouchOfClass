@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "S S",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:pale_oak_slab"
+  },
+  "result": {
+    "count": 2,
+    "id": "atouchofclass:pale_oak_drawer_cabinet"
+  }
+}

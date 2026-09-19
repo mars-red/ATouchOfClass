@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/polished_granite_countertop"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/polished_granite_countertop",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/polished_granite_countertop",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/polished_granite_countertop",
+      "y": 270
+    }
+  }
+}

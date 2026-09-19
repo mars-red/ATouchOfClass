@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/smooth_quartz_countertop"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/smooth_quartz_countertop",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/smooth_quartz_countertop",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/smooth_quartz_countertop",
+      "y": 270
+    }
+  }
+}

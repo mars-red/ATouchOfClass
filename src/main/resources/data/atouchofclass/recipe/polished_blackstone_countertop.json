@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:polished_blackstone_slab"
+  },
+  "result": {
+    "count": 6,
+    "id": "atouchofclass:polished_blackstone_countertop"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "S S",
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:cherry_slab"
+  },
+  "result": {
+    "count": 2,
+    "id": "atouchofclass:cherry_door_cabinet"
+  }
+}

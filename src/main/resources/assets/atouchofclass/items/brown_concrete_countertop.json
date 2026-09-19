@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "type":  "minecraft:model",
+                  "model":  "atouchofclass:item/brown_concrete_countertop"
+              }
+}

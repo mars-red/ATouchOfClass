@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "type":  "minecraft:model",
+                  "model":  "atouchofclass:item/polished_granite_countertop"
+              }
+}

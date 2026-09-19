@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:red_nether_brick_slab"
+  },
+  "result": {
+    "count": 6,
+    "id": "atouchofclass:red_nether_brick_countertop"
+  }
+}

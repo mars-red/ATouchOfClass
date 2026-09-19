@@ -26,11 +26,19 @@ import com.digitaldownpour.atouchofclass.blocks.ElevatorCallButtonBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorDestinationControlBlock;
 import com.digitaldownpour.atouchofclass.blocks.ToiletBlock;
 import com.digitaldownpour.atouchofclass.blocks.ClawfootBathtubBlock;
+import com.digitaldownpour.atouchofclass.blocks.CabinetBlock;
+import com.digitaldownpour.atouchofclass.blocks.DoorCabinetBlock;
+import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
+import com.digitaldownpour.atouchofclass.blocks.SinkBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCountertopBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringSinkBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -66,6 +74,922 @@ public class ModBlocks {
     );
     public static final java.util.Map<String, DeferredBlock<Block>> BASIC_BLOCKS = registerBasicBlocks();
 
+    public static final DeferredBlock<SlabBlock> CALCITE_SLAB =
+            BLOCKS.register("calcite_slab", registryName -> new SlabBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+
+    public static final DeferredBlock<CountertopBlock> CALCITE_COUNTERTOP =
+            BLOCKS.register("calcite_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.QUARTZ)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.CALCITE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> CALCITE_SINK =
+            BLOCKS.register("calcite_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.QUARTZ)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.CALCITE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<CountertopBlock> SMOOTH_STONE_COUNTERTOP =
+            BLOCKS.register("smooth_stone_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> SMOOTH_STONE_SINK =
+            BLOCKS.register("smooth_stone_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> STONE_COUNTERTOP =
+            BLOCKS.register("stone_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> STONE_SINK =
+            BLOCKS.register("stone_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> STONE_BRICK_COUNTERTOP =
+            BLOCKS.register("stone_brick_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> STONE_BRICK_SINK =
+            BLOCKS.register("stone_brick_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> NETHER_BRICK_COUNTERTOP =
+            BLOCKS.register("nether_brick_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> NETHER_BRICK_SINK =
+            BLOCKS.register("nether_brick_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> QUARTZ_COUNTERTOP =
+            BLOCKS.register("quartz_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> QUARTZ_SINK =
+            BLOCKS.register("quartz_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> POLISHED_GRANITE_COUNTERTOP =
+            BLOCKS.register("polished_granite_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> POLISHED_GRANITE_SINK =
+            BLOCKS.register("polished_granite_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> POLISHED_DIORITE_COUNTERTOP =
+            BLOCKS.register("polished_diorite_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> POLISHED_DIORITE_SINK =
+            BLOCKS.register("polished_diorite_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> END_STONE_BRICK_COUNTERTOP =
+            BLOCKS.register("end_stone_brick_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> END_STONE_BRICK_SINK =
+            BLOCKS.register("end_stone_brick_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> SMOOTH_QUARTZ_COUNTERTOP =
+            BLOCKS.register("smooth_quartz_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> SMOOTH_QUARTZ_SINK =
+            BLOCKS.register("smooth_quartz_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> GRANITE_COUNTERTOP =
+            BLOCKS.register("granite_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> GRANITE_SINK =
+            BLOCKS.register("granite_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> ANDESITE_COUNTERTOP =
+            BLOCKS.register("andesite_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> ANDESITE_SINK =
+            BLOCKS.register("andesite_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> RED_NETHER_BRICK_COUNTERTOP =
+            BLOCKS.register("red_nether_brick_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> RED_NETHER_BRICK_SINK =
+            BLOCKS.register("red_nether_brick_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> POLISHED_ANDESITE_COUNTERTOP =
+            BLOCKS.register("polished_andesite_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> POLISHED_ANDESITE_SINK =
+            BLOCKS.register("polished_andesite_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> DIORITE_COUNTERTOP =
+            BLOCKS.register("diorite_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> DIORITE_SINK =
+            BLOCKS.register("diorite_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> POLISHED_BLACKSTONE_COUNTERTOP =
+            BLOCKS.register("polished_blackstone_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> POLISHED_BLACKSTONE_SINK =
+            BLOCKS.register("polished_blackstone_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> POLISHED_BLACKSTONE_BRICK_COUNTERTOP =
+            BLOCKS.register("polished_blackstone_brick_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> POLISHED_BLACKSTONE_BRICK_SINK =
+            BLOCKS.register("polished_blackstone_brick_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> POLISHED_DEEPSLATE_COUNTERTOP =
+            BLOCKS.register("polished_deepslate_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> POLISHED_DEEPSLATE_SINK =
+            BLOCKS.register("polished_deepslate_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> DEEPSLATE_BRICK_COUNTERTOP =
+            BLOCKS.register("deepslate_brick_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> DEEPSLATE_BRICK_SINK =
+            BLOCKS.register("deepslate_brick_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> DEEPSLATE_TILE_COUNTERTOP =
+            BLOCKS.register("deepslate_tile_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> DEEPSLATE_TILE_SINK =
+            BLOCKS.register("deepslate_tile_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> RESIN_BRICK_COUNTERTOP =
+            BLOCKS.register("resin_brick_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> RESIN_BRICK_SINK =
+            BLOCKS.register("resin_brick_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> PRISMARINE_BRICK_COUNTERTOP =
+            BLOCKS.register("prismarine_brick_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> PRISMARINE_BRICK_SINK =
+            BLOCKS.register("prismarine_brick_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> DARK_PRISMARINE_COUNTERTOP =
+            BLOCKS.register("dark_prismarine_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> DARK_PRISMARINE_SINK =
+            BLOCKS.register("dark_prismarine_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> PURPUR_COUNTERTOP =
+            BLOCKS.register("purpur_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> PURPUR_SINK =
+            BLOCKS.register("purpur_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> WHITE_CONCRETE_COUNTERTOP =
+            BLOCKS.register("white_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> WHITE_CONCRETE_SINK =
+            BLOCKS.register("white_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> LIGHT_GRAY_CONCRETE_COUNTERTOP =
+            BLOCKS.register("light_gray_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> LIGHT_GRAY_CONCRETE_SINK =
+            BLOCKS.register("light_gray_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> GRAY_CONCRETE_COUNTERTOP =
+            BLOCKS.register("gray_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> GRAY_CONCRETE_SINK =
+            BLOCKS.register("gray_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> BLACK_CONCRETE_COUNTERTOP =
+            BLOCKS.register("black_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> BLACK_CONCRETE_SINK =
+            BLOCKS.register("black_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> BROWN_CONCRETE_COUNTERTOP =
+            BLOCKS.register("brown_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> BROWN_CONCRETE_SINK =
+            BLOCKS.register("brown_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> RED_CONCRETE_COUNTERTOP =
+            BLOCKS.register("red_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> RED_CONCRETE_SINK =
+            BLOCKS.register("red_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> ORANGE_CONCRETE_COUNTERTOP =
+            BLOCKS.register("orange_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> ORANGE_CONCRETE_SINK =
+            BLOCKS.register("orange_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> YELLOW_CONCRETE_COUNTERTOP =
+            BLOCKS.register("yellow_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> YELLOW_CONCRETE_SINK =
+            BLOCKS.register("yellow_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> LIME_CONCRETE_COUNTERTOP =
+            BLOCKS.register("lime_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> LIME_CONCRETE_SINK =
+            BLOCKS.register("lime_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> GREEN_CONCRETE_COUNTERTOP =
+            BLOCKS.register("green_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> GREEN_CONCRETE_SINK =
+            BLOCKS.register("green_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> CYAN_CONCRETE_COUNTERTOP =
+            BLOCKS.register("cyan_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> CYAN_CONCRETE_SINK =
+            BLOCKS.register("cyan_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> LIGHT_BLUE_CONCRETE_COUNTERTOP =
+            BLOCKS.register("light_blue_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> LIGHT_BLUE_CONCRETE_SINK =
+            BLOCKS.register("light_blue_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> BLUE_CONCRETE_COUNTERTOP =
+            BLOCKS.register("blue_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> BLUE_CONCRETE_SINK =
+            BLOCKS.register("blue_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> PURPLE_CONCRETE_COUNTERTOP =
+            BLOCKS.register("purple_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> PURPLE_CONCRETE_SINK =
+            BLOCKS.register("purple_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> MAGENTA_CONCRETE_COUNTERTOP =
+            BLOCKS.register("magenta_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> MAGENTA_CONCRETE_SINK =
+            BLOCKS.register("magenta_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> PINK_CONCRETE_COUNTERTOP =
+            BLOCKS.register("pink_concrete_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> PINK_CONCRETE_SINK =
+            BLOCKS.register("pink_concrete_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<CountertopBlock> CUT_COPPER_COUNTERTOP =
+            registerCopperCountertop("cut_copper_countertop", WeatherState.UNAFFECTED, false, Blocks.CUT_COPPER);
+
+    public static final DeferredBlock<SinkBlock> CUT_COPPER_SINK =
+            registerCopperSink("cut_copper_sink", WeatherState.UNAFFECTED, false, Blocks.CUT_COPPER);
+
+    public static final DeferredBlock<CountertopBlock> EXPOSED_CUT_COPPER_COUNTERTOP =
+            registerCopperCountertop("exposed_cut_copper_countertop", WeatherState.EXPOSED, false,
+                    Blocks.EXPOSED_CUT_COPPER);
+
+    public static final DeferredBlock<SinkBlock> EXPOSED_CUT_COPPER_SINK =
+            registerCopperSink("exposed_cut_copper_sink", WeatherState.EXPOSED, false,
+                    Blocks.EXPOSED_CUT_COPPER);
+
+    public static final DeferredBlock<CountertopBlock> WEATHERED_CUT_COPPER_COUNTERTOP =
+            registerCopperCountertop("weathered_cut_copper_countertop", WeatherState.WEATHERED, false,
+                    Blocks.WEATHERED_CUT_COPPER);
+
+    public static final DeferredBlock<SinkBlock> WEATHERED_CUT_COPPER_SINK =
+            registerCopperSink("weathered_cut_copper_sink", WeatherState.WEATHERED, false,
+                    Blocks.WEATHERED_CUT_COPPER);
+
+    public static final DeferredBlock<CountertopBlock> OXIDIZED_CUT_COPPER_COUNTERTOP =
+            registerCopperCountertop("oxidized_cut_copper_countertop", WeatherState.OXIDIZED, false,
+                    Blocks.OXIDIZED_CUT_COPPER);
+
+    public static final DeferredBlock<SinkBlock> OXIDIZED_CUT_COPPER_SINK =
+            registerCopperSink("oxidized_cut_copper_sink", WeatherState.OXIDIZED, false,
+                    Blocks.OXIDIZED_CUT_COPPER);
+
+    public static final DeferredBlock<CountertopBlock> WAXED_CUT_COPPER_COUNTERTOP =
+            registerCopperCountertop("waxed_cut_copper_countertop", WeatherState.UNAFFECTED, true,
+                    Blocks.WAXED_CUT_COPPER);
+
+    public static final DeferredBlock<SinkBlock> WAXED_CUT_COPPER_SINK =
+            registerCopperSink("waxed_cut_copper_sink", WeatherState.UNAFFECTED, true,
+                    Blocks.WAXED_CUT_COPPER);
+
+    public static final DeferredBlock<CountertopBlock> WAXED_EXPOSED_CUT_COPPER_COUNTERTOP =
+            registerCopperCountertop("waxed_exposed_cut_copper_countertop", WeatherState.EXPOSED, true,
+                    Blocks.WAXED_EXPOSED_CUT_COPPER);
+
+    public static final DeferredBlock<SinkBlock> WAXED_EXPOSED_CUT_COPPER_SINK =
+            registerCopperSink("waxed_exposed_cut_copper_sink", WeatherState.EXPOSED, true,
+                    Blocks.WAXED_EXPOSED_CUT_COPPER);
+
+    public static final DeferredBlock<CountertopBlock> WAXED_WEATHERED_CUT_COPPER_COUNTERTOP =
+            registerCopperCountertop("waxed_weathered_cut_copper_countertop", WeatherState.WEATHERED, true,
+                    Blocks.WAXED_WEATHERED_CUT_COPPER);
+
+    public static final DeferredBlock<SinkBlock> WAXED_WEATHERED_CUT_COPPER_SINK =
+            registerCopperSink("waxed_weathered_cut_copper_sink", WeatherState.WEATHERED, true,
+                    Blocks.WAXED_WEATHERED_CUT_COPPER);
+
+    public static final DeferredBlock<CountertopBlock> WAXED_OXIDIZED_CUT_COPPER_COUNTERTOP =
+            registerCopperCountertop("waxed_oxidized_cut_copper_countertop", WeatherState.OXIDIZED, true,
+                    Blocks.WAXED_OXIDIZED_CUT_COPPER);
+
+    public static final DeferredBlock<SinkBlock> WAXED_OXIDIZED_CUT_COPPER_SINK =
+            registerCopperSink("waxed_oxidized_cut_copper_sink", WeatherState.OXIDIZED, true,
+                    Blocks.WAXED_OXIDIZED_CUT_COPPER);
+
+    private static DeferredBlock<CountertopBlock> registerCopperCountertop(
+            String name, WeatherState age, boolean waxed, Block vanillaBlock) {
+        return BLOCKS.register(name, registryName -> {
+            BlockBehaviour.Properties properties = BlockBehaviour.Properties.ofFullCopy(vanillaBlock)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .noOcclusion();
+            return waxed ? new CountertopBlock(properties) : new WeatheringCountertopBlock(age, properties);
+        });
+    }
+
+    private static DeferredBlock<SinkBlock> registerCopperSink(
+            String name, WeatherState age, boolean waxed, Block vanillaBlock) {
+        return BLOCKS.register(name, registryName -> {
+            BlockBehaviour.Properties properties = BlockBehaviour.Properties.ofFullCopy(vanillaBlock)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .noOcclusion();
+            return waxed ? new SinkBlock(properties) : new WeatheringSinkBlock(age, properties);
+        });
+    }
+
+    // COUNTERTOP_SINK_VARIANT_REGISTRATIONS
+
+    private static final java.util.List<DeferredHolder<Block, ? extends CabinetBlock>> CABINET_REGISTRATIONS =
+            new java.util.ArrayList<>();
+
+    public static final DeferredBlock<DoorCabinetBlock> DARK_OAK_DOOR_CABINET =
+            registerDoorCabinet("dark_oak_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> DARK_OAK_DRAWER_CABINET =
+            registerCabinet("dark_oak_drawer_cabinet");
+
+    public static final DeferredBlock<DoorCabinetBlock> PALE_OAK_DOOR_CABINET =
+            registerDoorCabinet("pale_oak_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> PALE_OAK_DRAWER_CABINET =
+            registerCabinet("pale_oak_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> OAK_DOOR_CABINET =
+            registerDoorCabinet("oak_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> OAK_DRAWER_CABINET =
+            registerCabinet("oak_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> SPRUCE_DOOR_CABINET =
+            registerDoorCabinet("spruce_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> SPRUCE_DRAWER_CABINET =
+            registerCabinet("spruce_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> BIRCH_DOOR_CABINET =
+            registerDoorCabinet("birch_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> BIRCH_DRAWER_CABINET =
+            registerCabinet("birch_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> JUNGLE_DOOR_CABINET =
+            registerDoorCabinet("jungle_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> JUNGLE_DRAWER_CABINET =
+            registerCabinet("jungle_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> ACACIA_DOOR_CABINET =
+            registerDoorCabinet("acacia_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> ACACIA_DRAWER_CABINET =
+            registerCabinet("acacia_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> MANGROVE_DOOR_CABINET =
+            registerDoorCabinet("mangrove_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> MANGROVE_DRAWER_CABINET =
+            registerCabinet("mangrove_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> CHERRY_DOOR_CABINET =
+            registerDoorCabinet("cherry_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> CHERRY_DRAWER_CABINET =
+            registerCabinet("cherry_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> BAMBOO_DOOR_CABINET =
+            registerDoorCabinet("bamboo_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> BAMBOO_DRAWER_CABINET =
+            registerCabinet("bamboo_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> CRIMSON_DOOR_CABINET =
+            registerDoorCabinet("crimson_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> CRIMSON_DRAWER_CABINET =
+            registerCabinet("crimson_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> WARPED_DOOR_CABINET =
+            registerDoorCabinet("warped_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> WARPED_DRAWER_CABINET =
+            registerCabinet("warped_drawer_cabinet");
+    // CABINET_VARIANT_REGISTRATIONS
+
     private static java.util.Map<String, DeferredBlock<Block>> registerBasicBlocks() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<Block>>();
         BASIC_BLOCK_NAMES.forEach(name -> blocks.put(name, BLOCKS.register(name,
@@ -75,6 +999,35 @@ public class ModBlocks {
                         .strength(1.5F, 6.0F)
                         .requiresCorrectToolForDrops()))));
         return java.util.Collections.unmodifiableMap(blocks);
+    }
+
+    private static DeferredBlock<CabinetBlock> registerCabinet(String name) {
+        DeferredBlock<CabinetBlock> cabinet = BLOCKS.register(name, registryName -> new CabinetBlock(
+                BlockBehaviour.Properties.of()
+                        .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                        .mapColor(MapColor.COLOR_BROWN)
+                        .strength(2.0F)
+                        .sound(net.minecraft.world.level.block.SoundType.WOOD)
+                        .noOcclusion()));
+        CABINET_REGISTRATIONS.add(cabinet);
+        return cabinet;
+    }
+
+    private static DeferredBlock<DoorCabinetBlock> registerDoorCabinet(String name) {
+        DeferredBlock<DoorCabinetBlock> cabinet = BLOCKS.register(name, registryName -> new DoorCabinetBlock(
+                BlockBehaviour.Properties.of()
+                        .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                        .mapColor(MapColor.COLOR_BROWN)
+                        .strength(2.0F)
+                        .sound(net.minecraft.world.level.block.SoundType.WOOD)
+                        .noOcclusion()));
+        CABINET_REGISTRATIONS.add(cabinet);
+        return cabinet;
+    }
+
+    /** All cabinet variants, used to attach the shared storage block entity automatically. */
+    public static java.util.List<DeferredHolder<Block, ? extends CabinetBlock>> cabinetBlocks() {
+        return java.util.Collections.unmodifiableList(CABINET_REGISTRATIONS);
     }
 
     public static final DeferredBlock<OakRailingBlock> OAK_RAILING =

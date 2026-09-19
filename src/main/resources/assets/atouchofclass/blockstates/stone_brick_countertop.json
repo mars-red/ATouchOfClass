@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/stone_brick_countertop"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/stone_brick_countertop",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/stone_brick_countertop",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/stone_brick_countertop",
+      "y": 270
+    }
+  }
+}

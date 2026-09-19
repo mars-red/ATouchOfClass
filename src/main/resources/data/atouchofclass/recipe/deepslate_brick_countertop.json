@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:deepslate_brick_slab"
+  },
+  "result": {
+    "count": 6,
+    "id": "atouchofclass:deepslate_brick_countertop"
+  }
+}

@@ -26,6 +26,24 @@
     },
     "atouchofclass:weathered_copper_chandelier": {
       "next_oxidation_stage": "atouchofclass:oxidized_copper_chandelier"
+    },
+    "atouchofclass:cut_copper_countertop": {
+      "next_oxidation_stage": "atouchofclass:exposed_cut_copper_countertop"
+    },
+    "atouchofclass:exposed_cut_copper_countertop": {
+      "next_oxidation_stage": "atouchofclass:weathered_cut_copper_countertop"
+    },
+    "atouchofclass:weathered_cut_copper_countertop": {
+      "next_oxidation_stage": "atouchofclass:oxidized_cut_copper_countertop"
+    },
+    "atouchofclass:cut_copper_sink": {
+      "next_oxidation_stage": "atouchofclass:exposed_cut_copper_sink"
+    },
+    "atouchofclass:exposed_cut_copper_sink": {
+      "next_oxidation_stage": "atouchofclass:weathered_cut_copper_sink"
+    },
+    "atouchofclass:weathered_cut_copper_sink": {
+      "next_oxidation_stage": "atouchofclass:oxidized_cut_copper_sink"
     }
   }
 }
