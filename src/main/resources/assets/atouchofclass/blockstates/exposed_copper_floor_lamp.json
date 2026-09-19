@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "part=0": {
+      "model": "atouchofclass:block/exposed_copper_floor_lamp_bottom"
+    },
+    "part=1": {
+      "model": "atouchofclass:block/exposed_copper_floor_lamp_middle"
+    },
+    "part=2": {
+      "model": "atouchofclass:block/exposed_copper_floor_lamp_top"
+    }
+  }
+}

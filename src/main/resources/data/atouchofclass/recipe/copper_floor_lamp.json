@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CTC",
+    " C ",
+    "CCC"
+  ],
+  "key": {
+    "C": "minecraft:copper_ingot",
+    "T": "minecraft:torch"
+  },
+  "result": {
+    "id": "atouchofclass:copper_floor_lamp",
+    "count": 1
+  }
+}
