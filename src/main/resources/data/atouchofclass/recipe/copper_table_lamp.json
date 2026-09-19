@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WT",
+    " C",
+    " C"
+  ],
+  "key": {
+    "W": "minecraft:white_wool",
+    "T": "minecraft:torch",
+    "C": "minecraft:copper_ingot"
+  },
+  "result": {
+    "id": "atouchofclass:copper_table_lamp",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "atouchofclass:exposed_copper_table_lamp",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "atouchofclass:waxed_exposed_copper_table_lamp",
+    "count": 1
+  }
+}

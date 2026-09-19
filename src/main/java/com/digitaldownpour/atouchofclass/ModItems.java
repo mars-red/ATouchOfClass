@@ -530,6 +530,14 @@ public class ModItems {
     public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_COFFERED_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_coffered_ceiling_light", ModBlocks.WAXED_EXPOSED_COPPER_COFFERED_CEILING_LIGHT);
     public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_COFFERED_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_coffered_ceiling_light", ModBlocks.WAXED_WEATHERED_COPPER_COFFERED_CEILING_LIGHT);
     public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_COFFERED_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_coffered_ceiling_light", ModBlocks.WAXED_OXIDIZED_COPPER_COFFERED_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> COPPER_TABLE_LAMP = ITEMS.registerSimpleBlockItem("copper_table_lamp", ModBlocks.COPPER_TABLE_LAMP);
+    public static final DeferredItem<BlockItem> EXPOSED_COPPER_TABLE_LAMP = ITEMS.registerSimpleBlockItem("exposed_copper_table_lamp", ModBlocks.EXPOSED_COPPER_TABLE_LAMP);
+    public static final DeferredItem<BlockItem> WEATHERED_COPPER_TABLE_LAMP = ITEMS.registerSimpleBlockItem("weathered_copper_table_lamp", ModBlocks.WEATHERED_COPPER_TABLE_LAMP);
+    public static final DeferredItem<BlockItem> OXIDIZED_COPPER_TABLE_LAMP = ITEMS.registerSimpleBlockItem("oxidized_copper_table_lamp", ModBlocks.OXIDIZED_COPPER_TABLE_LAMP);
+    public static final DeferredItem<BlockItem> WAXED_COPPER_TABLE_LAMP = ITEMS.registerSimpleBlockItem("waxed_copper_table_lamp", ModBlocks.WAXED_COPPER_TABLE_LAMP);
+    public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_TABLE_LAMP = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_table_lamp", ModBlocks.WAXED_EXPOSED_COPPER_TABLE_LAMP);
+    public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_TABLE_LAMP = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_table_lamp", ModBlocks.WAXED_WEATHERED_COPPER_TABLE_LAMP);
+    public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_TABLE_LAMP = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_table_lamp", ModBlocks.WAXED_OXIDIZED_COPPER_TABLE_LAMP);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
@@ -592,6 +600,14 @@ public class ModItems {
             event.accept(WAXED_EXPOSED_COPPER_COFFERED_CEILING_LIGHT);
             event.accept(WAXED_WEATHERED_COPPER_COFFERED_CEILING_LIGHT);
             event.accept(WAXED_OXIDIZED_COPPER_COFFERED_CEILING_LIGHT);
+            event.accept(COPPER_TABLE_LAMP);
+            event.accept(EXPOSED_COPPER_TABLE_LAMP);
+            event.accept(WEATHERED_COPPER_TABLE_LAMP);
+            event.accept(OXIDIZED_COPPER_TABLE_LAMP);
+            event.accept(WAXED_COPPER_TABLE_LAMP);
+            event.accept(WAXED_EXPOSED_COPPER_TABLE_LAMP);
+            event.accept(WAXED_WEATHERED_COPPER_TABLE_LAMP);
+            event.accept(WAXED_OXIDIZED_COPPER_TABLE_LAMP);
             event.accept(COPPER_WALL_SCONCE);
             event.accept(EXPOSED_COPPER_WALL_SCONCE);
             event.accept(WEATHERED_COPPER_WALL_SCONCE);
