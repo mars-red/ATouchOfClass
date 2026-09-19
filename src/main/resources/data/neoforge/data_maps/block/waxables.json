@@ -48,6 +48,18 @@
     "atouchofclass:oxidized_copper_lamp_post": {
       "waxed": "atouchofclass:waxed_oxidized_copper_lamp_post"
     },
+    "atouchofclass:copper_floor_lamp": {
+      "waxed": "atouchofclass:waxed_copper_floor_lamp"
+    },
+    "atouchofclass:exposed_copper_floor_lamp": {
+      "waxed": "atouchofclass:waxed_exposed_copper_floor_lamp"
+    },
+    "atouchofclass:weathered_copper_floor_lamp": {
+      "waxed": "atouchofclass:waxed_weathered_copper_floor_lamp"
+    },
+    "atouchofclass:oxidized_copper_floor_lamp": {
+      "waxed": "atouchofclass:waxed_oxidized_copper_floor_lamp"
+    },
     "atouchofclass:cut_copper_countertop": {
       "waxed": "atouchofclass:waxed_cut_copper_countertop"
     },

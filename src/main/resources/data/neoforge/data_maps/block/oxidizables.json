@@ -36,6 +36,15 @@
     "atouchofclass:weathered_copper_lamp_post": {
       "next_oxidation_stage": "atouchofclass:oxidized_copper_lamp_post"
     },
+    "atouchofclass:copper_floor_lamp": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_floor_lamp"
+    },
+    "atouchofclass:exposed_copper_floor_lamp": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_floor_lamp"
+    },
+    "atouchofclass:weathered_copper_floor_lamp": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_floor_lamp"
+    },
     "atouchofclass:cut_copper_countertop": {
       "next_oxidation_stage": "atouchofclass:exposed_cut_copper_countertop"
     },

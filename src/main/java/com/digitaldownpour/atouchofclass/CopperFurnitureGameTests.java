@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 import com.digitaldownpour.atouchofclass.blocks.CopperLampPostBlock;
+import com.digitaldownpour.atouchofclass.blocks.CopperFloorLampBlock;
 import net.neoforged.neoforge.common.DataMapHooks;
 import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
@@ -85,6 +86,35 @@ public class CopperFurnitureGameTests {
                 helper.assertTrue(((WeatheringCopper) stages[i]).getNext(top).orElseThrow()
                                 .getValue(CopperLampPostBlock.PART) == 2,
                         "Oxidizing a lamp post must preserve its section");
+            }
+        }
+        helper.succeed();
+    }
+
+    @GameTest(template = "chandelier_test")
+    public static void floorLampsPreserveTheirSectionThroughCopperTransitions(GameTestHelper helper) {
+        Block[] stages = {
+                ModBlocks.COPPER_FLOOR_LAMP.get(),
+                ModBlocks.EXPOSED_COPPER_FLOOR_LAMP.get(),
+                ModBlocks.WEATHERED_COPPER_FLOOR_LAMP.get(),
+                ModBlocks.OXIDIZED_COPPER_FLOOR_LAMP.get()
+        };
+        Block[] waxedStages = {
+                ModBlocks.WAXED_COPPER_FLOOR_LAMP.get(),
+                ModBlocks.WAXED_EXPOSED_COPPER_FLOOR_LAMP.get(),
+                ModBlocks.WAXED_WEATHERED_COPPER_FLOOR_LAMP.get(),
+                ModBlocks.WAXED_OXIDIZED_COPPER_FLOOR_LAMP.get()
+        };
+
+        verifyFamily(helper, stages, waxedStages, false);
+        for (int i = 0; i < stages.length; i++) {
+            BlockState top = stages[i].defaultBlockState().setValue(CopperFloorLampBlock.PART, 2);
+            helper.assertTrue(HoneycombItem.getWaxed(top).orElseThrow().getValue(CopperFloorLampBlock.PART) == 2,
+                    "Waxing a floor lamp must preserve its section");
+            if (i < stages.length - 1) {
+                helper.assertTrue(((WeatheringCopper) stages[i]).getNext(top).orElseThrow()
+                                .getValue(CopperFloorLampBlock.PART) == 2,
+                        "Oxidizing a floor lamp must preserve its section");
             }
         }
         helper.succeed();
