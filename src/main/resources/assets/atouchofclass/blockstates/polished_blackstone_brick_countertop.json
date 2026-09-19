@@ -1,7 +1,19 @@
 {
-    "variants":  {
-                     "":  {
-                              "model":  "atouchofclass:block/polished_blackstone_brick_countertop"
-                          }
-                 }
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/polished_blackstone_brick_countertop"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/polished_blackstone_brick_countertop",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/polished_blackstone_brick_countertop",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/polished_blackstone_brick_countertop",
+      "y": 270
+    }
+  }
 }

@@ -38,7 +38,7 @@ public class CopperFurnitureGameTests {
                         ModBlocks.WAXED_EXPOSED_CUT_COPPER_COUNTERTOP.get(),
                         ModBlocks.WAXED_WEATHERED_CUT_COPPER_COUNTERTOP.get(),
                         ModBlocks.WAXED_OXIDIZED_CUT_COPPER_COUNTERTOP.get()
-                }, false);
+                }, true);
         helper.succeed();
     }
 

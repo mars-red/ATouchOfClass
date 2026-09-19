@@ -1,7 +1,19 @@
 {
-    "variants":  {
-                     "":  {
-                              "model":  "atouchofclass:block/magenta_concrete_countertop"
-                          }
-                 }
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/magenta_concrete_countertop"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/magenta_concrete_countertop",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/magenta_concrete_countertop",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/magenta_concrete_countertop",
+      "y": 270
+    }
+  }
 }
