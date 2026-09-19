@@ -1,4 +1,8 @@
 {
+    "block.atouchofclass.wall_shower_head":  "Wall-Mounted Shower Head",
+    "block.atouchofclass.rain_shower_head":  "Rain Shower Head",
+    "item.atouchofclass.wall_shower_head":  "Wall-Mounted Shower Head",
+    "item.atouchofclass.rain_shower_head":  "Rain Shower Head",
     "block.atouchofclass.glass_shower_surround":  "Glass Shower Surround",
     "block.atouchofclass.glass_shower_door":  "Glass Shower Door",
     "item.atouchofclass.glass_shower_surround":  "Glass Shower Surround",

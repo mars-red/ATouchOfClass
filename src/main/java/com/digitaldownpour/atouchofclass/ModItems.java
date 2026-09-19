@@ -451,6 +451,12 @@ public class ModItems {
     public static final DeferredItem<BlockItem> GLASS_SHOWER_DOOR_ITEM =
             ITEMS.registerSimpleBlockItem("glass_shower_door", ModBlocks.GLASS_SHOWER_DOOR);
 
+    public static final DeferredItem<BlockItem> WALL_SHOWER_HEAD_ITEM =
+            ITEMS.registerSimpleBlockItem("wall_shower_head", ModBlocks.WALL_SHOWER_HEAD);
+
+    public static final DeferredItem<BlockItem> RAIN_SHOWER_HEAD_ITEM =
+            ITEMS.registerSimpleBlockItem("rain_shower_head", ModBlocks.RAIN_SHOWER_HEAD);
+
     public static final DeferredItem<BlockItem> KEY_CUTTER_ITEM = ITEMS.registerSimpleBlockItem("key_cutter", ModBlocks.KEY_CUTTER);
     public static final DeferredItem<BlockItem> TOILET_ITEM = ITEMS.registerSimpleBlockItem("toilet", ModBlocks.TOILET);
     public static final DeferredItem<BlockItem> CLAWFOOT_BATHTUB_ITEM = ITEMS.registerSimpleBlockItem("clawfoot_bathtub", ModBlocks.CLAWFOOT_BATHTUB);
@@ -701,6 +707,8 @@ public class ModItems {
             // TALL_SIDELIGHT_VARIANT_CREATIVE_ENTRIES
             event.accept(GLASS_SHOWER_SURROUND_ITEM);
             event.accept(GLASS_SHOWER_DOOR_ITEM);
+            event.accept(WALL_SHOWER_HEAD_ITEM);
+            event.accept(RAIN_SHOWER_HEAD_ITEM);
             event.accept(KEY_CUTTER_ITEM);
             event.accept(CASING_ITEM);
             event.accept(WINDOW_APRON_ITEM);

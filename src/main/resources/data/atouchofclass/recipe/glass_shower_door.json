@@ -6,9 +6,9 @@
     "I": "minecraft:iron_nugget"
   },
   "pattern": [
-    "IG",
     " G",
-    "IG"
+    "IG",
+    " G"
   ],
   "result": {
     "count": 1,
