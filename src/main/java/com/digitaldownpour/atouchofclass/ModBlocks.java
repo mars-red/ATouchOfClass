@@ -21,6 +21,8 @@ import com.digitaldownpour.atouchofclass.blocks.TallDoorBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock;
 import com.digitaldownpour.atouchofclass.blocks.GlassShowerDoorBlock;
 import com.digitaldownpour.atouchofclass.blocks.GlassShowerSurroundBlock;
+import com.digitaldownpour.atouchofclass.blocks.RainShowerHeadBlock;
+import com.digitaldownpour.atouchofclass.blocks.WallShowerHeadBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorShaftPanelBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorFloorBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorDoorBlock;
@@ -1194,6 +1196,24 @@ public class ModBlocks {
                             .mapColor(MapColor.NONE)
                             .strength(0.3F)
                             .sound(net.minecraft.world.level.block.SoundType.GLASS)
+                            .noOcclusion()));
+
+    public static final DeferredHolder<Block, WallShowerHeadBlock> WALL_SHOWER_HEAD =
+            BLOCKS.register("wall_shower_head", registryName -> new WallShowerHeadBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.METAL)
+                            .strength(1.5F)
+                            .sound(net.minecraft.world.level.block.SoundType.METAL)
+                            .noOcclusion()));
+
+    public static final DeferredHolder<Block, RainShowerHeadBlock> RAIN_SHOWER_HEAD =
+            BLOCKS.register("rain_shower_head", registryName -> new RainShowerHeadBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.METAL)
+                            .strength(1.5F)
+                            .sound(net.minecraft.world.level.block.SoundType.METAL)
                             .noOcclusion()));
 
     public static final DeferredHolder<Block, KeyCutterBlock> KEY_CUTTER = BLOCKS.register("key_cutter",

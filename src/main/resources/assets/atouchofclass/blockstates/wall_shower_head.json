@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "atouchofclass:block/wall_shower_head" },
+    "facing=east": { "model": "atouchofclass:block/wall_shower_head", "y": 90 },
+    "facing=south": { "model": "atouchofclass:block/wall_shower_head", "y": 180 },
+    "facing=west": { "model": "atouchofclass:block/wall_shower_head", "y": 270 }
+  }
+}
