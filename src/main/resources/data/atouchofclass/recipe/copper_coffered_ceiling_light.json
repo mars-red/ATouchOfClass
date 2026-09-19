@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCC",
+    "QTQ",
+    "CCC"
+  ],
+  "key": {
+    "C": "#c:nuggets/copper",
+    "Q": "minecraft:white_stained_glass_pane",
+    "T": "minecraft:torch"
+  },
+  "result": {
+    "id": "atouchofclass:copper_coffered_ceiling_light",
+    "count": 1
+  }
+}
