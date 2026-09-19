@@ -498,6 +498,14 @@ public class ModItems {
     public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_chandelier", ModBlocks.WAXED_EXPOSED_COPPER_CHANDELIER);
     public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_chandelier", ModBlocks.WAXED_WEATHERED_COPPER_CHANDELIER);
     public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_chandelier", ModBlocks.WAXED_OXIDIZED_COPPER_CHANDELIER);
+    public static final DeferredItem<BlockItem> COPPER_LAMP_POST = ITEMS.registerSimpleBlockItem("copper_lamp_post", ModBlocks.COPPER_LAMP_POST);
+    public static final DeferredItem<BlockItem> EXPOSED_COPPER_LAMP_POST = ITEMS.registerSimpleBlockItem("exposed_copper_lamp_post", ModBlocks.EXPOSED_COPPER_LAMP_POST);
+    public static final DeferredItem<BlockItem> WEATHERED_COPPER_LAMP_POST = ITEMS.registerSimpleBlockItem("weathered_copper_lamp_post", ModBlocks.WEATHERED_COPPER_LAMP_POST);
+    public static final DeferredItem<BlockItem> OXIDIZED_COPPER_LAMP_POST = ITEMS.registerSimpleBlockItem("oxidized_copper_lamp_post", ModBlocks.OXIDIZED_COPPER_LAMP_POST);
+    public static final DeferredItem<BlockItem> WAXED_COPPER_LAMP_POST = ITEMS.registerSimpleBlockItem("waxed_copper_lamp_post", ModBlocks.WAXED_COPPER_LAMP_POST);
+    public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_LAMP_POST = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_lamp_post", ModBlocks.WAXED_EXPOSED_COPPER_LAMP_POST);
+    public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_LAMP_POST = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_lamp_post", ModBlocks.WAXED_WEATHERED_COPPER_LAMP_POST);
+    public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_LAMP_POST = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_lamp_post", ModBlocks.WAXED_OXIDIZED_COPPER_LAMP_POST);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
@@ -528,6 +536,14 @@ public class ModItems {
             event.accept(WAXED_EXPOSED_COPPER_CHANDELIER);
             event.accept(WAXED_WEATHERED_COPPER_CHANDELIER);
             event.accept(WAXED_OXIDIZED_COPPER_CHANDELIER);
+            event.accept(COPPER_LAMP_POST);
+            event.accept(EXPOSED_COPPER_LAMP_POST);
+            event.accept(WEATHERED_COPPER_LAMP_POST);
+            event.accept(OXIDIZED_COPPER_LAMP_POST);
+            event.accept(WAXED_COPPER_LAMP_POST);
+            event.accept(WAXED_EXPOSED_COPPER_LAMP_POST);
+            event.accept(WAXED_WEATHERED_COPPER_LAMP_POST);
+            event.accept(WAXED_OXIDIZED_COPPER_LAMP_POST);
             event.accept(COPPER_WALL_SCONCE);
             event.accept(EXPOSED_COPPER_WALL_SCONCE);
             event.accept(WEATHERED_COPPER_WALL_SCONCE);

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CGC",
+    " C ",
+    "CCC"
+  ],
+  "key": {
+    "C": "minecraft:copper_ingot",
+    "G": "minecraft:torch"
+  },
+  "result": {
+    "id": "atouchofclass:copper_lamp_post",
+    "count": 1
+  }
+}

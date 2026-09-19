@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "part=0": {
+      "model": "atouchofclass:block/waxed_oxidized_copper_lamp_post_bottom"
+    },
+    "part=1": {
+      "model": "atouchofclass:block/waxed_oxidized_copper_lamp_post_middle"
+    },
+    "part=2": {
+      "model": "atouchofclass:block/waxed_oxidized_copper_lamp_post_top"
+    }
+  }
+}

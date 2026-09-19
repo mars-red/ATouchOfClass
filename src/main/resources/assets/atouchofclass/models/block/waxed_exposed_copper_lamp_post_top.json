@@ -1,0 +1,6 @@
+{
+  "parent": "atouchofclass:block/copper_lamp_post_top_base",
+  "textures": {
+    "copper": "minecraft:block/exposed_copper"
+  }
+}

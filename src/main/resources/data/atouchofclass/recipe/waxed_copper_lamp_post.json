@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "atouchofclass:copper_lamp_post",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "atouchofclass:waxed_copper_lamp_post",
+    "count": 1
+  }
+}
