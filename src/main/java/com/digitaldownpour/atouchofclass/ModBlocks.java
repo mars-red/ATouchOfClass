@@ -938,6 +938,56 @@ public class ModBlocks {
 
     public static final DeferredBlock<CabinetBlock> PALE_OAK_DRAWER_CABINET =
             registerCabinet("pale_oak_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> OAK_DOOR_CABINET =
+            registerDoorCabinet("oak_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> OAK_DRAWER_CABINET =
+            registerCabinet("oak_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> SPRUCE_DOOR_CABINET =
+            registerDoorCabinet("spruce_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> SPRUCE_DRAWER_CABINET =
+            registerCabinet("spruce_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> BIRCH_DOOR_CABINET =
+            registerDoorCabinet("birch_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> BIRCH_DRAWER_CABINET =
+            registerCabinet("birch_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> JUNGLE_DOOR_CABINET =
+            registerDoorCabinet("jungle_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> JUNGLE_DRAWER_CABINET =
+            registerCabinet("jungle_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> ACACIA_DOOR_CABINET =
+            registerDoorCabinet("acacia_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> ACACIA_DRAWER_CABINET =
+            registerCabinet("acacia_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> MANGROVE_DOOR_CABINET =
+            registerDoorCabinet("mangrove_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> MANGROVE_DRAWER_CABINET =
+            registerCabinet("mangrove_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> CHERRY_DOOR_CABINET =
+            registerDoorCabinet("cherry_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> CHERRY_DRAWER_CABINET =
+            registerCabinet("cherry_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> BAMBOO_DOOR_CABINET =
+            registerDoorCabinet("bamboo_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> BAMBOO_DRAWER_CABINET =
+            registerCabinet("bamboo_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> CRIMSON_DOOR_CABINET =
+            registerDoorCabinet("crimson_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> CRIMSON_DRAWER_CABINET =
+            registerCabinet("crimson_drawer_cabinet");
+    public static final DeferredBlock<DoorCabinetBlock> WARPED_DOOR_CABINET =
+            registerDoorCabinet("warped_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> WARPED_DRAWER_CABINET =
+            registerCabinet("warped_drawer_cabinet");
     // CABINET_VARIANT_REGISTRATIONS
 
     private static java.util.Map<String, DeferredBlock<Block>> registerBasicBlocks() {

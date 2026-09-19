@@ -52,6 +52,26 @@
                    "atouchofclass:crimson_newel_post",
                    "atouchofclass:warped_newel_post",
                    "atouchofclass:pale_oak_door_cabinet",
-                   "atouchofclass:pale_oak_drawer_cabinet"
+                   "atouchofclass:pale_oak_drawer_cabinet",
+                   "atouchofclass:oak_door_cabinet",
+                   "atouchofclass:oak_drawer_cabinet",
+                   "atouchofclass:spruce_door_cabinet",
+                   "atouchofclass:spruce_drawer_cabinet",
+                   "atouchofclass:birch_door_cabinet",
+                   "atouchofclass:birch_drawer_cabinet",
+                   "atouchofclass:jungle_door_cabinet",
+                   "atouchofclass:jungle_drawer_cabinet",
+                   "atouchofclass:acacia_door_cabinet",
+                   "atouchofclass:acacia_drawer_cabinet",
+                   "atouchofclass:mangrove_door_cabinet",
+                   "atouchofclass:mangrove_drawer_cabinet",
+                   "atouchofclass:cherry_door_cabinet",
+                   "atouchofclass:cherry_drawer_cabinet",
+                   "atouchofclass:bamboo_door_cabinet",
+                   "atouchofclass:bamboo_drawer_cabinet",
+                   "atouchofclass:crimson_door_cabinet",
+                   "atouchofclass:crimson_drawer_cabinet",
+                   "atouchofclass:warped_door_cabinet",
+                   "atouchofclass:warped_drawer_cabinet"
                ]
 }

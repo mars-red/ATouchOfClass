@@ -225,6 +225,46 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("waxed_oxidized_cut_copper_countertop", ModBlocks.WAXED_OXIDIZED_CUT_COPPER_COUNTERTOP);
     public static final DeferredItem<BlockItem> WAXED_OXIDIZED_CUT_COPPER_SINK =
             ITEMS.registerSimpleBlockItem("waxed_oxidized_cut_copper_sink", ModBlocks.WAXED_OXIDIZED_CUT_COPPER_SINK);
+    public static final DeferredItem<BlockItem> OAK_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("oak_door_cabinet", ModBlocks.OAK_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> OAK_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("oak_drawer_cabinet", ModBlocks.OAK_DRAWER_CABINET);
+    public static final DeferredItem<BlockItem> SPRUCE_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("spruce_door_cabinet", ModBlocks.SPRUCE_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> SPRUCE_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("spruce_drawer_cabinet", ModBlocks.SPRUCE_DRAWER_CABINET);
+    public static final DeferredItem<BlockItem> BIRCH_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("birch_door_cabinet", ModBlocks.BIRCH_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> BIRCH_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("birch_drawer_cabinet", ModBlocks.BIRCH_DRAWER_CABINET);
+    public static final DeferredItem<BlockItem> JUNGLE_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("jungle_door_cabinet", ModBlocks.JUNGLE_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> JUNGLE_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("jungle_drawer_cabinet", ModBlocks.JUNGLE_DRAWER_CABINET);
+    public static final DeferredItem<BlockItem> ACACIA_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("acacia_door_cabinet", ModBlocks.ACACIA_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> ACACIA_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("acacia_drawer_cabinet", ModBlocks.ACACIA_DRAWER_CABINET);
+    public static final DeferredItem<BlockItem> MANGROVE_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("mangrove_door_cabinet", ModBlocks.MANGROVE_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> MANGROVE_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("mangrove_drawer_cabinet", ModBlocks.MANGROVE_DRAWER_CABINET);
+    public static final DeferredItem<BlockItem> CHERRY_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("cherry_door_cabinet", ModBlocks.CHERRY_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> CHERRY_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("cherry_drawer_cabinet", ModBlocks.CHERRY_DRAWER_CABINET);
+    public static final DeferredItem<BlockItem> BAMBOO_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("bamboo_door_cabinet", ModBlocks.BAMBOO_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> BAMBOO_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("bamboo_drawer_cabinet", ModBlocks.BAMBOO_DRAWER_CABINET);
+    public static final DeferredItem<BlockItem> CRIMSON_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("crimson_door_cabinet", ModBlocks.CRIMSON_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> CRIMSON_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("crimson_drawer_cabinet", ModBlocks.CRIMSON_DRAWER_CABINET);
+    public static final DeferredItem<BlockItem> WARPED_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("warped_door_cabinet", ModBlocks.WARPED_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> WARPED_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("warped_drawer_cabinet", ModBlocks.WARPED_DRAWER_CABINET);
     // FURNITURE_VARIANT_ITEM_REGISTRATIONS
 
     private static java.util.List<DeferredItem<BlockItem>> registerBasicBlockItems() {
@@ -601,6 +641,26 @@ public class ModItems {
             event.accept(WAXED_WEATHERED_CUT_COPPER_SINK);
             event.accept(WAXED_OXIDIZED_CUT_COPPER_COUNTERTOP);
             event.accept(WAXED_OXIDIZED_CUT_COPPER_SINK);
+            event.accept(OAK_DOOR_CABINET);
+            event.accept(OAK_DRAWER_CABINET);
+            event.accept(SPRUCE_DOOR_CABINET);
+            event.accept(SPRUCE_DRAWER_CABINET);
+            event.accept(BIRCH_DOOR_CABINET);
+            event.accept(BIRCH_DRAWER_CABINET);
+            event.accept(JUNGLE_DOOR_CABINET);
+            event.accept(JUNGLE_DRAWER_CABINET);
+            event.accept(ACACIA_DOOR_CABINET);
+            event.accept(ACACIA_DRAWER_CABINET);
+            event.accept(MANGROVE_DOOR_CABINET);
+            event.accept(MANGROVE_DRAWER_CABINET);
+            event.accept(CHERRY_DOOR_CABINET);
+            event.accept(CHERRY_DRAWER_CABINET);
+            event.accept(BAMBOO_DOOR_CABINET);
+            event.accept(BAMBOO_DRAWER_CABINET);
+            event.accept(CRIMSON_DOOR_CABINET);
+            event.accept(CRIMSON_DRAWER_CABINET);
+            event.accept(WARPED_DOOR_CABINET);
+            event.accept(WARPED_DRAWER_CABINET);
             // FURNITURE_VARIANT_CREATIVE_ENTRIES
             event.accept(OAK_RAILING);
             event.accept(OAK_BALUSTRADE);

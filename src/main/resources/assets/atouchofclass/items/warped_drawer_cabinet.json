@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "type":  "minecraft:model",
+                  "model":  "atouchofclass:item/warped_drawer_cabinet"
+              }
+}
