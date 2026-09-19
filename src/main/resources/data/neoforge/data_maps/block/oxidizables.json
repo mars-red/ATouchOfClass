@@ -27,6 +27,15 @@
     "atouchofclass:weathered_copper_chandelier": {
       "next_oxidation_stage": "atouchofclass:oxidized_copper_chandelier"
     },
+    "atouchofclass:copper_lamp_post": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_lamp_post"
+    },
+    "atouchofclass:exposed_copper_lamp_post": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_lamp_post"
+    },
+    "atouchofclass:weathered_copper_lamp_post": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_lamp_post"
+    },
     "atouchofclass:cut_copper_countertop": {
       "next_oxidation_stage": "atouchofclass:exposed_cut_copper_countertop"
     },

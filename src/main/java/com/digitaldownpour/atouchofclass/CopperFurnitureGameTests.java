@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
+import com.digitaldownpour.atouchofclass.blocks.CopperLampPostBlock;
 import net.neoforged.neoforge.common.DataMapHooks;
 import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
@@ -57,6 +58,35 @@ public class CopperFurnitureGameTests {
                         ModBlocks.WAXED_WEATHERED_CUT_COPPER_SINK.get(),
                         ModBlocks.WAXED_OXIDIZED_CUT_COPPER_SINK.get()
                 }, true);
+        helper.succeed();
+    }
+
+    @GameTest(template = "chandelier_test")
+    public static void lampPostsPreserveTheirSectionThroughCopperTransitions(GameTestHelper helper) {
+        Block[] stages = {
+                ModBlocks.COPPER_LAMP_POST.get(),
+                ModBlocks.EXPOSED_COPPER_LAMP_POST.get(),
+                ModBlocks.WEATHERED_COPPER_LAMP_POST.get(),
+                ModBlocks.OXIDIZED_COPPER_LAMP_POST.get()
+        };
+        Block[] waxedStages = {
+                ModBlocks.WAXED_COPPER_LAMP_POST.get(),
+                ModBlocks.WAXED_EXPOSED_COPPER_LAMP_POST.get(),
+                ModBlocks.WAXED_WEATHERED_COPPER_LAMP_POST.get(),
+                ModBlocks.WAXED_OXIDIZED_COPPER_LAMP_POST.get()
+        };
+
+        verifyFamily(helper, stages, waxedStages, false);
+        for (int i = 0; i < stages.length; i++) {
+            BlockState top = stages[i].defaultBlockState().setValue(CopperLampPostBlock.PART, 2);
+            helper.assertTrue(HoneycombItem.getWaxed(top).orElseThrow().getValue(CopperLampPostBlock.PART) == 2,
+                    "Waxing a lamp post must preserve its section");
+            if (i < stages.length - 1) {
+                helper.assertTrue(((WeatheringCopper) stages[i]).getNext(top).orElseThrow()
+                                .getValue(CopperLampPostBlock.PART) == 2,
+                        "Oxidizing a lamp post must preserve its section");
+            }
+        }
         helper.succeed();
     }
 
