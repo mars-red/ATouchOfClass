@@ -1,4 +1,8 @@
 {
+    "block.atouchofclass.glass_shower_surround":  "Glass Shower Surround",
+    "block.atouchofclass.glass_shower_door":  "Glass Shower Door",
+    "item.atouchofclass.glass_shower_surround":  "Glass Shower Surround",
+    "item.atouchofclass.glass_shower_door":  "Glass Shower Door",
     "item.atouchofclass.key_ring":  "Key Ring",
     "tooltip.atouchofclass.key_ring.contents":  "%s / %s keys",
     "tooltip.atouchofclass.key_ring.use":  "Right-click in the air to manage keys; use on a door to unlock.",

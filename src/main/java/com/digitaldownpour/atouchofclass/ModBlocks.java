@@ -19,6 +19,8 @@ import com.digitaldownpour.atouchofclass.blocks.PlinthBlock;
 import com.digitaldownpour.atouchofclass.blocks.CornerBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallDoorBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock;
+import com.digitaldownpour.atouchofclass.blocks.GlassShowerDoorBlock;
+import com.digitaldownpour.atouchofclass.blocks.GlassShowerSurroundBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorShaftPanelBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorFloorBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorDoorBlock;
@@ -1175,6 +1177,24 @@ public class ModBlocks {
             registerTallSidelight("tall_warped_sidelight", MapColor.WOOD);
 
     // TALL_SIDELIGHT_VARIANT_REGISTRATIONS
+
+    public static final DeferredHolder<Block, GlassShowerSurroundBlock> GLASS_SHOWER_SURROUND =
+            BLOCKS.register("glass_shower_surround", registryName -> new GlassShowerSurroundBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.NONE)
+                            .strength(0.3F)
+                            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+                            .noOcclusion()));
+
+    public static final DeferredHolder<Block, GlassShowerDoorBlock> GLASS_SHOWER_DOOR =
+            BLOCKS.register("glass_shower_door", registryName -> new GlassShowerDoorBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.NONE)
+                            .strength(0.3F)
+                            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+                            .noOcclusion()));
 
     public static final DeferredHolder<Block, KeyCutterBlock> KEY_CUTTER = BLOCKS.register("key_cutter",
             registryName -> new KeyCutterBlock(BlockBehaviour.Properties.of()

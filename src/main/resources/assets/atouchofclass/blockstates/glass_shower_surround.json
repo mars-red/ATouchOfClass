@@ -1,0 +1,28 @@
+{
+  "multipart": [
+    { "when": { "facing": "north" }, "apply": { "model": "atouchofclass:block/shower_glass_panel" } },
+    { "when": { "facing": "east" }, "apply": { "model": "atouchofclass:block/shower_glass_panel", "y": 90 } },
+    { "when": { "facing": "south" }, "apply": { "model": "atouchofclass:block/shower_glass_panel", "y": 180 } },
+    { "when": { "facing": "west" }, "apply": { "model": "atouchofclass:block/shower_glass_panel", "y": 270 } },
+
+    { "when": { "facing": "north", "left_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_left_border" } },
+    { "when": { "facing": "east", "left_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_left_border", "y": 90 } },
+    { "when": { "facing": "south", "left_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_left_border", "y": 180 } },
+    { "when": { "facing": "west", "left_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_left_border", "y": 270 } },
+
+    { "when": { "facing": "north", "right_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_right_border" } },
+    { "when": { "facing": "east", "right_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_right_border", "y": 90 } },
+    { "when": { "facing": "south", "right_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_right_border", "y": 180 } },
+    { "when": { "facing": "west", "right_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_right_border", "y": 270 } },
+
+    { "when": { "facing": "north", "up_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_top_border" } },
+    { "when": { "facing": "east", "up_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_top_border", "y": 90 } },
+    { "when": { "facing": "south", "up_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_top_border", "y": 180 } },
+    { "when": { "facing": "west", "up_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_top_border", "y": 270 } },
+
+    { "when": { "facing": "north", "down_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_bottom_border" } },
+    { "when": { "facing": "east", "down_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_bottom_border", "y": 90 } },
+    { "when": { "facing": "south", "down_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_bottom_border", "y": 180 } },
+    { "when": { "facing": "west", "down_connected": false }, "apply": { "model": "atouchofclass:block/shower_surround_bottom_border", "y": 270 } }
+  ]
+}
