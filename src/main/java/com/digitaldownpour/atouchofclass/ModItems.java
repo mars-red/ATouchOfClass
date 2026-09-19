@@ -514,6 +514,22 @@ public class ModItems {
     public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_FLOOR_LAMP = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_floor_lamp", ModBlocks.WAXED_EXPOSED_COPPER_FLOOR_LAMP);
     public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_FLOOR_LAMP = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_floor_lamp", ModBlocks.WAXED_WEATHERED_COPPER_FLOOR_LAMP);
     public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_FLOOR_LAMP = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_floor_lamp", ModBlocks.WAXED_OXIDIZED_COPPER_FLOOR_LAMP);
+    public static final DeferredItem<BlockItem> COPPER_BOWL_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("copper_bowl_ceiling_light", ModBlocks.COPPER_BOWL_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> EXPOSED_COPPER_BOWL_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("exposed_copper_bowl_ceiling_light", ModBlocks.EXPOSED_COPPER_BOWL_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> WEATHERED_COPPER_BOWL_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("weathered_copper_bowl_ceiling_light", ModBlocks.WEATHERED_COPPER_BOWL_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> OXIDIZED_COPPER_BOWL_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("oxidized_copper_bowl_ceiling_light", ModBlocks.OXIDIZED_COPPER_BOWL_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> WAXED_COPPER_BOWL_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("waxed_copper_bowl_ceiling_light", ModBlocks.WAXED_COPPER_BOWL_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_BOWL_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_bowl_ceiling_light", ModBlocks.WAXED_EXPOSED_COPPER_BOWL_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_BOWL_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_bowl_ceiling_light", ModBlocks.WAXED_WEATHERED_COPPER_BOWL_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_BOWL_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_bowl_ceiling_light", ModBlocks.WAXED_OXIDIZED_COPPER_BOWL_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> COPPER_COFFERED_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("copper_coffered_ceiling_light", ModBlocks.COPPER_COFFERED_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> EXPOSED_COPPER_COFFERED_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("exposed_copper_coffered_ceiling_light", ModBlocks.EXPOSED_COPPER_COFFERED_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> WEATHERED_COPPER_COFFERED_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("weathered_copper_coffered_ceiling_light", ModBlocks.WEATHERED_COPPER_COFFERED_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> OXIDIZED_COPPER_COFFERED_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("oxidized_copper_coffered_ceiling_light", ModBlocks.OXIDIZED_COPPER_COFFERED_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> WAXED_COPPER_COFFERED_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("waxed_copper_coffered_ceiling_light", ModBlocks.WAXED_COPPER_COFFERED_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_COFFERED_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_coffered_ceiling_light", ModBlocks.WAXED_EXPOSED_COPPER_COFFERED_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_COFFERED_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_coffered_ceiling_light", ModBlocks.WAXED_WEATHERED_COPPER_COFFERED_CEILING_LIGHT);
+    public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_COFFERED_CEILING_LIGHT = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_coffered_ceiling_light", ModBlocks.WAXED_OXIDIZED_COPPER_COFFERED_CEILING_LIGHT);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
@@ -560,6 +576,22 @@ public class ModItems {
             event.accept(WAXED_EXPOSED_COPPER_FLOOR_LAMP);
             event.accept(WAXED_WEATHERED_COPPER_FLOOR_LAMP);
             event.accept(WAXED_OXIDIZED_COPPER_FLOOR_LAMP);
+            event.accept(COPPER_BOWL_CEILING_LIGHT);
+            event.accept(EXPOSED_COPPER_BOWL_CEILING_LIGHT);
+            event.accept(WEATHERED_COPPER_BOWL_CEILING_LIGHT);
+            event.accept(OXIDIZED_COPPER_BOWL_CEILING_LIGHT);
+            event.accept(WAXED_COPPER_BOWL_CEILING_LIGHT);
+            event.accept(WAXED_EXPOSED_COPPER_BOWL_CEILING_LIGHT);
+            event.accept(WAXED_WEATHERED_COPPER_BOWL_CEILING_LIGHT);
+            event.accept(WAXED_OXIDIZED_COPPER_BOWL_CEILING_LIGHT);
+            event.accept(COPPER_COFFERED_CEILING_LIGHT);
+            event.accept(EXPOSED_COPPER_COFFERED_CEILING_LIGHT);
+            event.accept(WEATHERED_COPPER_COFFERED_CEILING_LIGHT);
+            event.accept(OXIDIZED_COPPER_COFFERED_CEILING_LIGHT);
+            event.accept(WAXED_COPPER_COFFERED_CEILING_LIGHT);
+            event.accept(WAXED_EXPOSED_COPPER_COFFERED_CEILING_LIGHT);
+            event.accept(WAXED_WEATHERED_COPPER_COFFERED_CEILING_LIGHT);
+            event.accept(WAXED_OXIDIZED_COPPER_COFFERED_CEILING_LIGHT);
             event.accept(COPPER_WALL_SCONCE);
             event.accept(EXPOSED_COPPER_WALL_SCONCE);
             event.accept(WEATHERED_COPPER_WALL_SCONCE);

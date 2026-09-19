@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "atouchofclass:exposed_copper_coffered_ceiling_light",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "atouchofclass:waxed_exposed_copper_coffered_ceiling_light",
+    "count": 1
+  }
+}

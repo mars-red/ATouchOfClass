@@ -8,10 +8,12 @@ import com.digitaldownpour.atouchofclass.blocks.CopperChainBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperChandelierBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperLampPostBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperFloorLampBlock;
+import com.digitaldownpour.atouchofclass.blocks.CopperCeilingLightBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperChainBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperChandelierBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperLampPostBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperFloorLampBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperCeilingLightBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringWallSconceBlock;
 import net.minecraft.world.level.block.WeatheringCopper.WeatherState;
 import com.digitaldownpour.atouchofclass.blocks.KeyCutterBlock;
@@ -1406,6 +1408,38 @@ public class ModBlocks {
                     .noOcclusion()
                     .lightLevel(state -> state.getValue(CopperFloorLampBlock.PART) == 2 ? 15 : 0);
             return waxed ? new CopperFloorLampBlock(properties) : new WeatheringCopperFloorLampBlock(age, properties);
+        });
+    }
+
+    public static final DeferredBlock<CopperCeilingLightBlock> COPPER_BOWL_CEILING_LIGHT = registerCopperCeilingLight("copper_bowl_ceiling_light", WeatherState.UNAFFECTED, false, false);
+    public static final DeferredBlock<CopperCeilingLightBlock> EXPOSED_COPPER_BOWL_CEILING_LIGHT = registerCopperCeilingLight("exposed_copper_bowl_ceiling_light", WeatherState.EXPOSED, false, false);
+    public static final DeferredBlock<CopperCeilingLightBlock> WEATHERED_COPPER_BOWL_CEILING_LIGHT = registerCopperCeilingLight("weathered_copper_bowl_ceiling_light", WeatherState.WEATHERED, false, false);
+    public static final DeferredBlock<CopperCeilingLightBlock> OXIDIZED_COPPER_BOWL_CEILING_LIGHT = registerCopperCeilingLight("oxidized_copper_bowl_ceiling_light", WeatherState.OXIDIZED, false, false);
+    public static final DeferredBlock<CopperCeilingLightBlock> WAXED_COPPER_BOWL_CEILING_LIGHT = registerCopperCeilingLight("waxed_copper_bowl_ceiling_light", WeatherState.UNAFFECTED, true, false);
+    public static final DeferredBlock<CopperCeilingLightBlock> WAXED_EXPOSED_COPPER_BOWL_CEILING_LIGHT = registerCopperCeilingLight("waxed_exposed_copper_bowl_ceiling_light", WeatherState.EXPOSED, true, false);
+    public static final DeferredBlock<CopperCeilingLightBlock> WAXED_WEATHERED_COPPER_BOWL_CEILING_LIGHT = registerCopperCeilingLight("waxed_weathered_copper_bowl_ceiling_light", WeatherState.WEATHERED, true, false);
+    public static final DeferredBlock<CopperCeilingLightBlock> WAXED_OXIDIZED_COPPER_BOWL_CEILING_LIGHT = registerCopperCeilingLight("waxed_oxidized_copper_bowl_ceiling_light", WeatherState.OXIDIZED, true, false);
+
+    public static final DeferredBlock<CopperCeilingLightBlock> COPPER_COFFERED_CEILING_LIGHT = registerCopperCeilingLight("copper_coffered_ceiling_light", WeatherState.UNAFFECTED, false, true);
+    public static final DeferredBlock<CopperCeilingLightBlock> EXPOSED_COPPER_COFFERED_CEILING_LIGHT = registerCopperCeilingLight("exposed_copper_coffered_ceiling_light", WeatherState.EXPOSED, false, true);
+    public static final DeferredBlock<CopperCeilingLightBlock> WEATHERED_COPPER_COFFERED_CEILING_LIGHT = registerCopperCeilingLight("weathered_copper_coffered_ceiling_light", WeatherState.WEATHERED, false, true);
+    public static final DeferredBlock<CopperCeilingLightBlock> OXIDIZED_COPPER_COFFERED_CEILING_LIGHT = registerCopperCeilingLight("oxidized_copper_coffered_ceiling_light", WeatherState.OXIDIZED, false, true);
+    public static final DeferredBlock<CopperCeilingLightBlock> WAXED_COPPER_COFFERED_CEILING_LIGHT = registerCopperCeilingLight("waxed_copper_coffered_ceiling_light", WeatherState.UNAFFECTED, true, true);
+    public static final DeferredBlock<CopperCeilingLightBlock> WAXED_EXPOSED_COPPER_COFFERED_CEILING_LIGHT = registerCopperCeilingLight("waxed_exposed_copper_coffered_ceiling_light", WeatherState.EXPOSED, true, true);
+    public static final DeferredBlock<CopperCeilingLightBlock> WAXED_WEATHERED_COPPER_COFFERED_CEILING_LIGHT = registerCopperCeilingLight("waxed_weathered_copper_coffered_ceiling_light", WeatherState.WEATHERED, true, true);
+    public static final DeferredBlock<CopperCeilingLightBlock> WAXED_OXIDIZED_COPPER_COFFERED_CEILING_LIGHT = registerCopperCeilingLight("waxed_oxidized_copper_coffered_ceiling_light", WeatherState.OXIDIZED, true, true);
+
+    private static DeferredBlock<CopperCeilingLightBlock> registerCopperCeilingLight(
+            String name, WeatherState age, boolean waxed, boolean coffered) {
+        return BLOCKS.register(name, key -> {
+            BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, key))
+                    .mapColor(age.ordinal() < 2 ? MapColor.COLOR_ORANGE : MapColor.COLOR_CYAN)
+                    .strength(3.0F, 6.0F).requiresCorrectToolForDrops()
+                    .sound(net.minecraft.world.level.block.SoundType.COPPER)
+                    .noOcclusion().lightLevel(state -> 15);
+            return waxed ? new CopperCeilingLightBlock(coffered, properties)
+                    : new WeatheringCopperCeilingLightBlock(age, coffered, properties);
         });
     }
 

@@ -60,6 +60,30 @@
     "atouchofclass:oxidized_copper_floor_lamp": {
       "waxed": "atouchofclass:waxed_oxidized_copper_floor_lamp"
     },
+    "atouchofclass:copper_bowl_ceiling_light": {
+      "waxed": "atouchofclass:waxed_copper_bowl_ceiling_light"
+    },
+    "atouchofclass:exposed_copper_bowl_ceiling_light": {
+      "waxed": "atouchofclass:waxed_exposed_copper_bowl_ceiling_light"
+    },
+    "atouchofclass:weathered_copper_bowl_ceiling_light": {
+      "waxed": "atouchofclass:waxed_weathered_copper_bowl_ceiling_light"
+    },
+    "atouchofclass:oxidized_copper_bowl_ceiling_light": {
+      "waxed": "atouchofclass:waxed_oxidized_copper_bowl_ceiling_light"
+    },
+    "atouchofclass:copper_coffered_ceiling_light": {
+      "waxed": "atouchofclass:waxed_copper_coffered_ceiling_light"
+    },
+    "atouchofclass:exposed_copper_coffered_ceiling_light": {
+      "waxed": "atouchofclass:waxed_exposed_copper_coffered_ceiling_light"
+    },
+    "atouchofclass:weathered_copper_coffered_ceiling_light": {
+      "waxed": "atouchofclass:waxed_weathered_copper_coffered_ceiling_light"
+    },
+    "atouchofclass:oxidized_copper_coffered_ceiling_light": {
+      "waxed": "atouchofclass:waxed_oxidized_copper_coffered_ceiling_light"
+    },
     "atouchofclass:cut_copper_countertop": {
       "waxed": "atouchofclass:waxed_cut_copper_countertop"
     },

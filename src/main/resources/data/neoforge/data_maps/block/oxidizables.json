@@ -45,6 +45,24 @@
     "atouchofclass:weathered_copper_floor_lamp": {
       "next_oxidation_stage": "atouchofclass:oxidized_copper_floor_lamp"
     },
+    "atouchofclass:copper_bowl_ceiling_light": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_bowl_ceiling_light"
+    },
+    "atouchofclass:exposed_copper_bowl_ceiling_light": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_bowl_ceiling_light"
+    },
+    "atouchofclass:weathered_copper_bowl_ceiling_light": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_bowl_ceiling_light"
+    },
+    "atouchofclass:copper_coffered_ceiling_light": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_coffered_ceiling_light"
+    },
+    "atouchofclass:exposed_copper_coffered_ceiling_light": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_coffered_ceiling_light"
+    },
+    "atouchofclass:weathered_copper_coffered_ceiling_light": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_coffered_ceiling_light"
+    },
     "atouchofclass:cut_copper_countertop": {
       "next_oxidation_stage": "atouchofclass:exposed_cut_copper_countertop"
     },

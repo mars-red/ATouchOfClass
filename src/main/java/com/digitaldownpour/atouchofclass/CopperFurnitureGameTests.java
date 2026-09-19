@@ -120,6 +120,37 @@ public class CopperFurnitureGameTests {
         helper.succeed();
     }
 
+    @GameTest(template = "chandelier_test")
+    public static void ceilingLightFamiliesOxidizeAndWax(GameTestHelper helper) {
+        verifyFamily(helper,
+                new Block[]{
+                        ModBlocks.COPPER_BOWL_CEILING_LIGHT.get(),
+                        ModBlocks.EXPOSED_COPPER_BOWL_CEILING_LIGHT.get(),
+                        ModBlocks.WEATHERED_COPPER_BOWL_CEILING_LIGHT.get(),
+                        ModBlocks.OXIDIZED_COPPER_BOWL_CEILING_LIGHT.get()
+                },
+                new Block[]{
+                        ModBlocks.WAXED_COPPER_BOWL_CEILING_LIGHT.get(),
+                        ModBlocks.WAXED_EXPOSED_COPPER_BOWL_CEILING_LIGHT.get(),
+                        ModBlocks.WAXED_WEATHERED_COPPER_BOWL_CEILING_LIGHT.get(),
+                        ModBlocks.WAXED_OXIDIZED_COPPER_BOWL_CEILING_LIGHT.get()
+                }, false);
+        verifyFamily(helper,
+                new Block[]{
+                        ModBlocks.COPPER_COFFERED_CEILING_LIGHT.get(),
+                        ModBlocks.EXPOSED_COPPER_COFFERED_CEILING_LIGHT.get(),
+                        ModBlocks.WEATHERED_COPPER_COFFERED_CEILING_LIGHT.get(),
+                        ModBlocks.OXIDIZED_COPPER_COFFERED_CEILING_LIGHT.get()
+                },
+                new Block[]{
+                        ModBlocks.WAXED_COPPER_COFFERED_CEILING_LIGHT.get(),
+                        ModBlocks.WAXED_EXPOSED_COPPER_COFFERED_CEILING_LIGHT.get(),
+                        ModBlocks.WAXED_WEATHERED_COPPER_COFFERED_CEILING_LIGHT.get(),
+                        ModBlocks.WAXED_OXIDIZED_COPPER_COFFERED_CEILING_LIGHT.get()
+                }, false);
+        helper.succeed();
+    }
+
     private static void verifyFamily(GameTestHelper helper, Block[] stages, Block[] waxedStages, boolean oriented) {
         BlockPos mapColorPos = helper.absolutePos(new BlockPos(1, 2, 1));
 
