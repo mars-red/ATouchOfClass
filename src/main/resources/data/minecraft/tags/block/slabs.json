@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "atouchofclass:calcite_slab"
+    "atouchofclass:calcite_slab",
+    "atouchofclass:buff_brick_slab"
   ]
 }
