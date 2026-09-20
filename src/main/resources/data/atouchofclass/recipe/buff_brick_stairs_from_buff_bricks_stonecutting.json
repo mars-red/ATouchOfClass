@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "atouchofclass:buff_bricks",
+  "result": { "count": 1, "id": "atouchofclass:buff_brick_stairs" }
+}

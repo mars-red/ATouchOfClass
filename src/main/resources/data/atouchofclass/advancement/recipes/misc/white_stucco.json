@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bucket_of_plaster": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "atouchofclass:bucket_of_plaster"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atouchofclass:white_stucco"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bucket_of_plaster",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "atouchofclass:white_stucco"
+    ]
+  }
+}

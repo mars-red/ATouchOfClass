@@ -4,6 +4,7 @@ import com.digitaldownpour.atouchofclass.items.DoorKeyItem;
 import com.digitaldownpour.atouchofclass.items.KeyRingItem;
 import com.digitaldownpour.atouchofclass.items.BucketOfPlasterItem;
 import com.digitaldownpour.atouchofclass.items.TallDoorItem;
+import com.digitaldownpour.atouchofclass.items.WallFinishItem;
 import com.digitaldownpour.atouchofclass.items.WallpaperItem;
 import com.digitaldownpour.atouchofclass.items.WainscotingItem;
 import net.minecraft.core.registries.Registries;
@@ -24,6 +25,14 @@ public class ModItems {
 
     public static final DeferredItem<BlockItem> CALCITE_SLAB =
             ITEMS.registerSimpleBlockItem("calcite_slab", ModBlocks.CALCITE_SLAB);
+    public static final DeferredItem<BlockItem> BUFF_BRICKS =
+            ITEMS.registerSimpleBlockItem("buff_bricks", ModBlocks.BUFF_BRICKS);
+    public static final DeferredItem<BlockItem> BUFF_BRICK_SLAB =
+            ITEMS.registerSimpleBlockItem("buff_brick_slab", ModBlocks.BUFF_BRICK_SLAB);
+    public static final DeferredItem<BlockItem> BUFF_BRICK_STAIRS =
+            ITEMS.registerSimpleBlockItem("buff_brick_stairs", ModBlocks.BUFF_BRICK_STAIRS);
+    public static final DeferredItem<BlockItem> BUFF_BRICK_WALL =
+            ITEMS.registerSimpleBlockItem("buff_brick_wall", ModBlocks.BUFF_BRICK_WALL);
     public static final DeferredItem<BlockItem> CALCITE_COUNTERTOP =
             ITEMS.registerSimpleBlockItem("calcite_countertop", ModBlocks.CALCITE_COUNTERTOP);
     public static final DeferredItem<BlockItem> CALCITE_SINK =
@@ -299,6 +308,18 @@ public class ModItems {
     public static final DeferredItem<WallpaperItem> STRIPED_WALLPAPER = registerWallpaper("striped_wallpaper");
     public static final DeferredItem<WallpaperItem> GOTHIC_WALLPAPER = registerWallpaper("gothic_wallpaper");
 
+    public static final DeferredItem<WallFinishItem> SHAKE_SIDING = registerWallFinish(
+            "shake_siding", WallFinishItem.Placement.WALLS_ONLY
+    );
+    public static final DeferredItem<WallFinishItem> WHITE_STUCCO = registerWallFinish(
+            "white_stucco", WallFinishItem.Placement.ALL_FACES
+    );
+    public static final DeferredItem<WallFinishItem> RED_BRICK = registerWallFinish(
+            "red_brick", WallFinishItem.Placement.WALLS_AND_TOP
+    );
+    public static final DeferredItem<WallFinishItem> BUFF_BRICK = registerWallFinish(
+            "buff_brick", WallFinishItem.Placement.WALLS_AND_TOP
+    );
     public static final DeferredItem<WainscotingItem> WAINSCOTING_ITEM = ITEMS.registerItem(
             "wainscoting",
             WainscotingItem::new,
@@ -621,6 +642,10 @@ public class ModItems {
             event.accept(OGEE_LATTICE_WALLPAPER);
             event.accept(STRIPED_WALLPAPER);
             event.accept(GOTHIC_WALLPAPER);
+            event.accept(SHAKE_SIDING);
+            event.accept(WHITE_STUCCO);
+            event.accept(RED_BRICK);
+            event.accept(BUFF_BRICK);
             event.accept(WAINSCOTING_ITEM);
             event.accept(BUCKET_OF_PLASTER);
         }
@@ -633,6 +658,10 @@ public class ModItems {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             BASIC_BLOCK_ITEMS.forEach(event::accept);
             event.accept(CALCITE_SLAB);
+            event.accept(BUFF_BRICKS);
+            event.accept(BUFF_BRICK_SLAB);
+            event.accept(BUFF_BRICK_STAIRS);
+            event.accept(BUFF_BRICK_WALL);
             event.accept(CALCITE_COUNTERTOP);
             event.accept(CALCITE_SINK);
             event.accept(DARK_OAK_DOOR_CABINET);
@@ -811,6 +840,21 @@ public class ModItems {
                 properties -> new WallpaperItem(
                         properties,
                         ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "block/" + name)
+                ),
+                new Item.Properties()
+        );
+    }
+
+    private static DeferredItem<WallFinishItem> registerWallFinish(
+            String name,
+            WallFinishItem.Placement placement
+    ) {
+        return ITEMS.registerItem(
+                name,
+                properties -> new WallFinishItem(
+                        properties,
+                        ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "block/" + name),
+                        placement
                 ),
                 new Item.Properties()
         );

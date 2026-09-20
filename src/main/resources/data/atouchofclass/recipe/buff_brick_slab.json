@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": { "#": "atouchofclass:buff_bricks" },
+  "pattern": ["###"],
+  "result": { "count": 6, "id": "atouchofclass:buff_brick_slab" }
+}

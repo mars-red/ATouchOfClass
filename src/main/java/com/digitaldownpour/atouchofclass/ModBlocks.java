@@ -51,6 +51,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -89,6 +91,24 @@ public class ModBlocks {
     public static final DeferredBlock<SlabBlock> CALCITE_SLAB =
             BLOCKS.register("calcite_slab", registryName -> new SlabBlock(
                     BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+
+    public static final DeferredBlock<Block> BUFF_BRICKS =
+            BLOCKS.register("buff_bricks", registryName -> new Block(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<SlabBlock> BUFF_BRICK_SLAB =
+            BLOCKS.register("buff_brick_slab", registryName -> new SlabBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_SLAB)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<StairBlock> BUFF_BRICK_STAIRS =
+            BLOCKS.register("buff_brick_stairs", registryName -> new StairBlock(
+                    BUFF_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_STAIRS)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<WallBlock> BUFF_BRICK_WALL =
+            BLOCKS.register("buff_brick_wall", registryName -> new WallBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_WALL)
                             .setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
     public static final DeferredBlock<CountertopBlock> CALCITE_COUNTERTOP =
