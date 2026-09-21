@@ -481,6 +481,7 @@ public class ModItems {
     public static final DeferredItem<BlockItem> KEY_CUTTER_ITEM = ITEMS.registerSimpleBlockItem("key_cutter", ModBlocks.KEY_CUTTER);
     public static final DeferredItem<BlockItem> TOILET_ITEM = ITEMS.registerSimpleBlockItem("toilet", ModBlocks.TOILET);
     public static final DeferredItem<BlockItem> CLAWFOOT_BATHTUB_ITEM = ITEMS.registerSimpleBlockItem("clawfoot_bathtub", ModBlocks.CLAWFOOT_BATHTUB);
+    public static final DeferredItem<BlockItem> REFRIGERATOR_ITEM = ITEMS.registerSimpleBlockItem("refrigerator", ModBlocks.REFRIGERATOR);
     public static final DeferredItem<BlockItem> ELEVATOR_SHAFT_PANEL_ITEM = ITEMS.registerSimpleBlockItem("elevator_shaft_panel", ModBlocks.ELEVATOR_SHAFT_PANEL);
     public static final DeferredItem<BlockItem> ELEVATOR_FLOOR_ITEM = ITEMS.registerSimpleBlockItem("elevator_floor", ModBlocks.ELEVATOR_FLOOR);
     public static final DeferredItem<BlockItem> ELEVATOR_DOOR_ITEM = ITEMS.registerSimpleBlockItem("elevator_door", ModBlocks.ELEVATOR_DOOR);
@@ -573,6 +574,7 @@ public class ModItems {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(TOILET_ITEM);
             event.accept(CLAWFOOT_BATHTUB_ITEM);
+            event.accept(REFRIGERATOR_ITEM);
             event.accept(COPPER_CHAIN);
             event.accept(EXPOSED_COPPER_CHAIN);
             event.accept(WEATHERED_COPPER_CHAIN);

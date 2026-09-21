@@ -1,0 +1,9 @@
+{
+  "parent": "atouchofclass:block/refrigerator_template",
+  "elements": [
+    { "from": [0, 0, 2], "to": [16, 12, 16], "faces": {
+      "north": {"texture": "#body"}, "east": {"texture": "#body"}, "south": {"texture": "#body"},
+      "west": {"texture": "#body"}, "up": {"texture": "#body"}, "down": {"texture": "#body"}
+    }}
+  ]
+}

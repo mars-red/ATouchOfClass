@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SCS"
+  ],
+  "key": {
+    "S": "atouchofclass:brushed_stainless_steel",
+    "C": "minecraft:chest"
+  },
+  "result": {
+    "count": 1,
+    "id": "atouchofclass:refrigerator"
+  }
+}

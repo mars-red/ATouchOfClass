@@ -474,5 +474,8 @@
     "block.atouchofclass.warped_door_cabinet":  "Warped Door Cabinet",
     "item.atouchofclass.warped_door_cabinet":  "Warped Door Cabinet",
     "block.atouchofclass.warped_drawer_cabinet":  "Warped Drawer Cabinet",
-    "item.atouchofclass.warped_drawer_cabinet":  "Warped Drawer Cabinet"
+    "item.atouchofclass.warped_drawer_cabinet":  "Warped Drawer Cabinet",
+    "block.atouchofclass.refrigerator": "Refrigerator",
+    "item.atouchofclass.refrigerator": "Refrigerator",
+    "container.atouchofclass.refrigerator": "Refrigerator"
 }

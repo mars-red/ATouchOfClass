@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brushed_stainless_steel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {"items": "atouchofclass:brushed_stainless_steel"}
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atouchofclass:refrigerator"
+      }
+    }
+  },
+  "requirements": [
+    ["has_brushed_stainless_steel", "has_the_recipe"]
+  ],
+  "rewards": {
+    "recipes": ["atouchofclass:refrigerator"]
+  }
+}
