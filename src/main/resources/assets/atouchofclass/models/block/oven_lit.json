@@ -1,0 +1,6 @@
+{
+  "parent": "atouchofclass:block/oven_template",
+  "textures": {
+    "window": "atouchofclass:block/oven_window_lit"
+  }
+}

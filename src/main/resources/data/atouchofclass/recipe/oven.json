@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "SFS",
+    "SSS"
+  ],
+  "key": {
+    "S": "atouchofclass:brushed_stainless_steel",
+    "F": "minecraft:furnace"
+  },
+  "result": {
+    "count": 1,
+    "id": "atouchofclass:oven"
+  }
+}

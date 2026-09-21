@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "surface": "atouchofclass:block/induction_cooktop",
+    "trim": "atouchofclass:block/brushed_stainless_steel",
+    "particle": "atouchofclass:block/induction_cooktop"
+  }
+}

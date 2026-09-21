@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "GGG",
+    "IRI"
+  ],
+  "key": {
+    "G": "minecraft:black_stained_glass",
+    "I": "minecraft:iron_ingot",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "atouchofclass:induction_cooktop"
+  }
+}

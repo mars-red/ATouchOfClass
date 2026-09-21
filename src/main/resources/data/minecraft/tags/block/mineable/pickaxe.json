@@ -182,7 +182,9 @@
                    "atouchofclass:waxed_weathered_cut_copper_sink",
                    "atouchofclass:waxed_oxidized_cut_copper_countertop",
                    "atouchofclass:waxed_oxidized_cut_copper_sink",
-                   "atouchofclass:refrigerator"
+                   "atouchofclass:refrigerator",
+                   "atouchofclass:oven",
+                   "atouchofclass:induction_cooktop"
                ],
     "replace":  false
 }

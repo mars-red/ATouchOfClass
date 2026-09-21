@@ -39,6 +39,8 @@ import com.digitaldownpour.atouchofclass.blocks.ElevatorDestinationControlBlock;
 import com.digitaldownpour.atouchofclass.blocks.ToiletBlock;
 import com.digitaldownpour.atouchofclass.blocks.ClawfootBathtubBlock;
 import com.digitaldownpour.atouchofclass.blocks.RefrigeratorBlock;
+import com.digitaldownpour.atouchofclass.blocks.OvenBlock;
+import com.digitaldownpour.atouchofclass.blocks.InductionCooktopBlock;
 import com.digitaldownpour.atouchofclass.blocks.CabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DoorCabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
@@ -1287,6 +1289,28 @@ public class ModBlocks {
                     .noOcclusion()
             )
     );
+
+    public static final DeferredHolder<Block, OvenBlock> OVEN = BLOCKS.register("oven",
+            registryName -> new OvenBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.METAL)
+                    .strength(3.5F, 6.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.METAL)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(OvenBlock.LIT) ? 13 : 0)
+            )
+    );
+
+    public static final DeferredHolder<Block, InductionCooktopBlock> INDUCTION_COOKTOP =
+            BLOCKS.register("induction_cooktop",
+                    registryName -> new InductionCooktopBlock(BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.COLOR_BLACK)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()
+                    ));
 
     public static final DeferredHolder<Block, ElevatorShaftPanelBlock> ELEVATOR_SHAFT_PANEL = BLOCKS.register("elevator_shaft_panel",
             registryName -> new ElevatorShaftPanelBlock(BlockBehaviour.Properties.of()
