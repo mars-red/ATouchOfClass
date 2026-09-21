@@ -6,6 +6,7 @@ import com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.CabinetBlockEntity;
+import com.digitaldownpour.atouchofclass.entities.RefrigeratorBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -43,6 +44,12 @@ public class ModEntities {
                     ModBlocks.cabinetBlocks().stream().map(DeferredHolder::get).toArray(Block[]::new)
             )
     );
+
+    public static final Supplier<BlockEntityType<RefrigeratorBlockEntity>> REFRIGERATOR_BE =
+            BLOCK_ENTITY_TYPES.register("refrigerator_be", () -> new BlockEntityType<>(
+                    RefrigeratorBlockEntity::new,
+                    ModBlocks.REFRIGERATOR.get()
+            ));
 
     public static final Supplier<BlockEntityType<TallDoorBlockEntity>> TALL_DOOR_BE = BLOCK_ENTITY_TYPES.register("tall_door_be",
             () -> new BlockEntityType<>(

@@ -1,0 +1,21 @@
+{
+  "parent": "atouchofclass:block/refrigerator_template",
+  "elements": [
+    { "from": [0, 0, 2], "to": [16, 16, 16], "faces": {
+      "north": {"texture": "#body"}, "east": {"texture": "#body"}, "south": {"texture": "#body"},
+      "west": {"texture": "#body"}, "up": {"texture": "#body"}, "down": {"texture": "#body"}
+    }},
+    { "from": [0.5, -3.5, 1], "to": [16, 27.5, 2], "faces": {
+      "north": {"texture": "#front", "uv": [0, 0, 16, 16]},
+      "east": {"texture": "#front", "uv": [0, 0, 1, 16]},
+      "south": {"texture": "#front", "uv": [0, 0, 16, 16]},
+      "west": {"texture": "#front", "uv": [0, 0, 1, 16]},
+      "up": {"texture": "#front", "uv": [0, 0, 16, 1]},
+      "down": {"texture": "#front", "uv": [0, 0, 16, 1]}
+    }},
+    { "from": [13.25, 1.5, 0.25], "to": [14.5, 14.5, 1], "faces": {
+      "north": {"texture": "#trim"}, "east": {"texture": "#trim"}, "south": {"texture": "#trim"},
+      "west": {"texture": "#trim"}, "up": {"texture": "#trim"}, "down": {"texture": "#trim"}
+    }}
+  ]
+}

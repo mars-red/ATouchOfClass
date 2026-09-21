@@ -38,6 +38,7 @@ import com.digitaldownpour.atouchofclass.blocks.ElevatorCallButtonBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorDestinationControlBlock;
 import com.digitaldownpour.atouchofclass.blocks.ToiletBlock;
 import com.digitaldownpour.atouchofclass.blocks.ClawfootBathtubBlock;
+import com.digitaldownpour.atouchofclass.blocks.RefrigeratorBlock;
 import com.digitaldownpour.atouchofclass.blocks.CabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DoorCabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
@@ -1271,6 +1272,18 @@ public class ModBlocks {
                     .strength(1.5F, 6.0F)
                     .sound(net.minecraft.world.level.block.SoundType.STONE)
                     .requiresCorrectToolForDrops()
+                    .noOcclusion()
+            )
+    );
+
+    public static final DeferredHolder<Block, RefrigeratorBlock> REFRIGERATOR = BLOCKS.register("refrigerator",
+            registryName -> new RefrigeratorBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.METAL)
+                    .strength(3.0F, 6.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.METAL)
+                    .requiresCorrectToolForDrops()
+                    .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
                     .noOcclusion()
             )
     );
