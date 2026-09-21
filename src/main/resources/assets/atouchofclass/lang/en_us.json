@@ -477,5 +477,10 @@
     "item.atouchofclass.warped_drawer_cabinet":  "Warped Drawer Cabinet",
     "block.atouchofclass.refrigerator": "Refrigerator",
     "item.atouchofclass.refrigerator": "Refrigerator",
-    "container.atouchofclass.refrigerator": "Refrigerator"
+    "container.atouchofclass.refrigerator": "Refrigerator",
+    "block.atouchofclass.oven": "Oven",
+    "item.atouchofclass.oven": "Oven",
+    "container.atouchofclass.oven": "Oven",
+    "block.atouchofclass.induction_cooktop": "Induction Cooktop",
+    "item.atouchofclass.induction_cooktop": "Induction Cooktop"
 }

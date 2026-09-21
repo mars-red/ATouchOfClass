@@ -482,6 +482,9 @@ public class ModItems {
     public static final DeferredItem<BlockItem> TOILET_ITEM = ITEMS.registerSimpleBlockItem("toilet", ModBlocks.TOILET);
     public static final DeferredItem<BlockItem> CLAWFOOT_BATHTUB_ITEM = ITEMS.registerSimpleBlockItem("clawfoot_bathtub", ModBlocks.CLAWFOOT_BATHTUB);
     public static final DeferredItem<BlockItem> REFRIGERATOR_ITEM = ITEMS.registerSimpleBlockItem("refrigerator", ModBlocks.REFRIGERATOR);
+    public static final DeferredItem<BlockItem> OVEN_ITEM = ITEMS.registerSimpleBlockItem("oven", ModBlocks.OVEN);
+    public static final DeferredItem<BlockItem> INDUCTION_COOKTOP_ITEM =
+            ITEMS.registerSimpleBlockItem("induction_cooktop", ModBlocks.INDUCTION_COOKTOP);
     public static final DeferredItem<BlockItem> ELEVATOR_SHAFT_PANEL_ITEM = ITEMS.registerSimpleBlockItem("elevator_shaft_panel", ModBlocks.ELEVATOR_SHAFT_PANEL);
     public static final DeferredItem<BlockItem> ELEVATOR_FLOOR_ITEM = ITEMS.registerSimpleBlockItem("elevator_floor", ModBlocks.ELEVATOR_FLOOR);
     public static final DeferredItem<BlockItem> ELEVATOR_DOOR_ITEM = ITEMS.registerSimpleBlockItem("elevator_door", ModBlocks.ELEVATOR_DOOR);
@@ -575,6 +578,8 @@ public class ModItems {
             event.accept(TOILET_ITEM);
             event.accept(CLAWFOOT_BATHTUB_ITEM);
             event.accept(REFRIGERATOR_ITEM);
+            event.accept(OVEN_ITEM);
+            event.accept(INDUCTION_COOKTOP_ITEM);
             event.accept(COPPER_CHAIN);
             event.accept(EXPOSED_COPPER_CHAIN);
             event.accept(WEATHERED_COPPER_CHAIN);
