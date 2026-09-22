@@ -481,6 +481,7 @@ public class ModItems {
     public static final DeferredItem<BlockItem> KEY_CUTTER_ITEM = ITEMS.registerSimpleBlockItem("key_cutter", ModBlocks.KEY_CUTTER);
     public static final DeferredItem<BlockItem> TOILET_ITEM = ITEMS.registerSimpleBlockItem("toilet", ModBlocks.TOILET);
     public static final DeferredItem<BlockItem> CLAWFOOT_BATHTUB_ITEM = ITEMS.registerSimpleBlockItem("clawfoot_bathtub", ModBlocks.CLAWFOOT_BATHTUB);
+    public static final DeferredItem<BlockItem> DARK_OAK_FOUR_POST_BED_ITEM = ITEMS.registerSimpleBlockItem("dark_oak_four_post_bed", ModBlocks.DARK_OAK_FOUR_POST_BED);
     public static final DeferredItem<BlockItem> REFRIGERATOR_ITEM = ITEMS.registerSimpleBlockItem("refrigerator", ModBlocks.REFRIGERATOR);
     public static final DeferredItem<BlockItem> OVEN_ITEM = ITEMS.registerSimpleBlockItem("oven", ModBlocks.OVEN);
     public static final DeferredItem<BlockItem> INDUCTION_COOKTOP_ITEM =
@@ -577,6 +578,7 @@ public class ModItems {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(TOILET_ITEM);
             event.accept(CLAWFOOT_BATHTUB_ITEM);
+            event.accept(DARK_OAK_FOUR_POST_BED_ITEM);
             event.accept(REFRIGERATOR_ITEM);
             event.accept(OVEN_ITEM);
             event.accept(INDUCTION_COOKTOP_ITEM);

@@ -38,6 +38,7 @@ import com.digitaldownpour.atouchofclass.blocks.ElevatorCallButtonBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorDestinationControlBlock;
 import com.digitaldownpour.atouchofclass.blocks.ToiletBlock;
 import com.digitaldownpour.atouchofclass.blocks.ClawfootBathtubBlock;
+import com.digitaldownpour.atouchofclass.blocks.DarkOakFourPostBedBlock;
 import com.digitaldownpour.atouchofclass.blocks.RefrigeratorBlock;
 import com.digitaldownpour.atouchofclass.blocks.OvenBlock;
 import com.digitaldownpour.atouchofclass.blocks.InductionCooktopBlock;
@@ -1274,6 +1275,16 @@ public class ModBlocks {
                     .strength(1.5F, 6.0F)
                     .sound(net.minecraft.world.level.block.SoundType.STONE)
                     .requiresCorrectToolForDrops()
+                    .noOcclusion()
+            )
+    );
+
+    public static final DeferredHolder<Block, DarkOakFourPostBedBlock> DARK_OAK_FOUR_POST_BED = BLOCKS.register("dark_oak_four_post_bed",
+            registryName -> new DarkOakFourPostBedBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.WOOD)
+                    .strength(2.0F, 3.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.WOOD)
                     .noOcclusion()
             )
     );
