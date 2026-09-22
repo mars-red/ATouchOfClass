@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LL",
+    "BB",
+    "LL"
+  ],
+  "key": {
+    "L": "#minecraft:acacia_logs",
+    "B": "minecraft:orange_bed"
+  },
+  "result": {
+    "id": "atouchofclass:acacia_orange_four_post_bed"
+  }
+}

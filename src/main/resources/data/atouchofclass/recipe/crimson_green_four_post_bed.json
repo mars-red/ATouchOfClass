@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LL",
+    "BB",
+    "LL"
+  ],
+  "key": {
+    "L": "#minecraft:crimson_stems",
+    "B": "minecraft:green_bed"
+  },
+  "result": {
+    "id": "atouchofclass:crimson_green_four_post_bed"
+  }
+}

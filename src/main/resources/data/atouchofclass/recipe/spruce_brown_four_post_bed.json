@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LL",
+    "BB",
+    "LL"
+  ],
+  "key": {
+    "L": "#minecraft:spruce_logs",
+    "B": "minecraft:brown_bed"
+  },
+  "result": {
+    "id": "atouchofclass:spruce_brown_four_post_bed"
+  }
+}

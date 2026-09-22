@@ -1,0 +1,10 @@
+{
+  "parent": "atouchofclass:item/dark_oak_red_four_post_bed",
+  "textures": {
+    "particle": "minecraft:block/stripped_birch_log",
+    "wood": "minecraft:block/stripped_birch_log",
+    "end": "minecraft:block/stripped_birch_log_top",
+    "red": "minecraft:block/green_wool",
+    "white": "minecraft:block/white_wool"
+  }
+}

@@ -481,6 +481,17 @@ public class ModItems {
     public static final DeferredItem<BlockItem> KEY_CUTTER_ITEM = ITEMS.registerSimpleBlockItem("key_cutter", ModBlocks.KEY_CUTTER);
     public static final DeferredItem<BlockItem> TOILET_ITEM = ITEMS.registerSimpleBlockItem("toilet", ModBlocks.TOILET);
     public static final DeferredItem<BlockItem> CLAWFOOT_BATHTUB_ITEM = ITEMS.registerSimpleBlockItem("clawfoot_bathtub", ModBlocks.CLAWFOOT_BATHTUB);
+    public static final java.util.Map<String, DeferredItem<BlockItem>> FOUR_POST_BED_ITEMS = registerFourPostBedItems();
+    public static final DeferredItem<BlockItem> DARK_OAK_RED_FOUR_POST_BED_ITEM =
+            FOUR_POST_BED_ITEMS.get("dark_oak_red_four_post_bed");
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerFourPostBedItems() {
+        java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
+        for (String id : FourPostBedVariants.IDS) {
+            items.put(id, ITEMS.registerSimpleBlockItem(id, ModBlocks.FOUR_POST_BEDS.get(id)));
+        }
+        return java.util.Collections.unmodifiableMap(items);
+    }
     public static final DeferredItem<BlockItem> REFRIGERATOR_ITEM = ITEMS.registerSimpleBlockItem("refrigerator", ModBlocks.REFRIGERATOR);
     public static final DeferredItem<BlockItem> OVEN_ITEM = ITEMS.registerSimpleBlockItem("oven", ModBlocks.OVEN);
     public static final DeferredItem<BlockItem> INDUCTION_COOKTOP_ITEM =
@@ -577,6 +588,7 @@ public class ModItems {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(TOILET_ITEM);
             event.accept(CLAWFOOT_BATHTUB_ITEM);
+            FOUR_POST_BED_ITEMS.values().forEach(event::accept);
             event.accept(REFRIGERATOR_ITEM);
             event.accept(OVEN_ITEM);
             event.accept(INDUCTION_COOKTOP_ITEM);
