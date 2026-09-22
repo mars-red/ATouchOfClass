@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LL",
+    "BB",
+    "LL"
+  ],
+  "key": {
+    "L": "#minecraft:birch_logs",
+    "B": "minecraft:lime_bed"
+  },
+  "result": {
+    "id": "atouchofclass:birch_lime_four_post_bed"
+  }
+}

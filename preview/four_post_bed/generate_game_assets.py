@@ -11,7 +11,7 @@ from generate_reference_preview import reference_bed_boxes
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "src/main/resources/assets/atouchofclass"
 DATA = ROOT / "src/main/resources/data/atouchofclass"
-NAME = "dark_oak_four_post_bed"
+NAME = "dark_oak_red_four_post_bed"
 
 TEXTURES = {
     "particle": "minecraft:block/stripped_dark_oak_log",

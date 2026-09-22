@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LL",
+    "BB",
+    "LL"
+  ],
+  "key": {
+    "L": "#minecraft:pale_oak_logs",
+    "B": "minecraft:red_bed"
+  },
+  "result": {
+    "id": "atouchofclass:pale_oak_red_four_post_bed"
+  }
+}

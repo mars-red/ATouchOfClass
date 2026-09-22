@@ -38,7 +38,7 @@ import com.digitaldownpour.atouchofclass.blocks.ElevatorCallButtonBlock;
 import com.digitaldownpour.atouchofclass.blocks.ElevatorDestinationControlBlock;
 import com.digitaldownpour.atouchofclass.blocks.ToiletBlock;
 import com.digitaldownpour.atouchofclass.blocks.ClawfootBathtubBlock;
-import com.digitaldownpour.atouchofclass.blocks.DarkOakFourPostBedBlock;
+import com.digitaldownpour.atouchofclass.blocks.FourPostBedBlock;
 import com.digitaldownpour.atouchofclass.blocks.RefrigeratorBlock;
 import com.digitaldownpour.atouchofclass.blocks.OvenBlock;
 import com.digitaldownpour.atouchofclass.blocks.InductionCooktopBlock;
@@ -1279,15 +1279,22 @@ public class ModBlocks {
             )
     );
 
-    public static final DeferredHolder<Block, DarkOakFourPostBedBlock> DARK_OAK_FOUR_POST_BED = BLOCKS.register("dark_oak_four_post_bed",
-            registryName -> new DarkOakFourPostBedBlock(BlockBehaviour.Properties.of()
+    public static final java.util.Map<String, DeferredHolder<Block, FourPostBedBlock>> FOUR_POST_BEDS = registerFourPostBeds();
+    public static final DeferredHolder<Block, FourPostBedBlock> DARK_OAK_RED_FOUR_POST_BED =
+            FOUR_POST_BEDS.get("dark_oak_red_four_post_bed");
+
+    private static java.util.Map<String, DeferredHolder<Block, FourPostBedBlock>> registerFourPostBeds() {
+        java.util.Map<String, DeferredHolder<Block, FourPostBedBlock>> beds = new java.util.LinkedHashMap<>();
+        for (String id : FourPostBedVariants.IDS) {
+            beds.put(id, BLOCKS.register(id, registryName -> new FourPostBedBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
                     .mapColor(MapColor.WOOD)
                     .strength(2.0F, 3.0F)
                     .sound(net.minecraft.world.level.block.SoundType.WOOD)
-                    .noOcclusion()
-            )
-    );
+                    .noOcclusion())));
+        }
+        return java.util.Collections.unmodifiableMap(beds);
+    }
 
     public static final DeferredHolder<Block, RefrigeratorBlock> REFRIGERATOR = BLOCKS.register("refrigerator",
             registryName -> new RefrigeratorBlock(BlockBehaviour.Properties.of()

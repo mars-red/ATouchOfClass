@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LL",
+    "BB",
+    "LL"
+  ],
+  "key": {
+    "L": "#minecraft:jungle_logs",
+    "B": "minecraft:light_gray_bed"
+  },
+  "result": {
+    "id": "atouchofclass:jungle_light_gray_four_post_bed"
+  }
+}
