@@ -82,10 +82,11 @@ def main():
                     "elements": elements,
                 })
                 for facing, rotation in facings.items():
-                    variants[f"facing={facing},section={section_name},side={side_name},upper={'true' if upper else 'false'}"] = {
-                        "model": f"atouchofclass:block/{NAME}_{suffix}",
-                        "y": rotation,
-                    }
+                    for occupied in (False, True):
+                        variants[f"facing={facing},section={section_name},side={side_name},upper={'true' if upper else 'false'},occupied={str(occupied).lower()}"] = {
+                            "model": f"atouchofclass:block/{NAME}_{suffix}",
+                            "y": rotation,
+                        }
 
     # The inventory model contains the entire bed at miniature scale.
     for box in boxes:

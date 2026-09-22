@@ -1,7 +1,8 @@
 """Generate every stripped-wood / dyed-linen version of the four-post bed.
 
-The original dark-oak/red geometry is the parent model, so all variants share
-the approved shape and only override its textures.
+The dark-oak/red geometry is the parent model. Every blockstate, including its
+own, contains occupied and unoccupied states for the sleep behavior implemented
+by FourPostBedBlock.
 """
 
 from __future__ import annotations
@@ -43,8 +44,24 @@ def log_tag(wood: str) -> str:
     return f"minecraft:{wood}_{'stems' if wood in ('crimson', 'warped') else 'logs'}"
 
 
+def write_sleepable_blockstate(name: str) -> None:
+    variants = {}
+    for section in SECTIONS:
+        for side in SIDES:
+            for upper in (False, True):
+                suffix = f"{section}_{side}_{'upper' if upper else 'lower'}"
+                model = f"atouchofclass:block/{name}_{suffix}"
+                for facing, rotation in FACINGS.items():
+                    for occupied in (False, True):
+                        variants[f"facing={facing},section={section},side={side},upper={str(upper).lower()},occupied={str(occupied).lower()}"] = {
+                            "model": model, "y": rotation,
+                        }
+    write_json(ASSETS / "blockstates" / f"{name}.json", {"variants": variants})
+
+
 def generate_variant(wood: str, color: str) -> None:
     name = bed_id(wood, color)
+    write_sleepable_blockstate(name)
     if name == "dark_oak_red_four_post_bed":
         return  # The geometry source has full models for this combination.
     texture = wood_texture(wood)
@@ -55,21 +72,14 @@ def generate_variant(wood: str, color: str) -> None:
         "red": f"minecraft:block/{color}_wool",
         "white": "minecraft:block/white_wool",
     }
-    variants = {}
     for section in SECTIONS:
         for side in SIDES:
             for upper in (False, True):
                 suffix = f"{section}_{side}_{'upper' if upper else 'lower'}"
-                model = f"atouchofclass:block/{name}_{suffix}"
                 write_json(ASSETS / "models/block" / f"{name}_{suffix}.json", {
                     "parent": f"atouchofclass:block/dark_oak_red_four_post_bed_{suffix}",
                     "textures": textures,
                 })
-                for facing, rotation in FACINGS.items():
-                    variants[f"facing={facing},section={section},side={side},upper={str(upper).lower()}"] = {
-                        "model": model, "y": rotation,
-                    }
-    write_json(ASSETS / "blockstates" / f"{name}.json", {"variants": variants})
     write_json(ASSETS / "models/item" / f"{name}.json", {
         "parent": "atouchofclass:item/dark_oak_red_four_post_bed", "textures": textures,
     })
