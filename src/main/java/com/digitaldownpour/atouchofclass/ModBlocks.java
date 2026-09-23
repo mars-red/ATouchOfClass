@@ -44,6 +44,7 @@ import com.digitaldownpour.atouchofclass.blocks.OvenBlock;
 import com.digitaldownpour.atouchofclass.blocks.InductionCooktopBlock;
 import com.digitaldownpour.atouchofclass.blocks.CabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DoorCabinetBlock;
+import com.digitaldownpour.atouchofclass.blocks.DresserBlock;
 import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
 import com.digitaldownpour.atouchofclass.blocks.SinkBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCountertopBlock;
@@ -1026,6 +1027,10 @@ public class ModBlocks {
             registerCabinet("warped_drawer_cabinet");
     // CABINET_VARIANT_REGISTRATIONS
 
+    private static final java.util.List<DeferredHolder<Block, ? extends DresserBlock>> DRESSER_REGISTRATIONS =
+            new java.util.ArrayList<>();
+    public static final java.util.Map<String, DeferredBlock<DresserBlock>> DRESSERS = registerDressers();
+
     private static java.util.Map<String, DeferredBlock<Block>> registerBasicBlocks() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<Block>>();
         BASIC_BLOCK_NAMES.forEach(name -> blocks.put(name, BLOCKS.register(name,
@@ -1064,6 +1069,30 @@ public class ModBlocks {
     /** All cabinet variants, used to attach the shared storage block entity automatically. */
     public static java.util.List<DeferredHolder<Block, ? extends CabinetBlock>> cabinetBlocks() {
         return java.util.Collections.unmodifiableList(CABINET_REGISTRATIONS);
+    }
+
+    private static java.util.Map<String, DeferredBlock<DresserBlock>> registerDressers() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<DresserBlock>>();
+        DresserVariants.IDS.forEach(name -> blocks.put(name, registerDresser(name)));
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
+    private static DeferredBlock<DresserBlock> registerDresser(String name) {
+        DeferredBlock<DresserBlock> dresser = BLOCKS.register(name, registryName -> new DresserBlock(
+                BlockBehaviour.Properties.of()
+                        .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                        .mapColor(MapColor.COLOR_BROWN)
+                        .strength(2.0F)
+                        .sound(net.minecraft.world.level.block.SoundType.WOOD)
+                        .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                        .noOcclusion()));
+        DRESSER_REGISTRATIONS.add(dresser);
+        return dresser;
+    }
+
+    /** All dresser variants, used to attach their shared storage block entity. */
+    public static java.util.List<DeferredHolder<Block, ? extends DresserBlock>> dresserBlocks() {
+        return java.util.Collections.unmodifiableList(DRESSER_REGISTRATIONS);
     }
 
     public static final DeferredBlock<OakRailingBlock> OAK_RAILING =

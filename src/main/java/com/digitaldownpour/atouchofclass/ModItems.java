@@ -276,6 +276,16 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("warped_drawer_cabinet", ModBlocks.WARPED_DRAWER_CABINET);
     // FURNITURE_VARIANT_ITEM_REGISTRATIONS
 
+    public static final java.util.Map<String, DeferredItem<BlockItem>> DRESSER_ITEMS = registerDresserItems();
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerDresserItems() {
+        java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
+        for (String id : DresserVariants.IDS) {
+            items.put(id, ITEMS.registerSimpleBlockItem(id, ModBlocks.DRESSERS.get(id)));
+        }
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
     private static java.util.List<DeferredItem<BlockItem>> registerBasicBlockItems() {
         var items = new java.util.ArrayList<DeferredItem<BlockItem>>();
         ModBlocks.BASIC_BLOCKS.forEach((name, block) -> items.add(ITEMS.registerSimpleBlockItem(name, block)));
@@ -589,6 +599,7 @@ public class ModItems {
             event.accept(TOILET_ITEM);
             event.accept(CLAWFOOT_BATHTUB_ITEM);
             FOUR_POST_BED_ITEMS.values().forEach(event::accept);
+            DRESSER_ITEMS.values().forEach(event::accept);
             event.accept(REFRIGERATOR_ITEM);
             event.accept(OVEN_ITEM);
             event.accept(INDUCTION_COOKTOP_ITEM);

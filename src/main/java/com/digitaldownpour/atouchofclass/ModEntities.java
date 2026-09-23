@@ -6,6 +6,7 @@ import com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.CabinetBlockEntity;
+import com.digitaldownpour.atouchofclass.entities.DresserBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.RefrigeratorBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.OvenBlockEntity;
 import net.minecraft.core.registries.Registries;
@@ -43,6 +44,13 @@ public class ModEntities {
             () -> new BlockEntityType<>(
                     CabinetBlockEntity::new,
                     ModBlocks.cabinetBlocks().stream().map(DeferredHolder::get).toArray(Block[]::new)
+            )
+    );
+
+    public static final Supplier<BlockEntityType<DresserBlockEntity>> DRESSER_BE = BLOCK_ENTITY_TYPES.register("dresser_be",
+            () -> new BlockEntityType<>(
+                    DresserBlockEntity::new,
+                    ModBlocks.dresserBlocks().stream().map(DeferredHolder::get).toArray(Block[]::new)
             )
     );
 
