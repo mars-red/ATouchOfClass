@@ -46,6 +46,7 @@ import com.digitaldownpour.atouchofclass.blocks.CabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DoorCabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DresserBlock;
 import com.digitaldownpour.atouchofclass.blocks.LoveSeatBlock;
+import com.digitaldownpour.atouchofclass.blocks.SofaBlock;
 import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
 import com.digitaldownpour.atouchofclass.blocks.SinkBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCountertopBlock;
@@ -1042,6 +1043,16 @@ public class ModBlocks {
                             .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
                             .noOcclusion()));
 
+    public static final DeferredBlock<SofaBlock> LEATHER_SOFA =
+            BLOCKS.register("leather_sofa", registryName -> new SofaBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.COLOR_ORANGE)
+                            .strength(1.5F)
+                            .sound(net.minecraft.world.level.block.SoundType.WOOL)
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .noOcclusion()));
+
     private static java.util.Map<String, DeferredBlock<Block>> registerBasicBlocks() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<Block>>();
         BASIC_BLOCK_NAMES.forEach(name -> blocks.put(name, BLOCKS.register(name,
@@ -1442,7 +1453,7 @@ public class ModBlocks {
         return BLOCKS.register(name, key -> {
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, key))
-                    .mapColor(age.ordinal() < 2 ? MapColor.COLOR_ORANGE : MapColor.COLOR_CYAN)
+                    .mapColor(copperMapColor(age))
                     .strength(3.0F, 6.0F).requiresCorrectToolForDrops()
                     .sound(net.minecraft.world.level.block.SoundType.COPPER)
                     .noOcclusion().lightLevel(state -> 15);
@@ -1461,7 +1472,7 @@ public class ModBlocks {
     private static DeferredBlock<CopperChainBlock> registerCopperChain(String name, WeatherState age, boolean waxed) {
         return BLOCKS.register(name, key -> {
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
-                    .mapColor(age.ordinal() < 2 ? MapColor.COLOR_ORANGE : MapColor.COLOR_CYAN)
+                    .mapColor(copperMapColor(age))
                     .strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.COPPER).noOcclusion();
             return waxed ? new CopperChainBlock(properties) : new WeatheringCopperChainBlock(age, properties);
         });
@@ -1478,7 +1489,7 @@ public class ModBlocks {
     private static DeferredBlock<CopperChandelierBlock> registerCopperChandelier(String name, WeatherState age, boolean waxed) {
         return BLOCKS.register(name, key -> {
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
-                    .mapColor(age.ordinal() < 2 ? MapColor.COLOR_ORANGE : MapColor.COLOR_CYAN)
+                    .mapColor(copperMapColor(age))
                     .strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.COPPER).noOcclusion().lightLevel(state -> 15);
             return waxed ? new CopperChandelierBlock(properties) : new WeatheringCopperChandelierBlock(age, properties);
         });
@@ -1497,7 +1508,7 @@ public class ModBlocks {
         return BLOCKS.register(name, key -> {
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, key))
-                    .mapColor(age.ordinal() < 2 ? MapColor.COLOR_ORANGE : MapColor.COLOR_CYAN)
+                    .mapColor(copperMapColor(age))
                     .strength(3.0F, 6.0F).requiresCorrectToolForDrops()
                     .sound(net.minecraft.world.level.block.SoundType.COPPER)
                     .noOcclusion()
@@ -1519,7 +1530,7 @@ public class ModBlocks {
         return BLOCKS.register(name, key -> {
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, key))
-                    .mapColor(age.ordinal() < 2 ? MapColor.COLOR_ORANGE : MapColor.COLOR_CYAN)
+                    .mapColor(copperMapColor(age))
                     .strength(3.0F, 6.0F).requiresCorrectToolForDrops()
                     .sound(net.minecraft.world.level.block.SoundType.COPPER)
                     .noOcclusion()
@@ -1551,7 +1562,7 @@ public class ModBlocks {
         return BLOCKS.register(name, key -> {
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, key))
-                    .mapColor(age.ordinal() < 2 ? MapColor.COLOR_ORANGE : MapColor.COLOR_CYAN)
+                    .mapColor(copperMapColor(age))
                     .strength(3.0F, 6.0F).requiresCorrectToolForDrops()
                     .sound(net.minecraft.world.level.block.SoundType.COPPER)
                     .noOcclusion().lightLevel(state -> 15);
@@ -1573,13 +1584,22 @@ public class ModBlocks {
         return BLOCKS.register(name, key -> {
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, key))
-                    .mapColor(age.ordinal() < 2 ? MapColor.COLOR_ORANGE : MapColor.COLOR_CYAN)
+                    .mapColor(copperMapColor(age))
                     .strength(3.0F, 6.0F).requiresCorrectToolForDrops()
                     .sound(net.minecraft.world.level.block.SoundType.COPPER)
                     .noOcclusion().lightLevel(state -> 15);
             return waxed ? new CopperTableLampBlock(properties)
                     : new WeatheringCopperTableLampBlock(age, properties);
         });
+    }
+
+    private static MapColor copperMapColor(WeatherState age) {
+        return switch (age) {
+            case UNAFFECTED -> Blocks.CUT_COPPER.defaultMapColor();
+            case EXPOSED -> Blocks.EXPOSED_CUT_COPPER.defaultMapColor();
+            case WEATHERED -> Blocks.WEATHERED_CUT_COPPER.defaultMapColor();
+            case OXIDIZED -> Blocks.OXIDIZED_CUT_COPPER.defaultMapColor();
+        };
     }
 
     public static void register(IEventBus eventBus) {

@@ -21,10 +21,15 @@ public class SeatEntity extends Entity {
         super.tick();
         setDeltaMovement(0, 0, 0);
         if (!level().isClientSide
-                && (getPassengers().isEmpty()
-                || !level().getBlockState(blockPosition()).is(ModBlocks.LEATHER_LOVE_SEAT.get()))) {
+                && (getPassengers().isEmpty() || !supportsSeat())) {
             discard();
         }
+    }
+
+    private boolean supportsSeat() {
+        var state = level().getBlockState(blockPosition());
+        return state.is(ModBlocks.LEATHER_LOVE_SEAT.get())
+                || state.is(ModBlocks.LEATHER_SOFA.get());
     }
 
     @Override
