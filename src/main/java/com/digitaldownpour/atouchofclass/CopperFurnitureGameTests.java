@@ -169,6 +169,50 @@ public class CopperFurnitureGameTests {
         helper.succeed();
     }
 
+    @GameTest(template = "chandelier_test")
+    public static void sconcesChainsAndChandeliersUseVanillaCopperProperties(GameTestHelper helper) {
+        verifyFamily(helper,
+                new Block[]{
+                        ModBlocks.COPPER_WALL_SCONCE.get(),
+                        ModBlocks.EXPOSED_COPPER_WALL_SCONCE.get(),
+                        ModBlocks.WEATHERED_COPPER_WALL_SCONCE.get(),
+                        ModBlocks.OXIDIZED_COPPER_WALL_SCONCE.get()
+                },
+                new Block[]{
+                        ModBlocks.WAXED_COPPER_WALL_SCONCE.get(),
+                        ModBlocks.WAXED_EXPOSED_COPPER_WALL_SCONCE.get(),
+                        ModBlocks.WAXED_WEATHERED_COPPER_WALL_SCONCE.get(),
+                        ModBlocks.WAXED_OXIDIZED_COPPER_WALL_SCONCE.get()
+                }, false);
+        verifyFamily(helper,
+                new Block[]{
+                        ModBlocks.COPPER_CHAIN.get(),
+                        ModBlocks.EXPOSED_COPPER_CHAIN.get(),
+                        ModBlocks.WEATHERED_COPPER_CHAIN.get(),
+                        ModBlocks.OXIDIZED_COPPER_CHAIN.get()
+                },
+                new Block[]{
+                        ModBlocks.WAXED_COPPER_CHAIN.get(),
+                        ModBlocks.WAXED_EXPOSED_COPPER_CHAIN.get(),
+                        ModBlocks.WAXED_WEATHERED_COPPER_CHAIN.get(),
+                        ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get()
+                }, false);
+        verifyFamily(helper,
+                new Block[]{
+                        ModBlocks.COPPER_CHANDELIER.get(),
+                        ModBlocks.EXPOSED_COPPER_CHANDELIER.get(),
+                        ModBlocks.WEATHERED_COPPER_CHANDELIER.get(),
+                        ModBlocks.OXIDIZED_COPPER_CHANDELIER.get()
+                },
+                new Block[]{
+                        ModBlocks.WAXED_COPPER_CHANDELIER.get(),
+                        ModBlocks.WAXED_EXPOSED_COPPER_CHANDELIER.get(),
+                        ModBlocks.WAXED_WEATHERED_COPPER_CHANDELIER.get(),
+                        ModBlocks.WAXED_OXIDIZED_COPPER_CHANDELIER.get()
+                }, false);
+        helper.succeed();
+    }
+
     private static void verifyFamily(GameTestHelper helper, Block[] stages, Block[] waxedStages, boolean oriented) {
         BlockPos mapColorPos = helper.absolutePos(new BlockPos(1, 2, 1));
 

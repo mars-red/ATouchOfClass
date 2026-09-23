@@ -1,0 +1,9 @@
+{
+  "parent": "atouchofclass:block/sofa_middle",
+  "textures": {
+    "particle": "atouchofclass:block/cognac_leather",
+    "leather": "atouchofclass:block/cognac_leather",
+    "seam": "atouchofclass:block/cognac_leather_dark",
+    "wood": "minecraft:block/stripped_dark_oak_log"
+  }
+}

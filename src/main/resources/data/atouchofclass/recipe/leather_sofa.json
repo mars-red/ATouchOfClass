@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LLL",
+    "WWW",
+    "SSS"
+  ],
+  "key": {
+    "L": "minecraft:leather",
+    "W": "#minecraft:wool",
+    "S": "#minecraft:wooden_slabs"
+  },
+  "result": {
+    "id": "atouchofclass:leather_sofa"
+  }
+}

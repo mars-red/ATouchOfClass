@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "facing=north,section=left": {
+      "model": "atouchofclass:block/leather_sofa_left",
+      "y": 0
+    },
+    "facing=east,section=left": {
+      "model": "atouchofclass:block/leather_sofa_left",
+      "y": 90
+    },
+    "facing=south,section=left": {
+      "model": "atouchofclass:block/leather_sofa_left",
+      "y": 180
+    },
+    "facing=west,section=left": {
+      "model": "atouchofclass:block/leather_sofa_left",
+      "y": 270
+    },
+    "facing=north,section=middle": {
+      "model": "atouchofclass:block/leather_sofa_middle",
+      "y": 0
+    },
+    "facing=east,section=middle": {
+      "model": "atouchofclass:block/leather_sofa_middle",
+      "y": 90
+    },
+    "facing=south,section=middle": {
+      "model": "atouchofclass:block/leather_sofa_middle",
+      "y": 180
+    },
+    "facing=west,section=middle": {
+      "model": "atouchofclass:block/leather_sofa_middle",
+      "y": 270
+    },
+    "facing=north,section=right": {
+      "model": "atouchofclass:block/leather_sofa_right",
+      "y": 0
+    },
+    "facing=east,section=right": {
+      "model": "atouchofclass:block/leather_sofa_right",
+      "y": 90
+    },
+    "facing=south,section=right": {
+      "model": "atouchofclass:block/leather_sofa_right",
+      "y": 180
+    },
+    "facing=west,section=right": {
+      "model": "atouchofclass:block/leather_sofa_right",
+      "y": 270
+    }
+  }
+}
