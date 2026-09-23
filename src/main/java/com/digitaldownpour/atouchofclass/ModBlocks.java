@@ -47,6 +47,7 @@ import com.digitaldownpour.atouchofclass.blocks.DoorCabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DresserBlock;
 import com.digitaldownpour.atouchofclass.blocks.LoveSeatBlock;
 import com.digitaldownpour.atouchofclass.blocks.SofaBlock;
+import com.digitaldownpour.atouchofclass.blocks.ChairBlock;
 import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
 import com.digitaldownpour.atouchofclass.blocks.SinkBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCountertopBlock;
@@ -1045,6 +1046,16 @@ public class ModBlocks {
 
     public static final DeferredBlock<SofaBlock> LEATHER_SOFA =
             BLOCKS.register("leather_sofa", registryName -> new SofaBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.COLOR_ORANGE)
+                            .strength(1.5F)
+                            .sound(net.minecraft.world.level.block.SoundType.WOOL)
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .noOcclusion()));
+
+    public static final DeferredBlock<ChairBlock> LEATHER_CHAIR =
+            BLOCKS.register("leather_chair", registryName -> new ChairBlock(
                     BlockBehaviour.Properties.of()
                             .setId(ResourceKey.create(Registries.BLOCK, registryName))
                             .mapColor(MapColor.COLOR_ORANGE)

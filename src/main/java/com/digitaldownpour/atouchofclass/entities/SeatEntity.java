@@ -29,7 +29,8 @@ public class SeatEntity extends Entity {
     private boolean supportsSeat() {
         var state = level().getBlockState(blockPosition());
         return state.is(ModBlocks.LEATHER_LOVE_SEAT.get())
-                || state.is(ModBlocks.LEATHER_SOFA.get());
+                || state.is(ModBlocks.LEATHER_SOFA.get())
+                || state.is(ModBlocks.LEATHER_CHAIR.get());
     }
 
     @Override

@@ -281,6 +281,8 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("leather_love_seat", ModBlocks.LEATHER_LOVE_SEAT);
     public static final DeferredItem<BlockItem> LEATHER_SOFA_ITEM =
             ITEMS.registerSimpleBlockItem("leather_sofa", ModBlocks.LEATHER_SOFA);
+    public static final DeferredItem<BlockItem> LEATHER_CHAIR_ITEM =
+            ITEMS.registerSimpleBlockItem("leather_chair", ModBlocks.LEATHER_CHAIR);
 
     private static java.util.Map<String, DeferredItem<BlockItem>> registerDresserItems() {
         java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
@@ -606,6 +608,7 @@ public class ModItems {
             DRESSER_ITEMS.values().forEach(event::accept);
             event.accept(LEATHER_LOVE_SEAT_ITEM);
             event.accept(LEATHER_SOFA_ITEM);
+            event.accept(LEATHER_CHAIR_ITEM);
             event.accept(REFRIGERATOR_ITEM);
             event.accept(OVEN_ITEM);
             event.accept(INDUCTION_COOKTOP_ITEM);
