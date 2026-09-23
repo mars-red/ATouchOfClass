@@ -9,6 +9,7 @@ import com.digitaldownpour.atouchofclass.entities.CabinetBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.DresserBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.RefrigeratorBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.OvenBlockEntity;
+import com.digitaldownpour.atouchofclass.entities.SeatEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -32,6 +33,18 @@ public class ModEntities {
 
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(Registries.ENTITY_TYPE, ATouchofClass.MODID);
+
+    public static final DeferredHolder<EntityType<?>, EntityType<SeatEntity>> LOVE_SEAT_SEAT =
+            ENTITY_TYPES.register("love_seat_seat", () -> EntityType.Builder
+                    .of(SeatEntity::new, MobCategory.MISC)
+                    .noLootTable()
+                    .noSummon()
+                    .sized(0.01F, 0.01F)
+                    .passengerAttachments(0.55F)
+                    .clientTrackingRange(8)
+                    .updateInterval(1)
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE,
+                            ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "love_seat_seat"))));
 
     public static final Supplier<BlockEntityType<KeyCutterBlockEntity>> KEY_CUTTER_BE = BLOCK_ENTITY_TYPES.register("key_cutter_be",
             () -> new BlockEntityType<>(
@@ -87,6 +100,7 @@ public class ModEntities {
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITY_TYPES.register(eventBus);
+        ENTITY_TYPES.register(eventBus);
     }
 
     private static void addCreative(BuildCreativeModeTabContentsEvent event) {

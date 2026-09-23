@@ -45,6 +45,7 @@ import com.digitaldownpour.atouchofclass.blocks.InductionCooktopBlock;
 import com.digitaldownpour.atouchofclass.blocks.CabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DoorCabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DresserBlock;
+import com.digitaldownpour.atouchofclass.blocks.LoveSeatBlock;
 import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
 import com.digitaldownpour.atouchofclass.blocks.SinkBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCountertopBlock;
@@ -1030,6 +1031,16 @@ public class ModBlocks {
     private static final java.util.List<DeferredHolder<Block, ? extends DresserBlock>> DRESSER_REGISTRATIONS =
             new java.util.ArrayList<>();
     public static final java.util.Map<String, DeferredBlock<DresserBlock>> DRESSERS = registerDressers();
+
+    public static final DeferredBlock<LoveSeatBlock> LEATHER_LOVE_SEAT =
+            BLOCKS.register("leather_love_seat", registryName -> new LoveSeatBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.COLOR_ORANGE)
+                            .strength(1.5F)
+                            .sound(net.minecraft.world.level.block.SoundType.WOOL)
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .noOcclusion()));
 
     private static java.util.Map<String, DeferredBlock<Block>> registerBasicBlocks() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<Block>>();
