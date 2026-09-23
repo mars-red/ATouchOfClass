@@ -1,0 +1,68 @@
+{
+  "variants": {
+    "facing=north,side=left,upper=false": {
+      "model": "atouchofclass:block/warped_dresser_left_lower",
+      "y": 0
+    },
+    "facing=east,side=left,upper=false": {
+      "model": "atouchofclass:block/warped_dresser_left_lower",
+      "y": 90
+    },
+    "facing=south,side=left,upper=false": {
+      "model": "atouchofclass:block/warped_dresser_left_lower",
+      "y": 180
+    },
+    "facing=west,side=left,upper=false": {
+      "model": "atouchofclass:block/warped_dresser_left_lower",
+      "y": 270
+    },
+    "facing=north,side=left,upper=true": {
+      "model": "atouchofclass:block/warped_dresser_left_upper",
+      "y": 0
+    },
+    "facing=east,side=left,upper=true": {
+      "model": "atouchofclass:block/warped_dresser_left_upper",
+      "y": 90
+    },
+    "facing=south,side=left,upper=true": {
+      "model": "atouchofclass:block/warped_dresser_left_upper",
+      "y": 180
+    },
+    "facing=west,side=left,upper=true": {
+      "model": "atouchofclass:block/warped_dresser_left_upper",
+      "y": 270
+    },
+    "facing=north,side=right,upper=false": {
+      "model": "atouchofclass:block/warped_dresser_right_lower",
+      "y": 0
+    },
+    "facing=east,side=right,upper=false": {
+      "model": "atouchofclass:block/warped_dresser_right_lower",
+      "y": 90
+    },
+    "facing=south,side=right,upper=false": {
+      "model": "atouchofclass:block/warped_dresser_right_lower",
+      "y": 180
+    },
+    "facing=west,side=right,upper=false": {
+      "model": "atouchofclass:block/warped_dresser_right_lower",
+      "y": 270
+    },
+    "facing=north,side=right,upper=true": {
+      "model": "atouchofclass:block/warped_dresser_right_upper",
+      "y": 0
+    },
+    "facing=east,side=right,upper=true": {
+      "model": "atouchofclass:block/warped_dresser_right_upper",
+      "y": 90
+    },
+    "facing=south,side=right,upper=true": {
+      "model": "atouchofclass:block/warped_dresser_right_upper",
+      "y": 180
+    },
+    "facing=west,side=right,upper=true": {
+      "model": "atouchofclass:block/warped_dresser_right_upper",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "atouchofclass:block/dresser_left_lower",
+  "textures": {
+    "particle": "minecraft:block/stripped_oak_log",
+    "wood": "minecraft:block/stripped_oak_log",
+    "handle": "minecraft:block/raw_gold_block"
+  }
+}
