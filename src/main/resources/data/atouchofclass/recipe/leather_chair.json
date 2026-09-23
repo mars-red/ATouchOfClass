@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "L",
+    "W",
+    "S"
+  ],
+  "key": {
+    "L": "minecraft:leather",
+    "W": "#minecraft:wool",
+    "S": "#minecraft:wooden_slabs"
+  },
+  "result": {
+    "id": "atouchofclass:leather_chair"
+  }
+}

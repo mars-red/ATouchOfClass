@@ -862,5 +862,7 @@
     "block.atouchofclass.leather_love_seat": "Leather Love Seat",
     "item.atouchofclass.leather_love_seat": "Leather Love Seat",
     "block.atouchofclass.leather_sofa": "Leather Sofa",
-    "item.atouchofclass.leather_sofa": "Leather Sofa"
+    "item.atouchofclass.leather_sofa": "Leather Sofa",
+    "block.atouchofclass.leather_chair": "Leather Chair",
+    "item.atouchofclass.leather_chair": "Leather Chair"
 }
