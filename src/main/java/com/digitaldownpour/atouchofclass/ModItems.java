@@ -279,6 +279,8 @@ public class ModItems {
     public static final java.util.Map<String, DeferredItem<BlockItem>> DRESSER_ITEMS = registerDresserItems();
     public static final java.util.Map<String, DeferredItem<BlockItem>> SIDE_TABLE_ITEMS = registerSideTableItems();
     public static final DeferredItem<BlockItem> OAK_SIDE_TABLE_ITEM = SIDE_TABLE_ITEMS.get("oak_side_table");
+    public static final java.util.Map<String, DeferredItem<BlockItem>> NIGHTSTAND_ITEMS = registerNightstandItems();
+    public static final DeferredItem<BlockItem> OAK_NIGHTSTAND_ITEM = NIGHTSTAND_ITEMS.get("oak_nightstand");
     public static final DeferredItem<BlockItem> LEATHER_LOVE_SEAT_ITEM =
             ITEMS.registerSimpleBlockItem("leather_love_seat", ModBlocks.LEATHER_LOVE_SEAT);
     public static final DeferredItem<BlockItem> LEATHER_SOFA_ITEM =
@@ -298,6 +300,13 @@ public class ModItems {
         java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
         SideTableVariants.VALUES.forEach(definition -> items.put(definition.id(),
                 ITEMS.registerSimpleBlockItem(definition.id(), ModBlocks.SIDE_TABLES.get(definition.id()))));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerNightstandItems() {
+        java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
+        NightstandVariants.VALUES.forEach(definition -> items.put(definition.id(),
+                ITEMS.registerSimpleBlockItem(definition.id(), ModBlocks.NIGHTSTANDS.get(definition.id()))));
         return java.util.Collections.unmodifiableMap(items);
     }
 
@@ -616,6 +625,7 @@ public class ModItems {
             FOUR_POST_BED_ITEMS.values().forEach(event::accept);
             DRESSER_ITEMS.values().forEach(event::accept);
             SIDE_TABLE_ITEMS.values().forEach(event::accept);
+            NIGHTSTAND_ITEMS.values().forEach(event::accept);
             event.accept(LEATHER_LOVE_SEAT_ITEM);
             event.accept(LEATHER_SOFA_ITEM);
             event.accept(LEATHER_CHAIR_ITEM);

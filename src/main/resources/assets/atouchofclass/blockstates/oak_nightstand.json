@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "atouchofclass:block/oak_nightstand"},
+    "facing=east": {"model": "atouchofclass:block/oak_nightstand", "y": 90},
+    "facing=south": {"model": "atouchofclass:block/oak_nightstand", "y": 180},
+    "facing=west": {"model": "atouchofclass:block/oak_nightstand", "y": 270}
+  }
+}
