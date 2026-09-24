@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "PPP",
+    "P P"
+  ],
+  "key": {
+    "S": "minecraft:bamboo_slab",
+    "P": "minecraft:bamboo_planks"
+  },
+  "result": {
+    "count": 3,
+    "id": "atouchofclass:bamboo_nightstand"
+  }
+}

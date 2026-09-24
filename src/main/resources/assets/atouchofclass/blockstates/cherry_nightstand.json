@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/cherry_nightstand"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/cherry_nightstand",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/cherry_nightstand",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/cherry_nightstand",
+      "y": 270
+    }
+  }
+}
