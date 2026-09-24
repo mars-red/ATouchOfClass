@@ -1,0 +1,7 @@
+{
+  "parent": "atouchofclass:item/side_table",
+  "textures": {
+    "particle": "minecraft:block/stripped_dark_oak_log",
+    "wood": "minecraft:block/stripped_dark_oak_log"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "L L"
+  ],
+  "key": {
+    "S": "minecraft:birch_slab",
+    "L": "minecraft:birch_planks"
+  },
+  "result": {
+    "id": "atouchofclass:birch_side_table",
+    "count": 3
+  }
+}

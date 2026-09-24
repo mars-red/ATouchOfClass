@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "L L"
+  ],
+  "key": {
+    "S": "minecraft:acacia_slab",
+    "L": "minecraft:acacia_planks"
+  },
+  "result": {
+    "id": "atouchofclass:acacia_side_table",
+    "count": 3
+  }
+}

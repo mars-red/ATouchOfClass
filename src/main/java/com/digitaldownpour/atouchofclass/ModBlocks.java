@@ -48,6 +48,7 @@ import com.digitaldownpour.atouchofclass.blocks.DresserBlock;
 import com.digitaldownpour.atouchofclass.blocks.LoveSeatBlock;
 import com.digitaldownpour.atouchofclass.blocks.SofaBlock;
 import com.digitaldownpour.atouchofclass.blocks.ChairBlock;
+import com.digitaldownpour.atouchofclass.blocks.SideTableBlock;
 import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
 import com.digitaldownpour.atouchofclass.blocks.SinkBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCountertopBlock;
@@ -1034,6 +1035,9 @@ public class ModBlocks {
             new java.util.ArrayList<>();
     public static final java.util.Map<String, DeferredBlock<DresserBlock>> DRESSERS = registerDressers();
 
+    public static final java.util.Map<String, DeferredBlock<SideTableBlock>> SIDE_TABLES = registerSideTables();
+    public static final DeferredBlock<SideTableBlock> OAK_SIDE_TABLE = SIDE_TABLES.get("oak_side_table");
+
     public static final DeferredBlock<LoveSeatBlock> LEATHER_LOVE_SEAT =
             BLOCKS.register("leather_love_seat", registryName -> new LoveSeatBlock(
                     BlockBehaviour.Properties.of()
@@ -1121,6 +1125,26 @@ public class ModBlocks {
                         .noOcclusion()));
         DRESSER_REGISTRATIONS.add(dresser);
         return dresser;
+    }
+
+    private static java.util.Map<String, DeferredBlock<SideTableBlock>> registerSideTables() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<SideTableBlock>>();
+        SideTableVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
+                BLOCKS.register(definition.id(), registryName -> {
+                    Block source = definition.sourceBlock();
+                    BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(source.defaultMapColor())
+                            .strength(source.defaultDestroyTime(), source.getExplosionResistance())
+                            .sound(source.defaultBlockState().getSoundType())
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .noOcclusion();
+                    if (source.defaultBlockState().ignitedByLava()) {
+                        properties.ignitedByLava();
+                    }
+                    return new SideTableBlock(properties);
+                })));
+        return java.util.Collections.unmodifiableMap(blocks);
     }
 
     /** All dresser variants, used to attach their shared storage block entity. */

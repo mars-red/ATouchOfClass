@@ -1,0 +1,7 @@
+{
+  "parent": "atouchofclass:item/side_table",
+  "textures": {
+    "particle": "minecraft:block/stripped_warped_stem",
+    "wood": "minecraft:block/stripped_warped_stem"
+  }
+}
