@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "L L"
+  ],
+  "key": {
+    "S": "minecraft:crimson_slab",
+    "L": "minecraft:crimson_planks"
+  },
+  "result": {
+    "id": "atouchofclass:crimson_side_table",
+    "count": 3
+  }
+}

@@ -1130,11 +1130,20 @@ public class ModBlocks {
     private static java.util.Map<String, DeferredBlock<SideTableBlock>> registerSideTables() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<SideTableBlock>>();
         SideTableVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
-                BLOCKS.register(definition.id(), registryName -> new SideTableBlock(
-                        BlockBehaviour.Properties.ofFullCopy(definition.sourceBlock())
-                                .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                                .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
-                                .noOcclusion()))));
+                BLOCKS.register(definition.id(), registryName -> {
+                    Block source = definition.sourceBlock();
+                    BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(source.defaultMapColor())
+                            .strength(source.defaultDestroyTime(), source.getExplosionResistance())
+                            .sound(source.defaultBlockState().getSoundType())
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .noOcclusion();
+                    if (source.defaultBlockState().ignitedByLava()) {
+                        properties.ignitedByLava();
+                    }
+                    return new SideTableBlock(properties);
+                })));
         return java.util.Collections.unmodifiableMap(blocks);
     }
 

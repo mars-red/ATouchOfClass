@@ -10,11 +10,21 @@ ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "src/main/resources/assets/atouchofclass"
 DATA = ROOT / "src/main/resources/data/atouchofclass"
 
-# Add woods here and in SideTableVariants.java after the oak design is final.
 # Texture names intentionally use the side-grain texture on every face so each
 # variant reads as a stripped-wood block rather than a stripped log.
 WOODS = {
-    "oak": {"label": "Oak", "texture": "stripped_oak_log", "slab": "oak_slab"},
+    "oak": {"label": "Oak", "texture": "stripped_oak_log", "slab": "oak_slab", "planks": "oak_planks"},
+    "spruce": {"label": "Spruce", "texture": "stripped_spruce_log", "slab": "spruce_slab", "planks": "spruce_planks"},
+    "birch": {"label": "Birch", "texture": "stripped_birch_log", "slab": "birch_slab", "planks": "birch_planks"},
+    "jungle": {"label": "Jungle", "texture": "stripped_jungle_log", "slab": "jungle_slab", "planks": "jungle_planks"},
+    "acacia": {"label": "Acacia", "texture": "stripped_acacia_log", "slab": "acacia_slab", "planks": "acacia_planks"},
+    "dark_oak": {"label": "Dark Oak", "texture": "stripped_dark_oak_log", "slab": "dark_oak_slab", "planks": "dark_oak_planks"},
+    "mangrove": {"label": "Mangrove", "texture": "stripped_mangrove_log", "slab": "mangrove_slab", "planks": "mangrove_planks"},
+    "cherry": {"label": "Cherry", "texture": "stripped_cherry_log", "slab": "cherry_slab", "planks": "cherry_planks"},
+    "pale_oak": {"label": "Pale Oak", "texture": "stripped_pale_oak_log", "slab": "pale_oak_slab", "planks": "pale_oak_planks"},
+    "bamboo": {"label": "Bamboo", "texture": "stripped_bamboo_block", "slab": "bamboo_slab", "planks": "bamboo_planks"},
+    "crimson": {"label": "Crimson", "texture": "stripped_crimson_stem", "slab": "crimson_slab", "planks": "crimson_planks"},
+    "warped": {"label": "Warped", "texture": "stripped_warped_stem", "slab": "warped_slab", "planks": "warped_planks"},
 }
 
 
@@ -80,7 +90,27 @@ def write_shared_models() -> None:
     })
 
 
-def write_variant(wood: str, definition: dict[str, str]) -> None:
+def replace_recipe_materials(value: object, replacements: dict[str, str]) -> object:
+    if isinstance(value, dict):
+        return {key: replace_recipe_materials(child, replacements) for key, child in value.items()}
+    if isinstance(value, list):
+        return [replace_recipe_materials(child, replacements) for child in value]
+    if isinstance(value, str):
+        return replacements.get(value, value)
+    return value
+
+
+def variant_recipe(wood: str, definition: dict[str, str], oak_recipe: dict) -> dict:
+    name = f"{wood}_side_table"
+    return replace_recipe_materials(oak_recipe, {
+        "minecraft:oak_slab": f"minecraft:{definition['slab']}",
+        "minecraft:oak_planks": f"minecraft:{definition['planks']}",
+        "minecraft:stripped_oak_log": f"minecraft:{definition['texture']}",
+        "atouchofclass:oak_side_table": f"atouchofclass:{name}",
+    })
+
+
+def write_variant(wood: str, definition: dict[str, str], oak_recipe: dict) -> None:
     name = f"{wood}_side_table"
     texture = f"minecraft:block/{definition['texture']}"
     textures = {"particle": texture, "wood": texture}
@@ -109,30 +139,25 @@ def write_variant(wood: str, definition: dict[str, str]) -> None:
         }],
     })
 
-    stripped_wood = f"minecraft:{definition['texture']}"
-    write_json(DATA / "recipe" / f"{name}.json", {
-        "type": "minecraft:crafting_shaped",
-        "category": "building",
-        "pattern": ["SSS", "L L", "L L"],
-        "key": {
-            "S": f"minecraft:{definition['slab']}",
-            "L": stripped_wood,
-        },
-        "result": {"id": f"atouchofclass:{name}"},
-    })
+    planks = f"minecraft:{definition['planks']}"
+    # Oak is the hand-tuned source of truth. Never rewrite it; every other
+    # recipe clones its complete structure and swaps only material/output IDs.
+    if wood != "oak":
+        write_json(DATA / "recipe" / f"{name}.json",
+                   variant_recipe(wood, definition, oak_recipe))
     write_json(DATA / "advancement/recipes/decorations" / f"{name}.json", {
         "parent": "minecraft:recipes/root",
         "criteria": {
-            "has_stripped_wood": {
+            "has_planks": {
                 "trigger": "minecraft:inventory_changed",
-                "conditions": {"items": [{"items": stripped_wood}]},
+                "conditions": {"items": [{"items": planks}]},
             },
             "has_the_recipe": {
                 "trigger": "minecraft:recipe_unlocked",
                 "conditions": {"recipe": f"atouchofclass:{name}"},
             },
         },
-        "requirements": [["has_stripped_wood", "has_the_recipe"]],
+        "requirements": [["has_planks", "has_the_recipe"]],
         "rewards": {"recipes": [f"atouchofclass:{name}"]},
     })
 
@@ -176,9 +201,11 @@ def update_axe_tag() -> None:
 
 
 def main() -> None:
+    oak_recipe_path = DATA / "recipe/oak_side_table.json"
+    oak_recipe = json.loads(oak_recipe_path.read_text(encoding="utf-8"))
     write_shared_models()
     for wood, definition in WOODS.items():
-        write_variant(wood, definition)
+        write_variant(wood, definition, oak_recipe)
     update_language()
     update_axe_tag()
     print("Generated side-table assets: " + ", ".join(WOODS))

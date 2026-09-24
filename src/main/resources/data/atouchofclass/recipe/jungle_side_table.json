@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "L L"
+  ],
+  "key": {
+    "S": "minecraft:jungle_slab",
+    "L": "minecraft:jungle_planks"
+  },
+  "result": {
+    "id": "atouchofclass:jungle_side_table",
+    "count": 3
+  }
+}

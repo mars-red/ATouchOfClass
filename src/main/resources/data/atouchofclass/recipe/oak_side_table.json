@@ -3,14 +3,14 @@
   "category": "building",
   "pattern": [
     "SSS",
-    "L L",
     "L L"
   ],
   "key": {
     "S": "minecraft:oak_slab",
-    "L": "minecraft:stripped_oak_log"
+    "L": "minecraft:oak_planks"
   },
   "result": {
-    "id": "atouchofclass:oak_side_table"
+    "id": "atouchofclass:oak_side_table",
+    "count": 3
   }
 }

@@ -264,6 +264,17 @@
                    "atouchofclass:leather_love_seat",
                    "atouchofclass:leather_sofa",
                    "atouchofclass:leather_chair",
-                   "atouchofclass:oak_side_table"
+                   "atouchofclass:oak_side_table",
+                   "atouchofclass:spruce_side_table",
+                   "atouchofclass:birch_side_table",
+                   "atouchofclass:jungle_side_table",
+                   "atouchofclass:acacia_side_table",
+                   "atouchofclass:dark_oak_side_table",
+                   "atouchofclass:mangrove_side_table",
+                   "atouchofclass:cherry_side_table",
+                   "atouchofclass:pale_oak_side_table",
+                   "atouchofclass:bamboo_side_table",
+                   "atouchofclass:crimson_side_table",
+                   "atouchofclass:warped_side_table"
                ]
 }
