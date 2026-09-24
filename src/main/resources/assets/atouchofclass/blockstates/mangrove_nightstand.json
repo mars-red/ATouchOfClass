@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/mangrove_nightstand"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/mangrove_nightstand",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/mangrove_nightstand",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/mangrove_nightstand",
+      "y": 270
+    }
+  }
+}

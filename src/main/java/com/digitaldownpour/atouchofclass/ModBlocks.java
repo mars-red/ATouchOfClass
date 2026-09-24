@@ -49,6 +49,7 @@ import com.digitaldownpour.atouchofclass.blocks.LoveSeatBlock;
 import com.digitaldownpour.atouchofclass.blocks.SofaBlock;
 import com.digitaldownpour.atouchofclass.blocks.ChairBlock;
 import com.digitaldownpour.atouchofclass.blocks.SideTableBlock;
+import com.digitaldownpour.atouchofclass.blocks.NightstandBlock;
 import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
 import com.digitaldownpour.atouchofclass.blocks.SinkBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCountertopBlock;
@@ -1038,6 +1039,9 @@ public class ModBlocks {
     public static final java.util.Map<String, DeferredBlock<SideTableBlock>> SIDE_TABLES = registerSideTables();
     public static final DeferredBlock<SideTableBlock> OAK_SIDE_TABLE = SIDE_TABLES.get("oak_side_table");
 
+    public static final java.util.Map<String, DeferredBlock<NightstandBlock>> NIGHTSTANDS = registerNightstands();
+    public static final DeferredBlock<NightstandBlock> OAK_NIGHTSTAND = NIGHTSTANDS.get("oak_nightstand");
+
     public static final DeferredBlock<LoveSeatBlock> LEATHER_LOVE_SEAT =
             BLOCKS.register("leather_love_seat", registryName -> new LoveSeatBlock(
                     BlockBehaviour.Properties.of()
@@ -1145,6 +1149,31 @@ public class ModBlocks {
                     return new SideTableBlock(properties);
                 })));
         return java.util.Collections.unmodifiableMap(blocks);
+    }
+
+    private static java.util.Map<String, DeferredBlock<NightstandBlock>> registerNightstands() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<NightstandBlock>>();
+        NightstandVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
+                BLOCKS.register(definition.id(), registryName -> {
+                    Block source = definition.sourceBlock();
+                    BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(source.defaultMapColor())
+                            .strength(source.defaultDestroyTime(), source.getExplosionResistance())
+                            .sound(source.defaultBlockState().getSoundType())
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .noOcclusion();
+                    if (source.defaultBlockState().ignitedByLava()) {
+                        properties.ignitedByLava();
+                    }
+                    return new NightstandBlock(properties);
+                })));
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
+    /** All nightstand variants, used to attach their shared storage block entity. */
+    public static java.util.Collection<DeferredBlock<NightstandBlock>> nightstandBlocks() {
+        return NIGHTSTANDS.values();
     }
 
     /** All dresser variants, used to attach their shared storage block entity. */

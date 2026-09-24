@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "PPP",
+    "P P"
+  ],
+  "key": {
+    "S": "minecraft:dark_oak_slab",
+    "P": "minecraft:dark_oak_planks"
+  },
+  "result": {
+    "count": 3,
+    "id": "atouchofclass:dark_oak_nightstand"
+  }
+}

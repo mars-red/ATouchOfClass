@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "PPP",
+    "P P"
+  ],
+  "key": {
+    "S": "minecraft:cherry_slab",
+    "P": "minecraft:cherry_planks"
+  },
+  "result": {
+    "count": 3,
+    "id": "atouchofclass:cherry_nightstand"
+  }
+}

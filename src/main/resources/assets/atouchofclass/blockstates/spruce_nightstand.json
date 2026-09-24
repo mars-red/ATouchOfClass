@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/spruce_nightstand"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/spruce_nightstand",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/spruce_nightstand",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/spruce_nightstand",
+      "y": 270
+    }
+  }
+}

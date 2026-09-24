@@ -275,6 +275,18 @@
                    "atouchofclass:pale_oak_side_table",
                    "atouchofclass:bamboo_side_table",
                    "atouchofclass:crimson_side_table",
-                   "atouchofclass:warped_side_table"
+                   "atouchofclass:warped_side_table",
+                   "atouchofclass:oak_nightstand",
+                   "atouchofclass:spruce_nightstand",
+                   "atouchofclass:birch_nightstand",
+                   "atouchofclass:jungle_nightstand",
+                   "atouchofclass:acacia_nightstand",
+                   "atouchofclass:dark_oak_nightstand",
+                   "atouchofclass:mangrove_nightstand",
+                   "atouchofclass:cherry_nightstand",
+                   "atouchofclass:pale_oak_nightstand",
+                   "atouchofclass:bamboo_nightstand",
+                   "atouchofclass:crimson_nightstand",
+                   "atouchofclass:warped_nightstand"
                ]
 }

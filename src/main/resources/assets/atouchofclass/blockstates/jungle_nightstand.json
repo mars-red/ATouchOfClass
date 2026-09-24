@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/jungle_nightstand"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/jungle_nightstand",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/jungle_nightstand",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/jungle_nightstand",
+      "y": 270
+    }
+  }
+}

@@ -7,6 +7,7 @@ import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.CabinetBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.DresserBlockEntity;
+import com.digitaldownpour.atouchofclass.entities.NightstandBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.RefrigeratorBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.OvenBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
@@ -66,6 +67,12 @@ public class ModEntities {
                     ModBlocks.dresserBlocks().stream().map(DeferredHolder::get).toArray(Block[]::new)
             )
     );
+
+    public static final Supplier<BlockEntityType<NightstandBlockEntity>> NIGHTSTAND_BE =
+            BLOCK_ENTITY_TYPES.register("nightstand_be", () -> new BlockEntityType<>(
+                    NightstandBlockEntity::new,
+                    ModBlocks.nightstandBlocks().stream().map(DeferredHolder::get).toArray(Block[]::new)
+            ));
 
     public static final Supplier<BlockEntityType<RefrigeratorBlockEntity>> REFRIGERATOR_BE =
             BLOCK_ENTITY_TYPES.register("refrigerator_be", () -> new BlockEntityType<>(
