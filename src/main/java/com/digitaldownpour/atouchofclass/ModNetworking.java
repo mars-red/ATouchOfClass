@@ -10,7 +10,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
-import net.neoforged.neoforge.network.handling.DirectionalPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
 @EventBusSubscriber(
@@ -23,25 +22,22 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
         final PayloadRegistrar registrar = event.registrar("1");
 
-        registrar.playBidirectional(
+        registrar.playToServer(
                 SyncKeyCutterMenuPayload.TYPE,
                 SyncKeyCutterMenuPayload.STREAM_CODEC,
-                new DirectionalPayloadHandler<>(
-                        (payload, context) -> ClientPayloadHandler.handleDataOnMain(payload, context),
-                        ServerPayloadHandler::handleDataOnMain
-                )
+                ServerPayloadHandler::handleDataOnMain
         );
 
         registrar.playToClient(
                 WallOverlayUpdatePacket.TYPE,
                 WallOverlayUpdatePacket.STREAM_CODEC,
-                WallOverlayUpdatePacket::handle
+                (payload, context) -> ClientPayloadHandler.handleDataOnMain(payload, context)
         );
 
         registrar.playToClient(
                 WallOverlayChunkSyncPacket.TYPE,
                 WallOverlayChunkSyncPacket.STREAM_CODEC,
-                WallOverlayChunkSyncPacket::handle
+                (payload, context) -> ClientPayloadHandler.handleDataOnMain(payload, context)
         );
 
         registrar.playToClient(

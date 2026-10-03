@@ -1,7 +1,6 @@
 package com.digitaldownpour.atouchofclass.network;
 
 import com.digitaldownpour.atouchofclass.ATouchofClass;
-import com.digitaldownpour.atouchofclass.components.ClientWallOverlayData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.FriendlyByteBuf;
@@ -9,7 +8,6 @@ import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.network.handling.IPayloadContext;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -45,10 +43,6 @@ public record WallOverlayUpdatePacket(
 //        ResourceLocation tex = rm ? null : buf.readResourceLocation();
 //        return new WallOverlayUpdatePacket(p, f, tex, rm);
         return STREAM_CODEC.decode(buf);
-    }
-
-    public static void handle(final WallOverlayUpdatePacket data, final IPayloadContext context) {
-        ClientWallOverlayData.setFace(data.pos, data.face, data.texture);
     }
 
 }
