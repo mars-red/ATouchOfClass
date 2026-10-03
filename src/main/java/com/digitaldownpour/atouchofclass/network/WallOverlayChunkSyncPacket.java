@@ -1,7 +1,6 @@
 package com.digitaldownpour.atouchofclass.network;
 
 import com.digitaldownpour.atouchofclass.ATouchofClass;
-import com.digitaldownpour.atouchofclass.components.ClientWallOverlayData;
 import com.digitaldownpour.atouchofclass.components.WallOverlayData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.RegistryFriendlyByteBuf;
@@ -12,12 +11,9 @@ import net.minecraft.resources.ResourceLocation;
 
 import net.minecraft.world.level.ChunkPos;
 import net.neoforged.neoforge.network.codec.NeoForgeStreamCodecs;
-import net.neoforged.neoforge.network.handling.IPayloadContext;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public record WallOverlayChunkSyncPacket(
         ChunkPos chunkPos,
@@ -78,12 +74,6 @@ public record WallOverlayChunkSyncPacket(
 
     public static WallOverlayChunkSyncPacket read(RegistryFriendlyByteBuf buf) {
         return STREAM_CODEC.decode(buf);
-    }
-
-    public static void handle(final WallOverlayChunkSyncPacket data, final IPayloadContext context) {
-        Map<BlockPos, WallOverlayData> overlays = new HashMap<>();
-        data.overlays.forEach(entry -> overlays.put(entry.pos(), entry.data()));
-        ClientWallOverlayData.replaceChunk(data.chunkPos, overlays);
     }
 
 }
