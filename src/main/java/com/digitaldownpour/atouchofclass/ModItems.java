@@ -618,6 +618,17 @@ public class ModItems {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(DOOR_KEY);
             event.accept(KEY_RING);
+            event.accept(CORNFLOWER_WALLPAPER);
+            event.accept(SCALLOPED_WALLPAPER);
+            event.accept(OGEE_LATTICE_WALLPAPER);
+            event.accept(STRIPED_WALLPAPER);
+            event.accept(GOTHIC_WALLPAPER);
+            event.accept(SHAKE_SIDING);
+            event.accept(WHITE_STUCCO);
+            event.accept(RED_BRICK);
+            event.accept(BUFF_BRICK);
+            event.accept(WAINSCOTING_ITEM);
+            event.accept(BUCKET_OF_PLASTER);
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(TOILET_ITEM);
@@ -696,17 +707,34 @@ public class ModItems {
             event.accept(WAXED_EXPOSED_COPPER_WALL_SCONCE);
             event.accept(WAXED_WEATHERED_COPPER_WALL_SCONCE);
             event.accept(WAXED_OXIDIZED_COPPER_WALL_SCONCE);
-            event.accept(CORNFLOWER_WALLPAPER);
-            event.accept(SCALLOPED_WALLPAPER);
-            event.accept(OGEE_LATTICE_WALLPAPER);
-            event.accept(STRIPED_WALLPAPER);
-            event.accept(GOTHIC_WALLPAPER);
-            event.accept(SHAKE_SIDING);
-            event.accept(WHITE_STUCCO);
-            event.accept(RED_BRICK);
-            event.accept(BUFF_BRICK);
-            event.accept(WAINSCOTING_ITEM);
-            event.accept(BUCKET_OF_PLASTER);
+            event.accept(DARK_OAK_DOOR_CABINET);
+            event.accept(DARK_OAK_DRAWER_CABINET);
+            event.accept(PALE_OAK_DOOR_CABINET);
+            event.accept(PALE_OAK_DRAWER_CABINET);
+            event.accept(OAK_DOOR_CABINET);
+            event.accept(OAK_DRAWER_CABINET);
+            event.accept(SPRUCE_DOOR_CABINET);
+            event.accept(SPRUCE_DRAWER_CABINET);
+            event.accept(BIRCH_DOOR_CABINET);
+            event.accept(BIRCH_DRAWER_CABINET);
+            event.accept(JUNGLE_DOOR_CABINET);
+            event.accept(JUNGLE_DRAWER_CABINET);
+            event.accept(ACACIA_DOOR_CABINET);
+            event.accept(ACACIA_DRAWER_CABINET);
+            event.accept(MANGROVE_DOOR_CABINET);
+            event.accept(MANGROVE_DRAWER_CABINET);
+            event.accept(CHERRY_DOOR_CABINET);
+            event.accept(CHERRY_DRAWER_CABINET);
+            event.accept(BAMBOO_DOOR_CABINET);
+            event.accept(BAMBOO_DRAWER_CABINET);
+            event.accept(CRIMSON_DOOR_CABINET);
+            event.accept(CRIMSON_DRAWER_CABINET);
+            event.accept(WARPED_DOOR_CABINET);
+            event.accept(WARPED_DRAWER_CABINET);
+            event.accept(KEY_CUTTER_ITEM);
+            event.accept(ELEVATOR_DOOR_ITEM);
+            event.accept(ELEVATOR_CALL_BUTTON_ITEM);
+            event.accept(ELEVATOR_DESTINATION_CONTROL_ITEM);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(COPPER_NUGGET);
@@ -723,12 +751,8 @@ public class ModItems {
             event.accept(BUFF_BRICK_WALL);
             event.accept(CALCITE_COUNTERTOP);
             event.accept(CALCITE_SINK);
-            event.accept(DARK_OAK_DOOR_CABINET);
-            event.accept(DARK_OAK_DRAWER_CABINET);
             event.accept(SMOOTH_STONE_COUNTERTOP);
             event.accept(SMOOTH_STONE_SINK);
-            event.accept(PALE_OAK_DOOR_CABINET);
-            event.accept(PALE_OAK_DRAWER_CABINET);
             event.accept(STONE_COUNTERTOP);
             event.accept(STONE_SINK);
             event.accept(STONE_BRICK_COUNTERTOP);
@@ -821,26 +845,6 @@ public class ModItems {
             event.accept(WAXED_WEATHERED_CUT_COPPER_SINK);
             event.accept(WAXED_OXIDIZED_CUT_COPPER_COUNTERTOP);
             event.accept(WAXED_OXIDIZED_CUT_COPPER_SINK);
-            event.accept(OAK_DOOR_CABINET);
-            event.accept(OAK_DRAWER_CABINET);
-            event.accept(SPRUCE_DOOR_CABINET);
-            event.accept(SPRUCE_DRAWER_CABINET);
-            event.accept(BIRCH_DOOR_CABINET);
-            event.accept(BIRCH_DRAWER_CABINET);
-            event.accept(JUNGLE_DOOR_CABINET);
-            event.accept(JUNGLE_DRAWER_CABINET);
-            event.accept(ACACIA_DOOR_CABINET);
-            event.accept(ACACIA_DRAWER_CABINET);
-            event.accept(MANGROVE_DOOR_CABINET);
-            event.accept(MANGROVE_DRAWER_CABINET);
-            event.accept(CHERRY_DOOR_CABINET);
-            event.accept(CHERRY_DRAWER_CABINET);
-            event.accept(BAMBOO_DOOR_CABINET);
-            event.accept(BAMBOO_DRAWER_CABINET);
-            event.accept(CRIMSON_DOOR_CABINET);
-            event.accept(CRIMSON_DRAWER_CABINET);
-            event.accept(WARPED_DOOR_CABINET);
-            event.accept(WARPED_DRAWER_CABINET);
             // FURNITURE_VARIANT_CREATIVE_ENTRIES
             event.accept(OAK_RAILING);
             event.accept(OAK_BALUSTRADE);
@@ -877,7 +881,6 @@ public class ModItems {
             event.accept(GLASS_SHOWER_DOOR_ITEM);
             event.accept(WALL_SHOWER_HEAD_ITEM);
             event.accept(RAIN_SHOWER_HEAD_ITEM);
-            event.accept(KEY_CUTTER_ITEM);
             event.accept(CASING_ITEM);
             event.accept(WINDOW_APRON_ITEM);
             event.accept(CROWN_MOULDING_ITEM);
@@ -886,9 +889,6 @@ public class ModItems {
             event.accept(CORNER_BLOCK_ITEM);
             event.accept(ELEVATOR_SHAFT_PANEL_ITEM);
             event.accept(ELEVATOR_FLOOR_ITEM);
-            event.accept(ELEVATOR_DOOR_ITEM);
-            event.accept(ELEVATOR_CALL_BUTTON_ITEM);
-            event.accept(ELEVATOR_DESTINATION_CONTROL_ITEM);
             event.accept(BRUSHED_STAINLESS_STEEL_ITEM);
         }
     }
