@@ -12,6 +12,7 @@ public class ATouchofClass {
         ModBlocks.register(bus);
         ModEntities.register(bus);
         ModItems.register(bus);
+        ModCreativeTabs.register(bus);
         ModSounds.SOUNDS.register(bus);
         ModMenus.register(bus);
     }
