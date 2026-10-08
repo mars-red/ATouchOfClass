@@ -2,6 +2,7 @@ package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.ModComponents;
 import com.digitaldownpour.atouchofclass.ModSounds;
+import com.digitaldownpour.atouchofclass.components.KeyableInfo;
 import com.digitaldownpour.atouchofclass.items.KeyRingItem;
 import com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity;
 import net.minecraft.core.BlockPos;
@@ -133,6 +134,11 @@ public class TallDoorBlock extends Block implements EntityBlock {
                             .setValue(OPEN, state.getValue(OPEN))
                             .setValue(HINGE, state.getValue(HINGE)),
             3);
+            // NeoForge can defer onPlace until after the item components have been
+            // applied to the base. Only now are the other block entities available.
+            if (world.getBlockEntity(pos) instanceof TallDoorBlockEntity base) {
+                base.setKeyableInfo(new KeyableInfo(base.getKeyCode(), base.getKeyableName()));
+            }
         }
     }
 
@@ -141,6 +147,15 @@ public class TallDoorBlock extends Block implements EntityBlock {
         if (!world.isClientSide && state.getBlock() != newState.getBlock()) {
             int part = state.getValue(PART);
             BlockPos basePos = pos.below(part); // Calculate bottom position
+
+            // Survival loot is rolled after removal, using the original section's block
+            // entity. Existing doors may only have key data in the bottom section,
+            // so preserve it before recursively removing the rest of the door.
+            if (part != 0
+                    && world.getBlockEntity(basePos) instanceof TallDoorBlockEntity base
+                    && world.getBlockEntity(pos) instanceof TallDoorBlockEntity broken) {
+                broken.setKeyableInfo(new KeyableInfo(base.getKeyCode(), base.getKeyableName()));
+            }
 
             for (int i = 0; i < 3; i++) {
                 if (i == part) continue;

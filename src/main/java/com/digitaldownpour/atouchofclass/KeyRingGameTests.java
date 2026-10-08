@@ -22,6 +22,79 @@ import java.util.List;
 @GameTestHolder(ATouchofClass.MODID)
 @PrefixGameTestTemplate(false)
 public class KeyRingGameTests {
+    @GameTest(template = "chandelier_test")
+    public static void survivalBreakAndPickupCodedDoor(GameTestHelper helper) {
+        checkSurvivalDoorDrops(helper, false, false);
+    }
+
+    @GameTest(template = "chandelier_test")
+    public static void survivalBreakAndPickupPreviouslySavedCodedDoor(GameTestHelper helper) {
+        checkSurvivalDoorDrops(helper, true, false);
+    }
+
+    @GameTest(template = "chandelier_test")
+    public static void survivalBreakAndPickupAfterUsingCodedDoor(GameTestHelper helper) {
+        checkSurvivalDoorDrops(helper, false, true);
+    }
+
+    private static void checkSurvivalDoorDrops(GameTestHelper helper, boolean previouslySaved, boolean toggle) {
+        var level = helper.getLevel();
+        var player = new net.neoforged.neoforge.common.util.FakePlayer(level,
+                new com.mojang.authlib.GameProfile(java.util.UUID.randomUUID(), "door-drop-test"));
+        player.gameMode.changeGameModeForPlayer(GameType.SURVIVAL);
+        BlockPos base = helper.absolutePos(new BlockPos(2, 2, 2));
+        KeyableInfo expected = new KeyableInfo("vault-code", "Vault Door");
+        for (int part = 0; part < 3; part++) {
+            level.setBlockAndUpdate(base.below(), Blocks.STONE.defaultBlockState());
+            if (previouslySaved) {
+                level.setBlockAndUpdate(base, ModBlocks.TALL_BIRCH_DOOR.get().defaultBlockState());
+                var door = (TallDoorBlockEntity) level.getBlockEntity(base);
+                // Older worlds only stored the code in the bottom section.
+                var tag = new net.minecraft.nbt.CompoundTag();
+                tag.putString("keyCode", expected.keyCode());
+                tag.putString("keyableName", expected.keyableName());
+                door.loadCustomOnly(tag, level.registryAccess());
+            } else {
+                ItemStack item = new ItemStack(ModItems.TALL_BIRCH_DOOR_ITEM.get());
+                item.set(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE, expected);
+                var hit = new net.minecraft.world.phys.BlockHitResult(
+                        net.minecraft.world.phys.Vec3.atCenterOf(base.below()),
+                        net.minecraft.core.Direction.UP, base.below(), false);
+                // ItemStack.useOn includes NeoForge's deferred placement callbacks.
+                helper.assertTrue(item.useOn(new net.minecraft.world.item.context.UseOnContext(
+                        level, player, net.minecraft.world.InteractionHand.MAIN_HAND, item, hit)).consumesAction(),
+                        "Coded door item must place successfully");
+            }
+            if (toggle) {
+                player.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND, key(expected.keyCode(), 1));
+                helper.useBlock(new BlockPos(2, 3, 2), player);
+                helper.assertTrue(level.getBlockState(base).getValue(TallDoorBlock.OPEN), "Matching key must open door");
+                helper.useBlock(new BlockPos(2, 3, 2), player);
+                helper.assertTrue(!level.getBlockState(base).getValue(TallDoorBlock.OPEN), "Matching key must close door");
+                player.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND, ItemStack.EMPTY);
+            }
+            helper.assertTrue(player.gameMode.destroyBlock(base.above(part)), "Survival break must succeed");
+            for (int section = 0; section < 3; section++) {
+                helper.assertTrue(level.getBlockState(base.above(section)).isAir(), "All door sections must be removed");
+            }
+            var drops = level.getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class,
+                    new net.minecraft.world.phys.AABB(base).inflate(1, 3, 1));
+            helper.assertTrue(drops.size() == 1 && drops.getFirst().getItem().getCount() == 1,
+                    "Breaking section " + part + " must spawn exactly one door");
+            var drop = drops.getFirst();
+            helper.assertTrue(expected.equals(drop.getItem().get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE)),
+                    "Dropped section " + part + " must preserve code and name");
+            player.getInventory().clearContent();
+            drop.setNoPickUpDelay();
+            drop.playerTouch(player);
+            helper.assertTrue(drop.isRemoved(), "Door must be picked up");
+            helper.assertTrue(player.getInventory().items.stream().anyMatch(stack ->
+                            expected.equals(stack.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE))),
+                    "Inventory door must preserve code and name");
+        }
+        helper.succeed();
+    }
+
     private static ItemStack key(String code, int count) {
         ItemStack key = new ItemStack(ModItems.DOOR_KEY.get(), count);
         key.set(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE, new KeyableInfo(code, "Test key"));
@@ -168,6 +241,70 @@ public class KeyRingGameTests {
         player.getInventory().setItem(player.getInventory().selected, ring);
         helper.useBlock(base, player);
         helper.assertTrue(!helper.getBlockState(base).getValue(TallDoorBlock.OPEN), "Empty ring must operate unlocked doors");
+        helper.succeed();
+    }
+
+    @GameTest(template = "chandelier_test")
+    public static void placingAndBreakingCodedDoorItemPreservesKeyCode(GameTestHelper helper) {
+        BlockPos stoneRelative = new BlockPos(2, 1, 2);
+        helper.setBlock(stoneRelative, Blocks.STONE);
+        var level = helper.getLevel();
+        var player = helper.makeMockPlayer(GameType.SURVIVAL);
+        var stonePosAbs = helper.absolutePos(stoneRelative);
+
+        ItemStack doorItem = new ItemStack(ModItems.TALL_BIRCH_DOOR_ITEM.get());
+        doorItem.set(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE, new KeyableInfo("vault-code", "Vault Door"));
+
+        var hitResult = new net.minecraft.world.phys.BlockHitResult(
+                net.minecraft.world.phys.Vec3.atCenterOf(stonePosAbs), net.minecraft.core.Direction.UP, stonePosAbs, false);
+        var useOnContext = new net.minecraft.world.item.context.UseOnContext(level, player, net.minecraft.world.InteractionHand.MAIN_HAND, doorItem, hitResult);
+        var result = doorItem.useOn(useOnContext);
+        helper.assertTrue(result.consumesAction(), "Placement must succeed");
+
+        BlockPos basePosAbs = stonePosAbs.above();
+        for (int part = 0; part < 3; part++) {
+            var pos = basePosAbs.above(part);
+            var be = level.getBlockEntity(pos);
+            helper.assertTrue(be instanceof TallDoorBlockEntity, "Each real-placed part must have a TallDoorBlockEntity: part " + part);
+            helper.assertTrue(((TallDoorBlockEntity) be).getKeyCode().equals("vault-code"), "Part " + part + " must carry the code after real placement, got '" + ((TallDoorBlockEntity) be).getKeyCode() + "'");
+        }
+
+        for (int part = 0; part < 3; part++) {
+            var pos = basePosAbs.above(part);
+            var state = level.getBlockState(pos);
+            var be = level.getBlockEntity(pos);
+            java.util.List<ItemStack> drops = net.minecraft.world.level.block.Block.getDrops(state, level, pos, be);
+            helper.assertTrue(drops.size() == 1, "Breaking real-placed part " + part + " must drop exactly one item");
+            KeyableInfo info = drops.get(0).get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
+            helper.assertTrue(info != null && "vault-code".equals(info.keyCode()), "Dropped item from real-placed part " + part + " must carry the key code, got " + info);
+        }
+        helper.succeed();
+    }
+
+    @GameTest(template = "chandelier_test")
+    public static void breakingCodedDoorPreservesKeyCode(GameTestHelper helper) {
+        BlockPos base = new BlockPos(2, 1, 2);
+        helper.setBlock(base.below(), Blocks.STONE);
+        for (int part = 0; part < 3; part++) {
+            helper.setBlock(base.above(part), ModBlocks.TALL_BIRCH_DOOR.get().defaultBlockState().setValue(TallDoorBlock.PART, part));
+        }
+        var level = helper.getLevel();
+        var basePosAbs = helper.absolutePos(base);
+        var door = (TallDoorBlockEntity) level.getBlockEntity(basePosAbs);
+        door.setKeyableInfo(new KeyableInfo("vault-code", "Vault Door"));
+
+        for (int part = 0; part < 3; part++) {
+            var pos = helper.absolutePos(base.above(part));
+            var state = level.getBlockState(pos);
+            var be = level.getBlockEntity(pos);
+            helper.assertTrue(be instanceof TallDoorBlockEntity, "Each part must keep a TallDoorBlockEntity: part " + part);
+            helper.assertTrue(((TallDoorBlockEntity) be).getKeyCode().equals("vault-code"), "Part " + part + " block entity must carry the synced key code");
+            java.util.List<ItemStack> drops = net.minecraft.world.level.block.Block.getDrops(state, level, pos, be);
+            helper.assertTrue(drops.size() == 1, "Breaking part " + part + " must drop exactly one item");
+            ItemStack dropped = drops.get(0);
+            KeyableInfo info = dropped.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
+            helper.assertTrue(info != null && "vault-code".equals(info.keyCode()), "Dropped item from part " + part + " must carry the key code, got " + info);
+        }
         helper.succeed();
     }
 }
