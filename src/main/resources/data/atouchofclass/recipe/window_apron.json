@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "S": "#minecraft:wooden_slabs",
     "P": "atouchofclass:bucket_of_plaster"

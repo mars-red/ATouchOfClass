@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "D": "minecraft:birch_planks",
     "G": "minecraft:glass"

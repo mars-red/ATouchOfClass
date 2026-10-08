@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "D": "minecraft:dark_oak_planks",
     "N": "minecraft:gold_nugget"

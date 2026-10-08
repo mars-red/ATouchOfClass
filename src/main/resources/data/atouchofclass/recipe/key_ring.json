@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "equipment",
   "pattern": [" N ", "N N", " N "],
   "key": { "N": "minecraft:iron_nugget" },
   "result": { "id": "atouchofclass:key_ring", "count": 1 }
