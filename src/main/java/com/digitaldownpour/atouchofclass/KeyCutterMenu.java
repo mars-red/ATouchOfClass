@@ -3,6 +3,7 @@ package com.digitaldownpour.atouchofclass;
 import com.digitaldownpour.atouchofclass.components.KeyableInfo;
 import com.digitaldownpour.atouchofclass.items.ObservableItemStackHandler;
 import com.digitaldownpour.atouchofclass.items.SlotChangeListener;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -131,6 +132,19 @@ public class KeyCutterMenu extends AbstractContainerMenu {
         }
 
         return movedStack;
+    }
+
+    @Override
+    public void removed(Player player) {
+        super.removed(player);
+        if (!player.level().isClientSide()) {
+            SimpleContainer remainingItems = new SimpleContainer(handler.getSlots());
+            for (int slot = 0; slot < handler.getSlots(); slot++) {
+                remainingItems.setItem(slot, handler.extractItem(slot, Integer.MAX_VALUE, false));
+            }
+            // Vanilla cleanup returns items to the inventory and drops any overflow.
+            clearContainer(player, remainingItems);
+        }
     }
 
     @Override
