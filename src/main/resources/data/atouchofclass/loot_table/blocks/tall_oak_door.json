@@ -1,5 +1,4 @@
 {
-  "type": "minecraft:block",
   "pools": [
     {
       "rolls": 1,
@@ -11,9 +10,19 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "atouchofclass:tall_oak_door"
+          "name": "atouchofclass:tall_oak_door",
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "source": "block_entity",
+              "include": [
+                "atouchofclass:keyable_info_data_component_type"
+              ]
+            }
+          ]
         }
       ]
     }
-  ]
+  ],
+  "type": "minecraft:block"
 }
