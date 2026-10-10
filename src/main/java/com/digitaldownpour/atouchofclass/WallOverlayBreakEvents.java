@@ -75,7 +75,7 @@ public final class WallOverlayBreakEvents {
 
     /**
      * Drops the item corresponding to the given overlay texture at pos,
-     * unless the responsible player is in creative mode.
+     * unless it is consumed plaster or the responsible player is in creative mode.
      */
     private static void dropOverlayItem(
             ServerLevel level,
@@ -88,7 +88,8 @@ public final class WallOverlayBreakEvents {
         }
 
         Item item = BlockOverlayItemBase.getItemForTexture(texture);
-        if (item == null) {
+        // Applied plaster is consumed, whether stripped off or broken with its block.
+        if (item == null || item == ModItems.BUCKET_OF_PLASTER.get()) {
             return;
         }
 
