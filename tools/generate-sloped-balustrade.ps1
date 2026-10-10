@@ -40,6 +40,24 @@ foreach($name in @('upper_left','upper_right')) {
     $model | ConvertTo-Json -Depth 20 | Set-Content "$assets/models/block/oak_balustrade_${name}_top.json"
     $tables+='        {'+(($parts | ForEach-Object {'{'+(($_.from+$_.to)-join ',')+'}'})-join ',')+'}'
 }
+foreach($name in @('bottom_left','bottom_right')) {
+    $wall=Get-Content "$assets/models/block/oak_railing_$name.json" -Raw | ConvertFrom-Json
+    $elements=@($wall.elements | Where-Object {$_.faces.north.texture -ne '#copper'})
+    # Keep the landing's centered post, with each column meeting the chamfer.
+    foreach($x in @(7,8)) {
+        $left=if($name -eq 'bottom_left'){$x}else{15-$x}
+        $faces=@{}
+        foreach($face in @('north','south','east','west','up','down')) {
+            $faces[$face]=@{texture=$(if($face -in @('up','down')){'#end'}else{'#post'})}
+        }
+        $elements+=@{from=@($left,0,11.75);to=@(($left+1),($x+5.5),13.75);faces=$faces}
+    }
+    @{loader='atouchofclass:railing';grain_slope=$wall.grain_slope;grain_lower=$false;parent='minecraft:block/block';
+      textures=@{oak='minecraft:block/stripped_oak_log';horizontal='minecraft:block/stripped_oak_log';post='minecraft:block/stripped_oak_log';end='minecraft:block/stripped_oak_log_top';particle='minecraft:block/stripped_oak_log'};
+      elements=$elements} | ConvertTo-Json -Depth 20 | Set-Content "$assets/models/block/oak_balustrade_$name.json"
+    $tables+='        {'+(($elements | ForEach-Object {'{'+(($_.from+$_.to)-join ',')+'}'})-join ',')+'}'
+}
+$names+=@('bottom_left','bottom_right')
 $variants=@{}
 $rotation=0
 foreach($facing in @('north','east','south','west')) {
@@ -69,9 +87,9 @@ final class SlopedBalustradeGeometry {
     private static final double[][][] BOXES={
 $table
     };
-    private static final VoxelShape[][] SHAPES=new VoxelShape[6][4];
+    private static final VoxelShape[][] SHAPES=new VoxelShape[8][4];
     static {
-        for(int s=0;s<6;s++) for(int r=0;r<4;r++) {
+        for(int s=0;s<8;s++) for(int r=0;r<4;r++) {
             VoxelShape shape=Shapes.empty();
             for(double[] b:BOXES[s]) {
                 double x0=b[0],z0=b[2],x1=b[3],z1=b[5];
@@ -82,7 +100,7 @@ $table
         }
     }
     static VoxelShape shape(Slope slope,Direction facing,boolean top) {
-        int s=switch(slope){case UPPER_LEFT->0;case UPPER_RIGHT->1;case LOWER_LEFT->2;case LOWER_RIGHT->3;default->throw new IllegalArgumentException();};
+        int s=switch(slope){case UPPER_LEFT->0;case UPPER_RIGHT->1;case LOWER_LEFT->2;case LOWER_RIGHT->3;case BOTTOM_LEFT->6;case BOTTOM_RIGHT->7;default->throw new IllegalArgumentException();};
         if(top && s<2) s+=4;
         int r=switch(facing){case EAST->1;case SOUTH->2;case WEST->3;default->0;};
         return SHAPES[s][r];

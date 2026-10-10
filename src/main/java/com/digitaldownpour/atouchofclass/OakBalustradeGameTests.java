@@ -19,6 +19,39 @@ import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 @PrefixGameTestTemplate(false)
 public class OakBalustradeGameTests {
     @GameTest(template="chandelier_test")
+    public static void bottomLandingsBlendAndReset(GameTestHelper helper) {
+        var blocks=new java.util.ArrayList<OakBalustradeBlock>();
+        blocks.add(ModBlocks.OAK_BALUSTRADE.get());
+        ModBlocks.WOOD_RAILINGS.values().forEach(family->blocks.add(family.balustrade().get()));
+        for(var block:blocks) for(Direction facing:Direction.Plane.HORIZONTAL)
+            for(boolean right:new boolean[]{true,false}) for(boolean reverse:new boolean[]{true,false}) {
+                BlockPos landing=new BlockPos(2,2,2),bridge=landing.above();
+                Direction uphill=right?facing.getClockWise():facing.getCounterClockWise();
+                BlockPos stairRail=bridge.relative(uphill),flat=landing.relative(uphill.getOpposite());
+                var state=block.defaultBlockState().setValue(OakBalustradeBlock.FACING,facing);
+                helper.setBlock(landing.below(),Blocks.STONE);
+                helper.setBlock(flat.below(),Blocks.STONE);
+                helper.setBlock(stairRail.below(),Blocks.OAK_STAIRS.defaultBlockState()
+                        .setValue(net.minecraft.world.level.block.StairBlock.FACING,uphill));
+                helper.setBlock(stairRail,state);
+                helper.setBlock(flat,state);
+                if(reverse) {helper.setBlock(bridge,state);helper.setBlock(landing,state);}
+                else {helper.setBlock(landing,state);helper.setBlock(bridge,state);}
+                var expected=right?com.digitaldownpour.atouchofclass.blocks.OakRailingBlock.Slope.BOTTOM_LEFT
+                        :com.digitaldownpour.atouchofclass.blocks.OakRailingBlock.Slope.BOTTOM_RIGHT;
+                helper.assertTrue(helper.getLevel().getBlockState(helper.absolutePos(landing)).getValue(OakBalustradeBlock.SLOPE)==expected,
+                        "Landing must blend into the diagonal for every wood, direction, and placement order");
+                helper.assertTrue(helper.getLevel().getBlockState(helper.absolutePos(flat)).getValue(OakBalustradeBlock.SLOPE)
+                        ==com.digitaldownpour.atouchofclass.blocks.OakRailingBlock.Slope.FLAT,"Transition must not spread along landing");
+                helper.setBlock(bridge,Blocks.AIR);
+                helper.assertTrue(helper.getLevel().getBlockState(helper.absolutePos(landing)).getValue(OakBalustradeBlock.SLOPE)
+                        ==com.digitaldownpour.atouchofclass.blocks.OakRailingBlock.Slope.FLAT,"Removing diagonal must restore flat landing");
+                for(BlockPos p:new BlockPos[]{stairRail,landing,flat}) helper.setBlock(p,Blocks.AIR);
+                for(BlockPos p:new BlockPos[]{stairRail,landing,flat}) helper.setBlock(p.below(),Blocks.AIR);
+            }
+        helper.succeed();
+    }
+    @GameTest(template="chandelier_test")
     public static void topTransitionsFollowAnyLandingNeighbor(GameTestHelper helper) {
         for(Direction facing:Direction.Plane.HORIZONTAL) for(boolean right:new boolean[]{true,false}) {
             BlockPos pos=new BlockPos(2,2,2);

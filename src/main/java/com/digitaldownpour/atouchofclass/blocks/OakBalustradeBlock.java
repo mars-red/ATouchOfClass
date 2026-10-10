@@ -28,7 +28,8 @@ public class OakBalustradeBlock extends HorizontalDirectionalBlock {
     public static final net.minecraft.world.level.block.state.properties.BooleanProperty TOP_JOIN = net.minecraft.world.level.block.state.properties.BooleanProperty.create("top_join");
     public static final EnumProperty<StairsShape> SHAPE = BlockStateProperties.STAIRS_SHAPE;
     public static final EnumProperty<Slope> SLOPE = EnumProperty.create("slope", Slope.class,
-            Slope.FLAT, Slope.UPPER_LEFT, Slope.UPPER_RIGHT, Slope.LOWER_LEFT, Slope.LOWER_RIGHT);
+            Slope.FLAT, Slope.UPPER_LEFT, Slope.UPPER_RIGHT, Slope.LOWER_LEFT, Slope.LOWER_RIGHT,
+            Slope.BOTTOM_LEFT, Slope.BOTTOM_RIGHT);
 
     public OakBalustradeBlock(Properties properties) {
         super(properties);
@@ -86,6 +87,14 @@ public class OakBalustradeBlock extends HorizontalDirectionalBlock {
         Slope direct=stairSlope(level,pos,facing);
         if(direct!=Slope.FLAT) return direct;
         Direction right=facing.getClockWise();
+        // The landing sits below the post-free diagonal half. Bend its grip
+        // upward instead of leaving a full horizontal rail beneath the slope.
+        BlockState above=level.getBlockState(pos.above());
+        if (above.is(this) && above.getValue(FACING)==facing && OakBalusterBlock.supported(level,pos)) {
+            boolean bottomLeft=anchor(level,pos.above().relative(right),facing,Slope.UPPER_LEFT);
+            boolean bottomRight=anchor(level,pos.above().relative(right.getOpposite()),facing,Slope.UPPER_RIGHT);
+            if (bottomLeft != bottomRight) return bottomLeft ? Slope.BOTTOM_LEFT : Slope.BOTTOM_RIGHT;
+        }
         // A post-free half must touch a stair-supported half at an actual rail interface.
         // Read its physical stair support, avoiding mutual support between floating pieces.
         boolean rising=anchor(level,pos.below(),facing,Slope.UPPER_LEFT)

@@ -24,7 +24,7 @@ public class OakBalusterBlock extends HorizontalDirectionalBlock {
     }
     @Override protected MapCodec<? extends OakBalusterBlock> codec() { return CODEC; }
 
-    static boolean supported(LevelReader level,BlockPos pos) {
+    static boolean supported(BlockGetter level,BlockPos pos) {
         BlockPos below=pos.below();BlockState support=level.getBlockState(below);
         return support.getBlock() instanceof OakBalusterBlock || support.isFaceSturdy(level,below,Direction.UP);
     }

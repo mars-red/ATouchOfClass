@@ -172,3 +172,34 @@ foreach ($name in @('inner_left','inner_right','outer_left','outer_right')) {
     }
 }
 Write-Output 'Wall-corner checks passed: matching compact hitboxes, block bounds, and both perpendicular rail interfaces.'
+
+foreach ($name in @('bottom_left','bottom_right')) {
+    $m=Get-Content "$project/src/main/resources/assets/atouchofclass/models/block/oak_railing_$name.json" -Raw | ConvertFrom-Json
+    $upper=$models[$(if ($name -eq 'bottom_left') {'upper_left'} else {'upper_right'})]
+    $table=[regex]::Match($shapeSource,('(?s)'+$name.ToUpperInvariant()+' = \{(.*?)\n    \};')).Groups[1].Value
+    $rows=[regex]::Matches($table,'\{([^{}]+)\}')
+    Assert-Railing ($rows.Count -eq $m.elements.Count) 'Bottom transition must match its hitbox.'
+    for ($i=0; $i -lt $rows.Count; $i++) {
+        $e=$m.elements[$i]
+        $expected=@($rows[$i].Groups[1].Value.Split(',') | ForEach-Object { [double]::Parse($_.Trim(),[Globalization.CultureInfo]::InvariantCulture) })
+        $actual=@($e.from)+@($e.to)
+        for ($j=0; $j -lt 6; $j++) { Assert-Railing ($expected[$j] -eq $actual[$j]) 'Bottom model and hitbox coordinates must match.' }
+        if ($e.faces.north.texture -ne '#copper') { Assert-Railing ($e.from[1] -ge 12) 'Bottom transition must never dip below the level grip.' }
+    }
+    $edge=if ($name -eq 'bottom_left') {0.001} else {15.999}
+    for ($y=0.125; $y -lt 16; $y+=0.25) {
+        for ($z=11.375; $z -lt 14.25; $z+=0.25) {
+            Assert-Railing ((Occupied $m $edge $y $z) -eq (Occupied $model $edge $y $z)) 'Bottom landing must meet the flat rail exactly.'
+        }
+    }
+    # Beyond the bend, retain the existing ascending profile and its vertical seam.
+    for ($x=7.125; $x -lt 16; $x+=0.25) {
+        $sampleX=if ($name -eq 'bottom_left') {$x} else {16-$x}
+        for ($y=12.125; $y -lt 16; $y+=0.25) {
+            foreach ($z in @(11.5,12.5,14.0)) {
+                Assert-Railing ((Occupied $m $sampleX $y $z) -eq (Occupied $upper $sampleX $y $z)) 'Bottom ramp must retain the ascending profile without holes.'
+            }
+        }
+    }
+}
+Write-Output 'Bottom transitions passed: no dip, exact level joins, ascending profile, and model/hitbox parity.'
