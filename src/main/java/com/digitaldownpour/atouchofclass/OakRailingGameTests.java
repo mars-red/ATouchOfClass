@@ -108,7 +108,10 @@ public class OakRailingGameTests {
                                 center.relative(towardStairs,2).offset(0,dy,0)};
                         for (int i : order) placeRail(helper, run[i], facing);
                         assertSlope(helper, run[0], OakRailingBlock.Slope.FLAT);
-                        assertSlope(helper, center, diagonalRight ? OakRailingBlock.Slope.TRANSITION_RIGHT : OakRailingBlock.Slope.TRANSITION_LEFT);
+                        assertSlope(helper, center, dy > 0 ? OakRailingBlock.Slope.FLAT
+                                : diagonalRight ? OakRailingBlock.Slope.TRANSITION_RIGHT : OakRailingBlock.Slope.TRANSITION_LEFT);
+                        if (dy > 0) assertSlope(helper, run[2], diagonalRight
+                                ? OakRailingBlock.Slope.BOTTOM_LEFT : OakRailingBlock.Slope.BOTTOM_RIGHT);
                         helper.assertTrue(helper.getLevel().getBlockState(helper.absolutePos(run[2])).getValue(OakRailingBlock.SLOPE)
                                 != OakRailingBlock.Slope.FLAT, "Stair neighbor must remain diagonal");
                         helper.setBlock(run[3].relative(facing.getOpposite()), Blocks.AIR);

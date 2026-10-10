@@ -124,6 +124,35 @@ foreach ($name in @('inner_left','inner_right','outer_left','outer_right')) {
     @{parent='minecraft:block/block';textures=@{oak='minecraft:block/stripped_oak_log';end='minecraft:block/stripped_oak_log_top';copper='minecraft:block/copper_block';particle='minecraft:block/stripped_oak_log'};elements=@($parts.ToArray())} |
         ConvertTo-Json -Depth 12 | Set-Content "$assets/models/block/oak_railing_$name.json" -Encoding utf8
 }
+# Bottom landings stay level until they meet the ascending half of the run.
+foreach ($name in @('bottom_left','bottom_right')) {
+    $parts = [Collections.Generic.List[object]]::new()
+    foreach ($original in $flatModel.elements) {
+        if ($original.from[0] -ge 6) { continue }
+        $e = $original | ConvertTo-Json -Depth 12 | ConvertFrom-Json
+        $e.to[0] = [Math]::Min([double]6, [double]$e.to[0])
+        foreach ($face in $e.faces.PSObject.Properties) {
+            if ($face.Value.texture -eq '#oak') { $face.Value.texture = '#horizontal' }
+        }
+        $parts.Add($e)
+    }
+    for ($x = 6; $x -lt 16; $x++) {
+        foreach ($band in @(@(-2.25,2.25,11.25,14.25,12.5,15.5), @(-3,-2.25,11.75,13.75,12,12.5), @(2.25,3,11.75,13.75,15.5,16))) {
+            $bottom = [Math]::Max([double]$band[4], [double]($x + 8.5 + $band[0]))
+            $top = [Math]::Min([double]16, [Math]::Max([double]$band[5], [double]($x + 8.5 + $band[1])))
+            if ($top -le $bottom) { continue }
+            $faces = [ordered]@{}
+            foreach ($side in @('north','south','east','west','up','down')) { $faces[$side] = @{texture='#oak'} }
+            $parts.Add([pscustomobject]@{from=@($x,$bottom,$band[2]); to=@(($x+1),$top,$band[3]); faces=$faces})
+        }
+    }
+    if ($name -eq 'bottom_right') {
+        foreach ($e in $parts) { $oldX=$e.from[0]; $e.from[0]=16-$e.to[0]; $e.to[0]=16-$oldX }
+    }
+    $all[$name] = @($parts | ForEach-Object { ,(@($_.from) + @($_.to)) })
+    @{loader='atouchofclass:railing'; grain_slope=$(if ($name -eq 'bottom_left') { 1 } else { -1 }); grain_lower=$false; parent='minecraft:block/block'; textures=@{horizontal='minecraft:block/stripped_oak_log'; end='minecraft:block/stripped_oak_log_top'; oak='minecraft:block/stripped_oak_log'; copper='minecraft:block/copper_block'; particle='minecraft:block/stripped_oak_log'}; elements=@($parts.ToArray())} |
+        ConvertTo-Json -Depth 12 | Set-Content "$assets/models/block/oak_railing_$name.json" -Encoding utf8
+}
 $variants = [ordered]@{}
 foreach ($slope in @('flat') + @($all.Keys)) {
     $modelName = if ($slope -eq 'flat') { 'oak_railing' } else { "oak_railing_$slope" }

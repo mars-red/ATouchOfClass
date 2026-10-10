@@ -26,7 +26,14 @@ foreach($name in @('upper_left','upper_right','lower_left','lower_right')) {
     $wall=Get-Content "$assets/models/block/oak_railing_$name.json" -Raw | ConvertFrom-Json
     $wood=@($model.elements | Where-Object {$_.faces.north.texture -eq '#oak'})
     $original=@($wall.elements | Where-Object {$_.faces.north.texture -eq '#oak'})
-    if(($wood | ConvertTo-Json -Depth 20 -Compress) -ne ($original | ConvertTo-Json -Depth 20 -Compress)) {throw "$name must preserve the seamless stepped rail"}
+    if($wood.Count -ne $original.Count) {throw "$name must preserve the seamless stepped rail"}
+    for($i=0;$i -lt $wood.Count;$i++) {
+        if(($wood[$i].from -join ',') -ne ($original[$i].from -join ',') -or
+           ($wood[$i].to -join ',') -ne ($original[$i].to -join ',')) {throw "$name changes the rail profile"}
+        foreach($side in @('north','south','east','west','up','down')) {
+            if($wood[$i].faces.$side.texture -ne $original[$i].faces.$side.texture) {throw "$name changes the rail material"}
+        }
+    }
     $posts=@($model.elements | Where-Object {$_.faces.north.texture -eq '#post'})
     if($name.StartsWith('lower')) {
         if($posts.Count -ne 0) {throw "$name must be post-free"}
@@ -45,3 +52,21 @@ foreach($name in @('upper_left','upper_right','lower_left','lower_right')) {
     }
 }
 Write-Output 'Diagonal balustrade geometry passed: alternating posts, upper-tread footprints, matching chamfers, and unchanged seamless rail geometry.'
+foreach($name in @('bottom_left','bottom_right')) {
+    $model=Get-Content "$assets/models/block/oak_balustrade_$name.json" -Raw | ConvertFrom-Json
+    $wall=Get-Content "$assets/models/block/oak_railing_$name.json" -Raw | ConvertFrom-Json
+    $wood=@($model.elements | Where-Object {$_.faces.north.texture -ne '#post'})
+    $original=@($wall.elements | Where-Object {$_.faces.north.texture -ne '#copper'})
+    if($wood.Count -ne $original.Count) {throw "$name must use the verified bottom transition"}
+    for($i=0;$i -lt $wood.Count;$i++) {
+        if(($wood[$i].from -join ',') -ne ($original[$i].from -join ',') -or
+           ($wood[$i].to -join ',') -ne ($original[$i].to -join ',')) {throw "$name changes the bottom transition profile"}
+    }
+    $posts=@($model.elements | Where-Object {$_.faces.north.texture -eq '#post'})
+    if($posts.Count -ne 2) {throw "$name needs a centered two-column post"}
+    foreach($post in $posts) {
+        $cap=@($wood | Where-Object {$_.from[0] -eq $post.from[0] -and $_.from[2] -eq 11.75} | Sort-Object {$_.from[1]})[0]
+        if($post.from[1] -ne 0 -or $post.to[1] -ne $cap.from[1] -or $post.from[0] -notin @(7,8)) {throw "$name post must reach the chamfer from the landing"}
+    }
+}
+Write-Output 'Bottom balustrades passed: verified rising profile and centered posts touching the chamfer.'

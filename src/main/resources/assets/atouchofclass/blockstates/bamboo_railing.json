@@ -219,6 +219,46 @@
       "model": "atouchofclass:block/bamboo_railing_outer_right",
       "y": 270,
       "uvlock": true
+    },
+    "facing=north,slope=bottom_left": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/bamboo_railing_bottom_left"
+    },
+    "facing=east,slope=bottom_left": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/bamboo_railing_bottom_left"
+    },
+    "facing=south,slope=bottom_left": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/bamboo_railing_bottom_left"
+    },
+    "facing=west,slope=bottom_left": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/bamboo_railing_bottom_left"
+    },
+    "facing=north,slope=bottom_right": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/bamboo_railing_bottom_right"
+    },
+    "facing=east,slope=bottom_right": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/bamboo_railing_bottom_right"
+    },
+    "facing=south,slope=bottom_right": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/bamboo_railing_bottom_right"
+    },
+    "facing=west,slope=bottom_right": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/bamboo_railing_bottom_right"
     }
   }
 }

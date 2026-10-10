@@ -26,7 +26,7 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<OakRailingBlock> CODEC = simpleCodec(OakRailingBlock::new);
     public enum Slope implements StringRepresentable {
         FLAT, UPPER_LEFT, LOWER_RIGHT, LOWER_LEFT, UPPER_RIGHT, TRANSITION_LEFT, TRANSITION_RIGHT,
-        INNER_LEFT, INNER_RIGHT, OUTER_LEFT, OUTER_RIGHT;
+        BOTTOM_LEFT, BOTTOM_RIGHT, INNER_LEFT, INNER_RIGHT, OUTER_LEFT, OUTER_RIGHT;
 
         @Override
         public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
@@ -36,6 +36,7 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
                 case UPPER_LEFT -> UPPER_RIGHT; case UPPER_RIGHT -> UPPER_LEFT;
                 case LOWER_LEFT -> LOWER_RIGHT; case LOWER_RIGHT -> LOWER_LEFT;
                 case TRANSITION_LEFT -> TRANSITION_RIGHT; case TRANSITION_RIGHT -> TRANSITION_LEFT;
+                case BOTTOM_LEFT -> BOTTOM_RIGHT; case BOTTOM_RIGHT -> BOTTOM_LEFT;
                 case INNER_LEFT -> INNER_RIGHT; case INNER_RIGHT -> INNER_LEFT;
                 case OUTER_LEFT -> OUTER_RIGHT; case OUTER_RIGHT -> OUTER_LEFT;
                 default -> FLAT;
@@ -235,11 +236,17 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
             // transitions cannot spread along an otherwise horizontal run.
             Slope left = matches(level,leftPos,facing)?baseSlope(level.getBlockState(leftPos), level, leftPos):Slope.FLAT;
             Slope r = matches(level,rightPos,facing)?baseSlope(level.getBlockState(rightPos), level, rightPos):Slope.FLAT;
-            if ((left == Slope.UPPER_RIGHT || left == Slope.LOWER_RIGHT) && r == Slope.FLAT)
+            if (left == Slope.LOWER_RIGHT && r == Slope.FLAT)
                 slope = Slope.TRANSITION_LEFT;
-            else if ((r == Slope.UPPER_LEFT || r == Slope.LOWER_LEFT) && left == Slope.FLAT)
+            else if (r == Slope.LOWER_LEFT && left == Slope.FLAT)
                 slope = Slope.TRANSITION_RIGHT;
         }
+        // At the foot of a run, level out the first rising block itself.
+        // A descending transition in the preceding flat block creates a dip.
+        if (slope == Slope.UPPER_LEFT && flatNeighbor(level, leftPos, facing))
+            slope = Slope.BOTTOM_LEFT;
+        else if (slope == Slope.UPPER_RIGHT && flatNeighbor(level, rightPos, facing))
+            slope = Slope.BOTTOM_RIGHT;
         // The top diagonal can finish directly against a newel without an
         // intervening level railing. Reuse the existing 45-degree transition.
         if (!matches(level,pos.above(),facing)) {
@@ -248,6 +255,10 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
         }
         if (slope == Slope.FLAT) slope = wallCorner(level, pos, facing);
         return state.setValue(SLOPE, slope);
+    }
+    private boolean flatNeighbor(BlockGetter level, BlockPos pos, Direction facing) {
+        return matches(level, pos, facing)
+                && baseSlope(level.getBlockState(pos), level, pos) == Slope.FLAT;
     }
     private boolean newel(BlockGetter level,BlockPos pos) {
         BlockState other=level.getBlockState(pos);
