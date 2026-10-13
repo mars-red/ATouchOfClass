@@ -4646,6 +4646,46 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/resin_brick_sink.json)
 
+## round-plaster-column-base
+
+**Output:** 1 × Round Plaster Column Base (`atouchofclass:round_plaster_column_base`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+WPW
+```
+
+`P` = `atouchofclass:bucket_of_plaster`; `W` = `#minecraft:planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/round_plaster_column_base.json)
+
+## round-plaster-column-capital
+
+**Output:** 1 × Round Plaster Column Capital (`atouchofclass:round_plaster_column_capital`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WPW
+.W.
+```
+
+`P` = `atouchofclass:bucket_of_plaster`; `W` = `#minecraft:planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/round_plaster_column_capital.json)
+
+## round-plaster-column
+
+**Output:** 1 × Round Plaster Column (`atouchofclass:round_plaster_column`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+WPW
+.W.
+```
+
+`P` = `atouchofclass:bucket_of_plaster`; `W` = `#minecraft:planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/round_plaster_column.json)
+
 ## scalloped-wallpaper
 
 **Output:** 4 × Scalloped Wallpaper (`atouchofclass:scalloped_wallpaper`). **Type:** `minecraft:crafting_shaped`.
@@ -5082,6 +5122,46 @@ LL
 `B` = `minecraft:yellow_bed`; `L` = `#minecraft:spruce_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_yellow_four_post_bed.json)
+
+## square-plaster-column-base
+
+**Output:** 1 × Square Plaster Column Base (`atouchofclass:square_plaster_column_base`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W.W
+.P.
+```
+
+`P` = `atouchofclass:bucket_of_plaster`; `W` = `#minecraft:planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/square_plaster_column_base.json)
+
+## square-plaster-column-capital
+
+**Output:** 1 × Square Plaster Column Capital (`atouchofclass:square_plaster_column_capital`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.P.
+W.W
+```
+
+`P` = `atouchofclass:bucket_of_plaster`; `W` = `#minecraft:planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/square_plaster_column_capital.json)
+
+## square-plaster-column
+
+**Output:** 1 × Square Plaster Column (`atouchofclass:square_plaster_column`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W.W
+.P.
+W.W
+```
+
+`P` = `atouchofclass:bucket_of_plaster`; `W` = `#minecraft:planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/square_plaster_column.json)
 
 ## stone-brick-countertop
 

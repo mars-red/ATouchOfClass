@@ -24,6 +24,7 @@ import com.digitaldownpour.atouchofclass.blocks.CrownMouldingBlock;
 import com.digitaldownpour.atouchofclass.blocks.BaseboardBlock;
 import com.digitaldownpour.atouchofclass.blocks.WindowApronBlock;
 import com.digitaldownpour.atouchofclass.blocks.PlinthBlock;
+import com.digitaldownpour.atouchofclass.blocks.PlasterColumnBlock;
 import com.digitaldownpour.atouchofclass.blocks.CornerBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallDoorBlock;
 import com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock;
@@ -1235,6 +1236,29 @@ public class ModBlocks {
                     .strength(2.0F)
                     .sound(net.minecraft.world.level.block.SoundType.WOOD)
                     .noOcclusion()));
+
+    public static final DeferredBlock<PlasterColumnBlock> SQUARE_PLASTER_COLUMN =
+            registerPlasterColumn("square_plaster_column", PlasterColumnBlock.Variant.SQUARE_COLUMN);
+    public static final DeferredBlock<PlasterColumnBlock> SQUARE_PLASTER_COLUMN_BASE =
+            registerPlasterColumn("square_plaster_column_base", PlasterColumnBlock.Variant.SQUARE_BASE);
+    public static final DeferredBlock<PlasterColumnBlock> SQUARE_PLASTER_COLUMN_CAPITAL =
+            registerPlasterColumn("square_plaster_column_capital", PlasterColumnBlock.Variant.SQUARE_CAPITAL);
+    public static final DeferredBlock<PlasterColumnBlock> ROUND_PLASTER_COLUMN =
+            registerPlasterColumn("round_plaster_column", PlasterColumnBlock.Variant.ROUND_COLUMN);
+    public static final DeferredBlock<PlasterColumnBlock> ROUND_PLASTER_COLUMN_BASE =
+            registerPlasterColumn("round_plaster_column_base", PlasterColumnBlock.Variant.ROUND_BASE);
+    public static final DeferredBlock<PlasterColumnBlock> ROUND_PLASTER_COLUMN_CAPITAL =
+            registerPlasterColumn("round_plaster_column_capital", PlasterColumnBlock.Variant.ROUND_CAPITAL);
+
+    private static DeferredBlock<PlasterColumnBlock> registerPlasterColumn(String name,
+                                                                          PlasterColumnBlock.Variant variant) {
+        return BLOCKS.register(name, registryName -> new PlasterColumnBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .mapColor(MapColor.SNOW)
+                .strength(2.0F)
+                .sound(net.minecraft.world.level.block.SoundType.WOOD)
+                .noOcclusion(), variant));
+    }
 
     public static final DeferredBlock<CornerBlock> CORNER_BLOCK = BLOCKS.register("corner_block",
             registryName -> new CornerBlock(BlockBehaviour.Properties.of()

@@ -1,6 +1,12 @@
 {
     "replace":  false,
     "values":  [
+                   "atouchofclass:square_plaster_column",
+                   "atouchofclass:square_plaster_column_base",
+                   "atouchofclass:square_plaster_column_capital",
+                   "atouchofclass:round_plaster_column",
+                   "atouchofclass:round_plaster_column_base",
+                   "atouchofclass:round_plaster_column_capital",
                    "atouchofclass:oak_railing",
                    "atouchofclass:oak_balustrade",
                    "atouchofclass:oak_baluster",

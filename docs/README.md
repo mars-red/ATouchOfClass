@@ -17,7 +17,7 @@ Start as a [player](getting-started.md), [server owner](server-owners.md), or [m
 9. [Modpack author guide](modpack-authors.md)
 10. [Reference and troubleshooting](reference.md)
 
-The [content catalog](catalog.md) covers 530 registered player-content items. The [recipe reference](recipes.md) contains all 478 bundled recipes, including vanilla-item outputs supplied by the mod.
+The [content catalog](catalog.md) covers 536 registered player-content items. The [recipe reference](recipes.md) contains all 484 bundled recipes, including vanilla-item outputs supplied by the mod. The [building guide](building.md#plaster-columns) now includes square and round plaster columns, confirmed in game by the author on October 13, 2026.
 
 ## Availability labels
 

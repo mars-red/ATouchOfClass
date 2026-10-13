@@ -48,7 +48,7 @@ Gather 3 oak slabs and 2 oak planks for a side-table recipe; another 3 oak slabs
 <!-- screenshot:start-02:start -->
 ![A small room furnished with a leather chair, oak side table and nightstand, and copper table lamp.](images/getting-started/first-room.png)
 
-*A first room introduces seating, storage, and lighting with craftable items.*  
+*A first room introduces seating, storage, and lighting with craftable items.*
 <!-- screenshot:start-02:end -->
 
 ## Choose your next project

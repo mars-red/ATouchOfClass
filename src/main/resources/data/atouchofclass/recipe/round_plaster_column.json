@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": "atouchofclass:bucket_of_plaster",
+    "W": "#minecraft:planks"
+  },
+  "pattern": [
+    " W ",
+    "WPW",
+    " W "
+  ],
+  "result": {
+    "count": 1,
+    "id": "atouchofclass:round_plaster_column"
+  }
+}

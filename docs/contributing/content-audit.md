@@ -6,7 +6,7 @@ Initial pilot audit: October 7, 2026. Full-manual source review: October 8, 2026
 
 ## Inventory coverage
 
-The generated reference covers **530 registered player-content items** and **478 bundled recipe files**. The parser follows literal item registrations, basic block names, dresser/side-table/nightstand definitions, four-post-bed combinations, and wood railing families. It excludes the separately registered internal Creative tab icon. It rejects recipes whose mod outputs are absent from those registration paths.
+The current generated reference covers **536 registered player-content items** and **484 bundled recipe files**, including the six plaster column pieces added on October 13, 2026. The parser follows literal item registrations, basic block names, dresser/side-table/nightstand definitions, four-post-bed combinations, and wood railing families. It excludes the separately registered internal Creative tab icon. It rejects recipes whose mod outputs are absent from those registration paths.
 
 All listed items have a recipe, an oxidation route, or the author's confirmed concrete exception. All 32 colored concrete countertops/sinks intentionally lack recipes. The 24 exposed/weathered/oxidized copper lighting and chain forms without direct recipes are reached through the oxidation data map. Four-post beds use 11 woods × 16 colors; bamboo is not in their current registered family.
 
@@ -52,6 +52,7 @@ The documentation helpers check reference generation, screenshot marker/manifest
 | Seventeen additional capture tasks | All seventeen supplied and integrated October 9, including the separately supplied Creative inventory tab (`start-01`) |
 | First room / Survival acquisition | Gameplay review completed; author-confirmed October 10 |
 | Trim corners and stair rails | In-game placement checks completed; author-confirmed October 10 |
+| Square and round plaster columns | In-game review completed; author-confirmed October 13 |
 | Seating, beds, storage and appliances | Gameplay/multiplayer checks completed; author-confirmed October 10 |
 | Waxing, scraping and multi-section lamps | In-game checks completed; author-confirmed October 10 |
 | Measured two-stop elevator | Round-trip, occupancy, and multiplayer checks completed; author-confirmed October 10 |
@@ -60,6 +61,10 @@ The documentation helpers check reference generation, screenshot marker/manifest
 
 The chapter-level review notes record the author's in-game verification separately from source and resource checks.
 
-Completed documentation checks: 1,585 local links, including 477 recipe anchors, validated across 19 Markdown files. Both generators report current output; all 22 screenshot records match chapter markers. The three JSON examples parse, recipe mod-item ingredients resolve to the catalog, and localized player-content IDs match catalog coverage. Runtime acceptance is complete per the author's confirmation above.
+Earlier documentation checks: 1,585 local links, including 477 recipe anchors, validated across 19 Markdown files. Both generators reported current output; all 22 screenshot records matched chapter markers. The three JSON examples parsed, recipe mod-item ingredients resolved to the catalog, and localized player-content IDs matched catalog coverage. Runtime acceptance is complete per the author's confirmation above.
+
+Plaster column update, October 13, 2026: added the building instructions and dimension reference for both vertical variants, regenerated the catalog and recipe reference from the six completed recipes, and updated inventory totals. Source review confirmed matching shaft stubs, inverted base/capital geometry, separate item drops, any-plank ingredients, and one-item recipe outputs. The author confirmed the columns in game before this manual update.
+
+Documentation checks for this update: both generators report current output, all 22 screenshot records validate, and 1,609 local links including 490 heading anchors resolve across 17 Markdown files. The catalog reports no unresolved acquisition routes.
 
 Elevator layout revision, October 9, 2026: follows the author's reference images with the shaft centered at the rear, call button facing the approach, and destination control facing into the cabin on the other side of the doorway. Construction captures now form a front/rear three-quarter pair through the same open east side. The floor-selection capture retains its stable ID elevator-02; the new rear view is elevator-03. All three captures were supplied and integrated in the October 9 import. The complete import contains 21 images, including replacements for the five tall-door pilot images; start-01 was subsequently supplied separately, visually checked, and integrated, completing all 22 captures. Source and destination file hashes matched for all 21 copies.

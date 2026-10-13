@@ -21,6 +21,7 @@ Copper lighting/chain families use unaffected, exposed, weathered, and oxidized 
 | Cabinet or nightstand | 27 slots |
 | Dresser or refrigerator | 54 slots per complete furnishing |
 | Plaster bucket | 32 applications |
+| Plaster column shaft, base, or capital | One block high per piece; vertical placement only |
 | Tall door, sidelight, shower surround/door, elevator door | Three blocks high |
 | Floor lamp or lamp post | Three blocks high |
 | Elevator call/destination control; newel post | Two blocks high |

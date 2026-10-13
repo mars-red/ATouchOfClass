@@ -541,6 +541,18 @@ public class ModItems {
     public static final DeferredItem<BlockItem> CROWN_MOULDING_ITEM = ITEMS.registerSimpleBlockItem("crown_moulding", ModBlocks.CROWN_MOULDING);
     public static final DeferredItem<BlockItem> BASEBOARD_ITEM = ITEMS.registerSimpleBlockItem("baseboard", ModBlocks.BASEBOARD);
     public static final DeferredItem<BlockItem> PLINTH_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("plinth_block", ModBlocks.PLINTH_BLOCK);
+    public static final DeferredItem<BlockItem> SQUARE_PLASTER_COLUMN_ITEM =
+            ITEMS.registerSimpleBlockItem("square_plaster_column", ModBlocks.SQUARE_PLASTER_COLUMN);
+    public static final DeferredItem<BlockItem> SQUARE_PLASTER_COLUMN_BASE_ITEM =
+            ITEMS.registerSimpleBlockItem("square_plaster_column_base", ModBlocks.SQUARE_PLASTER_COLUMN_BASE);
+    public static final DeferredItem<BlockItem> SQUARE_PLASTER_COLUMN_CAPITAL_ITEM =
+            ITEMS.registerSimpleBlockItem("square_plaster_column_capital", ModBlocks.SQUARE_PLASTER_COLUMN_CAPITAL);
+    public static final DeferredItem<BlockItem> ROUND_PLASTER_COLUMN_ITEM =
+            ITEMS.registerSimpleBlockItem("round_plaster_column", ModBlocks.ROUND_PLASTER_COLUMN);
+    public static final DeferredItem<BlockItem> ROUND_PLASTER_COLUMN_BASE_ITEM =
+            ITEMS.registerSimpleBlockItem("round_plaster_column_base", ModBlocks.ROUND_PLASTER_COLUMN_BASE);
+    public static final DeferredItem<BlockItem> ROUND_PLASTER_COLUMN_CAPITAL_ITEM =
+            ITEMS.registerSimpleBlockItem("round_plaster_column_capital", ModBlocks.ROUND_PLASTER_COLUMN_CAPITAL);
     public static final DeferredItem<BlockItem> CORNER_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("corner_block", ModBlocks.CORNER_BLOCK);
 
     public static final DeferredItem<BlockItem> COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("copper_wall_sconce", ModBlocks.COPPER_WALL_SCONCE);
@@ -886,6 +898,12 @@ public class ModItems {
             event.accept(CROWN_MOULDING_ITEM);
             event.accept(BASEBOARD_ITEM);
             event.accept(PLINTH_BLOCK_ITEM);
+            event.accept(SQUARE_PLASTER_COLUMN_ITEM);
+            event.accept(SQUARE_PLASTER_COLUMN_BASE_ITEM);
+            event.accept(SQUARE_PLASTER_COLUMN_CAPITAL_ITEM);
+            event.accept(ROUND_PLASTER_COLUMN_ITEM);
+            event.accept(ROUND_PLASTER_COLUMN_BASE_ITEM);
+            event.accept(ROUND_PLASTER_COLUMN_CAPITAL_ITEM);
             event.accept(CORNER_BLOCK_ITEM);
             event.accept(ELEVATOR_SHAFT_PANEL_ITEM);
             event.accept(ELEVATOR_FLOOR_ITEM);
