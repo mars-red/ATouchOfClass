@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe. Concrete exceptions are intentional.
 
-**530 registered player-content items.**
+**536 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -394,6 +394,9 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Refrigerator | `atouchofclass:refrigerator` | Survival obtainable — [refrigerator](recipes.md#refrigerator) |
 | Resin Brick Countertop | `atouchofclass:resin_brick_countertop` | Survival obtainable — [resin_brick_countertop](recipes.md#resin-brick-countertop) |
 | Resin Brick Sink | `atouchofclass:resin_brick_sink` | Survival obtainable — [resin_brick_sink](recipes.md#resin-brick-sink) |
+| Round Plaster Column | `atouchofclass:round_plaster_column` | Survival obtainable — [round_plaster_column](recipes.md#round-plaster-column) |
+| Round Plaster Column Base | `atouchofclass:round_plaster_column_base` | Survival obtainable — [round_plaster_column_base](recipes.md#round-plaster-column-base) |
+| Round Plaster Column Capital | `atouchofclass:round_plaster_column_capital` | Survival obtainable — [round_plaster_column_capital](recipes.md#round-plaster-column-capital) |
 | Scalloped Wallpaper | `atouchofclass:scalloped_wallpaper` | Survival obtainable — [scalloped_wallpaper](recipes.md#scalloped-wallpaper) |
 | Shake Siding | `atouchofclass:shake_siding` | Survival obtainable — [shake_siding](recipes.md#shake-siding) |
 | Smooth Quartz Countertop | `atouchofclass:smooth_quartz_countertop` | Survival obtainable — [smooth_quartz_countertop](recipes.md#smooth-quartz-countertop) |
@@ -426,6 +429,9 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Spruce Side Table | `atouchofclass:spruce_side_table` | Survival obtainable — [spruce_side_table](recipes.md#spruce-side-table) |
 | Spruce Four-Post Bed (White) | `atouchofclass:spruce_white_four_post_bed` | Survival obtainable — [spruce_white_four_post_bed](recipes.md#spruce-white-four-post-bed) |
 | Spruce Four-Post Bed (Yellow) | `atouchofclass:spruce_yellow_four_post_bed` | Survival obtainable — [spruce_yellow_four_post_bed](recipes.md#spruce-yellow-four-post-bed) |
+| Square Plaster Column | `atouchofclass:square_plaster_column` | Survival obtainable — [square_plaster_column](recipes.md#square-plaster-column) |
+| Square Plaster Column Base | `atouchofclass:square_plaster_column_base` | Survival obtainable — [square_plaster_column_base](recipes.md#square-plaster-column-base) |
+| Square Plaster Column Capital | `atouchofclass:square_plaster_column_capital` | Survival obtainable — [square_plaster_column_capital](recipes.md#square-plaster-column-capital) |
 | Stone Brick Countertop | `atouchofclass:stone_brick_countertop` | Survival obtainable — [stone_brick_countertop](recipes.md#stone-brick-countertop) |
 | Stone Brick Sink | `atouchofclass:stone_brick_sink` | Survival obtainable — [stone_brick_sink](recipes.md#stone-brick-sink) |
 | Stone Countertop | `atouchofclass:stone_countertop` | Survival obtainable — [stone_countertop](recipes.md#stone-countertop) |

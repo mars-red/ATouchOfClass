@@ -1,0 +1,138 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "particle": "minecraft:block/white_concrete",
+    "plaster": "minecraft:block/white_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        13,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#plaster"
+        },
+        "up": {
+          "texture": "#plaster"
+        },
+        "north": {
+          "texture": "#plaster"
+        },
+        "south": {
+          "texture": "#plaster"
+        },
+        "west": {
+          "texture": "#plaster"
+        },
+        "east": {
+          "texture": "#plaster"
+        }
+      }
+    },
+    {
+      "from": [
+        2,
+        10,
+        2
+      ],
+      "to": [
+        14,
+        13,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#plaster"
+        },
+        "up": {
+          "texture": "#plaster"
+        },
+        "north": {
+          "texture": "#plaster"
+        },
+        "south": {
+          "texture": "#plaster"
+        },
+        "west": {
+          "texture": "#plaster"
+        },
+        "east": {
+          "texture": "#plaster"
+        }
+      }
+    },
+    {
+      "from": [
+        3,
+        8,
+        3
+      ],
+      "to": [
+        13,
+        10,
+        13
+      ],
+      "faces": {
+        "down": {
+          "texture": "#plaster"
+        },
+        "up": {
+          "texture": "#plaster"
+        },
+        "north": {
+          "texture": "#plaster"
+        },
+        "south": {
+          "texture": "#plaster"
+        },
+        "west": {
+          "texture": "#plaster"
+        },
+        "east": {
+          "texture": "#plaster"
+        }
+      }
+    },
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        8,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "#plaster"
+        },
+        "up": {
+          "texture": "#plaster"
+        },
+        "north": {
+          "texture": "#plaster"
+        },
+        "south": {
+          "texture": "#plaster"
+        },
+        "west": {
+          "texture": "#plaster"
+        },
+        "east": {
+          "texture": "#plaster"
+        }
+      }
+    }
+  ]
+}

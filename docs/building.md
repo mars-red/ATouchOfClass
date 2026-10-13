@@ -56,6 +56,28 @@ Build the supporting wall and opening first. Place straight runs before checking
 *Place the supporting wall first, then align trim to its faces and opening edges.*
 <!-- screenshot:building-02:end -->
 
+## Plaster columns
+
+Plaster columns come in **square** and **round** variants. The round shaft uses a stepped, blocky circle; both variants have square stepped trim at their ends and the same white concrete appearance as plaster. Each variant has three separately crafted pieces:
+
+| Piece | Role | Square recipe | Round recipe |
+| --- | --- | --- | --- |
+| Column | A full-block-height shaft section that stacks vertically | [Square column](recipes.md#square-plaster-column) | [Round column](recipes.md#round-plaster-column) |
+| Column base | Stepped trim at the bottom, with a short shaft above it | [Square base](recipes.md#square-plaster-column-base) | [Round base](recipes.md#round-plaster-column-base) |
+| Column capital | The base design inverted, with a short shaft below the trim | [Square capital](recipes.md#square-plaster-column-capital) | [Round capital](recipes.md#round-plaster-column-capital) |
+
+To build a five-block-high column, place one base, stack three matching column sections above it, then place one matching capital on top. Add or remove shaft sections to change the height. The base and capital each occupy one full block height, including their shaft stubs, so the total height is the number of shaft sections plus two blocks. Keep the same variant throughout for a continuous shaft profile.
+
+All pieces stay upright when placed. Horizontal columns are not supported. Each piece occupies its own block space and can be broken separately; in Survival, it drops its corresponding item. Axes mine these blocks efficiently.
+
+Every recipe combines a bucket of plaster with **any wood planks**, including crimson and warped planks, and produces **one piece**. Both shaft recipes use four planks; square bases and capitals use two planks each, while round bases and capitals use three each. Each recipe uses one plaster application through the bucket's crafting remainder. Follow the linked grids to distinguish the shaft, base, and capital recipes.
+
+<!-- screenshot:building-04:start -->
+![Stone wall with a round plaster column to the left and a square plaster column to the right.](images/building/plaster-columns.png)
+
+*Round plaster column on the left, square plaster column on the right.*
+<!-- screenshot:building-04:end -->
+
 ## Railings, balusters, balustrades, and newel posts
 
 All four families have the 12 wood variants listed in the [reference](reference.md). Their roles differ:
@@ -86,3 +108,5 @@ For a first stair build, use a straight run of ordinary bottom-half stairs besid
 | Apron cannot be extended from its end | A cap is terminal. Rebuild the run with the desired length before finishing the end. |
 
 **In-game review complete:** the author confirmed trim corner and stair transition checks on October 10, 2026.
+
+**Plaster columns reviewed in game:** the author confirmed both variants on October 13, 2026.
