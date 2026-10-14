@@ -9,7 +9,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
 
-/** Invisible, non-persistent mount used by a single love-seat cushion. */
+/** Invisible, non-persistent mount used by seats and toilets. */
 public class SeatEntity extends Entity {
     public SeatEntity(EntityType<? extends SeatEntity> type, Level level) {
         super(type, level);
@@ -30,7 +30,8 @@ public class SeatEntity extends Entity {
         var state = level().getBlockState(blockPosition());
         return state.is(ModBlocks.LEATHER_LOVE_SEAT.get())
                 || state.is(ModBlocks.LEATHER_SOFA.get())
-                || state.is(ModBlocks.LEATHER_CHAIR.get());
+                || state.is(ModBlocks.LEATHER_CHAIR.get())
+                || state.is(ModBlocks.TOILET.get());
     }
 
     @Override

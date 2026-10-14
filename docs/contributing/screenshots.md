@@ -338,7 +338,7 @@ Generated from screenshots.json. Tasks are grouped by shared setup. The five tal
 
 **Purpose:** Bathroom interactions
 
-**Setup:** In a room with a solid floor and ceiling, leave a three-by-three area for a clawfoot bathtub and place it. Use it once to show the filled state. Place a toilet beside it and open the lid. Build a separate three-high glass shower surround with a glass shower door; attach a wall shower head to the wall and a rain shower head under the ceiling above the shower. Keep all fixtures unobstructed.
+**Setup:** In a room with a solid floor and ceiling, leave a three-by-three area for a clawfoot bathtub and place it. Use it once to show the filled state. Place a toilet beside it and Shift + right-click it with an empty hand to open the lid. Build a separate three-high glass shower surround with a glass shower door; attach a wall shower head to the wall and a rain shower head under the ceiling above the shower. Keep all fixtures unobstructed.
 
 **Capture:** Capture from a raised three-quarter viewpoint showing the filled tub, open toilet lid, shower glass, and both shower-head mounts. Hide the HUD.
 
@@ -350,7 +350,7 @@ Generated from screenshots.json. Tasks are grouped by shared setup. The five tal
 
 **Alt text:** Bathroom fittings with a filled clawfoot tub, open toilet lid, and glass shower enclosure.
 
-**Caption:** The bath and toilet have appearance toggles; shower heads are decorative fittings.
+**Caption:** Use the bath to toggle its filled appearance. The toilet offers seating and a lid toggle; shower heads are decorative fittings.
 
 ## Copper lighting gallery
 
