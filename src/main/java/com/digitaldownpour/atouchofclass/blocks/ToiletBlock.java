@@ -1,8 +1,12 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
+import com.digitaldownpour.atouchofclass.ModEntities;
+import com.digitaldownpour.atouchofclass.entities.SeatEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.protocol.game.ClientboundPlayerRotationPacket;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -19,6 +23,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -26,7 +32,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import java.util.EnumMap;
 import java.util.Map;
 
-/** A compact porcelain toilet whose lid can be toggled by interaction. */
+/** A compact porcelain toilet with a usable seat and a toggleable lid. */
 public class ToiletBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<ToiletBlock> CODEC = simpleCodec(ToiletBlock::new);
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
@@ -86,13 +92,56 @@ public class ToiletBlock extends HorizontalDirectionalBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                                Player player, BlockHitResult hitResult) {
-        return toggleLid(state, level, pos, player);
+        return interact(state, level, pos, player);
     }
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos,
                                           Player player, InteractionHand hand, BlockHitResult hitResult) {
-        return toggleLid(state, level, pos, player);
+        return interact(state, level, pos, player);
+    }
+
+    private InteractionResult interact(BlockState state, Level level, BlockPos pos, Player player) {
+        if (player.isSecondaryUseActive()) {
+            return toggleLid(state, level, pos, player);
+        }
+        if (level.isClientSide) return InteractionResult.SUCCESS;
+        if (player.isPassenger()) return InteractionResult.CONSUME;
+
+        Direction facing = state.getValue(FACING);
+        Vec3 seatPosition = new Vec3(pos.getX() + 0.5 + facing.getStepX() / 16.0,
+                pos.getY() + 0.225, pos.getZ() + 0.5 + facing.getStepZ() / 16.0);
+        AABB search = new AABB(seatPosition, seatPosition).inflate(0.2);
+        SeatEntity seat = level.getEntitiesOfClass(SeatEntity.class, search).stream().findFirst().orElse(null);
+        if (seat != null && !seat.getPassengers().isEmpty()) return InteractionResult.CONSUME;
+        if (seat == null) {
+            seat = new SeatEntity(ModEntities.LOVE_SEAT_SEAT.get(), level);
+            seat.setPos(seatPosition);
+            if (!level.addFreshEntity(seat)) return InteractionResult.FAIL;
+        }
+
+        if (!player.startRiding(seat, true)) {
+            seat.discard();
+            return InteractionResult.FAIL;
+        }
+        float yaw = facing.toYRot();
+        player.setYRot(yaw);
+        player.setYHeadRot(yaw);
+        player.setYBodyRot(yaw);
+        player.setOldRot();
+        if (player instanceof ServerPlayer serverPlayer) {
+            serverPlayer.connection.send(new ClientboundPlayerRotationPacket(yaw, player.getXRot()));
+        }
+        return InteractionResult.SUCCESS_SERVER;
+    }
+
+    @Override
+    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
+        if (!level.isClientSide && !replacement.is(this)) {
+            level.getEntitiesOfClass(SeatEntity.class, new AABB(pos).inflate(0.25))
+                    .forEach(SeatEntity::discard);
+        }
+        super.onRemove(state, level, pos, replacement, moved);
     }
 
     private InteractionResult toggleLid(BlockState state, Level level, BlockPos pos, Player player) {

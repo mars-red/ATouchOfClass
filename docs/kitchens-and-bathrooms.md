@@ -12,7 +12,7 @@ Build the supporting room first, then add storage and fittings. The table below 
 | Induction cooktop | Decorative surface; adjacent matching cooktops can pair visually |
 | Countertop and sink | Decorative surfaces; sinks have no fluid inventory or faucet interaction |
 | Clawfoot bathtub | Use to toggle its filled appearance |
-| Toilet | Use to open or close its lid |
+| Toilet | Use to sit with the lid open or closed; Shift + use with an empty hand toggles the lid |
 | Shower heads | Decorative fittings; no flowing-water interaction |
 | Glass shower surround | Fixed panels with connections |
 | Glass shower door | Use to open or close it |
@@ -63,7 +63,9 @@ The clay toilet and clay clawfoot bathtub are crafting intermediates; follow the
 
 The clawfoot bathtub's visible body is about **1½ × 2½ blocks**, but it occupies a **3 × 3 × 1** arrangement of block sections. Keep the full area clear and supported. Use any section to toggle the filled appearance across the whole tub; no water bucket is required. It does not behave as a fluid tank. Breaking one section removes the complete tub.
 
-The toilet occupies one block. Use it to toggle the lid and hear the interaction sound. It does not offer storage, seating, or a waste-processing mechanic.
+The toilet occupies one block and seats one player at a time. Right-click it to sit with the lid either open or closed. Sitting leaves the lid in its current state; press Shift to stand up. Breaking an occupied toilet also dismounts its rider.
+
+To open or close the lid, hold Shift and right-click the toilet with an empty hand. This plays the lid interaction sound. The toilet does not offer storage or a waste-processing mechanic.
 
 ## Shower fittings
 
@@ -74,7 +76,7 @@ Glass shower surrounds and shower doors are three blocks high. Place on a suppor
 <!-- screenshot:kitchen-04:start -->
 ![Bathroom fittings with a filled clawfoot tub, open toilet lid, and glass shower enclosure.](images/kitchens/bathroom.png)
 
-*The bath and toilet have appearance toggles; shower heads are decorative fittings.*
+*Use the bath to toggle its filled appearance. The toilet offers seating and a lid toggle; shower heads are decorative fittings.*
 <!-- screenshot:kitchen-04:end -->
 
 ## Troubleshooting

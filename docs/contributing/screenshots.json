@@ -213,12 +213,12 @@
     "page": "docs/kitchens-and-bathrooms.md",
     "file": "docs/images/kitchens/bathroom.png",
     "session": "Kitchen and bathroom suite",
-    "setup": "In a room with a solid floor and ceiling, leave a three-by-three area for a clawfoot bathtub and place it. Use it once to show the filled state. Place a toilet beside it and open the lid. Build a separate three-high glass shower surround with a glass shower door; attach a wall shower head to the wall and a rain shower head under the ceiling above the shower. Keep all fixtures unobstructed.",
+    "setup": "In a room with a solid floor and ceiling, leave a three-by-three area for a clawfoot bathtub and place it. Use it once to show the filled state. Place a toilet beside it and Shift + right-click it with an empty hand to open the lid. Build a separate three-high glass shower surround with a glass shower door; attach a wall shower head to the wall and a rain shower head under the ceiling above the shower. Keep all fixtures unobstructed.",
     "capture": "Capture from a raised three-quarter viewpoint showing the filled tub, open toilet lid, shower glass, and both shower-head mounts. Hide the HUD.",
     "mustShow": "Tub filled appearance, toilet lid, shower entrance, and supporting wall/ceiling for heads.",
     "avoid": "Use default textures without shaders. Close chat and debug overlays. Use F2; hide the HUD for world views, but keep menus visible for interface captures. Supply an unedited PNG. Report any setup that does not reproduce the requested state.",
     "alt": "Bathroom fittings with a filled clawfoot tub, open toilet lid, and glass shower enclosure.",
-    "caption": "The bath and toilet have appearance toggles; shower heads are decorative fittings."
+    "caption": "Use the bath to toggle its filled appearance. The toilet offers seating and a lid toggle; shower heads are decorative fittings."
   },
   {
     "id": "lighting-01",

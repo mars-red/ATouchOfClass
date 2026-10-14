@@ -45,7 +45,9 @@ These are implemented values, not exposed configuration settings. Width and dept
 | Place on storage | Sneak-place to avoid opening the menu |
 | Open a key ring | Hold it and use into the air |
 | Operate a coded tall door | Use a matching key or ring on any section |
-| Open a shower door; toggle tub or toilet | Use the fitting |
+| Open a shower door; toggle tub | Use the fitting |
+| Sit on a toilet | Use the toilet with either lid state |
+| Toggle a toilet lid | Shift + use with an empty hand |
 | Use an elevator | Call button, then destination control after boarding |
 | Capture documentation | F2 in Minecraft Java; PNG saved in that instance's screenshots folder |
 
