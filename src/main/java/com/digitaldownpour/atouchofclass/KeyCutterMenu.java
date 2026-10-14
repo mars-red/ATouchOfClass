@@ -47,6 +47,7 @@ public class KeyCutterMenu extends AbstractContainerMenu {
     // server constructor
     public KeyCutterMenu(int containerId, Inventory playerInv, IItemHandler dataInventory) {
         super(ModMenus.KEY_CUTTER_MENU.get(), containerId);
+        PatioDoorVariants.VALUES.forEach(definition -> keyableTypes.add(ATouchofClass.MODID + ":" + definition.id()));
 
         handler = new ObservableItemStackHandler(2);
 

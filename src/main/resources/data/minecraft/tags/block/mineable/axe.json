@@ -305,6 +305,18 @@
                    "atouchofclass:pale_oak_nightstand",
                    "atouchofclass:bamboo_nightstand",
                    "atouchofclass:crimson_nightstand",
-                   "atouchofclass:warped_nightstand"
+                   "atouchofclass:warped_nightstand",
+                   "atouchofclass:tall_oak_patio_door",
+                   "atouchofclass:tall_spruce_patio_door",
+                   "atouchofclass:tall_birch_patio_door",
+                   "atouchofclass:tall_jungle_patio_door",
+                   "atouchofclass:tall_acacia_patio_door",
+                   "atouchofclass:tall_dark_oak_patio_door",
+                   "atouchofclass:tall_mangrove_patio_door",
+                   "atouchofclass:tall_cherry_patio_door",
+                   "atouchofclass:tall_pale_oak_patio_door",
+                   "atouchofclass:tall_bamboo_patio_door",
+                   "atouchofclass:tall_crimson_patio_door",
+                   "atouchofclass:tall_warped_patio_door"
                ]
 }

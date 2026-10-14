@@ -128,7 +128,3 @@ For a first stair build, use a straight run of ordinary bottom-half stairs besid
 | Railing will not place | Check its supporting wall or valid corner continuation; use balustrades for freestanding edges. |
 | Stair rail remains flat or disappears | Check bottom-half stairs, orientation, physical tread support, and adjacent matching sections. |
 | Apron cannot be extended from its end | A cap is terminal. Rebuild the run with the desired length before finishing the end. |
-
-**In-game review complete:** the author confirmed trim corner and stair transition checks on October 10, 2026.
-
-**Plaster columns reviewed in game:** the author confirmed both variants on October 13, 2026.

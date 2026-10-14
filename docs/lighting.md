@@ -54,5 +54,3 @@ Choose the desired stage, let unwaxed pieces age or obtain the stage in Creative
 | Copper changes color | It is unwaxed and oxidizing. Wax the stage you want to keep. |
 | Aged lighting has no crafting recipe | Some stages are obtained through oxidation instead. |
 | Light will not turn off when clicked | No manual or redstone switch is implemented for these light families. |
-
-**In-game review complete:** the author confirmed waxing, scraping, and section synchronization checks on October 10, 2026. Timing depends on game ticks and surrounding conditions.

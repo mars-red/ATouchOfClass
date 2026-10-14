@@ -104,5 +104,3 @@ Elevator doors are controlled by the elevator; clicking them does not manually t
 | Elevator stays busy | Check for players, mobs, dropped items, or vehicles still inside the full cabin bounding box; allow timeout/animation time. |
 | Travelers arrive inside obstacles | Match cabin footprints and keep the corresponding arrival volume clear. |
 | Controls fail after expansion | Check for multiple touched shaft columns or a connected floor exceeding 256 blocks. |
-
-**In-game review complete:** the author confirmed the measured example, travel in both directions, two-player behavior, and empty-cabin release on October 10, 2026.

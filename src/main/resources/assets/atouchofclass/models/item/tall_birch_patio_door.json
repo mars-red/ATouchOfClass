@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "atouchofclass:item/tall_birch_patio_door"
+  }
+}

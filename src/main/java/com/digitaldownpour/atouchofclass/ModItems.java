@@ -423,6 +423,17 @@ public class ModItems {
                     new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
     );
 
+    public static final java.util.Map<String, DeferredItem<TallDoorItem>> TALL_PATIO_DOOR_ITEMS = registerPatioDoorItems();
+    public static final DeferredItem<TallDoorItem> TALL_OAK_PATIO_DOOR_ITEM = TALL_PATIO_DOOR_ITEMS.get("tall_oak_patio_door");
+
+    private static java.util.Map<String, DeferredItem<TallDoorItem>> registerPatioDoorItems() {
+        var items = new java.util.LinkedHashMap<String, DeferredItem<TallDoorItem>>();
+        PatioDoorVariants.VALUES.forEach(definition -> items.put(definition.id(), ITEMS.register(definition.id(),
+                key -> new TallDoorItem(ModBlocks.TALL_PATIO_DOORS.get(definition.id()).get(),
+                        new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix()))));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
     public static final DeferredItem<TallDoorItem> TALL_SPRUCE_DOOR_ITEM = ITEMS.register(
             "tall_spruce_door",
             key -> new TallDoorItem(ModBlocks.TALL_SPRUCE_DOOR.get(),
@@ -878,6 +889,7 @@ public class ModItems {
             event.accept(TALL_BIRCH_DOOR_ITEM);
             event.accept(TALL_BIRCH_SIDELIGHT_ITEM);
             event.accept(TALL_OAK_DOOR_ITEM);
+            TALL_PATIO_DOOR_ITEMS.values().forEach(event::accept);
             event.accept(TALL_SPRUCE_DOOR_ITEM);
             event.accept(TALL_JUNGLE_DOOR_ITEM);
             event.accept(TALL_ACACIA_DOOR_ITEM);

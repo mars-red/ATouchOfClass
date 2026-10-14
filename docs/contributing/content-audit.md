@@ -6,7 +6,7 @@ Initial pilot audit: October 7, 2026. Full-manual source review: October 8, 2026
 
 ## Inventory coverage
 
-The current generated reference covers **536 registered player-content items** and **484 bundled recipe files**, including the six plaster column pieces added on October 13, 2026. The parser follows literal item registrations, basic block names, dresser/side-table/nightstand definitions, four-post-bed combinations, and wood railing families. It excludes the separately registered internal Creative tab icon. It rejects recipes whose mod outputs are absent from those registration paths.
+The current generated reference covers **560 registered player-content items** and **508 bundled recipe files**, including the six plaster column pieces added on October 13, 2026, and the twelve shutter and twelve patio-door variants included in the October 14 reference refresh. The parser follows literal item registrations, basic block names, dresser/side-table/nightstand/shutter/patio-door definitions, four-post-bed combinations, and wood railing families. It excludes the separately registered internal Creative tab icon. It rejects recipes whose mod outputs are absent from those registration paths.
 
 All listed items have a recipe, an oxidation route, or the author's confirmed concrete exception. All 32 colored concrete countertops/sinks intentionally lack recipes. The 24 exposed/weathered/oxidized copper lighting and chain forms without direct recipes are reached through the oxidation data map. Four-post beds use 11 woods × 16 colors; bamboo is not in their current registered family.
 
@@ -18,7 +18,7 @@ The earlier [acquisition inventory](acquisition-inventory.md) is retained as a h
 | --- | --- | --- |
 | Getting started | [Versions](../../gradle.properties), [Creative tab](../../src/main/java/com/digitaldownpour/atouchofclass/ModCreativeTabs.java), bundled recipes | Correct target, first-room ingredients, server/client installation |
 | Building | [Overlay base](../../src/main/java/com/digitaldownpour/atouchofclass/items/BlockOverlayItemBase.java), [plaster](../../src/main/java/com/digitaldownpour/atouchofclass/items/BucketOfPlasterItem.java), [overlay removal](../../src/main/java/com/digitaldownpour/atouchofclass/WallOverlayBreakEvents.java), trim/rail block classes | Allowed faces, reusable finishes, 32-use plaster, replacement/removal, edge-click trim, supported rails |
-| Tall doors | [Door block](../../src/main/java/com/digitaldownpour/atouchofclass/blocks/TallDoorBlock.java), [door item](../../src/main/java/com/digitaldownpour/atouchofclass/items/TallDoorItem.java), [door data](../../src/main/java/com/digitaldownpour/atouchofclass/entities/TallDoorBlockEntity.java), all 12 door loot tables | Three sections, paired-door access, code/name preserved on break |
+| Tall doors | [Door block](../../src/main/java/com/digitaldownpour/atouchofclass/blocks/TallDoorBlock.java), [door item](../../src/main/java/com/digitaldownpour/atouchofclass/items/TallDoorItem.java), [door data](../../src/main/java/com/digitaldownpour/atouchofclass/entities/TallDoorBlockEntity.java), all 24 regular tall-door and patio-door loot tables | Three sections, paired-door access, code/name preserved on break |
 | Keys | [Cutter menu](../../src/main/java/com/digitaldownpour/atouchofclass/KeyCutterMenu.java), [cutter screen](../../src/main/java/com/digitaldownpour/atouchofclass/gui/KeyCutterMenuScreen.java), [ring item](../../src/main/java/com/digitaldownpour/atouchofclass/items/KeyRingItem.java), [ring menu](../../src/main/java/com/digitaldownpour/atouchofclass/KeyRingMenu.java) | Exact codes, 10-character field, 16 coded-key slots, persistent ring inventory |
 | Furniture | Chair/love-seat/sofa blocks, [seat entity](../../src/main/java/com/digitaldownpour/atouchofclass/entities/SeatEntity.java), dresser/nightstand inventories, [bed block](../../src/main/java/com/digitaldownpour/atouchofclass/blocks/FourPostBedBlock.java), variant definitions | Reserved volumes, seats, storage drops, two mattress sides, bed explosion behavior |
 | Kitchens/bathrooms | [Oven](../../src/main/java/com/digitaldownpour/atouchofclass/entities/OvenBlockEntity.java), [cooktop](../../src/main/java/com/digitaldownpour/atouchofclass/blocks/InductionCooktopBlock.java), cabinet/refrigerator/tub/toilet/shower classes | Smelting versus decorative cooktop, independent cabinets, six-section refrigerator, tub fill/lid toggles |
@@ -33,9 +33,15 @@ Source entry points: [ModBlocks](../../src/main/java/com/digitaldownpour/atoucho
 - Always specify tall doors when describing code-based access; vanilla doors are not supported.
 - Opening the key cutter does not require holding a tall-door item.
 - Placement instructions do not require a trial placement before coding.
-- Breaking tall doors preserves code and descriptive name in the updated implementation. All 12 loot tables copy the keyable component, and the block entity synchronizes it across the sections.
+- Breaking tall doors preserves code and descriptive name in the updated implementation. All 24 regular tall-door and patio-door loot tables copy the keyable component, and the block entity synchronizes it across the sections.
 - The supplied ring screenshot uses its default title; renaming is optional in its capture task.
 - Use Minecraft F2 captures to omit window chrome. Preserve the five supplied originals.
+
+## Patio door update — October 14, 2026
+
+The door chapter, material/dimension reference, catalog, and recipe reference now include all twelve patio-door woods. The generated assets retain recessed handles, centered square item textures, and three rows of `WGW` using matching planks and glass blocks to yield four doors. The doc-reference helper follows `PatioDoorVariants` so regeneration retains all entries.
+
+All 66 automated Minecraft game tests passed during implementation. Patio tests iterate all twelve woods and cover item placement, breaking each section in Survival and Creative, one-item drops and preserved key data, crafting, recipe advancement unlocks, key-cutter processing, matching/nonmatching keys, and matching key rings. Asset checks verified all 72 models, 576 block-state combinations, centered icons, texture references, and byte-identical regeneration. This is automated verification, not a new author-confirmed visual gameplay review. The patio illustration is explicitly labeled as a block-model render; the existing 22 in-game screenshot records are unchanged.
 
 ## Checks and completed review
 

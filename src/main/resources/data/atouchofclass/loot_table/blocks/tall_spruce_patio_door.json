@@ -1,0 +1,28 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "atouchofclass:tall_spruce_patio_door",
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "source": "block_entity",
+              "include": [
+                "atouchofclass:keyable_info_data_component_type"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:block"
+}

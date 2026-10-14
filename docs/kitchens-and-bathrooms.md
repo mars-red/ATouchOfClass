@@ -90,5 +90,3 @@ Glass shower surrounds and shower doors are three blocks high. Place on a suppor
 | Cooktops do not join | Check that both are unpaired neighbors with the same facing. |
 | Concrete sink has no recipe | This is intentional Creative-only content. |
 | Shower door does not respond to a coded key | Use it normally; coded access belongs to tall doors. |
-
-**In-game review complete:** the author confirmed appliance placement, the furnace screen, and bath/shower state checks on October 10, 2026. No plumbing or electrical integration is claimed.

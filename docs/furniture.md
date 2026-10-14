@@ -70,5 +70,3 @@ Four-post beds have 16 bedding colors and 11 woods: oak, spruce, birch, jungle, 
 | Storage items scatter when furniture is broken | Contents drop separately. Collect them or empty the furniture before moving it. |
 | Bed refuses sleep | Read the game's message, check the selected side, and follow normal sleep rules. |
 | Bed has no safe wake-up location | Clear nearby floor space beside the bed and at its ends. |
-
-**In-game review complete:** the author confirmed seating, dismounting, two-player bed use, and comparator output checks on October 10, 2026.

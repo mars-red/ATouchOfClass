@@ -5384,6 +5384,20 @@ DD.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_acacia_door.json)
 
+## tall-acacia-patio-door
+
+**Output:** 4 × Tall Acacia Patio Door (`atouchofclass:tall_acacia_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:acacia_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_acacia_patio_door.json)
+
 ## tall-acacia-sidelight
 
 **Output:** 4 × Tall Acacia Sidelight (`atouchofclass:tall_acacia_sidelight`). **Type:** `minecraft:crafting_shaped`.
@@ -5411,6 +5425,20 @@ DD.
 `D` = `minecraft:bamboo_planks`; `N` = `minecraft:gold_nugget`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_bamboo_door.json)
+
+## tall-bamboo-patio-door
+
+**Output:** 4 × Tall Bamboo Patio Door (`atouchofclass:tall_bamboo_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:bamboo_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_bamboo_patio_door.json)
 
 ## tall-bamboo-sidelight
 
@@ -5440,6 +5468,20 @@ DD.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_birch_door.json)
 
+## tall-birch-patio-door
+
+**Output:** 4 × Tall Birch Patio Door (`atouchofclass:tall_birch_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:birch_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_birch_patio_door.json)
+
 ## tall-birch-sidelight
 
 **Output:** 4 × Tall Birch Sidelight (`atouchofclass:tall_birch_sidelight`). **Type:** `minecraft:crafting_shaped`.
@@ -5467,6 +5509,20 @@ DD.
 `D` = `minecraft:cherry_planks`; `N` = `minecraft:gold_nugget`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_cherry_door.json)
+
+## tall-cherry-patio-door
+
+**Output:** 4 × Tall Cherry Patio Door (`atouchofclass:tall_cherry_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:cherry_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_cherry_patio_door.json)
 
 ## tall-cherry-sidelight
 
@@ -5496,6 +5552,20 @@ DD.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_crimson_door.json)
 
+## tall-crimson-patio-door
+
+**Output:** 4 × Tall Crimson Patio Door (`atouchofclass:tall_crimson_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:crimson_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_crimson_patio_door.json)
+
 ## tall-crimson-sidelight
 
 **Output:** 4 × Tall Crimson Sidelight (`atouchofclass:tall_crimson_sidelight`). **Type:** `minecraft:crafting_shaped`.
@@ -5523,6 +5593,20 @@ DD.
 `D` = `minecraft:dark_oak_planks`; `N` = `minecraft:gold_nugget`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_dark_oak_door.json)
+
+## tall-dark-oak-patio-door
+
+**Output:** 4 × Tall Dark Oak Patio Door (`atouchofclass:tall_dark_oak_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:dark_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_dark_oak_patio_door.json)
 
 ## tall-dark-oak-sidelight
 
@@ -5552,6 +5636,20 @@ DD.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_jungle_door.json)
 
+## tall-jungle-patio-door
+
+**Output:** 4 × Tall Jungle Patio Door (`atouchofclass:tall_jungle_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:jungle_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_jungle_patio_door.json)
+
 ## tall-jungle-sidelight
 
 **Output:** 4 × Tall Jungle Sidelight (`atouchofclass:tall_jungle_sidelight`). **Type:** `minecraft:crafting_shaped`.
@@ -5579,6 +5677,20 @@ DD.
 `D` = `minecraft:mangrove_planks`; `N` = `minecraft:gold_nugget`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_mangrove_door.json)
+
+## tall-mangrove-patio-door
+
+**Output:** 4 × Tall Mangrove Patio Door (`atouchofclass:tall_mangrove_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:mangrove_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_mangrove_patio_door.json)
 
 ## tall-mangrove-sidelight
 
@@ -5608,6 +5720,20 @@ DD.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_oak_door.json)
 
+## tall-oak-patio-door
+
+**Output:** 4 × Tall Oak Patio Door (`atouchofclass:tall_oak_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_oak_patio_door.json)
+
 ## tall-oak-sidelight
 
 **Output:** 4 × Tall Oak Sidelight (`atouchofclass:tall_oak_sidelight`). **Type:** `minecraft:crafting_shaped`.
@@ -5635,6 +5761,20 @@ DD.
 `D` = `minecraft:pale_oak_planks`; `N` = `minecraft:gold_nugget`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_pale_oak_door.json)
+
+## tall-pale-oak-patio-door
+
+**Output:** 4 × Tall Pale Oak Patio Door (`atouchofclass:tall_pale_oak_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:pale_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_pale_oak_patio_door.json)
 
 ## tall-pale-oak-sidelight
 
@@ -5664,6 +5804,20 @@ DD.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_spruce_door.json)
 
+## tall-spruce-patio-door
+
+**Output:** 4 × Tall Spruce Patio Door (`atouchofclass:tall_spruce_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:spruce_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_spruce_patio_door.json)
+
 ## tall-spruce-sidelight
 
 **Output:** 4 × Tall Spruce Sidelight (`atouchofclass:tall_spruce_sidelight`). **Type:** `minecraft:crafting_shaped`.
@@ -5691,6 +5845,20 @@ DD.
 `D` = `minecraft:warped_planks`; `N` = `minecraft:gold_nugget`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_warped_door.json)
+
+## tall-warped-patio-door
+
+**Output:** 4 × Tall Warped Patio Door (`atouchofclass:tall_warped_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:warped_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_warped_patio_door.json)
 
 ## tall-warped-sidelight
 
