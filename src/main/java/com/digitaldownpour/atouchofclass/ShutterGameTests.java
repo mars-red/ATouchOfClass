@@ -160,32 +160,76 @@ public class ShutterGameTests {
     @GameTest(template = "chandelier_test")
     public static void recipeCraftsEightAndMaterialUnlocksIt(GameTestHelper helper) {
         var level = helper.getLevel();
-        var id = net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "oak_shutter");
-        var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.RECIPE, id);
-        var holder = level.getServer().getRecipeManager().byKey(key).orElseThrow();
-        helper.assertTrue(holder.value() instanceof net.minecraft.world.item.crafting.ShapedRecipe, "Shutter recipe must load");
-        var recipe = (net.minecraft.world.item.crafting.ShapedRecipe) holder.value();
-        var wood = new ItemStack(net.minecraft.world.item.Items.OAK_PLANKS);
-        var stick = new ItemStack(net.minecraft.world.item.Items.STICK);
-        var input = net.minecraft.world.item.crafting.CraftingInput.of(3, 2,
-                java.util.List.of(wood, stick, wood, wood, stick, wood));
-        helper.assertTrue(recipe.matches(input, level), "Oak planks and sticks must match the recipe");
-        var result = recipe.assemble(input, level.registryAccess());
-        helper.assertTrue(result.is(ModItems.OAK_SHUTTER.get()) && result.getCount() == 8, "Recipe must craft eight shutters");
-        // Use a real ServerPlayer for advancement awards, with a no-op test
-        // connection and without joining the world (which sends overlay payloads).
-        var player = new net.minecraft.server.level.ServerPlayer(level.getServer(), level,
-                new com.mojang.authlib.GameProfile(java.util.UUID.randomUUID(), "shutter-recipe-test"),
-                net.minecraft.server.level.ClientInformation.createDefault());
-        player.connection = new net.neoforged.neoforge.common.util.FakePlayer(level,
-                new com.mojang.authlib.GameProfile(java.util.UUID.randomUUID(), "shutter-test-connection")).connection;
-        var advancement = level.getServer().getAdvancements().get(
-                net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "recipes/building_blocks/oak_shutter"));
-        helper.assertTrue(advancement != null, "Shutter unlock advancement must load");
-        player.getInventory().add(wood.copy());
-        net.minecraft.advancements.CriteriaTriggers.INVENTORY_CHANGED.trigger(player, player.getInventory(), wood);
-        helper.assertTrue(player.getAdvancements().getOrStartProgress(advancement).isDone()
-                && player.getRecipeBook().contains(key), "Obtaining oak planks must unlock the shutter recipe");
+        for (var definition : ShutterVariants.VALUES) {
+            var id = net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, definition.id());
+            var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.RECIPE, id);
+            var holder = level.getServer().getRecipeManager().byKey(key).orElseThrow();
+            helper.assertTrue(holder.value() instanceof net.minecraft.world.item.crafting.ShapedRecipe, "Shutter recipe must load");
+            var recipe = (net.minecraft.world.item.crafting.ShapedRecipe) holder.value();
+            var wood = new ItemStack(definition.sourceBlock().asItem());
+            var stick = new ItemStack(net.minecraft.world.item.Items.STICK);
+            var input = net.minecraft.world.item.crafting.CraftingInput.of(3, 2,
+                    java.util.List.of(wood, stick, wood, wood, stick, wood));
+            helper.assertTrue(recipe.matches(input, level), "Matching planks and sticks must craft " + definition.id());
+            var result = recipe.assemble(input, level.registryAccess());
+            helper.assertTrue(result.is(ModItems.SHUTTER_ITEMS.get(definition.id()).get()) && result.getCount() == 8,
+                    "Recipe must craft eight " + definition.id());
+            // Use a real ServerPlayer for advancement awards, with a no-op test
+            // connection and without joining the world (which sends overlay payloads).
+            var player = new net.minecraft.server.level.ServerPlayer(level.getServer(), level,
+                    new com.mojang.authlib.GameProfile(java.util.UUID.randomUUID(), "shutter-recipe-test"),
+                    net.minecraft.server.level.ClientInformation.createDefault());
+            player.connection = new net.neoforged.neoforge.common.util.FakePlayer(level,
+                    new com.mojang.authlib.GameProfile(java.util.UUID.randomUUID(), "shutter-test-connection")).connection;
+            var advancement = level.getServer().getAdvancements().get(
+                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "recipes/building_blocks/" + definition.id()));
+            helper.assertTrue(advancement != null, "Shutter unlock advancement must load");
+            player.getInventory().add(wood.copy());
+            net.minecraft.advancements.CriteriaTriggers.INVENTORY_CHANGED.trigger(player, player.getInventory(), wood);
+            helper.assertTrue(player.getAdvancements().getOrStartProgress(advancement).isDone()
+                    && player.getRecipeBook().contains(key), "Matching planks must unlock " + definition.id());
+        }
+        helper.succeed();
+    }
+
+    @GameTest(template = "chandelier_test")
+    public static void everyWoodJoinsTogglesAndDropsIndependently(GameTestHelper helper) {
+        var level = helper.getLevel();
+        BlockPos base = helper.absolutePos(new BlockPos(2, 1, 2));
+        for (var definition : ShutterVariants.VALUES) {
+            var block = ModBlocks.SHUTTERS.get(definition.id()).get();
+            var item = ModItems.SHUTTER_ITEMS.get(definition.id()).get();
+            for (DoorHingeSide hinge : DoorHingeSide.values()) {
+                var state = block.defaultBlockState().setValue(ShutterBlock.HINGE, hinge);
+                for (int i = 0; i < 3; i++) level.setBlockAndUpdate(base.above(i), state);
+                helper.assertTrue(level.getBlockState(base.above()).getValue(ShutterBlock.JOINED_ABOVE)
+                        && level.getBlockState(base.above()).getValue(ShutterBlock.JOINED_BELOW),
+                        "Matching sections must join for " + definition.id());
+                block.useWithoutItem(level.getBlockState(base.above()), level, base.above(),
+                        helper.makeMockPlayer(GameType.SURVIVAL),
+                        new BlockHitResult(Vec3.atCenterOf(base.above()), Direction.NORTH, base.above(), false));
+                for (int i = 0; i < 3; i++) assertOpen(helper, base.above(i), true);
+                level.destroyBlock(base.above(), true);
+                helper.assertTrue(level.getBlockState(base).is(block) && level.getBlockState(base.above(2)).is(block),
+                        "Other sections must survive for " + definition.id());
+                var drops = level.getEntitiesOfClass(ItemEntity.class, new AABB(base).inflate(1, 3, 1));
+                helper.assertTrue(drops.size() == 1 && drops.getFirst().getItem().is(item)
+                        && drops.getFirst().getItem().getCount() == 1, "Each wood must drop its own shutter item");
+                drops.forEach(ItemEntity::discard);
+            }
+            // Another material ends the vertical group even with matching facing and hinge.
+            var other = ShutterVariants.VALUES.stream().filter(d -> !d.id().equals(definition.id())).findFirst().orElseThrow();
+            level.setBlockAndUpdate(base, block.defaultBlockState());
+            level.setBlockAndUpdate(base.above(), ModBlocks.SHUTTERS.get(other.id()).get().defaultBlockState());
+            level.setBlockAndUpdate(base.above(2), block.defaultBlockState());
+            helper.assertTrue(!level.getBlockState(base).getValue(ShutterBlock.JOINED_ABOVE),
+                    "Different wood must not join " + definition.id());
+            block.useWithoutItem(level.getBlockState(base), level, base, helper.makeMockPlayer(GameType.SURVIVAL),
+                    new BlockHitResult(Vec3.atCenterOf(base), Direction.NORTH, base, false));
+            assertOpen(helper, base, true);
+            assertOpen(helper, base.above(), false);
+            assertOpen(helper, base.above(2), false);
+        }
         helper.succeed();
     }
 

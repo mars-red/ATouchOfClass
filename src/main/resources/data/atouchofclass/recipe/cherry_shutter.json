@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "WSW",
+    "WSW"
+  ],
+  "key": {
+    "W": "minecraft:cherry_planks",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "atouchofclass:cherry_shutter",
+    "count": 8
+  }
+}

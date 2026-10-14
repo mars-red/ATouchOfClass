@@ -1,6 +1,6 @@
 """Generate reviewable Minecraft geometry and render three joined oak shutters.
 
-Game assets are generated from this geometry by tools/generate_oak_shutters.py.
+Game assets are generated from this geometry by tools/generate_shutters.py.
 """
 from __future__ import annotations
 

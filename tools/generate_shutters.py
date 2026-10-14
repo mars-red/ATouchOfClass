@@ -1,8 +1,9 @@
-"""Build oak shutter models, blockstates, recipe, unlock, and self-drop loot."""
+"""Build all vanilla wood shutter models, items, recipes, unlocks, and loot."""
 from pathlib import Path
 import copy
 import importlib.util
 import json
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("shutter_preview", ROOT / "preview/shutters/generate_preview.py")
@@ -69,41 +70,55 @@ def opened(model, hinge):
     return result
 
 
-def main():
+def generate_variant(wood):
+    shutter = f"{wood}_shutter"
+    texture = ("stripped_bamboo_block" if wood == "bamboo" else
+               f"stripped_{wood}_stem" if wood in ("crimson", "warped") else f"stripped_{wood}_log")
     variants = {}
     for below, above, part in ((False, False, "single"), (False, True, "bottom"),
                                (True, True, "middle"), (True, False, "top")):
         closed = preview.model(below, above)
+        closed["textures"] = {"particle": f"minecraft:block/{texture}", "wood": f"minecraft:block/{texture}"}
         closed["ambientocclusion"] = False
-        write(ASSETS / f"models/block/oak_shutter_{part}.json", closed)
+        write(ASSETS / f"models/block/{shutter}_{part}.json", closed)
         for hinge in ("left", "right"):
-            write(ASSETS / f"models/block/oak_shutter_{part}_open_{hinge}.json", opened(closed, hinge))
+            write(ASSETS / f"models/block/{shutter}_{part}_open_{hinge}.json", opened(closed, hinge))
             for facing, rotation in (("north", 0), ("east", 90), ("south", 180), ("west", 270)):
                 for is_open in (False, True):
                     suffix = f"_open_{hinge}" if is_open else ""
                     key = (f"facing={facing},hinge={hinge},joined_above={str(above).lower()},"
                            f"joined_below={str(below).lower()},open={str(is_open).lower()}")
-                    value = {"model": f"atouchofclass:block/oak_shutter_{part}{suffix}"}
+                    value = {"model": f"atouchofclass:block/{shutter}_{part}{suffix}"}
                     if rotation:
                         value["y"] = rotation
                     variants[key] = value
-    write(ASSETS / "blockstates/oak_shutter.json", {"variants": variants})
-    write(ASSETS / "models/item/oak_shutter.json", {"parent": "atouchofclass:block/oak_shutter_single"})
-    write(ASSETS / "items/oak_shutter.json", {"model": {"type": "minecraft:model", "model": "atouchofclass:item/oak_shutter"}})
-    generate_recipe("oak")
-    write(DATA / "loot_table/blocks/oak_shutter.json", {"type": "minecraft:block", "pools": [{
+    write(ASSETS / f"blockstates/{shutter}.json", {"variants": variants})
+    write(ASSETS / f"models/item/{shutter}.json", {"parent": f"atouchofclass:block/{shutter}_single"})
+    write(ASSETS / f"items/{shutter}.json", {"model": {"type": "minecraft:model", "model": f"atouchofclass:item/{shutter}"}})
+    generate_recipe(wood)
+    write(DATA / f"loot_table/blocks/{shutter}.json", {"type": "minecraft:block", "pools": [{
           "rolls": 1, "conditions": [{"condition": "minecraft:survives_explosion"}],
-          "entries": [{"type": "minecraft:item", "name": "atouchofclass:oak_shutter"}]}]})
+          "entries": [{"type": "minecraft:item", "name": f"atouchofclass:{shutter}"}]}]})
     lang_path = ASSETS / "lang/en_us.json"
     lang = lang_path.read_text(encoding="utf-8")
-    if '"block.atouchofclass.oak_shutter"' not in lang:
-        lang_path.write_text(lang.replace("{", '{\n    "block.atouchofclass.oak_shutter": "Oak Shutter",', 1), encoding="utf-8")
+    label_key = f"block.atouchofclass.{shutter}"
+    if f'"{label_key}"' not in lang:
+        label = wood.replace("_", " ").title() + " Shutter"
+        lang_path.write_text(lang.replace("{", f'{{\n    "{label_key}": "{label}",', 1), encoding="utf-8")
     axe_path = ROOT / "src/main/resources/data/minecraft/tags/block/mineable/axe.json"
     axe = axe_path.read_text(encoding="utf-8")
-    if '"atouchofclass:oak_shutter"' not in axe:
-        import re
-        axe_path.write_text(re.sub(r'("values"\s*:\s*\[)', r'\1\n                   "atouchofclass:oak_shutter",', axe, count=1), encoding="utf-8")
-    print("Generated 64 shutter states, 12 models, item assets, recipe, unlock, and loot.")
+    if f'"atouchofclass:{shutter}"' not in axe:
+        axe_path.write_text(re.sub(r'("values"\s*:\s*\[)', rf'\1\n                   "atouchofclass:{shutter}",', axe, count=1), encoding="utf-8")
+
+
+def main():
+    source = (ROOT / "src/main/java/com/digitaldownpour/atouchofclass/ShutterVariants.java").read_text()
+    woods = re.findall(r'new Definition\("([a-z_]+)"', source)
+    if not woods or len(set(woods)) != len(woods):
+        raise ValueError("Expected unique registered shutter materials")
+    for wood in woods:
+        generate_variant(wood)
+    print(f"Generated {len(woods)} wood variants, each with 64 states, 12 models, item assets, recipe, unlock, and loot.")
 
 
 if __name__ == "__main__":

@@ -2,11 +2,11 @@
 
 [Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)
 
-Generated from explicit item registrations and the basic-block, dresser, side-table, nightstand, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
+Generated from explicit item registrations and the basic-block, dresser, side-table, nightstand, shutter, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe. Concrete exceptions are intentional.
 
-**537 registered player-content items.**
+**548 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -33,6 +33,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Acacia Four-Post Bed (Purple) | `atouchofclass:acacia_purple_four_post_bed` | Survival obtainable — [acacia_purple_four_post_bed](recipes.md#acacia-purple-four-post-bed) |
 | Wall Mounted Acacia Railing | `atouchofclass:acacia_railing` | Survival obtainable — [acacia_railing](recipes.md#acacia-railing) |
 | Acacia Four-Post Bed (Red) | `atouchofclass:acacia_red_four_post_bed` | Survival obtainable — [acacia_red_four_post_bed](recipes.md#acacia-red-four-post-bed) |
+| Acacia Shutter | `atouchofclass:acacia_shutter` | Survival obtainable — [acacia_shutter](recipes.md#acacia-shutter) |
 | Acacia Side Table | `atouchofclass:acacia_side_table` | Survival obtainable — [acacia_side_table](recipes.md#acacia-side-table) |
 | Acacia Four-Post Bed (White) | `atouchofclass:acacia_white_four_post_bed` | Survival obtainable — [acacia_white_four_post_bed](recipes.md#acacia-white-four-post-bed) |
 | Acacia Four-Post Bed (Yellow) | `atouchofclass:acacia_yellow_four_post_bed` | Survival obtainable — [acacia_yellow_four_post_bed](recipes.md#acacia-yellow-four-post-bed) |
@@ -47,6 +48,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Bamboo Nightstand | `atouchofclass:bamboo_nightstand` | Survival obtainable — [bamboo_nightstand](recipes.md#bamboo-nightstand) |
 | Bamboo Parquet | `atouchofclass:bamboo_parquet` | Survival obtainable — [bamboo_parquet](recipes.md#bamboo-parquet) |
 | Wall Mounted Bamboo Railing | `atouchofclass:bamboo_railing` | Survival obtainable — [bamboo_railing](recipes.md#bamboo-railing) |
+| Bamboo Shutter | `atouchofclass:bamboo_shutter` | Survival obtainable — [bamboo_shutter](recipes.md#bamboo-shutter) |
 | Bamboo Side Table | `atouchofclass:bamboo_side_table` | Survival obtainable — [bamboo_side_table](recipes.md#bamboo-side-table) |
 | Baseboard | `atouchofclass:baseboard` | Survival obtainable — [baseboard](recipes.md#baseboard) |
 | Birch Baluster | `atouchofclass:birch_baluster` | Survival obtainable — [birch_baluster](recipes.md#birch-baluster) |
@@ -72,6 +74,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Birch Four-Post Bed (Purple) | `atouchofclass:birch_purple_four_post_bed` | Survival obtainable — [birch_purple_four_post_bed](recipes.md#birch-purple-four-post-bed) |
 | Wall Mounted Birch Railing | `atouchofclass:birch_railing` | Survival obtainable — [birch_railing](recipes.md#birch-railing) |
 | Birch Four-Post Bed (Red) | `atouchofclass:birch_red_four_post_bed` | Survival obtainable — [birch_red_four_post_bed](recipes.md#birch-red-four-post-bed) |
+| Birch Shutter | `atouchofclass:birch_shutter` | Survival obtainable — [birch_shutter](recipes.md#birch-shutter) |
 | Birch Side Table | `atouchofclass:birch_side_table` | Survival obtainable — [birch_side_table](recipes.md#birch-side-table) |
 | Birch Four-Post Bed (White) | `atouchofclass:birch_white_four_post_bed` | Survival obtainable — [birch_white_four_post_bed](recipes.md#birch-white-four-post-bed) |
 | Birch Four-Post Bed (Yellow) | `atouchofclass:birch_yellow_four_post_bed` | Survival obtainable — [birch_yellow_four_post_bed](recipes.md#birch-yellow-four-post-bed) |
@@ -116,6 +119,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Cherry Four-Post Bed (Purple) | `atouchofclass:cherry_purple_four_post_bed` | Survival obtainable — [cherry_purple_four_post_bed](recipes.md#cherry-purple-four-post-bed) |
 | Wall Mounted Cherry Railing | `atouchofclass:cherry_railing` | Survival obtainable — [cherry_railing](recipes.md#cherry-railing) |
 | Cherry Four-Post Bed (Red) | `atouchofclass:cherry_red_four_post_bed` | Survival obtainable — [cherry_red_four_post_bed](recipes.md#cherry-red-four-post-bed) |
+| Cherry Shutter | `atouchofclass:cherry_shutter` | Survival obtainable — [cherry_shutter](recipes.md#cherry-shutter) |
 | Cherry Side Table | `atouchofclass:cherry_side_table` | Survival obtainable — [cherry_side_table](recipes.md#cherry-side-table) |
 | Cherry Four-Post Bed (White) | `atouchofclass:cherry_white_four_post_bed` | Survival obtainable — [cherry_white_four_post_bed](recipes.md#cherry-white-four-post-bed) |
 | Cherry Four-Post Bed (Yellow) | `atouchofclass:cherry_yellow_four_post_bed` | Survival obtainable — [cherry_yellow_four_post_bed](recipes.md#cherry-yellow-four-post-bed) |
@@ -156,6 +160,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Crimson Four-Post Bed (Purple) | `atouchofclass:crimson_purple_four_post_bed` | Survival obtainable — [crimson_purple_four_post_bed](recipes.md#crimson-purple-four-post-bed) |
 | Wall Mounted Crimson Railing | `atouchofclass:crimson_railing` | Survival obtainable — [crimson_railing](recipes.md#crimson-railing) |
 | Crimson Four-Post Bed (Red) | `atouchofclass:crimson_red_four_post_bed` | Survival obtainable — [crimson_red_four_post_bed](recipes.md#crimson-red-four-post-bed) |
+| Crimson Shutter | `atouchofclass:crimson_shutter` | Survival obtainable — [crimson_shutter](recipes.md#crimson-shutter) |
 | Crimson Side Table | `atouchofclass:crimson_side_table` | Survival obtainable — [crimson_side_table](recipes.md#crimson-side-table) |
 | Crimson Four-Post Bed (White) | `atouchofclass:crimson_white_four_post_bed` | Survival obtainable — [crimson_white_four_post_bed](recipes.md#crimson-white-four-post-bed) |
 | Crimson Four-Post Bed (Yellow) | `atouchofclass:crimson_yellow_four_post_bed` | Survival obtainable — [crimson_yellow_four_post_bed](recipes.md#crimson-yellow-four-post-bed) |
@@ -187,6 +192,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Dark Oak Four-Post Bed (Purple) | `atouchofclass:dark_oak_purple_four_post_bed` | Survival obtainable — [dark_oak_purple_four_post_bed](recipes.md#dark-oak-purple-four-post-bed) |
 | Wall Mounted Dark Oak Railing | `atouchofclass:dark_oak_railing` | Survival obtainable — [dark_oak_railing](recipes.md#dark-oak-railing) |
 | Dark Oak Four-Post Bed (Red) | `atouchofclass:dark_oak_red_four_post_bed` | Survival obtainable — [dark_oak_red_four_post_bed](recipes.md#dark-oak-red-four-post-bed) |
+| Dark Oak Shutter | `atouchofclass:dark_oak_shutter` | Survival obtainable — [dark_oak_shutter](recipes.md#dark-oak-shutter) |
 | Dark Oak Side Table | `atouchofclass:dark_oak_side_table` | Survival obtainable — [dark_oak_side_table](recipes.md#dark-oak-side-table) |
 | Dark Oak Four-Post Bed (White) | `atouchofclass:dark_oak_white_four_post_bed` | Survival obtainable — [dark_oak_white_four_post_bed](recipes.md#dark-oak-white-four-post-bed) |
 | Dark Oak Four-Post Bed (Yellow) | `atouchofclass:dark_oak_yellow_four_post_bed` | Survival obtainable — [dark_oak_yellow_four_post_bed](recipes.md#dark-oak-yellow-four-post-bed) |
@@ -249,6 +255,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Jungle Four-Post Bed (Purple) | `atouchofclass:jungle_purple_four_post_bed` | Survival obtainable — [jungle_purple_four_post_bed](recipes.md#jungle-purple-four-post-bed) |
 | Wall Mounted Jungle Railing | `atouchofclass:jungle_railing` | Survival obtainable — [jungle_railing](recipes.md#jungle-railing) |
 | Jungle Four-Post Bed (Red) | `atouchofclass:jungle_red_four_post_bed` | Survival obtainable — [jungle_red_four_post_bed](recipes.md#jungle-red-four-post-bed) |
+| Jungle Shutter | `atouchofclass:jungle_shutter` | Survival obtainable — [jungle_shutter](recipes.md#jungle-shutter) |
 | Jungle Side Table | `atouchofclass:jungle_side_table` | Survival obtainable — [jungle_side_table](recipes.md#jungle-side-table) |
 | Jungle Four-Post Bed (White) | `atouchofclass:jungle_white_four_post_bed` | Survival obtainable — [jungle_white_four_post_bed](recipes.md#jungle-white-four-post-bed) |
 | Jungle Four-Post Bed (Yellow) | `atouchofclass:jungle_yellow_four_post_bed` | Survival obtainable — [jungle_yellow_four_post_bed](recipes.md#jungle-yellow-four-post-bed) |
@@ -288,6 +295,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Mangrove Four-Post Bed (Purple) | `atouchofclass:mangrove_purple_four_post_bed` | Survival obtainable — [mangrove_purple_four_post_bed](recipes.md#mangrove-purple-four-post-bed) |
 | Wall Mounted Mangrove Railing | `atouchofclass:mangrove_railing` | Survival obtainable — [mangrove_railing](recipes.md#mangrove-railing) |
 | Mangrove Four-Post Bed (Red) | `atouchofclass:mangrove_red_four_post_bed` | Survival obtainable — [mangrove_red_four_post_bed](recipes.md#mangrove-red-four-post-bed) |
+| Mangrove Shutter | `atouchofclass:mangrove_shutter` | Survival obtainable — [mangrove_shutter](recipes.md#mangrove-shutter) |
 | Mangrove Side Table | `atouchofclass:mangrove_side_table` | Survival obtainable — [mangrove_side_table](recipes.md#mangrove-side-table) |
 | Mangrove Four-Post Bed (White) | `atouchofclass:mangrove_white_four_post_bed` | Survival obtainable — [mangrove_white_four_post_bed](recipes.md#mangrove-white-four-post-bed) |
 | Mangrove Four-Post Bed (Yellow) | `atouchofclass:mangrove_yellow_four_post_bed` | Survival obtainable — [mangrove_yellow_four_post_bed](recipes.md#mangrove-yellow-four-post-bed) |
@@ -359,6 +367,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Pale Oak Four-Post Bed (Purple) | `atouchofclass:pale_oak_purple_four_post_bed` | Survival obtainable — [pale_oak_purple_four_post_bed](recipes.md#pale-oak-purple-four-post-bed) |
 | Wall Mounted Pale Oak Railing | `atouchofclass:pale_oak_railing` | Survival obtainable — [pale_oak_railing](recipes.md#pale-oak-railing) |
 | Pale Oak Four-Post Bed (Red) | `atouchofclass:pale_oak_red_four_post_bed` | Survival obtainable — [pale_oak_red_four_post_bed](recipes.md#pale-oak-red-four-post-bed) |
+| Pale Oak Shutter | `atouchofclass:pale_oak_shutter` | Survival obtainable — [pale_oak_shutter](recipes.md#pale-oak-shutter) |
 | Pale Oak Side Table | `atouchofclass:pale_oak_side_table` | Survival obtainable — [pale_oak_side_table](recipes.md#pale-oak-side-table) |
 | Pale Oak Four-Post Bed (White) | `atouchofclass:pale_oak_white_four_post_bed` | Survival obtainable — [pale_oak_white_four_post_bed](recipes.md#pale-oak-white-four-post-bed) |
 | Pale Oak Four-Post Bed (Yellow) | `atouchofclass:pale_oak_yellow_four_post_bed` | Survival obtainable — [pale_oak_yellow_four_post_bed](recipes.md#pale-oak-yellow-four-post-bed) |
@@ -427,6 +436,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Spruce Four-Post Bed (Purple) | `atouchofclass:spruce_purple_four_post_bed` | Survival obtainable — [spruce_purple_four_post_bed](recipes.md#spruce-purple-four-post-bed) |
 | Wall Mounted Spruce Railing | `atouchofclass:spruce_railing` | Survival obtainable — [spruce_railing](recipes.md#spruce-railing) |
 | Spruce Four-Post Bed (Red) | `atouchofclass:spruce_red_four_post_bed` | Survival obtainable — [spruce_red_four_post_bed](recipes.md#spruce-red-four-post-bed) |
+| Spruce Shutter | `atouchofclass:spruce_shutter` | Survival obtainable — [spruce_shutter](recipes.md#spruce-shutter) |
 | Spruce Side Table | `atouchofclass:spruce_side_table` | Survival obtainable — [spruce_side_table](recipes.md#spruce-side-table) |
 | Spruce Four-Post Bed (White) | `atouchofclass:spruce_white_four_post_bed` | Survival obtainable — [spruce_white_four_post_bed](recipes.md#spruce-white-four-post-bed) |
 | Spruce Four-Post Bed (Yellow) | `atouchofclass:spruce_yellow_four_post_bed` | Survival obtainable — [spruce_yellow_four_post_bed](recipes.md#spruce-yellow-four-post-bed) |
@@ -488,6 +498,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Warped Four-Post Bed (Purple) | `atouchofclass:warped_purple_four_post_bed` | Survival obtainable — [warped_purple_four_post_bed](recipes.md#warped-purple-four-post-bed) |
 | Wall Mounted Warped Railing | `atouchofclass:warped_railing` | Survival obtainable — [warped_railing](recipes.md#warped-railing) |
 | Warped Four-Post Bed (Red) | `atouchofclass:warped_red_four_post_bed` | Survival obtainable — [warped_red_four_post_bed](recipes.md#warped-red-four-post-bed) |
+| Warped Shutter | `atouchofclass:warped_shutter` | Survival obtainable — [warped_shutter](recipes.md#warped-shutter) |
 | Warped Side Table | `atouchofclass:warped_side_table` | Survival obtainable — [warped_side_table](recipes.md#warped-side-table) |
 | Warped Four-Post Bed (White) | `atouchofclass:warped_white_four_post_bed` | Survival obtainable — [warped_white_four_post_bed](recipes.md#warped-white-four-post-bed) |
 | Warped Four-Post Bed (Yellow) | `atouchofclass:warped_yellow_four_post_bed` | Survival obtainable — [warped_yellow_four_post_bed](recipes.md#warped-yellow-four-post-bed) |

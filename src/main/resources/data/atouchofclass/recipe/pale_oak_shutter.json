@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "WSW",
+    "WSW"
+  ],
+  "key": {
+    "W": "minecraft:pale_oak_planks",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "atouchofclass:pale_oak_shutter",
+    "count": 8
+  }
+}

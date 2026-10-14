@@ -17,9 +17,9 @@ $items = Get-Content (Join-Path $java 'ModItems.java') -Raw
 foreach ($m in [regex]::Matches($items, '(?:ITEMS\.register\w*|registerWallpaper|registerWallFinish)\(\s*"([a-z0-9_]+)"')) { Add-Id $m.Groups[1].Value }
 foreach ($id in (Named-List 'ModBlocks.java' 'BASIC_BLOCK_NAMES')) { Add-Id $id }
 foreach ($wood in (Named-List 'DresserVariants.java' 'WOODS')) { Add-Id ($wood + '_dresser') }
-foreach ($family in @('SideTable','Nightstand')) {
+foreach ($family in @('SideTable','Nightstand','Shutter')) {
     $source = Get-Content (Join-Path $java ($family + 'Variants.java')) -Raw
-    $suffix = if ($family -eq 'SideTable') { '_side_table' } else { '_nightstand' }
+    $suffix = switch ($family) { 'SideTable' { '_side_table' } 'Nightstand' { '_nightstand' } 'Shutter' { '_shutter' } }
     foreach ($m in [regex]::Matches($source, 'new Definition\("([a-z0-9_]+)"')) { Add-Id ($m.Groups[1].Value + $suffix) }
 }
 $woods = Named-List 'FourPostBedVariants.java' 'WOODS'
@@ -63,7 +63,7 @@ function Ingredient($value) {
     throw 'Unsupported ingredient format'
 }
 $catalog = [Collections.Generic.List[string]]::new()
-@('# Content catalog','','[Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)','','Generated from explicit item registrations and the basic-block, dresser, side-table, nightstand, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.','','Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe. Concrete exceptions are intentional.','') | ForEach-Object { $catalog.Add($_) }
+@('# Content catalog','','[Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)','','Generated from explicit item registrations and the basic-block, dresser, side-table, nightstand, shutter, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.','','Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe. Concrete exceptions are intentional.','') | ForEach-Object { $catalog.Add($_) }
 $catalog.Add("**$($registered.Count) registered player-content items.**")
 $catalog.Add('')
 $catalog.Add('| Item | Identifier | Acquisition |')

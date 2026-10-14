@@ -37,9 +37,11 @@ Start mining the decorated face to remove its overlay first. That initial action
 
 Applying a replacement finish directly overwrites the old finish. Remove a non-plaster finish first if you want its item back. Applied plaster cannot be recovered.
 
-## Oak shutters
+## Wood shutters
 
-Place an oak shutter against a wall's side face. It sits flush against that
+Shutters are available in oak, spruce, birch, jungle, acacia, dark oak,
+mangrove, cherry, pale oak, bamboo, crimson, and warped.
+Place a shutter against a wall's side face. It sits flush against that
 face; clicking the left or right half selects that hinge as viewed from
 outside the wall. Each shutter is one block high. Stack matching shutters
 vertically for continuous side rails and end caps only at the exposed ends.
@@ -52,9 +54,10 @@ different hinge, or different facing ends the group. Breaking one shutter
 leaves the others intact and restores their exposed end caps. Survival
 breaking drops one shutter; Creative breaking drops none.
 
-Craft eight shutters from four oak planks and two sticks, with
-`WSW` in two crafting rows. Obtaining oak planks unlocks the recipe.
-Every model face uses stripped oak wood grain, including the narrow edges.
+Craft eight shutters from four matching planks and two sticks, with
+`WSW` in two crafting rows. Obtaining those planks unlocks that wood's recipe.
+Every model face uses the matching stripped wood grain, including the narrow
+edges (stripped bamboo block for bamboo, stripped hyphae for crimson and warped).
 
 ## Add trim
 
