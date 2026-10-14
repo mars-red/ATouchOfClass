@@ -22,4 +22,19 @@ public class ModSounds {
 
     public static final Holder<SoundEvent> ELEVATOR_DING =
             SOUNDS.register("elevator_ding", SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> BATHTUB_FILL =
+            SOUNDS.register("bathtub_fill", SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> BATHTUB_DRAIN =
+            SOUNDS.register("bathtub_drain", SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> TOILET_LID =
+            SOUNDS.register("toilet_lid", SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> KEY_CUTTER =
+            SOUNDS.register("key_cutter", SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> LOCKED_DOOR =
+            SOUNDS.register("locked_door", SoundEvent::createVariableRangeEvent);
 }

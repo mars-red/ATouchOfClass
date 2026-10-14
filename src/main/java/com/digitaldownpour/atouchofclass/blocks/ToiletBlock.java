@@ -1,13 +1,13 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.ModEntities;
+import com.digitaldownpour.atouchofclass.ModSounds;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.protocol.game.ClientboundPlayerRotationPacket;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -149,7 +149,7 @@ public class ToiletBlock extends HorizontalDirectionalBlock {
         if (!level.isClientSide) {
             level.setBlock(pos, state.setValue(OPEN, opening), Block.UPDATE_ALL);
             level.playSound(null, pos,
-                    opening ? SoundEvents.IRON_TRAPDOOR_OPEN : SoundEvents.IRON_TRAPDOOR_CLOSE,
+                    ModSounds.TOILET_LID.value(),
                     SoundSource.BLOCKS, 0.6F, opening ? 1.15F : 1.0F);
         }
         return InteractionResult.SUCCESS;

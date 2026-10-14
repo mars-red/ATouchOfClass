@@ -181,7 +181,8 @@ public class TallDoorBlock extends Block implements EntityBlock {
                     return InteractionResult.SUCCESS_SERVER;
                 }
 
-                return InteractionResult.FAIL;
+                playLockedSound(level, basePos);
+                return InteractionResult.CONSUME;
             }
         }
         return InteractionResult.CONSUME;
@@ -199,8 +200,9 @@ public class TallDoorBlock extends Block implements EntityBlock {
                     toggleDoor(level, basePos);
                     return InteractionResult.SUCCESS;
                 }
+                playLockedSound(level, basePos);
             }
-            return InteractionResult.FAIL;
+            return InteractionResult.CONSUME;
         }
         if (stack.has(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE) && !level.isClientSide) {
             BlockPos basePos = pos.below(state.getValue(PART));
@@ -214,7 +216,13 @@ public class TallDoorBlock extends Block implements EntityBlock {
             }
         }
 
-        return InteractionResult.TRY_WITH_EMPTY_HAND;
+        // Consume the door interaction even when access is denied, preventing
+        // the held item's use-on-block behavior from placing a block afterward.
+        return useWithoutItem(state, level, pos, player, hitResult);
+    }
+
+    private void playLockedSound(Level level, BlockPos basePos) {
+        level.playSound(null, basePos, ModSounds.LOCKED_DOOR.value(), SoundSource.BLOCKS, 1.0F, 1.0F);
     }
 
     private void toggleDoor(Level world, BlockPos basePos) {
