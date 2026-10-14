@@ -14,7 +14,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 public class BetterImageButton extends Button {
     protected final WidgetSprites sprites;
     protected boolean isPressed;
-    protected boolean isEnabled = true;
 
     public BetterImageButton(int x, int y, int width, int height, WidgetSprites sprites, Button.OnPress onPress) {
         this(x, y, width, height, sprites, onPress, CommonComponents.EMPTY);
@@ -34,24 +33,23 @@ public class BetterImageButton extends Button {
     }
 
     public boolean isEnabled() {
-        return isEnabled;
+        return active;
     }
 
     public void enable() {
-        isEnabled = true;
+        active = true;
     }
 
     public void disable() {
-        isEnabled = false;
+        active = false;
+        isPressed = false;
     }
 
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
-        if (isEnabled()) {
-            isPressed = true;
-        }
-
-        return super.mouseClicked(mouseX, mouseY, button);
+        boolean handled = super.mouseClicked(mouseX, mouseY, button);
+        isPressed = handled && active;
+        return handled;
     }
 
     @Override
