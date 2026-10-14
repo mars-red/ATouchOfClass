@@ -1,0 +1,244 @@
+{
+  "variants": {
+    "facing=north,hinge=left,joined_above=false,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_single"
+    },
+    "facing=north,hinge=left,joined_above=false,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_single_open_left"
+    },
+    "facing=east,hinge=left,joined_above=false,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_single",
+      "y": 90
+    },
+    "facing=east,hinge=left,joined_above=false,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_single_open_left",
+      "y": 90
+    },
+    "facing=south,hinge=left,joined_above=false,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_single",
+      "y": 180
+    },
+    "facing=south,hinge=left,joined_above=false,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_single_open_left",
+      "y": 180
+    },
+    "facing=west,hinge=left,joined_above=false,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_single",
+      "y": 270
+    },
+    "facing=west,hinge=left,joined_above=false,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_single_open_left",
+      "y": 270
+    },
+    "facing=north,hinge=right,joined_above=false,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_single"
+    },
+    "facing=north,hinge=right,joined_above=false,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_single_open_right"
+    },
+    "facing=east,hinge=right,joined_above=false,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_single",
+      "y": 90
+    },
+    "facing=east,hinge=right,joined_above=false,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_single_open_right",
+      "y": 90
+    },
+    "facing=south,hinge=right,joined_above=false,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_single",
+      "y": 180
+    },
+    "facing=south,hinge=right,joined_above=false,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_single_open_right",
+      "y": 180
+    },
+    "facing=west,hinge=right,joined_above=false,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_single",
+      "y": 270
+    },
+    "facing=west,hinge=right,joined_above=false,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_single_open_right",
+      "y": 270
+    },
+    "facing=north,hinge=left,joined_above=true,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_bottom"
+    },
+    "facing=north,hinge=left,joined_above=true,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_bottom_open_left"
+    },
+    "facing=east,hinge=left,joined_above=true,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_bottom",
+      "y": 90
+    },
+    "facing=east,hinge=left,joined_above=true,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_bottom_open_left",
+      "y": 90
+    },
+    "facing=south,hinge=left,joined_above=true,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_bottom",
+      "y": 180
+    },
+    "facing=south,hinge=left,joined_above=true,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_bottom_open_left",
+      "y": 180
+    },
+    "facing=west,hinge=left,joined_above=true,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_bottom",
+      "y": 270
+    },
+    "facing=west,hinge=left,joined_above=true,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_bottom_open_left",
+      "y": 270
+    },
+    "facing=north,hinge=right,joined_above=true,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_bottom"
+    },
+    "facing=north,hinge=right,joined_above=true,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_bottom_open_right"
+    },
+    "facing=east,hinge=right,joined_above=true,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_bottom",
+      "y": 90
+    },
+    "facing=east,hinge=right,joined_above=true,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_bottom_open_right",
+      "y": 90
+    },
+    "facing=south,hinge=right,joined_above=true,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_bottom",
+      "y": 180
+    },
+    "facing=south,hinge=right,joined_above=true,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_bottom_open_right",
+      "y": 180
+    },
+    "facing=west,hinge=right,joined_above=true,joined_below=false,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_bottom",
+      "y": 270
+    },
+    "facing=west,hinge=right,joined_above=true,joined_below=false,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_bottom_open_right",
+      "y": 270
+    },
+    "facing=north,hinge=left,joined_above=true,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_middle"
+    },
+    "facing=north,hinge=left,joined_above=true,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_middle_open_left"
+    },
+    "facing=east,hinge=left,joined_above=true,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_middle",
+      "y": 90
+    },
+    "facing=east,hinge=left,joined_above=true,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_middle_open_left",
+      "y": 90
+    },
+    "facing=south,hinge=left,joined_above=true,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_middle",
+      "y": 180
+    },
+    "facing=south,hinge=left,joined_above=true,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_middle_open_left",
+      "y": 180
+    },
+    "facing=west,hinge=left,joined_above=true,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_middle",
+      "y": 270
+    },
+    "facing=west,hinge=left,joined_above=true,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_middle_open_left",
+      "y": 270
+    },
+    "facing=north,hinge=right,joined_above=true,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_middle"
+    },
+    "facing=north,hinge=right,joined_above=true,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_middle_open_right"
+    },
+    "facing=east,hinge=right,joined_above=true,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_middle",
+      "y": 90
+    },
+    "facing=east,hinge=right,joined_above=true,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_middle_open_right",
+      "y": 90
+    },
+    "facing=south,hinge=right,joined_above=true,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_middle",
+      "y": 180
+    },
+    "facing=south,hinge=right,joined_above=true,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_middle_open_right",
+      "y": 180
+    },
+    "facing=west,hinge=right,joined_above=true,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_middle",
+      "y": 270
+    },
+    "facing=west,hinge=right,joined_above=true,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_middle_open_right",
+      "y": 270
+    },
+    "facing=north,hinge=left,joined_above=false,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_top"
+    },
+    "facing=north,hinge=left,joined_above=false,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_top_open_left"
+    },
+    "facing=east,hinge=left,joined_above=false,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_top",
+      "y": 90
+    },
+    "facing=east,hinge=left,joined_above=false,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_top_open_left",
+      "y": 90
+    },
+    "facing=south,hinge=left,joined_above=false,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_top",
+      "y": 180
+    },
+    "facing=south,hinge=left,joined_above=false,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_top_open_left",
+      "y": 180
+    },
+    "facing=west,hinge=left,joined_above=false,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_top",
+      "y": 270
+    },
+    "facing=west,hinge=left,joined_above=false,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_top_open_left",
+      "y": 270
+    },
+    "facing=north,hinge=right,joined_above=false,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_top"
+    },
+    "facing=north,hinge=right,joined_above=false,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_top_open_right"
+    },
+    "facing=east,hinge=right,joined_above=false,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_top",
+      "y": 90
+    },
+    "facing=east,hinge=right,joined_above=false,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_top_open_right",
+      "y": 90
+    },
+    "facing=south,hinge=right,joined_above=false,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_top",
+      "y": 180
+    },
+    "facing=south,hinge=right,joined_above=false,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_top_open_right",
+      "y": 180
+    },
+    "facing=west,hinge=right,joined_above=false,joined_below=true,open=false": {
+      "model": "atouchofclass:block/crimson_shutter_top",
+      "y": 270
+    },
+    "facing=west,hinge=right,joined_above=false,joined_below=true,open=true": {
+      "model": "atouchofclass:block/crimson_shutter_top_open_right",
+      "y": 270
+    }
+  }
+}

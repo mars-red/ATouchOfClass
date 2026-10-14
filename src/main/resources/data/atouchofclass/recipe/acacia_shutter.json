@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "WSW",
+    "WSW"
+  ],
+  "key": {
+    "W": "minecraft:acacia_planks",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "atouchofclass:acacia_shutter",
+    "count": 8
+  }
+}

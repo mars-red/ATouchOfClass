@@ -324,6 +324,19 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_red_four_post_bed.json)
 
+## acacia-shutter
+
+**Output:** 8 × Acacia Shutter (`atouchofclass:acacia_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:acacia_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_shutter.json)
+
 ## acacia-side-table
 
 **Output:** 3 × Acacia Side Table (`atouchofclass:acacia_side_table`). **Type:** `minecraft:crafting_shaped`.
@@ -511,6 +524,19 @@ C.C
 `C` = `minecraft:copper_ingot`; `O` = `minecraft:bamboo_planks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_railing.json)
+
+## bamboo-shutter
+
+**Output:** 8 × Bamboo Shutter (`atouchofclass:bamboo_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:bamboo_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_shutter.json)
 
 ## bamboo-side-table
 
@@ -854,6 +880,19 @@ LL
 `B` = `minecraft:red_bed`; `L` = `#minecraft:birch_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_red_four_post_bed.json)
+
+## birch-shutter
+
+**Output:** 8 × Birch Shutter (`atouchofclass:birch_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:birch_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_shutter.json)
 
 ## birch-side-table
 
@@ -1389,6 +1428,19 @@ LL
 `B` = `minecraft:red_bed`; `L` = `#minecraft:cherry_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_red_four_post_bed.json)
+
+## cherry-shutter
+
+**Output:** 8 × Cherry Shutter (`atouchofclass:cherry_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:cherry_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_shutter.json)
 
 ## cherry-side-table
 
@@ -1947,6 +1999,19 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_red_four_post_bed.json)
 
+## crimson-shutter
+
+**Output:** 8 × Crimson Shutter (`atouchofclass:crimson_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:crimson_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_shutter.json)
+
 ## crimson-side-table
 
 **Output:** 3 × Crimson Side Table (`atouchofclass:crimson_side_table`). **Type:** `minecraft:crafting_shaped`.
@@ -2344,6 +2409,19 @@ LL
 `B` = `minecraft:red_bed`; `L` = `#minecraft:dark_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_red_four_post_bed.json)
+
+## dark-oak-shutter
+
+**Output:** 8 × Dark Oak Shutter (`atouchofclass:dark_oak_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:dark_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_shutter.json)
 
 ## dark-oak-side-table
 
@@ -3014,6 +3092,19 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_red_four_post_bed.json)
 
+## jungle-shutter
+
+**Output:** 8 × Jungle Shutter (`atouchofclass:jungle_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:jungle_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_shutter.json)
+
 ## jungle-side-table
 
 **Output:** 3 × Jungle Side Table (`atouchofclass:jungle_side_table`). **Type:** `minecraft:crafting_shaped`.
@@ -3442,6 +3533,19 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_red_four_post_bed.json)
 
+## mangrove-shutter
+
+**Output:** 8 × Mangrove Shutter (`atouchofclass:mangrove_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:mangrove_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_shutter.json)
+
 ## mangrove-side-table
 
 **Output:** 3 × Mangrove Side Table (`atouchofclass:mangrove_side_table`). **Type:** `minecraft:crafting_shaped`.
@@ -3839,6 +3943,19 @@ LL
 `B` = `minecraft:red_bed`; `L` = `#minecraft:oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_red_four_post_bed.json)
+
+## oak-shutter
+
+**Output:** 8 × Oak Shutter (`atouchofclass:oak_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_shutter.json)
 
 ## oak-side-table
 
@@ -4265,6 +4382,19 @@ LL
 `B` = `minecraft:red_bed`; `L` = `#minecraft:pale_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_red_four_post_bed.json)
+
+## pale-oak-shutter
+
+**Output:** 8 × Pale Oak Shutter (`atouchofclass:pale_oak_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:pale_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_shutter.json)
 
 ## pale-oak-side-table
 
@@ -5081,6 +5211,19 @@ LL
 `B` = `minecraft:red_bed`; `L` = `#minecraft:spruce_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_red_four_post_bed.json)
+
+## spruce-shutter
+
+**Output:** 8 × Spruce Shutter (`atouchofclass:spruce_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:spruce_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_shutter.json)
 
 ## spruce-side-table
 
@@ -5916,6 +6059,19 @@ LL
 `B` = `minecraft:red_bed`; `L` = `#minecraft:warped_stems`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_red_four_post_bed.json)
+
+## warped-shutter
+
+**Output:** 8 × Warped Shutter (`atouchofclass:warped_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:warped_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_shutter.json)
 
 ## warped-side-table
 

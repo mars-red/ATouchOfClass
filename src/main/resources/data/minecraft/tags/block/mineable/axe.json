@@ -1,6 +1,18 @@
 {
     "replace":  false,
     "values":  [
+                   "atouchofclass:warped_shutter",
+                   "atouchofclass:crimson_shutter",
+                   "atouchofclass:bamboo_shutter",
+                   "atouchofclass:pale_oak_shutter",
+                   "atouchofclass:cherry_shutter",
+                   "atouchofclass:mangrove_shutter",
+                   "atouchofclass:dark_oak_shutter",
+                   "atouchofclass:acacia_shutter",
+                   "atouchofclass:jungle_shutter",
+                   "atouchofclass:birch_shutter",
+                   "atouchofclass:spruce_shutter",
+                   "atouchofclass:oak_shutter",
                    "atouchofclass:square_plaster_column",
                    "atouchofclass:square_plaster_column_base",
                    "atouchofclass:square_plaster_column_capital",

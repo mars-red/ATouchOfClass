@@ -23,6 +23,16 @@ public class ModItems {
 
     public static final java.util.List<DeferredItem<BlockItem>> BASIC_BLOCK_ITEMS = registerBasicBlockItems();
 
+    public static final java.util.Map<String, DeferredItem<BlockItem>> SHUTTER_ITEMS = registerShutterItems();
+    public static final DeferredItem<BlockItem> OAK_SHUTTER = SHUTTER_ITEMS.get("oak_shutter");
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerShutterItems() {
+        var items = new java.util.LinkedHashMap<String, DeferredItem<BlockItem>>();
+        ShutterVariants.VALUES.forEach(definition -> items.put(definition.id(),
+                ITEMS.registerSimpleBlockItem(definition.id(), ModBlocks.SHUTTERS.get(definition.id()))));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
     public static final DeferredItem<BlockItem> CALCITE_SLAB =
             ITEMS.registerSimpleBlockItem("calcite_slab", ModBlocks.CALCITE_SLAB);
     public static final DeferredItem<BlockItem> BUFF_BRICKS =
