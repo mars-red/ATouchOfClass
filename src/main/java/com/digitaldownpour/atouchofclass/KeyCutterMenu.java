@@ -22,7 +22,6 @@ public class KeyCutterMenu extends AbstractContainerMenu {
     private HashSet<String> keyableTypes = new HashSet<String>(Arrays.asList(
             ATouchofClass.MODID + ":door_key",
             ATouchofClass.MODID + ":tall_oak_door",
-            ATouchofClass.MODID + ":tall_oak_patio_door",
             ATouchofClass.MODID + ":tall_spruce_door",
             ATouchofClass.MODID + ":tall_jungle_door",
             ATouchofClass.MODID + ":tall_acacia_door",
@@ -48,6 +47,7 @@ public class KeyCutterMenu extends AbstractContainerMenu {
     // server constructor
     public KeyCutterMenu(int containerId, Inventory playerInv, IItemHandler dataInventory) {
         super(ModMenus.KEY_CUTTER_MENU.get(), containerId);
+        PatioDoorVariants.VALUES.forEach(definition -> keyableTypes.add(ATouchofClass.MODID + ":" + definition.id()));
 
         handler = new ObservableItemStackHandler(2);
 

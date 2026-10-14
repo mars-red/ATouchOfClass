@@ -1303,8 +1303,15 @@ public class ModBlocks {
     public static final DeferredHolder<Block, TallDoorBlock> TALL_OAK_DOOR =
             registerTallDoor("tall_oak_door", MapColor.WOOD);
 
-    public static final DeferredHolder<Block, TallDoorBlock> TALL_OAK_PATIO_DOOR =
-            registerTallDoor("tall_oak_patio_door", MapColor.WOOD);
+    public static final java.util.Map<String, DeferredHolder<Block, TallDoorBlock>> TALL_PATIO_DOORS = registerPatioDoors();
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_OAK_PATIO_DOOR = TALL_PATIO_DOORS.get("tall_oak_patio_door");
+
+    private static java.util.Map<String, DeferredHolder<Block, TallDoorBlock>> registerPatioDoors() {
+        var doors = new java.util.LinkedHashMap<String, DeferredHolder<Block, TallDoorBlock>>();
+        PatioDoorVariants.VALUES.forEach(definition -> doors.put(definition.id(),
+                registerTallDoor(definition.id(), definition.sourceBlock().defaultMapColor())));
+        return java.util.Collections.unmodifiableMap(doors);
+    }
 
     public static final DeferredHolder<Block, TallDoorBlock> TALL_SPRUCE_DOOR =
             registerTallDoor("tall_spruce_door", MapColor.WOOD);

@@ -2,11 +2,11 @@
 
 [Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)
 
-Generated from explicit item registrations and the basic-block, dresser, side-table, nightstand, shutter, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
+Generated from explicit item registrations and the basic-block, dresser, side-table, nightstand, shutter, patio-door, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe. Concrete exceptions are intentional.
 
-**548 registered player-content items.**
+**560 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -449,28 +449,40 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Stone Sink | `atouchofclass:stone_sink` | Survival obtainable — [stone_sink](recipes.md#stone-sink) |
 | Striped Wallpaper | `atouchofclass:striped_wallpaper` | Survival obtainable — [striped_wallpaper](recipes.md#striped-wallpaper) |
 | Tall Acacia Door | `atouchofclass:tall_acacia_door` | Survival obtainable — [tall_acacia_door](recipes.md#tall-acacia-door) |
+| Tall Acacia Patio Door | `atouchofclass:tall_acacia_patio_door` | Survival obtainable — [tall_acacia_patio_door](recipes.md#tall-acacia-patio-door) |
 | Tall Acacia Sidelight | `atouchofclass:tall_acacia_sidelight` | Survival obtainable — [tall_acacia_sidelight](recipes.md#tall-acacia-sidelight) |
 | Tall Bamboo Door | `atouchofclass:tall_bamboo_door` | Survival obtainable — [tall_bamboo_door](recipes.md#tall-bamboo-door) |
+| Tall Bamboo Patio Door | `atouchofclass:tall_bamboo_patio_door` | Survival obtainable — [tall_bamboo_patio_door](recipes.md#tall-bamboo-patio-door) |
 | Tall Bamboo Sidelight | `atouchofclass:tall_bamboo_sidelight` | Survival obtainable — [tall_bamboo_sidelight](recipes.md#tall-bamboo-sidelight) |
 | Tall Birch Door | `atouchofclass:tall_birch_door` | Survival obtainable — [tall_birch_door](recipes.md#tall-birch-door) |
+| Tall Birch Patio Door | `atouchofclass:tall_birch_patio_door` | Survival obtainable — [tall_birch_patio_door](recipes.md#tall-birch-patio-door) |
 | Tall Birch Sidelight | `atouchofclass:tall_birch_sidelight` | Survival obtainable — [tall_birch_sidelight](recipes.md#tall-birch-sidelight) |
 | Tall Cherry Door | `atouchofclass:tall_cherry_door` | Survival obtainable — [tall_cherry_door](recipes.md#tall-cherry-door) |
+| Tall Cherry Patio Door | `atouchofclass:tall_cherry_patio_door` | Survival obtainable — [tall_cherry_patio_door](recipes.md#tall-cherry-patio-door) |
 | Tall Cherry Sidelight | `atouchofclass:tall_cherry_sidelight` | Survival obtainable — [tall_cherry_sidelight](recipes.md#tall-cherry-sidelight) |
 | Tall Crimson Door | `atouchofclass:tall_crimson_door` | Survival obtainable — [tall_crimson_door](recipes.md#tall-crimson-door) |
+| Tall Crimson Patio Door | `atouchofclass:tall_crimson_patio_door` | Survival obtainable — [tall_crimson_patio_door](recipes.md#tall-crimson-patio-door) |
 | Tall Crimson Sidelight | `atouchofclass:tall_crimson_sidelight` | Survival obtainable — [tall_crimson_sidelight](recipes.md#tall-crimson-sidelight) |
 | Tall Dark Oak Door | `atouchofclass:tall_dark_oak_door` | Survival obtainable — [tall_dark_oak_door](recipes.md#tall-dark-oak-door) |
+| Tall Dark Oak Patio Door | `atouchofclass:tall_dark_oak_patio_door` | Survival obtainable — [tall_dark_oak_patio_door](recipes.md#tall-dark-oak-patio-door) |
 | Tall Dark Oak Sidelight | `atouchofclass:tall_dark_oak_sidelight` | Survival obtainable — [tall_dark_oak_sidelight](recipes.md#tall-dark-oak-sidelight) |
 | Tall Jungle Door | `atouchofclass:tall_jungle_door` | Survival obtainable — [tall_jungle_door](recipes.md#tall-jungle-door) |
+| Tall Jungle Patio Door | `atouchofclass:tall_jungle_patio_door` | Survival obtainable — [tall_jungle_patio_door](recipes.md#tall-jungle-patio-door) |
 | Tall Jungle Sidelight | `atouchofclass:tall_jungle_sidelight` | Survival obtainable — [tall_jungle_sidelight](recipes.md#tall-jungle-sidelight) |
 | Tall Mangrove Door | `atouchofclass:tall_mangrove_door` | Survival obtainable — [tall_mangrove_door](recipes.md#tall-mangrove-door) |
+| Tall Mangrove Patio Door | `atouchofclass:tall_mangrove_patio_door` | Survival obtainable — [tall_mangrove_patio_door](recipes.md#tall-mangrove-patio-door) |
 | Tall Mangrove Sidelight | `atouchofclass:tall_mangrove_sidelight` | Survival obtainable — [tall_mangrove_sidelight](recipes.md#tall-mangrove-sidelight) |
 | Tall Oak Door | `atouchofclass:tall_oak_door` | Survival obtainable — [tall_oak_door](recipes.md#tall-oak-door) |
+| Tall Oak Patio Door | `atouchofclass:tall_oak_patio_door` | Survival obtainable — [tall_oak_patio_door](recipes.md#tall-oak-patio-door) |
 | Tall Oak Sidelight | `atouchofclass:tall_oak_sidelight` | Survival obtainable — [tall_oak_sidelight](recipes.md#tall-oak-sidelight) |
 | Tall Pale Oak Door | `atouchofclass:tall_pale_oak_door` | Survival obtainable — [tall_pale_oak_door](recipes.md#tall-pale-oak-door) |
+| Tall Pale Oak Patio Door | `atouchofclass:tall_pale_oak_patio_door` | Survival obtainable — [tall_pale_oak_patio_door](recipes.md#tall-pale-oak-patio-door) |
 | Tall Pale Oak Sidelight | `atouchofclass:tall_pale_oak_sidelight` | Survival obtainable — [tall_pale_oak_sidelight](recipes.md#tall-pale-oak-sidelight) |
 | Tall Spruce Door | `atouchofclass:tall_spruce_door` | Survival obtainable — [tall_spruce_door](recipes.md#tall-spruce-door) |
+| Tall Spruce Patio Door | `atouchofclass:tall_spruce_patio_door` | Survival obtainable — [tall_spruce_patio_door](recipes.md#tall-spruce-patio-door) |
 | Tall Spruce Sidelight | `atouchofclass:tall_spruce_sidelight` | Survival obtainable — [tall_spruce_sidelight](recipes.md#tall-spruce-sidelight) |
 | Tall Warped Door | `atouchofclass:tall_warped_door` | Survival obtainable — [tall_warped_door](recipes.md#tall-warped-door) |
+| Tall Warped Patio Door | `atouchofclass:tall_warped_patio_door` | Survival obtainable — [tall_warped_patio_door](recipes.md#tall-warped-patio-door) |
 | Tall Warped Sidelight | `atouchofclass:tall_warped_sidelight` | Survival obtainable — [tall_warped_sidelight](recipes.md#tall-warped-sidelight) |
 | Porcelain Toilet | `atouchofclass:toilet` | Survival obtainable — [toilet](recipes.md#toilet) |
 | Wainscoting | `atouchofclass:wainscoting` | Survival obtainable — [wainscoting](recipes.md#wainscoting) |

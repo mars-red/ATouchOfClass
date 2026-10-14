@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "W": "minecraft:warped_planks",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "WGW",
+    "WGW",
+    "WGW"
+  ],
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:tall_warped_patio_door"
+  }
+}

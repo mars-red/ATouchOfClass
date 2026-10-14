@@ -89,8 +89,8 @@ public class ModEntities {
     public static final Supplier<BlockEntityType<TallDoorBlockEntity>> TALL_DOOR_BE = BLOCK_ENTITY_TYPES.register("tall_door_be",
             () -> new BlockEntityType<>(
                     TallDoorBlockEntity::new,
+                    java.util.stream.Stream.concat(java.util.stream.Stream.of(
                     ModBlocks.TALL_OAK_DOOR.get(),
-                    ModBlocks.TALL_OAK_PATIO_DOOR.get(),
                     ModBlocks.TALL_SPRUCE_DOOR.get(),
                     ModBlocks.TALL_JUNGLE_DOOR.get(),
                     ModBlocks.TALL_ACACIA_DOOR.get(),
@@ -102,7 +102,8 @@ public class ModEntities {
                     ModBlocks.TALL_WARPED_DOOR.get(),
                     // TALL_DOOR_VARIANT_BLOCK_ENTITY_ENTRIES
                     ModBlocks.TALL_MANGROVE_DOOR.get(),
-                    ModBlocks.TALL_BIRCH_DOOR.get()
+                    ModBlocks.TALL_BIRCH_DOOR.get()),
+                    ModBlocks.TALL_PATIO_DOORS.values().stream().map(java.util.function.Supplier::get)).toArray(Block[]::new)
             )
     );
 

@@ -2,8 +2,6 @@
 
 [Manual contents](README.md)
 
-**Reviewed:** checked against the current source and bundled recipes; all five screenshots have been supplied and visually reviewed. The author confirmed completion of the in-game behavior checks on October 10, 2026. Controls below assume Minecraft's default bindings; “use” means right-click.
-
 Tall doors provide three-block-high entrances. The key cutter, door keys, and key rings described here work with tall doors from this mod; they do not add coded access to vanilla doors. You can leave them freely operable or assign a code with a key cutter. A key with the same code operates the tall door; a key ring carries several coded keys and finds a match automatically.
 
 ## Obtain the parts
@@ -13,12 +11,27 @@ All items in this chapter are **survival obtainable** through bundled crafting r
 | Item | Recipe rows, top to bottom | Ingredients | Output |
 | --- | --- | --- | --- |
 | Tall door | `PP.` / `PPN` / `PP.` | P = matching wood planks; N = gold nugget | 2 tall doors |
+| Tall patio door | `WGW` / `WGW` / `WGW` | W = matching wood planks; G = glass block | 4 patio doors |
 | Tall sidelight | `PG.` / `PG.` / `PG.` | P = matching wood planks; G = glass block | 4 sidelights |
 | Key cutter | `IDI` / `III` / `...` | I = iron ingot; D = diamond | 1 cutter |
 | Door key | `N..` / `N..` / `...` | N = gold nugget | 4 blank keys |
 | Key ring | `.N.` / `N.N` / `.N.` | N = iron nugget | 1 ring |
 
-Tall doors and tall sidelights come in oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped variants. The tall door and sidelight recipes use the corresponding planks.
+Tall doors, tall patio doors, and tall sidelights come in oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped variants. Their recipes use the corresponding planks.
+
+## Tall doors
+
+![Paired tall patio doors example.](images/doors/patio-doors.png)
+
+*In-game view of tall oak patio doors.*
+
+Place tall doors in an unobstructed three-block-high opening on a solid floor. One item places all three sections. Use any section to open or close an uncoded door. For a pair, use two tall doors of the same wood with the same facing and opposite hinges; the pair occupies a two-block-wide opening. A tall door pairs with the same tall-door variant.
+
+All tall doors (including tall patio doors) support the key cutter, coded door keys, and key rings exactly as described below. Set the same code on both leaves of a pair. The cutter can process a whole stack of tall doors at once. Empty hands and nonmatching keys cannot operate a coded tall door.
+
+Breaking any section removes the complete leaf. In Survival it drops **one tall door item**, preserving the code and descriptive name; Creative breaking drops nothing. Replacing that item restores the coded door.
+
+The placement, pairing, and access instructions in the rest of this chapter apply to both regular tall doors and tall patio doors.
 
 ## Place a tall door and sidelights
 
@@ -114,7 +127,3 @@ These locks control interaction; they do not prevent players from breaking block
 | Paired tall doors only open one leaf | Use the same wood variant and facing, with opposite hinges. |
 | Locked tall-door pair opens through the other leaf | Both leaves need the same code; the clicked leaf is the one checked. |
 | Tall door faces or swings the wrong way | Reposition it and adjust the placement click. The recovered tall door item retains its code and descriptive name. |
-
-## Pilot review
-
-Follow the [tall-door tasks in the capture checklist](contributing/screenshots.md). In a disposable test world, also check the empty-hand, matching-key, wrong-key, matching-ring, and wrong-ring cases; test both leaves of the paired tall doors. In Survival mode, break and replace a coded tall door, checking each of the three sections in separate attempts: the recovered item should keep its descriptive name, and the original matching key should still work after replacement. Also check that deliberately changing the code in the key cutter changes which key works. Note any behavior that differs from this chapter. These checks are review tasks, not claims that an in-game test has already passed.

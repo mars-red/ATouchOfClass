@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "W": "minecraft:dark_oak_planks",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "WGW",
+    "WGW",
+    "WGW"
+  ],
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:tall_dark_oak_patio_door"
+  }
+}

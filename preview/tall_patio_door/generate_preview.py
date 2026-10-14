@@ -21,7 +21,7 @@ def texture(name):
     return Image.open(ASSETS / ('textures/' + path + '.png')).convert('RGBA')
 
 
-def render(size, origin, scale, angle=0, pair=True):
+def render(size, origin, scale, angle=0, pair=True, wood='oak'):
     canvas = Image.new('RGBA', size)
     theta = math.radians(angle)
     c, s = math.cos(theta), math.sin(theta)
@@ -31,7 +31,7 @@ def render(size, origin, scale, angle=0, pair=True):
     faces = []
     for leaf, hinge in enumerate(('left', 'right') if pair else ('left',)):
         for part, section in enumerate(('bottom', 'middle', 'top')):
-            model = json.loads((ASSETS / f'models/block/tall_oak_patio_door_{section}_{hinge}.json').read_text())
+            model = json.loads((ASSETS / f'models/block/tall_{wood}_patio_door_{section}_{hinge}.json').read_text())
             textures = {key: texture(value) for key, value in model['textures'].items()}
             for element in model['elements']:
                 x, y, z = element['from']
@@ -70,6 +70,31 @@ def font(size, bold=False):
     return ImageFont.truetype('C:/Windows/Fonts/' + ('seguisb.ttf' if bold else 'segoeui.ttf'), size)
 
 
+def generate_variants_preview(woods):
+    sheet = Image.new('RGBA', (1080, 1050), '#e9e5dd')
+    pen = ImageDraw.Draw(sheet)
+    pen.text((30, 20), 'Tall Patio Doors — all vanilla woods', font=font(32, True), fill='#302b25')
+    for index, wood in enumerate(woods):
+        x, y = (index % 4)*270, 85 + (index // 4)*315
+        pen.rounded_rectangle((x+12,y,x+258,y+300), radius=12, fill='#f7f5f0')
+        sheet.alpha_composite(render(sheet.size,(x+63,y+248),4.5,0,True,wood))
+        pen.text((x+24,y+265), wood.replace('_',' ').title(), font=font(21,True), fill='#403a32')
+    sheet.convert('RGB').save(HERE/'tall_patio_door_variants_preview.png')
+
+
+def generate_item_icon(wood):
+    # item/generated maps the entire texture to a square inventory quad.
+    # Keep a square canvas and center the full 1:3 leaf with equal padding.
+    source_icon = render((64,64),(22 + 2/3,60),7/6,0,False,wood)
+    # Pre-filter to the native 16-pixel slot grid so nearest texture sampling
+    # cannot skip either thin stile. Upscale without changing that pixel grid.
+    slot_icon = source_icon.resize((16,16), Image.Resampling.BOX)
+    assert slot_icon.getbbox() == (5, 1, 11, 15), 'The full leaf must be centered and unclipped'
+    icon = slot_icon.resize((64,64), Image.Resampling.NEAREST)
+    icon.save(ASSETS/f'textures/item/tall_{wood}_patio_door.png')
+    return icon
+
+
 def main():
     image = Image.new('RGBA', (1450,1000), '#e9e5dd')
     draw = ImageDraw.Draw(image)
@@ -90,15 +115,7 @@ def main():
     draw.text((892,862), '3/16-block frame thickness', font=font(21), fill='#645c51')
     draw.text((60,934), 'Opposing hinges • Mirrored iron levers on both sides • No rail across the glass', font=font(24), fill='#403a32')
     image.convert('RGB').save(HERE/'tall_oak_patio_doors_preview.png')
-    # item/generated maps the entire texture to a square inventory quad.
-    # Keep a square canvas and center the full 1:3 leaf with equal padding.
-    source_icon = render((64,64),(22 + 2/3,60),7/6,0,False)
-    # Pre-filter to the native 16-pixel slot grid so nearest texture sampling
-    # cannot skip either thin stile. Upscale without changing that pixel grid.
-    slot_icon = source_icon.resize((16,16), Image.Resampling.BOX)
-    assert slot_icon.getbbox() == (5, 1, 11, 15), 'The full leaf must be centered and unclipped'
-    icon = slot_icon.resize((64,64), Image.Resampling.NEAREST)
-    icon.save(ASSETS/'textures/item/tall_oak_patio_door.png')
+    icon = generate_item_icon('oak')
     slots = Image.new('RGBA', (660,260), '#e9e5dd')
     pen = ImageDraw.Draw(slots)
     pen.text((24,18), 'Oak patio door — inventory icon', font=font(27,True), fill='#302b25')

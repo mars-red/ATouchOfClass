@@ -17,7 +17,9 @@ Start as a [player](getting-started.md), [server owner](server-owners.md), or [m
 9. [Modpack author guide](modpack-authors.md)
 10. [Reference and troubleshooting](reference.md)
 
-The [content catalog](catalog.md) covers 536 registered player-content items. The [recipe reference](recipes.md) contains all 484 bundled recipes, including vanilla-item outputs supplied by the mod. The [building guide](building.md#plaster-columns) now includes square and round plaster columns, confirmed in game by the author on October 13, 2026.
+The [content catalog](catalog.md) covers 560 registered player-content items. The [recipe reference](recipes.md) contains all 508 bundled recipes, including vanilla-item outputs supplied by the mod. The [building guide](building.md#plaster-columns) now includes square and round plaster columns, confirmed in game by the author on October 13, 2026.
+
+The [tall patio door guide](doors-and-access.md#tall-patio-doors) covers all twelve wood variants, crafting four doors from matching planks and glass blocks, and coded access. This addition was verified against source, generated assets, and automated Minecraft game tests on October 14, 2026; its illustration is a model render.
 
 ## Availability labels
 

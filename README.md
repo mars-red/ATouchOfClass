@@ -18,6 +18,8 @@ The manual covers players, server owners, and modpack authors, with a [content c
 
 Some content is intentionally Creative-only. Concrete countertops and sinks have no bundled crafting recipes; crafting is deferred until the mod targets a Minecraft version with vanilla concrete slabs.
 
+The manual also documents [tall patio doors](docs/doors-and-access.md#tall-patio-doors) in all twelve vanilla woods, including their crafting recipe and key-cutter support. This addition was checked against source and automated Minecraft game tests on October 14, 2026.
+
 ## Documentation review
 
 - [Manual screenshot checklist](docs/contributing/screenshots.md)

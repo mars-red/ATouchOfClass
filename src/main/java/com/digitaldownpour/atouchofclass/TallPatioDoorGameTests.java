@@ -25,11 +25,16 @@ import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 public class TallPatioDoorGameTests {
     @GameTest(template = "chandelier_test")
     public static void keyCutterCodesPatioDoorAndKeysOperateIt(GameTestHelper helper) {
+        for (var definition : PatioDoorVariants.VALUES) checkKeys(helper, definition);
+        helper.succeed();
+    }
+
+    private static void checkKeys(GameTestHelper helper, PatioDoorVariants.Definition definition) {
         var level = helper.getLevel();
         var player = helper.makeMockPlayer(GameType.SURVIVAL);
         var expected = new KeyableInfo("patio-code", "Patio Door");
         var menu = new KeyCutterMenu(0, player.getInventory());
-        menu.getSlot(0).set(new ItemStack(ModItems.TALL_OAK_PATIO_DOOR_ITEM.get(), 4));
+        menu.getSlot(0).set(new ItemStack(ModItems.TALL_PATIO_DOOR_ITEMS.get(definition.id()).get(), 4));
         helper.assertTrue(menu.areSlotsKeyable(), "Key cutter must accept oak patio doors");
         menu.craft(expected.keyCode(), expected.keyableName());
         var coded = menu.getSlot(1).getItem().copy();
@@ -67,25 +72,29 @@ public class TallPatioDoorGameTests {
             helper.assertTrue(!helper.getBlockState(base.above(part)).getValue(TallDoorBlock.OPEN),
                     "Matching key ring must close all three sections");
         }
+        level.destroyBlock(helper.absolutePos(base), false);
+        player.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
+            }
+
+    @GameTest(template = "chandelier_test")
+    public static void survivalPlacementAndEachSectionDropsOneDoor(GameTestHelper helper) {
+        for (var definition : PatioDoorVariants.VALUES) checkBreaking(helper, GameType.SURVIVAL, false, definition);
         helper.succeed();
     }
 
     @GameTest(template = "chandelier_test")
-    public static void survivalPlacementAndEachSectionDropsOneDoor(GameTestHelper helper) {
-        checkBreaking(helper, GameType.SURVIVAL, false);
-    }
-
-    @GameTest(template = "chandelier_test")
     public static void codedItemPreservesKeyDataWhenEachSectionBreaks(GameTestHelper helper) {
-        checkBreaking(helper, GameType.SURVIVAL, true);
+        for (var definition : PatioDoorVariants.VALUES) checkBreaking(helper, GameType.SURVIVAL, true, definition);
+        helper.succeed();
     }
 
     @GameTest(template = "chandelier_test")
     public static void creativeBreakingRemovesWholeDoorWithoutDrops(GameTestHelper helper) {
-        checkBreaking(helper, GameType.CREATIVE, false);
+        for (var definition : PatioDoorVariants.VALUES) checkBreaking(helper, GameType.CREATIVE, false, definition);
+        helper.succeed();
     }
 
-    private static void checkBreaking(GameTestHelper helper, GameType mode, boolean coded) {
+    private static void checkBreaking(GameTestHelper helper, GameType mode, boolean coded, PatioDoorVariants.Definition definition) {
         var level = helper.getLevel();
         var player = new net.neoforged.neoforge.common.util.FakePlayer(level,
                 new com.mojang.authlib.GameProfile(java.util.UUID.randomUUID(), "patio-drop-test"));
@@ -94,7 +103,7 @@ public class TallPatioDoorGameTests {
         var expected = new KeyableInfo("patio-code", "Patio Door");
         for (int part = 0; part < 3; part++) {
             level.setBlockAndUpdate(base.below(), Blocks.STONE.defaultBlockState());
-            var item = new ItemStack(ModItems.TALL_OAK_PATIO_DOOR_ITEM.get());
+            var item = new ItemStack(ModItems.TALL_PATIO_DOOR_ITEMS.get(definition.id()).get());
             if (coded) item.set(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE, expected);
             var hit = new BlockHitResult(Vec3.atCenterOf(base.below()), Direction.UP, base.below(), false);
             helper.assertTrue(item.useOn(new UseOnContext(level, player, InteractionHand.MAIN_HAND, item, hit)).consumesAction(),
@@ -102,7 +111,7 @@ public class TallPatioDoorGameTests {
             for (int section = 0; section < 3; section++) {
                 var pos = base.above(section);
                 var state = level.getBlockState(pos);
-                helper.assertTrue(state.is(ModBlocks.TALL_OAK_PATIO_DOOR.get())
+                helper.assertTrue(state.is(ModBlocks.TALL_PATIO_DOORS.get(definition.id()).get())
                         && state.getValue(TallDoorBlock.PART) == section, "Item must place all three sections");
                 helper.assertTrue(level.getBlockEntity(pos) instanceof TallDoorBlockEntity, "Each section needs a door block entity");
             }
@@ -116,31 +125,35 @@ public class TallPatioDoorGameTests {
             } else {
                 helper.assertTrue(drops.size() == 1, "Breaking any section must spawn exactly one drop");
                 var drop = drops.getFirst();
-                helper.assertTrue(drop.getItem().is(ModItems.TALL_OAK_PATIO_DOOR_ITEM.get())
+                helper.assertTrue(drop.getItem().is(ModItems.TALL_PATIO_DOOR_ITEMS.get(definition.id()).get())
                         && drop.getItem().getCount() == 1, "Drop must be one oak patio door");
                 if (coded) helper.assertTrue(expected.equals(drop.getItem().get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE)),
                         "Drop must preserve key code and name");
                 drop.discard();
             }
         }
-        helper.succeed();
-    }
+            }
 
     @GameTest(template = "chandelier_test")
     public static void planksAndGlassCraftFourAndUnlockRecipe(GameTestHelper helper) {
+        for (var definition : PatioDoorVariants.VALUES) checkRecipe(helper, definition);
+        helper.succeed();
+    }
+
+    private static void checkRecipe(GameTestHelper helper, PatioDoorVariants.Definition definition) {
         var level = helper.getLevel();
-        var id = net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "tall_oak_patio_door");
+        var id = net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, definition.id());
         var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.RECIPE, id);
         var holder = level.getServer().getRecipeManager().byKey(key).orElseThrow();
         helper.assertTrue(holder.value() instanceof net.minecraft.world.item.crafting.ShapedRecipe, "Patio recipe must load");
         var recipe = (net.minecraft.world.item.crafting.ShapedRecipe) holder.value();
-        var wood = new ItemStack(Items.OAK_PLANKS);
+        var wood = new ItemStack(definition.sourceBlock().asItem());
         var glass = new ItemStack(Items.GLASS);
         var input = net.minecraft.world.item.crafting.CraftingInput.of(3, 3,
                 java.util.List.of(wood, glass, wood, wood, glass, wood, wood, glass, wood));
         helper.assertTrue(recipe.matches(input, level), "Three rows of planks/glass/planks must match");
         var output = recipe.assemble(input, level.registryAccess());
-        helper.assertTrue(output.is(ModItems.TALL_OAK_PATIO_DOOR_ITEM.get()) && output.getCount() == 4,
+        helper.assertTrue(output.is(ModItems.TALL_PATIO_DOOR_ITEMS.get(definition.id()).get()) && output.getCount() == 4,
                 "Recipe must yield four oak patio doors");
         var wrongInput = net.minecraft.world.item.crafting.CraftingInput.of(3, 3,
                 java.util.List.of(wood, new ItemStack(Items.GLASS_PANE), wood, wood, glass, wood, wood, glass, wood));
@@ -151,12 +164,11 @@ public class TallPatioDoorGameTests {
         player.connection = new net.neoforged.neoforge.common.util.FakePlayer(level,
                 new com.mojang.authlib.GameProfile(java.util.UUID.randomUUID(), "patio-test-connection")).connection;
         var advancement = level.getServer().getAdvancements().get(
-                net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "recipes/misc/tall_oak_patio_door"));
+                net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "recipes/misc/" + definition.id()));
         helper.assertTrue(advancement != null, "Patio recipe advancement must load");
         player.getInventory().add(wood.copy());
         net.minecraft.advancements.CriteriaTriggers.INVENTORY_CHANGED.trigger(player, player.getInventory(), wood);
         helper.assertTrue(player.getAdvancements().getOrStartProgress(advancement).isDone()
                 && player.getRecipeBook().contains(key), "Acquiring oak planks must unlock the patio recipe");
-        helper.succeed();
     }
 }

@@ -6,7 +6,7 @@ Use the [content catalog](catalog.md) to find exact item IDs and acquisition rou
 
 ## Material families
 
-The common 12-wood set is **oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped**. It applies to tall doors/sidelights, cabinets, dressers, nightstands, side tables, and wood rail families. Four-post beds use that set **without bamboo**, combined with 16 bedding colors.
+The common 12-wood set is **oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped**. It applies to regular tall doors, tall patio doors, sidelights, cabinets, dressers, nightstands, side tables, and wood rail families. Four-post beds use that set **without bamboo**, combined with 16 bedding colors.
 
 The 16 colors are white, orange, magenta, light blue, yellow, lime, pink, gray, light gray, cyan, purple, blue, brown, green, red, and black. Concrete countertops and sinks use these colors but are Creative-only. Wood and copper finishes are separate item variants; do not assume dyeing or swapping a material in an unspecified grid will create one.
 
@@ -22,7 +22,8 @@ Copper lighting/chain families use unaffected, exposed, weathered, and oxidized 
 | Dresser or refrigerator | 54 slots per complete furnishing |
 | Plaster bucket | 32 applications |
 | Plaster column shaft, base, or capital | One block high per piece; vertical placement only |
-| Tall door, sidelight, shower surround/door, elevator door | Three blocks high |
+| Tall door, tall patio door, sidelight, shower surround/door, elevator door | Three blocks high |
+| Tall patio door leaf | One block wide; 3/16-block frame depth, including recessed handles |
 | Floor lamp or lamp post | Three blocks high |
 | Elevator call/destination control; newel post | Two blocks high |
 | Dresser | Reserve 2 × 1 × 2 block spaces |
@@ -70,6 +71,7 @@ For a useful report, include expected and actual behavior, exact versions, repro
 
 ## Glossary
 
+- **Tall patio door:** a three-high glass door in a stripped-wood frame, with recessed levers and the same coded-access behavior as regular tall doors.
 - **Tall door:** the mod's three-high coded-access door, distinct from vanilla, shower, and elevator doors.
 - **Code:** the exact string shared by a tall door and its authorized keys; not the descriptive name.
 - **Overlay/finish:** decoration saved on a block face without replacing the supporting block.
@@ -79,7 +81,3 @@ For a useful report, include expected and actual behavior, exact versions, repro
 - **Reservation:** temporary exclusive use of a shaft while calling, boarding, or traveling.
 - **Variant:** a separately registered material, color, or finish form.
 - **Creative only:** intentionally no bundled Survival acquisition route; not merely a missing direct recipe.
-
-## Verification status
-
-Author review of the full manual and all in-game acceptance checks were confirmed complete on October 10, 2026. All 22 screenshots are integrated; see the [capture checklist](contributing/screenshots.md) and [verification record](contributing/content-audit.md).
