@@ -88,6 +88,10 @@ public class KeyCutterMenu extends AbstractContainerMenu {
     }
 
     public void craft(String keyCode, String keyableName) {
+        if (!areSlotsKeyable() || !isOutputEmpty()) {
+            return;
+        }
+
         ItemStack stack = slots.getFirst().getItem();
         stack.set(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE, new KeyableInfo(keyCode, keyableName));
         slots.get(0).remove(stack.getCount());

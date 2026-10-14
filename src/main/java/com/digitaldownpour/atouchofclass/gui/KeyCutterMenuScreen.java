@@ -14,6 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.Slot;
 import net.neoforged.neoforge.network.PacketDistributor;
+import org.lwjgl.glfw.GLFW;
 
 public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> {
     private static final ResourceLocation BACKGROUND_LOCATION = ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "textures/gui/container/key_cutter_background.png");
@@ -130,6 +131,10 @@ public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> 
 
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
+        if (keyCode == GLFW.GLFW_KEY_ESCAPE) {
+            return super.keyPressed(keyCode, scanCode, modifiers);
+        }
+
         if (keyCodeInput.isFocused()) {
             return keyPressedHelper(keyCodeInput, keyCode, scanCode, modifiers);
         }
