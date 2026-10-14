@@ -3840,6 +3840,19 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_red_four_post_bed.json)
 
+## oak-shutter
+
+**Output:** 8 × Oak Shutter (`atouchofclass:oak_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_shutter.json)
+
 ## oak-side-table
 
 **Output:** 3 × Oak Side Table (`atouchofclass:oak_side_table`). **Type:** `minecraft:crafting_shaped`.

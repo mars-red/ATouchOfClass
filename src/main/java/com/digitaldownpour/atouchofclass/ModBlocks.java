@@ -1182,6 +1182,11 @@ public class ModBlocks {
         return java.util.Collections.unmodifiableList(DRESSER_REGISTRATIONS);
     }
 
+    public static final DeferredBlock<com.digitaldownpour.atouchofclass.blocks.ShutterBlock> OAK_SHUTTER =
+            BLOCKS.register("oak_shutter", key -> new com.digitaldownpour.atouchofclass.blocks.ShutterBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                            .setId(ResourceKey.create(Registries.BLOCK, key)).noOcclusion()));
+
     public static final DeferredBlock<OakRailingBlock> OAK_RAILING =
             BLOCKS.register("oak_railing", key -> new OakRailingBlock(
                     BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))

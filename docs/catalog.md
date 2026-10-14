@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe. Concrete exceptions are intentional.
 
-**536 registered player-content items.**
+**537 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -317,6 +317,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Oak Four-Post Bed (Purple) | `atouchofclass:oak_purple_four_post_bed` | Survival obtainable — [oak_purple_four_post_bed](recipes.md#oak-purple-four-post-bed) |
 | Wall Mounted Oak Railing | `atouchofclass:oak_railing` | Survival obtainable — [oak_railing](recipes.md#oak-railing) |
 | Oak Four-Post Bed (Red) | `atouchofclass:oak_red_four_post_bed` | Survival obtainable — [oak_red_four_post_bed](recipes.md#oak-red-four-post-bed) |
+| Oak Shutter | `atouchofclass:oak_shutter` | Survival obtainable — [oak_shutter](recipes.md#oak-shutter) |
 | Oak Side Table | `atouchofclass:oak_side_table` | Survival obtainable — [oak_side_table](recipes.md#oak-side-table) |
 | Oak Four-Post Bed (White) | `atouchofclass:oak_white_four_post_bed` | Survival obtainable — [oak_white_four_post_bed](recipes.md#oak-white-four-post-bed) |
 | Oak Four-Post Bed (Yellow) | `atouchofclass:oak_yellow_four_post_bed` | Survival obtainable — [oak_yellow_four_post_bed](recipes.md#oak-yellow-four-post-bed) |

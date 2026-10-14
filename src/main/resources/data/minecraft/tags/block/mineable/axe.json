@@ -1,6 +1,7 @@
 {
     "replace":  false,
     "values":  [
+                   "atouchofclass:oak_shutter",
                    "atouchofclass:square_plaster_column",
                    "atouchofclass:square_plaster_column_base",
                    "atouchofclass:square_plaster_column_capital",

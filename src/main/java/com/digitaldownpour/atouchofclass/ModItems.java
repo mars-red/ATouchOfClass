@@ -23,6 +23,9 @@ public class ModItems {
 
     public static final java.util.List<DeferredItem<BlockItem>> BASIC_BLOCK_ITEMS = registerBasicBlockItems();
 
+    public static final DeferredItem<BlockItem> OAK_SHUTTER =
+            ITEMS.registerSimpleBlockItem("oak_shutter", ModBlocks.OAK_SHUTTER);
+
     public static final DeferredItem<BlockItem> CALCITE_SLAB =
             ITEMS.registerSimpleBlockItem("calcite_slab", ModBlocks.CALCITE_SLAB);
     public static final DeferredItem<BlockItem> BUFF_BRICKS =
