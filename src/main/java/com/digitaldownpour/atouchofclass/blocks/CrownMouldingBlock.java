@@ -86,13 +86,13 @@ public class CrownMouldingBlock extends Block {
         return shape == StairsShape.INNER_LEFT || shape == StairsShape.INNER_RIGHT;
     }
 
-    private boolean aligned(BlockState neighbor, BlockState state) {
-        return neighbor.is(this);
+    protected Direction connectionFacing(BlockState neighbor) {
+        return neighbor.is(this) ? neighbor.getValue(FACING) : null;
     }
 
     private boolean canTurn(BlockState state, BlockGetter level, BlockPos pos, Direction side) {
         BlockState neighbor = level.getBlockState(pos.relative(side));
-        return !aligned(neighbor, state) || neighbor.getValue(FACING) != state.getValue(FACING);
+        return connectionFacing(neighbor) != state.getValue(FACING);
     }
 
     private StairsShape cornerShape(BlockState state, BlockGetter level, BlockPos pos) {
@@ -101,15 +101,15 @@ public class CrownMouldingBlock extends Block {
         // As with stairs, a perpendicular piece beyond the back creates an outside corner;
         // one in front creates an inside return. Continuations take precedence over turns.
         BlockState behind = level.getBlockState(pos.relative(facing.getOpposite()));
-        if (aligned(behind, state)) {
-            Direction other = behind.getValue(FACING);
+        Direction other = connectionFacing(behind);
+        if (other != null) {
             if ((other == right || other == right.getOpposite()) && canTurn(state, level, pos, other)) {
                 return other == right ? StairsShape.OUTER_LEFT : StairsShape.OUTER_RIGHT;
             }
         }
         BlockState front = level.getBlockState(pos.relative(facing));
-        if (aligned(front, state)) {
-            Direction other = front.getValue(FACING);
+        other = connectionFacing(front);
+        if (other != null) {
             if ((other == right || other == right.getOpposite()) && canTurn(state, level, pos, other.getOpposite())) {
                 return other == right ? StairsShape.INNER_LEFT : StairsShape.INNER_RIGHT;
             }

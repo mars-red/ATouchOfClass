@@ -35,7 +35,7 @@ public class PlinthBlock extends CasingBlock {
             Direction gap = edgeDirection(facing, edge).getOpposite();
             BlockState neighbor = level.getBlockState(pos.relative(gap));
             connected = connected || (neighbor.getBlock() instanceof BaseboardBlock
-                    && neighbor.getValue(BaseboardBlock.FACING) == facing)
+                    && BaseboardBlock.followsFace(neighbor, facing))
                     || (neighbor.getBlock() instanceof WindowApronBlock
                     && neighbor.getValue(WindowApronBlock.FACING) == facing
                     && neighbor.getValue(WindowApronBlock.BASEBOARD));
