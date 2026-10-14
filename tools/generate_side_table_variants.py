@@ -79,7 +79,7 @@ def write_shared_models() -> None:
         "parent": "atouchofclass:block/side_table",
         "gui_light": "side",
         "display": {
-            "gui": {"rotation": [30, 225, 0], "scale": [0.8, 0.8, 0.8]},
+            "gui": {"rotation": [30, 225, 0], "scale": [0.625, 0.625, 0.625]},
             "ground": {"translation": [0, 2, 0], "scale": [0.45, 0.45, 0.45]},
             "fixed": {"rotation": [0, 180, 0], "scale": [0.7, 0.7, 0.7]},
             "thirdperson_righthand": {"rotation": [75, 45, 0], "translation": [0, 1.5, 0], "scale": [0.55, 0.55, 0.55]},

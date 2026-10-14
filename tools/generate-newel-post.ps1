@@ -55,7 +55,7 @@ foreach($part in @('lower','upper','item')) {
             }
         }
         $model.elements=$itemElements
-        $model.display=@{gui=@{rotation=@(30,225,0);translation=@(-3,-2,0);scale=@(0.55,0.55,0.55)}}
+        $model.display=@{gui=@{rotation=@(30,225,0);translation=@(3.695,-1.332,0);scale=@(0.55,0.55,0.55)}}
         $model | ConvertTo-Json -Depth 20 | Set-Content "$assets/models/item/oak_newel_post.json"
     } else {
         $model | ConvertTo-Json -Depth 20 | Set-Content "$assets/models/block/oak_newel_post_$part.json"
