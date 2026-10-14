@@ -178,7 +178,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
                 String keyCode = be.getKeyCode();
                 if (keyCode == null || keyCode.isEmpty()) {
                     toggleDoor(level, basePos);
-                    return InteractionResult.SUCCESS;
+                    return InteractionResult.SUCCESS_SERVER;
                 }
 
                 return InteractionResult.FAIL;
@@ -209,7 +209,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
                 String keyCode = stack.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE).keyCode();
                 if (doorKeyCode == null || doorKeyCode.isEmpty() || doorKeyCode.equals(keyCode)) {
                     toggleDoor(level, basePos);
-                    return InteractionResult.SUCCESS;
+                    return InteractionResult.SUCCESS_SERVER;
                 }
             }
         }
