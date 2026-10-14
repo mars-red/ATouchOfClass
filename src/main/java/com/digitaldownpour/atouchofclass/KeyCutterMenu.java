@@ -22,6 +22,7 @@ public class KeyCutterMenu extends AbstractContainerMenu {
     private HashSet<String> keyableTypes = new HashSet<String>(Arrays.asList(
             ATouchofClass.MODID + ":door_key",
             ATouchofClass.MODID + ":tall_oak_door",
+            ATouchofClass.MODID + ":tall_oak_patio_door",
             ATouchofClass.MODID + ":tall_spruce_door",
             ATouchofClass.MODID + ":tall_jungle_door",
             ATouchofClass.MODID + ":tall_acacia_door",

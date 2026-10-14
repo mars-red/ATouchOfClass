@@ -90,6 +90,7 @@ public class ModEntities {
             () -> new BlockEntityType<>(
                     TallDoorBlockEntity::new,
                     ModBlocks.TALL_OAK_DOOR.get(),
+                    ModBlocks.TALL_OAK_PATIO_DOOR.get(),
                     ModBlocks.TALL_SPRUCE_DOOR.get(),
                     ModBlocks.TALL_JUNGLE_DOOR.get(),
                     ModBlocks.TALL_ACACIA_DOOR.get(),

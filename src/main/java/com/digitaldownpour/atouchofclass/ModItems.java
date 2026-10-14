@@ -423,6 +423,12 @@ public class ModItems {
                     new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
     );
 
+    public static final DeferredItem<TallDoorItem> TALL_OAK_PATIO_DOOR_ITEM = ITEMS.register(
+            "tall_oak_patio_door",
+            key -> new TallDoorItem(ModBlocks.TALL_OAK_PATIO_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
     public static final DeferredItem<TallDoorItem> TALL_SPRUCE_DOOR_ITEM = ITEMS.register(
             "tall_spruce_door",
             key -> new TallDoorItem(ModBlocks.TALL_SPRUCE_DOOR.get(),
@@ -878,6 +884,7 @@ public class ModItems {
             event.accept(TALL_BIRCH_DOOR_ITEM);
             event.accept(TALL_BIRCH_SIDELIGHT_ITEM);
             event.accept(TALL_OAK_DOOR_ITEM);
+            event.accept(TALL_OAK_PATIO_DOOR_ITEM);
             event.accept(TALL_SPRUCE_DOOR_ITEM);
             event.accept(TALL_JUNGLE_DOOR_ITEM);
             event.accept(TALL_ACACIA_DOOR_ITEM);

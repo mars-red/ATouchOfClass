@@ -1303,6 +1303,9 @@ public class ModBlocks {
     public static final DeferredHolder<Block, TallDoorBlock> TALL_OAK_DOOR =
             registerTallDoor("tall_oak_door", MapColor.WOOD);
 
+    public static final DeferredHolder<Block, TallDoorBlock> TALL_OAK_PATIO_DOOR =
+            registerTallDoor("tall_oak_patio_door", MapColor.WOOD);
+
     public static final DeferredHolder<Block, TallDoorBlock> TALL_SPRUCE_DOOR =
             registerTallDoor("tall_spruce_door", MapColor.WOOD);
 
