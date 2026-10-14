@@ -1,9 +1,9 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
+import com.digitaldownpour.atouchofclass.ModSounds;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.StringRepresentable;
@@ -292,7 +292,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
                 }
             }
             level.playSound(null, footPos,
-                    filled ? SoundEvents.BUCKET_FILL : SoundEvents.BUCKET_EMPTY,
+                    filled ? ModSounds.BATHTUB_FILL.value() : ModSounds.BATHTUB_DRAIN.value(),
                     SoundSource.BLOCKS, 0.8F, 1.0F);
         }
         return InteractionResult.SUCCESS;

@@ -15,5 +15,25 @@
 
   "elevator_ding": {
     "sounds": ["atouchofclass:elevator_ding"]
+  },
+
+  "bathtub_fill": {
+    "sounds": ["atouchofclass:bathtub_fill"]
+  },
+
+  "bathtub_drain": {
+    "sounds": ["atouchofclass:bathtub_drain"]
+  },
+
+  "toilet_lid": {
+    "sounds": ["atouchofclass:toilet_lid"]
+  },
+
+  "key_cutter": {
+    "sounds": ["atouchofclass:key_cutter"]
+  },
+
+  "locked_door": {
+    "sounds": ["atouchofclass:locked_door"]
   }
 }
