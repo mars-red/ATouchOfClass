@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PWP",
+    "P P"
+  ],
+  "key": {
+    "P": "minecraft:spruce_planks",
+    "W": "minecraft:stripped_spruce_wood"
+  },
+  "result": {
+    "id": "atouchofclass:spruce_dining_table",
+    "count": 4
+  }
+}

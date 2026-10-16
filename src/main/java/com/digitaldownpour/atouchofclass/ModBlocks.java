@@ -50,6 +50,7 @@ import com.digitaldownpour.atouchofclass.blocks.LoveSeatBlock;
 import com.digitaldownpour.atouchofclass.blocks.SofaBlock;
 import com.digitaldownpour.atouchofclass.blocks.ChairBlock;
 import com.digitaldownpour.atouchofclass.blocks.SideTableBlock;
+import com.digitaldownpour.atouchofclass.blocks.DiningTableBlock;
 import com.digitaldownpour.atouchofclass.blocks.NightstandBlock;
 import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
 import com.digitaldownpour.atouchofclass.blocks.SinkBlock;
@@ -1040,6 +1041,9 @@ public class ModBlocks {
     public static final java.util.Map<String, DeferredBlock<SideTableBlock>> SIDE_TABLES = registerSideTables();
     public static final DeferredBlock<SideTableBlock> OAK_SIDE_TABLE = SIDE_TABLES.get("oak_side_table");
 
+    public static final java.util.Map<String, DeferredBlock<DiningTableBlock>> DINING_TABLES = registerDiningTables();
+    public static final DeferredBlock<DiningTableBlock> OAK_DINING_TABLE = DINING_TABLES.get("oak_dining_table");
+
     public static final java.util.Map<String, DeferredBlock<NightstandBlock>> NIGHTSTANDS = registerNightstands();
     public static final DeferredBlock<NightstandBlock> OAK_NIGHTSTAND = NIGHTSTANDS.get("oak_nightstand");
 
@@ -1130,6 +1134,24 @@ public class ModBlocks {
                         .noOcclusion()));
         DRESSER_REGISTRATIONS.add(dresser);
         return dresser;
+    }
+
+    private static java.util.Map<String, DeferredBlock<DiningTableBlock>> registerDiningTables() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<DiningTableBlock>>();
+        DiningTableVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
+                BLOCKS.register(definition.id(), registryName -> {
+                    Block source = definition.sourceBlock();
+                    BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(source.defaultMapColor())
+                            .strength(source.defaultDestroyTime(), source.getExplosionResistance())
+                            .sound(source.defaultBlockState().getSoundType())
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .noOcclusion();
+                    if (source.defaultBlockState().ignitedByLava()) properties.ignitedByLava();
+                    return new DiningTableBlock(properties);
+                })));
+        return java.util.Collections.unmodifiableMap(blocks);
     }
 
     private static java.util.Map<String, DeferredBlock<SideTableBlock>> registerSideTables() {

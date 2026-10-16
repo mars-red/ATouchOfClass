@@ -1,0 +1,212 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "north": "false",
+        "east": "false",
+        "south": "false",
+        "west": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_0"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "east": "false",
+        "south": "false",
+        "west": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_1"
+      }
+    },
+    {
+      "when": {
+        "north": "false",
+        "east": "true",
+        "south": "false",
+        "west": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_2"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "east": "true",
+        "south": "false",
+        "west": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_3"
+      }
+    },
+    {
+      "when": {
+        "north": "false",
+        "east": "false",
+        "south": "true",
+        "west": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_4"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "east": "false",
+        "south": "true",
+        "west": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_5"
+      }
+    },
+    {
+      "when": {
+        "north": "false",
+        "east": "true",
+        "south": "true",
+        "west": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_6"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "east": "true",
+        "south": "true",
+        "west": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_7"
+      }
+    },
+    {
+      "when": {
+        "north": "false",
+        "east": "false",
+        "south": "false",
+        "west": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_8"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "east": "false",
+        "south": "false",
+        "west": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_9"
+      }
+    },
+    {
+      "when": {
+        "north": "false",
+        "east": "true",
+        "south": "false",
+        "west": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_10"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "east": "true",
+        "south": "false",
+        "west": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_11"
+      }
+    },
+    {
+      "when": {
+        "north": "false",
+        "east": "false",
+        "south": "true",
+        "west": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_12"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "east": "false",
+        "south": "true",
+        "west": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_13"
+      }
+    },
+    {
+      "when": {
+        "north": "false",
+        "east": "true",
+        "south": "true",
+        "west": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_14"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "east": "true",
+        "south": "true",
+        "west": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/body_15"
+      }
+    },
+    {
+      "when": {
+        "north_east": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/leg_north_east"
+      }
+    },
+    {
+      "when": {
+        "south_east": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/leg_south_east"
+      }
+    },
+    {
+      "when": {
+        "south_west": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/leg_south_west"
+      }
+    },
+    {
+      "when": {
+        "north_west": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/warped_dining_table/leg_north_west"
+      }
+    }
+  ]
+}

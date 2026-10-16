@@ -956,5 +956,17 @@
     "block.atouchofclass.crimson_nightstand": "Crimson Nightstand",
     "item.atouchofclass.crimson_nightstand": "Crimson Nightstand",
     "block.atouchofclass.warped_nightstand": "Warped Nightstand",
-    "item.atouchofclass.warped_nightstand": "Warped Nightstand"
+    "item.atouchofclass.warped_nightstand": "Warped Nightstand",
+    "block.atouchofclass.oak_dining_table": "Oak Dining Table",
+    "block.atouchofclass.spruce_dining_table": "Spruce Dining Table",
+    "block.atouchofclass.birch_dining_table": "Birch Dining Table",
+    "block.atouchofclass.jungle_dining_table": "Jungle Dining Table",
+    "block.atouchofclass.acacia_dining_table": "Acacia Dining Table",
+    "block.atouchofclass.dark_oak_dining_table": "Dark Oak Dining Table",
+    "block.atouchofclass.mangrove_dining_table": "Mangrove Dining Table",
+    "block.atouchofclass.cherry_dining_table": "Cherry Dining Table",
+    "block.atouchofclass.pale_oak_dining_table": "Pale Oak Dining Table",
+    "block.atouchofclass.bamboo_dining_table": "Bamboo Dining Table",
+    "block.atouchofclass.crimson_dining_table": "Crimson Dining Table",
+    "block.atouchofclass.warped_dining_table": "Warped Dining Table"
 }
