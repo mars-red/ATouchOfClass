@@ -21,8 +21,15 @@ def font(size, bold=False):
     return ImageFont.truetype('C:/Windows/Fonts/' + ('seguisb.ttf' if bold else 'segoeui.ttf'), size)
 
 
-def geometry(layout):
-    parts = json.loads((ASSETS / 'blockstates/oak_dining_table.json').read_text())['multipart']
+def model_elements(name):
+    model = json.loads((ASSETS / f'models/{name}.json').read_text())
+    if 'elements' in model:
+        return model['elements']
+    return model_elements(model['parent'].split(':')[1])
+
+
+def geometry(layout, wood='oak'):
+    parts = json.loads((ASSETS / f'blockstates/{wood}_dining_table.json').read_text())['multipart']
     boxes = []
     for x, z in sorted(layout):
         state = {key: (x + dx, z + dz) in layout for key, dx, dz in EDGES}
@@ -33,15 +40,15 @@ def geometry(layout):
         for part in parts:
             if all(str(state[key]).lower() == value for key, value in part['when'].items()):
                 name = part['apply']['model'].split(':')[1]
-                model = json.loads((ASSETS / f'models/{name}.json').read_text())
-                for item in model['elements']:
+                for item in model_elements(name):
                     low, high = np.array(item['from'], float), np.array(item['to'], float)
                     offset = np.array([16 * x, 0, 16 * z])
                     boxes.append((low + offset, high + offset, low, high))
     return boxes
 
 
-def render(layout, size, scale, origin):
+def render(layout, size, scale, origin, wood='oak'):
+    texture = np.asarray(Image.open(ASSETS / f'textures/block/{wood}_dining_table.png').convert('RGB'))
     width, height = size
     rgb = np.full((height, width, 3), (247, 245, 240), dtype=np.uint8)
     depth = np.full((height, width), -np.inf)
@@ -70,11 +77,11 @@ def render(layout, size, scale, origin):
         coords = weights @ np.asarray(uv)
         u = np.clip(np.floor(coords[..., 0]).astype(int), 0, 15)
         v = np.clip(np.floor(coords[..., 1]).astype(int), 0, 15)
-        colors = np.clip(TEXTURE[v, u] * light, 0, 255).astype(np.uint8)
+        colors = np.clip(texture[v, u] * light, 0, 255).astype(np.uint8)
         rgb[ymin:ymax + 1, xmin:xmax + 1][mask] = colors[mask]
         region[mask] = d[mask]
 
-    for low, high, local_low, local_high in geometry(layout):
+    for low, high, local_low, local_high in geometry(layout, wood):
         x0, y0, z0 = low; x1, y1, z1 = high
         lx0, ly0, lz0 = local_low; lx1, ly1, lz1 = local_high
         faces = [
@@ -114,6 +121,24 @@ def main():
     draw.text((56, 961), 'Asset preview • generated from the shipped model JSON and texture • oak prototype', fill='#71695d', font=font(20))
     image.save(OUTPUT)
     print(OUTPUT)
+
+    woods = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove',
+             'cherry', 'pale_oak', 'bamboo', 'crimson', 'warped']
+    gallery = Image.new('RGB', (1820, 1320), '#e9e5dc')
+    draw = ImageDraw.Draw(gallery)
+    draw.text((40, 30), 'Dining tables — all twelve wood finishes', fill='#302b24', font=font(43, True))
+    draw.text((42, 92), 'Each shown as six joined blocks in a 2 × 3 pattern • 35% stripped grain over a solid wood base',
+              fill='#71695d', font=font(24))
+    for i, wood in enumerate(woods):
+        x, y = 40 + (i % 4) * 440, 155 + (i // 4) * 365
+        gallery.paste(Image.new('RGB', (420, 340), '#f7f5f0'), (x, y))
+        draw.text((x + 20, y + 14), wood.replace('_', ' ').title(), fill='#302b24', font=font(27, True))
+        gallery.paste(render({(x,z) for x in range(2) for z in range(3)}, (420, 280), 4.55, (242, 95), wood), (x, y + 55))
+    draw.text((42, 1265), 'Rendered from shipped model assets and textures • matching wood varieties connect; different woods remain separate',
+              fill='#71695d', font=font(21))
+    output = OUTPUT.with_name('all_wood_dining_tables_preview.png')
+    gallery.save(output)
+    print(output)
 
 
 if __name__ == '__main__': main()

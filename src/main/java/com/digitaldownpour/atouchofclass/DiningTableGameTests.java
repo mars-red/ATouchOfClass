@@ -19,9 +19,13 @@ public class DiningTableGameTests {
     private static final BlockPos ORIGIN = new BlockPos(2, 1, 2);
 
     private static void place(GameTestHelper helper, int x, int z) {
+        place(helper, x, z, ModBlocks.OAK_DINING_TABLE.get());
+    }
+
+    private static void place(GameTestHelper helper, int x, int z, DiningTableBlock block) {
         BlockPos pos = ORIGIN.offset(x, 0, z);
         helper.setBlock(pos.below(), Blocks.STONE);
-        helper.setBlock(pos, ModBlocks.OAK_DINING_TABLE.get().defaultBlockState());
+        helper.setBlock(pos, block.defaultBlockState());
     }
 
     private static int legs(GameTestHelper helper, int x, int z) {
@@ -96,5 +100,58 @@ public class DiningTableGameTests {
                     "two reflections must restore every connection and leg");
         }
         helper.succeed();
+    }
+
+    @GameTest(template = "chandelier_test")
+    public static void everyWoodFormsFourLegRectangle(GameTestHelper helper) {
+        helper.assertTrue(ModBlocks.DINING_TABLES.size() == 12 && ModItems.DINING_TABLE_ITEMS.size() == 12,
+                "all twelve vanilla woods must have blocks and items");
+        for (var definition : DiningTableVariants.VALUES) {
+            var block = ModBlocks.DINING_TABLES.get(definition.id()).get();
+            helper.assertTrue(ModItems.DINING_TABLE_ITEMS.get(definition.id()).get().getBlock() == block,
+                    "each dining-table item must place its matching wood");
+            helper.assertTrue(block.defaultBlockState().ignitedByLava() == definition.sourceBlock().defaultBlockState().ignitedByLava(),
+                    "dining tables must inherit their wood's fire behavior");
+            for (int x = 0; x < 2; x++) for (int z = 0; z < 3; z++) place(helper, x, z, block);
+            int total = 0;
+            for (int x = 0; x < 2; x++) for (int z = 0; z < 3; z++) total += legs(helper, x, z);
+            helper.assertTrue(total == 4, definition.id() + " rectangle must have four corner legs");
+            helper.assertTrue(legs(helper, 0, 1) == 0 && legs(helper, 1, 1) == 0,
+                    definition.id() + " straight edges must have no legs");
+        }
+        helper.succeed();
+    }
+
+    @GameTest(template = "chandelier_test")
+    public static void onlyMatchingWoodPairsConnect(GameTestHelper helper) {
+        for (var first : ModBlocks.DINING_TABLES.values()) for (var second : ModBlocks.DINING_TABLES.values()) {
+            place(helper, 0, 0, first.get());
+            place(helper, 1, 0, second.get());
+            var a = helper.getLevel().getBlockState(helper.absolutePos(ORIGIN));
+            var b = helper.getLevel().getBlockState(helper.absolutePos(ORIGIN.east()));
+            boolean matches = first.get() == second.get();
+            helper.assertTrue(a.getValue(DiningTableBlock.EDGES[1]) == matches
+                            && b.getValue(DiningTableBlock.EDGES[3]) == matches,
+                    "wood connections must be reciprocal and match the exact variety");
+            helper.assertTrue(legs(helper, 0, 0) == (matches ? 2 : 4)
+                            && legs(helper, 1, 0) == (matches ? 2 : 4),
+                    "mixed wood edges must keep their separate corner legs");
+        }
+        helper.succeed();
+    }
+
+    @GameTest(template = "chandelier_test")
+    public static void differentWoodDiagonalDoesNotFillInsideCorner(GameTestHelper helper) {
+        for (int x = 0; x < 2; x++) for (int z = 0; z < 2; z++) place(helper, x, z);
+        place(helper, 1, 1, ModBlocks.DINING_TABLES.get("spruce_dining_table").get());
+        helper.runAfterDelay(2, () -> {
+            var state = helper.getLevel().getBlockState(helper.absolutePos(ORIGIN));
+            helper.assertTrue(state.getValue(DiningTableBlock.LEGS[1]), "different diagonal wood must leave oak's inside leg");
+            helper.assertTrue(legs(helper, 1, 1) == 4, "isolated spruce must retain four legs beside oak");
+            place(helper, 1, 1);
+            state = helper.getLevel().getBlockState(helper.absolutePos(ORIGIN));
+            helper.assertTrue(!state.getValue(DiningTableBlock.LEGS[1]), "matching diagonal replacement must merge oak again");
+            helper.succeed();
+        });
     }
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PWP",
+    "P P"
+  ],
+  "key": {
+    "P": "minecraft:crimson_planks",
+    "W": "minecraft:stripped_crimson_hyphae"
+  },
+  "result": {
+    "id": "atouchofclass:crimson_dining_table",
+    "count": 4
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PWP",
+    "P P"
+  ],
+  "key": {
+    "P": "minecraft:mangrove_planks",
+    "W": "minecraft:stripped_mangrove_wood"
+  },
+  "result": {
+    "id": "atouchofclass:mangrove_dining_table",
+    "count": 4
+  }
+}

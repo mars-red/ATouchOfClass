@@ -6,7 +6,10 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:stripped_oak_wood"
+            "items": [
+              "minecraft:oak_planks",
+              "minecraft:stripped_oak_wood"
+            ]
           }
         ]
       }

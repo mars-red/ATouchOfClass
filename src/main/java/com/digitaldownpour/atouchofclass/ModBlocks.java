@@ -1041,14 +1041,8 @@ public class ModBlocks {
     public static final java.util.Map<String, DeferredBlock<SideTableBlock>> SIDE_TABLES = registerSideTables();
     public static final DeferredBlock<SideTableBlock> OAK_SIDE_TABLE = SIDE_TABLES.get("oak_side_table");
 
-    public static final DeferredBlock<DiningTableBlock> OAK_DINING_TABLE =
-            BLOCKS.register("oak_dining_table", registryName -> new DiningTableBlock(
-                    BlockBehaviour.Properties.of()
-                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                            .mapColor(Blocks.STRIPPED_OAK_WOOD.defaultMapColor())
-                            .strength(2.0F).sound(net.minecraft.world.level.block.SoundType.WOOD).ignitedByLava()
-                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
-                            .noOcclusion()));
+    public static final java.util.Map<String, DeferredBlock<DiningTableBlock>> DINING_TABLES = registerDiningTables();
+    public static final DeferredBlock<DiningTableBlock> OAK_DINING_TABLE = DINING_TABLES.get("oak_dining_table");
 
     public static final java.util.Map<String, DeferredBlock<NightstandBlock>> NIGHTSTANDS = registerNightstands();
     public static final DeferredBlock<NightstandBlock> OAK_NIGHTSTAND = NIGHTSTANDS.get("oak_nightstand");
@@ -1140,6 +1134,24 @@ public class ModBlocks {
                         .noOcclusion()));
         DRESSER_REGISTRATIONS.add(dresser);
         return dresser;
+    }
+
+    private static java.util.Map<String, DeferredBlock<DiningTableBlock>> registerDiningTables() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<DiningTableBlock>>();
+        DiningTableVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
+                BLOCKS.register(definition.id(), registryName -> {
+                    Block source = definition.sourceBlock();
+                    BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(source.defaultMapColor())
+                            .strength(source.defaultDestroyTime(), source.getExplosionResistance())
+                            .sound(source.defaultBlockState().getSoundType())
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .noOcclusion();
+                    if (source.defaultBlockState().ignitedByLava()) properties.ignitedByLava();
+                    return new DiningTableBlock(properties);
+                })));
+        return java.util.Collections.unmodifiableMap(blocks);
     }
 
     private static java.util.Map<String, DeferredBlock<SideTableBlock>> registerSideTables() {

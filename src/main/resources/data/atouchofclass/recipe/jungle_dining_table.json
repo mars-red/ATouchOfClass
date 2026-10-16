@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PWP",
+    "P P"
+  ],
+  "key": {
+    "P": "minecraft:jungle_planks",
+    "W": "minecraft:stripped_jungle_wood"
+  },
+  "result": {
+    "id": "atouchofclass:jungle_dining_table",
+    "count": 4
+  }
+}

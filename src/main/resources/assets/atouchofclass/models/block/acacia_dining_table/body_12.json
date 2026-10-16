@@ -1,0 +1,7 @@
+{
+  "parent": "atouchofclass:block/oak_dining_table/body_12",
+  "textures": {
+    "wood": "atouchofclass:block/acacia_dining_table",
+    "particle": "#wood"
+  }
+}

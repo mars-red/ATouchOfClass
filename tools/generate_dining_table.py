@@ -1,4 +1,4 @@
-"""Generate the oak prototype. Add wood definitions here after the design is approved.
+"""Generate all twelve vanilla wood dining-table variants from the approved oak design.
 
 The finish is base * (1-opacity) + vanilla stripped grain * opacity. Baking the
 blend preserves the requested appearance while keeping the furniture opaque.
@@ -11,7 +11,7 @@ import io
 import json
 from pathlib import Path
 import zipfile
-from PIL import Image
+from PIL import Image, ImageStat
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'src/main/resources/assets/atouchofclass'
@@ -21,8 +21,21 @@ BASE_COLOR = '#b8945f'
 GRAIN_OPACITY = 0.35
 EDGES = ['north', 'east', 'south', 'west']
 CORNERS = ['north_east', 'south_east', 'south_west', 'north_west']
-# Oak remains the only enabled prototype. Expand this when variants are enabled.
-ENABLED_WOODS = ('oak',)
+WOODS = {
+    'oak': 'stripped_oak_log',
+    'spruce': 'stripped_spruce_log',
+    'birch': 'stripped_birch_log',
+    'jungle': 'stripped_jungle_log',
+    'acacia': 'stripped_acacia_log',
+    'dark_oak': 'stripped_dark_oak_log',
+    'mangrove': 'stripped_mangrove_log',
+    'cherry': 'stripped_cherry_log',
+    'pale_oak': 'stripped_pale_oak_log',
+    'bamboo': 'stripped_bamboo_block',
+    'crimson': 'stripped_crimson_stem',
+    'warped': 'stripped_warped_stem',
+}
+ENABLED_WOODS = tuple(WOODS)
 
 
 def variant_recipe(wood, oak_recipe):
@@ -82,57 +95,81 @@ def model(elements):
             'textures': {'wood': 'atouchofclass:block/oak_dining_table', 'particle': '#wood'}, 'elements': elements}
 
 
+def write_variant(wood, jar, oak_recipe, display):
+    name = f'{wood}_dining_table'
+    grain = Image.open(io.BytesIO(jar.read(f'assets/minecraft/textures/block/{WOODS[wood]}.png'))).convert('RGB')
+    # Preserve approved oak; other woods use their stripped grain's average color.
+    base = BASE_COLOR if wood == 'oak' else tuple(round(channel) for channel in ImageStat.Stat(grain).mean)
+    texture = Image.blend(Image.new('RGB', grain.size, base), grain, GRAIN_OPACITY)
+    texture_path = ASSETS / f'textures/block/{name}.png'
+    texture_path.parent.mkdir(parents=True, exist_ok=True)
+    texture.save(texture_path)
+
+    def part_model(elements, oak_parent):
+        if wood == 'oak':
+            return model(elements)
+        # Inherit the exact approved geometry; only the finish varies.
+        return {'parent': f'atouchofclass:block/{oak_parent}',
+                'textures': {'wood': f'atouchofclass:block/{name}', 'particle': '#wood'}}
+
+    parts = []
+    for mask in range(16):
+        part = f'{name}/body_{mask}'
+        write(ASSETS / f'models/block/{part}.json', part_model(body(mask), f'oak_dining_table/body_{mask}'))
+        parts.append({'when': {edge: str(bool(mask & (1 << i))).lower() for i, edge in enumerate(EDGES)},
+                      'apply': {'model': f'atouchofclass:block/{part}'}})
+    for i, corner in enumerate(CORNERS):
+        part = f'{name}/leg_{corner}'
+        write(ASSETS / f'models/block/{part}.json', part_model([leg(i)], f'oak_dining_table/leg_{corner}'))
+        parts.append({'when': {corner: 'true'}, 'apply': {'model': f'atouchofclass:block/{part}'}})
+    write(ASSETS / f'blockstates/{name}.json', {'multipart': parts})
+    write(ASSETS / f'models/block/{name}.json', part_model(body(0) + [leg(i) for i in range(4)], 'oak_dining_table'))
+    write(ASSETS / f'models/item/{name}.json', {
+        'parent': f'atouchofclass:block/{name}', 'gui_light': 'side', 'display': display})
+    write(ASSETS / f'items/{name}.json', {'model': {'type': 'minecraft:model', 'model': f'atouchofclass:item/{name}'}})
+    write(DATA / f'loot_table/blocks/{name}.json', {
+        'type': 'minecraft:block', 'pools': [{'rolls': 1, 'conditions': [{'condition': 'minecraft:survives_explosion'}],
+        'entries': [{'type': 'minecraft:item', 'name': f'atouchofclass:{name}'}]}]})
+    recipe = variant_recipe(wood, oak_recipe)
+    if wood != 'oak':
+        write(DATA / f'recipe/{name}.json', recipe)
+    # Match the actual recipe ingredients, including bamboo blocks/nether hyphae.
+    ingredients = sorted(set(recipe['key'].values()))
+    write(DATA / f'advancement/recipes/decorations/{name}.json', {
+        'parent': 'minecraft:recipes/root', 'criteria': {
+            'has_wood': {'trigger': 'minecraft:inventory_changed', 'conditions': {'items': [{'items': ingredients}]}},
+            'has_the_recipe': {'trigger': 'minecraft:recipe_unlocked', 'conditions': {'recipe': f'atouchofclass:{name}'}}},
+        'requirements': [['has_wood', 'has_the_recipe']], 'rewards': {'recipes': [f'atouchofclass:{name}']}})
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--client-jar', type=Path, default=CLIENT_JAR)
     args = parser.parse_args()
     # Read before generating anything. Never overwrite the hand-tuned source.
     oak_recipe = json.loads((DATA / 'recipe/oak_dining_table.json').read_text(encoding='utf-8'))
-    with zipfile.ZipFile(args.client_jar) as jar:
-        grain = Image.open(io.BytesIO(jar.read('assets/minecraft/textures/block/stripped_oak_log.png'))).convert('RGB')
-    texture = Image.blend(Image.new('RGB', grain.size, BASE_COLOR), grain, GRAIN_OPACITY)
-    texture_path = ASSETS / 'textures/block/oak_dining_table.png'
-    texture_path.parent.mkdir(parents=True, exist_ok=True)
-    texture.save(texture_path)
-    parts = []
-    for mask in range(16):
-        name = f'oak_dining_table/body_{mask}'
-        write(ASSETS / f'models/block/{name}.json', model(body(mask)))
-        parts.append({'when': {edge: str(bool(mask & (1 << i))).lower() for i, edge in enumerate(EDGES)},
-                      'apply': {'model': f'atouchofclass:block/{name}'}})
-    for i, corner in enumerate(CORNERS):
-        name = f'oak_dining_table/leg_{corner}'
-        write(ASSETS / f'models/block/{name}.json', model([leg(i)]))
-        parts.append({'when': {corner: 'true'}, 'apply': {'model': f'atouchofclass:block/{name}'}})
-    write(ASSETS / 'blockstates/oak_dining_table.json', {'multipart': parts})
-    write(ASSETS / 'models/block/oak_dining_table.json', model(body(0) + [leg(i) for i in range(4)]))
     display = json.loads((ASSETS / 'models/item/side_table.json').read_text())['display']
-    write(ASSETS / 'models/item/oak_dining_table.json', {
-        'parent': 'atouchofclass:block/oak_dining_table', 'gui_light': 'side', 'display': display})
-    write(ASSETS / 'items/oak_dining_table.json', {'model': {'type': 'minecraft:model', 'model': 'atouchofclass:item/oak_dining_table'}})
-    write(DATA / 'loot_table/blocks/oak_dining_table.json', {
-        'type': 'minecraft:block', 'pools': [{'rolls': 1, 'conditions': [{'condition': 'minecraft:survives_explosion'}],
-        'entries': [{'type': 'minecraft:item', 'name': 'atouchofclass:oak_dining_table'}]}]})
-    for wood in ENABLED_WOODS:
-        if wood != 'oak':
-            write(DATA / f'recipe/{wood}_dining_table.json', variant_recipe(wood, oak_recipe))
-    write(DATA / 'advancement/recipes/decorations/oak_dining_table.json', {
-        'parent': 'minecraft:recipes/root', 'criteria': {
-            'has_wood': {'trigger': 'minecraft:inventory_changed', 'conditions': {'items': [{'items': 'minecraft:stripped_oak_wood'}]}},
-            'has_the_recipe': {'trigger': 'minecraft:recipe_unlocked', 'conditions': {'recipe': 'atouchofclass:oak_dining_table'}}},
-        'requirements': [['has_wood', 'has_the_recipe']], 'rewards': {'recipes': ['atouchofclass:oak_dining_table']}})
+    with zipfile.ZipFile(args.client_jar) as jar:
+        for wood in ENABLED_WOODS:
+            write_variant(wood, jar, oak_recipe, display)
     path = ASSETS / 'lang/en_us.json'
     contents = path.read_text(encoding='utf-8')
-    key = 'block.atouchofclass.oak_dining_table'
-    if f'"{key}"' not in contents:
+    additions = []
+    for wood in ENABLED_WOODS:
+        key = f'block.atouchofclass.{wood}_dining_table'
+        if f'"{key}"' not in contents:
+            additions.append(f'    "{key}": "{wood.replace("_", " ").title()} Dining Table"')
+    if additions:
         end = contents.rfind('}')
-        path.write_text(contents[:end].rstrip() + f',\n    "{key}": "Oak Dining Table"\n' + contents[end:], encoding='utf-8')
+        path.write_text(contents[:end].rstrip() + ',\n' + ',\n'.join(additions) + '\n' + contents[end:], encoding='utf-8')
     path = ROOT / 'src/main/resources/data/minecraft/tags/block/mineable/axe.json'
     contents = path.read_text(encoding='utf-8')
-    if 'atouchofclass:oak_dining_table' not in contents:
+    additions = [f'    "atouchofclass:{wood}_dining_table"' for wood in ENABLED_WOODS
+                 if f'"atouchofclass:{wood}_dining_table"' not in contents]
+    if additions:
         end = contents.rfind(']')
-        path.write_text(contents[:end].rstrip() + ',\n    "atouchofclass:oak_dining_table"\n  ' + contents[end:], encoding='utf-8')
-    print('Generated oak dining table; base:', BASE_COLOR, 'grain opacity:', GRAIN_OPACITY)
+        path.write_text(contents[:end].rstrip() + ',\n' + ',\n'.join(additions) + '\n  ' + contents[end:], encoding='utf-8')
+    print('Generated dining tables:', ', '.join(ENABLED_WOODS), '; grain opacity:', GRAIN_OPACITY)
 
 
 if __name__ == '__main__':

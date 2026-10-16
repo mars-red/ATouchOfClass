@@ -318,6 +318,17 @@
                    "atouchofclass:tall_bamboo_patio_door",
                    "atouchofclass:tall_crimson_patio_door",
                    "atouchofclass:tall_warped_patio_door",
-    "atouchofclass:oak_dining_table"
+    "atouchofclass:oak_dining_table",
+    "atouchofclass:spruce_dining_table",
+    "atouchofclass:birch_dining_table",
+    "atouchofclass:jungle_dining_table",
+    "atouchofclass:acacia_dining_table",
+    "atouchofclass:dark_oak_dining_table",
+    "atouchofclass:mangrove_dining_table",
+    "atouchofclass:cherry_dining_table",
+    "atouchofclass:pale_oak_dining_table",
+    "atouchofclass:bamboo_dining_table",
+    "atouchofclass:crimson_dining_table",
+    "atouchofclass:warped_dining_table"
   ]
 }
