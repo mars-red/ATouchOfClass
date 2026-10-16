@@ -289,6 +289,8 @@ public class ModItems {
     public static final java.util.Map<String, DeferredItem<BlockItem>> DRESSER_ITEMS = registerDresserItems();
     public static final java.util.Map<String, DeferredItem<BlockItem>> SIDE_TABLE_ITEMS = registerSideTableItems();
     public static final DeferredItem<BlockItem> OAK_SIDE_TABLE_ITEM = SIDE_TABLE_ITEMS.get("oak_side_table");
+    public static final DeferredItem<BlockItem> OAK_DINING_TABLE_ITEM =
+            ITEMS.registerSimpleBlockItem("oak_dining_table", ModBlocks.OAK_DINING_TABLE);
     public static final java.util.Map<String, DeferredItem<BlockItem>> NIGHTSTAND_ITEMS = registerNightstandItems();
     public static final DeferredItem<BlockItem> OAK_NIGHTSTAND_ITEM = NIGHTSTAND_ITEMS.get("oak_nightstand");
     public static final DeferredItem<BlockItem> LEATHER_LOVE_SEAT_ITEM =
@@ -669,6 +671,7 @@ public class ModItems {
             FOUR_POST_BED_ITEMS.values().forEach(event::accept);
             DRESSER_ITEMS.values().forEach(event::accept);
             SIDE_TABLE_ITEMS.values().forEach(event::accept);
+            event.accept(OAK_DINING_TABLE_ITEM);
             NIGHTSTAND_ITEMS.values().forEach(event::accept);
             event.accept(LEATHER_LOVE_SEAT_ITEM);
             event.accept(LEATHER_SOFA_ITEM);
