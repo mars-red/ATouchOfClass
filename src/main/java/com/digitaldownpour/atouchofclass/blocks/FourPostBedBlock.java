@@ -242,7 +242,8 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
             return InteractionResult.SUCCESS_SERVER;
         }
 
-        player.startSleepInBed(sleepPos).ifLeft(problem -> {
+        player.startSleepInBed(sleepPos).ifRight(ignored ->
+                com.digitaldownpour.atouchofclass.FourPostBedSleepEvents.alignSleeper(player)).ifLeft(problem -> {
             if (problem.getMessage() != null) {
                 player.displayClientMessage(problem.getMessage(), true);
             }

@@ -1,0 +1,5 @@
+gradle.beforeProject { p ->
+    p.afterEvaluate {
+        p.neoForge.runs.gameTestServer.gameDirectory = p.file('build/four-post-bed-gametest')
+    }
+}
