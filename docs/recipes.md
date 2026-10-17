@@ -456,6 +456,62 @@ B
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_balustrade.json)
 
+## bamboo-black-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Black) (`atouchofclass:bamboo_black_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:black_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_black_four_post_bed.json)
+
+## bamboo-blue-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Blue) (`atouchofclass:bamboo_blue_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:blue_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_blue_four_post_bed.json)
+
+## bamboo-brown-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Brown) (`atouchofclass:bamboo_brown_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:brown_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_brown_four_post_bed.json)
+
+## bamboo-cyan-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Cyan) (`atouchofclass:bamboo_cyan_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:cyan_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_cyan_four_post_bed.json)
+
 ## bamboo-dining-chair
 
 **Output:** 2 × Bamboo Dining Chair (`atouchofclass:bamboo_dining_chair`). **Type:** `minecraft:crafting_shaped`.
@@ -524,6 +580,90 @@ CC
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_dresser.json)
 
+## bamboo-gray-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Gray) (`atouchofclass:bamboo_gray_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:gray_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_gray_four_post_bed.json)
+
+## bamboo-green-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Green) (`atouchofclass:bamboo_green_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:green_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_green_four_post_bed.json)
+
+## bamboo-light-blue-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Light Blue) (`atouchofclass:bamboo_light_blue_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:light_blue_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_light_blue_four_post_bed.json)
+
+## bamboo-light-gray-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Light Gray) (`atouchofclass:bamboo_light_gray_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:light_gray_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_light_gray_four_post_bed.json)
+
+## bamboo-lime-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Lime) (`atouchofclass:bamboo_lime_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:lime_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_lime_four_post_bed.json)
+
+## bamboo-magenta-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Magenta) (`atouchofclass:bamboo_magenta_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:magenta_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_magenta_four_post_bed.json)
+
 ## bamboo-newel-post
 
 **Output:** 8 × Bamboo Newel Post (`atouchofclass:bamboo_newel_post`). **Type:** `minecraft:crafting_shaped`.
@@ -552,6 +692,20 @@ P.P
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_nightstand.json)
 
+## bamboo-orange-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Orange) (`atouchofclass:bamboo_orange_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:orange_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_orange_four_post_bed.json)
+
 ## bamboo-parquet
 
 **Output:** 5 × Bamboo Parquet (`atouchofclass:bamboo_parquet`). **Type:** `minecraft:crafting_shaped`.
@@ -566,6 +720,34 @@ P.P
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_parquet.json)
 
+## bamboo-pink-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Pink) (`atouchofclass:bamboo_pink_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:pink_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_pink_four_post_bed.json)
+
+## bamboo-purple-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Purple) (`atouchofclass:bamboo_purple_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:purple_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_purple_four_post_bed.json)
+
 ## bamboo-railing
 
 **Output:** 6 × Wall Mounted Bamboo Railing (`atouchofclass:bamboo_railing`). **Type:** `minecraft:crafting_shaped`.
@@ -578,6 +760,20 @@ C.C
 `C` = `minecraft:copper_ingot`; `O` = `minecraft:bamboo_planks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_railing.json)
+
+## bamboo-red-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Red) (`atouchofclass:bamboo_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:red_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_red_four_post_bed.json)
 
 ## bamboo-shutter
 
@@ -604,6 +800,34 @@ L.L
 `L` = `minecraft:bamboo_planks`; `S` = `minecraft:bamboo_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_side_table.json)
+
+## bamboo-white-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (White) (`atouchofclass:bamboo_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:white_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_white_four_post_bed.json)
+
+## bamboo-yellow-four-post-bed
+
+**Output:** 1 × Bamboo Four-Post Bed (Yellow) (`atouchofclass:bamboo_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:yellow_bed`; `L` = `#minecraft:bamboo_blocks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_yellow_four_post_bed.json)
 
 ## baseboard
 

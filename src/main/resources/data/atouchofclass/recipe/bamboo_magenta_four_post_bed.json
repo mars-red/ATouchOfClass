@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LL",
+    "BB",
+    "LL"
+  ],
+  "key": {
+    "L": "#minecraft:bamboo_blocks",
+    "B": "minecraft:magenta_bed"
+  },
+  "result": {
+    "id": "atouchofclass:bamboo_magenta_four_post_bed"
+  }
+}

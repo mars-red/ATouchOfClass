@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe. Concrete exceptions are intentional.
 
-**584 registered player-content items.**
+**600 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -43,17 +43,33 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Andesite Sink | `atouchofclass:andesite_sink` | Survival obtainable — [andesite_sink](recipes.md#andesite-sink) |
 | Bamboo Baluster | `atouchofclass:bamboo_baluster` | Survival obtainable — [bamboo_baluster](recipes.md#bamboo-baluster) |
 | Bamboo Balustrade | `atouchofclass:bamboo_balustrade` | Survival obtainable — [bamboo_balustrade](recipes.md#bamboo-balustrade) |
+| Bamboo Four-Post Bed (Black) | `atouchofclass:bamboo_black_four_post_bed` | Survival obtainable — [bamboo_black_four_post_bed](recipes.md#bamboo-black-four-post-bed) |
+| Bamboo Four-Post Bed (Blue) | `atouchofclass:bamboo_blue_four_post_bed` | Survival obtainable — [bamboo_blue_four_post_bed](recipes.md#bamboo-blue-four-post-bed) |
+| Bamboo Four-Post Bed (Brown) | `atouchofclass:bamboo_brown_four_post_bed` | Survival obtainable — [bamboo_brown_four_post_bed](recipes.md#bamboo-brown-four-post-bed) |
+| Bamboo Four-Post Bed (Cyan) | `atouchofclass:bamboo_cyan_four_post_bed` | Survival obtainable — [bamboo_cyan_four_post_bed](recipes.md#bamboo-cyan-four-post-bed) |
 | Bamboo Dining Chair | `atouchofclass:bamboo_dining_chair` | Survival obtainable — [bamboo_dining_chair](recipes.md#bamboo-dining-chair) |
 | Bamboo Dining Table | `atouchofclass:bamboo_dining_table` | Survival obtainable — [bamboo_dining_table](recipes.md#bamboo-dining-table) |
 | Bamboo Door Cabinet | `atouchofclass:bamboo_door_cabinet` | Survival obtainable — [bamboo_door_cabinet](recipes.md#bamboo-door-cabinet) |
 | Bamboo Drawer Cabinet | `atouchofclass:bamboo_drawer_cabinet` | Survival obtainable — [bamboo_drawer_cabinet](recipes.md#bamboo-drawer-cabinet) |
 | Bamboo Dresser | `atouchofclass:bamboo_dresser` | Survival obtainable — [bamboo_dresser](recipes.md#bamboo-dresser) |
+| Bamboo Four-Post Bed (Gray) | `atouchofclass:bamboo_gray_four_post_bed` | Survival obtainable — [bamboo_gray_four_post_bed](recipes.md#bamboo-gray-four-post-bed) |
+| Bamboo Four-Post Bed (Green) | `atouchofclass:bamboo_green_four_post_bed` | Survival obtainable — [bamboo_green_four_post_bed](recipes.md#bamboo-green-four-post-bed) |
+| Bamboo Four-Post Bed (Light Blue) | `atouchofclass:bamboo_light_blue_four_post_bed` | Survival obtainable — [bamboo_light_blue_four_post_bed](recipes.md#bamboo-light-blue-four-post-bed) |
+| Bamboo Four-Post Bed (Light Gray) | `atouchofclass:bamboo_light_gray_four_post_bed` | Survival obtainable — [bamboo_light_gray_four_post_bed](recipes.md#bamboo-light-gray-four-post-bed) |
+| Bamboo Four-Post Bed (Lime) | `atouchofclass:bamboo_lime_four_post_bed` | Survival obtainable — [bamboo_lime_four_post_bed](recipes.md#bamboo-lime-four-post-bed) |
+| Bamboo Four-Post Bed (Magenta) | `atouchofclass:bamboo_magenta_four_post_bed` | Survival obtainable — [bamboo_magenta_four_post_bed](recipes.md#bamboo-magenta-four-post-bed) |
 | Bamboo Newel Post | `atouchofclass:bamboo_newel_post` | Survival obtainable — [bamboo_newel_post](recipes.md#bamboo-newel-post) |
 | Bamboo Nightstand | `atouchofclass:bamboo_nightstand` | Survival obtainable — [bamboo_nightstand](recipes.md#bamboo-nightstand) |
+| Bamboo Four-Post Bed (Orange) | `atouchofclass:bamboo_orange_four_post_bed` | Survival obtainable — [bamboo_orange_four_post_bed](recipes.md#bamboo-orange-four-post-bed) |
 | Bamboo Parquet | `atouchofclass:bamboo_parquet` | Survival obtainable — [bamboo_parquet](recipes.md#bamboo-parquet) |
+| Bamboo Four-Post Bed (Pink) | `atouchofclass:bamboo_pink_four_post_bed` | Survival obtainable — [bamboo_pink_four_post_bed](recipes.md#bamboo-pink-four-post-bed) |
+| Bamboo Four-Post Bed (Purple) | `atouchofclass:bamboo_purple_four_post_bed` | Survival obtainable — [bamboo_purple_four_post_bed](recipes.md#bamboo-purple-four-post-bed) |
 | Wall Mounted Bamboo Railing | `atouchofclass:bamboo_railing` | Survival obtainable — [bamboo_railing](recipes.md#bamboo-railing) |
+| Bamboo Four-Post Bed (Red) | `atouchofclass:bamboo_red_four_post_bed` | Survival obtainable — [bamboo_red_four_post_bed](recipes.md#bamboo-red-four-post-bed) |
 | Bamboo Shutter | `atouchofclass:bamboo_shutter` | Survival obtainable — [bamboo_shutter](recipes.md#bamboo-shutter) |
 | Bamboo Side Table | `atouchofclass:bamboo_side_table` | Survival obtainable — [bamboo_side_table](recipes.md#bamboo-side-table) |
+| Bamboo Four-Post Bed (White) | `atouchofclass:bamboo_white_four_post_bed` | Survival obtainable — [bamboo_white_four_post_bed](recipes.md#bamboo-white-four-post-bed) |
+| Bamboo Four-Post Bed (Yellow) | `atouchofclass:bamboo_yellow_four_post_bed` | Survival obtainable — [bamboo_yellow_four_post_bed](recipes.md#bamboo-yellow-four-post-bed) |
 | Baseboard | `atouchofclass:baseboard` | Survival obtainable — [baseboard](recipes.md#baseboard) |
 | Birch Baluster | `atouchofclass:birch_baluster` | Survival obtainable — [birch_baluster](recipes.md#birch-baluster) |
 | Birch Balustrade | `atouchofclass:birch_balustrade` | Survival obtainable — [birch_balustrade](recipes.md#birch-balustrade) |
