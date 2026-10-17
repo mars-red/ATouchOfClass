@@ -10,8 +10,8 @@
       "west": {"texture": "#trim"}, "up": {"texture": "#trim"}, "down": {"texture": "#trim"}
     }},
     { "from": [0, 1.5, 1], "to": [15.5, 11.5, 2], "faces": {
-      "north": {"texture": "#front"}, "east": {"texture": "#front"}, "south": {"texture": "#front"},
-      "west": {"texture": "#front"}, "up": {"texture": "#front"}, "down": {"texture": "#front"}
+      "north": {"texture": "#drawer_left"}, "east": {"texture": "#drawer_left"}, "south": {"texture": "#drawer_left"},
+      "west": {"texture": "#drawer_left"}, "up": {"texture": "#drawer_left"}, "down": {"texture": "#drawer_left"}
     }},
     { "from": [0, 8.75, 0.25], "to": [12, 10, 1], "faces": {
       "north": {"texture": "#trim"}, "east": {"texture": "#trim"}, "south": {"texture": "#trim"},
