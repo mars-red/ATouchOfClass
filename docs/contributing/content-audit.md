@@ -67,6 +67,8 @@ All 83 required game tests passed and the mod jar built successfully. New tests 
 
 ## Checks and completed review
 
+Leather seating correction, October 16, 2026: the chair, both love-seat cushions, and all three sofa cushions now share the dining chairs' successful-mount head/body/client-camera alignment. Dismounts search for supported, collision-free floor around the occupied cushion. Fully blocked exits fall back above the section's complete collision shape, clearing its arms and backrest. All 89 required game tests passed and the mod jar built successfully. New server-player regression cases cover every cushion in all four facings, clear and blocked-front exits, surrounded furniture, occupied-seat rejection, independent riders, reuse, and complete-piece break cleanup. The existing dining-chair and four-post-bed tests also pass; no additional in-game author acceptance is claimed.
+
 Dining furniture screenshots, October 16, 2026: integrated `furniture-04` and `furniture-05` from their assigned paths. Both are game-only 854 × 480 PNGs, with no HUD or debug overlay. The table image shows a rectangular oak table alongside a larger L-shaped oak table, including the inward corner support. The chair image shows complete oak, mangrove, and warped chairs left to right with their finishes and slatted backs visible. Both images were visually reviewed and retained unchanged. All 24 screenshot records now have supplied files; none are awaiting capture. This visual review does not add a gameplay acceptance claim.
 
 The author confirmed completion of all in-game checks on October 10, 2026. The statuses below record that confirmation; exact test build identifiers were not supplied.

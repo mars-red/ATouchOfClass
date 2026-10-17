@@ -153,11 +153,10 @@ public class SofaBlock extends HorizontalDirectionalBlock {
         if (seat == null) {
             seat = new SeatEntity(ModEntities.LOVE_SEAT_SEAT.get(), level);
             seat.setPos(seatPosition);
-            level.addFreshEntity(seat);
+            if (!level.addFreshEntity(seat)) return InteractionResult.FAIL;
         }
 
-        player.setYRot(state.getValue(FACING).toYRot());
-        player.startRiding(seat, true);
+        if (!seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.FAIL;
         return InteractionResult.SUCCESS_SERVER;
     }
 
