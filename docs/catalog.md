@@ -2,11 +2,11 @@
 
 [Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)
 
-Generated from explicit item registrations and the basic-block, dresser, side-table, nightstand, shutter, patio-door, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
+Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, dining-chair, nightstand, shutter, patio-door, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe. Concrete exceptions are intentional.
 
-**560 registered player-content items.**
+**584 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -16,6 +16,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Acacia Four-Post Bed (Blue) | `atouchofclass:acacia_blue_four_post_bed` | Survival obtainable — [acacia_blue_four_post_bed](recipes.md#acacia-blue-four-post-bed) |
 | Acacia Four-Post Bed (Brown) | `atouchofclass:acacia_brown_four_post_bed` | Survival obtainable — [acacia_brown_four_post_bed](recipes.md#acacia-brown-four-post-bed) |
 | Acacia Four-Post Bed (Cyan) | `atouchofclass:acacia_cyan_four_post_bed` | Survival obtainable — [acacia_cyan_four_post_bed](recipes.md#acacia-cyan-four-post-bed) |
+| Acacia Dining Chair | `atouchofclass:acacia_dining_chair` | Survival obtainable — [acacia_dining_chair](recipes.md#acacia-dining-chair) |
+| Acacia Dining Table | `atouchofclass:acacia_dining_table` | Survival obtainable — [acacia_dining_table](recipes.md#acacia-dining-table) |
 | Acacia Door Cabinet | `atouchofclass:acacia_door_cabinet` | Survival obtainable — [acacia_door_cabinet](recipes.md#acacia-door-cabinet) |
 | Acacia Drawer Cabinet | `atouchofclass:acacia_drawer_cabinet` | Survival obtainable — [acacia_drawer_cabinet](recipes.md#acacia-drawer-cabinet) |
 | Acacia Dresser | `atouchofclass:acacia_dresser` | Survival obtainable — [acacia_dresser](recipes.md#acacia-dresser) |
@@ -41,6 +43,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Andesite Sink | `atouchofclass:andesite_sink` | Survival obtainable — [andesite_sink](recipes.md#andesite-sink) |
 | Bamboo Baluster | `atouchofclass:bamboo_baluster` | Survival obtainable — [bamboo_baluster](recipes.md#bamboo-baluster) |
 | Bamboo Balustrade | `atouchofclass:bamboo_balustrade` | Survival obtainable — [bamboo_balustrade](recipes.md#bamboo-balustrade) |
+| Bamboo Dining Chair | `atouchofclass:bamboo_dining_chair` | Survival obtainable — [bamboo_dining_chair](recipes.md#bamboo-dining-chair) |
+| Bamboo Dining Table | `atouchofclass:bamboo_dining_table` | Survival obtainable — [bamboo_dining_table](recipes.md#bamboo-dining-table) |
 | Bamboo Door Cabinet | `atouchofclass:bamboo_door_cabinet` | Survival obtainable — [bamboo_door_cabinet](recipes.md#bamboo-door-cabinet) |
 | Bamboo Drawer Cabinet | `atouchofclass:bamboo_drawer_cabinet` | Survival obtainable — [bamboo_drawer_cabinet](recipes.md#bamboo-drawer-cabinet) |
 | Bamboo Dresser | `atouchofclass:bamboo_dresser` | Survival obtainable — [bamboo_dresser](recipes.md#bamboo-dresser) |
@@ -57,6 +61,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Birch Four-Post Bed (Blue) | `atouchofclass:birch_blue_four_post_bed` | Survival obtainable — [birch_blue_four_post_bed](recipes.md#birch-blue-four-post-bed) |
 | Birch Four-Post Bed (Brown) | `atouchofclass:birch_brown_four_post_bed` | Survival obtainable — [birch_brown_four_post_bed](recipes.md#birch-brown-four-post-bed) |
 | Birch Four-Post Bed (Cyan) | `atouchofclass:birch_cyan_four_post_bed` | Survival obtainable — [birch_cyan_four_post_bed](recipes.md#birch-cyan-four-post-bed) |
+| Birch Dining Chair | `atouchofclass:birch_dining_chair` | Survival obtainable — [birch_dining_chair](recipes.md#birch-dining-chair) |
+| Birch Dining Table | `atouchofclass:birch_dining_table` | Survival obtainable — [birch_dining_table](recipes.md#birch-dining-table) |
 | Birch Door Cabinet | `atouchofclass:birch_door_cabinet` | Survival obtainable — [birch_door_cabinet](recipes.md#birch-door-cabinet) |
 | Birch Drawer Cabinet | `atouchofclass:birch_drawer_cabinet` | Survival obtainable — [birch_drawer_cabinet](recipes.md#birch-drawer-cabinet) |
 | Birch Dresser | `atouchofclass:birch_dresser` | Survival obtainable — [birch_dresser](recipes.md#birch-dresser) |
@@ -102,6 +108,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Cherry Four-Post Bed (Blue) | `atouchofclass:cherry_blue_four_post_bed` | Survival obtainable — [cherry_blue_four_post_bed](recipes.md#cherry-blue-four-post-bed) |
 | Cherry Four-Post Bed (Brown) | `atouchofclass:cherry_brown_four_post_bed` | Survival obtainable — [cherry_brown_four_post_bed](recipes.md#cherry-brown-four-post-bed) |
 | Cherry Four-Post Bed (Cyan) | `atouchofclass:cherry_cyan_four_post_bed` | Survival obtainable — [cherry_cyan_four_post_bed](recipes.md#cherry-cyan-four-post-bed) |
+| Cherry Dining Chair | `atouchofclass:cherry_dining_chair` | Survival obtainable — [cherry_dining_chair](recipes.md#cherry-dining-chair) |
+| Cherry Dining Table | `atouchofclass:cherry_dining_table` | Survival obtainable — [cherry_dining_table](recipes.md#cherry-dining-table) |
 | Cherry Door Cabinet | `atouchofclass:cherry_door_cabinet` | Survival obtainable — [cherry_door_cabinet](recipes.md#cherry-door-cabinet) |
 | Cherry Drawer Cabinet | `atouchofclass:cherry_drawer_cabinet` | Survival obtainable — [cherry_drawer_cabinet](recipes.md#cherry-drawer-cabinet) |
 | Cherry Dresser | `atouchofclass:cherry_dresser` | Survival obtainable — [cherry_dresser](recipes.md#cherry-dresser) |
@@ -143,6 +151,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Crimson Four-Post Bed (Blue) | `atouchofclass:crimson_blue_four_post_bed` | Survival obtainable — [crimson_blue_four_post_bed](recipes.md#crimson-blue-four-post-bed) |
 | Crimson Four-Post Bed (Brown) | `atouchofclass:crimson_brown_four_post_bed` | Survival obtainable — [crimson_brown_four_post_bed](recipes.md#crimson-brown-four-post-bed) |
 | Crimson Four-Post Bed (Cyan) | `atouchofclass:crimson_cyan_four_post_bed` | Survival obtainable — [crimson_cyan_four_post_bed](recipes.md#crimson-cyan-four-post-bed) |
+| Crimson Dining Chair | `atouchofclass:crimson_dining_chair` | Survival obtainable — [crimson_dining_chair](recipes.md#crimson-dining-chair) |
+| Crimson Dining Table | `atouchofclass:crimson_dining_table` | Survival obtainable — [crimson_dining_table](recipes.md#crimson-dining-table) |
 | Crimson Door Cabinet | `atouchofclass:crimson_door_cabinet` | Survival obtainable — [crimson_door_cabinet](recipes.md#crimson-door-cabinet) |
 | Crimson Drawer Cabinet | `atouchofclass:crimson_drawer_cabinet` | Survival obtainable — [crimson_drawer_cabinet](recipes.md#crimson-drawer-cabinet) |
 | Crimson Dresser | `atouchofclass:crimson_dresser` | Survival obtainable — [crimson_dresser](recipes.md#crimson-dresser) |
@@ -175,6 +185,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Dark Oak Four-Post Bed (Blue) | `atouchofclass:dark_oak_blue_four_post_bed` | Survival obtainable — [dark_oak_blue_four_post_bed](recipes.md#dark-oak-blue-four-post-bed) |
 | Dark Oak Four-Post Bed (Brown) | `atouchofclass:dark_oak_brown_four_post_bed` | Survival obtainable — [dark_oak_brown_four_post_bed](recipes.md#dark-oak-brown-four-post-bed) |
 | Dark Oak Four-Post Bed (Cyan) | `atouchofclass:dark_oak_cyan_four_post_bed` | Survival obtainable — [dark_oak_cyan_four_post_bed](recipes.md#dark-oak-cyan-four-post-bed) |
+| Dark Oak Dining Chair | `atouchofclass:dark_oak_dining_chair` | Survival obtainable — [dark_oak_dining_chair](recipes.md#dark-oak-dining-chair) |
+| Dark Oak Dining Table | `atouchofclass:dark_oak_dining_table` | Survival obtainable — [dark_oak_dining_table](recipes.md#dark-oak-dining-table) |
 | Dark Oak Door Cabinet | `atouchofclass:dark_oak_door_cabinet` | Survival obtainable — [dark_oak_door_cabinet](recipes.md#dark-oak-door-cabinet) |
 | Dark Oak Drawer Cabinet | `atouchofclass:dark_oak_drawer_cabinet` | Survival obtainable — [dark_oak_drawer_cabinet](recipes.md#dark-oak-drawer-cabinet) |
 | Dark Oak Dresser | `atouchofclass:dark_oak_dresser` | Survival obtainable — [dark_oak_dresser](recipes.md#dark-oak-dresser) |
@@ -238,6 +250,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Jungle Four-Post Bed (Blue) | `atouchofclass:jungle_blue_four_post_bed` | Survival obtainable — [jungle_blue_four_post_bed](recipes.md#jungle-blue-four-post-bed) |
 | Jungle Four-Post Bed (Brown) | `atouchofclass:jungle_brown_four_post_bed` | Survival obtainable — [jungle_brown_four_post_bed](recipes.md#jungle-brown-four-post-bed) |
 | Jungle Four-Post Bed (Cyan) | `atouchofclass:jungle_cyan_four_post_bed` | Survival obtainable — [jungle_cyan_four_post_bed](recipes.md#jungle-cyan-four-post-bed) |
+| Jungle Dining Chair | `atouchofclass:jungle_dining_chair` | Survival obtainable — [jungle_dining_chair](recipes.md#jungle-dining-chair) |
+| Jungle Dining Table | `atouchofclass:jungle_dining_table` | Survival obtainable — [jungle_dining_table](recipes.md#jungle-dining-table) |
 | Jungle Door Cabinet | `atouchofclass:jungle_door_cabinet` | Survival obtainable — [jungle_door_cabinet](recipes.md#jungle-door-cabinet) |
 | Jungle Drawer Cabinet | `atouchofclass:jungle_drawer_cabinet` | Survival obtainable — [jungle_drawer_cabinet](recipes.md#jungle-drawer-cabinet) |
 | Jungle Dresser | `atouchofclass:jungle_dresser` | Survival obtainable — [jungle_dresser](recipes.md#jungle-dresser) |
@@ -278,6 +292,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Mangrove Four-Post Bed (Blue) | `atouchofclass:mangrove_blue_four_post_bed` | Survival obtainable — [mangrove_blue_four_post_bed](recipes.md#mangrove-blue-four-post-bed) |
 | Mangrove Four-Post Bed (Brown) | `atouchofclass:mangrove_brown_four_post_bed` | Survival obtainable — [mangrove_brown_four_post_bed](recipes.md#mangrove-brown-four-post-bed) |
 | Mangrove Four-Post Bed (Cyan) | `atouchofclass:mangrove_cyan_four_post_bed` | Survival obtainable — [mangrove_cyan_four_post_bed](recipes.md#mangrove-cyan-four-post-bed) |
+| Mangrove Dining Chair | `atouchofclass:mangrove_dining_chair` | Survival obtainable — [mangrove_dining_chair](recipes.md#mangrove-dining-chair) |
+| Mangrove Dining Table | `atouchofclass:mangrove_dining_table` | Survival obtainable — [mangrove_dining_table](recipes.md#mangrove-dining-table) |
 | Mangrove Door Cabinet | `atouchofclass:mangrove_door_cabinet` | Survival obtainable — [mangrove_door_cabinet](recipes.md#mangrove-door-cabinet) |
 | Mangrove Drawer Cabinet | `atouchofclass:mangrove_drawer_cabinet` | Survival obtainable — [mangrove_drawer_cabinet](recipes.md#mangrove-drawer-cabinet) |
 | Mangrove Dresser | `atouchofclass:mangrove_dresser` | Survival obtainable — [mangrove_dresser](recipes.md#mangrove-dresser) |
@@ -308,6 +324,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Oak Four-Post Bed (Blue) | `atouchofclass:oak_blue_four_post_bed` | Survival obtainable — [oak_blue_four_post_bed](recipes.md#oak-blue-four-post-bed) |
 | Oak Four-Post Bed (Brown) | `atouchofclass:oak_brown_four_post_bed` | Survival obtainable — [oak_brown_four_post_bed](recipes.md#oak-brown-four-post-bed) |
 | Oak Four-Post Bed (Cyan) | `atouchofclass:oak_cyan_four_post_bed` | Survival obtainable — [oak_cyan_four_post_bed](recipes.md#oak-cyan-four-post-bed) |
+| Oak Dining Chair | `atouchofclass:oak_dining_chair` | Survival obtainable — [oak_dining_chair](recipes.md#oak-dining-chair) |
+| Oak Dining Table | `atouchofclass:oak_dining_table` | Survival obtainable — [oak_dining_table](recipes.md#oak-dining-table) |
 | Oak Door Cabinet | `atouchofclass:oak_door_cabinet` | Survival obtainable — [oak_door_cabinet](recipes.md#oak-door-cabinet) |
 | Oak Drawer Cabinet | `atouchofclass:oak_drawer_cabinet` | Survival obtainable — [oak_drawer_cabinet](recipes.md#oak-drawer-cabinet) |
 | Oak Dresser | `atouchofclass:oak_dresser` | Survival obtainable — [oak_dresser](recipes.md#oak-dresser) |
@@ -350,6 +368,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Pale Oak Four-Post Bed (Blue) | `atouchofclass:pale_oak_blue_four_post_bed` | Survival obtainable — [pale_oak_blue_four_post_bed](recipes.md#pale-oak-blue-four-post-bed) |
 | Pale Oak Four-Post Bed (Brown) | `atouchofclass:pale_oak_brown_four_post_bed` | Survival obtainable — [pale_oak_brown_four_post_bed](recipes.md#pale-oak-brown-four-post-bed) |
 | Pale Oak Four-Post Bed (Cyan) | `atouchofclass:pale_oak_cyan_four_post_bed` | Survival obtainable — [pale_oak_cyan_four_post_bed](recipes.md#pale-oak-cyan-four-post-bed) |
+| Pale Oak Dining Chair | `atouchofclass:pale_oak_dining_chair` | Survival obtainable — [pale_oak_dining_chair](recipes.md#pale-oak-dining-chair) |
+| Pale Oak Dining Table | `atouchofclass:pale_oak_dining_table` | Survival obtainable — [pale_oak_dining_table](recipes.md#pale-oak-dining-table) |
 | Pale Oak Door Cabinet | `atouchofclass:pale_oak_door_cabinet` | Survival obtainable — [pale_oak_door_cabinet](recipes.md#pale-oak-door-cabinet) |
 | Pale Oak Drawer Cabinet | `atouchofclass:pale_oak_drawer_cabinet` | Survival obtainable — [pale_oak_drawer_cabinet](recipes.md#pale-oak-drawer-cabinet) |
 | Pale Oak Dresser | `atouchofclass:pale_oak_dresser` | Survival obtainable — [pale_oak_dresser](recipes.md#pale-oak-dresser) |
@@ -419,6 +439,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Spruce Four-Post Bed (Blue) | `atouchofclass:spruce_blue_four_post_bed` | Survival obtainable — [spruce_blue_four_post_bed](recipes.md#spruce-blue-four-post-bed) |
 | Spruce Four-Post Bed (Brown) | `atouchofclass:spruce_brown_four_post_bed` | Survival obtainable — [spruce_brown_four_post_bed](recipes.md#spruce-brown-four-post-bed) |
 | Spruce Four-Post Bed (Cyan) | `atouchofclass:spruce_cyan_four_post_bed` | Survival obtainable — [spruce_cyan_four_post_bed](recipes.md#spruce-cyan-four-post-bed) |
+| Spruce Dining Chair | `atouchofclass:spruce_dining_chair` | Survival obtainable — [spruce_dining_chair](recipes.md#spruce-dining-chair) |
+| Spruce Dining Table | `atouchofclass:spruce_dining_table` | Survival obtainable — [spruce_dining_table](recipes.md#spruce-dining-table) |
 | Spruce Door Cabinet | `atouchofclass:spruce_door_cabinet` | Survival obtainable — [spruce_door_cabinet](recipes.md#spruce-door-cabinet) |
 | Spruce Drawer Cabinet | `atouchofclass:spruce_drawer_cabinet` | Survival obtainable — [spruce_drawer_cabinet](recipes.md#spruce-drawer-cabinet) |
 | Spruce Dresser | `atouchofclass:spruce_dresser` | Survival obtainable — [spruce_dresser](recipes.md#spruce-dresser) |
@@ -493,6 +515,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Warped Four-Post Bed (Blue) | `atouchofclass:warped_blue_four_post_bed` | Survival obtainable — [warped_blue_four_post_bed](recipes.md#warped-blue-four-post-bed) |
 | Warped Four-Post Bed (Brown) | `atouchofclass:warped_brown_four_post_bed` | Survival obtainable — [warped_brown_four_post_bed](recipes.md#warped-brown-four-post-bed) |
 | Warped Four-Post Bed (Cyan) | `atouchofclass:warped_cyan_four_post_bed` | Survival obtainable — [warped_cyan_four_post_bed](recipes.md#warped-cyan-four-post-bed) |
+| Warped Dining Chair | `atouchofclass:warped_dining_chair` | Survival obtainable — [warped_dining_chair](recipes.md#warped-dining-chair) |
+| Warped Dining Table | `atouchofclass:warped_dining_table` | Survival obtainable — [warped_dining_table](recipes.md#warped-dining-table) |
 | Warped Door Cabinet | `atouchofclass:warped_door_cabinet` | Survival obtainable — [warped_door_cabinet](recipes.md#warped-door-cabinet) |
 | Warped Drawer Cabinet | `atouchofclass:warped_drawer_cabinet` | Survival obtainable — [warped_drawer_cabinet](recipes.md#warped-drawer-cabinet) |
 | Warped Dresser | `atouchofclass:warped_dresser` | Survival obtainable — [warped_dresser](recipes.md#warped-dresser) |

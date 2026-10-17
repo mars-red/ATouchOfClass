@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "TTT",
+    "LLL",
+    "T T"
+  ],
+  "key": {
+    "T": "minecraft:stick",
+    "L": "minecraft:mangrove_slab"
+  },
+  "result": {
+    "id": "atouchofclass:mangrove_dining_chair",
+    "count": 2
+  }
+}

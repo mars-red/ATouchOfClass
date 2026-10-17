@@ -1,0 +1,123 @@
+"""Generate all twelve dining-chair woods and matching collision geometry.
+
+The approved preview JSON is the geometry source. The hand-edited oak recipe is
+never rewritten; other recipes copy its structure and substitute material IDs.
+"""
+from pathlib import Path
+import json
+
+ROOT = Path(__file__).absolute().parents[1]
+ASSETS = ROOT / 'src/main/resources/assets/atouchofclass'
+DATA = ROOT / 'src/main/resources/data/atouchofclass'
+JAVA = ROOT / 'src/main/java/com/digitaldownpour/atouchofclass/blocks'
+WOODS = {
+    'oak': 'stripped_oak_log', 'spruce': 'stripped_spruce_log',
+    'birch': 'stripped_birch_log', 'jungle': 'stripped_jungle_log',
+    'acacia': 'stripped_acacia_log', 'dark_oak': 'stripped_dark_oak_log',
+    'mangrove': 'stripped_mangrove_log', 'cherry': 'stripped_cherry_log',
+    'pale_oak': 'stripped_pale_oak_log', 'bamboo': 'stripped_bamboo_block',
+    'crimson': 'stripped_crimson_stem', 'warped': 'stripped_warped_stem',
+}
+
+
+def variant_recipe(wood, oak_recipe):
+    replacements = {'minecraft:oak_slab': f'minecraft:{wood}_slab',
+                    'atouchofclass:oak_dining_chair': f'atouchofclass:{wood}_dining_chair'}
+    def replace(value):
+        if isinstance(value, dict): return {key: replace(child) for key, child in value.items()}
+        if isinstance(value, list): return [replace(child) for child in value]
+        return replacements.get(value, value) if isinstance(value, str) else value
+    return replace(oak_recipe)
+
+
+def write(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, indent=2) + '\n', encoding='utf-8')
+
+
+def write_variant(wood, model, oak_recipe, display):
+    name = f'{wood}_dining_chair'
+    # Facing denotes the front. The approved model has its back at north/z=2.
+    rotations = {'south': 0, 'west': 90, 'north': 180, 'east': 270}
+    variant = model if wood == 'oak' else {
+        'parent': 'atouchofclass:block/oak_dining_chair',
+        'textures': {'wood': f'minecraft:block/{WOODS[wood]}', 'particle': '#wood'}}
+    write(ASSETS / f'models/block/{name}.json', variant)
+    write(ASSETS / f'blockstates/{name}.json', {'variants': {
+        f'facing={facing}': {'model': f'atouchofclass:block/{name}', 'y': rotation}
+        for facing, rotation in rotations.items()}})
+    write(ASSETS / f'models/item/{name}.json', {
+        'parent': f'atouchofclass:block/{name}', 'gui_light': 'side', 'display': display})
+    write(ASSETS / f'items/{name}.json', {'model': {'type': 'minecraft:model', 'model': f'atouchofclass:item/{name}'}})
+    write(DATA / f'loot_table/blocks/{name}.json', {
+        'type': 'minecraft:block', 'pools': [{'rolls': 1,
+            'conditions': [{'condition': 'minecraft:survives_explosion'}],
+            'entries': [{'type': 'minecraft:item', 'name': f'atouchofclass:{name}'}]}]})
+    recipe = variant_recipe(wood, oak_recipe)
+    if wood != 'oak': write(DATA / f'recipe/{name}.json', recipe)
+    write(DATA / f'advancement/recipes/decorations/{name}.json', {
+        'parent': 'minecraft:recipes/root', 'criteria': {
+            'has_material': {'trigger': 'minecraft:inventory_changed',
+                'conditions': {'items': [{'items': sorted(set(recipe['key'].values()))}]}},
+            'has_the_recipe': {'trigger': 'minecraft:recipe_unlocked', 'conditions': {'recipe': f'atouchofclass:{name}'}}},
+        'requirements': [['has_material', 'has_the_recipe']], 'rewards': {'recipes': [f'atouchofclass:{name}']}})
+    key = f'block.atouchofclass.{name}'
+    for path, entry in [(ASSETS / 'lang/en_us.json', f'    "{key}": "{wood.replace("_", " ").title()} Dining Chair"'),
+                        (ROOT / 'src/main/resources/data/minecraft/tags/block/mineable/axe.json', f'    "atouchofclass:{name}"')]:
+        text = path.read_text(encoding='utf-8')
+        if (key if path.name == 'en_us.json' else f'atouchofclass:{name}') not in text:
+            closing = '}' if path.name == 'en_us.json' else ']'
+            end = text.rfind(closing)
+            path.write_text(text[:end].rstrip() + ',\n' + entry + '\n' + text[end:], encoding='utf-8')
+
+
+def main():
+    model = json.loads((ROOT / 'preview/dining_chair/oak_dining_chair.json').read_text())
+    oak_recipe = json.loads((DATA / 'recipe/oak_dining_chair.json').read_text())
+    display = json.loads((ASSETS / 'models/item/side_table.json').read_text())['display']
+    display['gui']['scale'] = [0.5, 0.5, 0.5]
+    display['gui']['translation'] = [0, -2, 0]
+    for wood in WOODS: write_variant(wood, model, oak_recipe, display)
+    boxes = ',\n'.join('            {' + ', '.join(str(c) for c in part['from'] + part['to']) + '}' for part in model['elements'])
+    source = '''package com.digitaldownpour.atouchofclass.blocks;
+
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+/** Generated by tools/generate_dining_chair.py from the approved model. */
+public final class DiningChairGeometry {
+    private static final VoxelShape[] SHAPES = createShapes();
+    private DiningChairGeometry() {}
+
+    public static VoxelShape shape(Direction front) {
+        return SHAPES[switch (front) { case SOUTH -> 0; case WEST -> 1; case NORTH -> 2; case EAST -> 3; default -> throw new IllegalArgumentException("Horizontal front required"); }];
+    }
+
+    private static VoxelShape[] createShapes() {
+        double[][] boxes = {
+BOXES
+        };
+        VoxelShape[] shapes = new VoxelShape[4];
+        for (int turns = 0; turns < 4; turns++) {
+            VoxelShape shape = Shapes.empty();
+            for (double[] box : boxes) {
+                double x0 = box[0], z0 = box[2], x1 = box[3], z1 = box[5];
+                for (int turn = 0; turn < turns; turn++) {
+                    double nx0 = 16 - z1, nx1 = 16 - z0;
+                    z0 = x0; z1 = x1; x0 = nx0; x1 = nx1;
+                }
+                shape = Shapes.or(shape, Block.box(x0, box[1], z0, x1, box[4], z1));
+            }
+            shapes[turns] = shape.optimize();
+        }
+        return shapes;
+    }
+}
+'''.replace('BOXES', boxes)
+    (JAVA / 'DiningChairGeometry.java').write_text(source, encoding='utf-8')
+    print('Generated all twelve dining-chair variants and shared collision geometry; preserved the oak recipe.')
+
+
+if __name__ == '__main__': main()

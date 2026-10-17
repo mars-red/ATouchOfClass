@@ -104,6 +104,19 @@
     "caption": "Chair, love seat, and sofa provide one, two, and three seating positions."
   },
   {
+    "id": "furniture-05",
+    "title": "Oak, mangrove, and warped dining chairs",
+    "page": "docs/furniture.md",
+    "file": "docs/images/furniture/dining-chair-woods.png",
+    "session": "First room and furniture",
+    "setup": "On a sturdy, level floor in a Creative test world, place one oak, one mangrove, and one warped dining chair in a row, ordered left to right. Give them the same facing and leave one empty block between chairs. Keep the chairs unoccupied and leave the space around them clear.",
+    "capture": "Take one F2 screenshot from a slightly elevated front three-quarter angle showing all three complete chairs together. Hide the HUD and use a neutral, contrasting floor so the wood colors, slatted backs, seats, and legs are easy to compare.",
+    "mustShow": "Oak, mangrove, and warped dining chairs together in one image, ordered left to right, with their full backrests, seats, and feet visible and their stripped wood finishes distinguishable.",
+    "avoid": "Do not substitute leather chairs, include other wood varieties, or crop the backs or feet. Keep players, mobs, dropped items, tables, chat, debug overlays, and shaders out of the frame. Supply an unedited, game-only PNG.",
+    "alt": "Oak, mangrove, and warped dining chairs arranged left to right, showing matching slatted-back designs in three stripped wood finishes.",
+    "caption": "Oak, mangrove, and warped dining chairs share the same slatted-back design with different stripped wood finishes."
+  },
+  {
     "id": "furniture-02",
     "title": "Dresser storage",
     "page": "docs/furniture.md",
@@ -115,6 +128,19 @@
     "avoid": "Use default textures without shaders. Close chat and debug overlays. Use F2; hide the HUD for world views, but keep menus visible for interface captures. Supply an unedited PNG. Report any setup that does not reproduce the requested state.",
     "alt": "Dresser interface showing six rows of shared storage.",
     "caption": "The complete dresser shares one 54-slot inventory."
+  },
+  {
+    "id": "furniture-04",
+    "title": "Rectangular and L-shaped dining tables",
+    "page": "docs/furniture.md",
+    "file": "docs/images/furniture/dining-table-configurations.png",
+    "session": "First room and furniture",
+    "setup": "On a sturdy, level floor in a Creative test world, place six oak dining table blocks in a 2 by 3 rectangle. Beside it, leave clear space and build a separate one-block-wide L-shaped oak dining table with both arms extending from the bend. Keep both tabletops empty and the space beneath them clear.",
+    "capture": "Take one F2 screenshot showing both complete tables in the same frame, from a slightly elevated three-quarter angle. Face the open notch of the L so its inward corner leg is visible. Hide the HUD and choose a contrasting floor that makes the legs easy to distinguish.",
+    "mustShow": "Both configurations together in a single screenshot: the continuous 2 by 3 rectangular tabletop with four outside corner legs, and the L-shaped tabletop with its inward corner leg and outside corner legs. Keep all table edges and feet within the frame, with open space beneath the straight edges.",
+    "avoid": "Do not use side tables, mixed woods, unsupported blocks, shaders, table decorations, mobs, or dropped items. Avoid a camera angle that hides the L's inward corner leg. Close chat and debug overlays; supply an unedited, game-only PNG.",
+    "alt": "A rectangular oak dining table beside an L-shaped oak dining table, showing continuous tops and corner legs, including the L's inward corner.",
+    "caption": "Matching dining tables join into rectangles and L shapes, with legs only at outside and inward corners."
   },
   {
     "id": "furniture-03",
