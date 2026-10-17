@@ -11,9 +11,11 @@ Dimensions below are the block spaces to reserve, in width × depth × height. A
 | Furniture | Space | Function |
 | --- | --- | --- |
 | Leather chair | 1 × 1 × 1 | One seat |
+| Dining chair | 1 × 1 footprint; 1½ blocks high | One seat; sitting turns you toward the chair's front |
 | Leather love seat | 2 × 1 × 1 | Two seating positions |
 | Leather sofa | 3 × 1 × 1 | Three seating positions |
 | Side table | 1 × 1 × 1 | Decorative surface; no inventory |
+| Dining table | 1 × 1 × 1 per block | Joins matching tables into a larger decorative surface; no inventory |
 | Nightstand | 1 × 1 × 1 | 27 storage slots |
 | Dresser | 2 × 1 × 2 | One shared 54-slot inventory; model is about 1¼ blocks high |
 | Four-post bed | 2 × 3 × 2 | Two mattress-side sleeping positions; normal sleep/spawn restrictions |
@@ -30,6 +32,22 @@ Breaking a section of a love seat or sofa removes the complete piece and clears 
 *Chair, love seat, and sofa provide one, two, and three seating positions.*
 <!-- screenshot:furniture-01:end -->
 
+## Dining chairs
+
+Dining chairs have an open slatted back, square legs, and a stripped wood finish. Each item places one chair with its front facing you. Place it on a sturdy floor and keep room above for the back, which reaches 1½ blocks high.
+
+Use an empty hand without sneaking to sit. An occupied chair cannot take a second player, and you must dismount another vehicle before sitting. Use the normal dismount control to stand up onto clear floor beside the chair. If all exits are blocked, you are placed slightly above the seat. Breaking the chair or removing its floor support dismounts its rider and clears the seat.
+
+All 12 woods are available: oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped.
+
+The recipe is `TTT` / `LLL` / `T.T`, where `T` is a stick and `L` is a matching wood slab. Five sticks and three matching slabs yield **two chairs** of that wood.
+
+<!-- screenshot:furniture-05:start -->
+![Oak, mangrove, and warped dining chairs arranged left to right, showing matching slatted-back designs in three stripped wood finishes.](images/furniture/dining-chair-woods.png)
+
+*Oak, mangrove, and warped dining chairs share the same slatted-back design with different stripped wood finishes.*
+<!-- screenshot:furniture-05:end -->
+
 ## Tables, nightstands, and dressers
 
 Side tables offer a supported top for a lamp but do not open a storage screen. Nightstands offer the same room-scale footprint with a three-row storage menu. Dressers need two blocks of width and two block spaces of height; their upper sections occupy only part of those spaces.
@@ -43,6 +61,24 @@ These three families each have 12 woods: oak, spruce, birch, jungle, acacia, dar
 
 *The complete dresser shares one 54-slot inventory.*
 <!-- screenshot:furniture-02:end -->
+
+## Dining tables
+
+Place dining table blocks side by side on a sturdy floor to build a table of your chosen size and shape. Each item places one block. Matching wood varieties join along their edges at the same height, forming a continuous tabletop and an apron around the perimeter. Different woods, side tables, and blocks touching only diagonally remain separate.
+
+A single dining table has the same proportions as a side table. Joined tables keep legs at outside corners and at inward corners, such as the bend of an L. Straight edges and filled interior corners have no legs. A 2 × 3 rectangle made from six blocks has four legs; a three-block L has six, including the leg at its inward corner. Every block still needs support underneath, even where there is no visible leg. The tabletop supports lamps and other suitable decorations, and has no storage screen.
+
+All 12 woods are available: oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped. Each finish combines a wood-colored base with softened stripped-wood grain.
+
+Craft four tables with the pattern `PWP` / `P.P`, where `P` is matching planks and `W` is matching stripped wood. For bamboo, use a stripped bamboo block; for crimson and warped, use matching stripped hyphae. See the [oak recipe](recipes.md#oak-dining-table) or choose another wood in the [catalog](catalog.md). The recipes yield four blocks of the selected variety.
+
+Add or remove individual blocks to reshape a table; neighboring tops, aprons, and legs adjust automatically. Breaking one block drops that table item and leaves the remaining supported blocks in place.
+
+<!-- screenshot:furniture-04:start -->
+![A rectangular oak dining table beside an L-shaped oak dining table, showing continuous tops and corner legs, including the L's inward corner.](images/furniture/dining-table-configurations.png)
+
+*Matching dining tables join into rectangles and L shapes, with legs only at outside and inward corners.*
+<!-- screenshot:furniture-04:end -->
 
 ## Four-post beds
 
@@ -66,6 +102,8 @@ Four-post beds have 16 bedding colors and 11 woods: oak, spruce, birch, jungle, 
 | --- | --- |
 | Sofa, dresser, or bed will not place | Clear its complete footprint and upper spaces; check support below every lower section. |
 | Clicking a side table does nothing | It has no storage; use a nightstand for an inventory. |
+| Dining tables do not join | Use the same wood variety at the same height, sharing an edge. Side tables do not join dining tables. |
+| Dining table has fewer legs after joining | Expected: only outside and inward corners have legs. Every block still needs a sturdy floor beneath it. |
 | Cannot sit | Use an empty hand, choose an unoccupied section, and dismount any current vehicle. |
 | Storage items scatter when furniture is broken | Contents drop separately. Collect them or empty the furniture before moving it. |
 | Bed refuses sleep | Read the game's message, check the selected side, and follow normal sleep rules. |

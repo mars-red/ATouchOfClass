@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": ["TTT", "LLL", "T T"],
+  "key": {
+    "T": "minecraft:stick",
+    "L": "minecraft:oak_slab"
+  },
+  "result": {
+    "id": "atouchofclass:oak_dining_chair",
+    "count": 2
+  }
+}

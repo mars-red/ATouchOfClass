@@ -88,6 +88,33 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_cyan_four_post_bed.json)
 
+## acacia-dining-chair
+
+**Output:** 2 × Acacia Dining Chair (`atouchofclass:acacia_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:acacia_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_dining_chair.json)
+
+## acacia-dining-table
+
+**Output:** 4 × Acacia Dining Table (`atouchofclass:acacia_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:acacia_planks`; `W` = `minecraft:stripped_acacia_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_dining_table.json)
+
 ## acacia-door-cabinet
 
 **Output:** 2 × Acacia Door Cabinet (`atouchofclass:acacia_door_cabinet`). **Type:** `minecraft:crafting_shaped`.
@@ -429,6 +456,33 @@ B
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_balustrade.json)
 
+## bamboo-dining-chair
+
+**Output:** 2 × Bamboo Dining Chair (`atouchofclass:bamboo_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:bamboo_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_dining_chair.json)
+
+## bamboo-dining-table
+
+**Output:** 4 × Bamboo Dining Table (`atouchofclass:bamboo_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:bamboo_planks`; `W` = `minecraft:stripped_bamboo_block`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_dining_table.json)
+
 ## bamboo-door-cabinet
 
 **Output:** 2 × Bamboo Door Cabinet (`atouchofclass:bamboo_door_cabinet`). **Type:** `minecraft:crafting_shaped`.
@@ -644,6 +698,33 @@ LL
 `B` = `minecraft:cyan_bed`; `L` = `#minecraft:birch_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_cyan_four_post_bed.json)
+
+## birch-dining-chair
+
+**Output:** 2 × Birch Dining Chair (`atouchofclass:birch_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:birch_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_dining_chair.json)
+
+## birch-dining-table
+
+**Output:** 4 × Birch Dining Table (`atouchofclass:birch_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:birch_planks`; `W` = `minecraft:stripped_birch_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_dining_table.json)
 
 ## birch-door-cabinet
 
@@ -1192,6 +1273,33 @@ LL
 `B` = `minecraft:cyan_bed`; `L` = `#minecraft:cherry_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_cyan_four_post_bed.json)
+
+## cherry-dining-chair
+
+**Output:** 2 × Cherry Dining Chair (`atouchofclass:cherry_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:cherry_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_dining_chair.json)
+
+## cherry-dining-table
+
+**Output:** 4 × Cherry Dining Table (`atouchofclass:cherry_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:cherry_planks`; `W` = `minecraft:stripped_cherry_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_dining_table.json)
 
 ## cherry-door-cabinet
 
@@ -1763,6 +1871,33 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_cyan_four_post_bed.json)
 
+## crimson-dining-chair
+
+**Output:** 2 × Crimson Dining Chair (`atouchofclass:crimson_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:crimson_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_dining_chair.json)
+
+## crimson-dining-table
+
+**Output:** 4 × Crimson Dining Table (`atouchofclass:crimson_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:crimson_planks`; `W` = `minecraft:stripped_crimson_hyphae`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_dining_table.json)
+
 ## crimson-door-cabinet
 
 **Output:** 2 × Crimson Door Cabinet (`atouchofclass:crimson_door_cabinet`). **Type:** `minecraft:crafting_shaped`.
@@ -2173,6 +2308,33 @@ LL
 `B` = `minecraft:cyan_bed`; `L` = `#minecraft:dark_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_cyan_four_post_bed.json)
+
+## dark-oak-dining-chair
+
+**Output:** 2 × Dark Oak Dining Chair (`atouchofclass:dark_oak_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:dark_oak_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_dining_chair.json)
+
+## dark-oak-dining-table
+
+**Output:** 4 × Dark Oak Dining Table (`atouchofclass:dark_oak_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:dark_oak_planks`; `W` = `minecraft:stripped_dark_oak_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_dining_table.json)
 
 ## dark-oak-door-cabinet
 
@@ -2856,6 +3018,33 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_cyan_four_post_bed.json)
 
+## jungle-dining-chair
+
+**Output:** 2 × Jungle Dining Chair (`atouchofclass:jungle_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:jungle_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_dining_chair.json)
+
+## jungle-dining-table
+
+**Output:** 4 × Jungle Dining Table (`atouchofclass:jungle_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:jungle_planks`; `W` = `minecraft:stripped_jungle_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_dining_table.json)
+
 ## jungle-door-cabinet
 
 **Output:** 2 × Jungle Door Cabinet (`atouchofclass:jungle_door_cabinet`). **Type:** `minecraft:crafting_shaped`.
@@ -3297,6 +3486,33 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_cyan_four_post_bed.json)
 
+## mangrove-dining-chair
+
+**Output:** 2 × Mangrove Dining Chair (`atouchofclass:mangrove_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:mangrove_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_dining_chair.json)
+
+## mangrove-dining-table
+
+**Output:** 4 × Mangrove Dining Table (`atouchofclass:mangrove_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:mangrove_planks`; `W` = `minecraft:stripped_mangrove_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_dining_table.json)
+
 ## mangrove-door-cabinet
 
 **Output:** 2 × Mangrove Door Cabinet (`atouchofclass:mangrove_door_cabinet`). **Type:** `minecraft:crafting_shaped`.
@@ -3707,6 +3923,33 @@ LL
 `B` = `minecraft:cyan_bed`; `L` = `#minecraft:oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_cyan_four_post_bed.json)
+
+## oak-dining-chair
+
+**Output:** 2 × Oak Dining Chair (`atouchofclass:oak_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:oak_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_dining_chair.json)
+
+## oak-dining-table
+
+**Output:** 4 × Oak Dining Table (`atouchofclass:oak_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:oak_planks`; `W` = `minecraft:stripped_oak_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_dining_table.json)
 
 ## oak-door-cabinet
 
@@ -4146,6 +4389,33 @@ LL
 `B` = `minecraft:cyan_bed`; `L` = `#minecraft:pale_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_cyan_four_post_bed.json)
+
+## pale-oak-dining-chair
+
+**Output:** 2 × Pale Oak Dining Chair (`atouchofclass:pale_oak_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:pale_oak_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_dining_chair.json)
+
+## pale-oak-dining-table
+
+**Output:** 4 × Pale Oak Dining Table (`atouchofclass:pale_oak_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:pale_oak_planks`; `W` = `minecraft:stripped_pale_oak_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_dining_table.json)
 
 ## pale-oak-door-cabinet
 
@@ -4975,6 +5245,33 @@ LL
 `B` = `minecraft:cyan_bed`; `L` = `#minecraft:spruce_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_cyan_four_post_bed.json)
+
+## spruce-dining-chair
+
+**Output:** 2 × Spruce Dining Chair (`atouchofclass:spruce_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:spruce_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_dining_chair.json)
+
+## spruce-dining-table
+
+**Output:** 4 × Spruce Dining Table (`atouchofclass:spruce_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:spruce_planks`; `W` = `minecraft:stripped_spruce_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_dining_table.json)
 
 ## spruce-door-cabinet
 
@@ -5991,6 +6288,33 @@ LL
 `B` = `minecraft:cyan_bed`; `L` = `#minecraft:warped_stems`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_cyan_four_post_bed.json)
+
+## warped-dining-chair
+
+**Output:** 2 × Warped Dining Chair (`atouchofclass:warped_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:warped_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_dining_chair.json)
+
+## warped-dining-table
+
+**Output:** 4 × Warped Dining Table (`atouchofclass:warped_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:warped_planks`; `W` = `minecraft:stripped_warped_hyphae`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_dining_table.json)
 
 ## warped-door-cabinet
 

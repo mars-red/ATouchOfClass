@@ -1,0 +1,1321 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "wood": "minecraft:block/stripped_oak_log",
+    "particle": "#wood"
+  },
+  "elements": [
+    {
+      "name": "Rear left post",
+      "from": [
+        2,
+        0,
+        2
+      ],
+      "to": [
+        4,
+        24,
+        4
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            2,
+            4,
+            4
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            2,
+            4,
+            4
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            4,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            4,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            4,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            4,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "Rear right post",
+      "from": [
+        12,
+        0,
+        2
+      ],
+      "to": [
+        14,
+        24,
+        4
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            2,
+            14,
+            4
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            2,
+            14,
+            4
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            0,
+            14,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            0,
+            14,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            4,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            4,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "Front left leg",
+      "from": [
+        2,
+        0,
+        12
+      ],
+      "to": [
+        4,
+        8,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            12,
+            4,
+            14
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            12,
+            4,
+            14
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            4,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            4,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            0,
+            14,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            0,
+            14,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "Front right leg",
+      "from": [
+        12,
+        0,
+        12
+      ],
+      "to": [
+        14,
+        8,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            12,
+            14,
+            14
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            12,
+            14,
+            14
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            0,
+            14,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            0,
+            14,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            0,
+            14,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            12,
+            0,
+            14,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "name": "Front apron",
+      "from": [
+        3,
+        6,
+        12.5
+      ],
+      "to": [
+        13,
+        8,
+        13.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            12.5,
+            13,
+            13.5
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            12.5,
+            13,
+            13.5
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            12.5,
+            0,
+            13.5,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            12.5,
+            0,
+            13.5,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "Rear apron",
+      "from": [
+        3,
+        6,
+        2.5
+      ],
+      "to": [
+        13,
+        8,
+        3.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            2.5,
+            13,
+            3.5
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            2.5,
+            13,
+            3.5
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "Left apron",
+      "from": [
+        2.5,
+        6,
+        3
+      ],
+      "to": [
+        3.5,
+        8,
+        13
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            3,
+            3.5,
+            13
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            3,
+            3.5,
+            13
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "Right apron",
+      "from": [
+        12.5,
+        6,
+        3
+      ],
+      "to": [
+        13.5,
+        8,
+        13
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            12.5,
+            3,
+            13.5,
+            13
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            12.5,
+            3,
+            13.5,
+            13
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            12.5,
+            0,
+            13.5,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            12.5,
+            0,
+            13.5,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "Left stretcher",
+      "from": [
+        2.5,
+        3,
+        3
+      ],
+      "to": [
+        3.5,
+        4,
+        13
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            3,
+            3.5,
+            13
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            3,
+            3.5,
+            13
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            1
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            1
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            1
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "Right stretcher",
+      "from": [
+        12.5,
+        3,
+        3
+      ],
+      "to": [
+        13.5,
+        4,
+        13
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            12.5,
+            3,
+            13.5,
+            13
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            12.5,
+            3,
+            13.5,
+            13
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            12.5,
+            0,
+            13.5,
+            1
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            12.5,
+            0,
+            13.5,
+            1
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            1
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "Rear stretcher",
+      "from": [
+        3,
+        3,
+        2.5
+      ],
+      "to": [
+        13,
+        4,
+        3.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            2.5,
+            13,
+            3.5
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            2.5,
+            13,
+            3.5
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            1
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            3,
+            0,
+            13,
+            1
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            1
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "Seat center",
+      "from": [
+        2,
+        8,
+        1
+      ],
+      "to": [
+        14,
+        10,
+        15
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            1,
+            14,
+            15
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            1,
+            14,
+            15
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            14,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            14,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            1,
+            0,
+            15,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            1,
+            0,
+            15,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "Seat left edge",
+      "from": [
+        1,
+        8,
+        2
+      ],
+      "to": [
+        2,
+        10,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            1,
+            2,
+            2,
+            14
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            1,
+            2,
+            2,
+            14
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            1,
+            0,
+            2,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            1,
+            0,
+            2,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            14,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            14,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "Seat right edge",
+      "from": [
+        14,
+        8,
+        2
+      ],
+      "to": [
+        15,
+        10,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            14,
+            2,
+            15,
+            14
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            14,
+            2,
+            15,
+            14
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            14,
+            0,
+            15,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            14,
+            0,
+            15,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            14,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            14,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "Lower back rail",
+      "from": [
+        4,
+        11,
+        2.5
+      ],
+      "to": [
+        12,
+        12,
+        3.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            4,
+            2.5,
+            12,
+            3.5
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            4,
+            2.5,
+            12,
+            3.5
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            4,
+            0,
+            12,
+            1
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            4,
+            0,
+            12,
+            1
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            1
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "Left back slat",
+      "from": [
+        5,
+        12,
+        2.5
+      ],
+      "to": [
+        6,
+        21,
+        3.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            5,
+            2.5,
+            6,
+            3.5
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            5,
+            2.5,
+            6,
+            3.5
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            5,
+            0,
+            6,
+            9
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            5,
+            0,
+            6,
+            9
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            9
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            9
+          ]
+        }
+      }
+    },
+    {
+      "name": "Center back slat",
+      "from": [
+        7.5,
+        12,
+        2.5
+      ],
+      "to": [
+        8.5,
+        21,
+        3.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            7.5,
+            2.5,
+            8.5,
+            3.5
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            7.5,
+            2.5,
+            8.5,
+            3.5
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            7.5,
+            0,
+            8.5,
+            9
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            7.5,
+            0,
+            8.5,
+            9
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            9
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            9
+          ]
+        }
+      }
+    },
+    {
+      "name": "Right back slat",
+      "from": [
+        10,
+        12,
+        2.5
+      ],
+      "to": [
+        11,
+        21,
+        3.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            10,
+            2.5,
+            11,
+            3.5
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            10,
+            2.5,
+            11,
+            3.5
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            10,
+            0,
+            11,
+            9
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            10,
+            0,
+            11,
+            9
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            9
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            2.5,
+            0,
+            3.5,
+            9
+          ]
+        }
+      }
+    },
+    {
+      "name": "Top back rail",
+      "from": [
+        4,
+        21,
+        2
+      ],
+      "to": [
+        12,
+        24,
+        4
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            4,
+            2,
+            12,
+            4
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            4,
+            2,
+            12,
+            4
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            4,
+            0,
+            12,
+            3
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "uv": [
+            4,
+            0,
+            12,
+            3
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            4,
+            3
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "uv": [
+            2,
+            0,
+            4,
+            3
+          ]
+        }
+      }
+    }
+  ]
+}

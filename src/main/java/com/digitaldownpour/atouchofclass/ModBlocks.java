@@ -49,6 +49,7 @@ import com.digitaldownpour.atouchofclass.blocks.DresserBlock;
 import com.digitaldownpour.atouchofclass.blocks.LoveSeatBlock;
 import com.digitaldownpour.atouchofclass.blocks.SofaBlock;
 import com.digitaldownpour.atouchofclass.blocks.ChairBlock;
+import com.digitaldownpour.atouchofclass.blocks.DiningChairBlock;
 import com.digitaldownpour.atouchofclass.blocks.SideTableBlock;
 import com.digitaldownpour.atouchofclass.blocks.DiningTableBlock;
 import com.digitaldownpour.atouchofclass.blocks.NightstandBlock;
@@ -1077,6 +1078,9 @@ public class ModBlocks {
                             .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
                             .noOcclusion()));
 
+    public static final java.util.Map<String, DeferredBlock<DiningChairBlock>> DINING_CHAIRS = registerDiningChairs();
+    public static final DeferredBlock<DiningChairBlock> OAK_DINING_CHAIR = DINING_CHAIRS.get("oak_dining_chair");
+
     private static java.util.Map<String, DeferredBlock<Block>> registerBasicBlocks() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<Block>>();
         BASIC_BLOCK_NAMES.forEach(name -> blocks.put(name, BLOCKS.register(name,
@@ -1134,6 +1138,24 @@ public class ModBlocks {
                         .noOcclusion()));
         DRESSER_REGISTRATIONS.add(dresser);
         return dresser;
+    }
+
+    private static java.util.Map<String, DeferredBlock<DiningChairBlock>> registerDiningChairs() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<DiningChairBlock>>();
+        DiningChairVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
+                BLOCKS.register(definition.id(), registryName -> {
+                    Block source = definition.sourceBlock();
+                    BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(source.defaultMapColor())
+                            .strength(source.defaultDestroyTime(), source.getExplosionResistance())
+                            .sound(source.defaultBlockState().getSoundType())
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .noOcclusion();
+                    if (source.defaultBlockState().ignitedByLava()) properties.ignitedByLava();
+                    return new DiningChairBlock(properties);
+                })));
+        return java.util.Collections.unmodifiableMap(blocks);
     }
 
     private static java.util.Map<String, DeferredBlock<DiningTableBlock>> registerDiningTables() {

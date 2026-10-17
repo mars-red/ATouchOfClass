@@ -329,6 +329,18 @@
     "atouchofclass:pale_oak_dining_table",
     "atouchofclass:bamboo_dining_table",
     "atouchofclass:crimson_dining_table",
-    "atouchofclass:warped_dining_table"
-  ]
+    "atouchofclass:warped_dining_table",
+    "atouchofclass:oak_dining_chair",
+    "atouchofclass:spruce_dining_chair",
+    "atouchofclass:birch_dining_chair",
+    "atouchofclass:jungle_dining_chair",
+    "atouchofclass:acacia_dining_chair",
+    "atouchofclass:dark_oak_dining_chair",
+    "atouchofclass:mangrove_dining_chair",
+    "atouchofclass:cherry_dining_chair",
+    "atouchofclass:pale_oak_dining_chair",
+    "atouchofclass:bamboo_dining_chair",
+    "atouchofclass:crimson_dining_chair",
+    "atouchofclass:warped_dining_chair"
+]
 }

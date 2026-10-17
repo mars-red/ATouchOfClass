@@ -6,7 +6,7 @@ Use the [content catalog](catalog.md) to find exact item IDs and acquisition rou
 
 ## Material families
 
-The common 12-wood set is **oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped**. It applies to regular tall doors, tall patio doors, sidelights, cabinets, dressers, nightstands, side tables, and wood rail families. Four-post beds use that set **without bamboo**, combined with 16 bedding colors.
+The common 12-wood set is **oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped**. It applies to regular tall doors, tall patio doors, sidelights, cabinets, dressers, nightstands, side tables, dining tables, dining chairs, and wood rail families. Four-post beds use that set **without bamboo**, combined with 16 bedding colors.
 
 The 16 colors are white, orange, magenta, light blue, yellow, lime, pink, gray, light gray, cyan, purple, blue, brown, green, red, and black. Concrete countertops and sinks use these colors but are Creative-only. Wood and copper finishes are separate item variants; do not assume dyeing or swapping a material in an unspecified grid will create one.
 
@@ -27,6 +27,8 @@ Copper lighting/chain families use unaffected, exposed, weathered, and oxidized 
 | Floor lamp or lamp post | Three blocks high |
 | Elevator call/destination control; newel post | Two blocks high |
 | Dresser | Reserve 2 × 1 × 2 block spaces |
+| Dining table | 1 × 1 × 1 per block; matching woods join along shared edges, with legs at outside and inward corners |
+| Dining chair | One-block footprint; 1½-block back height; one seat facing the chair's front |
 | Refrigerator | Reserve 2 × 1 × 3 block spaces |
 | Four-post bed | Reserve 2 × 3 × 2 block spaces |
 | Clawfoot bathtub | Reserve 3 × 3 × 1 block spaces |

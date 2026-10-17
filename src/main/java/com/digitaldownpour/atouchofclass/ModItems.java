@@ -299,12 +299,21 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("leather_sofa", ModBlocks.LEATHER_SOFA);
     public static final DeferredItem<BlockItem> LEATHER_CHAIR_ITEM =
             ITEMS.registerSimpleBlockItem("leather_chair", ModBlocks.LEATHER_CHAIR);
+    public static final java.util.Map<String, DeferredItem<BlockItem>> DINING_CHAIR_ITEMS = registerDiningChairItems();
+    public static final DeferredItem<BlockItem> OAK_DINING_CHAIR_ITEM = DINING_CHAIR_ITEMS.get("oak_dining_chair");
 
     private static java.util.Map<String, DeferredItem<BlockItem>> registerDresserItems() {
         java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
         for (String id : DresserVariants.IDS) {
             items.put(id, ITEMS.registerSimpleBlockItem(id, ModBlocks.DRESSERS.get(id)));
         }
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerDiningChairItems() {
+        java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
+        DiningChairVariants.VALUES.forEach(definition -> items.put(definition.id(),
+                ITEMS.registerSimpleBlockItem(definition.id(), ModBlocks.DINING_CHAIRS.get(definition.id()))));
         return java.util.Collections.unmodifiableMap(items);
     }
 
@@ -683,6 +692,7 @@ public class ModItems {
             event.accept(LEATHER_LOVE_SEAT_ITEM);
             event.accept(LEATHER_SOFA_ITEM);
             event.accept(LEATHER_CHAIR_ITEM);
+            DINING_CHAIR_ITEMS.values().forEach(event::accept);
             event.accept(REFRIGERATOR_ITEM);
             event.accept(OVEN_ITEM);
             event.accept(INDUCTION_COOKTOP_ITEM);
