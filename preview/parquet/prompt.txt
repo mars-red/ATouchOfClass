@@ -1,0 +1,6 @@
+Selected output produced with the built-in image_gen tool, then downscaled to the existing 32x32 asset size with nearest-neighbor sampling.
+
+Prompt:
+Use case: precise-object-edit. Image 1 is the edit target: an existing Minecraft oak parquet tile, 32 by 32 pixels. Repair its seamless repeat while preserving its warm muted golden oak palette, low-resolution pixel art, small diagonal herringbone planks and thin dark joints. Output a square containing ONLY one repaired texture tile, edge to edge, without border, margins, labels, perspective, lighting gradients or mockup. Critical: the herringbone must be periodic in both x and y, with exactly matching pattern phase at left/right and top/bottom, so every plank and joint crossing an edge continues naturally at the opposite edge. Keep overall appearance and plank scale very close to reference. Represent an exact 32 by 32 pixel design, enlarged with crisp nearest-neighbor square pixels; no antialiasing, no blur. This is a repair of the same texture rather than a new style. Uniform illumination, opaque.
+
+Validation: visually inspected a nearest-neighbor 3x3 repeat at final asset resolution. PNG remains 32x32. No in-game validation performed.
