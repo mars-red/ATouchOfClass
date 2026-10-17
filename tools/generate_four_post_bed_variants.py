@@ -15,7 +15,7 @@ ASSETS = ROOT / "src/main/resources/assets/atouchofclass"
 DATA = ROOT / "src/main/resources/data/atouchofclass"
 WOODS = (
     "oak", "spruce", "birch", "jungle", "acacia", "dark_oak",
-    "mangrove", "cherry", "pale_oak", "crimson", "warped",
+    "mangrove", "cherry", "pale_oak", "bamboo", "crimson", "warped",
 )
 COLORS = (
     "white", "orange", "magenta", "light_blue", "yellow", "lime",
@@ -37,10 +37,14 @@ def write_json(path: Path, value: object) -> None:
 
 
 def wood_texture(wood: str) -> str:
+    if wood == "bamboo":
+        return "stripped_bamboo_block"
     return f"stripped_{wood}_{'stem' if wood in ('crimson', 'warped') else 'log'}"
 
 
 def log_tag(wood: str) -> str:
+    if wood == "bamboo":
+        return "minecraft:bamboo_blocks"
     return f"minecraft:{wood}_{'stems' if wood in ('crimson', 'warped') else 'logs'}"
 
 

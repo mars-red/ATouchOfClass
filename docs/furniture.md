@@ -88,7 +88,7 @@ Use the bed to sleep. Interaction is routed to the middle mattress position on t
 
 **Beds explode in dimensions where beds cannot set spawn**, as vanilla beds do. Use the Overworld for the first demonstration.
 
-Four-post beds have 16 bedding colors and 11 woods: oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, crimson, and warped. **Bamboo four-post beds are not registered in the current source.** The [catalog](catalog.md) reflects registration rather than assuming every wood family is identical.
+Four-post beds have 16 bedding colors and 12 woods: oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped. Bamboo beds use stripped bamboo frames and are crafted with bamboo blocks (regular or stripped) and matching vanilla beds. See the [catalog](catalog.md) for all variants.
 
 <!-- screenshot:furniture-03:start -->
 ![An oak four-post bed with red bedding and clear walkways around its sides.](images/furniture/four-post-bed.png)

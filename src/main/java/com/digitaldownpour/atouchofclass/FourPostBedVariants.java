@@ -7,7 +7,7 @@ import java.util.List;
 public final class FourPostBedVariants {
     public static final List<String> WOODS = List.of(
             "oak", "spruce", "birch", "jungle", "acacia", "dark_oak",
-            "mangrove", "cherry", "pale_oak", "crimson", "warped");
+            "mangrove", "cherry", "pale_oak", "bamboo", "crimson", "warped");
     public static final List<String> COLORS = List.of(
             "white", "orange", "magenta", "light_blue", "yellow", "lime",
             "pink", "gray", "light_gray", "cyan", "purple", "blue",

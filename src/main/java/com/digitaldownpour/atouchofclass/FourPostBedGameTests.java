@@ -65,7 +65,7 @@ public class FourPostBedGameTests {
 
     @GameTest(template = "chandelier_test")
     public static void everyWoodAndBeddingColorSleepsAboveMattress(GameTestHelper helper) {
-        helper.assertTrue(ModBlocks.FOUR_POST_BEDS.size() == 176, "all eleven woods and sixteen colors must be covered");
+        helper.assertTrue(ModBlocks.FOUR_POST_BEDS.size() == 192, "all twelve woods and sixteen colors must be covered");
         for (var bed : ModBlocks.FOUR_POST_BEDS.values()) {
             place(helper, bed.get(), Direction.SOUTH);
             checkSleepers(helper, Direction.SOUTH);
