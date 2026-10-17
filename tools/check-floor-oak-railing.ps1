@@ -4,6 +4,9 @@ foreach ($shape in @('straight','inner_left','inner_right','outer_left','outer_r
     $rail = Get-Content "$assets/models/block/oak_balustrade_$shape.json" -Raw | ConvertFrom-Json
     $post = (Get-Content "$assets/models/block/oak_baluster_$shape.json" -Raw | ConvertFrom-Json).elements[0]
     $integrated = $rail.elements[-1]
+    $centerX = switch ($shape) { 'inner_left' {3.25} 'outer_left' {3.25} 'inner_right' {12.75} 'outer_right' {12.75} default {8} }
+    if ($integrated.from[0] -ne $centerX-1 -or $integrated.to[0] -ne $centerX+1 -or
+        $integrated.from[2] -ne 11.75 -or $integrated.to[2] -ne 13.75) { throw "$shape post must be centered beneath the rail elbow (or straight midpoint)" }
     foreach ($axis in @(0,2)) {
         if ($post.from[$axis] -ne $integrated.from[$axis] -or $post.to[$axis] -ne $integrated.to[$axis]) { throw "$shape post seam mismatch" }
     }
