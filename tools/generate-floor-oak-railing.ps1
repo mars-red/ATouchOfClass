@@ -6,7 +6,8 @@ foreach ($shape in @('straight','inner_left','inner_right','outer_left','outer_r
     $source = if ($shape -eq 'straight') { 'oak_railing' } else { "oak_railing_$shape" }
     $wall = Get-Content "$assets/models/block/$source.json" -Raw | ConvertFrom-Json
     $wood = @($wall.elements | Where-Object { $_.faces.north.texture -ne '#copper' })
-    $x = switch ($shape) { 'outer_left' {3.25} 'outer_right' {12.75} default {8} }
+    # Center each corner post beneath the elbow shared by both rail arms.
+    $x = switch ($shape) { 'inner_left' {3.25} 'outer_left' {3.25} 'inner_right' {12.75} 'outer_right' {12.75} default {8} }
     $faces = @{}
     foreach ($face in @('north','south','east','west','up','down')) {
         $faces[$face] = @{texture=$(if ($face -in @('up','down')) {'#end'} else {'#oak'})}
