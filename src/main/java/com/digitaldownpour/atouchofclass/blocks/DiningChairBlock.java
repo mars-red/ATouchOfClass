@@ -4,8 +4,6 @@ import com.digitaldownpour.atouchofclass.ModEntities;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.protocol.game.ClientboundPlayerRotationPacket;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -58,17 +56,7 @@ public class DiningChairBlock extends ChairBlock {
             seat.setYRot(yaw);
             if (!level.addFreshEntity(seat)) return InteractionResult.FAIL;
         }
-        if (!player.startRiding(seat, true)) {
-            seat.discard();
-            return InteractionResult.FAIL;
-        }
-        player.setYRot(yaw);
-        player.setYHeadRot(yaw);
-        player.setYBodyRot(yaw);
-        player.setOldRot();
-        if (player instanceof ServerPlayer serverPlayer) {
-            serverPlayer.connection.send(new ClientboundPlayerRotationPacket(yaw, player.getXRot()));
-        }
+        if (!seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.FAIL;
         return InteractionResult.SUCCESS_SERVER;
     }
 }

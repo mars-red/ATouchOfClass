@@ -22,7 +22,7 @@ Dimensions below are the block spaces to reserve, in width × depth × height. A
 
 ## Chairs, love seats, and sofas
 
-Place on a sturdy floor. The love seat places both sections together; the sofa places its middle section at the clicked position and extends to either side. Keep those neighboring spaces free. Use a seating section with an empty hand to sit there. An occupied section cannot take another passenger, and a player already riding something must dismount first. Use the normal dismount control to get up.
+Place on a sturdy floor. The love seat places both sections together; the sofa places its middle section at the clicked position and extends to either side. Keep those neighboring spaces free. Use a seating section with an empty hand to sit there. Sitting turns your head, body, and view toward the furniture's front. An occupied section cannot take another passenger, and a player already riding something must dismount first. Use the normal dismount control to get up onto clear floor beside your cushion. If every exit is blocked, you are placed slightly above that furniture section, clear of its arms and backrest. Other seated players stay in their own cushions.
 
 Breaking a section of a love seat or sofa removes the complete piece and clears its seating entities. These are leather furniture items, not dyeable upholstery families; their wool recipe ingredient does not determine a fabric color.
 

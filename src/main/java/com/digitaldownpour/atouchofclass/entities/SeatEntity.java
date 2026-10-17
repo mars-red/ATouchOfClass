@@ -6,13 +6,17 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.protocol.game.ClientboundPlayerRotationPacket;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.DismountHelper;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.phys.Vec3;
 
 /** Invisible, non-persistent mount used by seats and toilets. */
@@ -41,27 +45,58 @@ public class SeatEntity extends Entity {
                 || state.is(ModBlocks.TOILET.get());
     }
 
+    /** Mount first, then turn the rider's body, head, and client camera together. */
+    public boolean mountFacing(Player player, Direction front) {
+        if (!player.startRiding(this, true)) {
+            discard();
+            return false;
+        }
+        float yaw = front.toYRot();
+        setYRot(yaw);
+        setOldRot();
+        player.setYRot(yaw);
+        player.setYHeadRot(yaw);
+        player.setYBodyRot(yaw);
+        player.setOldRot();
+        if (player instanceof ServerPlayer serverPlayer) {
+            serverPlayer.connection.send(new ClientboundPlayerRotationPacket(yaw, player.getXRot()));
+        }
+        return true;
+    }
+
     @Override
     public Vec3 getDismountLocationForPassenger(LivingEntity passenger) {
         BlockPos pos = blockPosition();
         var state = level().getBlockState(pos);
-        if (!(state.getBlock() instanceof DiningChairBlock)) {
+        boolean diningChair = state.getBlock() instanceof DiningChairBlock;
+        boolean leatherSeating = state.is(ModBlocks.LEATHER_CHAIR.get())
+                || state.is(ModBlocks.LEATHER_LOVE_SEAT.get()) || state.is(ModBlocks.LEATHER_SOFA.get());
+        if (!diningChair && !leatherSeating) {
             return super.getDismountLocationForPassenger(passenger);
         }
 
-        Direction front = state.getValue(DiningChairBlock.FACING);
+        Direction front = state.getValue(HorizontalDirectionalBlock.FACING);
         Direction right = front.getClockWise(), left = front.getCounterClockWise();
         BlockPos[] exits = {
                 pos.relative(front), pos.relative(right), pos.relative(left), pos.relative(front.getOpposite()),
                 pos.relative(front).relative(right), pos.relative(front).relative(left),
                 pos.relative(front.getOpposite()).relative(right), pos.relative(front.getOpposite()).relative(left)
         };
-        // Prefer a supported exit beside the chair, including a one-block step down.
+        // Prefer supported floor outside the occupied cushion. Neighboring sofa
+        // sections, walls, and tables are rejected by vanilla's collision checks.
         for (int dy : new int[]{0, -1}) {
             for (BlockPos exit : exits) {
                 Vec3 location = DismountHelper.findSafeDismountLocation(passenger.getType(), level(), exit.offset(0, dy, 0), true);
                 if (location != null) return location;
             }
+        }
+
+        if (leatherSeating) {
+            // Upholstered arms and backs vary by section; clear the complete
+            // local shape when every floor exit is blocked, rather than leaving
+            // the standing player embedded in the cushion or an armrest.
+            double top = state.getCollisionShape(level(), pos).max(Direction.Axis.Y);
+            return new Vec3(pos.getX() + 0.5, pos.getY() + top + 0.01, pos.getZ() + 0.5);
         }
 
         // With all exits blocked, stand just above the seat. A small forward
