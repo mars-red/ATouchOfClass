@@ -252,12 +252,12 @@
     "page": "docs/lighting.md",
     "file": "docs/images/lighting/fixtures.png",
     "session": "Copper lighting gallery",
-    "setup": "Build a well-lit display room with a full-block floor, wall, and ceiling six blocks above the floor. Include a copper wall sconce, a chandelier hanging from a vertical copper chain, both copper ceiling-light styles, a copper table lamp on an oak side table, a copper floor lamp, and a copper lamp post. Obtain base-stage copper variants from Creative immediately before capture.",
+    "setup": "Build a well-lit display room with a full-block floor, wall, and ceiling six blocks above the floor. Include a copper wall sconce, a chandelier hanging from a vertical copper chandelier chain, both copper ceiling-light styles, a copper table lamp on an oak side table, a copper floor lamp, and a copper lamp post. Obtain base-stage copper variants from Creative immediately before capture.",
     "capture": "Use a wide three-quarter view that shows ceiling support, wall support, table, and both three-high standing lights. Hide the HUD; keep every fixture fully in frame.",
     "mustShow": "Seven lighting forms and the vertical chain supporting the chandelier.",
     "avoid": "Use default textures without shaders. Close chat and debug overlays. Use F2; hide the HUD for world views, but keep menus visible for interface captures. Supply an unedited PNG. Report any setup that does not reproduce the requested state.",
     "alt": "A display of copper sconces, chandelier, ceiling lights, table lamp, floor lamp, and lamp post.",
-    "caption": "Each light has a placement role; copper chains provide support rather than illumination."
+    "caption": "Each light has a placement role; copper chandelier chains provide support rather than illumination."
   },
   {
     "id": "lighting-02",

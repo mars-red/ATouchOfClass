@@ -31,8 +31,10 @@ public class ElevatorShaftPanelBlock extends Block {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return super.getStateForPlacement(context)
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockState placement = super.getStateForPlacement(context);
+        if (placement == null) return null;
+        return placement
                 .setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 }

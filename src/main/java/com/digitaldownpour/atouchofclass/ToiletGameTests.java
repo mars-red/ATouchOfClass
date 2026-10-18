@@ -4,23 +4,18 @@ import com.digitaldownpour.atouchofclass.blocks.ToiletBlock;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.AABB;
-import net.neoforged.neoforge.gametest.GameTestHolder;
-import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
+import net.minecraft.network.chat.Component;
 
-@GameTestHolder(ATouchofClass.MODID)
-@PrefixGameTestTemplate(false)
 public class ToiletGameTests {
-    @GameTest(template = "chandelier_test")
+
     public static void closedLidSupportsSitting(GameTestHelper helper) {
         checkSitting(helper, false);
     }
 
-    @GameTest(template = "chandelier_test")
     public static void openLidSupportsSitting(GameTestHelper helper) {
         checkSitting(helper, true);
     }
@@ -42,41 +37,34 @@ public class ToiletGameTests {
             player.setYBodyRot(approachYaw);
             helper.useBlock(relativePos, player);
             var seats = level.getEntitiesOfClass(SeatEntity.class, bounds);
-            helper.assertTrue(seats.size() == 1 && seats.getFirst().hasPassenger(player),
-                    "using a toilet must seat the player in either lid state and any facing");
+            helper.assertTrue(seats.size() == 1 && seats.getFirst().hasPassenger(player), Component.literal("using a toilet must seat the player in either lid state and any facing"));
             var seat = seats.getFirst();
             seat.tick();
-            helper.assertTrue(!seat.isRemoved(), "an occupied toilet seat must survive ticking");
-            helper.assertTrue(level.getBlockState(absolutePos).getValue(ToiletBlock.OPEN) == open,
-                    "sitting must preserve the lid state");
-            helper.assertTrue(player.getYRot() == facing.toYRot(), "the seated player must face away from the tank");
+            helper.assertTrue(!seat.isRemoved(), Component.literal("an occupied toilet seat must survive ticking"));
+            helper.assertTrue(level.getBlockState(absolutePos).getValue(ToiletBlock.OPEN) == open, Component.literal("sitting must preserve the lid state"));
+            helper.assertTrue(player.getYRot() == facing.toYRot(), Component.literal("the seated player must face away from the tank"));
             helper.assertTrue(player.getYHeadRot() == facing.toYRot()
-                            && player.yBodyRot == facing.toYRot(),
-                    "sitting must turn both the head and body toward the toilet's front");
+                            && player.yBodyRot == facing.toYRot(), Component.literal("sitting must turn both the head and body toward the toilet's front"));
 
             var otherPlayer = helper.makeMockPlayer(GameType.CREATIVE);
             helper.useBlock(relativePos, otherPlayer);
             helper.assertTrue(!otherPlayer.isPassenger() && seat.hasPassenger(player)
-                            && level.getEntitiesOfClass(SeatEntity.class, bounds).size() == 1,
-                    "an occupied toilet must reject another rider without creating an extra seat");
+                            && level.getEntitiesOfClass(SeatEntity.class, bounds).size() == 1, Component.literal("an occupied toilet must reject another rider without creating an extra seat"));
 
             otherPlayer.setShiftKeyDown(true);
             helper.useBlock(relativePos, otherPlayer);
-            helper.assertTrue(level.getBlockState(absolutePos).getValue(ToiletBlock.OPEN) != open,
-                    "sneak-use must toggle the lid");
+            helper.assertTrue(level.getBlockState(absolutePos).getValue(ToiletBlock.OPEN) != open, Component.literal("sneak-use must toggle the lid"));
             seat.tick();
-            helper.assertTrue(!seat.isRemoved() && seat.hasPassenger(player),
-                    "toggling the lid must preserve an occupied seat");
+            helper.assertTrue(!seat.isRemoved() && seat.hasPassenger(player), Component.literal("toggling the lid must preserve an occupied seat"));
 
             player.stopRiding();
             seat.tick();
-            helper.assertTrue(seat.isRemoved(), "dismounting must clean up the empty seat");
+            helper.assertTrue(seat.isRemoved(), Component.literal("dismounting must clean up the empty seat"));
             helper.useBlock(relativePos, player);
             var replacement = level.getEntitiesOfClass(SeatEntity.class, bounds).getFirst();
-            helper.assertTrue(replacement.hasPassenger(player), "the toilet must allow sitting again");
+            helper.assertTrue(replacement.hasPassenger(player), Component.literal("the toilet must allow sitting again"));
             level.destroyBlock(absolutePos, false);
-            helper.assertTrue(replacement.isRemoved() && !player.isPassenger(),
-                    "breaking the toilet must remove its seat and dismount the rider");
+            helper.assertTrue(replacement.isRemoved() && !player.isPassenger(), Component.literal("breaking the toilet must remove its seat and dismount the rider"));
         }
         helper.succeed();
     }

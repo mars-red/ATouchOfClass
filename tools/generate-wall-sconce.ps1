@@ -80,13 +80,13 @@ for ($i=0; $i -lt 4; $i++) {
 Write-Json "$assets/lang/en_us.json" $language
 Write-Json 'data/atouchofclass/recipe/copper_wall_sconce.json' @{
     type='minecraft:crafting_shaped';category='misc';pattern=@(' CG',' CT',' CC')
-    key=@{C='#c:nuggets/copper';G='minecraft:white_stained_glass';T='minecraft:torch'}
+    key=@{C='minecraft:copper_nugget';G='minecraft:white_stained_glass';T='minecraft:torch'}
     result=@{id='atouchofclass:copper_wall_sconce';count=1}
 }
 Write-Json 'data/atouchofclass/advancement/recipes/decorations/copper_wall_sconce.json' @{
     parent='minecraft:recipes/root'
     criteria=@{
-        has_copper=@{trigger='minecraft:inventory_changed';conditions=@{items=@(@{items='#c:nuggets/copper'})}}
+        has_copper=@{trigger='minecraft:inventory_changed';conditions=@{items=@(@{items='minecraft:copper_nugget'})}}
         has_the_recipe=@{trigger='minecraft:recipe_unlocked';conditions=@{recipe='atouchofclass:copper_wall_sconce'}}
     }
     requirements=@(,@('has_copper','has_the_recipe'))

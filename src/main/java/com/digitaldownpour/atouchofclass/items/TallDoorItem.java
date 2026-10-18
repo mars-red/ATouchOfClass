@@ -13,7 +13,8 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 
-import java.util.List;
+import java.util.function.Consumer;
+import net.minecraft.world.item.component.TooltipDisplay;
 
 public class TallDoorItem extends BlockItem {
 
@@ -21,15 +22,17 @@ public class TallDoorItem extends BlockItem {
         super(block, properties);
     }
 
+    // Vanilla still calls this item tooltip hook in this Minecraft version.
+    @SuppressWarnings("deprecation")
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         KeyableInfo keyableInfo = stack.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
 
         if (keyableInfo != null) {
             String name = keyableInfo.keyableName();
 
-            if (!(name == null || name.isEmpty())) {
-                tooltipComponents.add(Component.literal(name));
+            if (!name.isEmpty()) {
+                tooltipComponents.accept(Component.literal(name));
             }
         }
     }
@@ -43,9 +46,10 @@ public class TallDoorItem extends BlockItem {
             BlockPos pos = context.getClickedPos();
             ItemStack stack = context.getItemInHand();
 
-            if (stack.has(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE)) {
+            KeyableInfo info = stack.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
+            if (info != null) {
                 if(level.getBlockEntity(pos) instanceof TallDoorBlockEntity be) {
-                    be.setKeyableInfo(stack.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE));
+                    be.setKeyableInfo(info);
                 }
             }
         }

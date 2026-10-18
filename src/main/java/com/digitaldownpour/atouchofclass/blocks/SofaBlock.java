@@ -32,6 +32,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+import net.minecraft.server.level.ServerLevel;
 
 /** Three-wide leather sofa with one independently usable seat per section. */
 public class SofaBlock extends HorizontalDirectionalBlock {
@@ -92,7 +93,7 @@ public class SofaBlock extends HorizontalDirectionalBlock {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             Direction facing = state.getValue(FACING);
             for (Section section : Section.values()) {
                 if (section == Section.MIDDLE) continue;
@@ -122,8 +123,9 @@ public class SofaBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
-        if (!level.isClientSide && !replacement.is(this)) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
+        if (!level.isClientSide() && !replacement.is(this)) {
             Direction facing = state.getValue(FACING);
             BlockPos center = centerPos(pos, state);
             removeSeats(level, center, facing);
@@ -136,13 +138,13 @@ public class SofaBlock extends HorizontalDirectionalBlock {
                 }
             }
         }
-        super.onRemove(state, level, pos, replacement, moved);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                                Player player, BlockHitResult hitResult) {
-        if (level.isClientSide) return InteractionResult.SUCCESS;
+        if (level.isClientSide()) return InteractionResult.SUCCESS;
         if (player.isPassenger()) return InteractionResult.CONSUME;
 
         Vec3 seatPosition = new Vec3(pos.getX() + 0.5, pos.getY() + 0.1, pos.getZ() + 0.5);
@@ -156,8 +158,8 @@ public class SofaBlock extends HorizontalDirectionalBlock {
             if (!level.addFreshEntity(seat)) return InteractionResult.FAIL;
         }
 
-        if (!seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.FAIL;
-        return InteractionResult.SUCCESS_SERVER;
+        if (seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.SUCCESS_SERVER;
+        return InteractionResult.FAIL;
     }
 
     private static void removeSeats(Level level, BlockPos center, Direction facing) {
@@ -234,7 +236,7 @@ public class SofaBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+        return rotate(state, mirror.getRotation(state.getValue(FACING)));
     }
 
     @Override

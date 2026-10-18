@@ -15,7 +15,6 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.GameType;
-import org.jetbrains.annotations.NotNull;
 
 public class BucketOfPlasterItem extends BlockOverlayItemBase {
     public static final int APPLICATIONS = 32;
@@ -30,8 +29,8 @@ public class BucketOfPlasterItem extends BlockOverlayItemBase {
     }
 
     @Override
-    public @NotNull InteractionResult useOn(UseOnContext context) {
-        if (context.getLevel().isClientSide) {
+    public InteractionResult useOn(UseOnContext context) {
+        if (context.getLevel().isClientSide()) {
             return super.useOn(context);
         }
 
@@ -54,7 +53,7 @@ public class BucketOfPlasterItem extends BlockOverlayItemBase {
     }
 
     @Override
-    public @NotNull ItemStack getCraftingRemainder(ItemStack stack) {
+    public ItemStack getCraftingRemainder(ItemStack stack) {
         if (isLastApplication(stack)) {
             return new ItemStack(Items.BUCKET);
         }
@@ -66,11 +65,6 @@ public class BucketOfPlasterItem extends BlockOverlayItemBase {
 
     @Override
     public boolean supportsEnchantment(ItemStack stack, Holder<Enchantment> enchantment) {
-        return false;
-    }
-
-    @Override
-    public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
         return false;
     }
 

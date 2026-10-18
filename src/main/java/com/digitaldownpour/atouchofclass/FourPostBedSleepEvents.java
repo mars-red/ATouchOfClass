@@ -7,7 +7,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 /** Keep custom bed sleepers above the taller bedding on both logical sides. */
-@EventBusSubscriber(modid = ATouchofClass.MODID, bus = EventBusSubscriber.Bus.GAME)
+@EventBusSubscriber(modid = ATouchofClass.MODID)
 public final class FourPostBedSleepEvents {
     // Vanilla uses 11/16: two units above its 9/16 mattress. Our pillow and
     // mattress collision reach 13/16, so retain that same two-unit clearance.
@@ -20,6 +20,7 @@ public final class FourPostBedSleepEvents {
         if (event.getEntity() instanceof LivingEntity sleeper) alignSleeper(sleeper);
     }
 
+    @SuppressWarnings("resource") // The world belongs to Minecraft, not this callback.
     public static void alignSleeper(LivingEntity sleeper) {
         if (!sleeper.isSleeping()) return;
         var sleepingPos = sleeper.getSleepingPos();

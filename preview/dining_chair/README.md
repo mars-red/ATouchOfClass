@@ -12,7 +12,7 @@ change any gameplay content.
 - `oak_dining_chair_preview.png`: three-quarter, front, and side views.
 - `oak_dining_chair.json`: Minecraft-format cuboid model used by the renderer.
 - `generate_preview.py`: regenerates the model and preview using the vanilla
-  Minecraft 1.21.4 client jar (`--client-jar` overrides the default cache path).
+  Minecraft client jar. For the current target, pass the Minecraft 1.21.9 client jar with `--client-jar` to override the default cache path.
 
 The armless design has three vertical back slats, square 2 × 2 legs, aprons,
 side/rear stretchers, and a 14 × 14 seat with clipped corners. The seat top is

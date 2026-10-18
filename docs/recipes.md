@@ -1862,13 +1862,13 @@ QTQ
 .C.
 ```
 
-`C` = `#c:nuggets/copper`; `Q` = `minecraft:white_stained_glass_pane`; `T` = `minecraft:torch`
+`C` = `minecraft:copper_nugget`; `Q` = `minecraft:white_stained_glass_pane`; `T` = `minecraft:torch`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_bowl_ceiling_light.json)
 
-## copper-chain
+## copper-chandelier-chain
 
-**Output:** 1 × Copper Chain (`atouchofclass:copper_chain`). **Type:** `minecraft:crafting_shaped`.
+**Output:** 1 × Copper Chandelier Chain (`atouchofclass:copper_chain`). **Type:** `minecraft:crafting_shaped`.
 
 ```text
 N
@@ -1876,7 +1876,7 @@ N
 N
 ```
 
-`N` = `#c:nuggets/copper`
+`N` = `minecraft:copper_nugget`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_chain.json)
 
@@ -1904,7 +1904,7 @@ QTQ
 CCC
 ```
 
-`C` = `#c:nuggets/copper`; `Q` = `minecraft:white_stained_glass_pane`; `T` = `minecraft:torch`
+`C` = `minecraft:copper_nugget`; `Q` = `minecraft:white_stained_glass_pane`; `T` = `minecraft:torch`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_coffered_ceiling_light.json)
 
@@ -1922,19 +1922,6 @@ CCC
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_floor_lamp.json)
 
-## copper-ingot-from-nuggets
-
-**Output:** 1 × minecraft:copper_ingot (`minecraft:copper_ingot`). **Type:** `minecraft:crafting_shaped`.
-
-```text
-NNN
-NNN
-NNN
-```
-
-`N` = `#c:nuggets/copper`
-
-[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_ingot_from_nuggets.json)
 
 ## copper-lamp-post
 
@@ -1950,13 +1937,6 @@ CCC
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_lamp_post.json)
 
-## copper-nugget
-
-**Output:** 9 × Copper Nugget (`atouchofclass:copper_nugget`). **Type:** `minecraft:crafting_shapeless`.
-
-**Ingredients (each occurrence is one item):** `minecraft:copper_ingot`
-
-[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_nugget.json)
 
 ## copper-table-lamp
 
@@ -1982,7 +1962,7 @@ CT
 CC
 ```
 
-`C` = `#c:nuggets/copper`; `G` = `minecraft:white_stained_glass_pane`; `T` = `minecraft:torch`
+`C` = `minecraft:copper_nugget`; `G` = `minecraft:white_stained_glass_pane`; `T` = `minecraft:torch`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_wall_sconce.json)
 
@@ -6852,9 +6832,9 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_copper_bowl_ceiling_light.json)
 
-## waxed-copper-chain
+## waxed-copper-chandelier-chain
 
-**Output:** 1 × Waxed Copper Chain (`atouchofclass:waxed_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
+**Output:** 1 × Waxed Copper Chandelier Chain (`atouchofclass:waxed_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
 
 **Ingredients (each occurrence is one item):** `atouchofclass:copper_chain`, `minecraft:honeycomb`
 
@@ -6941,9 +6921,9 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_bowl_ceiling_light.json)
 
-## waxed-exposed-copper-chain
+## waxed-exposed-copper-chandelier-chain
 
-**Output:** 1 × Waxed Exposed Copper Chain (`atouchofclass:waxed_exposed_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
+**Output:** 1 × Waxed Exposed Copper Chandelier Chain (`atouchofclass:waxed_exposed_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
 
 **Ingredients (each occurrence is one item):** `atouchofclass:exposed_copper_chain`, `minecraft:honeycomb`
 
@@ -7030,9 +7010,9 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_bowl_ceiling_light.json)
 
-## waxed-oxidized-copper-chain
+## waxed-oxidized-copper-chandelier-chain
 
-**Output:** 1 × Waxed Oxidized Copper Chain (`atouchofclass:waxed_oxidized_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
+**Output:** 1 × Waxed Oxidized Copper Chandelier Chain (`atouchofclass:waxed_oxidized_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
 
 **Ingredients (each occurrence is one item):** `atouchofclass:oxidized_copper_chain`, `minecraft:honeycomb`
 
@@ -7119,9 +7099,9 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_bowl_ceiling_light.json)
 
-## waxed-weathered-copper-chain
+## waxed-weathered-copper-chandelier-chain
 
-**Output:** 1 × Waxed Weathered Copper Chain (`atouchofclass:waxed_weathered_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
+**Output:** 1 × Waxed Weathered Copper Chandelier Chain (`atouchofclass:waxed_weathered_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
 
 **Ingredients (each occurrence is one item):** `atouchofclass:weathered_copper_chain`, `minecraft:honeycomb`
 

@@ -9,7 +9,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -99,7 +98,7 @@ public class DresserBlock extends HorizontalDirectionalBlock implements EntityBl
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
-        if (level.isClientSide) return;
+        if (level.isClientSide()) return;
         Direction facing = state.getValue(FACING);
         level.setBlock(partPos(pos, facing, Side.RIGHT, false),
                 state.setValue(SIDE, Side.RIGHT), Block.UPDATE_ALL);
@@ -144,13 +143,11 @@ public class DresserBlock extends HorizontalDirectionalBlock implements EntityBl
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
         if (!replacement.is(this)) {
             BlockPos anchor = anchorPos(pos, state);
-            if (!level.isClientSide && pos.equals(anchor)) {
-                Containers.dropContentsOnDestroy(state, replacement, level, pos);
-            }
-            if (!level.isClientSide) {
+            if (!level.isClientSide()) {
                 Direction facing = state.getValue(FACING);
                 for (boolean upper : new boolean[]{false, true}) {
                     for (Side side : Side.values()) {
@@ -164,7 +161,7 @@ public class DresserBlock extends HorizontalDirectionalBlock implements EntityBl
                 }
             }
         }
-        super.onRemove(state, level, pos, replacement, moved);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
     @Override
@@ -183,7 +180,7 @@ public class DresserBlock extends HorizontalDirectionalBlock implements EntityBl
     }
 
     @Override
-    protected int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos) {
+    protected int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos, Direction direction) {
         return blockEntity(level, pos, state)
                 .map(AbstractContainerMenu::getRedstoneSignalFromContainer)
                 .orElse(0);
@@ -265,7 +262,7 @@ public class DresserBlock extends HorizontalDirectionalBlock implements EntityBl
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+        return rotate(state, mirror.getRotation(state.getValue(FACING)));
     }
 
     @Override

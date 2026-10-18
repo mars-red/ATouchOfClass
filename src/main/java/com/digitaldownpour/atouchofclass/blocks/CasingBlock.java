@@ -64,7 +64,7 @@ public class CasingBlock extends Block {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         Direction facing = context.getClickedFace();
         Vec3 hit = context.getClickLocation().subtract(Vec3.atCenterOf(context.getClickedPos()));
         // Project into the clicked face. Its normal coordinate does not affect edge selection.

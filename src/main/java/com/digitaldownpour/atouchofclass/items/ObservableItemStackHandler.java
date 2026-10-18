@@ -1,12 +1,12 @@
 package com.digitaldownpour.atouchofclass.items;
 
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import net.minecraft.world.SimpleContainer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ObservableItemStackHandler extends ItemStackHandler {
+public class ObservableItemStackHandler extends SimpleContainer {
     private final List<SlotChangeListener> listeners = new ArrayList<>();
 
     public ObservableItemStackHandler(int size) {
@@ -18,10 +18,13 @@ public class ObservableItemStackHandler extends ItemStackHandler {
     }
 
     @Override
-    protected void onContentsChanged(int slot) {
-        ItemStack changedStack = getStackInSlot(slot);
-        for (SlotChangeListener listener : listeners) {
-            listener.onSlotChanged(slot, changedStack);
+    public void setChanged() {
+        super.setChanged();
+        for (int slot = 0; slot < getContainerSize(); slot++) {
+            ItemStack changedStack = getItem(slot);
+            for (SlotChangeListener listener : listeners) {
+                listener.onSlotChanged(slot, changedStack);
+            }
         }
     }
 }

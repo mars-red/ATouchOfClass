@@ -17,14 +17,15 @@ public class ServerPayloadHandler {
         }
     }
 
+    @SuppressWarnings("EmptyMethod") // Client-bound packet; no server-side action is required.
     public static void handleDataOnMain(final WallOverlayChunkSyncPacket data, final IPayloadContext context) {
         //
     }
 
     public static void handleDataOnMain(final SelectElevatorFloorPayload data, final IPayloadContext context) {
         // Re-validated entirely fresh in ElevatorFlow - the client's selection is never trusted blindly.
-        if (context.player() instanceof ServerPlayer serverPlayer && serverPlayer.level() instanceof ServerLevel serverLevel) {
-            ElevatorFlow.handleFloorSelected(serverLevel, data.controlPos(), data.targetFloorIndex());
+        if (context.player() instanceof ServerPlayer serverPlayer) {
+            ElevatorFlow.handleFloorSelected(serverPlayer.level(), data.controlPos(), data.targetFloorIndex());
         }
     }
 }

@@ -5,7 +5,6 @@ import com.digitaldownpour.atouchofclass.client.OverlayLightingRenderer;
 import com.digitaldownpour.atouchofclass.components.WallOverlayData;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -19,29 +18,38 @@ import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import java.util.Map;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.context.ContextKey;
+import net.neoforged.neoforge.client.event.ExtractLevelRenderStateEvent;
 
 @EventBusSubscriber(
         modid = ATouchofClass.MODID,
-        value = Dist.CLIENT,
-        bus = EventBusSubscriber.Bus.GAME
+        value = Dist.CLIENT
 )public class ModRenderers {
+    private static final ContextKey<Frustum> OVERLAY_FRUSTUM =
+            new ContextKey<>(ResourceLocation.fromNamespaceAndPath(
+                    ATouchofClass.MODID, "overlay_frustum"));
+
+    @SubscribeEvent
+    public static void extractRenderState(ExtractLevelRenderStateEvent event) {
+        event.getRenderState().setRenderData(OVERLAY_FRUSTUM, new Frustum(event.getFrustum()));
+    }
+
     private static final OverlayLightingRenderer OVERLAYS = new OverlayLightingRenderer();
 
     @SubscribeEvent
-    public static void onRenderLevel(RenderLevelStageEvent event) {
+    public static void onRenderLevel(RenderLevelStageEvent.AfterTranslucentBlocks event) {
         // Run after block geometry so overlay sits on top
-        if (event.getStage() != RenderLevelStageEvent.Stage.AFTER_TRANSLUCENT_BLOCKS) return;
 
         Minecraft mc = Minecraft.getInstance();
-        Camera camera = event.getCamera();
-        Vec3 camPos = camera.getPosition();
+        Vec3 camPos = event.getLevelRenderState().cameraRenderState.pos;
 
         PoseStack pose = event.getPoseStack();
         MultiBufferSource.BufferSource buffer = mc.renderBuffers().bufferSource();
 
         RenderType layer = RenderType.cutoutMipped();
         VertexConsumer vc = buffer.getBuffer(layer);
-        Frustum frustum = event.getFrustum();
+        Frustum frustum = event.getLevelRenderState().getRenderData(OVERLAY_FRUSTUM);
 
         for (Map.Entry<ChunkPos, Map<BlockPos, WallOverlayData>> chunkEntry
                 : ClientWallOverlayData.getChunks().entrySet() ) {
@@ -52,7 +60,7 @@ import java.util.Map;
                 WallOverlayData data = entry.getValue();
 
                 if (!data.hasAny()) continue;
-                if (!frustum.isVisible(new AABB(pos).inflate(0.01))) continue;
+                if (frustum != null && !frustum.isVisible(new AABB(pos).inflate(0.01))) continue;
 
                 pose.pushPose();
                 pose.translate(pos.getX() - camPos.x, pos.getY() - camPos.y, pos.getZ() - camPos.z);

@@ -4,7 +4,6 @@ import com.digitaldownpour.atouchofclass.ModBlocks;
 import com.digitaldownpour.atouchofclass.blocks.DiningChairBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.protocol.game.ClientboundPlayerRotationPacket;
 import net.minecraft.server.level.ServerLevel;
@@ -18,8 +17,11 @@ import net.minecraft.world.entity.vehicle.DismountHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 
 /** Invisible, non-persistent mount used by seats and toilets. */
+@SuppressWarnings("resource") // Minecraft owns and closes these shared levels.
 public class SeatEntity extends Entity {
     public SeatEntity(EntityType<? extends SeatEntity> type, Level level) {
         super(type, level);
@@ -30,7 +32,7 @@ public class SeatEntity extends Entity {
     public void tick() {
         super.tick();
         setDeltaMovement(0, 0, 0);
-        if (!level().isClientSide
+        if (!level().isClientSide()
                 && (getPassengers().isEmpty() || !supportsSeat())) {
             discard();
         }
@@ -47,7 +49,7 @@ public class SeatEntity extends Entity {
 
     /** Mount first, then turn the rider's body, head, and client camera together. */
     public boolean mountFacing(Player player, Direction front) {
-        if (!player.startRiding(this, true)) {
+        if (!player.startRiding(this, true, true)) {
             discard();
             return false;
         }
@@ -59,7 +61,7 @@ public class SeatEntity extends Entity {
         player.setYBodyRot(yaw);
         player.setOldRot();
         if (player instanceof ServerPlayer serverPlayer) {
-            serverPlayer.connection.send(new ClientboundPlayerRotationPacket(yaw, player.getXRot()));
+            serverPlayer.connection.send(new ClientboundPlayerRotationPacket(yaw, false, player.getXRot(), false));
         }
         return true;
     }
@@ -115,11 +117,11 @@ public class SeatEntity extends Entity {
     }
 
     @Override
-    protected void readAdditionalSaveData(CompoundTag tag) {
+    protected void readAdditionalSaveData(ValueInput tag) {
     }
 
     @Override
-    protected void addAdditionalSaveData(CompoundTag tag) {
+    protected void addAdditionalSaveData(ValueOutput tag) {
     }
 
     @Override

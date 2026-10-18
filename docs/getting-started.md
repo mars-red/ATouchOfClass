@@ -2,11 +2,11 @@
 
 [Manual contents](README.md) · [Reference](reference.md)
 
-A Touch of Class adds architectural finishes, furniture, lighting, kitchen and bathroom fittings, coded tall doors, and elevators. You can build a furnished home in Survival or explore the full palette in Creative. This manual describes the current Minecraft 1.21.4 source tree; modpacks can change recipes and other behavior.
+A Touch of Class adds architectural finishes, furniture, lighting, kitchen and bathroom fittings, coded tall doors, and elevators. You can build a furnished home in Survival or explore the full palette in Creative. This manual describes the current Minecraft 1.21.9 source tree; modpacks can change recipes and other behavior.
 
 ## Install and check the mod
 
-1. Use Minecraft **Java Edition 1.21.4** with a compatible **NeoForge 21.4** installation. This checkout declares **21.4.136** as its minimum NeoForge version; use the version supplied with your mod build or modpack.
+1. Use Minecraft **Java Edition 1.21.9** with a compatible **NeoForge 21.9.16-beta** installation. This checkout declares **21.9.16-beta** as its minimum NeoForge version; use the version supplied with your mod build or modpack.
 2. Close the game, if already running. Place the A Touch of Class mod JAR in the `mods` folder of that game instance. Do not unzip the JAR. Avoid keeping two versions of the same mod in the folder.
 3. Launch that NeoForge instance. Check the Mods screen for A Touch of Class, then open a test world.
 4. In Creative inventory, find the **A Touch of Class** tab. In Survival, use the crafting recipes in the [recipe reference](recipes.md).

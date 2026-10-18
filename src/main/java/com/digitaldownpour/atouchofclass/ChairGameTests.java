@@ -4,18 +4,14 @@ import com.digitaldownpour.atouchofclass.blocks.ChairBlock;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.AABB;
-import net.neoforged.neoforge.gametest.GameTestHolder;
-import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
+import net.minecraft.network.chat.Component;
 
-@GameTestHolder(ATouchofClass.MODID)
-@PrefixGameTestTemplate(false)
 public class ChairGameTests {
-    @GameTest(template = "chandelier_test")
+
     public static void chairSeatsPlayerAndCleansUpSeatWhenBroken(GameTestHelper helper) {
         ChairBlock block = ModBlocks.LEATHER_CHAIR.get();
         BlockPos relativePos = new BlockPos(3, 1, 3);
@@ -26,14 +22,12 @@ public class ChairGameTests {
         var player = helper.makeMockPlayer(GameType.CREATIVE);
         helper.useBlock(relativePos, player);
         var seats = helper.getLevel().getEntitiesOfClass(SeatEntity.class, new AABB(absolutePos).inflate(0.25));
-        helper.assertTrue(seats.size() == 1, "using the chair must create exactly one invisible seat");
-        helper.assertTrue(seats.getFirst().hasPassenger(player), "using the chair must seat the player");
+        helper.assertTrue(seats.size() == 1, Component.literal("using the chair must create exactly one invisible seat"));
+        helper.assertTrue(seats.getFirst().hasPassenger(player), Component.literal("using the chair must seat the player"));
 
         helper.getLevel().destroyBlock(absolutePos, false);
-        helper.assertTrue(helper.getLevel().getBlockState(absolutePos).isAir(),
-                "breaking the chair must remove the chair block");
-        helper.assertTrue(seats.getFirst().isRemoved(),
-                "breaking the chair must remove its invisible seat entity");
+        helper.assertTrue(helper.getLevel().getBlockState(absolutePos).isAir(), Component.literal("breaking the chair must remove the chair block"));
+        helper.assertTrue(seats.getFirst().isRemoved(), Component.literal("breaking the chair must remove its invisible seat entity"));
         helper.succeed();
     }
 }

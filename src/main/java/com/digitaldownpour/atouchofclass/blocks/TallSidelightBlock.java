@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.server.level.ServerLevel;
 
 public class TallSidelightBlock extends Block {
     private static final VoxelShape NORTH_SHAPE =
@@ -33,7 +34,7 @@ public class TallSidelightBlock extends Block {
         super(blockProps);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(PART, 0)
-                .setValue(FACING, net.minecraft.core.Direction.NORTH)
+                .setValue(FACING, Direction.NORTH)
         );
     }
 
@@ -73,17 +74,19 @@ public class TallSidelightBlock extends Block {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         Direction facing = context.getHorizontalDirection().getOpposite();
 
-        return super.getStateForPlacement(context)
+        BlockState placement = super.getStateForPlacement(context);
+        if (placement == null) return null;
+        return placement
                 .setValue(FACING, facing)
                 .setValue(PART, 0);
     }
 
     @Override
     public void onPlace(BlockState state, Level world, BlockPos pos, BlockState oldState, boolean isMoving) {
-        if (!world.isClientSide && state.getValue(PART) == 0) {
+        if (!world.isClientSide() && state.getValue(PART) == 0) {
             Direction facing = state.getValue(FACING);
             // Place middle part above
             world.setBlock(
@@ -101,8 +104,9 @@ public class TallSidelightBlock extends Block {
     }
 
     @Override
-    public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!world.isClientSide && state.getBlock() != newState.getBlock()) {
+    public void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean isMoving) {
+        BlockState newState = world.getBlockState(pos);
+        if (!world.isClientSide() && state.getBlock() != newState.getBlock()) {
             int part = state.getValue(PART);
             BlockPos basePos = pos.below(part); // Calculate bottom position
 
@@ -116,14 +120,14 @@ public class TallSidelightBlock extends Block {
                 }
             }
         }
-        super.onRemove(state, world, pos, newState, isMoving);
+        super.affectNeighborsAfterRemoval(state, world, pos, isMoving);
     }
 
     @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         int part = state.getValue(PART);
         if (part == 0) {
-            return level.getBlockState(pos.below()).isSolid();
+            return level.getBlockState(pos.below()).isFaceSturdy(level, pos.below(), Direction.UP);
         } else {
             BlockState belowState = level.getBlockState(pos.below());
             return belowState.is(this)

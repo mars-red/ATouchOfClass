@@ -15,5 +15,6 @@ public class ATouchofClass {
         ModCreativeTabs.register(bus);
         ModSounds.SOUNDS.register(bus);
         ModMenus.register(bus);
+        ModGameTests.register(bus);
     }
 }

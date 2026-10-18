@@ -34,6 +34,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.EnumMap;
 import java.util.Map;
+import net.minecraft.server.level.ServerLevel;
 
 /** A nine-section, 1.5-by-2.5-block clawfoot bathtub with a synchronized fill state. */
 public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
@@ -193,7 +194,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
-        if (!level.isClientSide && state.getValue(PART) == Part.FOOT
+        if (!level.isClientSide() && state.getValue(PART) == Part.FOOT
                 && state.getValue(SIDE) == Side.CENTER) {
             Direction facing = state.getValue(FACING);
             for (Part part : Part.values()) {
@@ -241,8 +242,9 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
-        if (!level.isClientSide && !replacement.is(this)) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
+        if (!level.isClientSide() && !replacement.is(this)) {
             Direction facing = state.getValue(FACING);
             BlockPos footPos = footCenterPos(state, pos);
             for (Part part : Part.values()) {
@@ -259,23 +261,25 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
                 }
             }
         }
-        super.onRemove(state, level, pos, replacement, moved);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                                Player player, BlockHitResult hitResult) {
-        return toggleFilled(state, level, pos);
+        toggleFilled(state, level, pos);
+        return InteractionResult.SUCCESS;
     }
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos,
                                           Player player, InteractionHand hand, BlockHitResult hitResult) {
-        return toggleFilled(state, level, pos);
+        toggleFilled(state, level, pos);
+        return InteractionResult.SUCCESS;
     }
 
-    private InteractionResult toggleFilled(BlockState state, Level level, BlockPos pos) {
-        if (!level.isClientSide) {
+    private void toggleFilled(BlockState state, Level level, BlockPos pos) {
+        if (!level.isClientSide()) {
             Direction facing = state.getValue(FACING);
             BlockPos footPos = footCenterPos(state, pos);
             boolean filled = !state.getValue(FILLED);
@@ -295,7 +299,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
                     filled ? ModSounds.BATHTUB_FILL.value() : ModSounds.BATHTUB_DRAIN.value(),
                     SoundSource.BLOCKS, 0.8F, 1.0F);
         }
-        return InteractionResult.SUCCESS;
+
     }
 
     private static BlockPos footCenterPos(BlockState state, BlockPos pos) {
@@ -321,7 +325,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+        return rotate(state, mirror.getRotation(state.getValue(FACING)));
     }
 
     @Override

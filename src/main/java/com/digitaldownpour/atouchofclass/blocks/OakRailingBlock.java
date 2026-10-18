@@ -21,6 +21,9 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import javax.annotation.Nullable;
 import java.util.EnumMap;
 import java.util.Map;
+import java.util.Locale;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.phys.shapes.BooleanOp;
 
 public class OakRailingBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<OakRailingBlock> CODEC = simpleCodec(OakRailingBlock::new);
@@ -29,7 +32,7 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
         BOTTOM_LEFT, BOTTOM_RIGHT, INNER_LEFT, INNER_RIGHT, OUTER_LEFT, OUTER_RIGHT;
 
         @Override
-        public String getSerializedName() { return name().toLowerCase(java.util.Locale.ROOT); }
+        public String getSerializedName() { return name().toLowerCase(Locale.ROOT); }
 
         public Slope reversed() {
             return switch (this) {
@@ -88,7 +91,7 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
                         z0 = x0; z1 = x1; x0 = nextX0; x1 = nextX1;
                     }
                     shape = Shapes.joinUnoptimized(shape, Block.box(x0, box[1], z0, x1, box[4], z1),
-                            net.minecraft.world.phys.shapes.BooleanOp.OR);
+                            BooleanOp.OR);
                 }
                 shapes.put(facing, shape.optimize());
             }
@@ -263,7 +266,7 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
     private boolean newel(BlockGetter level,BlockPos pos) {
         BlockState other=level.getBlockState(pos);
         return other.getBlock() instanceof OakNewelPostBlock
-                && other.getValue(OakNewelPostBlock.HALF)==net.minecraft.world.level.block.state.properties.DoubleBlockHalf.LOWER;
+                && other.getValue(OakNewelPostBlock.HALF)==DoubleBlockHalf.LOWER;
     }
     private boolean matches(BlockGetter level, BlockPos pos, Direction facing) {
         BlockState other = level.getBlockState(pos);
@@ -281,7 +284,7 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
     @Override
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
-        if (!level.isClientSide && (!oldState.is(this) || oldState.getValue(FACING) != state.getValue(FACING))) {
+        if (!level.isClientSide() && (!oldState.is(this) || oldState.getValue(FACING) != state.getValue(FACING))) {
             refresh(level, pos);
 
         }
@@ -301,7 +304,7 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        BlockState mirrored = state.rotate(mirror.getRotation(state.getValue(FACING)));
+        BlockState mirrored = rotate(state, mirror.getRotation(state.getValue(FACING)));
         return mirror == Mirror.NONE ? mirrored : mirrored.setValue(SLOPE, state.getValue(SLOPE).reversed());
     }
 

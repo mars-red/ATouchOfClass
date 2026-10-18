@@ -22,6 +22,7 @@ import java.util.Optional;
 
 import com.digitaldownpour.atouchofclass.elevator.ElevatorLockManager;
 import com.digitaldownpour.atouchofclass.elevator.ElevatorUtil;
+import net.minecraft.server.level.ServerLevel;
 
 /**
  * Exterior (or waiting-area) call button. The lower half must sit directly
@@ -67,7 +68,9 @@ public class ElevatorCallButtonBlock extends Block {
         if (pos.getY() >= level.getMaxY() || !level.getBlockState(pos.above()).canBeReplaced(context)) {
             return null;
         }
-        return super.getStateForPlacement(context)
+        BlockState placement = super.getStateForPlacement(context);
+        if (placement == null) return null;
+        return placement
                 .setValue(FACING, context.getHorizontalDirection().getOpposite())
                 .setValue(PART, 0);
     }
@@ -83,28 +86,29 @@ public class ElevatorCallButtonBlock extends Block {
 
     @Override
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
-        if (!level.isClientSide && state.getValue(PART) == 0 && !oldState.is(state.getBlock())) {
+        if (!level.isClientSide() && state.getValue(PART) == 0 && !oldState.is(state.getBlock())) {
             level.setBlock(pos.above(), state.setValue(PART, 1), 3);
             refreshStatus(level, pos);
         }
     }
 
     @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!level.isClientSide && state.getBlock() != newState.getBlock()) {
+    public void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean isMoving) {
+        BlockState newState = level.getBlockState(pos);
+        if (!level.isClientSide() && state.getBlock() != newState.getBlock()) {
             BlockPos otherPos = state.getValue(PART) == 0 ? pos.above() : pos.below();
             BlockState otherState = level.getBlockState(otherPos);
             if (otherState.getBlock() == this) {
                 level.removeBlock(otherPos, isMoving);
             }
         }
-        super.onRemove(state, level, pos, newState, isMoving);
+        super.affectNeighborsAfterRemoval(state, level, pos, isMoving);
     }
 
     @Override
-    protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, Orientation orientation, boolean movedByPiston) {
+    protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, @Nullable Orientation orientation, boolean movedByPiston) {
         super.neighborChanged(state, level, pos, neighborBlock, orientation, movedByPiston);
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             refreshStatus(level, pos);
         }
     }
@@ -143,7 +147,7 @@ public class ElevatorCallButtonBlock extends Block {
 
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return InteractionResult.SUCCESS;
         }
         BlockPos basePos = state.getValue(PART) == 0 ? pos : pos.below();

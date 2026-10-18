@@ -13,6 +13,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemContainerContents;
 
+@SuppressWarnings("resource") // Minecraft owns and closes these shared levels.
 public class KeyRingMenu extends AbstractContainerMenu {
     private final Inventory inventory;
     private final int ringSlot;
@@ -46,7 +47,7 @@ public class KeyRingMenu extends AbstractContainerMenu {
         }
         // Persist each edit, including partial transfers, before the ring can leave the inventory.
         keys.addListener(container -> {
-            if (!inventory.player.level().isClientSide && stillValid(inventory.player)) {
+            if (!inventory.player.level().isClientSide() && stillValid(inventory.player)) {
                 NonNullList<ItemStack> updated = NonNullList.withSize(KeyRingItem.CAPACITY, ItemStack.EMPTY);
                 for (int i = 0; i < updated.size(); i++) updated.set(i, keys.getItem(i));
                 ring.set(DataComponents.CONTAINER, ItemContainerContents.fromItems(updated));
@@ -93,8 +94,9 @@ public class KeyRingMenu extends AbstractContainerMenu {
             if (!moveItemStackTo(stack, KeyRingItem.CAPACITY, slots.size(), true)) return ItemStack.EMPTY;
         } else {
             if (!KeyRingItem.isCodedKey(stack)) return ItemStack.EMPTY;
-            while (!stack.isEmpty() && moveItemStackTo(stack, 0, KeyRingItem.CAPACITY, false)) {
+            while (!stack.isEmpty()) {
                 // Vanilla moves into one empty slot per call; each ring slot holds one key.
+                if (!moveItemStackTo(stack, 0, KeyRingItem.CAPACITY, false)) break;
             }
             if (stack.getCount() == original.getCount()) return ItemStack.EMPTY;
         }
@@ -106,7 +108,7 @@ public class KeyRingMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        return player.isAlive() && (player.level().isClientSide
+        return player.isAlive() && (player.level().isClientSide()
                 || (inventory.getItem(ringSlot) == ring && ring.is(ModItems.KEY_RING.get())));
     }
 }

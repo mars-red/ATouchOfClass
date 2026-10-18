@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
+import net.minecraft.server.level.ServerLevel;
 
 /**
  * Interior destination control. The lower half must sit directly atop an
@@ -50,7 +51,9 @@ public class ElevatorDestinationControlBlock extends Block {
         if (pos.getY() >= level.getMaxY() || !level.getBlockState(pos.above()).canBeReplaced(context)) {
             return null;
         }
-        return super.getStateForPlacement(context)
+        BlockState placement = super.getStateForPlacement(context);
+        if (placement == null) return null;
+        return placement
                 .setValue(FACING, context.getHorizontalDirection().getOpposite())
                 .setValue(PART, 0);
     }
@@ -66,26 +69,27 @@ public class ElevatorDestinationControlBlock extends Block {
 
     @Override
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
-        if (!level.isClientSide && state.getValue(PART) == 0 && !oldState.is(state.getBlock())) {
+        if (!level.isClientSide() && state.getValue(PART) == 0 && !oldState.is(state.getBlock())) {
             level.setBlock(pos.above(), state.setValue(PART, 1), 3);
         }
     }
 
     @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!level.isClientSide && state.getBlock() != newState.getBlock()) {
+    public void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean isMoving) {
+        BlockState newState = level.getBlockState(pos);
+        if (!level.isClientSide() && state.getBlock() != newState.getBlock()) {
             BlockPos otherPos = state.getValue(PART) == 0 ? pos.above() : pos.below();
             BlockState otherState = level.getBlockState(otherPos);
             if (otherState.getBlock() == this) {
                 level.removeBlock(otherPos, isMoving);
             }
         }
-        super.onRemove(state, level, pos, newState, isMoving);
+        super.affectNeighborsAfterRemoval(state, level, pos, isMoving);
     }
 
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return InteractionResult.SUCCESS;
         }
         BlockPos basePos = state.getValue(PART) == 0 ? pos : pos.below();

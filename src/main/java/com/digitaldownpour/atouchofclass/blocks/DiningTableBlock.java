@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.*;
+import java.util.Arrays;
 
 /** Same-block connections: perimeter aprons and legs only at convex/concave corners. */
 public class DiningTableBlock extends Block {
@@ -72,14 +73,15 @@ public class DiningTableBlock extends Block {
 
     @Override protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean moved) {
         super.onPlace(state, level, pos, oldState, moved);
-        if (!level.isClientSide && !oldState.is(this)) {
+        if (!level.isClientSide() && !oldState.is(this)) {
             for (int x = -1; x <= 1; x++) for (int z = -1; z <= 1; z++) refresh(level, pos.offset(x, 0, z));
         }
     }
 
-    @Override protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
-        super.onRemove(state, level, pos, replacement, moved);
-        if (!level.isClientSide && !replacement.is(this)) {
+    @Override protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
+        if (!level.isClientSide() && !replacement.is(this)) {
             // Diagonal changes do not receive vanilla cardinal-neighbor shape updates.
             // Defer until the replacement is installed, including support-loss removals.
             for (int x = -1; x <= 1; x++) for (int z = -1; z <= 1; z++) {
@@ -106,7 +108,7 @@ public class DiningTableBlock extends Block {
         BlockState result = state;
         for (int i = 0; i < 4; i++) {
             Direction target = rotation.rotate(DIRECTIONS[i]);
-            int j = java.util.Arrays.asList(DIRECTIONS).indexOf(target);
+            int j = Arrays.asList(DIRECTIONS).indexOf(target);
             result = result.setValue(EDGES[j], state.getValue(EDGES[i])).setValue(LEGS[j], state.getValue(LEGS[i]));
         }
         return result;
@@ -116,9 +118,9 @@ public class DiningTableBlock extends Block {
         if (mirror == Mirror.NONE) return state;
         BlockState result = state;
         for (int i = 0; i < 4; i++) {
-            int edge = java.util.Arrays.asList(DIRECTIONS).indexOf(mirror.mirror(DIRECTIONS[i]));
+            int edge = Arrays.asList(DIRECTIONS).indexOf(mirror.mirror(DIRECTIONS[i]));
             // Reflection reverses the winding of each pair of corner directions.
-            int corner = java.util.Arrays.asList(DIRECTIONS).indexOf(mirror.mirror(DIRECTIONS[(i + 1) % 4]));
+            int corner = Arrays.asList(DIRECTIONS).indexOf(mirror.mirror(DIRECTIONS[(i + 1) % 4]));
             result = result.setValue(EDGES[edge], state.getValue(EDGES[i])).setValue(LEGS[corner], state.getValue(LEGS[i]));
         }
         return result;

@@ -14,13 +14,13 @@ Architectural details, furniture, lighting, kitchens, bathrooms, coded tall door
 
 ## Current development target
 
-This checkout targets Minecraft **1.21.4** and NeoForge **21.4.136**. The declared NeoForge minimum is 21.4.136; later builds must still be compatible with Minecraft 1.21.4. The project declares mod version 1.0.0.
+This checkout targets Minecraft **1.21.9** and NeoForge **21.9.16-beta**. The declared NeoForge minimum is 21.9.16-beta; later builds must still be compatible with Minecraft 1.21.9. The project declares mod version 1.0.0.
 
 The manual covers players, server owners, and modpack authors, with a [content catalog](docs/catalog.md) and [recipe reference](docs/recipes.md). Author review of all chapters and sections was completed on October 10, 2026.
 
 Some content is intentionally Creative-only. Concrete countertops and sinks have no bundled crafting recipes; crafting is deferred until the mod targets a Minecraft version with vanilla concrete slabs.
 
-The manual also documents [tall patio doors](docs/doors-and-access.md#tall-patio-doors) in all twelve vanilla woods, including their crafting recipe and key-cutter support. This addition was checked in the current source tree.
+The manual also documents [tall patio doors](docs/doors-and-access.md#tall-doors) in all twelve vanilla woods, including their crafting recipe and key-cutter support. This addition was checked in the current source tree.
 
 ## Documentation review
 

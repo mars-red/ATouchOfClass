@@ -27,6 +27,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.server.level.ServerLevel;
 
 /** One-block leather chair with a usable seat. */
 public class ChairBlock extends HorizontalDirectionalBlock {
@@ -44,7 +45,7 @@ public class ChairBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
@@ -61,18 +62,19 @@ public class ChairBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
-        if (!level.isClientSide && !replacement.is(this)) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
+        if (!level.isClientSide() && !replacement.is(this)) {
             level.getEntitiesOfClass(SeatEntity.class, new AABB(pos).inflate(0.25))
                     .forEach(SeatEntity::discard);
         }
-        super.onRemove(state, level, pos, replacement, moved);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                                Player player, BlockHitResult hitResult) {
-        if (level.isClientSide) return InteractionResult.SUCCESS;
+        if (level.isClientSide()) return InteractionResult.SUCCESS;
         if (player.isPassenger()) return InteractionResult.CONSUME;
 
         Vec3 seatPosition = new Vec3(pos.getX() + 0.5, pos.getY() + 0.1, pos.getZ() + 0.5);
@@ -86,8 +88,8 @@ public class ChairBlock extends HorizontalDirectionalBlock {
             if (!level.addFreshEntity(seat)) return InteractionResult.FAIL;
         }
 
-        if (!seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.FAIL;
-        return InteractionResult.SUCCESS_SERVER;
+        if (seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.SUCCESS_SERVER;
+        return InteractionResult.FAIL;
     }
 
     @Override
@@ -137,7 +139,7 @@ public class ChairBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+        return rotate(state, mirror.getRotation(state.getValue(FACING)));
     }
 
     @Override

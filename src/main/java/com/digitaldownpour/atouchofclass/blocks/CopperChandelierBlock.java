@@ -27,7 +27,7 @@ public class CopperChandelierBlock extends Block {
         BlockPos above = pos.above();
         BlockState support = level.getBlockState(above);
         // Fine chains do not have a sturdy full face; accept their vertical axis explicitly.
-        if (support.getBlock() instanceof CopperChainBlock || support.getBlock() instanceof ChainBlock) {
+        if (support.getBlock() instanceof CopperChandelierChainBlock || support.getBlock() instanceof ChainBlock) {
             return support.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y;
         }
         return Block.canSupportCenter(level, above, Direction.DOWN);

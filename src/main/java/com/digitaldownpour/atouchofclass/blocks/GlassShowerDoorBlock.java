@@ -63,7 +63,7 @@ public class GlassShowerDoorBlock extends ThreeHighGlassPanelBlock {
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                             Player player, BlockHitResult hitResult) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             BlockPos basePos = pos.below(state.getValue(PART));
             BlockState bottom = level.getBlockState(basePos);
             if (!bottom.is(this)) return InteractionResult.FAIL;

@@ -100,14 +100,14 @@ public class ShutterBlock extends Block {
 
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
-        if (!level.isClientSide) setGroupOpen(state, level, pos, state.getValue(OPEN));
+        if (!level.isClientSide()) setGroupOpen(state, level, pos, state.getValue(OPEN));
     }
 
     private void setGroupOpen(BlockState state, Level level, BlockPos pos, boolean open) {
         level.setBlock(pos, state.setValue(OPEN, open), Block.UPDATE_ALL);
         for (Direction vertical : new Direction[]{Direction.DOWN, Direction.UP}) {
             BlockPos cursor = pos.relative(vertical);
-            while (level.isInWorldBounds(cursor) && level.hasChunkAt(cursor)) {
+            while (level.isInWorldBounds(cursor) && level.hasChunk(cursor.getX() >> 4, cursor.getZ() >> 4)) {
                 BlockState neighbor = level.getBlockState(cursor);
                 if (!joins(state, neighbor)) break;
                 level.setBlock(cursor, neighbor.setValue(OPEN, open), Block.UPDATE_ALL);
@@ -119,7 +119,7 @@ public class ShutterBlock extends Block {
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                             Player player, BlockHitResult hit) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             boolean open = !state.getValue(OPEN);
             setGroupOpen(state, level, pos, open);
             level.playSound(null, pos, open ? SoundEvents.WOODEN_TRAPDOOR_OPEN

@@ -32,6 +32,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+import net.minecraft.server.level.ServerLevel;
 
 /** Two-wide leather love seat with one sittable cushion per block section. */
 public class LoveSeatBlock extends HorizontalDirectionalBlock {
@@ -88,7 +89,7 @@ public class LoveSeatBlock extends HorizontalDirectionalBlock {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             level.setBlock(partPos(pos, state.getValue(FACING), Side.RIGHT),
                     state.setValue(SIDE, Side.RIGHT), Block.UPDATE_ALL);
         }
@@ -113,8 +114,9 @@ public class LoveSeatBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
-        if (!level.isClientSide && !replacement.is(this)) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
+        if (!level.isClientSide() && !replacement.is(this)) {
             Direction facing = state.getValue(FACING);
             BlockPos anchor = anchorPos(pos, state);
             removeSeats(level, anchor, facing);
@@ -127,13 +129,13 @@ public class LoveSeatBlock extends HorizontalDirectionalBlock {
                 }
             }
         }
-        super.onRemove(state, level, pos, replacement, moved);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                                Player player, BlockHitResult hitResult) {
-        if (level.isClientSide) return InteractionResult.SUCCESS;
+        if (level.isClientSide()) return InteractionResult.SUCCESS;
         if (player.isPassenger()) return InteractionResult.CONSUME;
 
         Vec3 seatPosition = new Vec3(pos.getX() + 0.5, pos.getY() + 0.1, pos.getZ() + 0.5);
@@ -147,8 +149,8 @@ public class LoveSeatBlock extends HorizontalDirectionalBlock {
             if (!level.addFreshEntity(seat)) return InteractionResult.FAIL;
         }
 
-        if (!seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.FAIL;
-        return InteractionResult.SUCCESS_SERVER;
+        if (seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.SUCCESS_SERVER;
+        return InteractionResult.FAIL;
     }
 
     private static void removeSeats(Level level, BlockPos anchor, Direction facing) {
@@ -223,7 +225,7 @@ public class LoveSeatBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+        return rotate(state, mirror.getRotation(state.getValue(FACING)));
     }
 
     @Override

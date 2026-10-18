@@ -22,6 +22,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+import net.minecraft.server.level.ServerLevel;
 
 /** Common placement and cleanup behavior for one-block-wide, three-block-tall glass panels. */
 public class ThreeHighGlassPanelBlock extends Block {
@@ -89,16 +90,16 @@ public class ThreeHighGlassPanelBlock extends Block {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
-        if (!level.isClientSide && state.getValue(PART) == 0) {
+        if (!level.isClientSide() && state.getValue(PART) == 0) {
             level.setBlock(pos.above(), state.setValue(PART, 1), Block.UPDATE_ALL);
             level.setBlock(pos.above(2), state.setValue(PART, 2), Block.UPDATE_ALL);
         }
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos,
-                            BlockState replacement, boolean moved) {
-        if (!level.isClientSide && !replacement.is(this)) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
+        if (!level.isClientSide() && !replacement.is(this)) {
             int part = state.getValue(PART);
             BlockPos basePos = pos.below(part);
             for (int i = 0; i < 3; i++) {
@@ -112,7 +113,7 @@ public class ThreeHighGlassPanelBlock extends Block {
                 }
             }
         }
-        super.onRemove(state, level, pos, replacement, moved);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
     @Override

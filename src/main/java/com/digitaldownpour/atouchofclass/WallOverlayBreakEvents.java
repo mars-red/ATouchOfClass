@@ -17,8 +17,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
 @EventBusSubscriber(
-        modid = ATouchofClass.MODID,
-        bus = EventBusSubscriber.Bus.GAME
+        modid = ATouchofClass.MODID
 )
 public final class WallOverlayBreakEvents {
     private WallOverlayBreakEvents() {
@@ -81,7 +80,7 @@ public final class WallOverlayBreakEvents {
             ServerLevel level,
             BlockPos pos,
             ResourceLocation texture,
-            Player player
+            @org.jetbrains.annotations.Nullable Player player
     ) {
         if (player != null && player.getAbilities().instabuild) {
             return;

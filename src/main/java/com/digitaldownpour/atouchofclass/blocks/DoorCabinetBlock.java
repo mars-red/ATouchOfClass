@@ -32,7 +32,8 @@ public class DoorCabinetBlock extends CabinetBlock {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return connections(super.getStateForPlacement(context), context.getLevel(), context.getClickedPos());
+        BlockState state = super.getStateForPlacement(context);
+        return connections(state, context.getLevel(), context.getClickedPos());
     }
 
     @Override

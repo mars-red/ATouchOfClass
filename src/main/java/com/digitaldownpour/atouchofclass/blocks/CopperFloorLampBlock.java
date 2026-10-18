@@ -20,6 +20,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+import net.minecraft.server.level.ServerLevel;
 
 /** A centered-shade indoor floor lamp with a visual height of two and a half blocks. */
 public class CopperFloorLampBlock extends Block {
@@ -71,7 +72,7 @@ public class CopperFloorLampBlock extends Block {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
-        if (!level.isClientSide && state.getValue(PART) == 0) {
+        if (!level.isClientSide() && state.getValue(PART) == 0) {
             level.setBlock(pos.above(), state.setValue(PART, 1), Block.UPDATE_ALL);
             level.setBlock(pos.above(2), state.setValue(PART, 2), Block.UPDATE_ALL);
         }
@@ -101,7 +102,7 @@ public class CopperFloorLampBlock extends Block {
     protected void onPlace(BlockState state, Level level, BlockPos pos,
                            BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
-        if (level.isClientSide || oldState.is(state.getBlock())
+        if (level.isClientSide() || oldState.is(state.getBlock())
                 || !(oldState.getBlock() instanceof CopperFloorLampBlock)) {
             return;
         }
@@ -120,9 +121,9 @@ public class CopperFloorLampBlock extends Block {
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos,
-                            BlockState replacement, boolean movedByPiston) {
-        if (!level.isClientSide && !(replacement.getBlock() instanceof CopperFloorLampBlock)) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean movedByPiston) {
+        BlockState replacement = level.getBlockState(pos);
+        if (!level.isClientSide() && !(replacement.getBlock() instanceof CopperFloorLampBlock)) {
             BlockPos basePos = pos.below(state.getValue(PART));
             for (int part = 0; part < 3; part++) {
                 BlockPos partPos = basePos.above(part);
@@ -133,7 +134,7 @@ public class CopperFloorLampBlock extends Block {
                 }
             }
         }
-        super.onRemove(state, level, pos, replacement, movedByPiston);
+        super.affectNeighborsAfterRemoval(state, level, pos, movedByPiston);
     }
 
     @Override

@@ -22,6 +22,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.ArrayList;
 import java.util.List;
+import net.minecraft.server.level.ServerLevel;
 
 /**
  * A three-block-tall sliding elevator door, centered in the block's depth
@@ -97,7 +98,7 @@ public class ElevatorDoorBlock extends Block {
             if (!isDoorBase(level, next, facing)) {
                 break;
             }
-            run.add(0, next);
+            run.addFirst(next);
             cursor = next;
         }
         cursor = basePos;
@@ -152,9 +153,11 @@ public class ElevatorDoorBlock extends Block {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         Direction facing = context.getHorizontalDirection().getOpposite();
-        return super.getStateForPlacement(context)
+        BlockState placement = super.getStateForPlacement(context);
+        if (placement == null) return null;
+        return placement
                 .setValue(FACING, facing)
                 .setValue(SLIDE_STEP, 0)
                 .setValue(PART, 0)
@@ -163,7 +166,7 @@ public class ElevatorDoorBlock extends Block {
 
     @Override
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
-        if (!level.isClientSide && state.getValue(PART) == 0) {
+        if (!level.isClientSide() && state.getValue(PART) == 0) {
             Direction facing = state.getValue(FACING);
             level.setBlock(pos.above(), state.setValue(PART, 1).setValue(FACING, facing), 3);
             level.setBlock(pos.above(2), state.setValue(PART, 2).setValue(FACING, facing), 3);
@@ -172,8 +175,9 @@ public class ElevatorDoorBlock extends Block {
     }
 
     @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!level.isClientSide && state.getBlock() != newState.getBlock()) {
+    public void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean isMoving) {
+        BlockState newState = level.getBlockState(pos);
+        if (!level.isClientSide() && state.getBlock() != newState.getBlock()) {
             int part = state.getValue(PART);
             BlockPos basePos = pos.below(part);
             for (int i = 0; i < 3; i++) {
@@ -197,7 +201,7 @@ public class ElevatorDoorBlock extends Block {
                 }
             }
         }
-        super.onRemove(state, level, pos, newState, isMoving);
+        super.affectNeighborsAfterRemoval(state, level, pos, isMoving);
     }
 
 
