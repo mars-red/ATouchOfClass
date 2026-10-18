@@ -151,12 +151,11 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Clay Clawfoot Bathtub | `atouchofclass:clay_clawfoot_bathtub` | Survival obtainable — [clay_clawfoot_bathtub](recipes.md#clay-clawfoot-bathtub) |
 | Clay Toilet | `atouchofclass:clay_toilet` | Survival obtainable — [clay_toilet](recipes.md#clay-toilet) |
 | Copper Bowl Ceiling Light | `atouchofclass:copper_bowl_ceiling_light` | Survival obtainable — [copper_bowl_ceiling_light](recipes.md#copper-bowl-ceiling-light) |
-| Copper Chain | `atouchofclass:copper_chain` | Survival obtainable — [copper_chain](recipes.md#copper-chain) |
+| Copper Chandelier Chain | `atouchofclass:copper_chain` | Survival obtainable — [Copper Chandelier Chain](recipes.md#copper-chandelier-chain) |
 | Copper Chandelier | `atouchofclass:copper_chandelier` | Survival obtainable — [copper_chandelier](recipes.md#copper-chandelier) |
 | Copper Coffered Ceiling Light | `atouchofclass:copper_coffered_ceiling_light` | Survival obtainable — [copper_coffered_ceiling_light](recipes.md#copper-coffered-ceiling-light) |
 | Copper Floor Lamp | `atouchofclass:copper_floor_lamp` | Survival obtainable — [copper_floor_lamp](recipes.md#copper-floor-lamp) |
 | Copper Lamp Post | `atouchofclass:copper_lamp_post` | Survival obtainable — [copper_lamp_post](recipes.md#copper-lamp-post) |
-| Copper Nugget | `atouchofclass:copper_nugget` | Survival obtainable — [copper_nugget](recipes.md#copper-nugget) |
 | Copper Table Lamp | `atouchofclass:copper_table_lamp` | Survival obtainable — [copper_table_lamp](recipes.md#copper-table-lamp) |
 | Copper Wall Sconce | `atouchofclass:copper_wall_sconce` | Survival obtainable — [copper_wall_sconce](recipes.md#copper-wall-sconce) |
 | Corner Block | `atouchofclass:corner_block` | Survival obtainable — [corner_block](recipes.md#corner-block) |
@@ -241,7 +240,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | End Stone Brick Countertop | `atouchofclass:end_stone_brick_countertop` | Survival obtainable — [end_stone_brick_countertop](recipes.md#end-stone-brick-countertop) |
 | End Stone Brick Sink | `atouchofclass:end_stone_brick_sink` | Survival obtainable — [end_stone_brick_sink](recipes.md#end-stone-brick-sink) |
 | Exposed Copper Bowl Ceiling Light | `atouchofclass:exposed_copper_bowl_ceiling_light` | Survival obtainable — oxidation of `atouchofclass:copper_bowl_ceiling_light` |
-| Exposed Copper Chain | `atouchofclass:exposed_copper_chain` | Survival obtainable — oxidation of `atouchofclass:copper_chain` |
+| Exposed Copper Chandelier Chain | `atouchofclass:exposed_copper_chain` | Survival obtainable — oxidation of `atouchofclass:copper_chain` |
 | Exposed Copper Chandelier | `atouchofclass:exposed_copper_chandelier` | Survival obtainable — oxidation of `atouchofclass:copper_chandelier` |
 | Exposed Copper Coffered Ceiling Light | `atouchofclass:exposed_copper_coffered_ceiling_light` | Survival obtainable — oxidation of `atouchofclass:copper_coffered_ceiling_light` |
 | Exposed Copper Floor Lamp | `atouchofclass:exposed_copper_floor_lamp` | Survival obtainable — oxidation of `atouchofclass:copper_floor_lamp` |
@@ -370,7 +369,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Orange Concrete Sink | `atouchofclass:orange_concrete_sink` | Creative only — intentionally no recipe |
 | Oven | `atouchofclass:oven` | Survival obtainable — [oven](recipes.md#oven) |
 | Oxidized Copper Bowl Ceiling Light | `atouchofclass:oxidized_copper_bowl_ceiling_light` | Survival obtainable — oxidation of `atouchofclass:weathered_copper_bowl_ceiling_light` |
-| Oxidized Copper Chain | `atouchofclass:oxidized_copper_chain` | Survival obtainable — oxidation of `atouchofclass:weathered_copper_chain` |
+| Oxidized Copper Chandelier Chain | `atouchofclass:oxidized_copper_chain` | Survival obtainable — oxidation of `atouchofclass:weathered_copper_chain` |
 | Oxidized Copper Chandelier | `atouchofclass:oxidized_copper_chandelier` | Survival obtainable — oxidation of `atouchofclass:weathered_copper_chandelier` |
 | Oxidized Copper Coffered Ceiling Light | `atouchofclass:oxidized_copper_coffered_ceiling_light` | Survival obtainable — oxidation of `atouchofclass:weathered_copper_coffered_ceiling_light` |
 | Oxidized Copper Floor Lamp | `atouchofclass:oxidized_copper_floor_lamp` | Survival obtainable — oxidation of `atouchofclass:weathered_copper_floor_lamp` |
@@ -556,7 +555,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Warped Four-Post Bed (White) | `atouchofclass:warped_white_four_post_bed` | Survival obtainable — [warped_white_four_post_bed](recipes.md#warped-white-four-post-bed) |
 | Warped Four-Post Bed (Yellow) | `atouchofclass:warped_yellow_four_post_bed` | Survival obtainable — [warped_yellow_four_post_bed](recipes.md#warped-yellow-four-post-bed) |
 | Waxed Copper Bowl Ceiling Light | `atouchofclass:waxed_copper_bowl_ceiling_light` | Survival obtainable — [waxed_copper_bowl_ceiling_light](recipes.md#waxed-copper-bowl-ceiling-light) |
-| Waxed Copper Chain | `atouchofclass:waxed_copper_chain` | Survival obtainable — [waxed_copper_chain](recipes.md#waxed-copper-chain) |
+| Waxed Copper Chandelier Chain | `atouchofclass:waxed_copper_chain` | Survival obtainable — [Waxed Copper Chandelier Chain](recipes.md#waxed-copper-chandelier-chain) |
 | Waxed Copper Chandelier | `atouchofclass:waxed_copper_chandelier` | Survival obtainable — [waxed_copper_chandelier](recipes.md#waxed-copper-chandelier) |
 | Waxed Copper Coffered Ceiling Light | `atouchofclass:waxed_copper_coffered_ceiling_light` | Survival obtainable — [waxed_copper_coffered_ceiling_light](recipes.md#waxed-copper-coffered-ceiling-light) |
 | Waxed Copper Floor Lamp | `atouchofclass:waxed_copper_floor_lamp` | Survival obtainable — [waxed_copper_floor_lamp](recipes.md#waxed-copper-floor-lamp) |
@@ -566,7 +565,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Waxed Cut Copper Countertop | `atouchofclass:waxed_cut_copper_countertop` | Survival obtainable — [waxed_cut_copper_countertop](recipes.md#waxed-cut-copper-countertop) |
 | Waxed Cut Copper Sink | `atouchofclass:waxed_cut_copper_sink` | Survival obtainable — [waxed_cut_copper_sink](recipes.md#waxed-cut-copper-sink) |
 | Waxed Exposed Copper Bowl Ceiling Light | `atouchofclass:waxed_exposed_copper_bowl_ceiling_light` | Survival obtainable — [waxed_exposed_copper_bowl_ceiling_light](recipes.md#waxed-exposed-copper-bowl-ceiling-light) |
-| Waxed Exposed Copper Chain | `atouchofclass:waxed_exposed_copper_chain` | Survival obtainable — [waxed_exposed_copper_chain](recipes.md#waxed-exposed-copper-chain) |
+| Waxed Exposed Copper Chandelier Chain | `atouchofclass:waxed_exposed_copper_chain` | Survival obtainable — [Waxed Exposed Copper Chandelier Chain](recipes.md#waxed-exposed-copper-chandelier-chain) |
 | Waxed Exposed Copper Chandelier | `atouchofclass:waxed_exposed_copper_chandelier` | Survival obtainable — [waxed_exposed_copper_chandelier](recipes.md#waxed-exposed-copper-chandelier) |
 | Waxed Exposed Copper Coffered Ceiling Light | `atouchofclass:waxed_exposed_copper_coffered_ceiling_light` | Survival obtainable — [waxed_exposed_copper_coffered_ceiling_light](recipes.md#waxed-exposed-copper-coffered-ceiling-light) |
 | Waxed Exposed Copper Floor Lamp | `atouchofclass:waxed_exposed_copper_floor_lamp` | Survival obtainable — [waxed_exposed_copper_floor_lamp](recipes.md#waxed-exposed-copper-floor-lamp) |
@@ -576,7 +575,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Waxed Exposed Cut Copper Countertop | `atouchofclass:waxed_exposed_cut_copper_countertop` | Survival obtainable — [waxed_exposed_cut_copper_countertop](recipes.md#waxed-exposed-cut-copper-countertop) |
 | Waxed Exposed Cut Copper Sink | `atouchofclass:waxed_exposed_cut_copper_sink` | Survival obtainable — [waxed_exposed_cut_copper_sink](recipes.md#waxed-exposed-cut-copper-sink) |
 | Waxed Oxidized Copper Bowl Ceiling Light | `atouchofclass:waxed_oxidized_copper_bowl_ceiling_light` | Survival obtainable — [waxed_oxidized_copper_bowl_ceiling_light](recipes.md#waxed-oxidized-copper-bowl-ceiling-light) |
-| Waxed Oxidized Copper Chain | `atouchofclass:waxed_oxidized_copper_chain` | Survival obtainable — [waxed_oxidized_copper_chain](recipes.md#waxed-oxidized-copper-chain) |
+| Waxed Oxidized Copper Chandelier Chain | `atouchofclass:waxed_oxidized_copper_chain` | Survival obtainable — [Waxed Oxidized Copper Chandelier Chain](recipes.md#waxed-oxidized-copper-chandelier-chain) |
 | Waxed Oxidized Copper Chandelier | `atouchofclass:waxed_oxidized_copper_chandelier` | Survival obtainable — [waxed_oxidized_copper_chandelier](recipes.md#waxed-oxidized-copper-chandelier) |
 | Waxed Oxidized Copper Coffered Ceiling Light | `atouchofclass:waxed_oxidized_copper_coffered_ceiling_light` | Survival obtainable — [waxed_oxidized_copper_coffered_ceiling_light](recipes.md#waxed-oxidized-copper-coffered-ceiling-light) |
 | Waxed Oxidized Copper Floor Lamp | `atouchofclass:waxed_oxidized_copper_floor_lamp` | Survival obtainable — [waxed_oxidized_copper_floor_lamp](recipes.md#waxed-oxidized-copper-floor-lamp) |
@@ -586,7 +585,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Waxed Oxidized Cut Copper Countertop | `atouchofclass:waxed_oxidized_cut_copper_countertop` | Survival obtainable — [waxed_oxidized_cut_copper_countertop](recipes.md#waxed-oxidized-cut-copper-countertop) |
 | Waxed Oxidized Cut Copper Sink | `atouchofclass:waxed_oxidized_cut_copper_sink` | Survival obtainable — [waxed_oxidized_cut_copper_sink](recipes.md#waxed-oxidized-cut-copper-sink) |
 | Waxed Weathered Copper Bowl Ceiling Light | `atouchofclass:waxed_weathered_copper_bowl_ceiling_light` | Survival obtainable — [waxed_weathered_copper_bowl_ceiling_light](recipes.md#waxed-weathered-copper-bowl-ceiling-light) |
-| Waxed Weathered Copper Chain | `atouchofclass:waxed_weathered_copper_chain` | Survival obtainable — [waxed_weathered_copper_chain](recipes.md#waxed-weathered-copper-chain) |
+| Waxed Weathered Copper Chandelier Chain | `atouchofclass:waxed_weathered_copper_chain` | Survival obtainable — [Waxed Weathered Copper Chandelier Chain](recipes.md#waxed-weathered-copper-chandelier-chain) |
 | Waxed Weathered Copper Chandelier | `atouchofclass:waxed_weathered_copper_chandelier` | Survival obtainable — [waxed_weathered_copper_chandelier](recipes.md#waxed-weathered-copper-chandelier) |
 | Waxed Weathered Copper Coffered Ceiling Light | `atouchofclass:waxed_weathered_copper_coffered_ceiling_light` | Survival obtainable — [waxed_weathered_copper_coffered_ceiling_light](recipes.md#waxed-weathered-copper-coffered-ceiling-light) |
 | Waxed Weathered Copper Floor Lamp | `atouchofclass:waxed_weathered_copper_floor_lamp` | Survival obtainable — [waxed_weathered_copper_floor_lamp](recipes.md#waxed-weathered-copper-floor-lamp) |
@@ -596,7 +595,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Waxed Weathered Cut Copper Countertop | `atouchofclass:waxed_weathered_cut_copper_countertop` | Survival obtainable — [waxed_weathered_cut_copper_countertop](recipes.md#waxed-weathered-cut-copper-countertop) |
 | Waxed Weathered Cut Copper Sink | `atouchofclass:waxed_weathered_cut_copper_sink` | Survival obtainable — [waxed_weathered_cut_copper_sink](recipes.md#waxed-weathered-cut-copper-sink) |
 | Weathered Copper Bowl Ceiling Light | `atouchofclass:weathered_copper_bowl_ceiling_light` | Survival obtainable — oxidation of `atouchofclass:exposed_copper_bowl_ceiling_light` |
-| Weathered Copper Chain | `atouchofclass:weathered_copper_chain` | Survival obtainable — oxidation of `atouchofclass:exposed_copper_chain` |
+| Weathered Copper Chandelier Chain | `atouchofclass:weathered_copper_chain` | Survival obtainable — oxidation of `atouchofclass:exposed_copper_chain` |
 | Weathered Copper Chandelier | `atouchofclass:weathered_copper_chandelier` | Survival obtainable — oxidation of `atouchofclass:exposed_copper_chandelier` |
 | Weathered Copper Coffered Ceiling Light | `atouchofclass:weathered_copper_coffered_ceiling_light` | Survival obtainable — oxidation of `atouchofclass:exposed_copper_coffered_ceiling_light` |
 | Weathered Copper Floor Lamp | `atouchofclass:weathered_copper_floor_lamp` | Survival obtainable — oxidation of `atouchofclass:exposed_copper_floor_lamp` |

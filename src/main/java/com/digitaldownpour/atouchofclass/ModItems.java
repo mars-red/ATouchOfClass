@@ -364,7 +364,6 @@ public class ModItems {
         return java.util.List.copyOf(items);
     }
 
-    public static final DeferredItem<Item> COPPER_NUGGET = ITEMS.registerSimpleItem("copper_nugget", new Item.Properties());
 
     public static final DeferredItem<WallpaperItem> CORNFLOWER_WALLPAPER = registerWallpaper("cornflower_wallpaper");
     public static final DeferredItem<WallpaperItem> SCALLOPED_WALLPAPER = registerWallpaper("scalloped_wallpaper");
@@ -605,14 +604,14 @@ public class ModItems {
     public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_wall_sconce", ModBlocks.WAXED_WEATHERED_COPPER_WALL_SCONCE);
     public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_WALL_SCONCE = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_wall_sconce", ModBlocks.WAXED_OXIDIZED_COPPER_WALL_SCONCE);
 
-    public static final DeferredItem<BlockItem> COPPER_CHAIN = ITEMS.registerSimpleBlockItem("copper_chain", ModBlocks.COPPER_CHAIN);
-    public static final DeferredItem<BlockItem> EXPOSED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("exposed_copper_chain", ModBlocks.EXPOSED_COPPER_CHAIN);
-    public static final DeferredItem<BlockItem> WEATHERED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("weathered_copper_chain", ModBlocks.WEATHERED_COPPER_CHAIN);
-    public static final DeferredItem<BlockItem> OXIDIZED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("oxidized_copper_chain", ModBlocks.OXIDIZED_COPPER_CHAIN);
-    public static final DeferredItem<BlockItem> WAXED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_copper_chain", ModBlocks.WAXED_COPPER_CHAIN);
-    public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_chain", ModBlocks.WAXED_EXPOSED_COPPER_CHAIN);
-    public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_chain", ModBlocks.WAXED_WEATHERED_COPPER_CHAIN);
-    public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_chain", ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN);
+    public static final DeferredItem<BlockItem> COPPER_CHANDELIER_CHAIN = ITEMS.registerSimpleBlockItem("copper_chain", ModBlocks.COPPER_CHANDELIER_CHAIN);
+    public static final DeferredItem<BlockItem> EXPOSED_COPPER_CHANDELIER_CHAIN = ITEMS.registerSimpleBlockItem("exposed_copper_chain", ModBlocks.EXPOSED_COPPER_CHANDELIER_CHAIN);
+    public static final DeferredItem<BlockItem> WEATHERED_COPPER_CHANDELIER_CHAIN = ITEMS.registerSimpleBlockItem("weathered_copper_chain", ModBlocks.WEATHERED_COPPER_CHANDELIER_CHAIN);
+    public static final DeferredItem<BlockItem> OXIDIZED_COPPER_CHANDELIER_CHAIN = ITEMS.registerSimpleBlockItem("oxidized_copper_chain", ModBlocks.OXIDIZED_COPPER_CHANDELIER_CHAIN);
+    public static final DeferredItem<BlockItem> WAXED_COPPER_CHANDELIER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_copper_chain", ModBlocks.WAXED_COPPER_CHANDELIER_CHAIN);
+    public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_CHANDELIER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_exposed_copper_chain", ModBlocks.WAXED_EXPOSED_COPPER_CHANDELIER_CHAIN);
+    public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_CHANDELIER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_weathered_copper_chain", ModBlocks.WAXED_WEATHERED_COPPER_CHANDELIER_CHAIN);
+    public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_CHANDELIER_CHAIN = ITEMS.registerSimpleBlockItem("waxed_oxidized_copper_chain", ModBlocks.WAXED_OXIDIZED_COPPER_CHANDELIER_CHAIN);
     public static final DeferredItem<BlockItem> COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("copper_chandelier", ModBlocks.COPPER_CHANDELIER);
     public static final DeferredItem<BlockItem> EXPOSED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("exposed_copper_chandelier", ModBlocks.EXPOSED_COPPER_CHANDELIER);
     public static final DeferredItem<BlockItem> WEATHERED_COPPER_CHANDELIER = ITEMS.registerSimpleBlockItem("weathered_copper_chandelier", ModBlocks.WEATHERED_COPPER_CHANDELIER);
@@ -698,14 +697,14 @@ public class ModItems {
             event.accept(REFRIGERATOR_ITEM);
             event.accept(OVEN_ITEM);
             event.accept(INDUCTION_COOKTOP_ITEM);
-            event.accept(COPPER_CHAIN);
-            event.accept(EXPOSED_COPPER_CHAIN);
-            event.accept(WEATHERED_COPPER_CHAIN);
-            event.accept(OXIDIZED_COPPER_CHAIN);
-            event.accept(WAXED_COPPER_CHAIN);
-            event.accept(WAXED_EXPOSED_COPPER_CHAIN);
-            event.accept(WAXED_WEATHERED_COPPER_CHAIN);
-            event.accept(WAXED_OXIDIZED_COPPER_CHAIN);
+            event.accept(COPPER_CHANDELIER_CHAIN);
+            event.accept(EXPOSED_COPPER_CHANDELIER_CHAIN);
+            event.accept(WEATHERED_COPPER_CHANDELIER_CHAIN);
+            event.accept(OXIDIZED_COPPER_CHANDELIER_CHAIN);
+            event.accept(WAXED_COPPER_CHANDELIER_CHAIN);
+            event.accept(WAXED_EXPOSED_COPPER_CHANDELIER_CHAIN);
+            event.accept(WAXED_WEATHERED_COPPER_CHANDELIER_CHAIN);
+            event.accept(WAXED_OXIDIZED_COPPER_CHANDELIER_CHAIN);
             event.accept(COPPER_CHANDELIER);
             event.accept(EXPOSED_COPPER_CHANDELIER);
             event.accept(WEATHERED_COPPER_CHANDELIER);
@@ -792,7 +791,6 @@ public class ModItems {
             event.accept(ELEVATOR_DESTINATION_CONTROL_ITEM);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(COPPER_NUGGET);
             event.accept(QUICKLIME_POWDER);
             event.accept(CLAY_TOILET);
             event.accept(CLAY_CLAWFOOT_BATHTUB);

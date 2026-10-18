@@ -104,7 +104,10 @@ foreach($kind in @('chain','chandelier')){
             Write-Json "$assets/blockstates/$name.json" @{variants=$variants}
             Write-Json "$assets/items/$name.json" @{model=@{type='minecraft:model';model=$model}}
             Write-Json "data/atouchofclass/loot_table/blocks/$name.json" @{type='minecraft:block';pools=@(@{rolls=1;entries=@(@{type='minecraft:item';name="atouchofclass:$name"});conditions=@(@{condition='minecraft:survives_explosion'})})}
-            $language["block.atouchofclass.$name"]=(Get-Culture).TextInfo.ToTitleCase($name.Replace('_',' '))
+            # Keep legacy resource IDs while giving the thin mod chain a distinct display name.
+            $displayName=$name.Replace('_',' ')
+            if($kind -eq 'chain'){$displayName=$displayName.Replace('copper chain','copper chandelier chain')}
+            $language["block.atouchofclass.$name"]=(Get-Culture).TextInfo.ToTitleCase($displayName)
             $pick.values+= "atouchofclass:$name"
             if($isWaxed){
                 Write-Json "data/atouchofclass/recipe/$name.json" @{type='minecraft:crafting_shapeless';category='misc';ingredients=@("atouchofclass:$base",'minecraft:honeycomb');result=@{id="atouchofclass:$name";count=1}}
@@ -118,9 +121,9 @@ Write-Json 'data/neoforge/data_maps/block/waxables.json' $wax
 Write-Json 'data/neoforge/data_maps/block/oxidizables.json' $ox
 $pick.values=@($pick.values|Select-Object -Unique)
 Write-Json 'data/minecraft/tags/block/mineable/pickaxe.json' $pick
-Write-Json 'data/atouchofclass/recipe/copper_chain.json' @{type='minecraft:crafting_shaped';category='misc';pattern=@('N','N','N');key=@{N='#c:nuggets/copper'};result=@{id='atouchofclass:copper_chain';count=1}}
-Write-Json 'data/atouchofclass/recipe/copper_chandelier.json' @{type='minecraft:crafting_shaped';category='misc';pattern=@(' C ','NGN','AGA');key=@{C='atouchofclass:copper_chain';N='#c:nuggets/copper';G='minecraft:glowstone_dust';A='minecraft:amethyst_shard'};result=@{id='atouchofclass:copper_chandelier';count=1}}
-Unlock 'copper_chain' '#c:nuggets/copper'
+Write-Json 'data/atouchofclass/recipe/copper_chain.json' @{type='minecraft:crafting_shaped';category='misc';pattern=@('N','N','N');key=@{N='minecraft:copper_nugget'};result=@{id='atouchofclass:copper_chain';count=1}}
+Write-Json 'data/atouchofclass/recipe/copper_chandelier.json' @{type='minecraft:crafting_shaped';category='misc';pattern=@(' C ','NGN','AGA');key=@{C='atouchofclass:copper_chain';N='minecraft:copper_nugget';G='minecraft:glowstone_dust';A='minecraft:amethyst_shard'};result=@{id='atouchofclass:copper_chandelier';count=1}}
+Unlock 'copper_chain' 'minecraft:copper_nugget'
 Unlock 'copper_chandelier' 'atouchofclass:copper_chain'
 # Faceted crystal highlights remain legible without shaders or translucent sorting.
 Add-Type -AssemblyName System.Drawing

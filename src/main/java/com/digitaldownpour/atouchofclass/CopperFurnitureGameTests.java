@@ -171,16 +171,16 @@ public class CopperFurnitureGameTests {
                 }, false);
         verifyFamily(helper,
                 new Block[]{
-                        ModBlocks.COPPER_CHAIN.get(),
-                        ModBlocks.EXPOSED_COPPER_CHAIN.get(),
-                        ModBlocks.WEATHERED_COPPER_CHAIN.get(),
-                        ModBlocks.OXIDIZED_COPPER_CHAIN.get()
+                        ModBlocks.COPPER_CHANDELIER_CHAIN.get(),
+                        ModBlocks.EXPOSED_COPPER_CHANDELIER_CHAIN.get(),
+                        ModBlocks.WEATHERED_COPPER_CHANDELIER_CHAIN.get(),
+                        ModBlocks.OXIDIZED_COPPER_CHANDELIER_CHAIN.get()
                 },
                 new Block[]{
-                        ModBlocks.WAXED_COPPER_CHAIN.get(),
-                        ModBlocks.WAXED_EXPOSED_COPPER_CHAIN.get(),
-                        ModBlocks.WAXED_WEATHERED_COPPER_CHAIN.get(),
-                        ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get()
+                        ModBlocks.WAXED_COPPER_CHANDELIER_CHAIN.get(),
+                        ModBlocks.WAXED_EXPOSED_COPPER_CHANDELIER_CHAIN.get(),
+                        ModBlocks.WAXED_WEATHERED_COPPER_CHANDELIER_CHAIN.get(),
+                        ModBlocks.WAXED_OXIDIZED_COPPER_CHANDELIER_CHAIN.get()
                 }, false);
         verifyFamily(helper,
                 new Block[]{

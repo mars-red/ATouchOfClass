@@ -4,13 +4,13 @@ import com.digitaldownpour.atouchofclass.blocks.WallSconceBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakRailingBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakBalustradeBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakBalusterBlock;
-import com.digitaldownpour.atouchofclass.blocks.CopperChainBlock;
+import com.digitaldownpour.atouchofclass.blocks.CopperChandelierChainBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperChandelierBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperLampPostBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperFloorLampBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperCeilingLightBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperTableLampBlock;
-import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperChainBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperChandelierChainBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperChandelierBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperLampPostBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperFloorLampBlock;
@@ -1622,21 +1622,22 @@ public class ModBlocks {
             return waxed ? new WallSconceBlock(properties) : new WeatheringWallSconceBlock(age, properties);
         });
     }
-    public static final DeferredBlock<CopperChainBlock> COPPER_CHAIN = registerCopperChain("copper_chain", WeatherState.UNAFFECTED, false);
-    public static final DeferredBlock<CopperChainBlock> EXPOSED_COPPER_CHAIN = registerCopperChain("exposed_copper_chain", WeatherState.EXPOSED, false);
-    public static final DeferredBlock<CopperChainBlock> WEATHERED_COPPER_CHAIN = registerCopperChain("weathered_copper_chain", WeatherState.WEATHERED, false);
-    public static final DeferredBlock<CopperChainBlock> OXIDIZED_COPPER_CHAIN = registerCopperChain("oxidized_copper_chain", WeatherState.OXIDIZED, false);
-    public static final DeferredBlock<CopperChainBlock> WAXED_COPPER_CHAIN = registerCopperChain("waxed_copper_chain", WeatherState.UNAFFECTED, true);
-    public static final DeferredBlock<CopperChainBlock> WAXED_EXPOSED_COPPER_CHAIN = registerCopperChain("waxed_exposed_copper_chain", WeatherState.EXPOSED, true);
-    public static final DeferredBlock<CopperChainBlock> WAXED_WEATHERED_COPPER_CHAIN = registerCopperChain("waxed_weathered_copper_chain", WeatherState.WEATHERED, true);
-    public static final DeferredBlock<CopperChainBlock> WAXED_OXIDIZED_COPPER_CHAIN = registerCopperChain("waxed_oxidized_copper_chain", WeatherState.OXIDIZED, true);
+    // Keep legacy copper_chain IDs for saved worlds; the display name is Copper Chandelier Chain.
+    public static final DeferredBlock<CopperChandelierChainBlock> COPPER_CHANDELIER_CHAIN = registerCopperChandelierChain("copper_chain", WeatherState.UNAFFECTED, false);
+    public static final DeferredBlock<CopperChandelierChainBlock> EXPOSED_COPPER_CHANDELIER_CHAIN = registerCopperChandelierChain("exposed_copper_chain", WeatherState.EXPOSED, false);
+    public static final DeferredBlock<CopperChandelierChainBlock> WEATHERED_COPPER_CHANDELIER_CHAIN = registerCopperChandelierChain("weathered_copper_chain", WeatherState.WEATHERED, false);
+    public static final DeferredBlock<CopperChandelierChainBlock> OXIDIZED_COPPER_CHANDELIER_CHAIN = registerCopperChandelierChain("oxidized_copper_chain", WeatherState.OXIDIZED, false);
+    public static final DeferredBlock<CopperChandelierChainBlock> WAXED_COPPER_CHANDELIER_CHAIN = registerCopperChandelierChain("waxed_copper_chain", WeatherState.UNAFFECTED, true);
+    public static final DeferredBlock<CopperChandelierChainBlock> WAXED_EXPOSED_COPPER_CHANDELIER_CHAIN = registerCopperChandelierChain("waxed_exposed_copper_chain", WeatherState.EXPOSED, true);
+    public static final DeferredBlock<CopperChandelierChainBlock> WAXED_WEATHERED_COPPER_CHANDELIER_CHAIN = registerCopperChandelierChain("waxed_weathered_copper_chain", WeatherState.WEATHERED, true);
+    public static final DeferredBlock<CopperChandelierChainBlock> WAXED_OXIDIZED_COPPER_CHANDELIER_CHAIN = registerCopperChandelierChain("waxed_oxidized_copper_chain", WeatherState.OXIDIZED, true);
 
-    private static DeferredBlock<CopperChainBlock> registerCopperChain(String name, WeatherState age, boolean waxed) {
+    private static DeferredBlock<CopperChandelierChainBlock> registerCopperChandelierChain(String name, WeatherState age, boolean waxed) {
         return BLOCKS.register(name, key -> {
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
                     .mapColor(copperMapColor(age))
                     .strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.COPPER).noOcclusion();
-            return waxed ? new CopperChainBlock(properties) : new WeatheringCopperChainBlock(age, properties);
+            return waxed ? new CopperChandelierChainBlock(properties) : new WeatheringCopperChandelierChainBlock(age, properties);
         });
     }
     public static final DeferredBlock<CopperChandelierBlock> COPPER_CHANDELIER = registerCopperChandelier("copper_chandelier", WeatherState.UNAFFECTED, false);

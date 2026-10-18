@@ -119,12 +119,11 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Clay Clawfoot Bathtub | `atouchofclass:clay_clawfoot_bathtub` | [clay_clawfoot_bathtub](../../src/main/resources/data/atouchofclass/recipe/clay_clawfoot_bathtub.json) |
 | Clay Toilet | `atouchofclass:clay_toilet` | [clay_toilet](../../src/main/resources/data/atouchofclass/recipe/clay_toilet.json) |
 | Copper Bowl Ceiling Light | `atouchofclass:copper_bowl_ceiling_light` | [copper_bowl_ceiling_light](../../src/main/resources/data/atouchofclass/recipe/copper_bowl_ceiling_light.json) |
-| Copper Chain | `atouchofclass:copper_chain` | [copper_chain](../../src/main/resources/data/atouchofclass/recipe/copper_chain.json) |
+| Copper Chandelier Chain | `atouchofclass:copper_chain` | [Copper Chandelier Chain](../../src/main/resources/data/atouchofclass/recipe/copper_chain.json) |
 | Copper Chandelier | `atouchofclass:copper_chandelier` | [copper_chandelier](../../src/main/resources/data/atouchofclass/recipe/copper_chandelier.json) |
 | Copper Coffered Ceiling Light | `atouchofclass:copper_coffered_ceiling_light` | [copper_coffered_ceiling_light](../../src/main/resources/data/atouchofclass/recipe/copper_coffered_ceiling_light.json) |
 | Copper Floor Lamp | `atouchofclass:copper_floor_lamp` | [copper_floor_lamp](../../src/main/resources/data/atouchofclass/recipe/copper_floor_lamp.json) |
 | Copper Lamp Post | `atouchofclass:copper_lamp_post` | [copper_lamp_post](../../src/main/resources/data/atouchofclass/recipe/copper_lamp_post.json) |
-| Copper Nugget | `atouchofclass:copper_nugget` | [copper_nugget](../../src/main/resources/data/atouchofclass/recipe/copper_nugget.json) |
 | Copper Table Lamp | `atouchofclass:copper_table_lamp` | [copper_table_lamp](../../src/main/resources/data/atouchofclass/recipe/copper_table_lamp.json) |
 | Copper Wall Sconce | `atouchofclass:copper_wall_sconce` | [copper_wall_sconce](../../src/main/resources/data/atouchofclass/recipe/copper_wall_sconce.json) |
 | Corner Block | `atouchofclass:corner_block` | [corner_block](../../src/main/resources/data/atouchofclass/recipe/corner_block.json) |
@@ -203,7 +202,7 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | End Stone Brick Countertop | `atouchofclass:end_stone_brick_countertop` | [end_stone_brick_countertop](../../src/main/resources/data/atouchofclass/recipe/end_stone_brick_countertop.json) |
 | End Stone Brick Sink | `atouchofclass:end_stone_brick_sink` | [end_stone_brick_sink](../../src/main/resources/data/atouchofclass/recipe/end_stone_brick_sink.json) |
 | Exposed Copper Bowl Ceiling Light | `atouchofclass:exposed_copper_bowl_ceiling_light` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
-| Exposed Copper Chain | `atouchofclass:exposed_copper_chain` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
+| Exposed Copper Chandelier Chain | `atouchofclass:exposed_copper_chain` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
 | Exposed Copper Chandelier | `atouchofclass:exposed_copper_chandelier` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
 | Exposed Copper Coffered Ceiling Light | `atouchofclass:exposed_copper_coffered_ceiling_light` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
 | Exposed Copper Floor Lamp | `atouchofclass:exposed_copper_floor_lamp` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
@@ -322,7 +321,7 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Orange Concrete Sink | `atouchofclass:orange_concrete_sink` | None — intentional Creative only |
 | Oven | `atouchofclass:oven` | [oven](../../src/main/resources/data/atouchofclass/recipe/oven.json) |
 | Oxidized Copper Bowl Ceiling Light | `atouchofclass:oxidized_copper_bowl_ceiling_light` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
-| Oxidized Copper Chain | `atouchofclass:oxidized_copper_chain` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
+| Oxidized Copper Chandelier Chain | `atouchofclass:oxidized_copper_chain` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
 | Oxidized Copper Chandelier | `atouchofclass:oxidized_copper_chandelier` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
 | Oxidized Copper Coffered Ceiling Light | `atouchofclass:oxidized_copper_coffered_ceiling_light` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
 | Oxidized Copper Floor Lamp | `atouchofclass:oxidized_copper_floor_lamp` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
@@ -482,7 +481,7 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Warped Four-Post Bed (White) | `atouchofclass:warped_white_four_post_bed` | [warped_white_four_post_bed](../../src/main/resources/data/atouchofclass/recipe/warped_white_four_post_bed.json) |
 | Warped Four-Post Bed (Yellow) | `atouchofclass:warped_yellow_four_post_bed` | [warped_yellow_four_post_bed](../../src/main/resources/data/atouchofclass/recipe/warped_yellow_four_post_bed.json) |
 | Waxed Copper Bowl Ceiling Light | `atouchofclass:waxed_copper_bowl_ceiling_light` | [waxed_copper_bowl_ceiling_light](../../src/main/resources/data/atouchofclass/recipe/waxed_copper_bowl_ceiling_light.json) |
-| Waxed Copper Chain | `atouchofclass:waxed_copper_chain` | [waxed_copper_chain](../../src/main/resources/data/atouchofclass/recipe/waxed_copper_chain.json) |
+| Waxed Copper Chandelier Chain | `atouchofclass:waxed_copper_chain` | [Waxed Copper Chandelier Chain](../../src/main/resources/data/atouchofclass/recipe/waxed_copper_chain.json) |
 | Waxed Copper Chandelier | `atouchofclass:waxed_copper_chandelier` | [waxed_copper_chandelier](../../src/main/resources/data/atouchofclass/recipe/waxed_copper_chandelier.json) |
 | Waxed Copper Coffered Ceiling Light | `atouchofclass:waxed_copper_coffered_ceiling_light` | [waxed_copper_coffered_ceiling_light](../../src/main/resources/data/atouchofclass/recipe/waxed_copper_coffered_ceiling_light.json) |
 | Waxed Copper Floor Lamp | `atouchofclass:waxed_copper_floor_lamp` | [waxed_copper_floor_lamp](../../src/main/resources/data/atouchofclass/recipe/waxed_copper_floor_lamp.json) |
@@ -492,7 +491,7 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Waxed Cut Copper Countertop | `atouchofclass:waxed_cut_copper_countertop` | [waxed_cut_copper_countertop](../../src/main/resources/data/atouchofclass/recipe/waxed_cut_copper_countertop.json) |
 | Waxed Cut Copper Sink | `atouchofclass:waxed_cut_copper_sink` | [waxed_cut_copper_sink](../../src/main/resources/data/atouchofclass/recipe/waxed_cut_copper_sink.json) |
 | Waxed Exposed Copper Bowl Ceiling Light | `atouchofclass:waxed_exposed_copper_bowl_ceiling_light` | [waxed_exposed_copper_bowl_ceiling_light](../../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_bowl_ceiling_light.json) |
-| Waxed Exposed Copper Chain | `atouchofclass:waxed_exposed_copper_chain` | [waxed_exposed_copper_chain](../../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_chain.json) |
+| Waxed Exposed Copper Chandelier Chain | `atouchofclass:waxed_exposed_copper_chain` | [Waxed Exposed Copper Chandelier Chain](../../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_chain.json) |
 | Waxed Exposed Copper Chandelier | `atouchofclass:waxed_exposed_copper_chandelier` | [waxed_exposed_copper_chandelier](../../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_chandelier.json) |
 | Waxed Exposed Copper Coffered Ceiling Light | `atouchofclass:waxed_exposed_copper_coffered_ceiling_light` | [waxed_exposed_copper_coffered_ceiling_light](../../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_coffered_ceiling_light.json) |
 | Waxed Exposed Copper Floor Lamp | `atouchofclass:waxed_exposed_copper_floor_lamp` | [waxed_exposed_copper_floor_lamp](../../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_floor_lamp.json) |
@@ -502,7 +501,7 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Waxed Exposed Cut Copper Countertop | `atouchofclass:waxed_exposed_cut_copper_countertop` | [waxed_exposed_cut_copper_countertop](../../src/main/resources/data/atouchofclass/recipe/waxed_exposed_cut_copper_countertop.json) |
 | Waxed Exposed Cut Copper Sink | `atouchofclass:waxed_exposed_cut_copper_sink` | [waxed_exposed_cut_copper_sink](../../src/main/resources/data/atouchofclass/recipe/waxed_exposed_cut_copper_sink.json) |
 | Waxed Oxidized Copper Bowl Ceiling Light | `atouchofclass:waxed_oxidized_copper_bowl_ceiling_light` | [waxed_oxidized_copper_bowl_ceiling_light](../../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_bowl_ceiling_light.json) |
-| Waxed Oxidized Copper Chain | `atouchofclass:waxed_oxidized_copper_chain` | [waxed_oxidized_copper_chain](../../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_chain.json) |
+| Waxed Oxidized Copper Chandelier Chain | `atouchofclass:waxed_oxidized_copper_chain` | [Waxed Oxidized Copper Chandelier Chain](../../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_chain.json) |
 | Waxed Oxidized Copper Chandelier | `atouchofclass:waxed_oxidized_copper_chandelier` | [waxed_oxidized_copper_chandelier](../../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_chandelier.json) |
 | Waxed Oxidized Copper Coffered Ceiling Light | `atouchofclass:waxed_oxidized_copper_coffered_ceiling_light` | [waxed_oxidized_copper_coffered_ceiling_light](../../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_coffered_ceiling_light.json) |
 | Waxed Oxidized Copper Floor Lamp | `atouchofclass:waxed_oxidized_copper_floor_lamp` | [waxed_oxidized_copper_floor_lamp](../../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_floor_lamp.json) |
@@ -512,7 +511,7 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Waxed Oxidized Cut Copper Countertop | `atouchofclass:waxed_oxidized_cut_copper_countertop` | [waxed_oxidized_cut_copper_countertop](../../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_cut_copper_countertop.json) |
 | Waxed Oxidized Cut Copper Sink | `atouchofclass:waxed_oxidized_cut_copper_sink` | [waxed_oxidized_cut_copper_sink](../../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_cut_copper_sink.json) |
 | Waxed Weathered Copper Bowl Ceiling Light | `atouchofclass:waxed_weathered_copper_bowl_ceiling_light` | [waxed_weathered_copper_bowl_ceiling_light](../../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_bowl_ceiling_light.json) |
-| Waxed Weathered Copper Chain | `atouchofclass:waxed_weathered_copper_chain` | [waxed_weathered_copper_chain](../../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_chain.json) |
+| Waxed Weathered Copper Chandelier Chain | `atouchofclass:waxed_weathered_copper_chain` | [Waxed Weathered Copper Chandelier Chain](../../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_chain.json) |
 | Waxed Weathered Copper Chandelier | `atouchofclass:waxed_weathered_copper_chandelier` | [waxed_weathered_copper_chandelier](../../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_chandelier.json) |
 | Waxed Weathered Copper Coffered Ceiling Light | `atouchofclass:waxed_weathered_copper_coffered_ceiling_light` | [waxed_weathered_copper_coffered_ceiling_light](../../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_coffered_ceiling_light.json) |
 | Waxed Weathered Copper Floor Lamp | `atouchofclass:waxed_weathered_copper_floor_lamp` | [waxed_weathered_copper_floor_lamp](../../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_floor_lamp.json) |
@@ -522,7 +521,7 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Waxed Weathered Cut Copper Countertop | `atouchofclass:waxed_weathered_cut_copper_countertop` | [waxed_weathered_cut_copper_countertop](../../src/main/resources/data/atouchofclass/recipe/waxed_weathered_cut_copper_countertop.json) |
 | Waxed Weathered Cut Copper Sink | `atouchofclass:waxed_weathered_cut_copper_sink` | [waxed_weathered_cut_copper_sink](../../src/main/resources/data/atouchofclass/recipe/waxed_weathered_cut_copper_sink.json) |
 | Weathered Copper Bowl Ceiling Light | `atouchofclass:weathered_copper_bowl_ceiling_light` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
-| Weathered Copper Chain | `atouchofclass:weathered_copper_chain` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
+| Weathered Copper Chandelier Chain | `atouchofclass:weathered_copper_chain` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
 | Weathered Copper Chandelier | `atouchofclass:weathered_copper_chandelier` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
 | Weathered Copper Coffered Ceiling Light | `atouchofclass:weathered_copper_coffered_ceiling_light` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
 | Weathered Copper Floor Lamp | `atouchofclass:weathered_copper_floor_lamp` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |

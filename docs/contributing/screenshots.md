@@ -400,7 +400,7 @@ Generated from screenshots.json. Tasks are grouped by shared setup. The five tal
 
 **Purpose:** Lighting placement gallery
 
-**Setup:** Build a well-lit display room with a full-block floor, wall, and ceiling six blocks above the floor. Include a copper wall sconce, a chandelier hanging from a vertical copper chain, both copper ceiling-light styles, a copper table lamp on an oak side table, a copper floor lamp, and a copper lamp post. Obtain base-stage copper variants from Creative immediately before capture.
+**Setup:** Build a well-lit display room with a full-block floor, wall, and ceiling six blocks above the floor. Include a copper wall sconce, a chandelier hanging from a vertical copper chandelier chain, both copper ceiling-light styles, a copper table lamp on an oak side table, a copper floor lamp, and a copper lamp post. Obtain base-stage copper variants from Creative immediately before capture.
 
 **Capture:** Use a wide three-quarter view that shows ceiling support, wall support, table, and both three-high standing lights. Hide the HUD; keep every fixture fully in frame.
 
@@ -412,7 +412,7 @@ Generated from screenshots.json. Tasks are grouped by shared setup. The five tal
 
 **Alt text:** A display of copper sconces, chandelier, ceiling lights, table lamp, floor lamp, and lamp post.
 
-**Caption:** Each light has a placement role; copper chains provide support rather than illumination.
+**Caption:** Each light has a placement role; copper chandelier chains provide support rather than illumination.
 
 ### lighting-02 — Compare copper stages
 

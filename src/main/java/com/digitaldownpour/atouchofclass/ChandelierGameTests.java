@@ -1,6 +1,6 @@
 package com.digitaldownpour.atouchofclass;
 
-import com.digitaldownpour.atouchofclass.blocks.CopperChainBlock;
+import com.digitaldownpour.atouchofclass.blocks.CopperChandelierChainBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.gametest.framework.GameTestHelper;
@@ -18,14 +18,14 @@ public class ChandelierGameTests {
         BlockState chandelier = ModBlocks.COPPER_CHANDELIER.get().defaultBlockState();
         helper.setBlock(pos.above(), Blocks.STONE);
         helper.assertTrue(chandelier.canSurvive(helper.getLevel(), helper.absolutePos(pos)), Component.literal("Ceiling must support chandelier"));
-        helper.setBlock(pos.above(), ModBlocks.COPPER_CHAIN.get());
-        helper.assertTrue(chandelier.canSurvive(helper.getLevel(), helper.absolutePos(pos)), Component.literal("Vertical copper chain must support chandelier"));
+        helper.setBlock(pos.above(), ModBlocks.COPPER_CHANDELIER_CHAIN.get());
+        helper.assertTrue(chandelier.canSurvive(helper.getLevel(), helper.absolutePos(pos)), Component.literal("Vertical copper chandelier chain must support chandelier"));
         helper.setBlock(pos, chandelier);
-        helper.setBlock(pos.above(), ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get());
+        helper.setBlock(pos.above(), ModBlocks.WAXED_OXIDIZED_COPPER_CHANDELIER_CHAIN.get());
         helper.assertBlockPresent(ModBlocks.COPPER_CHANDELIER.get(), pos);
         helper.setBlock(pos.above(), Blocks.AIR);
         helper.assertBlockPresent(Blocks.AIR, pos);
-        helper.setBlock(pos.above(), ModBlocks.COPPER_CHAIN.get().defaultBlockState().setValue(CopperChainBlock.AXIS, Direction.Axis.X));
+        helper.setBlock(pos.above(), ModBlocks.COPPER_CHANDELIER_CHAIN.get().defaultBlockState().setValue(CopperChandelierChainBlock.AXIS, Direction.Axis.X));
         helper.assertFalse(chandelier.canSurvive(helper.getLevel(), helper.absolutePos(pos)), Component.literal("Horizontal chain must not count as a ceiling attachment"));
         helper.succeed();
     }
@@ -48,11 +48,11 @@ public class ChandelierGameTests {
 
     public static void chainStateSurvivesTransitions(GameTestHelper helper) {
         for (Direction.Axis axis : Direction.Axis.values()) {
-            BlockState state = ModBlocks.COPPER_CHAIN.get().defaultBlockState()
-                    .setValue(CopperChainBlock.AXIS, axis).setValue(CopperChainBlock.WATERLOGGED, true);
+            BlockState state = ModBlocks.COPPER_CHANDELIER_CHAIN.get().defaultBlockState()
+                    .setValue(CopperChandelierChainBlock.AXIS, axis).setValue(CopperChandelierChainBlock.WATERLOGGED, true);
             for (int i = 0; i < 4; i++) {
                 BlockState waxed = HoneycombItem.getWaxed(state).orElseThrow();
-                helper.assertTrue(waxed.getValue(CopperChainBlock.AXIS) == axis, Component.literal("Waxing must preserve chain axis"));
+                helper.assertTrue(waxed.getValue(CopperChandelierChainBlock.AXIS) == axis, Component.literal("Waxing must preserve chain axis"));
                 helper.assertTrue(waxed.getFluidState().getType() == Fluids.WATER, Component.literal("Waxing must preserve waterlogging"));
                 helper.assertFalse(waxed.isRandomlyTicking(), Component.literal("Waxed chain must not age"));
                 helper.assertTrue(DataMapHooks.getBlockUnwaxed(waxed.getBlock()) == state.getBlock(), Component.literal("Wax removal must restore chain finish"));

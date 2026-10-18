@@ -12,7 +12,7 @@
   "key": {
     "G": "minecraft:white_stained_glass_pane",
     "T": "minecraft:torch",
-    "C": "#c:nuggets/copper"
+    "C": "minecraft:copper_nugget"
   },
   "category": "misc"
 }

@@ -1,6 +1,6 @@
 # Modpack author guide
 
-[Manual contents](README.md) · [Catalog](catalog.md) · [Recipe reference](recipes.md)
+[Manual contents](README.md) Â· [Catalog](catalog.md) Â· [Recipe reference](recipes.md)
 
 Use this guide to change acquisition and presentation while keeping the mod's implemented behavior clear to players. It describes Minecraft 1.21.4 with the mod's current NeoForge target. Keep a copy of the unmodified recipes for comparison.
 
@@ -61,18 +61,18 @@ The [recipe reference](recipes.md) includes exact grids, ingredient IDs/tags, ou
 
 ## Tags and material interoperability
 
-The bundled resources include vanilla block/item categories such as doors, slabs, stairs, walls, and mineable tags, plus common copper-nugget item tags under `c`. Inspect the actual files before modifying membership; a tag's presence is not a promise that every similarly named item belongs to it.
+The bundled resources include vanilla block/item categories such as doors, slabs, stairs, walls, and mineable tags. Copper furniture recipes use the vanilla copper nugget. Inspect the actual files before modifying membership; a tag's presence is not a promise that every similarly named item belongs to it.
 
 For an additive item tag, use `data/<namespace>/tags/item/<path>.json` and a structure such as:
 
 ```json
 {
   "replace": false,
-  "values": ["atouchofclass:copper_nugget"]
+  "values": ["minecraft:copper_nugget"]
 }
 ```
 
-This illustrates the format; the mod already supplies copper-nugget membership, so a duplicate is unnecessary. Avoid `replace: true` unless removing the existing members is the intended pack-wide effect.
+This illustrates adding the vanilla copper nugget to a pack-defined item tag. Avoid `replace: true` unless removing the existing members is the intended pack-wide effect.
 
 ## Creative-only content and progression
 

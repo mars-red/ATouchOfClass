@@ -4,12 +4,14 @@
 
 Copper lighting provides illumination as soon as it is placed. These lamps do not need fuel, redstone power, or an electrical network, and there is no use-to-toggle switch in their current block behavior. Their appearance can change with oxidation.
 
+Copper Chandelier Chains are the mod's thinner decorative chains, distinct from Minecraft's Copper Chains. All oxidation and waxed variants use the new name. Their existing `atouchofclass:*copper_chain` IDs and resource paths remain unchanged so saved blocks, inventory items, recipes, and resource packs remain compatible.
+
 ## Choose a light
 
 | Light | Placement and reserved space |
 | --- | --- |
 | Wall sconce | Attach to a supported side face; one block space |
-| Chandelier | Hang from a ceiling or a vertical copper/vanilla chain; one block space |
+| Chandelier | Hang from a ceiling or a vertical copper chandelier chain or vanilla chain; one block space |
 | Bowl ceiling light | Attach to the underside of a supporting ceiling; one block space |
 | Coffered ceiling light | Ceiling-mounted alternative; one block space |
 | Table lamp | Place on a supported top, including a side table or nightstand; one block space |
@@ -23,7 +25,7 @@ For a hanging installation, build a ceiling support, place a vertical chain bene
 <!-- screenshot:lighting-01:start -->
 ![A display of copper sconces, chandelier, ceiling lights, table lamp, floor lamp, and lamp post.](images/lighting/fixtures.png)
 
-*Each light has a placement role; copper chains provide support rather than illumination.*
+*Each light has a placement role; copper chandelier chains provide support rather than illumination.*
 <!-- screenshot:lighting-01:end -->
 
 ## Oxidation and waxing

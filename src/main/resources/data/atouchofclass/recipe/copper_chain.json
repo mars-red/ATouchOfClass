@@ -11,6 +11,6 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "N": "#c:nuggets/copper"
+    "N": "minecraft:copper_nugget"
   }
 }
