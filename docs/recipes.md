@@ -3586,6 +3586,20 @@ N.N
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/key_ring.json)
 
+## kitchen-sink
+
+**Output:** 1 × Stainless Steel Kitchen Sink (`atouchofclass:kitchen_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.N.
+I.I
+III
+```
+
+`I` = `minecraft:iron_ingot`; `N` = `minecraft:iron_nugget`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/kitchen_sink.json)
+
 ## leather-chair
 
 **Output:** 1 × Leather Chair (`atouchofclass:leather_chair`). **Type:** `minecraft:crafting_shaped`.

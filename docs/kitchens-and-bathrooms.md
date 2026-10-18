@@ -11,6 +11,7 @@ Build the supporting room first, then add storage and fittings. The table below 
 | Oven | Furnace-style smelting with input, fuel, and output |
 | Induction cooktop | Decorative surface; adjacent matching cooktops can pair visually |
 | Countertop and sink | Decorative surfaces; sinks have no fluid inventory or faucet interaction |
+| Stainless steel kitchen sink | Two side-by-side sinks with the same facing share a center sprayer faucet |
 | Clawfoot bathtub | Use to toggle its filled appearance |
 | Toilet | Use to sit with the lid open or closed; Shift + use with an empty hand toggles the lid |
 | Shower heads | Decorative fittings; no flowing-water interaction |
@@ -24,6 +25,10 @@ Cabinets come in door and drawer styles across the 12 woods in the [reference](r
 Place countertops or sinks on top of the base units. Sneak-place against a cabinet to avoid opening it. These surfaces occupy their own block space; the countertop is a thin ⅛-block slab at the bottom of that space. Sinks add a basin model and faucet within that space. They are decorative and do not supply water buckets.
 
 Stone-based, copper, and other material variants have individual recipes. All **32 concrete countertops and sinks** (16 colors of each) are intentionally **Creative only**. Crafting is deferred until the mod targets a Minecraft version with vanilla concrete slabs; no release date is promised. Survival kitchen examples use calcite or another craftable material instead.
+
+The **Stainless Steel Kitchen Sink**  is farmhouse style with a front apron. Place a second sink beside it with the same facing to form a double sink with one shared sprayer faucet. Pairs stop at two sinks; adding another sink leaves the existing pair intact. Breaking either half restores the remaining sink's single appearance. The apron is decorative and does not block access to the cabinet below.
+
+Like the other sinks, it has no fluid inventory or water interaction.
 
 <!-- screenshot:kitchen-01:start -->
 ![Oak kitchen cabinets with calcite worktops and sink, an induction cooktop, and a stacked pantry.](images/kitchens/worktop.png)

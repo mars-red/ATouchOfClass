@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe. Concrete exceptions are intentional.
 
-**600 registered player-content items.**
+**601 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -291,6 +291,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Jungle Four-Post Bed (Yellow) | `atouchofclass:jungle_yellow_four_post_bed` | Survival obtainable — [jungle_yellow_four_post_bed](recipes.md#jungle-yellow-four-post-bed) |
 | Key Cutter | `atouchofclass:key_cutter` | Survival obtainable — [key_cutter](recipes.md#key-cutter) |
 | Key Ring | `atouchofclass:key_ring` | Survival obtainable — [key_ring](recipes.md#key-ring) |
+| Stainless Steel Kitchen Sink | `atouchofclass:kitchen_sink` | Survival obtainable — [kitchen_sink](recipes.md#kitchen-sink) |
 | Leather Chair | `atouchofclass:leather_chair` | Survival obtainable — [leather_chair](recipes.md#leather-chair) |
 | Leather Love Seat | `atouchofclass:leather_love_seat` | Survival obtainable — [leather_love_seat](recipes.md#leather-love-seat) |
 | Leather Sofa | `atouchofclass:leather_sofa` | Survival obtainable — [leather_sofa](recipes.md#leather-sofa) |

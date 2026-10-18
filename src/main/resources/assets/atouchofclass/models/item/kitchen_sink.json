@@ -1,0 +1,10 @@
+{
+  "parent": "atouchofclass:block/kitchen_sink",
+  "display": {
+    "gui": {
+      "rotation": [30, 225, 0],
+      "translation": [-0.2, 2.8, 0],
+      "scale": [0.55, 0.55, 0.55]
+    }
+  }
+}

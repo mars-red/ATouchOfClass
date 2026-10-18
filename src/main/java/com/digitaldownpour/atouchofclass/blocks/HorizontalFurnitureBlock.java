@@ -40,7 +40,7 @@ public abstract class HorizontalFurnitureBlock extends HorizontalDirectionalBloc
         builder.add(FACING);
     }
 
-    private static Map<Direction, VoxelShape> createDirectionalShapes(double[][] boxes) {
+    protected static Map<Direction, VoxelShape> createDirectionalShapes(double[][] boxes) {
         Map<Direction, VoxelShape> directionalShapes = new EnumMap<>(Direction.class);
         for (Direction direction : Direction.Plane.HORIZONTAL) {
             VoxelShape shape = Shapes.empty();
