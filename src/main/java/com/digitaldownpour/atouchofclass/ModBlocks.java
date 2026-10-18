@@ -55,6 +55,7 @@ import com.digitaldownpour.atouchofclass.blocks.DiningTableBlock;
 import com.digitaldownpour.atouchofclass.blocks.NightstandBlock;
 import com.digitaldownpour.atouchofclass.blocks.CountertopBlock;
 import com.digitaldownpour.atouchofclass.blocks.SinkBlock;
+import com.digitaldownpour.atouchofclass.blocks.KitchenSinkBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCountertopBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringSinkBlock;
 import com.digitaldownpour.atouchofclass.entities.KeyCutterBlockEntity;
@@ -132,6 +133,13 @@ public class ModBlocks {
                             .strength(1.5F, 6.0F)
                             .sound(net.minecraft.world.level.block.SoundType.CALCITE)
                             .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<KitchenSinkBlock> KITCHEN_SINK =
+            BLOCKS.register("kitchen_sink", registryName -> new KitchenSinkBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .strength(3.0F, 6.0F)
                             .noOcclusion()));
 
     public static final DeferredBlock<SinkBlock> CALCITE_SINK =

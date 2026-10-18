@@ -47,6 +47,8 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("calcite_countertop", ModBlocks.CALCITE_COUNTERTOP);
     public static final DeferredItem<BlockItem> CALCITE_SINK =
             ITEMS.registerSimpleBlockItem("calcite_sink", ModBlocks.CALCITE_SINK);
+    public static final DeferredItem<BlockItem> KITCHEN_SINK =
+            ITEMS.registerSimpleBlockItem("kitchen_sink", ModBlocks.KITCHEN_SINK);
     public static final DeferredItem<BlockItem> DARK_OAK_DOOR_CABINET =
             ITEMS.registerSimpleBlockItem("dark_oak_door_cabinet", ModBlocks.DARK_OAK_DOOR_CABINET);
     public static final DeferredItem<BlockItem> DARK_OAK_DRAWER_CABINET =
@@ -804,6 +806,7 @@ public class ModItems {
             event.accept(BUFF_BRICK_WALL);
             event.accept(CALCITE_COUNTERTOP);
             event.accept(CALCITE_SINK);
+            event.accept(KITCHEN_SINK);
             event.accept(SMOOTH_STONE_COUNTERTOP);
             event.accept(SMOOTH_STONE_SINK);
             event.accept(STONE_COUNTERTOP);
