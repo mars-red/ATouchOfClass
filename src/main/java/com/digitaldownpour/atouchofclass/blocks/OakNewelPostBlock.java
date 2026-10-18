@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.state.*;
 import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.phys.shapes.*;
 import javax.annotation.Nullable;
+import net.minecraft.server.level.ServerLevel;
 
 public class OakNewelPostBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<OakNewelPostBlock> CODEC=simpleCodec(OakNewelPostBlock::new);
@@ -46,14 +47,15 @@ public class OakNewelPostBlock extends HorizontalDirectionalBlock {
             Direction direction,BlockPos neighborPos,BlockState neighbor,RandomSource random) {
         return state.canSurvive(level,pos)?state:Blocks.AIR.defaultBlockState();
     }
-    @Override protected void onRemove(BlockState state,Level level,BlockPos pos,BlockState replacement,boolean moved) {
+    @Override protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
         if(!replacement.is(this)) {
             BlockPos otherPos=state.getValue(HALF)==DoubleBlockHalf.LOWER?pos.above():pos.below();
             BlockState other=level.getBlockState(otherPos);
             if(other.is(this)&&other.getValue(HALF)!=state.getValue(HALF)&&other.getValue(FACING)==state.getValue(FACING))
                 level.destroyBlock(otherPos,false);
         }
-        super.onRemove(state,level,pos,replacement,moved);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
     @Override protected VoxelShape getShape(BlockState state,BlockGetter level,BlockPos pos,CollisionContext context) {
         return NewelPostGeometry.shape(state.getValue(FACING),state.getValue(HALF));

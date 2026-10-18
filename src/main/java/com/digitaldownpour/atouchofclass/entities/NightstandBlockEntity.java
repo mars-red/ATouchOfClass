@@ -2,9 +2,7 @@ package com.digitaldownpour.atouchofclass.entities;
 
 import com.digitaldownpour.atouchofclass.ModEntities;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -19,6 +17,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.entity.ContainerUser;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 
 /** Shared 27-slot storage for all nightstand wood variants. */
 public class NightstandBlockEntity extends RandomizableContainerBlockEntity {
@@ -42,7 +43,7 @@ public class NightstandBlockEntity extends RandomizableContainerBlockEntity {
         }
 
         @Override
-        protected boolean isOwnContainer(Player player) {
+        public boolean isOwnContainer(Player player) {
             return player.containerMenu instanceof ChestMenu chestMenu
                     && chestMenu.getContainer() == NightstandBlockEntity.this;
         }
@@ -78,33 +79,33 @@ public class NightstandBlockEntity extends RandomizableContainerBlockEntity {
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
+    protected void loadAdditional(ValueInput tag) {
+        super.loadAdditional(tag);
         items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         if (!tryLoadLootTable(tag)) {
-            ContainerHelper.loadAllItems(tag, items, registries);
+            ContainerHelper.loadAllItems(tag, items);
         }
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
+    protected void saveAdditional(ValueOutput tag) {
+        super.saveAdditional(tag);
         if (!trySaveLootTable(tag)) {
-            ContainerHelper.saveAllItems(tag, items, registries);
+            ContainerHelper.saveAllItems(tag, items);
         }
     }
 
     @Override
-    public void startOpen(Player player) {
-        if (!remove && !player.isSpectator()) {
-            openersCounter.incrementOpeners(player, getLevel(), getBlockPos(), getBlockState());
+    public void startOpen(ContainerUser user) {
+        if (!remove && !user.getLivingEntity().isSpectator()) {
+            openersCounter.incrementOpeners(user.getLivingEntity(), getLevel(), getBlockPos(), getBlockState(), user.getContainerInteractionRange());
         }
     }
 
     @Override
-    public void stopOpen(Player player) {
-        if (!remove && !player.isSpectator()) {
-            openersCounter.decrementOpeners(player, getLevel(), getBlockPos(), getBlockState());
+    public void stopOpen(ContainerUser user) {
+        if (!remove && !user.getLivingEntity().isSpectator()) {
+            openersCounter.decrementOpeners(user.getLivingEntity(), getLevel(), getBlockPos(), getBlockState());
         }
     }
 

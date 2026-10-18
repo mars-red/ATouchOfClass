@@ -31,7 +31,7 @@ public class BucketOfPlasterItem extends BlockOverlayItemBase {
 
     @Override
     public @NotNull InteractionResult useOn(UseOnContext context) {
-        if (context.getLevel().isClientSide) {
+        if (context.getLevel().isClientSide()) {
             return super.useOn(context);
         }
 
@@ -66,11 +66,6 @@ public class BucketOfPlasterItem extends BlockOverlayItemBase {
 
     @Override
     public boolean supportsEnchantment(ItemStack stack, Holder<Enchantment> enchantment) {
-        return false;
-    }
-
-    @Override
-    public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
         return false;
     }
 

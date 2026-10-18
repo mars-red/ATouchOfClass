@@ -42,7 +42,7 @@ public class DiningChairBlock extends ChairBlock {
 
     @Override protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
             Player player, BlockHitResult hit) {
-        if (level.isClientSide) return InteractionResult.SUCCESS;
+        if (level.isClientSide()) return InteractionResult.SUCCESS;
         if (player.isPassenger() || player.isShiftKeyDown()) return InteractionResult.CONSUME;
         // Shared mount attachment is 0.55 blocks: 0.075 + 0.55 = the 10/16 seat top.
         Vec3 location = new Vec3(pos.getX() + 0.5, pos.getY() + 0.075, pos.getZ() + 0.5);

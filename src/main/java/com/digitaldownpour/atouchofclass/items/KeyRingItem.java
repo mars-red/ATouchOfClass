@@ -15,7 +15,8 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.level.Level;
 
-import java.util.List;
+import java.util.function.Consumer;
+import net.minecraft.world.item.component.TooltipDisplay;
 
 public class KeyRingItem extends Item {
     public static final int CAPACITY = 16;
@@ -37,8 +38,8 @@ public class KeyRingItem extends Item {
 
     @Override
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
-        if (!level.isClientSide) {
-            int slot = hand == InteractionHand.MAIN_HAND ? player.getInventory().selected : 40;
+        if (!level.isClientSide()) {
+            int slot = hand == InteractionHand.MAIN_HAND ? player.getInventory().getSelectedSlot() : 40;
             player.openMenu(new SimpleMenuProvider(
                     (id, inventory, owner) -> new KeyRingMenu(id, inventory, slot),
                     player.getItemInHand(hand).getHoverName()), buffer -> buffer.writeVarInt(slot));
@@ -47,9 +48,9 @@ public class KeyRingItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltip, TooltipFlag flag) {
         long count = stack.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).nonEmptyStream().count();
-        tooltip.add(Component.translatable("tooltip.atouchofclass.key_ring.contents", count, CAPACITY));
-        tooltip.add(Component.translatable("tooltip.atouchofclass.key_ring.use"));
+        tooltip.accept(Component.translatable("tooltip.atouchofclass.key_ring.contents", count, CAPACITY));
+        tooltip.accept(Component.translatable("tooltip.atouchofclass.key_ring.use"));
     }
 }

@@ -34,6 +34,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.EnumMap;
 import java.util.Map;
+import net.minecraft.server.level.ServerLevel;
 
 /** A nine-section, 1.5-by-2.5-block clawfoot bathtub with a synchronized fill state. */
 public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
@@ -193,7 +194,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
-        if (!level.isClientSide && state.getValue(PART) == Part.FOOT
+        if (!level.isClientSide() && state.getValue(PART) == Part.FOOT
                 && state.getValue(SIDE) == Side.CENTER) {
             Direction facing = state.getValue(FACING);
             for (Part part : Part.values()) {
@@ -241,8 +242,9 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
-        if (!level.isClientSide && !replacement.is(this)) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
+        if (!level.isClientSide() && !replacement.is(this)) {
             Direction facing = state.getValue(FACING);
             BlockPos footPos = footCenterPos(state, pos);
             for (Part part : Part.values()) {
@@ -259,7 +261,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
                 }
             }
         }
-        super.onRemove(state, level, pos, replacement, moved);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
     @Override
@@ -275,7 +277,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
     }
 
     private InteractionResult toggleFilled(BlockState state, Level level, BlockPos pos) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             Direction facing = state.getValue(FACING);
             BlockPos footPos = footCenterPos(state, pos);
             boolean filled = !state.getValue(FILLED);

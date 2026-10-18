@@ -65,7 +65,7 @@ public class GlassShowerSurroundBlock extends ThreeHighGlassPanelBlock {
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
-        if (!level.isClientSide && state.getValue(PART) == 0) {
+        if (!level.isClientSide() && state.getValue(PART) == 0) {
             for (int i = 0; i < 3; i++) {
                 BlockPos partPos = pos.above(i);
                 BlockState partState = level.getBlockState(partPos);

@@ -4,12 +4,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ChunkPos;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
 import java.util.Map;
 
-@OnlyIn(Dist.CLIENT)
 public class ClientWallOverlayData {
     private final static WallOverlayStore store =
             new WallOverlayStore();

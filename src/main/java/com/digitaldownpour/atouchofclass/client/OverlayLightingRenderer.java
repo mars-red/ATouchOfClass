@@ -5,30 +5,29 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.BlockElementFace;
-import net.minecraft.client.renderer.block.model.BlockFaceUV;
 import net.minecraft.client.renderer.block.model.FaceBakery;
-import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.BlockModelRotation;
-import net.minecraft.client.resources.model.SimpleBakedModel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.client.RenderTypeGroup;
-import net.neoforged.neoforge.client.model.data.ModelData;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
 
 import java.lang.ref.WeakReference;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import com.mojang.math.Quadrant;
+import java.util.List;
+import net.minecraft.client.renderer.block.model.BlockModelPart;
+import net.minecraft.client.renderer.block.model.SimpleModelWrapper;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.client.resources.model.QuadCollection;
+import net.minecraft.data.AtlasIds;
 
 /** Uses the ordinary block renderer for lighting, while retaining the overlay's single-quad geometry. */
 public final class OverlayLightingRenderer {
@@ -62,9 +61,8 @@ public final class OverlayLightingRenderer {
             lightingPose.pushPose();
             try {
                 mc.getBlockRenderer().getModelRenderer().tesselateBlock(
-                        mc.level, cached.model, state, pos, lightingPose, cached, false,
-                        random, state.getSeed(pos), OverlayTexture.NO_OVERLAY,
-                        ModelData.EMPTY, RenderType.cutoutMipped());
+                        mc.level, cached.parts, state, pos, lightingPose, layer -> cached, false,
+                        OverlayTexture.NO_OVERLAY);
             } finally {
                 lightingPose.popPose();
             }
@@ -78,9 +76,9 @@ public final class OverlayLightingRenderer {
     private static BakedQuad bakeFace(Direction direction, TextureAtlasSprite sprite) {
         // FaceBakery supplies the canonical winding required by vanilla's per-corner AO mapping.
         BakedQuad quad = FaceBakery.bakeQuad(new Vector3f(), new Vector3f(16, 16, 16),
-                new BlockElementFace(direction, -1, "", new BlockFaceUV(new float[]{0, 0, 16, 16}, 0)),
+                new BlockElementFace(direction, -1, "", new BlockElementFace.UVs(0, 0, 16, 16), Quadrant.R0),
                 sprite, direction, BlockModelRotation.X0_Y0, null, true, 0);
-        int[] vertices = quad.getVertices();
+        int[] vertices = quad.vertices();
         for (int vertex = 0; vertex < 4; vertex++) {
             int offset = vertex * 8;
             float x = Float.intBitsToFloat(vertices[offset]);
@@ -113,32 +111,38 @@ public final class OverlayLightingRenderer {
     /** Captures the vanilla renderer's final vertex lighting without uploading extra geometry. */
     private static final class CachedBlock implements VertexConsumer {
         final LitFace[] faces = new LitFace[6];
-        BakedModel model;
+        List<BlockModelPart> parts;
         BlockState state;
         long tick = Long.MIN_VALUE;
         boolean smooth;
 
         boolean updateModel(Minecraft mc, WallOverlayData data) {
-            boolean changed = model == null;
+            boolean changed = parts == null;
             for (Direction direction : DIRECTIONS) {
                 int index = direction.ordinal();
                 var texture = data.getFace(direction);
                 TextureAtlasSprite sprite = texture == null ? null
-                        : mc.getTextureAtlas(TextureAtlas.LOCATION_BLOCKS).apply(texture);
+                        : mc.getAtlasManager().getAtlasOrThrow(AtlasIds.BLOCKS).getSprite(texture);
                 LitFace old = faces[index];
                 // Sprite identity also changes on resource reload: never retain stale atlas UVs.
-                if ((old == null ? null : old.quad.getSprite()) != sprite) {
+                if ((old == null ? null : old.quad.sprite()) != sprite) {
                     faces[index] = sprite == null ? null : new LitFace(bakeFace(direction, sprite));
                     changed = true;
                 }
             }
             if (changed) {
-                SimpleBakedModel.Builder builder = new SimpleBakedModel.Builder(true, true, true, ItemTransforms.NO_TRANSFORMS);
+                QuadCollection.Builder builder = new QuadCollection.Builder();
+                TextureAtlasSprite particle = null;
                 for (Direction direction : DIRECTIONS) {
                     LitFace face = faces[direction.ordinal()];
-                    if (face != null) builder.particle(face.quad.getSprite()).addCulledFace(direction, face.quad);
+                    if (face != null) {
+                        particle = face.quad.sprite();
+                        builder.addCulledFace(direction, face.quad);
+                    }
                 }
-                model = builder.build(RenderTypeGroup.EMPTY);
+                parts = particle == null ? List.of() : List.of(
+                        new SimpleModelWrapper(builder.build(), true, particle,
+                                ChunkSectionLayer.CUTOUT_MIPPED));
             }
             return changed;
         }
@@ -147,7 +151,7 @@ public final class OverlayLightingRenderer {
         public void putBulkData(PoseStack.Pose pose, BakedQuad quad, float[] brightness,
                                 float red, float green, float blue, float alpha, int[] lightmap,
                                 int overlay, boolean readExistingColor) {
-            LitFace face = faces[quad.getDirection().ordinal()];
+            LitFace face = faces[quad.direction().ordinal()];
             System.arraycopy(brightness, 0, face.brightness, 0, 4);
             System.arraycopy(lightmap, 0, face.lightmap, 0, 4);
         }
@@ -156,7 +160,7 @@ public final class OverlayLightingRenderer {
             for (Direction direction : DIRECTIONS) {
                 LitFace face = faces[direction.ordinal()];
                 if (face == null) continue;
-                int[] vertices = face.quad.getVertices();
+                int[] vertices = face.quad.vertices();
                 for (int vertex = 0; vertex < 4; vertex++) {
                     int offset = vertex * 8;
                     // Offset only the drawn surface, not the geometry used for light sampling.

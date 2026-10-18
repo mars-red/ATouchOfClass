@@ -6,9 +6,9 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.neoforged.neoforge.network.PacketDistributor;
 
 import java.util.List;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 /**
  * Plain client-only destination-control screen: not an AbstractContainerMenu
@@ -54,7 +54,7 @@ public class ElevatorFloorSelectScreen extends Screen {
     }
 
     private void selectFloor(int floorIndex) {
-        PacketDistributor.sendToServer(new SelectElevatorFloorPayload(controlPos, floorIndex));
+        ClientPacketDistributor.sendToServer(new SelectElevatorFloorPayload(controlPos, floorIndex));
         onClose();
     }
 

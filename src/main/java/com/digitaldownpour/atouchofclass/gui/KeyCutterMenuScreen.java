@@ -8,13 +8,15 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.Slot;
-import net.neoforged.neoforge.network.PacketDistributor;
 import org.lwjgl.glfw.GLFW;
+import net.minecraft.client.input.CharacterEvent;
+import net.minecraft.client.input.KeyEvent;
+import net.minecraft.client.renderer.RenderPipelines;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> {
     private static final ResourceLocation BACKGROUND_LOCATION = ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "textures/gui/container/key_cutter_background.png");
@@ -54,7 +56,7 @@ public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> 
         keyCodeInput.setMaxLength(10);
         keyCodeInput.setBordered(true);
         keyCodeInput.setVisible(true);
-        keyCodeInput.setTextColor(0xFFFFFF);
+        keyCodeInput.setTextColor(0xFFFFFFFF);
         keyCodeInput.setValue("");
 
         addRenderableWidget(keyCodeInput);
@@ -93,7 +95,7 @@ public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> 
     }
 
     private void craft() {
-        PacketDistributor.sendToServer(new SyncKeyCutterMenuPayload(keyCodeInput.getValue(), keyableNameInput.getValue()));
+        ClientPacketDistributor.sendToServer(new SyncKeyCutterMenuPayload(keyCodeInput.getValue(), keyableNameInput.getValue()));
     }
 
     @Override
@@ -114,13 +116,21 @@ public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> 
     @Override
     protected void renderSlot(GuiGraphics guiGraphics, Slot slot) {
         super.renderSlot(guiGraphics, slot);
-        guiGraphics.renderOutline(slot.x - 1, slot.y - 1, 19, 19, 0xFF303030);
+        // Draw in the same translated coordinate space as the slot contents.
+        // submitOutline defers drawing and does not retain this translation.
+        int x = slot.x - 1;
+        int y = slot.y - 1;
+        int color = 0xFF303030;
+        guiGraphics.fill(x, y, x + 19, y + 1, color);
+        guiGraphics.fill(x, y + 18, x + 19, y + 19, color);
+        guiGraphics.fill(x, y + 1, x + 1, y + 18, color);
+        guiGraphics.fill(x + 18, y + 1, x + 19, y + 18, color);
     }
 
     @Override
     protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
         graphics.blit(
-                RenderType::guiTextured,
+                RenderPipelines.GUI_TEXTURED,
                 BACKGROUND_LOCATION,
                 this.leftPos, this.topPos,
                 0, 0,
@@ -130,44 +140,44 @@ public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> 
     }
 
     @Override
-    public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-        if (keyCode == GLFW.GLFW_KEY_ESCAPE) {
-            return super.keyPressed(keyCode, scanCode, modifiers);
+    public boolean keyPressed(KeyEvent event) {
+        if (event.key() == GLFW.GLFW_KEY_ESCAPE) {
+            return super.keyPressed(event);
         }
 
         if (keyCodeInput.isFocused()) {
-            return keyPressedHelper(keyCodeInput, keyCode, scanCode, modifiers);
+            return keyPressedHelper(keyCodeInput, event);
         }
 
         if (keyableNameInput.isFocused()) {
-            return keyPressedHelper(keyableNameInput, keyCode, scanCode, modifiers);
+            return keyPressedHelper(keyableNameInput, event);
         }
 
-        return super.keyPressed(keyCode, scanCode, modifiers);
+        return super.keyPressed(event);
     }
 
     @Override
-    public boolean charTyped(char codePoint, int modifiers) {
-        if (charTypedHelper(keyCodeInput, codePoint, modifiers)) {
+    public boolean charTyped(CharacterEvent event) {
+        if (charTypedHelper(keyCodeInput, event)) {
             return true;
         }
 
-        if (charTypedHelper(keyableNameInput, codePoint, modifiers)) {
+        if (charTypedHelper(keyableNameInput, event)) {
             return true;
         }
 
-        return super.charTyped(codePoint, modifiers);
+        return super.charTyped(event);
     }
 
-    private boolean charTypedHelper(EditBox input, char codePoint, int modifiers) {
-        return input.isFocused() && input.charTyped(codePoint, modifiers);
+    private boolean charTypedHelper(EditBox input, CharacterEvent event) {
+        return input.isFocused() && input.charTyped(event);
     }
 
-    private boolean keyPressedHelper(EditBox input, int keyCode, int scanCode, int modifiers) {
+    private boolean keyPressedHelper(EditBox input, KeyEvent event) {
         // Allow text input including inventory key
-        return input.keyPressed(keyCode, scanCode, modifiers)
+        return input.keyPressed(event)
                 || input.canConsumeInput()
-                || super.keyPressed(keyCode, scanCode, modifiers);
+                || super.keyPressed(event);
     }
 
 }

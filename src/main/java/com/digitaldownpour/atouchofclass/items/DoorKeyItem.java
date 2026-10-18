@@ -7,7 +7,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 
-import java.util.List;
+import java.util.function.Consumer;
+import net.minecraft.world.item.component.TooltipDisplay;
 
 public class DoorKeyItem extends Item {
 
@@ -16,14 +17,14 @@ public class DoorKeyItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         KeyableInfo keyableInfo = stack.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
 
         if (keyableInfo != null) {
             String name = keyableInfo.keyableName();
 
             if (!(name == null || name.isEmpty())) {
-                tooltipComponents.add(Component.literal(name));
+                tooltipComponents.accept(Component.literal(name));
             }
         }
     }

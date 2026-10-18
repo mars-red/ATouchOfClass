@@ -2,7 +2,6 @@ package com.digitaldownpour.atouchofclass.components;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
@@ -10,10 +9,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.saveddata.SavedData;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 import java.util.Set;
+import java.util.EnumMap;
+import net.minecraft.world.level.saveddata.SavedDataType;
 
 public class WallOverlaySavedData extends SavedData {
     private final WallOverlayStore store =
@@ -25,19 +25,14 @@ public class WallOverlaySavedData extends SavedData {
     private static final String TAG_POSITION = "position";
     private static final String TAG_DATA = "data";
 
-    private static final Factory<WallOverlaySavedData> FACTORY =
-            new Factory<>(
-                    WallOverlaySavedData::new,
-                    WallOverlaySavedData::load
-            );
+    private static final SavedDataType<WallOverlaySavedData> TYPE =
+            new SavedDataType<>(DATA_NAME, WallOverlaySavedData::new,
+                    CompoundTag.CODEC.xmap(WallOverlaySavedData::load, WallOverlaySavedData::save));
 
 //    private final Map<BlockPos, WallOverlayData> overlays = new HashMap<>();
 
     public static WallOverlaySavedData get(ServerLevel level) {
-        return level.getDataStorage().computeIfAbsent(
-                FACTORY,
-                DATA_NAME
-        );
+        return level.getDataStorage().computeIfAbsent(TYPE);
     }
 
 
@@ -71,7 +66,7 @@ public class WallOverlaySavedData extends SavedData {
             return Map.of();
         }
 
-        Map<Direction, ResourceLocation> removed = new java.util.EnumMap<>(Direction.class);
+        Map<Direction, ResourceLocation> removed = new EnumMap<>(Direction.class);
         for (Direction face : faces) {
             ResourceLocation texture = store.getFace(pos, face);
             if (texture != null) {
@@ -88,16 +83,12 @@ public class WallOverlaySavedData extends SavedData {
     }
 
     public static WallOverlaySavedData load(
-            CompoundTag tag,
-            HolderLookup.Provider registries
+            CompoundTag tag
     ) {
         WallOverlaySavedData savedData =
                 new WallOverlaySavedData();
 
-        ListTag overlaysTag = tag.getList(
-                TAG_OVERLAYS,
-                Tag.TAG_COMPOUND
-        );
+        ListTag overlaysTag = tag.getListOrEmpty(TAG_OVERLAYS);
 
         for (Tag element : overlaysTag) {
             if (!(element instanceof CompoundTag entryTag)) {
@@ -110,11 +101,11 @@ public class WallOverlaySavedData extends SavedData {
             }
 
             BlockPos pos = BlockPos.of(
-                    entryTag.getLong(TAG_POSITION)
+                    entryTag.getLongOr(TAG_POSITION, 0L)
             );
 
             WallOverlayData overlay = WallOverlayData.load(
-                    entryTag.getCompound(TAG_DATA)
+                    entryTag.getCompoundOrEmpty(TAG_DATA)
             );
 
             if (overlay.hasAny()) {
@@ -125,11 +116,8 @@ public class WallOverlaySavedData extends SavedData {
         return savedData;
     }
 
-    @Override
-    public @NotNull CompoundTag save(
-            @NotNull CompoundTag tag,
-            HolderLookup.@NotNull Provider registries
-    ) {
+    private CompoundTag save() {
+        CompoundTag tag = new CompoundTag();
         ListTag overlaysTag = new ListTag();
 
         for (Map.Entry<ChunkPos, Map<BlockPos, WallOverlayData>> chunkEntries

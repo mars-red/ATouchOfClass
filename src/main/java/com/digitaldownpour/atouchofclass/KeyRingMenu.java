@@ -46,7 +46,7 @@ public class KeyRingMenu extends AbstractContainerMenu {
         }
         // Persist each edit, including partial transfers, before the ring can leave the inventory.
         keys.addListener(container -> {
-            if (!inventory.player.level().isClientSide && stillValid(inventory.player)) {
+            if (!inventory.player.level().isClientSide() && stillValid(inventory.player)) {
                 NonNullList<ItemStack> updated = NonNullList.withSize(KeyRingItem.CAPACITY, ItemStack.EMPTY);
                 for (int i = 0; i < updated.size(); i++) updated.set(i, keys.getItem(i));
                 ring.set(DataComponents.CONTAINER, ItemContainerContents.fromItems(updated));
@@ -106,7 +106,7 @@ public class KeyRingMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        return player.isAlive() && (player.level().isClientSide
+        return player.isAlive() && (player.level().isClientSide()
                 || (inventory.getItem(ringSlot) == ring && ring.is(ModItems.KEY_RING.get())));
     }
 }

@@ -46,7 +46,7 @@ public abstract class BlockOverlayItemBase extends Item {
     public @NotNull InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
 
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return InteractionResult.SUCCESS;
         }
 

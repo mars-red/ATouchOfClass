@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
+import net.minecraft.server.level.ServerLevel;
 
 public class KeyCutterBlock extends Block implements EntityBlock {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -46,7 +47,8 @@ public class KeyCutterBlock extends Block implements EntityBlock {
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean movedByPiston) {
+        BlockState newState = level.getBlockState(pos);
         if (state.getBlock() != newState.getBlock()){
             BlockEntity blockEntity = level.getBlockEntity(pos);
 
@@ -55,7 +57,7 @@ public class KeyCutterBlock extends Block implements EntityBlock {
             }
         }
 
-        super.onRemove(state, level, pos, newState, movedByPiston);
+        super.affectNeighborsAfterRemoval(state, level, pos, movedByPiston);
     }
 
     @Override

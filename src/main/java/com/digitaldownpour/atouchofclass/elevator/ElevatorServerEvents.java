@@ -1,7 +1,6 @@
 package com.digitaldownpour.atouchofclass.elevator;
 
 import com.digitaldownpour.atouchofclass.ATouchofClass;
-import com.digitaldownpour.atouchofclass.blocks.ElevatorCallButtonBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -15,6 +14,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Queue;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.phys.AABB;
 
 /**
  * Central, per-server-tick driver for everything time-based in the elevator
@@ -26,7 +27,7 @@ import java.util.Queue;
  * assumed closed (doors are force-reset to closed the next time a call
  * button/status recompute touches them - see reconciliation note below).
  */
-@EventBusSubscriber(modid = ATouchofClass.MODID, bus = EventBusSubscriber.Bus.GAME)
+@EventBusSubscriber(modid = ATouchofClass.MODID)
 public final class ElevatorServerEvents {
     /** How often (in ticks) the occupancy/idle-timeout poll runs; doesn't need to be every tick. */
     private static final int POLL_INTERVAL_TICKS = 10;
@@ -110,7 +111,7 @@ public final class ElevatorServerEvents {
         return Optional.empty();
     }
 
-    private static void pollLocks(net.minecraft.server.MinecraftServer server) {
+    private static void pollLocks(MinecraftServer server) {
         for (Map.Entry<ElevatorLockManager.ShaftKey, ElevatorLockManager.Lock> entry : ElevatorLockManager.activeLocksView().entrySet()) {
             ElevatorLockManager.ShaftKey key = entry.getKey();
             ElevatorLockManager.Lock lock = entry.getValue();
@@ -133,7 +134,7 @@ public final class ElevatorServerEvents {
                 ElevatorLockManager.release(key);
                 continue;
             }
-            Optional<net.minecraft.world.phys.AABB> aabbOpt = stopOpt.get().combinedCabAabb();
+            Optional<AABB> aabbOpt = stopOpt.get().combinedCabAabb();
             boolean occupied = aabbOpt.isPresent() && !ElevatorFlow.snapshotRootEntities(level, aabbOpt.get()).isEmpty();
 
             long now = level.getGameTime();

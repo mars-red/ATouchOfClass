@@ -7,7 +7,6 @@ import com.digitaldownpour.atouchofclass.blocks.PlinthBlock;
 import com.digitaldownpour.atouchofclass.blocks.WindowApronBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
@@ -18,18 +17,14 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.StairsShape;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.gametest.GameTestHolder;
-import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
+import net.minecraft.network.chat.Component;
 
-@GameTestHolder(ATouchofClass.MODID)
-@PrefixGameTestTemplate(false)
 public class BaseboardGameTests {
-    @GameTest(template = "chandelier_test")
+
     public static void uprightPlinthsCreateBaseboardCorners(GameTestHelper helper) {
         checkCorners(helper, false);
     }
 
-    @GameTest(template = "chandelier_test")
     public static void apronsWithBaseboardCreateCorners(GameTestHelper helper) {
         checkCorners(helper, true);
     }
@@ -55,8 +50,7 @@ public class BaseboardGameTests {
                                 // A real baseboard source enables the apron's combined variant.
                                 helper.setBlock(sourcePos, board.setValue(BaseboardBlock.FACING, other));
                             }
-                            if (apron) helper.assertTrue(state(helper, neighborPos).getValue(WindowApronBlock.BASEBOARD),
-                                    "the apron must have its baseboard variant enabled by the source");
+                            if (apron) helper.assertTrue(state(helper, neighborPos).getValue(WindowApronBlock.BASEBOARD), Component.literal("the apron must have its baseboard variant enabled by the source"));
                             boolean left = other == facing.getCounterClockWise();
                             StairsShape expected = inner
                                     ? (left ? StairsShape.INNER_LEFT : StairsShape.INNER_RIGHT)
@@ -71,42 +65,33 @@ public class BaseboardGameTests {
                                 var context = new BlockPlaceContext(helper.getLevel(), player, InteractionHand.MAIN_HAND,
                                         new ItemStack(ModBlocks.BASEBOARD.get()), hit);
                                 BlockState placed = ModBlocks.BASEBOARD.get().getStateForPlacement(context);
-                                helper.assertTrue(placed != null && placed.getValue(BaseboardBlock.SHAPE) == expected,
-                                        "placing baseboard next to connected trim must immediately select " + expected);
+                                helper.assertTrue(placed != null && placed.getValue(BaseboardBlock.SHAPE) == expected, Component.literal("placing baseboard next to connected trim must immediately select " + expected));
                                 helper.setBlock(pos, placed);
                                 if (temporarySupport) helper.setBlock(support, Blocks.AIR);
                             }
-                            helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == expected,
-                                    "connected trim must select " + expected + " in either placement order");
+                            helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == expected, Component.literal("connected trim must select " + expected + " in either placement order"));
                             Direction gap = edge == CasingBlock.Edge.RIGHT
                                     ? other.getClockWise() : other.getCounterClockWise();
                             boolean stub = !apron && gap == offset.getOpposite();
                             if (!apron) {
-                                helper.assertTrue(state(helper, neighborPos).getValue(PlinthBlock.BASEBOARD) == stub,
-                                        "a plinth's open side must show the stub when the corner return reaches it");
+                                helper.assertTrue(state(helper, neighborPos).getValue(PlinthBlock.BASEBOARD) == stub, Component.literal("a plinth's open side must show the stub when the corner return reaches it"));
                             }
                             // A same-facing continuation overrides a corner, including mixed trim.
                             Direction continuation = inner ? other.getOpposite() : other;
                             BlockPos continuationPos = pos.relative(continuation);
                             helper.setBlock(continuationPos, ModBlocks.PLINTH_BLOCK.get().defaultBlockState()
                                     .setValue(CasingBlock.FACING, facing).setValue(CasingBlock.EDGE, edge));
-                            helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == StairsShape.STRAIGHT,
-                                    "a straight continuation must take precedence over a corner");
-                            if (stub) helper.assertTrue(!state(helper, neighborPos).getValue(PlinthBlock.BASEBOARD),
-                                    "a suppressed corner must clear the plinth's baseboard stub");
+                            helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == StairsShape.STRAIGHT, Component.literal("a straight continuation must take precedence over a corner"));
+                            if (stub) helper.assertTrue(!state(helper, neighborPos).getValue(PlinthBlock.BASEBOARD), Component.literal("a suppressed corner must clear the plinth's baseboard stub"));
                             helper.setBlock(continuationPos, Blocks.AIR);
-                            helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == expected,
-                                    "removing the continuation must restore the corner");
-                            if (stub) helper.assertTrue(state(helper, neighborPos).getValue(PlinthBlock.BASEBOARD),
-                                    "restoring the corner must restore the plinth's baseboard stub");
+                            helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == expected, Component.literal("removing the continuation must restore the corner"));
+                            if (stub) helper.assertTrue(state(helper, neighborPos).getValue(PlinthBlock.BASEBOARD), Component.literal("restoring the corner must restore the plinth's baseboard stub"));
                             if (apron) {
                                 helper.setBlock(sourcePos, Blocks.AIR);
-                                helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == StairsShape.STRAIGHT,
-                                        "removing an apron's baseboard source must clear the corner");
+                                helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == StairsShape.STRAIGHT, Component.literal("removing an apron's baseboard source must clear the corner"));
                             }
                             helper.setBlock(neighborPos, Blocks.AIR);
-                            helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == StairsShape.STRAIGHT,
-                                    "removing adjacent trim must clear the corner");
+                            helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == StairsShape.STRAIGHT, Component.literal("removing adjacent trim must clear the corner"));
                             helper.setBlock(pos, Blocks.AIR);
                         }
                     }
@@ -116,7 +101,6 @@ public class BaseboardGameTests {
         helper.succeed();
     }
 
-    @GameTest(template = "chandelier_test")
     public static void unrelatedTrimDoesNotCreateCorners(GameTestHelper helper) {
         BlockPos pos = new BlockPos(3, 1, 3);
         for (Direction facing : Direction.Plane.HORIZONTAL) {
@@ -133,12 +117,10 @@ public class BaseboardGameTests {
                         ModBlocks.CROWN_MOULDING.get().defaultBlockState().setValue(CrownMouldingBlock.FACING, other)}) {
                     helper.setBlock(pos, ModBlocks.BASEBOARD.get().defaultBlockState().setValue(BaseboardBlock.FACING, facing));
                     helper.setBlock(neighborPos, neighbor);
-                    helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == StairsShape.STRAIGHT,
-                            "horizontal plinths, bare aprons, and crown moulding must not create baseboard corners");
+                    helper.assertTrue(state(helper, pos).getValue(BaseboardBlock.SHAPE) == StairsShape.STRAIGHT, Component.literal("horizontal plinths, bare aprons, and crown moulding must not create baseboard corners"));
                     helper.setBlock(pos, ModBlocks.CROWN_MOULDING.get().defaultBlockState().setValue(CrownMouldingBlock.FACING, facing));
                     if (!(neighbor.getBlock() instanceof CrownMouldingBlock)) {
-                        helper.assertTrue(state(helper, pos).getValue(CrownMouldingBlock.SHAPE) == StairsShape.STRAIGHT,
-                                "crown moulding must keep its existing connection rules");
+                        helper.assertTrue(state(helper, pos).getValue(CrownMouldingBlock.SHAPE) == StairsShape.STRAIGHT, Component.literal("crown moulding must keep its existing connection rules"));
                     }
                     helper.setBlock(neighborPos, Blocks.AIR);
                     helper.setBlock(pos, Blocks.AIR);

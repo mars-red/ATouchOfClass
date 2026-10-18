@@ -123,7 +123,7 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
-        if (!level.isClientSide && isMaster(state)) {
+        if (!level.isClientSide() && isMaster(state)) {
             Direction facing = state.getValue(FACING);
             for (Layer layer : Layer.values()) {
                 for (Side side : Side.values()) {
@@ -180,8 +180,9 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
-        if (!level.isClientSide && !replacement.is(this) && !REMOVING_STRUCTURE.get()) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
+        if (!level.isClientSide() && !replacement.is(this) && !REMOVING_STRUCTURE.get()) {
             REMOVING_STRUCTURE.set(true);
             try {
                 Direction facing = state.getValue(FACING);
@@ -204,7 +205,7 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
                 REMOVING_STRUCTURE.set(false);
             }
         }
-        super.onRemove(state, level, pos, replacement, moved);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
     @Override
@@ -225,7 +226,7 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
     }
 
     @Override
-    protected int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos) {
+    protected int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos, Direction direction) {
         BlockPos masterPos = masterPos(state, pos);
         return AbstractContainerMenu.getRedstoneSignalFromBlockEntity(level.getBlockEntity(masterPos));
     }

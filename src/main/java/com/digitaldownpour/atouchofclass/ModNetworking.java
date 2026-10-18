@@ -13,8 +13,7 @@ import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
 @EventBusSubscriber(
-        modid = ATouchofClass.MODID,
-        bus = EventBusSubscriber.Bus.MOD
+        modid = ATouchofClass.MODID
 )public class ModNetworking {
 
     @SubscribeEvent // on the mod event bus

@@ -21,11 +21,14 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.phys.shapes.BooleanOp;
+import net.minecraft.world.phys.shapes.Shapes;
 
 /** Floor-supported, level handrail with a single wooden post. */
 public class OakBalustradeBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<OakBalustradeBlock> CODEC = simpleCodec(OakBalustradeBlock::new);
-    public static final net.minecraft.world.level.block.state.properties.BooleanProperty TOP_JOIN = net.minecraft.world.level.block.state.properties.BooleanProperty.create("top_join");
+    public static final BooleanProperty TOP_JOIN = BooleanProperty.create("top_join");
     public static final EnumProperty<StairsShape> SHAPE = BlockStateProperties.STAIRS_SHAPE;
     public static final EnumProperty<Slope> SLOPE = EnumProperty.create("slope", Slope.class,
             Slope.FLAT, Slope.UPPER_LEFT, Slope.UPPER_RIGHT, Slope.LOWER_LEFT, Slope.LOWER_RIGHT,
@@ -74,8 +77,8 @@ public class OakBalustradeBlock extends HorizontalDirectionalBlock {
         int turns=switch(facing){case EAST->1;case SOUTH->2;case WEST->3;default->0;};
         for(int i=0;i<turns;i++){double n0=16-z1,n1=16-z0;z0=x0;z1=x1;x0=n0;x1=n1;}
         var contact=Block.box(x0,15.99,z0,x1,16,z1);
-        return net.minecraft.world.phys.shapes.Shapes.joinIsNotEmpty(contact,stair.getCollisionShape(level,pos.below()),
-                net.minecraft.world.phys.shapes.BooleanOp.ONLY_FIRST)?Slope.FLAT:result;
+        return Shapes.joinIsNotEmpty(contact,stair.getCollisionShape(level,pos.below()),
+                BooleanOp.ONLY_FIRST)?Slope.FLAT:result;
     }
 
     private boolean anchor(BlockGetter level,BlockPos pos,Direction facing,Slope expected) {
@@ -141,7 +144,7 @@ public class OakBalustradeBlock extends HorizontalDirectionalBlock {
 
     @Override protected void onPlace(BlockState state,Level level,BlockPos pos,BlockState old,boolean moved) {
         super.onPlace(state,level,pos,old,moved);
-        if(!level.isClientSide&&(!old.is(this)||old.getValue(FACING)!=state.getValue(FACING))) {
+        if(!level.isClientSide()&&(!old.is(this)||old.getValue(FACING)!=state.getValue(FACING))) {
             BlockState updated=connected(state,level,pos);
             if(updated!=state) level.setBlock(pos,updated,Block.UPDATE_ALL);
         }

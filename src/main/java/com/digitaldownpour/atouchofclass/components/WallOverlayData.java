@@ -2,7 +2,6 @@ package com.digitaldownpour.atouchofclass.components;
 
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceLocation;
@@ -47,7 +46,7 @@ public class WallOverlayData {
             return data;
         }
 
-        CompoundTag facesTag = tag.getCompound(TAG_FACES);
+        CompoundTag facesTag = tag.getCompoundOrEmpty(TAG_FACES);
 
         for (Direction direction : Direction.values()) {
             String key = direction.getSerializedName();
@@ -57,7 +56,7 @@ public class WallOverlayData {
             }
 
             ResourceLocation texture =
-                    ResourceLocation.tryParse(facesTag.getString(key));
+                    ResourceLocation.tryParse(facesTag.getStringOr(key, ""));
 
             if (texture != null) {
                 data.setFace(direction, texture);

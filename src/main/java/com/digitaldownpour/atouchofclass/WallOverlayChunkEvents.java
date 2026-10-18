@@ -9,8 +9,7 @@ import net.neoforged.neoforge.event.level.ChunkWatchEvent;
 import java.util.List;
 
 @EventBusSubscriber(
-        modid = ATouchofClass.MODID,
-        bus = EventBusSubscriber.Bus.GAME
+        modid = ATouchofClass.MODID
 )
 public final class WallOverlayChunkEvents {
     private WallOverlayChunkEvents() {

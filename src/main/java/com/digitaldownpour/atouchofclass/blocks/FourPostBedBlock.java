@@ -38,6 +38,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+import net.minecraft.server.level.ServerLevel;
 
 /** A two wide, two and a half long bed assembled from a two-by-three-by-two grid. */
 public class FourPostBedBlock extends HorizontalDirectionalBlock {
@@ -127,7 +128,7 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
-        if (level.isClientSide) return;
+        if (level.isClientSide()) return;
         Direction facing = state.getValue(FACING);
         for (int height = 0; height < 2; height++) {
             for (Section section : PLACEMENT_ORDER) {
@@ -177,8 +178,9 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
-        if (!level.isClientSide && !replacement.is(this)) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
+        if (!level.isClientSide() && !replacement.is(this)) {
             Direction facing = state.getValue(FACING);
             BlockPos anchor = pos.relative(facing, state.getValue(SECTION).offset())
                     .relative(facing.getCounterClockWise(), state.getValue(SIDE).offset())
@@ -196,7 +198,7 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
                 }
             }
         }
-        super.onRemove(state, level, pos, replacement, moved);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
     private static BlockPos partPos(BlockPos anchor, Direction facing, Section section, Side side, boolean upper) {
@@ -219,7 +221,7 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                                Player player, BlockHitResult hit) {
-        if (level.isClientSide) return InteractionResult.SUCCESS_SERVER;
+        if (level.isClientSide()) return InteractionResult.SUCCESS_SERVER;
 
         Direction facing = state.getValue(FACING);
         Side side = state.getValue(SIDE);
@@ -280,7 +282,7 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
             for (BlockPos candidate : candidates) {
                 Vec3 stand = DismountHelper.findSafeDismountLocation(type, level, candidate, onlySafe);
                 if (stand != null) {
-                    return Optional.of(ServerPlayer.RespawnPosAngle.of(stand, pos));
+                    return Optional.of(ServerPlayer.RespawnPosAngle.of(stand, pos, orientation));
                 }
             }
         }

@@ -31,6 +31,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.EnumMap;
 import java.util.Map;
+import net.minecraft.server.level.ServerLevel;
 
 /** A compact porcelain toilet with a usable seat and a toggleable lid. */
 public class ToiletBlock extends HorizontalDirectionalBlock {
@@ -105,7 +106,7 @@ public class ToiletBlock extends HorizontalDirectionalBlock {
         if (player.isSecondaryUseActive()) {
             return toggleLid(state, level, pos, player);
         }
-        if (level.isClientSide) return InteractionResult.SUCCESS;
+        if (level.isClientSide()) return InteractionResult.SUCCESS;
         if (player.isPassenger()) return InteractionResult.CONSUME;
 
         Direction facing = state.getValue(FACING);
@@ -120,7 +121,7 @@ public class ToiletBlock extends HorizontalDirectionalBlock {
             if (!level.addFreshEntity(seat)) return InteractionResult.FAIL;
         }
 
-        if (!player.startRiding(seat, true)) {
+        if (!player.startRiding(seat, true, true)) {
             seat.discard();
             return InteractionResult.FAIL;
         }
@@ -130,23 +131,24 @@ public class ToiletBlock extends HorizontalDirectionalBlock {
         player.setYBodyRot(yaw);
         player.setOldRot();
         if (player instanceof ServerPlayer serverPlayer) {
-            serverPlayer.connection.send(new ClientboundPlayerRotationPacket(yaw, player.getXRot()));
+            serverPlayer.connection.send(new ClientboundPlayerRotationPacket(yaw, false, player.getXRot(), false));
         }
         return InteractionResult.SUCCESS_SERVER;
     }
 
     @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState replacement, boolean moved) {
-        if (!level.isClientSide && !replacement.is(this)) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        BlockState replacement = level.getBlockState(pos);
+        if (!level.isClientSide() && !replacement.is(this)) {
             level.getEntitiesOfClass(SeatEntity.class, new AABB(pos).inflate(0.25))
                     .forEach(SeatEntity::discard);
         }
-        super.onRemove(state, level, pos, replacement, moved);
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
     private InteractionResult toggleLid(BlockState state, Level level, BlockPos pos, Player player) {
         boolean opening = !state.getValue(OPEN);
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             level.setBlock(pos, state.setValue(OPEN, opening), Block.UPDATE_ALL);
             level.playSound(null, pos,
                     ModSounds.TOILET_LID.value(),

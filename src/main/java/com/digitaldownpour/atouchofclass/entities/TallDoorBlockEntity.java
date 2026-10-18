@@ -5,11 +5,12 @@ import com.digitaldownpour.atouchofclass.ModEntities;
 import com.digitaldownpour.atouchofclass.blocks.TallDoorBlock;
 import com.digitaldownpour.atouchofclass.components.KeyableInfo;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponentMap;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.core.component.DataComponentGetter;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 
 public class TallDoorBlockEntity extends BlockEntity {
     private String keyCode = "";
@@ -55,17 +56,28 @@ public class TallDoorBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
+    public void preRemoveSideEffects(BlockPos pos, BlockState state) {
+        // This runs while the broken section's block entity is still accessible to loot.
+        // Legacy saves may store the key only in the bottom section.
+        if (level != null && state.getValue(TallDoorBlock.PART) != 0
+                && level.getBlockEntity(pos.below(state.getValue(TallDoorBlock.PART))) instanceof TallDoorBlockEntity base) {
+            setKeyableInfo(new KeyableInfo(base.getKeyCode(), base.getKeyableName()));
+        }
+        super.preRemoveSideEffects(pos, state);
+    }
+
+    @Override
+    protected void saveAdditional(ValueOutput tag) {
+        super.saveAdditional(tag);
         tag.putString("keyCode", keyCode);
         tag.putString("keyableName", keyableName);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
-        keyCode = tag.getString("keyCode");
-        keyableName = tag.getString("keyableName");
+    protected void loadAdditional(ValueInput tag) {
+        super.loadAdditional(tag);
+        keyCode = tag.getStringOr("keyCode", "");
+        keyableName = tag.getStringOr("keyableName", "");
     }
 
     @Override
@@ -77,7 +89,7 @@ public class TallDoorBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void applyImplicitComponents(BlockEntity.DataComponentInput input) {
+    protected void applyImplicitComponents(DataComponentGetter input) {
         super.applyImplicitComponents(input);
         KeyableInfo info = input.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE.get());
         if (info != null) {

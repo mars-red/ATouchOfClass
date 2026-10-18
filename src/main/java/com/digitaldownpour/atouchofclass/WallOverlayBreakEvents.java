@@ -17,8 +17,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
 @EventBusSubscriber(
-        modid = ATouchofClass.MODID,
-        bus = EventBusSubscriber.Bus.GAME
+        modid = ATouchofClass.MODID
 )
 public final class WallOverlayBreakEvents {
     private WallOverlayBreakEvents() {

@@ -32,6 +32,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+import net.minecraft.server.level.ServerLevel;
 
 public class TallDoorBlock extends Block implements EntityBlock {
     private static final VoxelShape NORTH_SHAPE =
@@ -53,7 +54,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(PART, 0)
                 .setValue(OPEN, false)
-                .setValue(FACING, net.minecraft.core.Direction.NORTH)
+                .setValue(FACING, Direction.NORTH)
                 .setValue(HINGE, DoorHingeSide.LEFT));
     }
 
@@ -116,7 +117,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
 
     @Override
     public void onPlace(BlockState state, Level world, BlockPos pos, BlockState oldState, boolean isMoving) {
-        if (!world.isClientSide && state.getValue(PART) == 0) {
+        if (!world.isClientSide() && state.getValue(PART) == 0) {
             Direction facing = state.getValue(FACING);
             // Place middle part above
             world.setBlock(
@@ -143,19 +144,11 @@ public class TallDoorBlock extends Block implements EntityBlock {
     }
 
     @Override
-    public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!world.isClientSide && state.getBlock() != newState.getBlock()) {
+    public void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean isMoving) {
+        BlockState newState = world.getBlockState(pos);
+        if (!world.isClientSide() && state.getBlock() != newState.getBlock()) {
             int part = state.getValue(PART);
             BlockPos basePos = pos.below(part); // Calculate bottom position
-
-            // Survival loot is rolled after removal, using the original section's block
-            // entity. Existing doors may only have key data in the bottom section,
-            // so preserve it before recursively removing the rest of the door.
-            if (part != 0
-                    && world.getBlockEntity(basePos) instanceof TallDoorBlockEntity base
-                    && world.getBlockEntity(pos) instanceof TallDoorBlockEntity broken) {
-                broken.setKeyableInfo(new KeyableInfo(base.getKeyCode(), base.getKeyableName()));
-            }
 
             for (int i = 0; i < 3; i++) {
                 if (i == part) continue;
@@ -167,12 +160,12 @@ public class TallDoorBlock extends Block implements EntityBlock {
                 }
             }
         }
-        super.onRemove(state, world, pos, newState, isMoving);
+        super.affectNeighborsAfterRemoval(state, world, pos, isMoving);
     }
 
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             BlockPos basePos = pos.below(state.getValue(PART));
             if (level.getBlockEntity(basePos) instanceof TallDoorBlockEntity be) {
                 String keyCode = be.getKeyCode();
@@ -191,7 +184,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if (stack.getItem() instanceof KeyRingItem) {
-            if (level.isClientSide) return InteractionResult.SUCCESS;
+            if (level.isClientSide()) return InteractionResult.SUCCESS;
             BlockPos basePos = pos.below(state.getValue(PART));
             if (level.getBlockEntity(basePos) instanceof TallDoorBlockEntity be) {
                 String code = be.getKeyCode();
@@ -204,7 +197,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
             }
             return InteractionResult.CONSUME;
         }
-        if (stack.has(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE) && !level.isClientSide) {
+        if (stack.has(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE) && !level.isClientSide()) {
             BlockPos basePos = pos.below(state.getValue(PART));
             if (level.getBlockEntity(basePos) instanceof TallDoorBlockEntity be) {
                 String doorKeyCode = be.getKeyCode();

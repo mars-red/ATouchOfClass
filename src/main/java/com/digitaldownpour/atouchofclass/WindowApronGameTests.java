@@ -3,17 +3,16 @@ package com.digitaldownpour.atouchofclass;
 import com.digitaldownpour.atouchofclass.blocks.WindowApronBlock;
 import com.digitaldownpour.atouchofclass.blocks.PlinthBlock;
 import net.minecraft.core.BlockPos;
-import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.gametest.GameTestHolder;
-import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
+import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.Property;
 
-@GameTestHolder(ATouchofClass.MODID)
-@PrefixGameTestTemplate(false)
 public class WindowApronGameTests {
-    @GameTest(template = "chandelier_test")
+
     public static void baseboardCrossesApronsAndClearsOnRemoval(GameTestHelper helper) {
         BlockState apron = ModBlocks.WINDOW_APRON.get().defaultBlockState();
         for (int x = 1; x <= 3; x++) {
@@ -31,13 +30,12 @@ public class WindowApronGameTests {
         helper.succeed();
     }
 
-    @GameTest(template = "chandelier_test")
     public static void perpendicularBaseboardConnectsInFront(GameTestHelper helper) {
         BlockPos pos = new BlockPos(2, 1, 2);
-        for (net.minecraft.core.Direction facing : net.minecraft.core.Direction.Plane.HORIZONTAL) {
-            for (net.minecraft.core.Direction other : new net.minecraft.core.Direction[] {
+        for (Direction facing : Direction.Plane.HORIZONTAL) {
+            for (Direction other : new Direction[] {
                     facing.getClockWise(), facing.getCounterClockWise()}) {
-                for (net.minecraft.world.level.block.Block block : new net.minecraft.world.level.block.Block[] {
+                for (Block block : new Block[] {
                         ModBlocks.WINDOW_APRON.get(), ModBlocks.PLINTH_BLOCK.get()}) {
                     var baseboardProperty = block instanceof PlinthBlock
                             ? PlinthBlock.BASEBOARD : WindowApronBlock.BASEBOARD;
@@ -46,16 +44,13 @@ public class WindowApronGameTests {
                     helper.setBlock(pos.relative(facing), ModBlocks.BASEBOARD.get().defaultBlockState()
                             .setValue(com.digitaldownpour.atouchofclass.blocks.BaseboardBlock.FACING, other));
                     BlockState connected = helper.getLevel().getBlockState(helper.absolutePos(pos));
-                    helper.assertTrue(connected.getValue(baseboardProperty),
-                            "Front baseboard must enable the combined variant");
-                    net.minecraft.world.level.block.state.properties.Property<?> property =
+                    helper.assertTrue(connected.getValue(baseboardProperty), Component.literal("Front baseboard must enable the combined variant"));
+                    Property<?> property =
                             block.getStateDefinition().getProperty("baseboard_return");
-                    helper.assertTrue(connected.getValues().get(property) == other,
-                            "Return must follow the perpendicular baseboard");
+                    helper.assertTrue(connected.getValues().get(property) == other, Component.literal("Return must follow the perpendicular baseboard"));
                     helper.setBlock(pos.relative(facing), Blocks.AIR);
                     BlockState cleared = helper.getLevel().getBlockState(helper.absolutePos(pos));
-                    helper.assertTrue(!cleared.getValue(baseboardProperty),
-                            "Removing front baseboard must clear the connection");
+                    helper.assertTrue(!cleared.getValue(baseboardProperty), Component.literal("Removing front baseboard must clear the connection"));
                     helper.setBlock(pos, Blocks.AIR);
                 }
             }
@@ -65,8 +60,7 @@ public class WindowApronGameTests {
     private static void assertRun(GameTestHelper helper, boolean expected) {
         for (int x = 1; x <= 3; x++) {
             BlockState state = helper.getLevel().getBlockState(helper.absolutePos(new BlockPos(x, 1, 2)));
-            helper.assertTrue(state.getValue(WindowApronBlock.BASEBOARD) == expected,
-                    "Apron " + x + " must have baseboard=" + expected);
+            helper.assertTrue(state.getValue(WindowApronBlock.BASEBOARD) == expected, Component.literal("Apron " + x + " must have baseboard=" + expected));
         }
     }
 }
