@@ -50,7 +50,7 @@ Use **Survival obtainable**, **Creative only**, and **Acquisition under review**
 - Text review: complete as part of the full-manual author review on October 10, 2026.
 - In-game behavior review: completed, confirmed by the author on October 10, 2026.
 - Screenshot visual review: all five supplied images accepted for the pilot on October 8, 2026. Entrances and both cutter states show the required details. The ring uses its default title; the manifest and alt text now reflect that, and renaming is optional. Its tooltip overlaps empty slots while leaving both keys visible.
-- Capture details: all five PNGs are 856 × 512, including the window frame. The title bar identifies Minecraft NeoForge 1.21.4; exact mod/loader builds and GUI scale were not supplied. Text remains legible at native size. Window frames are retained as supplied; future captures should preferably use the in-game screenshot function to omit desktop window chrome.
+- Capture details: all five PNGs are 856 × 512, including the window frame. These screenshots were captured before the current Minecraft 1.21.9 / NeoForge 21.9.16-beta update; exact original mod/loader builds and GUI scale were not supplied. Text remains legible at native size. Window frames are retained as supplied; future captures should preferably use the in-game screenshot function to omit desktop window chrome.
 - Acceptance: all steps reproduce, images are legible and match their captions, and capture instructions have been revised for any ambiguity.
 
 ## Refresh the reference

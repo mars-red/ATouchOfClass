@@ -19,7 +19,7 @@ Minecraft names that texture `minecraft:block/stripped_oak_log`; vanilla's
 (`stripped_oak_log_top`) or plank textures are used.
 
 Run `generate_preview.py` with Python, Pillow, and NumPy. It reads the local
-Minecraft 1.21.4 client JAR; `MINECRAFT_CLIENT_JAR` can override its location.
+Minecraft client JAR; set `MINECRAFT_CLIENT_JAR` to the Minecraft 1.21.9 client JAR for the current target.
 
 Implemented behavior: placement sits flush against the clicked wall face
 and chooses the hinge from the horizontal click position on that face.

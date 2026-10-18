@@ -14,7 +14,7 @@ Architectural details, furniture, lighting, kitchens, bathrooms, coded tall door
 
 ## Current development target
 
-This checkout targets Minecraft **1.21.4** and NeoForge **21.4.136**. The declared NeoForge minimum is 21.4.136; later builds must still be compatible with Minecraft 1.21.4. The project declares mod version 1.0.0.
+This checkout targets Minecraft **1.21.9** and NeoForge **21.9.16-beta**. The declared NeoForge minimum is 21.9.16-beta; later builds must still be compatible with Minecraft 1.21.9. The project declares mod version 1.0.0.
 
 The manual covers players, server owners, and modpack authors, with a [content catalog](docs/catalog.md) and [recipe reference](docs/recipes.md). Author review of all chapters and sections was completed on October 10, 2026.
 

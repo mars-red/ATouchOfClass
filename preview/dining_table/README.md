@@ -34,7 +34,7 @@ and warped use stripped stem grain. The result is an opaque PNG, so the requeste
 layered appearance needs no runtime transparency. Oak's base color and the
 shared grain opacity are editable constants in `tools/generate_dining_table.py`.
 Variant models inherit the approved oak geometry and override only the texture.
-The generator reads the texture from the local Minecraft 1.21.4 client jar; use
+For the current target, read textures from a local Minecraft 1.21.9 client jar; use
 `--client-jar` to specify another location. Assets are generated ahead of time;
 players do not need Python or Pillow.
 

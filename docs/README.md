@@ -1,6 +1,6 @@
 # A Touch of Class manual
 
-**Manual for the current Minecraft 1.21.4 source tree.** Source review was completed on October 8, 2026; author review of all chapters and sections was completed on October 10, 2026, with only minor changes. All 24 screenshots are integrated, including dining tables and dining chairs supplied on October 16, 2026. The author confirmed completion of the original in-game acceptance checks on October 10, 2026; later additions have their own status in the [verification record](contributing/content-audit.md).
+**Manual for the current Minecraft 1.21.9 source tree.** Source review was completed on October 8, 2026; author review of all chapters and sections was completed on October 10, 2026, with only minor changes. All 24 screenshots are integrated, including dining tables and dining chairs supplied on October 16, 2026. The author confirmed completion of the original in-game acceptance checks on October 10, 2026; later additions have their own status in the [verification record](contributing/content-audit.md).
 
 Start as a [player](getting-started.md), [server owner](server-owners.md), or [modpack author](modpack-authors.md).
 
@@ -8,7 +8,7 @@ Start as a [player](getting-started.md), [server owner](server-owners.md), or [m
 
 1. [Welcome and getting started](getting-started.md)
 2. [Building and architectural details](building.md)
-3. [Tall doors, keys, and access](doors-and-access.md) — pilot images integrated
+3. [Tall doors, keys, and access](doors-and-access.md)
 4. [Furniture and storage](furniture.md)
 5. [Kitchens and bathrooms](kitchens-and-bathrooms.md)
 6. [Lighting and copper finishes](lighting.md)
