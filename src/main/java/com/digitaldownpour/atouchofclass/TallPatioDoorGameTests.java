@@ -54,7 +54,7 @@ public class TallPatioDoorGameTests {
         menu.getSlot(0).set(new ItemStack(ModItems.DOOR_KEY.get()));
         menu.craft(expected.keyCode(), "Patio Key");
         var key = menu.getSlot(1).getItem().copy();
-        helper.assertTrue(expected.keyCode().equals(key.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE).keyCode()), Component.literal("Key cutter must make a matching key"));
+        helper.assertTrue(expected.keyCode().equals(java.util.Objects.requireNonNull(key.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE)).keyCode()), Component.literal("Key cutter must make a matching key"));
         BlockPos base = new BlockPos(2, 2, 2);
         helper.setBlock(base.below(), Blocks.STONE);
         var support = helper.absolutePos(base.below());
@@ -146,7 +146,7 @@ public class TallPatioDoorGameTests {
         var key = ResourceKey.create(Registries.RECIPE, id);
         var holder = level.getServer().getRecipeManager().byKey(key).orElseThrow();
         helper.assertTrue(holder.value() instanceof ShapedRecipe, Component.literal("Patio recipe must load"));
-        var recipe = (ShapedRecipe) holder.value();
+        var recipe = GameTestChecks.requireType(holder.value(), ShapedRecipe.class);
         var wood = new ItemStack(definition.sourceBlock().asItem());
         var glass = new ItemStack(Items.GLASS);
         var input = CraftingInput.of(3, 3,
@@ -167,7 +167,7 @@ public class TallPatioDoorGameTests {
         helper.assertTrue(advancement != null, Component.literal("Patio recipe advancement must load"));
         player.getInventory().add(wood.copy());
         CriteriaTriggers.INVENTORY_CHANGED.trigger(player, player.getInventory(), wood);
-        helper.assertTrue(player.getAdvancements().getOrStartProgress(advancement).isDone()
+        helper.assertTrue(player.getAdvancements().getOrStartProgress(java.util.Objects.requireNonNull(advancement)).isDone()
                 && player.getRecipeBook().contains(key), Component.literal("Acquiring oak planks must unlock the patio recipe"));
     }
 }

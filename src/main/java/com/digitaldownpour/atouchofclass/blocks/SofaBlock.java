@@ -158,8 +158,8 @@ public class SofaBlock extends HorizontalDirectionalBlock {
             if (!level.addFreshEntity(seat)) return InteractionResult.FAIL;
         }
 
-        if (!seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.FAIL;
-        return InteractionResult.SUCCESS_SERVER;
+        if (seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.SUCCESS_SERVER;
+        return InteractionResult.FAIL;
     }
 
     private static void removeSeats(Level level, BlockPos center, Direction facing) {
@@ -236,7 +236,7 @@ public class SofaBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+        return rotate(state, mirror.getRotation(state.getValue(FACING)));
     }
 
     @Override

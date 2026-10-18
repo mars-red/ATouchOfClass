@@ -81,12 +81,7 @@ public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> 
                         ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "key_cutter_button_sprite"),
                         ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "key_cutter_button_sprite_pressed")
                 ),
-                new Button.OnPress() {
-                    @Override
-                    public void onPress(Button button) {
-                        craft();
-                    }
-                },
+                button -> craft(),
                 Component.literal("set key code")
         );
 

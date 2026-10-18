@@ -34,7 +34,7 @@ public class NightstandGameTests {
 
             var blockEntity = helper.getLevel().getBlockEntity(absolutePos);
             helper.assertTrue(blockEntity instanceof NightstandBlockEntity, Component.literal(id + " must create its storage block entity"));
-            NightstandBlockEntity nightstand = (NightstandBlockEntity) blockEntity;
+            NightstandBlockEntity nightstand = GameTestChecks.requireType(blockEntity, NightstandBlockEntity.class);
             helper.assertTrue(nightstand.getContainerSize() == 27, Component.literal(id + " must expose the 27 slots of a single chest"));
             helper.assertTrue(nightstand.createMenu(1, player.getInventory(), player) instanceof ChestMenu, Component.literal(id + " must open the standard three-row chest menu"));
 

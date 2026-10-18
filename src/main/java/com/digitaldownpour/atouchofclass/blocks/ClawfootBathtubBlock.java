@@ -267,16 +267,18 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                                Player player, BlockHitResult hitResult) {
-        return toggleFilled(state, level, pos);
+        toggleFilled(state, level, pos);
+        return InteractionResult.SUCCESS;
     }
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos,
                                           Player player, InteractionHand hand, BlockHitResult hitResult) {
-        return toggleFilled(state, level, pos);
+        toggleFilled(state, level, pos);
+        return InteractionResult.SUCCESS;
     }
 
-    private InteractionResult toggleFilled(BlockState state, Level level, BlockPos pos) {
+    private void toggleFilled(BlockState state, Level level, BlockPos pos) {
         if (!level.isClientSide()) {
             Direction facing = state.getValue(FACING);
             BlockPos footPos = footCenterPos(state, pos);
@@ -297,7 +299,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
                     filled ? ModSounds.BATHTUB_FILL.value() : ModSounds.BATHTUB_DRAIN.value(),
                     SoundSource.BLOCKS, 0.8F, 1.0F);
         }
-        return InteractionResult.SUCCESS;
+
     }
 
     private static BlockPos footCenterPos(BlockState state, BlockPos pos) {
@@ -323,7 +325,7 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+        return rotate(state, mirror.getRotation(state.getValue(FACING)));
     }
 
     @Override

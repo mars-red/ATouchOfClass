@@ -13,6 +13,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemContainerContents;
 
+@SuppressWarnings("resource") // Minecraft owns and closes these shared levels.
 public class KeyRingMenu extends AbstractContainerMenu {
     private final Inventory inventory;
     private final int ringSlot;
@@ -93,8 +94,9 @@ public class KeyRingMenu extends AbstractContainerMenu {
             if (!moveItemStackTo(stack, KeyRingItem.CAPACITY, slots.size(), true)) return ItemStack.EMPTY;
         } else {
             if (!KeyRingItem.isCodedKey(stack)) return ItemStack.EMPTY;
-            while (!stack.isEmpty() && moveItemStackTo(stack, 0, KeyRingItem.CAPACITY, false)) {
+            while (!stack.isEmpty()) {
                 // Vanilla moves into one empty slot per call; each ring slot holds one key.
+                if (!moveItemStackTo(stack, 0, KeyRingItem.CAPACITY, false)) break;
             }
             if (stack.getCount() == original.getCount()) return ItemStack.EMPTY;
         }

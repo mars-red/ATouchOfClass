@@ -82,7 +82,7 @@ public class DiningTableGameTests {
         helper.assertTrue(total == 8, Component.literal("ring must have four outside and four inside corner legs"));
         for (var state : ModBlocks.OAK_DINING_TABLE.get().getStateDefinition().getPossibleStates()) {
             var transformed = state;
-            for (int i = 0; i < 4; i++) transformed = transformed.rotate(Rotation.CLOCKWISE_90);
+            for (int i = 0; i < 4; i++) transformed = transformed.rotate(helper.getLevel(), BlockPos.ZERO, Rotation.CLOCKWISE_90);
             helper.assertTrue(transformed == state, Component.literal("four rotations must restore every connection and leg"));
             for (Mirror mirror : Mirror.values()) helper.assertTrue(state.mirror(mirror).mirror(mirror) == state, Component.literal("two reflections must restore every connection and leg"));
         }
@@ -94,7 +94,7 @@ public class DiningTableGameTests {
         for (var definition : DiningTableVariants.VALUES) {
             var block = ModBlocks.DINING_TABLES.get(definition.id()).get();
             helper.assertTrue(ModItems.DINING_TABLE_ITEMS.get(definition.id()).get().getBlock() == block, Component.literal("each dining-table item must place its matching wood"));
-            helper.assertTrue(block.defaultBlockState().ignitedByLava() == definition.sourceBlock().defaultBlockState().ignitedByLava(), Component.literal("dining tables must inherit their wood's fire behavior"));
+            helper.assertTrue(block.defaultBlockState().ignitedByLava(helper.getLevel(), BlockPos.ZERO, Direction.UP) == definition.sourceBlock().defaultBlockState().ignitedByLava(helper.getLevel(), BlockPos.ZERO, Direction.UP), Component.literal("dining tables must inherit their wood's fire behavior"));
             for (int x = 0; x < 2; x++) for (int z = 0; z < 3; z++) place(helper, x, z, block);
             int total = 0;
             for (int x = 0; x < 2; x++) for (int z = 0; z < 3; z++) total += legs(helper, x, z);

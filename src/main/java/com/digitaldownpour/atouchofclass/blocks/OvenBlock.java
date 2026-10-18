@@ -49,7 +49,7 @@ public class OvenBlock extends AbstractFurnaceBlock {
     @Override
     protected void openContainer(Level level, BlockPos pos, Player player) {
         if (level.getBlockEntity(pos) instanceof OvenBlockEntity oven) {
-            player.openMenu((MenuProvider) oven);
+            player.openMenu(oven);
             player.awardStat(Stats.INTERACT_WITH_FURNACE);
         }
     }

@@ -96,21 +96,21 @@ public class DresserBlockEntity extends RandomizableContainerBlockEntity {
 
     @Override
     public void startOpen(ContainerUser user) {
-        if (!remove && !user.getLivingEntity().isSpectator()) {
-            openersCounter.incrementOpeners(user.getLivingEntity(), getLevel(), getBlockPos(), getBlockState(), user.getContainerInteractionRange());
+        if (level != null && !remove && !user.getLivingEntity().isSpectator()) {
+            openersCounter.incrementOpeners(user.getLivingEntity(), level, getBlockPos(), getBlockState(), user.getContainerInteractionRange());
         }
     }
 
     @Override
     public void stopOpen(ContainerUser user) {
-        if (!remove && !user.getLivingEntity().isSpectator()) {
-            openersCounter.decrementOpeners(user.getLivingEntity(), getLevel(), getBlockPos(), getBlockState());
+        if (level != null && !remove && !user.getLivingEntity().isSpectator()) {
+            openersCounter.decrementOpeners(user.getLivingEntity(), level, getBlockPos(), getBlockState());
         }
     }
 
     public void recheckOpen() {
-        if (!remove) {
-            openersCounter.recheckOpeners(getLevel(), getBlockPos(), getBlockState());
+        if (level != null && !remove) {
+            openersCounter.recheckOpeners(level, getBlockPos(), getBlockState());
         }
     }
 

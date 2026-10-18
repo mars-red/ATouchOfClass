@@ -11,7 +11,6 @@ import net.minecraft.resources.ResourceLocation;
 
 import net.minecraft.world.level.ChunkPos;
 import net.neoforged.neoforge.network.codec.NeoForgeStreamCodecs;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -64,7 +63,7 @@ public record WallOverlayChunkSyncPacket(
     );
 
     @Override
-    public @NotNull Type<? extends CustomPacketPayload> type() {
+    public Type<? extends CustomPacketPayload> type() {
         return TYPE;
     }
 

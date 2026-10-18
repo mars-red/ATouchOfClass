@@ -151,7 +151,7 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
         }
         if (layer != Layer.LOWER) {
             Layer belowLayer = layer == Layer.UPPER ? Layer.MIDDLE : Layer.LOWER;
-            if (!matches(level.getBlockState(pos.below()), facing, belowLayer, side)) return false;
+            return matches(level.getBlockState(pos.below()), facing, belowLayer, side);
         }
         return true;
     }
@@ -243,7 +243,7 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+        return rotate(state, mirror.getRotation(state.getValue(FACING)));
     }
 
     @Override

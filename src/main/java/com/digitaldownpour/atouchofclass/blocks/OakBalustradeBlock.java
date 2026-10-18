@@ -107,9 +107,9 @@ public class OakBalustradeBlock extends HorizontalDirectionalBlock {
         return rising==falling?Slope.FLAT:rising?Slope.LOWER_RIGHT:Slope.LOWER_LEFT;
     }
 
-    private boolean continuing(BlockGetter level,BlockPos pos,Direction side,Direction facing) {
+    private boolean endsAt(BlockGetter level,BlockPos pos,Direction side,Direction facing) {
         BlockState other=level.getBlockState(pos.relative(side));
-        return rail(other)&&other.getValue(FACING)==facing;
+        return !rail(other)||other.getValue(FACING)!=facing;
     }
 
     private BlockState connected(BlockState state,BlockGetter level,BlockPos pos) {
@@ -125,13 +125,13 @@ public class OakBalustradeBlock extends HorizontalDirectionalBlock {
         BlockState back=level.getBlockState(pos.relative(facing.getOpposite()));
         if(rail(back)) {
             Direction other=back.getValue(FACING);
-            if(other.getAxis()!=facing.getAxis()&&!continuing(level,pos,other,facing))
+            if(other.getAxis()!=facing.getAxis()&&endsAt(level,pos,other,facing))
                 return state.setValue(SHAPE,other==right?StairsShape.OUTER_LEFT:StairsShape.OUTER_RIGHT);
         }
         BlockState front=level.getBlockState(pos.relative(facing));
         if(rail(front)) {
             Direction other=front.getValue(FACING);
-            if(other.getAxis()!=facing.getAxis()&&!continuing(level,pos,other.getOpposite(),facing))
+            if(other.getAxis()!=facing.getAxis()&&endsAt(level,pos,other.getOpposite(),facing))
                 return state.setValue(SHAPE,other==right?StairsShape.INNER_LEFT:StairsShape.INNER_RIGHT);
         }
         return state.setValue(SHAPE,StairsShape.STRAIGHT);

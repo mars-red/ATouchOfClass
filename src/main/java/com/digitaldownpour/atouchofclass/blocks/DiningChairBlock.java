@@ -24,8 +24,8 @@ public class DiningChairBlock extends ChairBlock {
 
     @Override protected MapCodec<? extends DiningChairBlock> codec() { return CODEC; }
 
-    @Override public BlockState getStateForPlacement(BlockPlaceContext context) {
-        BlockState state = super.getStateForPlacement(context);
+    @Override public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockState state = defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
         return state.canSurvive(context.getLevel(), context.getClickedPos()) ? state : null;
     }
 
@@ -56,7 +56,7 @@ public class DiningChairBlock extends ChairBlock {
             seat.setYRot(yaw);
             if (!level.addFreshEntity(seat)) return InteractionResult.FAIL;
         }
-        if (!seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.FAIL;
-        return InteractionResult.SUCCESS_SERVER;
+        if (seat.mountFacing(player, state.getValue(FACING))) return InteractionResult.SUCCESS_SERVER;
+        return InteractionResult.FAIL;
     }
 }

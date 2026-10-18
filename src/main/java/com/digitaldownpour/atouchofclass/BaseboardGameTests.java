@@ -64,8 +64,8 @@ public class BaseboardGameTests {
                                 var hit = new BlockHitResult(Vec3.atCenterOf(absoluteSupport), facing, absoluteSupport, false);
                                 var context = new BlockPlaceContext(helper.getLevel(), player, InteractionHand.MAIN_HAND,
                                         new ItemStack(ModBlocks.BASEBOARD.get()), hit);
-                                BlockState placed = ModBlocks.BASEBOARD.get().getStateForPlacement(context);
-                                helper.assertTrue(placed != null && placed.getValue(BaseboardBlock.SHAPE) == expected, Component.literal("placing baseboard next to connected trim must immediately select " + expected));
+                                BlockState placed = java.util.Objects.requireNonNull(ModBlocks.BASEBOARD.get().getStateForPlacement(context));
+                                helper.assertTrue(placed.getValue(BaseboardBlock.SHAPE) == expected, Component.literal("placing baseboard next to connected trim must immediately select " + expected));
                                 helper.setBlock(pos, placed);
                                 if (temporarySupport) helper.setBlock(support, Blocks.AIR);
                             }

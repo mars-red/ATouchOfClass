@@ -81,7 +81,7 @@ public final class RailingModelLoader implements UnbakedModelLoader<BlockModel> 
             if(piece.size()==4) result.add(writeQuad(quad,piece));
             else for(int i=1;i<piece.size()-1;i++) {
                 // Degenerate fourth vertex encodes triangles using Minecraft's quad format.
-                result.add(writeQuad(quad,List.of(piece.get(0),piece.get(i),piece.get(i+1),piece.get(i+1))));
+                result.add(writeQuad(quad,List.of(piece.getFirst(),piece.get(i),piece.get(i+1),piece.get(i+1))));
             }
         }
         return result;

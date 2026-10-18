@@ -119,7 +119,7 @@ public class KitchenSinkGameTests {
             clear(helper, other);
             place(helper, other, front);
             assertType(helper, ORIGIN, ChestType.LEFT);
-            helper.setBlock(other, helper.getBlockState(other).rotate(Rotation.CLOCKWISE_90));
+            helper.setBlock(other, helper.getBlockState(other).rotate(helper.getLevel(), BlockPos.ZERO, Rotation.CLOCKWISE_90));
             assertType(helper, ORIGIN, ChestType.SINGLE);
             clear(helper, ORIGIN, other);
             place(helper, ORIGIN, front);
@@ -140,7 +140,7 @@ public class KitchenSinkGameTests {
             var collision = state.getCollisionShape(helper.getLevel(), helper.absolutePos(ORIGIN));
             helper.assertTrue(shape.min(Direction.Axis.Y) == 0 && collision.min(Direction.Axis.Y) == 0, Component.literal("selection and collision must not extend into the cabinet below"));
             for (Rotation rotation : Rotation.values()) {
-                var rotated = state.rotate(rotation);
+                var rotated = state.rotate(helper.getLevel(), BlockPos.ZERO, rotation);
                 helper.assertTrue(rotated.getValue(KitchenSinkBlock.FACING) == rotation.rotate(front)
                                 && rotated.getValue(KitchenSinkBlock.TYPE) == type, Component.literal("structure rotation must retain the half and turn its facing"));
             }

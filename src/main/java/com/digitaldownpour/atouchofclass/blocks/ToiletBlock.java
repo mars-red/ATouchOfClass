@@ -104,7 +104,8 @@ public class ToiletBlock extends HorizontalDirectionalBlock {
 
     private InteractionResult interact(BlockState state, Level level, BlockPos pos, Player player) {
         if (player.isSecondaryUseActive()) {
-            return toggleLid(state, level, pos, player);
+            toggleLid(state, level, pos, player);
+        return InteractionResult.SUCCESS;
         }
         if (level.isClientSide()) return InteractionResult.SUCCESS;
         if (player.isPassenger()) return InteractionResult.CONSUME;
@@ -146,7 +147,7 @@ public class ToiletBlock extends HorizontalDirectionalBlock {
         super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
-    private InteractionResult toggleLid(BlockState state, Level level, BlockPos pos, Player player) {
+    private void toggleLid(BlockState state, Level level, BlockPos pos, Player player) {
         boolean opening = !state.getValue(OPEN);
         if (!level.isClientSide()) {
             level.setBlock(pos, state.setValue(OPEN, opening), Block.UPDATE_ALL);
@@ -154,7 +155,7 @@ public class ToiletBlock extends HorizontalDirectionalBlock {
                     ModSounds.TOILET_LID.value(),
                     SoundSource.BLOCKS, 0.6F, opening ? 1.15F : 1.0F);
         }
-        return InteractionResult.SUCCESS;
+
     }
 
     @Override

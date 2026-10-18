@@ -98,7 +98,7 @@ public class ElevatorDoorBlock extends Block {
             if (!isDoorBase(level, next, facing)) {
                 break;
             }
-            run.add(0, next);
+            run.addFirst(next);
             cursor = next;
         }
         cursor = basePos;
@@ -153,9 +153,11 @@ public class ElevatorDoorBlock extends Block {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         Direction facing = context.getHorizontalDirection().getOpposite();
-        return super.getStateForPlacement(context)
+        BlockState placement = super.getStateForPlacement(context);
+        if (placement == null) return null;
+        return placement
                 .setValue(FACING, facing)
                 .setValue(SLIDE_STEP, 0)
                 .setValue(PART, 0)

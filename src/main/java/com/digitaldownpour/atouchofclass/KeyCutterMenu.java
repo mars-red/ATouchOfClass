@@ -9,17 +9,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.ItemStackHandler;
-import net.neoforged.neoforge.items.SlotItemHandler;
+import net.minecraft.world.Container;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+@SuppressWarnings("resource") // Minecraft owns and closes these shared levels.
 public class KeyCutterMenu extends AbstractContainerMenu {
-    private HashSet<String> keyableTypes = new HashSet<String>(Arrays.asList(
+    private final HashSet<String> keyableTypes = new HashSet<>(Arrays.asList(
             ATouchofClass.MODID + ":door_key",
             ATouchofClass.MODID + ":tall_oak_door",
             ATouchofClass.MODID + ":tall_spruce_door",
@@ -41,11 +40,11 @@ public class KeyCutterMenu extends AbstractContainerMenu {
 
     // client constructor
     public KeyCutterMenu(int containerId, Inventory playerInv) {
-        this(containerId, playerInv, new ItemStackHandler(1));
+        this(containerId, playerInv, new SimpleContainer(1));
     }
 
     // server constructor
-    public KeyCutterMenu(int containerId, Inventory playerInv, IItemHandler dataInventory) {
+    public KeyCutterMenu(int containerId, Inventory playerInv, Container dataInventory) {
         super(ModMenus.KEY_CUTTER_MENU.get(), containerId);
         PatioDoorVariants.VALUES.forEach(definition -> keyableTypes.add(ATouchofClass.MODID + ":" + definition.id()));
 
@@ -60,15 +59,8 @@ public class KeyCutterMenu extends AbstractContainerMenu {
         });
 
         // Add crafting slots
-        addSlot(new SlotItemHandler(handler, 0, 62, 51)); // slot index, x, y
-        addSlot(new SlotItemHandler(handler, 1, 101, 51)); // slot index, x, y
-
-        new ItemStackHandler(){
-            @Override
-            protected void onContentsChanged(int slot) {
-                super.onContentsChanged(slot);
-            }
-        };
+        addSlot(new Slot(handler, 0, 62, 51)); // slot index, x, y
+        addSlot(new Slot(handler, 1, 101, 51)); // slot index, x, y
 
         // Add player inventory
         for (int row = 0; row < 3; ++row) {
@@ -93,15 +85,15 @@ public class KeyCutterMenu extends AbstractContainerMenu {
             return false;
         }
 
-        ItemStack stack = slots.getFirst().getItem();
+        ItemStack stack = slots.getFirst().getItem().copy();
         stack.set(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE, new KeyableInfo(keyCode, keyableName));
-        slots.get(0).remove(stack.getCount());
+        slots.getFirst().remove(stack.getCount());
         slots.get(1).set(stack);
         return true;
     }
 
     public boolean areSlotsKeyable() {
-        return keyableTypes.contains(slots.get(0).getItem().getItem().toString());
+        return keyableTypes.contains(slots.getFirst().getItem().getItem().toString());
     }
 
     public boolean isOutputEmpty() {
@@ -113,7 +105,7 @@ public class KeyCutterMenu extends AbstractContainerMenu {
         ItemStack movedStack = ItemStack.EMPTY;
         Slot sourceSlot = slots.get(i);
 
-        if (sourceSlot != null && sourceSlot.hasItem()) {
+        if (sourceSlot.hasItem()) {
             ItemStack sourceStack = sourceSlot.getItem();
             movedStack = sourceStack.copy();
 
@@ -144,9 +136,9 @@ public class KeyCutterMenu extends AbstractContainerMenu {
     public void removed(Player player) {
         super.removed(player);
         if (!player.level().isClientSide()) {
-            SimpleContainer remainingItems = new SimpleContainer(handler.getSlots());
-            for (int slot = 0; slot < handler.getSlots(); slot++) {
-                remainingItems.setItem(slot, handler.extractItem(slot, Integer.MAX_VALUE, false));
+            SimpleContainer remainingItems = new SimpleContainer(handler.getContainerSize());
+            for (int slot = 0; slot < handler.getContainerSize(); slot++) {
+                remainingItems.setItem(slot, handler.removeItemNoUpdate(slot));
             }
             // Vanilla cleanup returns items to the inventory and drops any overflow.
             clearContainer(player, remainingItems);

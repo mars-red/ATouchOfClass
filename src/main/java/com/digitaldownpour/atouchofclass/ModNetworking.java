@@ -30,19 +30,19 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
         registrar.playToClient(
                 WallOverlayUpdatePacket.TYPE,
                 WallOverlayUpdatePacket.STREAM_CODEC,
-                (payload, context) -> ClientPayloadHandler.handleDataOnMain(payload, context)
+                ClientPayloadHandler::handleDataOnMain
         );
 
         registrar.playToClient(
                 WallOverlayChunkSyncPacket.TYPE,
                 WallOverlayChunkSyncPacket.STREAM_CODEC,
-                (payload, context) -> ClientPayloadHandler.handleDataOnMain(payload, context)
+                ClientPayloadHandler::handleDataOnMain
         );
 
         registrar.playToClient(
                 OpenElevatorFloorsPayload.TYPE,
                 OpenElevatorFloorsPayload.STREAM_CODEC,
-                (payload, context) -> ClientPayloadHandler.handleDataOnMain(payload, context)
+                ClientPayloadHandler::handleDataOnMain
         );
 
         registrar.playToServer(
@@ -86,7 +86,7 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
     /**
      * Sends a payload to one particular player.
-     *
+     * <p>
      * This is primarily useful for initial chunk snapshots.
      */
     public static void sendToPlayer(

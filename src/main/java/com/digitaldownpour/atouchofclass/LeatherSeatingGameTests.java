@@ -90,14 +90,14 @@ public class LeatherSeatingGameTests {
                             player, CommonListenerCookie.createInitial(player.getGameProfile(), false)) {
                         @Override public void send(Packet<?> packet) {}
                         @Override public void send(Packet<?> packet,
-                                                   ChannelFutureListener listener) {}
+                                                   @org.jetbrains.annotations.Nullable ChannelFutureListener listener) {}
                     };
                     player.setYRot(front.getOpposite().toYRot());
                     player.setYHeadRot(front.getOpposite().toYRot());
                     player.setYBodyRot(front.getOpposite().toYRot());
                     helper.useBlock(cushion, player);
                     helper.assertTrue(player.getVehicle() instanceof SeatEntity, Component.literal("every leather cushion must be usable"));
-                    var seat = (SeatEntity) player.getVehicle();
+                    var seat = GameTestChecks.requireType(player.getVehicle(), SeatEntity.class);
                     helper.assertTrue(!seats.contains(seat), Component.literal("each cushion must have its own independent mount"));
                     seat.tick();
                     helper.assertTrue(!seat.isRemoved() && player.getYRot() == front.toYRot()

@@ -95,7 +95,7 @@ public class KitchenSinkBlock extends HorizontalFurnitureBlock {
             case RIGHT -> ChestType.LEFT;
             default -> ChestType.SINGLE;
         };
-        return state.rotate(mirror.getRotation(state.getValue(FACING))).setValue(TYPE, mirrored);
+        return rotate(state, mirror.getRotation(state.getValue(FACING))).setValue(TYPE, mirrored);
     }
 
     @Override

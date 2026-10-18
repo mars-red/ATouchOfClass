@@ -16,6 +16,8 @@ public class DoorKeyItem extends Item {
         super(properties);
     }
 
+    // Vanilla still calls this item tooltip hook in this Minecraft version.
+    @SuppressWarnings("deprecation")
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         KeyableInfo keyableInfo = stack.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
@@ -23,7 +25,7 @@ public class DoorKeyItem extends Item {
         if (keyableInfo != null) {
             String name = keyableInfo.keyableName();
 
-            if (!(name == null || name.isEmpty())) {
+            if (!name.isEmpty()) {
                 tooltipComponents.accept(Component.literal(name));
             }
         }

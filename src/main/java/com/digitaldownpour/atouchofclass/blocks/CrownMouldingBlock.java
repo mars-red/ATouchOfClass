@@ -86,7 +86,7 @@ public class CrownMouldingBlock extends Block {
         return shape == StairsShape.INNER_LEFT || shape == StairsShape.INNER_RIGHT;
     }
 
-    protected Direction connectionFacing(BlockState neighbor) {
+    protected @org.jetbrains.annotations.Nullable Direction connectionFacing(BlockState neighbor) {
         return neighbor.is(this) ? neighbor.getValue(FACING) : null;
     }
 
@@ -118,7 +118,7 @@ public class CrownMouldingBlock extends Block {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         if (context.getClickedFace().getAxis().isVertical()) return null;
         BlockState state = defaultBlockState().setValue(FACING, context.getClickedFace());
         return state.setValue(SHAPE, cornerShape(state, context.getLevel(), context.getClickedPos()));

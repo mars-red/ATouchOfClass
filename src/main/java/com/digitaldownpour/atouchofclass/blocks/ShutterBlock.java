@@ -107,7 +107,7 @@ public class ShutterBlock extends Block {
         level.setBlock(pos, state.setValue(OPEN, open), Block.UPDATE_ALL);
         for (Direction vertical : new Direction[]{Direction.DOWN, Direction.UP}) {
             BlockPos cursor = pos.relative(vertical);
-            while (level.isInWorldBounds(cursor) && level.hasChunkAt(cursor)) {
+            while (level.isInWorldBounds(cursor) && level.hasChunk(cursor.getX() >> 4, cursor.getZ() >> 4)) {
                 BlockState neighbor = level.getBlockState(cursor);
                 if (!joins(state, neighbor)) break;
                 level.setBlock(cursor, neighbor.setValue(OPEN, open), Block.UPDATE_ALL);

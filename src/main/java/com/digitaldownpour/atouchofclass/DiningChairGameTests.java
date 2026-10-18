@@ -39,7 +39,7 @@ public class DiningChairGameTests {
             player.setYRot(front.getOpposite().toYRot());
             helper.useBlock(POS, player);
             helper.assertTrue(player.getVehicle() instanceof SeatEntity, Component.literal("every wood must seat the player"));
-            var seat = (SeatEntity) player.getVehicle();
+            var seat = GameTestChecks.requireType(player.getVehicle(), SeatEntity.class);
             seat.tick();
             helper.assertTrue(!seat.isRemoved() && player.getYRot() == front.toYRot()
                     && player.getYHeadRot() == front.toYRot() && player.yBodyRot == front.toYRot(), Component.literal("all wood seats must survive ticking and face their visual front"));
@@ -58,7 +58,7 @@ public class DiningChairGameTests {
             }
             helper.useBlock(POS, other);
             helper.assertTrue(other.getVehicle() instanceof SeatEntity, Component.literal("every wood must remain reusable"));
-            seat = (SeatEntity) other.getVehicle();
+            seat = GameTestChecks.requireType(other.getVehicle(), SeatEntity.class);
             other.stopRiding();
             helper.assertTrue(other.blockPosition().equals(pos) && other.getY() > pos.getY() + 10.0 / 16
                     && level.noCollision(other), Component.literal("every wood must use the clear above-seat fallback when surrounded"));
@@ -81,7 +81,7 @@ public class DiningChairGameTests {
             var block = ModBlocks.DINING_CHAIRS.get(definition.id()).get();
             var item = ModItems.DINING_CHAIR_ITEMS.get(definition.id()).get();
             helper.assertTrue(item.getBlock() == block && block.asItem() == item, Component.literal("item must place matching wood"));
-            helper.assertTrue(block.defaultBlockState().ignitedByLava() == definition.sourceBlock().defaultBlockState().ignitedByLava(), Component.literal("chair must match source wood fire behavior"));
+            helper.assertTrue(block.defaultBlockState().ignitedByLava(helper.getLevel(), BlockPos.ZERO, Direction.UP) == definition.sourceBlock().defaultBlockState().ignitedByLava(helper.getLevel(), BlockPos.ZERO, Direction.UP), Component.literal("chair must match source wood fire behavior"));
             var id = ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, definition.id());
             var key = ResourceKey.create(Registries.RECIPE, id);
             var recipe = (ShapedRecipe) level.getServer().getRecipeManager().byKey(key).orElseThrow().value();
@@ -120,7 +120,7 @@ public class DiningChairGameTests {
             helper.setBlock(POS, ModBlocks.OAK_DINING_CHAIR.get().defaultBlockState().setValue(DiningChairBlock.FACING, front));
             var player = helper.makeMockPlayer(GameType.CREATIVE);
             helper.useBlock(POS, player);
-            var seat = (SeatEntity) player.getVehicle();
+            var seat = GameTestChecks.requireType(player.getVehicle(), SeatEntity.class);
             player.stopRiding();
             helper.assertTrue(player.blockPosition().equals(pos.relative(front)), Component.literal("dismount must prefer open floor in front of " + front));
             helper.assertTrue(Math.abs(player.getY() - pos.getY()) < 0.0001 && level.noCollision(player), Component.literal("dismount must place the player outside chair collision without jumping"));
@@ -141,7 +141,7 @@ public class DiningChairGameTests {
             helper.setBlock(POS.relative(front.getClockWise()).above(), Blocks.STONE);
             var player = helper.makeMockPlayer(GameType.CREATIVE);
             helper.useBlock(POS, player);
-            var seat = (SeatEntity) player.getVehicle();
+            var seat = GameTestChecks.requireType(player.getVehicle(), SeatEntity.class);
             player.stopRiding();
             helper.assertTrue(player.blockPosition().equals(pos.relative(front.getCounterClockWise())) && level.noCollision(player), Component.literal("a table in front and wall on the right must leave the clear left exit preferred"));
             seat.tick();
@@ -165,7 +165,7 @@ public class DiningChairGameTests {
             helper.setBlock(POS, ModBlocks.OAK_DINING_CHAIR.get().defaultBlockState().setValue(DiningChairBlock.FACING, front));
             var player = helper.makeMockPlayer(GameType.CREATIVE);
             helper.useBlock(POS, player);
-            var seat = (SeatEntity) player.getVehicle();
+            var seat = GameTestChecks.requireType(player.getVehicle(), SeatEntity.class);
             player.stopRiding();
             helper.assertTrue(player.blockPosition().equals(pos) && player.getY() > pos.getY() + 10.0 / 16, Component.literal("when every side is blocked the player must dismount slightly above the seat"));
             helper.assertTrue(level.noCollision(player), Component.literal("above-seat fallback must clear the seat and the tall back without a jump"));

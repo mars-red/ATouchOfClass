@@ -75,7 +75,7 @@ public class CopperFurnitureGameTests {
             BlockState top = stages[i].defaultBlockState().setValue(CopperLampPostBlock.PART, 2);
             helper.assertTrue(HoneycombItem.getWaxed(top).orElseThrow().getValue(CopperLampPostBlock.PART) == 2, Component.literal("Waxing a lamp post must preserve its section"));
             if (i < stages.length - 1) {
-                helper.assertTrue(((WeatheringCopper) stages[i]).getNext(top).orElseThrow()
+                helper.assertTrue((GameTestChecks.requireType(stages[i], WeatheringCopper.class)).getNext(top).orElseThrow()
                                 .getValue(CopperLampPostBlock.PART) == 2, Component.literal("Oxidizing a lamp post must preserve its section"));
             }
         }
@@ -101,7 +101,7 @@ public class CopperFurnitureGameTests {
             BlockState top = stages[i].defaultBlockState().setValue(CopperFloorLampBlock.PART, 2);
             helper.assertTrue(HoneycombItem.getWaxed(top).orElseThrow().getValue(CopperFloorLampBlock.PART) == 2, Component.literal("Waxing a floor lamp must preserve its section"));
             if (i < stages.length - 1) {
-                helper.assertTrue(((WeatheringCopper) stages[i]).getNext(top).orElseThrow()
+                helper.assertTrue((GameTestChecks.requireType(stages[i], WeatheringCopper.class)).getNext(top).orElseThrow()
                                 .getValue(CopperFloorLampBlock.PART) == 2, Component.literal("Oxidizing a floor lamp must preserve its section"));
             }
         }
@@ -209,7 +209,7 @@ public class CopperFurnitureGameTests {
             }
 
             helper.assertTrue(stage instanceof WeatheringCopper, Component.literal("Every unwaxed copper furniture stage must implement WeatheringCopper"));
-            helper.assertTrue(state.getSoundType() == VANILLA_STAGES[i].defaultBlockState().getSoundType(), Component.literal("Copper furniture must use the matching vanilla copper sound"));
+            helper.assertTrue(state.getSoundType(helper.getLevel(), BlockPos.ZERO, null) == VANILLA_STAGES[i].defaultBlockState().getSoundType(helper.getLevel(), BlockPos.ZERO, null), Component.literal("Copper furniture must use the matching vanilla copper sound"));
             helper.assertTrue(state.getMapColor(helper.getLevel(), mapColorPos)
                             == VANILLA_STAGES[i].defaultBlockState().getMapColor(helper.getLevel(), mapColorPos), Component.literal("Copper furniture must use the matching vanilla copper map color"));
 
@@ -222,7 +222,7 @@ public class CopperFurnitureGameTests {
             }
 
             if (i < stages.length - 1) {
-                BlockState next = ((WeatheringCopper) stage).getNext(state).orElseThrow();
+                BlockState next = (GameTestChecks.requireType(stage, WeatheringCopper.class)).getNext(state).orElseThrow();
                 helper.assertTrue(next.is(stages[i + 1]), Component.literal("Oxidation must advance exactly one finish"));
                 if (oriented) {
                     helper.assertTrue(next.getValue(HorizontalDirectionalBlock.FACING) == Direction.EAST, Component.literal("Oxidizing a sink must preserve its facing"));

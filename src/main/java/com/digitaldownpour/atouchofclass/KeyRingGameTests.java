@@ -58,7 +58,7 @@ public class KeyRingGameTests {
             level.setBlockAndUpdate(base.below(), Blocks.STONE.defaultBlockState());
             if (previouslySaved) {
                 level.setBlockAndUpdate(base, ModBlocks.TALL_BIRCH_DOOR.get().defaultBlockState());
-                var door = (TallDoorBlockEntity) level.getBlockEntity(base);
+                var door = GameTestChecks.requireType(level.getBlockEntity(base), TallDoorBlockEntity.class);
                 // Older worlds only stored the code in the bottom section.
                 var tag = new CompoundTag();
                 tag.putString("keyCode", expected.keyCode());
@@ -113,7 +113,7 @@ public class KeyRingGameTests {
         for (boolean filled : new boolean[] {false, true}) {
             ItemStack ring = new ItemStack(ModItems.KEY_RING.get());
             if (filled) ring.set(DataComponents.CONTAINER, ItemContainerContents.fromItems(List.of(key("front-door", 1))));
-            var contents = ring.get(DataComponents.CONTAINER);
+            var contents = ring.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY);
             var anvil = new AnvilMenu(1, player.getInventory());
             anvil.getSlot(0).set(ring);
             anvil.setItemName("House Keys");
@@ -153,7 +153,7 @@ public class KeyRingGameTests {
         helper.assertTrue(restored.hasNonDefault(DataComponents.CONTAINER), Component.literal("Filled texture state must survive saving"));
         menu.quickMoveStack(player, 15);
         helper.assertTrue(!ring.hasNonDefault(DataComponents.CONTAINER), Component.literal("Removing the last key must restore the empty texture"));
-        helper.assertTrue(ring.get(DataComponents.CONTAINER).equals(ItemContainerContents.EMPTY), Component.literal("Empty slots must normalize to the default container"));
+        helper.assertTrue(ring.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).equals(ItemContainerContents.EMPTY), Component.literal("Empty slots must normalize to the default container"));
         helper.succeed();
     }
 
@@ -175,12 +175,12 @@ public class KeyRingGameTests {
         helper.assertTrue(inventory.getItem(9).getCount() == 4, Component.literal("Full ring must reject more keys"));
         var registries = helper.getLevel().registryAccess();
         ItemStack restored = ItemStack.CODEC.parse(registries.createSerializationContext(NbtOps.INSTANCE), ItemStack.CODEC.encodeStart(registries.createSerializationContext(NbtOps.INSTANCE), ring).getOrThrow()).getOrThrow();
-        helper.assertTrue(restored.get(DataComponents.CONTAINER).nonEmptyStream().count() == 16, Component.literal("Keys must survive serialization"));
+        helper.assertTrue(restored.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).nonEmptyStream().count() == 16, Component.literal("Keys must survive serialization"));
         helper.assertTrue(KeyRingItem.matchesCode(restored, "alpha"), Component.literal("Key codes must survive serialization"));
         menu.removed(player);
         menu = new KeyRingMenu(2, inventory, 0);
         menu.quickMoveStack(player, 0);
-        helper.assertTrue(ring.get(DataComponents.CONTAINER).nonEmptyStream().count() == 15, Component.literal("Removal must persist immediately"));
+        helper.assertTrue(ring.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).nonEmptyStream().count() == 15, Component.literal("Removal must persist immediately"));
         int total = 0;
         for (int i = 0; i < inventory.getContainerSize(); i++) {
             if (inventory.getItem(i).is(ModItems.DOOR_KEY.get())) total += inventory.getItem(i).getCount();
@@ -220,7 +220,7 @@ public class KeyRingGameTests {
         for (int part = 0; part < 3; part++) {
             helper.setBlock(base.above(part), ModBlocks.TALL_BIRCH_DOOR.get().defaultBlockState().setValue(TallDoorBlock.PART, part));
         }
-        var door = (TallDoorBlockEntity) helper.getLevel().getBlockEntity(helper.absolutePos(base));
+        var door = GameTestChecks.requireType(helper.getLevel().getBlockEntity(helper.absolutePos(base)), TallDoorBlockEntity.class);
         door.setKeyableInfo(new KeyableInfo("match", "Test door"));
         ItemStack ring = new ItemStack(ModItems.KEY_RING.get());
         ring.set(DataComponents.CONTAINER, ItemContainerContents.fromItems(List.of(key("wrong", 1), key("match", 1), key("match", 1))));
@@ -266,7 +266,7 @@ public class KeyRingGameTests {
             var pos = basePosAbs.above(part);
             var be = level.getBlockEntity(pos);
             helper.assertTrue(be instanceof TallDoorBlockEntity, Component.literal("Each real-placed part must have a TallDoorBlockEntity: part " + part));
-            helper.assertTrue(((TallDoorBlockEntity) be).getKeyCode().equals("vault-code"), Component.literal("Part " + part + " must carry the code after real placement, got '" + ((TallDoorBlockEntity) be).getKeyCode() + "'"));
+            helper.assertTrue((GameTestChecks.requireType(be, TallDoorBlockEntity.class)).getKeyCode().equals("vault-code"), Component.literal("Part " + part + " must carry the code after real placement, got '" + (GameTestChecks.requireType(be, TallDoorBlockEntity.class)).getKeyCode() + "'"));
         }
 
         for (int part = 0; part < 3; part++) {
@@ -275,7 +275,7 @@ public class KeyRingGameTests {
             var be = level.getBlockEntity(pos);
             List<ItemStack> drops = Block.getDrops(state, level, pos, be);
             helper.assertTrue(drops.size() == 1, Component.literal("Breaking real-placed part " + part + " must drop exactly one item"));
-            KeyableInfo info = drops.get(0).get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
+            KeyableInfo info = drops.getFirst().get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
             helper.assertTrue(info != null && "vault-code".equals(info.keyCode()), Component.literal("Dropped item from real-placed part " + part + " must carry the key code, got " + info));
         }
         helper.succeed();
@@ -289,7 +289,7 @@ public class KeyRingGameTests {
         }
         var level = helper.getLevel();
         var basePosAbs = helper.absolutePos(base);
-        var door = (TallDoorBlockEntity) level.getBlockEntity(basePosAbs);
+        var door = GameTestChecks.requireType(level.getBlockEntity(basePosAbs), TallDoorBlockEntity.class);
         door.setKeyableInfo(new KeyableInfo("vault-code", "Vault Door"));
 
         for (int part = 0; part < 3; part++) {
@@ -297,10 +297,10 @@ public class KeyRingGameTests {
             var state = level.getBlockState(pos);
             var be = level.getBlockEntity(pos);
             helper.assertTrue(be instanceof TallDoorBlockEntity, Component.literal("Each part must keep a TallDoorBlockEntity: part " + part));
-            helper.assertTrue(((TallDoorBlockEntity) be).getKeyCode().equals("vault-code"), Component.literal("Part " + part + " block entity must carry the synced key code"));
+            helper.assertTrue((GameTestChecks.requireType(be, TallDoorBlockEntity.class)).getKeyCode().equals("vault-code"), Component.literal("Part " + part + " block entity must carry the synced key code"));
             List<ItemStack> drops = Block.getDrops(state, level, pos, be);
             helper.assertTrue(drops.size() == 1, Component.literal("Breaking part " + part + " must drop exactly one item"));
-            ItemStack dropped = drops.get(0);
+            ItemStack dropped = drops.getFirst();
             KeyableInfo info = dropped.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
             helper.assertTrue(info != null && "vault-code".equals(info.keyCode()), Component.literal("Dropped item from part " + part + " must carry the key code, got " + info));
         }

@@ -49,7 +49,7 @@ public class RefrigeratorGameTests {
 
         var blockEntity = helper.getLevel().getBlockEntity(absoluteMaster);
         helper.assertTrue(blockEntity instanceof RefrigeratorBlockEntity, Component.literal("the lower-left section must create the refrigerator block entity"));
-        RefrigeratorBlockEntity refrigerator = (RefrigeratorBlockEntity) blockEntity;
+        RefrigeratorBlockEntity refrigerator = GameTestChecks.requireType(blockEntity, RefrigeratorBlockEntity.class);
         helper.assertTrue(refrigerator.getContainerSize() == 54, Component.literal("the refrigerator must have the same 54-slot capacity as a double chest"));
 
         var player = helper.makeMockPlayer(GameType.CREATIVE);

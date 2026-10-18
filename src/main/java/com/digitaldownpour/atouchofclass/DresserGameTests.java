@@ -24,7 +24,7 @@ public class DresserGameTests {
             helper.setBlock(relativePos, dresserHolder.get());
             var blockEntity = helper.getLevel().getBlockEntity(helper.absolutePos(relativePos));
             helper.assertTrue(blockEntity instanceof DresserBlockEntity, Component.literal(dresserHolder.getId() + " must create a dresser block entity"));
-            DresserBlockEntity dresser = (DresserBlockEntity) blockEntity;
+            DresserBlockEntity dresser = GameTestChecks.requireType(blockEntity, DresserBlockEntity.class);
             helper.assertTrue(dresser.getContainerSize() == 54, Component.literal(dresserHolder.getId() + " must expose 54 storage slots"));
             helper.assertTrue(dresser.createMenu(1, player.getInventory(), player) instanceof ChestMenu, Component.literal(dresserHolder.getId() + " must open the six-row chest menu"));
             helper.setBlock(relativePos, Blocks.AIR);
@@ -60,7 +60,7 @@ public class DresserGameTests {
         }
         helper.assertTrue(blockEntityCount == 1, Component.literal("only the lower-left dresser section may own storage"));
 
-        DresserBlockEntity dresser = (DresserBlockEntity) helper.getLevel().getBlockEntity(absoluteAnchor);
+        DresserBlockEntity dresser = GameTestChecks.requireType(helper.getLevel().getBlockEntity(absoluteAnchor), DresserBlockEntity.class);
         dresser.setItem(53, new ItemStack(Items.DIAMOND, 3));
         var saved = dresser.saveWithoutMetadata(helper.getLevel().registryAccess());
         var restored = new DresserBlockEntity(absoluteAnchor, anchorState);

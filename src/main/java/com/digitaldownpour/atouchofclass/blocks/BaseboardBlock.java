@@ -23,7 +23,7 @@ public class BaseboardBlock extends CrownMouldingBlock {
     }
 
     @Override
-    protected Direction connectionFacing(BlockState neighbor) {
+    protected @org.jetbrains.annotations.Nullable Direction connectionFacing(BlockState neighbor) {
         if ((neighbor.getBlock() instanceof PlinthBlock
                 && (neighbor.getValue(CasingBlock.EDGE) == CasingBlock.Edge.LEFT
                 || neighbor.getValue(CasingBlock.EDGE) == CasingBlock.Edge.RIGHT))

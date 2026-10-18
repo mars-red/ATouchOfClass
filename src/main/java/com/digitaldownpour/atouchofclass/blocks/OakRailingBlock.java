@@ -304,7 +304,7 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        BlockState mirrored = state.rotate(mirror.getRotation(state.getValue(FACING)));
+        BlockState mirrored = rotate(state, mirror.getRotation(state.getValue(FACING)));
         return mirror == Mirror.NONE ? mirrored : mirrored.setValue(SLOPE, state.getValue(SLOPE).reversed());
     }
 

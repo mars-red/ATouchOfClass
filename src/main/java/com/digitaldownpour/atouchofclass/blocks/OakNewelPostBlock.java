@@ -34,7 +34,7 @@ public class OakNewelPostBlock extends HorizontalDirectionalBlock {
         BlockState state=defaultBlockState().setValue(FACING,facing);
         return state.canSurvive(level,pos) && level.isUnobstructed(state.setValue(HALF,DoubleBlockHalf.UPPER),pos.above(),CollisionContext.empty())?state:null;
     }
-    @Override public void setPlacedBy(Level level,BlockPos pos,BlockState state,LivingEntity placer,ItemStack stack) {
+    @Override public void setPlacedBy(Level level,BlockPos pos,BlockState state,@Nullable LivingEntity placer,ItemStack stack) {
         level.setBlock(pos.above(),state.setValue(HALF,DoubleBlockHalf.UPPER),Block.UPDATE_ALL);
     }
     @Override protected boolean canSurvive(BlockState state,LevelReader level,BlockPos pos) {

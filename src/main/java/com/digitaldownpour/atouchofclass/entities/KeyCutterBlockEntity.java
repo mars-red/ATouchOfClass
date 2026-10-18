@@ -11,15 +11,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import net.minecraft.world.SimpleContainer;
 import org.jetbrains.annotations.Nullable;
 
 public class KeyCutterBlockEntity extends BlockEntity implements MenuProvider {
-    public final ItemStackHandler items = new ItemStackHandler(2){
+    public final SimpleContainer items = new SimpleContainer(2){
         @Override
-        protected void onContentsChanged(int slot) {
-            setChanged();
-            if (!level.isClientSide()) {
+        public void setChanged() {
+            super.setChanged();
+            KeyCutterBlockEntity.this.setChanged();
+            if (level != null && !level.isClientSide()) {
                 level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 2);
             }
         }
@@ -29,7 +30,7 @@ public class KeyCutterBlockEntity extends BlockEntity implements MenuProvider {
         super(ModEntities.KEY_CUTTER_BE.get(), pos, blockState);
     }
 
-    public ItemStackHandler getItems()
+    public SimpleContainer getItems()
     {
         return items;
     }

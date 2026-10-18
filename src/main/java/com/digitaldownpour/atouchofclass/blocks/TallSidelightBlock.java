@@ -74,10 +74,12 @@ public class TallSidelightBlock extends Block {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         Direction facing = context.getHorizontalDirection().getOpposite();
 
-        return super.getStateForPlacement(context)
+        BlockState placement = super.getStateForPlacement(context);
+        if (placement == null) return null;
+        return placement
                 .setValue(FACING, facing)
                 .setValue(PART, 0);
     }
@@ -125,7 +127,7 @@ public class TallSidelightBlock extends Block {
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         int part = state.getValue(PART);
         if (part == 0) {
-            return level.getBlockState(pos.below()).isSolid();
+            return level.getBlockState(pos.below()).isFaceSturdy(level, pos.below(), Direction.UP);
         } else {
             BlockState belowState = level.getBlockState(pos.below());
             return belowState.is(this)

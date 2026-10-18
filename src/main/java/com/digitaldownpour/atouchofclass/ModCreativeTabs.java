@@ -23,9 +23,8 @@ public class ModCreativeTabs {
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.atouchofclass.a_touch_of_class"))
                     .icon(TAB_ICON::toStack)
-                    .displayItems((parameters, output) -> {
-                        ModItems.ITEMS.getEntries().forEach(entry -> output.accept(entry.get()));
-                    })
+                    .displayItems((parameters, output) ->
+                        ModItems.ITEMS.getEntries().forEach(entry -> output.accept(entry.get())))
                     .build());
 
     public static void register(IEventBus eventBus) {

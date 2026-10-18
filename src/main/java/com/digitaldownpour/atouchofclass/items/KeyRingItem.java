@@ -30,10 +30,12 @@ public class KeyRingItem extends Item {
         return stack.is(ModItems.DOOR_KEY.get()) && info != null && !info.keyCode().isEmpty();
     }
 
-    public static boolean matchesCode(ItemStack ring, String code) {
+    public static boolean matchesCode(ItemStack ring, @org.jetbrains.annotations.Nullable String code) {
         return code != null && !code.isEmpty() && ring.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
-                .stream().limit(CAPACITY).anyMatch(key -> isCodedKey(key)
-                        && code.equals(key.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE).keyCode()));
+                .stream().limit(CAPACITY).anyMatch(key -> {
+                    var info = key.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
+                    return key.is(ModItems.DOOR_KEY.get()) && info != null && code.equals(info.keyCode());
+                });
     }
 
     @Override
@@ -47,6 +49,8 @@ public class KeyRingItem extends Item {
         return InteractionResult.SUCCESS;
     }
 
+    // Vanilla still calls this item tooltip hook in this Minecraft version.
+    @SuppressWarnings("deprecation")
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltip, TooltipFlag flag) {
         long count = stack.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).nonEmptyStream().count();

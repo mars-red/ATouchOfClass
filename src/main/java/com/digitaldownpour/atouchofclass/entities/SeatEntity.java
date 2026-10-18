@@ -21,6 +21,7 @@ import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 
 /** Invisible, non-persistent mount used by seats and toilets. */
+@SuppressWarnings("resource") // Minecraft owns and closes these shared levels.
 public class SeatEntity extends Entity {
     public SeatEntity(EntityType<? extends SeatEntity> type, Level level) {
         super(type, level);

@@ -104,11 +104,13 @@ public class TallDoorBlock extends Block implements EntityBlock {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         Direction facing = context.getHorizontalDirection().getOpposite();
         DoorHingeSide hinge = determineHinge(context, facing);
 
-        return super.getStateForPlacement(context)
+        BlockState placement = super.getStateForPlacement(context);
+        if (placement == null) return null;
+        return placement
                 .setValue(FACING, facing)
                 .setValue(HINGE, hinge)
                 .setValue(OPEN, false)
@@ -169,7 +171,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
             BlockPos basePos = pos.below(state.getValue(PART));
             if (level.getBlockEntity(basePos) instanceof TallDoorBlockEntity be) {
                 String keyCode = be.getKeyCode();
-                if (keyCode == null || keyCode.isEmpty()) {
+                if (keyCode.isEmpty()) {
                     toggleDoor(level, basePos);
                     return InteractionResult.SUCCESS_SERVER;
                 }
@@ -188,7 +190,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
             BlockPos basePos = pos.below(state.getValue(PART));
             if (level.getBlockEntity(basePos) instanceof TallDoorBlockEntity be) {
                 String code = be.getKeyCode();
-                if (code == null || code.isEmpty()
+                if (code.isEmpty()
                         || KeyRingItem.matchesCode(stack, code)) {
                     toggleDoor(level, basePos);
                     return InteractionResult.SUCCESS;
@@ -197,12 +199,13 @@ public class TallDoorBlock extends Block implements EntityBlock {
             }
             return InteractionResult.CONSUME;
         }
-        if (stack.has(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE) && !level.isClientSide()) {
+        var keyInfo = stack.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
+        if (keyInfo != null && !level.isClientSide()) {
             BlockPos basePos = pos.below(state.getValue(PART));
             if (level.getBlockEntity(basePos) instanceof TallDoorBlockEntity be) {
                 String doorKeyCode = be.getKeyCode();
-                String keyCode = stack.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE).keyCode();
-                if (doorKeyCode == null || doorKeyCode.isEmpty() || doorKeyCode.equals(keyCode)) {
+                String keyCode = keyInfo.keyCode();
+                if (doorKeyCode.isEmpty() || doorKeyCode.equals(keyCode)) {
                     toggleDoor(level, basePos);
                     return InteractionResult.SUCCESS_SERVER;
                 }
@@ -284,7 +287,7 @@ public class TallDoorBlock extends Block implements EntityBlock {
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         int part = state.getValue(PART);
         if (part == 0) {
-            return level.getBlockState(pos.below()).isSolid();
+            return level.getBlockState(pos.below()).isFaceSturdy(level, pos.below(), Direction.UP);
         } else {
             BlockState belowState = level.getBlockState(pos.below());
             return belowState.is(this)

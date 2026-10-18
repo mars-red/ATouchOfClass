@@ -15,7 +15,7 @@ public class ClientWallOverlayData {
         return store.getChunks();
     }
 
-    public static void setFace(BlockPos pos, Direction face, ResourceLocation texture) {
+    public static void setFace(BlockPos pos, Direction face, @org.jetbrains.annotations.Nullable ResourceLocation texture) {
         store.setFace(pos, face, texture);
     }
 

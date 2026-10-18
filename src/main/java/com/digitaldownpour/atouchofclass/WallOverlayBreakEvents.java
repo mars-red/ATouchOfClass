@@ -80,7 +80,7 @@ public final class WallOverlayBreakEvents {
             ServerLevel level,
             BlockPos pos,
             ResourceLocation texture,
-            Player player
+            @org.jetbrains.annotations.Nullable Player player
     ) {
         if (player != null && player.getAbilities().instabuild) {
             return;

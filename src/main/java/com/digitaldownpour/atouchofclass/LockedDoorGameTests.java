@@ -31,7 +31,7 @@ public class LockedDoorGameTests {
         for (var door : new TallDoorBlock[] {ModBlocks.TALL_OAK_DOOR.get(), ModBlocks.TALL_OAK_PATIO_DOOR.get()}) {
             level.setBlockAndUpdate(base.below(), Blocks.STONE.defaultBlockState());
             level.setBlockAndUpdate(base, door.defaultBlockState());
-            var blockEntity = (TallDoorBlockEntity) level.getBlockEntity(base);
+            var blockEntity = GameTestChecks.requireType(level.getBlockEntity(base), TallDoorBlockEntity.class);
             blockEntity.setKeyableInfo(new KeyableInfo("locked-code", "Locked Door"));
 
             for (int part = 0; part < 3; part++) {

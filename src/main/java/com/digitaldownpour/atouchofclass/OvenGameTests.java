@@ -22,12 +22,12 @@ public class OvenGameTests {
         helper.setBlock(relativePos, unlitState);
 
         helper.assertTrue(helper.getLevel().getBlockEntity(absolutePos) instanceof OvenBlockEntity, Component.literal("the oven must create its furnace block entity"));
-        OvenBlockEntity oven = (OvenBlockEntity) helper.getLevel().getBlockEntity(absolutePos);
+        OvenBlockEntity oven = GameTestChecks.requireType(helper.getLevel().getBlockEntity(absolutePos), OvenBlockEntity.class);
         helper.assertTrue(oven.getContainerSize() == 3, Component.literal("the oven must have the vanilla furnace input, fuel, and output slots"));
 
         var player = helper.makeMockPlayer(GameType.CREATIVE);
         helper.assertTrue(oven.createMenu(1, player.getInventory(), player) instanceof FurnaceMenu, Component.literal("the oven must open the vanilla furnace interface"));
-        helper.assertTrue(!unlitState.getValue(OvenBlock.LIT) && unlitState.getLightEmission() == 0, Component.literal("an idle oven must not emit light"));
+        helper.assertTrue(!unlitState.getValue(OvenBlock.LIT) && unlitState.getLightEmission(helper.getLevel(), BlockPos.ZERO) == 0, Component.literal("an idle oven must not emit light"));
 
         oven.setItem(0, new ItemStack(Items.RAW_IRON));
         oven.setItem(1, new ItemStack(Items.COAL));
@@ -35,7 +35,7 @@ public class OvenGameTests {
 
         var litState = helper.getLevel().getBlockState(absolutePos);
         helper.assertTrue(litState.getValue(OvenBlock.LIT), Component.literal("fuel and a valid smelting recipe must light the oven"));
-        helper.assertTrue(litState.getLightEmission() == 13, Component.literal("a burning oven must emit the same level 13 light as a vanilla furnace"));
+        helper.assertTrue(litState.getLightEmission(helper.getLevel(), BlockPos.ZERO) == 13, Component.literal("a burning oven must emit the same level 13 light as a vanilla furnace"));
         helper.succeed();
     }
 }

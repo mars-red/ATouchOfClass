@@ -112,6 +112,7 @@ public class ModEntities {
         ENTITY_TYPES.register(eventBus);
     }
 
+    @SuppressWarnings("EmptyMethod") // Reserved callback; creative contents come from ModCreativeTabs.
     private static void addCreative(BuildCreativeModeTabContentsEvent event) {
     }
 }

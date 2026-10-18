@@ -36,7 +36,7 @@ public class ChandelierGameTests {
         for (int i = 0; i < stages.length; i++) {
             BlockState state = stages[i].defaultBlockState();
             BlockState waxed = HoneycombItem.getWaxed(state).orElseThrow();
-            helper.assertTrue(state.getLightEmission() == 15 && waxed.getLightEmission() == 15, Component.literal("All chandelier finishes must emit level 15"));
+            helper.assertTrue(state.getLightEmission(helper.getLevel(), BlockPos.ZERO) == 15 && waxed.getLightEmission(helper.getLevel(), BlockPos.ZERO) == 15, Component.literal("All chandelier finishes must emit level 15"));
             helper.assertTrue(DataMapHooks.getBlockUnwaxed(waxed.getBlock()) == stages[i], Component.literal("Wax removal must restore the same finish"));
             helper.assertFalse(waxed.isRandomlyTicking(), Component.literal("Waxed chandelier must not age"));
             if (i < 3) helper.assertTrue(WeatheringCopper.getNext(stages[i]).orElseThrow() == stages[i + 1], Component.literal("Oxidation must advance one stage"));

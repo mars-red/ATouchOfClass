@@ -4,7 +4,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.context.UseOnContext;
-import org.jetbrains.annotations.NotNull;
 
 /** A decorative block-face overlay with configurable surface placement. */
 public class WallFinishItem extends BlockOverlayItemBase {
@@ -16,7 +15,7 @@ public class WallFinishItem extends BlockOverlayItemBase {
     }
 
     @Override
-    public @NotNull InteractionResult useOn(UseOnContext context) {
+    public InteractionResult useOn(UseOnContext context) {
         if (!placement.allows(context.getClickedFace())) {
             return InteractionResult.PASS;
         }

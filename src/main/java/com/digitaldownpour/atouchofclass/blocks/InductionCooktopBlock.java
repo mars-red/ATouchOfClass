@@ -38,7 +38,7 @@ public class InductionCooktopBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         Direction facing = context.getHorizontalDirection().getOpposite();
         ChestType type = ChestType.SINGLE;
         if (candidatePartnerFacing(context, facing.getClockWise()) == facing) {
@@ -49,7 +49,7 @@ public class InductionCooktopBlock extends HorizontalDirectionalBlock {
         return defaultBlockState().setValue(FACING, facing).setValue(TYPE, type);
     }
 
-    private Direction candidatePartnerFacing(BlockPlaceContext context, Direction direction) {
+    private @org.jetbrains.annotations.Nullable Direction candidatePartnerFacing(BlockPlaceContext context, Direction direction) {
         BlockState neighbor = context.getLevel().getBlockState(context.getClickedPos().relative(direction));
         return neighbor.is(this) && neighbor.getValue(TYPE) == ChestType.SINGLE
                 ? neighbor.getValue(FACING) : null;
@@ -95,7 +95,7 @@ public class InductionCooktopBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        BlockState rotated = state.rotate(mirror.getRotation(state.getValue(FACING)));
+        BlockState rotated = rotate(state, mirror.getRotation(state.getValue(FACING)));
         return mirror == Mirror.NONE ? rotated : rotated.setValue(TYPE, rotated.getValue(TYPE).getOpposite());
     }
 

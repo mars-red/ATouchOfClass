@@ -1148,19 +1148,26 @@ public class ModBlocks {
         return dresser;
     }
 
+    // Registration has no world or position: intentionally copy the material's default values.
+    @SuppressWarnings("deprecation")
+    private static BlockBehaviour.Properties furnitureProperties(Block source, net.minecraft.resources.ResourceLocation registryName) {
+        BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .mapColor(source.defaultMapColor())
+                .strength(source.defaultDestroyTime(), source.getExplosionResistance())
+                .sound(source.defaultBlockState().getSoundType())
+                .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                .noOcclusion();
+        if (source.defaultBlockState().ignitedByLava()) properties.ignitedByLava();
+        return properties;
+    }
+
     private static java.util.Map<String, DeferredBlock<DiningChairBlock>> registerDiningChairs() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<DiningChairBlock>>();
         DiningChairVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
                 BLOCKS.register(definition.id(), registryName -> {
                     Block source = definition.sourceBlock();
-                    BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
-                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                            .mapColor(source.defaultMapColor())
-                            .strength(source.defaultDestroyTime(), source.getExplosionResistance())
-                            .sound(source.defaultBlockState().getSoundType())
-                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
-                            .noOcclusion();
-                    if (source.defaultBlockState().ignitedByLava()) properties.ignitedByLava();
+                    BlockBehaviour.Properties properties = furnitureProperties(source, registryName);
                     return new DiningChairBlock(properties);
                 })));
         return java.util.Collections.unmodifiableMap(blocks);
@@ -1171,14 +1178,7 @@ public class ModBlocks {
         DiningTableVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
                 BLOCKS.register(definition.id(), registryName -> {
                     Block source = definition.sourceBlock();
-                    BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
-                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                            .mapColor(source.defaultMapColor())
-                            .strength(source.defaultDestroyTime(), source.getExplosionResistance())
-                            .sound(source.defaultBlockState().getSoundType())
-                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
-                            .noOcclusion();
-                    if (source.defaultBlockState().ignitedByLava()) properties.ignitedByLava();
+                    BlockBehaviour.Properties properties = furnitureProperties(source, registryName);
                     return new DiningTableBlock(properties);
                 })));
         return java.util.Collections.unmodifiableMap(blocks);
@@ -1189,16 +1189,7 @@ public class ModBlocks {
         SideTableVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
                 BLOCKS.register(definition.id(), registryName -> {
                     Block source = definition.sourceBlock();
-                    BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
-                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                            .mapColor(source.defaultMapColor())
-                            .strength(source.defaultDestroyTime(), source.getExplosionResistance())
-                            .sound(source.defaultBlockState().getSoundType())
-                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
-                            .noOcclusion();
-                    if (source.defaultBlockState().ignitedByLava()) {
-                        properties.ignitedByLava();
-                    }
+                    BlockBehaviour.Properties properties = furnitureProperties(source, registryName);
                     return new SideTableBlock(properties);
                 })));
         return java.util.Collections.unmodifiableMap(blocks);
@@ -1209,16 +1200,7 @@ public class ModBlocks {
         NightstandVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
                 BLOCKS.register(definition.id(), registryName -> {
                     Block source = definition.sourceBlock();
-                    BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
-                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                            .mapColor(source.defaultMapColor())
-                            .strength(source.defaultDestroyTime(), source.getExplosionResistance())
-                            .sound(source.defaultBlockState().getSoundType())
-                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
-                            .noOcclusion();
-                    if (source.defaultBlockState().ignitedByLava()) {
-                        properties.ignitedByLava();
-                    }
+                    BlockBehaviour.Properties properties = furnitureProperties(source, registryName);
                     return new NightstandBlock(properties);
                 })));
         return java.util.Collections.unmodifiableMap(blocks);
@@ -1785,6 +1767,7 @@ public class ModBlocks {
                 .noOcclusion()));
     }
 
+    @SuppressWarnings("EmptyMethod") // Reserved callback; creative contents come from ModCreativeTabs.
     private static void addCreative(BuildCreativeModeTabContentsEvent event) {
     }
 }

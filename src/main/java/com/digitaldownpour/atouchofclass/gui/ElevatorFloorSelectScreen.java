@@ -25,6 +25,7 @@ public class ElevatorFloorSelectScreen extends Screen {
 
     private final BlockPos controlPos;
     private final List<Integer> floorIndices;
+    @SuppressWarnings("FieldCanBeLocal") // Retained as screen state for the current floor.
     private final int currentFloorIndex;
 
     public ElevatorFloorSelectScreen(BlockPos controlPos, List<Integer> floorIndices, int currentFloorIndex) {

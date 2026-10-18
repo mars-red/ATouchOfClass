@@ -26,7 +26,7 @@ public class CabinetGameTests {
 
             var blockEntity = helper.getLevel().getBlockEntity(helper.absolutePos(relativePos));
             helper.assertTrue(blockEntity instanceof CabinetBlockEntity, Component.literal(cabinetHolder.getId() + " must create a cabinet block entity"));
-            CabinetBlockEntity cabinet = (CabinetBlockEntity) blockEntity;
+            CabinetBlockEntity cabinet = GameTestChecks.requireType(blockEntity, CabinetBlockEntity.class);
 
             helper.assertTrue(cabinet.getContainerSize() == 27, Component.literal(cabinetHolder.getId() + " must expose 27 storage slots"));
             helper.assertTrue(cabinet.createMenu(1, player.getInventory(), player) instanceof ChestMenu, Component.literal(cabinetHolder.getId() + " must open the standard chest menu"));

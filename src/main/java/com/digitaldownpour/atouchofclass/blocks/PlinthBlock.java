@@ -44,8 +44,9 @@ public class PlinthBlock extends CasingBlock {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return withBaseboard(super.getStateForPlacement(context), context.getLevel(), context.getClickedPos());
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockState state = super.getStateForPlacement(context);
+        return state == null ? null : withBaseboard(state, context.getLevel(), context.getClickedPos());
     }
 
     @Override

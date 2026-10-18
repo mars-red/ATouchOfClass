@@ -165,7 +165,7 @@ public class ShutterGameTests {
             var key = ResourceKey.create(Registries.RECIPE, id);
             var holder = level.getServer().getRecipeManager().byKey(key).orElseThrow();
             helper.assertTrue(holder.value() instanceof ShapedRecipe, Component.literal("Shutter recipe must load"));
-            var recipe = (ShapedRecipe) holder.value();
+            var recipe = GameTestChecks.requireType(holder.value(), ShapedRecipe.class);
             var wood = new ItemStack(definition.sourceBlock().asItem());
             var stick = new ItemStack(Items.STICK);
             var input = CraftingInput.of(3, 2,
@@ -185,7 +185,7 @@ public class ShutterGameTests {
             helper.assertTrue(advancement != null, Component.literal("Shutter unlock advancement must load"));
             player.getInventory().add(wood.copy());
             CriteriaTriggers.INVENTORY_CHANGED.trigger(player, player.getInventory(), wood);
-            helper.assertTrue(player.getAdvancements().getOrStartProgress(advancement).isDone()
+            helper.assertTrue(player.getAdvancements().getOrStartProgress(java.util.Objects.requireNonNull(advancement)).isDone()
                     && player.getRecipeBook().contains(key), Component.literal("Matching planks must unlock " + definition.id()));
         }
         helper.succeed();

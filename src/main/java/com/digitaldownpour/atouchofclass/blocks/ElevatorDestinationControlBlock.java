@@ -51,7 +51,9 @@ public class ElevatorDestinationControlBlock extends Block {
         if (pos.getY() >= level.getMaxY() || !level.getBlockState(pos.above()).canBeReplaced(context)) {
             return null;
         }
-        return super.getStateForPlacement(context)
+        BlockState placement = super.getStateForPlacement(context);
+        if (placement == null) return null;
+        return placement
                 .setValue(FACING, context.getHorizontalDirection().getOpposite())
                 .setValue(PART, 0);
     }

@@ -74,7 +74,7 @@ public class WindowApronBlock extends CasingBlock {
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         Direction clickedFace = context.getClickedFace();
         BlockPos target = context.replacingClickedOnBlock() ? context.getClickedPos()
                 : context.getClickedPos().relative(clickedFace.getOpposite());

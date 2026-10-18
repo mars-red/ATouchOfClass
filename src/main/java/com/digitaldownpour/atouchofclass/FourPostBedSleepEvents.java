@@ -20,6 +20,7 @@ public final class FourPostBedSleepEvents {
         if (event.getEntity() instanceof LivingEntity sleeper) alignSleeper(sleeper);
     }
 
+    @SuppressWarnings("resource") // The world belongs to Minecraft, not this callback.
     public static void alignSleeper(LivingEntity sleeper) {
         if (!sleeper.isSleeping()) return;
         var sleepingPos = sleeper.getSleepingPos();
