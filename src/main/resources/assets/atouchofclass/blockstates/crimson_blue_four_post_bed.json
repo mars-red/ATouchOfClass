@@ -2,387 +2,387 @@
   "variants": {
     "facing=north,section=head,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_lower",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=head,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_lower",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=head,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_lower",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=head,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_lower",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=head,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_lower",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=head,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_lower",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=head,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_lower",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=head,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_lower",
-      "y": 270
+      "y": 90
     },
     "facing=north,section=head,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_upper",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=head,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_upper",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=head,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_upper",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=head,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_upper",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=head,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_upper",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=head,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_upper",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=head,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_upper",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=head,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_left_upper",
-      "y": 270
+      "y": 90
     },
     "facing=north,section=head,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_lower",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=head,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_lower",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=head,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_lower",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=head,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_lower",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=head,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_lower",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=head,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_lower",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=head,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_lower",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=head,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_lower",
-      "y": 270
+      "y": 90
     },
     "facing=north,section=head,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_upper",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=head,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_upper",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=head,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_upper",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=head,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_upper",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=head,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_upper",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=head,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_upper",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=head,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_upper",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=head,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_head_right_upper",
-      "y": 270
+      "y": 90
     },
     "facing=north,section=middle,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_lower",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=middle,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_lower",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=middle,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_lower",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=middle,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_lower",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=middle,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_lower",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=middle,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_lower",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=middle,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_lower",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=middle,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_lower",
-      "y": 270
+      "y": 90
     },
     "facing=north,section=middle,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_upper",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=middle,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_upper",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=middle,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_upper",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=middle,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_upper",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=middle,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_upper",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=middle,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_upper",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=middle,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_upper",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=middle,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_left_upper",
-      "y": 270
+      "y": 90
     },
     "facing=north,section=middle,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_lower",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=middle,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_lower",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=middle,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_lower",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=middle,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_lower",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=middle,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_lower",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=middle,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_lower",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=middle,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_lower",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=middle,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_lower",
-      "y": 270
+      "y": 90
     },
     "facing=north,section=middle,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_upper",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=middle,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_upper",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=middle,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_upper",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=middle,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_upper",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=middle,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_upper",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=middle,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_upper",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=middle,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_upper",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=middle,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_middle_right_upper",
-      "y": 270
+      "y": 90
     },
     "facing=north,section=foot,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_lower",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=foot,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_lower",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=foot,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_lower",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=foot,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_lower",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=foot,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_lower",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=foot,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_lower",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=foot,side=left,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_lower",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=foot,side=left,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_lower",
-      "y": 270
+      "y": 90
     },
     "facing=north,section=foot,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_upper",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=foot,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_upper",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=foot,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_upper",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=foot,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_upper",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=foot,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_upper",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=foot,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_upper",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=foot,side=left,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_upper",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=foot,side=left,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_left_upper",
-      "y": 270
+      "y": 90
     },
     "facing=north,section=foot,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_lower",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=foot,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_lower",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=foot,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_lower",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=foot,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_lower",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=foot,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_lower",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=foot,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_lower",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=foot,side=right,upper=false,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_lower",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=foot,side=right,upper=false,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_lower",
-      "y": 270
+      "y": 90
     },
     "facing=north,section=foot,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_upper",
-      "y": 0
+      "y": 180
     },
     "facing=north,section=foot,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_upper",
-      "y": 0
+      "y": 180
     },
     "facing=east,section=foot,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_upper",
-      "y": 90
+      "y": 270
     },
     "facing=east,section=foot,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_upper",
-      "y": 90
+      "y": 270
     },
     "facing=south,section=foot,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_upper",
-      "y": 180
+      "y": 0
     },
     "facing=south,section=foot,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_upper",
-      "y": 180
+      "y": 0
     },
     "facing=west,section=foot,side=right,upper=true,occupied=false": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_upper",
-      "y": 270
+      "y": 90
     },
     "facing=west,section=foot,side=right,upper=true,occupied=true": {
       "model": "atouchofclass:block/crimson_blue_four_post_bed_foot_right_upper",
-      "y": 270
+      "y": 90
     }
   }
 }

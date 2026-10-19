@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -16,7 +15,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** A one-block decorative table with a full-height top and no storage. */
 public class SideTableBlock extends Block {
-    public static final MapCodec<SideTableBlock> CODEC = simpleCodec(SideTableBlock::new);
 
     /**
      * Shared by every stripped-wood variant. The three-piece tabletop leaves
@@ -44,10 +42,6 @@ public class SideTableBlock extends Block {
         super(properties);
     }
 
-    @Override
-    protected MapCodec<? extends SideTableBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {

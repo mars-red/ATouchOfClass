@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:white_stucco"
+        "recipes": ["atouchofclass:white_stucco"]
       }
     }
   },

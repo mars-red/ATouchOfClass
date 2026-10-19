@@ -1,7 +1,6 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.ModSounds;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;
@@ -84,7 +83,6 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
         }
     }
 
-    public static final MapCodec<ClawfootBathtubBlock> CODEC = simpleCodec(ClawfootBathtubBlock::new);
     public static final EnumProperty<Part> PART = EnumProperty.create("part", Part.class);
     public static final EnumProperty<Side> SIDE = EnumProperty.create("side", Side.class);
     public static final BooleanProperty FILLED = BooleanProperty.create("filled");
@@ -161,10 +159,6 @@ public class ClawfootBathtubBlock extends HorizontalDirectionalBlock {
                 .setValue(FILLED, false));
     }
 
-    @Override
-    protected MapCodec<? extends ClawfootBathtubBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

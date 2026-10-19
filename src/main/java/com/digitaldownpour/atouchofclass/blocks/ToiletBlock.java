@@ -3,7 +3,6 @@ package com.digitaldownpour.atouchofclass.blocks;
 import com.digitaldownpour.atouchofclass.ModEntities;
 import com.digitaldownpour.atouchofclass.ModSounds;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.protocol.game.ClientboundPlayerRotationPacket;
@@ -35,7 +34,6 @@ import net.minecraft.server.level.ServerLevel;
 
 /** A compact porcelain toilet with a usable seat and a toggleable lid. */
 public class ToiletBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<ToiletBlock> CODEC = simpleCodec(ToiletBlock::new);
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
     private static final Map<Direction, VoxelShape> SHAPES = new EnumMap<>(Direction.class);
@@ -78,10 +76,6 @@ public class ToiletBlock extends HorizontalDirectionalBlock {
                 .setValue(OPEN, false));
     }
 
-    @Override
-    protected MapCodec<? extends ToiletBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {

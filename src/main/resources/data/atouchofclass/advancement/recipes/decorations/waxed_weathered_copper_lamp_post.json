@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:waxed_weathered_copper_lamp_post"
+        "recipes": ["atouchofclass:waxed_weathered_copper_lamp_post"]
       }
     }
   },

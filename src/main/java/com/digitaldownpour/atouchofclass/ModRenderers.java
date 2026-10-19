@@ -1,75 +1,64 @@
 package com.digitaldownpour.atouchofclass;
 
-import com.digitaldownpour.atouchofclass.components.ClientWallOverlayData;
 import com.digitaldownpour.atouchofclass.client.OverlayLightingRenderer;
-import com.digitaldownpour.atouchofclass.components.WallOverlayData;
+import com.digitaldownpour.atouchofclass.components.ClientWallOverlayData;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.culling.Frustum;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.ChunkPos;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.phys.Vec3;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.fml.common.EventBusSubscriber;
-import java.util.Map;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.context.ContextKey;
+import net.minecraft.world.phys.AABB;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ExtractLevelRenderStateEvent;
+import net.neoforged.neoforge.client.event.SubmitCustomGeometryEvent;
 
-@EventBusSubscriber(
-        modid = ATouchofClass.MODID,
-        value = Dist.CLIENT
-)public class ModRenderers {
-    private static final ContextKey<Frustum> OVERLAY_FRUSTUM =
-            new ContextKey<>(ResourceLocation.fromNamespaceAndPath(
-                    ATouchofClass.MODID, "overlay_frustum"));
+import java.util.ArrayList;
+import java.util.List;
+
+@EventBusSubscriber(modid = ATouchofClass.MODID, value = Dist.CLIENT)
+public final class ModRenderers {
+    private static final ContextKey<List<OverlayBlock>> OVERLAY_BLOCKS = new ContextKey<>(
+            Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "overlay_blocks"));
+    private static final OverlayLightingRenderer OVERLAYS = new OverlayLightingRenderer();
+
+    private record OverlayBlock(BlockPos pos, List<OverlayLightingRenderer.RenderFace> faces) {}
 
     @SubscribeEvent
     public static void extractRenderState(ExtractLevelRenderStateEvent event) {
-        event.getRenderState().setRenderData(OVERLAY_FRUSTUM, new Frustum(event.getFrustum()));
+        Minecraft mc = Minecraft.getInstance();
+        List<OverlayBlock> blocks = new ArrayList<>();
+        for (var chunk : ClientWallOverlayData.getChunks().values()) {
+            for (var entry : chunk.entrySet()) {
+                BlockPos pos = entry.getKey();
+                if (!entry.getValue().hasAny() || !event.getFrustum().isVisible(new AABB(pos).inflate(0.01))) continue;
+                var faces = OVERLAYS.extract(mc, pos, entry.getValue());
+                if (!faces.isEmpty()) blocks.add(new OverlayBlock(pos.immutable(), faces));
+            }
+        }
+        event.getRenderState().setRenderData(OVERLAY_BLOCKS, List.copyOf(blocks));
     }
 
-    private static final OverlayLightingRenderer OVERLAYS = new OverlayLightingRenderer();
-
     @SubscribeEvent
-    public static void onRenderLevel(RenderLevelStageEvent.AfterTranslucentBlocks event) {
-        // Run after block geometry so overlay sits on top
-
-        Minecraft mc = Minecraft.getInstance();
-        Vec3 camPos = event.getLevelRenderState().cameraRenderState.pos;
-
+    public static void submitGeometry(SubmitCustomGeometryEvent event) {
+        var blocks = event.getLevelRenderState().getRenderData(OVERLAY_BLOCKS);
+        if (blocks == null || blocks.isEmpty()) return;
+        var camera = event.getLevelRenderState().cameraRenderState.pos;
         PoseStack pose = event.getPoseStack();
-        MultiBufferSource.BufferSource buffer = mc.renderBuffers().bufferSource();
-
-        RenderType layer = RenderType.cutoutMipped();
-        VertexConsumer vc = buffer.getBuffer(layer);
-        Frustum frustum = event.getLevelRenderState().getRenderData(OVERLAY_FRUSTUM);
-
-        for (Map.Entry<ChunkPos, Map<BlockPos, WallOverlayData>> chunkEntry
-                : ClientWallOverlayData.getChunks().entrySet() ) {
-
-            for (Map.Entry<BlockPos, WallOverlayData> entry
-                    : chunkEntry.getValue().entrySet()) {
-                BlockPos pos = entry.getKey();
-                WallOverlayData data = entry.getValue();
-
-                if (!data.hasAny()) continue;
-                if (frustum != null && !frustum.isVisible(new AABB(pos).inflate(0.01))) continue;
-
-                pose.pushPose();
-                pose.translate(pos.getX() - camPos.x, pos.getY() - camPos.y, pos.getZ() - camPos.z);
-                OVERLAYS.render(mc, pos, data, pose, vc);
-
+        for (OverlayBlock block : blocks) {
+            pose.pushPose();
+            try {
+                pose.translate(block.pos().getX() - camera.x, block.pos().getY() - camera.y,
+                        block.pos().getZ() - camera.z);
+                event.getSubmitNodeCollector().submitCustomGeometry(pose, RenderTypes.cutoutMovingBlock(),
+                        (transform, consumer) -> {
+                            for (var face : block.faces()) face.draw(transform.pose(), consumer);
+                        });
+            } finally {
                 pose.popPose();
             }
         }
-        buffer.endBatch(layer);
     }
-
 }

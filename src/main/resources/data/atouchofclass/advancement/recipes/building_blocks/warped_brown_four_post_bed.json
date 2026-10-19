@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:warped_brown_four_post_bed"
+        "recipes": ["atouchofclass:warped_brown_four_post_bed"]
       }
     }
   },

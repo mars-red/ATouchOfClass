@@ -5,7 +5,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.gametest.framework.FunctionGameTestInstance;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.gametest.framework.TestData;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.event.RegisterGameTestsEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -121,10 +121,10 @@ public final class ModGameTests {
 
     private static void registerTests(RegisterGameTestsEvent event) {
         var environment = event.registerEnvironment(
-                ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "default"));
-        var structure = ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "chandelier_test");
+                Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "default"));
+        var structure = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "chandelier_test");
         for (var function : FUNCTIONS.getEntries()) {
-            event.registerTest(function.getId(), new FunctionGameTestInstance(function.getKey(),
+            event.registerTest(function.getId(), new FunctionGameTestInstance(function.unwrapKey().orElseThrow(),
                     new TestData<>(environment, structure, 100, 0, true)));
         }
     }

@@ -1,8 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -20,9 +17,6 @@ import org.jetbrains.annotations.Nullable;
 
 /** Low-profile copper ceiling lights in bowl and coffered styles. */
 public class CopperCeilingLightBlock extends Block {
-    public static final MapCodec<CopperCeilingLightBlock> CODEC = RecordCodecBuilder.mapCodec(instance ->
-            instance.group(Codec.BOOL.fieldOf("coffered").forGetter(CopperCeilingLightBlock::isCoffered),
-                    propertiesCodec()).apply(instance, CopperCeilingLightBlock::new));
 
     private static final VoxelShape BOWL_SHAPE = Shapes.or(
             Block.box(3, 15, 3, 13, 16, 13),
@@ -47,10 +41,6 @@ public class CopperCeilingLightBlock extends Block {
         return coffered;
     }
 
-    @Override
-    protected MapCodec<? extends CopperCeilingLightBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

@@ -1,4 +1,3 @@
 /** Non-null parameters and return values unless explicitly marked nullable. */
-@javax.annotation.ParametersAreNonnullByDefault
-@net.minecraft.MethodsReturnNonnullByDefault
+@org.jspecify.annotations.NullMarked
 package com.digitaldownpour.atouchofclass.gui;

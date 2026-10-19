@@ -17,7 +17,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:crimson_dining_table"
+        "recipes": ["atouchofclass:crimson_dining_table"]
       }
     }
   },

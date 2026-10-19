@@ -25,12 +25,12 @@ public final class WoodRailingVariants {
             var rail=ModBlocks.BLOCKS.register(wood+"_railing",key->new OakRailingBlock(properties(key)));
             var post=ModBlocks.BLOCKS.register(wood+"_baluster",key->new OakBalusterBlock(properties(key)));
             var balustrade=ModBlocks.BLOCKS.register(wood+"_balustrade",key->new OakBalustradeBlock(properties(key)));
-            var newel=ModBlocks.BLOCKS.register(wood+"_newel_post",key->new OakNewelPostBlock(properties(key).pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)));
+            var newel=ModBlocks.BLOCKS.register(wood+"_newel_post",key->new OakNewelPostBlock(properties(key).pushReaction(net.minecraft.world.level.material.PushReaction.IMMOVEABLE)));
             families.put(wood,new Family(rail,post,balustrade,newel));
         }
         return java.util.Collections.unmodifiableMap(families);
     }
-    private static BlockBehaviour.Properties properties(net.minecraft.resources.ResourceLocation key) {
+    private static BlockBehaviour.Properties properties(net.minecraft.resources.Identifier key) {
         return BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK,key))
                 .mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.WOOD).noOcclusion();
     }

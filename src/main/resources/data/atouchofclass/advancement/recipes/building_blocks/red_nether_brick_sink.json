@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:red_nether_brick_sink"
+        "recipes": ["atouchofclass:red_nether_brick_sink"]
       }
     }
   },

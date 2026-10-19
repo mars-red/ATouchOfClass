@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -17,12 +16,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import javax.annotation.Nullable;
 
 public class OakBalusterBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<OakBalusterBlock> CODEC=simpleCodec(OakBalusterBlock::new);
     public OakBalusterBlock(Properties properties) {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(FACING,Direction.NORTH).setValue(OakBalustradeBlock.SHAPE,StairsShape.STRAIGHT));
     }
-    @Override protected MapCodec<? extends OakBalusterBlock> codec() { return CODEC; }
 
     static boolean supported(BlockGetter level,BlockPos pos) {
         BlockPos below=pos.below();BlockState support=level.getBlockState(below);

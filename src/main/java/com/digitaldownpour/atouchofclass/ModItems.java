@@ -9,7 +9,7 @@ import com.digitaldownpour.atouchofclass.items.WallpaperItem;
 import com.digitaldownpour.atouchofclass.items.WainscotingItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -386,36 +386,36 @@ public class ModItems {
     public static final DeferredItem<WainscotingItem> WAINSCOTING_ITEM = ITEMS.registerItem(
             "wainscoting",
             WainscotingItem::new,
-            new Item.Properties()
+            () -> new Item.Properties()
     );
 
     public static final DeferredItem<Item> QUICKLIME_POWDER = ITEMS.registerSimpleItem(
             "quicklime_powder",
-            new Item.Properties()
+            () -> new Item.Properties()
     );
 
     public static final DeferredItem<Item> CLAY_TOILET = ITEMS.registerSimpleItem(
             "clay_toilet",
-            new Item.Properties()
+            () -> new Item.Properties()
     );
 
     public static final DeferredItem<Item> CLAY_CLAWFOOT_BATHTUB = ITEMS.registerSimpleItem(
             "clay_clawfoot_bathtub",
-            new Item.Properties()
+            () -> new Item.Properties()
     );
 
     public static final DeferredItem<BucketOfPlasterItem> BUCKET_OF_PLASTER = ITEMS.registerItem(
             "bucket_of_plaster",
             BucketOfPlasterItem::new,
-            new Item.Properties().durability(BucketOfPlasterItem.APPLICATIONS)
+            () -> new Item.Properties().durability(BucketOfPlasterItem.APPLICATIONS)
     );
 
-    public static final DeferredItem<KeyRingItem> KEY_RING = ITEMS.registerItem("key_ring", KeyRingItem::new, new Item.Properties());
+    public static final DeferredItem<KeyRingItem> KEY_RING = ITEMS.registerItem("key_ring", KeyRingItem::new, () -> new Item.Properties());
 
     public static final DeferredItem<DoorKeyItem> DOOR_KEY = ITEMS.registerItem(
             "door_key",
             DoorKeyItem::new,
-            new Item.Properties()
+            () -> new Item.Properties()
     );
 
     public static final DeferredItem<TallDoorItem> TALL_MANGROVE_DOOR_ITEM = ITEMS.register(
@@ -959,9 +959,9 @@ public class ModItems {
                 name,
                 properties -> new WallpaperItem(
                         properties,
-                        ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "block/" + name)
+                        Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "block/" + name)
                 ),
-                new Item.Properties()
+                () -> new Item.Properties()
         );
     }
 
@@ -973,10 +973,10 @@ public class ModItems {
                 name,
                 properties -> new WallFinishItem(
                         properties,
-                        ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "block/" + name),
+                        Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "block/" + name),
                         placement
                 ),
-                new Item.Properties()
+                () -> new Item.Properties()
         );
     }
 }

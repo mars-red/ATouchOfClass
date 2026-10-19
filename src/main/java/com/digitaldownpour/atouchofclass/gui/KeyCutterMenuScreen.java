@@ -3,32 +3,27 @@ package com.digitaldownpour.atouchofclass.gui;
 import com.digitaldownpour.atouchofclass.ATouchofClass;
 import com.digitaldownpour.atouchofclass.KeyCutterMenu;
 import com.digitaldownpour.atouchofclass.network.SyncKeyCutterMenuPayload;
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.Slot;
-import org.lwjgl.glfw.GLFW;
 import net.minecraft.client.input.CharacterEvent;
 import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> {
-    private static final ResourceLocation BACKGROUND_LOCATION = ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "textures/gui/container/key_cutter_background.png");
+    private static final Identifier BACKGROUND_LOCATION = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "textures/gui/container/key_cutter_background.png");
     private EditBox keyCodeInput;
     private EditBox keyableNameInput;
     private BetterImageButton setCodeButton;
 
     public KeyCutterMenuScreen(KeyCutterMenu menu, Inventory playerInventory, Component title) {
-        super(menu, playerInventory, title);
-
-        imageWidth = 191;
-        imageHeight = 172;
+        super(menu, playerInventory, title, 191, 172);
 
         menu.addListener((slot, stack)->{
             if (menu.areSlotsKeyable() && menu.isOutputEmpty()) {
@@ -78,8 +73,8 @@ public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> 
                 16,
                 16,
                 new WidgetSprites(
-                        ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "key_cutter_button_sprite"),
-                        ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "key_cutter_button_sprite_pressed")
+                        Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "key_cutter_button_sprite"),
+                        Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "key_cutter_button_sprite_pressed")
                 ),
                 button -> craft(),
                 Component.literal("set key code")
@@ -94,36 +89,31 @@ public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> 
     }
 
     @Override
-    protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-        super.renderLabels(guiGraphics, mouseX, mouseY);
+    protected void extractLabels(GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
+        super.extractLabels(graphics, mouseX, mouseY);
 
-        guiGraphics.drawString(this.font, "Key code:", keyCodeInput.getX() - leftPos - 50, keyCodeInput.getY() - topPos + 5, 0xFFF0F0F0);
-        guiGraphics.drawString(this.font, "Name:", keyableNameInput.getX() - leftPos - 28, keyableNameInput.getY() - topPos + 5, 0xFFF0F0F0);
+        graphics.text(this.font, "Key code:", keyCodeInput.getX() - leftPos - 50, keyCodeInput.getY() - topPos + 5, 0xFFF0F0F0);
+        graphics.text(this.font, "Name:", keyableNameInput.getX() - leftPos - 28, keyableNameInput.getY() - topPos + 5, 0xFFF0F0F0);
     }
 
-    @Override
-    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        renderBackground(graphics, mouseX, mouseY, partialTick);
-        super.render(graphics, mouseX, mouseY, partialTick);
-        renderTooltip(graphics, mouseX, mouseY);
-    }
 
     @Override
-    protected void renderSlot(GuiGraphics guiGraphics, Slot slot) {
-        super.renderSlot(guiGraphics, slot);
+    protected void extractSlot(GuiGraphicsExtractor graphics, Slot slot, int mouseX, int mouseY) {
+        super.extractSlot(graphics, slot, mouseX, mouseY);
         // Draw in the same translated coordinate space as the slot contents.
         // submitOutline defers drawing and does not retain this translation.
         int x = slot.x - 1;
         int y = slot.y - 1;
         int color = 0xFF303030;
-        guiGraphics.fill(x, y, x + 19, y + 1, color);
-        guiGraphics.fill(x, y + 18, x + 19, y + 19, color);
-        guiGraphics.fill(x, y + 1, x + 1, y + 18, color);
-        guiGraphics.fill(x + 18, y + 1, x + 19, y + 18, color);
+        graphics.fill(x, y, x + 19, y + 1, color);
+        graphics.fill(x, y + 18, x + 19, y + 19, color);
+        graphics.fill(x, y + 1, x + 1, y + 18, color);
+        graphics.fill(x + 18, y + 1, x + 19, y + 18, color);
     }
 
     @Override
-    protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
+    public void extractBackground(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
+        super.extractBackground(graphics, mouseX, mouseY, partialTick);
         graphics.blit(
                 RenderPipelines.GUI_TEXTURED,
                 BACKGROUND_LOCATION,
@@ -136,7 +126,7 @@ public class KeyCutterMenuScreen extends AbstractContainerScreen<KeyCutterMenu> 
 
     @Override
     public boolean keyPressed(KeyEvent event) {
-        if (event.key() == GLFW.GLFW_KEY_ESCAPE) {
+        if (event.isEscape()) {
             return super.keyPressed(event);
         }
 

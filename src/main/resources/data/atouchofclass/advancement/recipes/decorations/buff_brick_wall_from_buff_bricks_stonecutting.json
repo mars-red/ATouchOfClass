@@ -7,7 +7,7 @@
     },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
-      "conditions": { "recipe": "atouchofclass:buff_brick_wall_from_buff_bricks_stonecutting" }
+      "conditions": { "recipes": ["atouchofclass:buff_brick_wall_from_buff_bricks_stonecutting"] }
     }
   },
   "requirements": [["has_bricks", "has_the_recipe"]],

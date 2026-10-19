@@ -6,7 +6,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -164,7 +164,7 @@ public class KitchenSinkGameTests {
             helper.assertTrue(new ItemStack(Items.IRON_PICKAXE).isCorrectToolForDrops(state), Component.literal("a pickaxe must harvest the sink"));
             helper.assertTrue(!ItemStack.EMPTY.isCorrectToolForDrops(state), Component.literal("the sink must require a mining tool"));
         }
-        var key = ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "kitchen_sink"));
+        var key = ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "kitchen_sink"));
         var recipe = (ShapedRecipe) level.getServer().getRecipeManager().byKey(key).orElseThrow().value();
         var ingredients = recipe.getIngredients();
         helper.assertTrue(recipe.getWidth() == 3 && recipe.getHeight() == 3, Component.literal("recipe must be a three-by-three pattern"));
@@ -177,9 +177,9 @@ public class KitchenSinkGameTests {
                 ItemStack.EMPTY, new ItemStack(Items.IRON_NUGGET), ItemStack.EMPTY,
                 iron, ItemStack.EMPTY, iron, iron, iron, iron));
         helper.assertTrue(recipe.matches(input, level), Component.literal("the documented ingredients must match the recipe"));
-        var output = recipe.assemble(input, level.registryAccess());
+        var output = recipe.assemble(input);
         helper.assertTrue(output.is(ModItems.KITCHEN_SINK.get()) && output.getCount() == 1, Component.literal("crafting must produce exactly one kitchen sink"));
-        helper.assertTrue(level.getServer().getAdvancements().get(ResourceLocation.fromNamespaceAndPath(
+        helper.assertTrue(level.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath(
                 ATouchofClass.MODID, "recipes/building_blocks/kitchen_sink")) != null, Component.literal("the recipe unlock advancement must load"));
         helper.succeed();
     }

@@ -6,7 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 /**
  * Sent client -> server when a player picks a floor from the destination
@@ -15,7 +15,7 @@ import net.minecraft.resources.ResourceLocation;
  */
 public record SelectElevatorFloorPayload(BlockPos controlPos, int targetFloorIndex) implements CustomPacketPayload {
     public static final CustomPacketPayload.Type<SelectElevatorFloorPayload> TYPE =
-            new CustomPacketPayload.Type<>(ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "select_elevator_floor"));
+            new CustomPacketPayload.Type<>(Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "select_elevator_floor"));
 
     public static final StreamCodec<ByteBuf, SelectElevatorFloorPayload> STREAM_CODEC = StreamCodec.composite(
             BlockPos.STREAM_CODEC,

@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:waxed_oxidized_cut_copper_countertop"
+        "recipes": ["atouchofclass:waxed_oxidized_cut_copper_countertop"]
       }
     }
   },

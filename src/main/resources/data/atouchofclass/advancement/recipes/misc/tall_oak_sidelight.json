@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:tall_oak_sidelight"
+        "recipes": ["atouchofclass:tall_oak_sidelight"]
       }
     }
   },

@@ -18,7 +18,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "atouchofclass:copper_chandelier"
+        "recipes": ["atouchofclass:copper_chandelier"]
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -2,7 +2,6 @@ package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.ModEntities;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -18,11 +17,9 @@ import net.minecraft.world.phys.shapes.*;
 
 /** One-block dining chair with a tall back and a forward-facing usable seat. */
 public class DiningChairBlock extends ChairBlock {
-    public static final MapCodec<DiningChairBlock> CODEC = simpleCodec(DiningChairBlock::new);
 
     public DiningChairBlock(Properties properties) { super(properties); }
 
-    @Override protected MapCodec<? extends DiningChairBlock> codec() { return CODEC; }
 
     @Override public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockState state = defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());

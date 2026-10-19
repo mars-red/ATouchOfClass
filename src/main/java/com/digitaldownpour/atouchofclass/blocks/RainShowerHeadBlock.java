@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -18,7 +17,6 @@ import org.jetbrains.annotations.Nullable;
 
 /** Large square rain shower head suspended from the underside of a ceiling. */
 public class RainShowerHeadBlock extends Block {
-    public static final MapCodec<RainShowerHeadBlock> CODEC = simpleCodec(RainShowerHeadBlock::new);
     private static final VoxelShape SHAPE = Shapes.or(
             Block.box(6, 15, 6, 10, 16, 10),
             Block.box(7, 11, 7, 9, 15, 9),
@@ -29,10 +27,6 @@ public class RainShowerHeadBlock extends Block {
         super(properties);
     }
 
-    @Override
-    protected MapCodec<? extends RainShowerHeadBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

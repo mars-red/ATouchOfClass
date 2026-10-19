@@ -18,7 +18,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "atouchofclass:waxed_copper_chain"
+        "recipes": ["atouchofclass:waxed_copper_chain"]
       },
       "trigger": "minecraft:recipe_unlocked"
     }

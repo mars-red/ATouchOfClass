@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:shake_siding"
+        "recipes": ["atouchofclass:shake_siding"]
       }
     }
   },

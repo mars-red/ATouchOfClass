@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:marble_tile"
+        "recipes": ["atouchofclass:marble_tile"]
       }
     }
   },

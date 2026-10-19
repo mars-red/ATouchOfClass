@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:bamboo_drawer_cabinet"
+        "recipes": ["atouchofclass:bamboo_drawer_cabinet"]
       }
     }
   },

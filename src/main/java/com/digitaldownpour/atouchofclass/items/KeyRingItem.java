@@ -32,7 +32,7 @@ public class KeyRingItem extends Item {
 
     public static boolean matchesCode(ItemStack ring, @org.jetbrains.annotations.Nullable String code) {
         return code != null && !code.isEmpty() && ring.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
-                .stream().limit(CAPACITY).anyMatch(key -> {
+                .itemCopies().limit(CAPACITY).anyMatch(key -> {
                     var info = key.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
                     return key.is(ModItems.DOOR_KEY.get()) && info != null && code.equals(info.keyCode());
                 });
@@ -53,7 +53,7 @@ public class KeyRingItem extends Item {
     @SuppressWarnings("deprecation")
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltip, TooltipFlag flag) {
-        long count = stack.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).nonEmptyStream().count();
+        long count = stack.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).nonEmptyItemCopyStream().count();
         tooltip.accept(Component.translatable("tooltip.atouchofclass.key_ring.contents", count, CAPACITY));
         tooltip.accept(Component.translatable("tooltip.atouchofclass.key_ring.use"));
     }

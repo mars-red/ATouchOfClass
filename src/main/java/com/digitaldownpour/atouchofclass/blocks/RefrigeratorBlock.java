@@ -1,7 +1,6 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.entities.RefrigeratorBlockEntity;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -76,7 +75,6 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
         }
     }
 
-    public static final MapCodec<RefrigeratorBlock> CODEC = simpleCodec(RefrigeratorBlock::new);
     public static final EnumProperty<Layer> LAYER = EnumProperty.create("layer", Layer.class);
     public static final EnumProperty<Side> SIDE = EnumProperty.create("side", Side.class);
 
@@ -92,10 +90,6 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
                 .setValue(SIDE, Side.LEFT));
     }
 
-    @Override
-    protected MapCodec<? extends RefrigeratorBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

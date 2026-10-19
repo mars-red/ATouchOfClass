@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:dark_prismarine_sink"
+        "recipes": ["atouchofclass:dark_prismarine_sink"]
       }
     }
   },

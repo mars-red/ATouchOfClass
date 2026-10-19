@@ -22,7 +22,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.ShapedRecipe;
 
@@ -82,23 +82,23 @@ public class DiningChairGameTests {
             var item = ModItems.DINING_CHAIR_ITEMS.get(definition.id()).get();
             helper.assertTrue(item.getBlock() == block && block.asItem() == item, Component.literal("item must place matching wood"));
             helper.assertTrue(block.defaultBlockState().ignitedByLava(helper.getLevel(), BlockPos.ZERO, Direction.UP) == definition.sourceBlock().defaultBlockState().ignitedByLava(helper.getLevel(), BlockPos.ZERO, Direction.UP), Component.literal("chair must match source wood fire behavior"));
-            var id = ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, definition.id());
+            var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, definition.id());
             var key = ResourceKey.create(Registries.RECIPE, id);
             var recipe = (ShapedRecipe) level.getServer().getRecipeManager().byKey(key).orElseThrow().value();
             var stick = new ItemStack(Items.STICK);
             var slab = new ItemStack(BuiltInRegistries.ITEM.getValue(
-                    ResourceLocation.withDefaultNamespace(definition.wood() + "_slab")));
+                    Identifier.withDefaultNamespace(definition.wood() + "_slab")));
             var input = CraftingInput.of(3, 3,
                     List.of(stick, stick, stick, slab, slab, slab, stick, ItemStack.EMPTY, stick));
             helper.assertTrue(recipe.matches(input, level), Component.literal(definition.id() + " must craft with matching slabs and sticks"));
-            var output = recipe.assemble(input, level.registryAccess());
+            var output = recipe.assemble(input);
             helper.assertTrue(output.is(item) && output.getCount() == 2, Component.literal("every recipe must yield two matching chairs"));
             if (!definition.wood().equals("oak")) {
                 var wrong = CraftingInput.of(3, 3,
                         List.of(stick, stick, stick, slab, new ItemStack(Items.OAK_SLAB), slab, stick, ItemStack.EMPTY, stick));
                 helper.assertTrue(!recipe.matches(wrong, level), Component.literal("mixed slab varieties must not match"));
             }
-            helper.assertTrue(level.getServer().getAdvancements().get(ResourceLocation.fromNamespaceAndPath(
+            helper.assertTrue(level.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath(
                     ATouchofClass.MODID, "recipes/decorations/" + definition.id())) != null, Component.literal("each recipe advancement must load"));
             helper.setBlock(POS, block.defaultBlockState());
             var player = helper.makeMockPlayer(GameType.CREATIVE);
@@ -257,7 +257,7 @@ public class DiningChairGameTests {
 
     public static void stickAndOakSlabRecipeMakesTwoChairs(GameTestHelper helper) {
         var level = helper.getLevel();
-        var id = ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "oak_dining_chair");
+        var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "oak_dining_chair");
         var key = ResourceKey.create(Registries.RECIPE, id);
         var recipe = (ShapedRecipe) level.getServer().getRecipeManager().byKey(key).orElseThrow().value();
         var stick = new ItemStack(Items.STICK);
@@ -265,14 +265,14 @@ public class DiningChairGameTests {
         var input = CraftingInput.of(3, 3,
                 List.of(stick, stick, stick, slab, slab, slab, stick, ItemStack.EMPTY, stick));
         helper.assertTrue(recipe.matches(input, level), Component.literal("TTT / LLL / T T must match sticks and oak slabs"));
-        var output = recipe.assemble(input, level.registryAccess());
+        var output = recipe.assemble(input);
         helper.assertTrue(output.is(ModItems.OAK_DINING_CHAIR_ITEM.get()) && output.getCount() == 2, Component.literal("recipe must yield two chairs"));
         for (var wrong : List.of(Items.SPRUCE_SLAB, Items.STRIPPED_OAK_WOOD, Items.OAK_PLANKS)) {
             var wrongInput = CraftingInput.of(3, 3,
                     List.of(stick, stick, stick, slab, new ItemStack(wrong), slab, stick, ItemStack.EMPTY, stick));
             helper.assertTrue(!recipe.matches(wrongInput, level), Component.literal("oak slabs must not be substituted by " + wrong));
         }
-        helper.assertTrue(level.getServer().getAdvancements().get(ResourceLocation.fromNamespaceAndPath(
+        helper.assertTrue(level.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath(
                 ATouchofClass.MODID, "recipes/decorations/oak_dining_chair")) != null, Component.literal("recipe advancement must load"));
         helper.succeed();
     }

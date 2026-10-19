@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:polished_diorite_countertop"
+        "recipes": ["atouchofclass:polished_diorite_countertop"]
       }
     }
   },

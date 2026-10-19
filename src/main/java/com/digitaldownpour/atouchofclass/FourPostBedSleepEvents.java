@@ -31,8 +31,9 @@ public final class FourPostBedSleepEvents {
                 || state.getValue(FourPostBedBlock.UPPER)
                 || state.getValue(FourPostBedBlock.SECTION) != FourPostBedBlock.Section.MIDDLE) return;
         double y = pos.getY() + SLEEP_HEIGHT;
-        if (Math.abs(sleeper.getY() - y) < 0.000001) return;
-        sleeper.setPos(sleeper.getX(), y, sleeper.getZ());
+        if (Math.abs(sleeper.getY() - y) >= 0.000001) {
+            sleeper.setPos(sleeper.getX(), y, sleeper.getZ());
+        }
         // Avoid interpolating the body/camera back through the mattress after
         // vanilla positioning on initial sleep, client sync, or saved-data load.
         sleeper.yo = y;

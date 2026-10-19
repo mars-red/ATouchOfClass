@@ -1,19 +1,17 @@
 {
-    "type":  "minecraft:block",
-    "pools":  [
-                  {
-                      "rolls":  1,
-                      "conditions":  [
-                                         {
-                                             "condition":  "minecraft:survives_explosion"
-                                         }
-                                     ],
-                      "entries":  [
-                                      {
-                                          "type":  "minecraft:item",
-                                          "name":  "atouchofclass:resin_brick_sink"
-                                      }
-                                  ]
-                  }
-              ]
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "atouchofclass:resin_brick_sink"
+        }
+      ]
+    }
+  ]
 }

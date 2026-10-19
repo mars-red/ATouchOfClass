@@ -1,11 +1,9 @@
 {
   "pools": [
     {
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
       "entries": [
         {
           "name": "atouchofclass:crimson_railing",
@@ -17,4 +15,3 @@
   ],
   "type": "minecraft:block"
 }
-

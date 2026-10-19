@@ -6,7 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
  */
 public record OpenElevatorFloorsPayload(BlockPos controlPos, List<Integer> floorIndices, int currentFloorIndex) implements CustomPacketPayload {
     public static final CustomPacketPayload.Type<OpenElevatorFloorsPayload> TYPE =
-            new CustomPacketPayload.Type<>(ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "open_elevator_floors"));
+            new CustomPacketPayload.Type<>(Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "open_elevator_floors"));
 
     public static final StreamCodec<ByteBuf, OpenElevatorFloorsPayload> STREAM_CODEC = StreamCodec.composite(
             BlockPos.STREAM_CODEC,

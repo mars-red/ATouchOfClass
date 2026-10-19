@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -14,7 +13,6 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 
 /** A cabinet whose paired doors continue through matching cabinets stacked vertically. */
 public class DoorCabinetBlock extends CabinetBlock {
-    public static final MapCodec<DoorCabinetBlock> CODEC = simpleCodec(DoorCabinetBlock::new);
     public static final BooleanProperty JOINED_ABOVE = BooleanProperty.create("joined_above");
     public static final BooleanProperty JOINED_BELOW = BooleanProperty.create("joined_below");
 
@@ -25,10 +23,6 @@ public class DoorCabinetBlock extends CabinetBlock {
                 .setValue(JOINED_BELOW, false));
     }
 
-    @Override
-    protected MapCodec<? extends DoorCabinetBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {

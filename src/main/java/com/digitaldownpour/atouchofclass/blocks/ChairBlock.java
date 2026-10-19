@@ -2,7 +2,6 @@ package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.ModEntities;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
-import com.mojang.serialization.MapCodec;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,7 +30,6 @@ import net.minecraft.server.level.ServerLevel;
 
 /** One-block leather chair with a usable seat. */
 public class ChairBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<ChairBlock> CODEC = simpleCodec(ChairBlock::new);
     private static final VoxelShape[] SHAPES = createShapes();
 
     public ChairBlock(Properties properties) {
@@ -39,10 +37,6 @@ public class ChairBlock extends HorizontalDirectionalBlock {
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
-    @Override
-    protected MapCodec<? extends ChairBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {

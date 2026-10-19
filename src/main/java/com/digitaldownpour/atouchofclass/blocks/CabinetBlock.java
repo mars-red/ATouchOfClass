@@ -1,7 +1,6 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.entities.CabinetBlockEntity;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.stats.Stats;
@@ -19,7 +18,6 @@ import net.minecraft.core.Direction;
 
 /** A full-height cabinet with a one-unit recess at its player-facing front. */
 public class CabinetBlock extends HorizontalFurnitureBlock implements EntityBlock {
-    public static final MapCodec<CabinetBlock> CODEC = simpleCodec(CabinetBlock::new);
 
     private static final double[][] NORTH_FACING_BOXES = {
             {0, 0, 1, 16, 16, 16}
@@ -29,10 +27,6 @@ public class CabinetBlock extends HorizontalFurnitureBlock implements EntityBloc
         super(properties, NORTH_FACING_BOXES);
     }
 
-    @Override
-    protected MapCodec<? extends CabinetBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

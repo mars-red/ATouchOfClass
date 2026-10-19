@@ -7,7 +7,7 @@ import com.digitaldownpour.atouchofclass.items.KeyRingItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.gametest.framework.GameTestHelper;
-import net.minecraft.world.inventory.ClickType;
+import net.minecraft.world.inventory.ContainerInput;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.ItemContainerContents;
@@ -146,7 +146,7 @@ public class KeyRingGameTests {
         // The item model uses has_component(container, ignore_default=true).
         helper.assertTrue(!ring.hasNonDefault(DataComponents.CONTAINER), Component.literal("New ring must use the empty texture"));
         menu.setCarried(key("alpha", 1));
-        menu.clicked(15, 0, ClickType.PICKUP, player);
+        menu.clicked(15, 0, ContainerInput.PICKUP, player);
         helper.assertTrue(ring.hasNonDefault(DataComponents.CONTAINER), Component.literal("A key in the last slot must select the filled texture"));
         var registries = helper.getLevel().registryAccess();
         ItemStack restored = ItemStack.CODEC.parse(registries.createSerializationContext(NbtOps.INSTANCE), ItemStack.CODEC.encodeStart(registries.createSerializationContext(NbtOps.INSTANCE), ring).getOrThrow()).getOrThrow();
@@ -175,12 +175,12 @@ public class KeyRingGameTests {
         helper.assertTrue(inventory.getItem(9).getCount() == 4, Component.literal("Full ring must reject more keys"));
         var registries = helper.getLevel().registryAccess();
         ItemStack restored = ItemStack.CODEC.parse(registries.createSerializationContext(NbtOps.INSTANCE), ItemStack.CODEC.encodeStart(registries.createSerializationContext(NbtOps.INSTANCE), ring).getOrThrow()).getOrThrow();
-        helper.assertTrue(restored.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).nonEmptyStream().count() == 16, Component.literal("Keys must survive serialization"));
+        helper.assertTrue(restored.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).nonEmptyItemCopyStream().count() == 16, Component.literal("Keys must survive serialization"));
         helper.assertTrue(KeyRingItem.matchesCode(restored, "alpha"), Component.literal("Key codes must survive serialization"));
         menu.removed(player);
         menu = new KeyRingMenu(2, inventory, 0);
         menu.quickMoveStack(player, 0);
-        helper.assertTrue(ring.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).nonEmptyStream().count() == 15, Component.literal("Removal must persist immediately"));
+        helper.assertTrue(ring.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).nonEmptyItemCopyStream().count() == 15, Component.literal("Removal must persist immediately"));
         int total = 0;
         for (int i = 0; i < inventory.getContainerSize(); i++) {
             if (inventory.getItem(i).is(ModItems.DOOR_KEY.get())) total += inventory.getItem(i).getCount();
@@ -197,10 +197,10 @@ public class KeyRingGameTests {
             inventory.setItem(ringSlot, ring);
             inventory.setItem(9, key("alpha", 1));
             var menu = new KeyRingMenu(1, inventory, ringSlot);
-            menu.clicked(16, ringSlot, ClickType.SWAP, player);
+            menu.clicked(16, ringSlot, ContainerInput.SWAP, player);
             helper.assertTrue(inventory.getItem(ringSlot) == ring, Component.literal("Hotbar/offhand swap must not move open ring"));
             if (ringSlot == 0) {
-                for (ClickType type : new ClickType[] {ClickType.PICKUP, ClickType.QUICK_MOVE, ClickType.THROW, ClickType.CLONE}) {
+                for (ContainerInput type : new ContainerInput[] {ContainerInput.PICKUP, ContainerInput.QUICK_MOVE, ContainerInput.THROW, ContainerInput.CLONE}) {
                     menu.clicked(43, 0, type, player);
                     helper.assertTrue(inventory.getItem(0) == ring, Component.literal("Open ring must remain in its inventory slot"));
                 }

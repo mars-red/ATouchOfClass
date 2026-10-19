@@ -2,7 +2,7 @@ package com.digitaldownpour.atouchofclass.components;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.ChunkPos;
 import org.jetbrains.annotations.Nullable;
 
@@ -19,7 +19,7 @@ public class WallOverlayStore {
     public void setFace(
             BlockPos pos,
             Direction face,
-            @Nullable ResourceLocation texture
+            @Nullable Identifier texture
     ) {
         BlockPos immutablePos = pos.immutable();
 
@@ -58,7 +58,7 @@ public class WallOverlayStore {
         Map<BlockPos, WallOverlayData> replacement = new HashMap<>();
         overlays.forEach((pos, overlay) -> {
             BlockPos immutablePos = pos.immutable();
-            if (new ChunkPos(immutablePos).equals(chunkPos) && overlay.hasAny()) {
+            if (ChunkPos.containing(immutablePos).equals(chunkPos) && overlay.hasAny()) {
                 replacement.put(immutablePos, overlay);
             }
         });
@@ -75,7 +75,7 @@ public class WallOverlayStore {
     }
 
     @Nullable
-    public ResourceLocation getFace(BlockPos pos, Direction face) {
+    public Identifier getFace(BlockPos pos, Direction face) {
         WallOverlayData overlay = getOverlay(pos);
         return overlay == null ? null : overlay.getFace(face);
     }
@@ -87,13 +87,13 @@ public class WallOverlayStore {
 
     @Nullable
     private WallOverlayData getOverlay(BlockPos pos) {
-        Map<BlockPos, WallOverlayData> overlays = overlaysByChunk.get(new ChunkPos(pos));
+        Map<BlockPos, WallOverlayData> overlays = overlaysByChunk.get(ChunkPos.containing(pos));
         return overlays == null ? null : overlays.get(pos);
     }
 
     private WallOverlayData getOrCreateOverlay(BlockPos immutablePos) {
 
-        return getChunk(new ChunkPos(immutablePos)).computeIfAbsent(
+        return getChunk(ChunkPos.containing(immutablePos)).computeIfAbsent(
                 immutablePos,
                 ignored -> new WallOverlayData()
         );
@@ -103,7 +103,7 @@ public class WallOverlayStore {
         BlockPos immutablePos = pos.immutable();
 
         if (overlay.hasAny()) {
-            Map<BlockPos, WallOverlayData> chunkOverlays = overlaysByChunk.computeIfAbsent(new ChunkPos(immutablePos), ignored -> new HashMap<>());
+            Map<BlockPos, WallOverlayData> chunkOverlays = overlaysByChunk.computeIfAbsent(ChunkPos.containing(immutablePos), ignored -> new HashMap<>());
             chunkOverlays.put(immutablePos, overlay);
         } else {
             removeOverlay(immutablePos);
@@ -111,7 +111,7 @@ public class WallOverlayStore {
     }
 
     private void removeOverlay(BlockPos immutablePos) {
-        ChunkPos chunkPos = new ChunkPos(immutablePos);
+        ChunkPos chunkPos = ChunkPos.containing(immutablePos);
         Map<BlockPos, WallOverlayData> chunkOverlays = overlaysByChunk.get(chunkPos);
 
         if (chunkOverlays != null) {

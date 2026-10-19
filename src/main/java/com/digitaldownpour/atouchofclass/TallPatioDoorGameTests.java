@@ -19,12 +19,12 @@ import net.minecraft.world.phys.Vec3;
 import com.mojang.authlib.GameProfile;
 import java.util.List;
 import java.util.UUID;
-import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ClientInformation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.component.ItemContainerContents;
@@ -142,7 +142,7 @@ public class TallPatioDoorGameTests {
 
     private static void checkRecipe(GameTestHelper helper, PatioDoorVariants.Definition definition) {
         var level = helper.getLevel();
-        var id = ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, definition.id());
+        var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, definition.id());
         var key = ResourceKey.create(Registries.RECIPE, id);
         var holder = level.getServer().getRecipeManager().byKey(key).orElseThrow();
         helper.assertTrue(holder.value() instanceof ShapedRecipe, Component.literal("Patio recipe must load"));
@@ -152,7 +152,7 @@ public class TallPatioDoorGameTests {
         var input = CraftingInput.of(3, 3,
                 List.of(wood, glass, wood, wood, glass, wood, wood, glass, wood));
         helper.assertTrue(recipe.matches(input, level), Component.literal("Three rows of planks/glass/planks must match"));
-        var output = recipe.assemble(input, level.registryAccess());
+        var output = recipe.assemble(input);
         helper.assertTrue(output.is(ModItems.TALL_PATIO_DOOR_ITEMS.get(definition.id()).get()) && output.getCount() == 4, Component.literal("Recipe must yield four oak patio doors"));
         var wrongInput = CraftingInput.of(3, 3,
                 List.of(wood, new ItemStack(Items.GLASS_PANE), wood, wood, glass, wood, wood, glass, wood));
@@ -163,7 +163,7 @@ public class TallPatioDoorGameTests {
         player.connection = new FakePlayer(level,
                 new GameProfile(UUID.randomUUID(), "patio-test-connection")).connection;
         var advancement = level.getServer().getAdvancements().get(
-                ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "recipes/misc/" + definition.id()));
+                Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "recipes/misc/" + definition.id()));
         helper.assertTrue(advancement != null, Component.literal("Patio recipe advancement must load"));
         player.getInventory().add(wood.copy());
         CriteriaTriggers.INVENTORY_CHANGED.trigger(player, player.getInventory(), wood);

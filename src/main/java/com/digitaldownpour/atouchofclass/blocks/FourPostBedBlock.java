@@ -1,9 +1,14 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalDouble;
+import net.minecraft.world.attribute.BedRule;
+import net.minecraft.world.attribute.EnvironmentAttribute;
+import net.minecraft.world.attribute.EnvironmentAttributes;
+import net.minecraft.world.level.block.AbstractBedBlock;
+import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -22,9 +27,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
@@ -41,7 +44,7 @@ import org.jetbrains.annotations.Nullable;
 import net.minecraft.server.level.ServerLevel;
 
 /** A two wide, two and a half long bed assembled from a two-by-three-by-two grid. */
-public class FourPostBedBlock extends HorizontalDirectionalBlock {
+public class FourPostBedBlock extends AbstractBedBlock {
     public enum Section implements StringRepresentable {
         HEAD("head", 2), MIDDLE("middle", 1), FOOT("foot", 0);
 
@@ -72,7 +75,6 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
         public int offset() { return offset; }
     }
 
-    public static final MapCodec<FourPostBedBlock> CODEC = simpleCodec(FourPostBedBlock::new);
     public static final EnumProperty<Section> SECTION = EnumProperty.create("section", Section.class);
     public static final EnumProperty<Side> SIDE = EnumProperty.create("side", Side.class);
     public static final BooleanProperty UPPER = BooleanProperty.create("upper");
@@ -83,26 +85,25 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
 
     public FourPostBedBlock(Properties properties) {
         super(properties);
+        // AbstractBedBlock requires PART. Our SECTION/SIDE/UPPER properties handle
+        // assembly; HEAD avoids vanilla's creative-mode two-block foot removal.
         registerDefaultState(stateDefinition.any()
-                .setValue(FACING, Direction.NORTH)
+                .setValue(PART, BedPart.HEAD)
+                .setValue(FACING, Direction.SOUTH)
                 .setValue(SECTION, Section.FOOT)
                 .setValue(SIDE, Side.LEFT)
                 .setValue(UPPER, false)
                 .setValue(OCCUPIED, false));
     }
 
-    @Override
-    protected MapCodec<? extends FourPostBedBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        // The model's facing runs from head toward foot. The player stands at
-        // the foot and looks toward the head, so these directions are opposite.
+        // Assembly uses the model's head-to-foot direction; FACING uses vanilla's
+        // foot-to-head direction so sleeping bodies and cameras face correctly.
         Direction facing = context.getHorizontalDirection().getOpposite();
-        BlockState state = defaultBlockState().setValue(FACING, facing);
+        BlockState state = defaultBlockState().setValue(FACING, facing.getOpposite());
         BlockPos anchor = context.getClickedPos();
         for (int height = 0; height < 2; height++) {
             for (Section section : Section.values()) {
@@ -129,7 +130,7 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
     public void setPlacedBy(Level level, BlockPos pos, BlockState state,
                             @Nullable LivingEntity placer, ItemStack stack) {
         if (level.isClientSide()) return;
-        Direction facing = state.getValue(FACING);
+        Direction facing = modelFacing(state);
         for (int height = 0; height < 2; height++) {
             for (Section section : PLACEMENT_ORDER) {
                 for (Side side : Side.values()) {
@@ -144,13 +145,13 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        Direction facing = state.getValue(FACING);
+        Direction facing = modelFacing(state);
         if (state.getValue(UPPER)) {
             BlockState lower = level.getBlockState(pos.below());
             return lower.is(this) && !lower.getValue(UPPER)
                     && lower.getValue(SECTION) == state.getValue(SECTION)
                     && lower.getValue(SIDE) == state.getValue(SIDE)
-                    && lower.getValue(FACING) == facing;
+                    && modelFacing(lower) == facing;
         }
         if (!level.getBlockState(pos.below()).isFaceSturdy(level, pos.below(), Direction.UP)) return false;
         if (state.getValue(SIDE) == Side.RIGHT) {
@@ -165,7 +166,7 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
     }
 
     private boolean matches(BlockState state, Direction facing, Section section, Side side, boolean upper) {
-        return state.is(this) && state.getValue(FACING) == facing
+        return state.is(this) && modelFacing(state) == facing
                 && state.getValue(SECTION) == section && state.getValue(SIDE) == side
                 && state.getValue(UPPER) == upper;
     }
@@ -181,7 +182,7 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
     protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
         BlockState replacement = level.getBlockState(pos);
         if (!level.isClientSide() && !replacement.is(this)) {
-            Direction facing = state.getValue(FACING);
+            Direction facing = modelFacing(state);
             BlockPos anchor = pos.relative(facing, state.getValue(SECTION).offset())
                     .relative(facing.getCounterClockWise(), state.getValue(SIDE).offset())
                     .below(state.getValue(UPPER) ? 1 : 0);
@@ -201,21 +202,47 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
         super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
+    private static Direction modelFacing(BlockState state) {
+        return state.getValue(FACING).getOpposite();
+    }
+
     private static BlockPos partPos(BlockPos anchor, Direction facing, Section section, Side side, boolean upper) {
         return anchor.relative(facing.getOpposite(), section.offset())
                 .relative(facing.getClockWise(), side.offset()).above(upper ? 1 : 0);
     }
 
-    /** Only the two middle mattress blocks are sleeping positions. */
     @Override
+    protected EnvironmentAttribute<BedRule> getBedEnvironmentAttribute() {
+        return EnvironmentAttributes.BED_RULE;
+    }
+
+    @Override
+    public OptionalDouble getSleepHeight(BlockState state, Level level, BlockPos pos) {
+        return state.is(this) && state.getValue(SECTION) == Section.MIDDLE && !state.getValue(UPPER)
+                ? OptionalDouble.of(13.0 / 16) : OptionalDouble.empty();
+    }
+
+    @Override
+    protected InteractionResult destroyOnUse(BlockState state, Level level, BlockPos pos, Player player) {
+        level.removeBlock(pos, false);
+        Vec3 center = Vec3.atCenterOf(pos);
+        level.explode(null, level.damageSources().badRespawnPointExplosion(center), null,
+                center, 5.0F, true, Level.ExplosionInteraction.BLOCK);
+        return InteractionResult.SUCCESS_SERVER;
+    }
+
+    @Override
+    protected void destroyOnLeave(Level level, BlockPos pos) {
+        level.destroyBlock(pos, false);
+    }
+
+    /** Only the two middle mattress blocks are sleeping positions. */
     public boolean isBed(BlockState state, BlockGetter level, BlockPos pos, LivingEntity sleeper) {
         return state.getValue(SECTION) == Section.MIDDLE && !state.getValue(UPPER);
     }
 
-    @Override
     public Direction getBedDirection(BlockState state, LevelReader level, BlockPos pos) {
-        // Vanilla beds point from foot to head; the model's FACING is reversed.
-        return state.getValue(FACING).getOpposite();
+        return state.getValue(FACING);
     }
 
     @Override
@@ -223,7 +250,7 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
                                                Player player, BlockHitResult hit) {
         if (level.isClientSide()) return InteractionResult.SUCCESS_SERVER;
 
-        Direction facing = state.getValue(FACING);
+        Direction facing = modelFacing(state);
         Side side = state.getValue(SIDE);
         BlockPos sleepPos = pos.below(state.getValue(UPPER) ? 1 : 0)
                 .relative(facing, state.getValue(SECTION).offset() - Section.MIDDLE.offset());
@@ -232,22 +259,20 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
             return InteractionResult.CONSUME;
         }
 
-        if (!BedBlock.canSetSpawn(level)) {
-            level.removeBlock(sleepPos, false);
-            Vec3 center = sleepPos.getCenter();
-            level.explode(null, level.damageSources().badRespawnPointExplosion(center), null,
-                    center, 5.0F, true, Level.ExplosionInteraction.BLOCK);
-            return InteractionResult.SUCCESS_SERVER;
+        BedRule rule = getBedRule(level, sleepPos);
+        if (rule.destroyOnUse()) {
+            rule.errorMessage().ifPresent(player::sendOverlayMessage);
+            return destroyOnUse(mattress, level, sleepPos, player);
         }
         if (mattress.getValue(OCCUPIED)) {
-            player.displayClientMessage(Component.translatable("block.minecraft.bed.occupied"), true);
+            player.sendOverlayMessage(Component.translatable("block.minecraft.bed.occupied"));
             return InteractionResult.SUCCESS_SERVER;
         }
 
-        player.startSleepInBed(sleepPos).ifRight(ignored ->
+        player.startSleepInBed(this, mattress, rule, sleepPos).ifRight(ignored ->
                 com.digitaldownpour.atouchofclass.FourPostBedSleepEvents.alignSleeper(player)).ifLeft(problem -> {
-            if (problem.getMessage() != null) {
-                player.displayClientMessage(problem.getMessage(), true);
+            if (problem.message() != null) {
+                player.sendOverlayMessage(problem.message());
             }
         });
         return InteractionResult.SUCCESS_SERVER;
@@ -259,11 +284,11 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
         if (state.getValue(SECTION) != Section.MIDDLE || state.getValue(UPPER)) {
             return Optional.empty();
         }
-        if (level instanceof Level world && !BedBlock.canSetSpawn(world)) {
+        if (level instanceof Level world && !getBedRule(world, pos).canSetSpawn(world)) {
             return Optional.empty();
         }
 
-        Direction facing = state.getValue(FACING);
+        Direction facing = modelFacing(state);
         Side sleepingSide = state.getValue(SIDE);
         BlockPos anchor = pos.relative(facing, Section.MIDDLE.offset())
                 .relative(facing.getCounterClockWise(), sleepingSide.offset());
@@ -293,7 +318,7 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         int shapeIndex = state.getValue(SECTION).ordinal() * 4
                 + state.getValue(SIDE).ordinal() * 2 + (state.getValue(UPPER) ? 1 : 0);
-        int turns = switch (state.getValue(FACING)) {
+        int turns = switch (modelFacing(state)) {
             case EAST -> 1;
             case SOUTH -> 2;
             case WEST -> 3;
@@ -363,6 +388,6 @@ public class FourPostBedBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, SECTION, SIDE, UPPER, OCCUPIED);
+        builder.add(PART, FACING, SECTION, SIDE, UPPER, OCCUPIED);
     }
 }

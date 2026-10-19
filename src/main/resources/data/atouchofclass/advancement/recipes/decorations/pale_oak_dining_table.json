@@ -17,7 +17,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:pale_oak_dining_table"
+        "recipes": ["atouchofclass:pale_oak_dining_table"]
       }
     }
   },

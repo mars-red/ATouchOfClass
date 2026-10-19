@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:purpur_sink"
+        "recipes": ["atouchofclass:purpur_sink"]
       }
     }
   },

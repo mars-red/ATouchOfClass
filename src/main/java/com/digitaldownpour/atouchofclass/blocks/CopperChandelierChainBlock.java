@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -13,13 +12,11 @@ import net.minecraft.world.level.material.*;
 import net.minecraft.world.phys.shapes.*;
 
 public class CopperChandelierChainBlock extends RotatedPillarBlock implements SimpleWaterloggedBlock {
-    public static final MapCodec<CopperChandelierChainBlock> CODEC = simpleCodec(CopperChandelierChainBlock::new);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public CopperChandelierChainBlock(Properties properties) {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(AXIS, Direction.Axis.Y).setValue(WATERLOGGED, false));
     }
-    @Override public MapCodec<? extends CopperChandelierChainBlock> codec() { return CODEC; }
     @Override public BlockState getStateForPlacement(BlockPlaceContext context) {
         return defaultBlockState().setValue(AXIS, context.getClickedFace().getAxis())
                 .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER);

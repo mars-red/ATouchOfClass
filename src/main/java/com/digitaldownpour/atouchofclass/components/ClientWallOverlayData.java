@@ -2,7 +2,7 @@ package com.digitaldownpour.atouchofclass.components;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.ChunkPos;
 
 import java.util.Map;
@@ -15,7 +15,7 @@ public class ClientWallOverlayData {
         return store.getChunks();
     }
 
-    public static void setFace(BlockPos pos, Direction face, @org.jetbrains.annotations.Nullable ResourceLocation texture) {
+    public static void setFace(BlockPos pos, Direction face, @org.jetbrains.annotations.Nullable Identifier texture) {
         store.setFace(pos, face, texture);
     }
 

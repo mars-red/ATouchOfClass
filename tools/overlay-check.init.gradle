@@ -1,0 +1,17 @@
+gradle.afterProject { p ->
+    if (p != p.rootProject) return
+    def checks = p.tasks.register('compileOverlayCheck', JavaCompile) {
+        source = p.files('src/main/java/com/digitaldownpour/atouchofclass/components/WallOverlayData.java',
+                'src/main/java/com/digitaldownpour/atouchofclass/components/WallOverlayStore.java',
+                'tools/CheckWallOverlayStore.java')
+        classpath = p.sourceSets.main.compileClasspath
+        destinationDirectory = p.layout.buildDirectory.dir('overlay-check-classes')
+        javaCompiler = p.javaToolchains.compilerFor { languageVersion = JavaLanguageVersion.of(25) }
+    }
+    p.tasks.register('checkOverlayStore', JavaExec) {
+        dependsOn checks
+        classpath = p.files(checks.flatMap { it.destinationDirectory }) + p.sourceSets.main.compileClasspath
+        mainClass = 'CheckWallOverlayStore'
+        javaLauncher = p.javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+    }
+}

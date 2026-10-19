@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:copper_bowl_ceiling_light"
+        "recipes": ["atouchofclass:copper_bowl_ceiling_light"]
       }
     }
   },

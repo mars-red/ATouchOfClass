@@ -24,7 +24,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:round_plaster_column_capital"
+        "recipes": ["atouchofclass:round_plaster_column_capital"]
       }
     }
   },

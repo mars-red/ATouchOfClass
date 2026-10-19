@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:end_stone_brick_countertop"
+        "recipes": ["atouchofclass:end_stone_brick_countertop"]
       }
     }
   },

@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:waxed_exposed_copper_table_lamp"
+        "recipes": ["atouchofclass:waxed_exposed_copper_table_lamp"]
       }
     }
   },

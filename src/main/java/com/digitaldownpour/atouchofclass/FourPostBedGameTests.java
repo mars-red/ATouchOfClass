@@ -20,7 +20,7 @@ public class FourPostBedGameTests {
         var anchor = helper.absolutePos(ANCHOR);
         level.destroyBlock(anchor, false);
         for (int x = -2; x <= 2; x++) for (int z = -2; z <= 2; z++) helper.setBlock(ANCHOR.offset(x, -1, z), Blocks.STONE);
-        var state = bed.defaultBlockState().setValue(FourPostBedBlock.FACING, facing);
+        var state = bed.defaultBlockState().setValue(FourPostBedBlock.FACING, facing.getOpposite());
         helper.setBlock(ANCHOR, state);
         bed.setPlacedBy(level, anchor, state, null, ItemStack.EMPTY);
     }
@@ -35,7 +35,7 @@ public class FourPostBedGameTests {
         right.startSleeping(rightPos);
         for (var sleeper : List.of(left, right)) {
             var pos = sleeper.getSleepingPos().orElseThrow();
-            helper.assertTrue(Math.abs(sleeper.getY() - pos.getY() - 11.0 / 16) < 0.000001, Component.literal("regression setup must reproduce vanilla's too-low sleeping height"));
+            helper.assertTrue(Math.abs(sleeper.getY() - pos.getY() - 15.0 / 16) < 0.000001, Component.literal("the bed sleep-height API must position sleepers above the mattress immediately"));
             NeoForge.EVENT_BUS.post(new EntityTickEvent.Post(sleeper));
             helper.assertTrue(Math.abs(sleeper.getY() - pos.getY() - 15.0 / 16) < 0.000001, Component.literal("sleeping body must rest two model units above the highest bedding surface"));
             helper.assertTrue(sleeper.yo == sleeper.getY() && sleeper.yOld == sleeper.getY(), Component.literal("camera and body interpolation must not sink back through the mattress"));
@@ -73,7 +73,7 @@ public class FourPostBedGameTests {
 
     public static void vanillaBedsKeepVanillaSleepingHeight(GameTestHelper helper) {
         helper.setBlock(ANCHOR.below(), Blocks.STONE);
-        helper.setBlock(ANCHOR, Blocks.RED_BED);
+        helper.setBlock(ANCHOR, Blocks.BED.red());
         var player = helper.makeMockPlayer(GameType.CREATIVE);
         var pos = helper.absolutePos(ANCHOR);
         player.startSleeping(pos);

@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:mangrove_balustrade"
+        "recipes": ["atouchofclass:mangrove_balustrade"]
       }
     }
   },

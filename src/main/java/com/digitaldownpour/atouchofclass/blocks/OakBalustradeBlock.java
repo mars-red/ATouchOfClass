@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -27,7 +26,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 
 /** Floor-supported, level handrail with a single wooden post. */
 public class OakBalustradeBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<OakBalustradeBlock> CODEC = simpleCodec(OakBalustradeBlock::new);
     public static final BooleanProperty TOP_JOIN = BooleanProperty.create("top_join");
     public static final EnumProperty<StairsShape> SHAPE = BlockStateProperties.STAIRS_SHAPE;
     public static final EnumProperty<Slope> SLOPE = EnumProperty.create("slope", Slope.class,
@@ -39,7 +37,6 @@ public class OakBalustradeBlock extends HorizontalDirectionalBlock {
         registerDefaultState(stateDefinition.any().setValue(FACING,Direction.NORTH).setValue(SHAPE,StairsShape.STRAIGHT).setValue(SLOPE,Slope.FLAT).setValue(TOP_JOIN,false));
     }
 
-    @Override protected MapCodec<? extends OakBalustradeBlock> codec() { return CODEC; }
 
     @Nullable @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {

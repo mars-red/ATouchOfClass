@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:cherry_nightstand"
+        "recipes": ["atouchofclass:cherry_nightstand"]
       }
     }
   },

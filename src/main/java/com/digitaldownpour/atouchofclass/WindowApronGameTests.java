@@ -47,7 +47,7 @@ public class WindowApronGameTests {
                     helper.assertTrue(connected.getValue(baseboardProperty), Component.literal("Front baseboard must enable the combined variant"));
                     Property<?> property =
                             block.getStateDefinition().getProperty("baseboard_return");
-                    helper.assertTrue(connected.getValues().get(property) == other, Component.literal("Return must follow the perpendicular baseboard"));
+                    helper.assertTrue(connected.getValue(property) == other, Component.literal("Return must follow the perpendicular baseboard"));
                     helper.setBlock(pos.relative(facing), Blocks.AIR);
                     BlockState cleared = helper.getLevel().getBlockState(helper.absolutePos(pos));
                     helper.assertTrue(!cleared.getValue(baseboardProperty), Component.literal("Removing front baseboard must clear the connection"));

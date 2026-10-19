@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -25,7 +24,6 @@ import java.util.Map;
 
 /** Compact shower head attached to a vertical wall face. */
 public class WallShowerHeadBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<WallShowerHeadBlock> CODEC = simpleCodec(WallShowerHeadBlock::new);
     private static final Map<Direction, VoxelShape> SHAPES = new EnumMap<>(Direction.class);
 
     static {
@@ -66,10 +64,6 @@ public class WallShowerHeadBlock extends HorizontalDirectionalBlock {
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
-    @Override
-    protected MapCodec<? extends WallShowerHeadBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

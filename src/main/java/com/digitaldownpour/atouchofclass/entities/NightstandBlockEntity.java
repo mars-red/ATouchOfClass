@@ -117,6 +117,6 @@ public class NightstandBlockEntity extends RandomizableContainerBlockEntity {
 
     private static void playSound(Level level, BlockPos pos, SoundEvent sound) {
         level.playSound(null, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
-                sound, SoundSource.BLOCKS, 0.5F, level.random.nextFloat() * 0.1F + 0.9F);
+                sound, SoundSource.BLOCKS, 0.5F, level.getRandom().nextFloat() * 0.1F + 0.9F);
     }
 }

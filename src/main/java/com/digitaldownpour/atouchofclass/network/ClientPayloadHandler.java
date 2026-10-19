@@ -22,7 +22,7 @@ public class ClientPayloadHandler {
     }
 
     public static void handleDataOnMain(final OpenElevatorFloorsPayload data, final IPayloadContext context) {
-        Minecraft.getInstance().setScreen(
+        Minecraft.getInstance().gui.setScreen(
                 new ElevatorFloorSelectScreen(data.controlPos(), data.floorIndices(), data.currentFloorIndex()));
     }
 

@@ -2,7 +2,6 @@ package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.ModEntities;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
-import com.mojang.serialization.MapCodec;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -53,7 +52,6 @@ public class SofaBlock extends HorizontalDirectionalBlock {
         }
     }
 
-    public static final MapCodec<SofaBlock> CODEC = simpleCodec(SofaBlock::new);
     public static final EnumProperty<Section> SECTION = EnumProperty.create("section", Section.class);
     private static final VoxelShape[][] SHAPES = createShapes();
 
@@ -64,10 +62,6 @@ public class SofaBlock extends HorizontalDirectionalBlock {
                 .setValue(SECTION, Section.MIDDLE));
     }
 
-    @Override
-    protected MapCodec<? extends SofaBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable
