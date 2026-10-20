@@ -63,7 +63,7 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
     ) {
         PacketDistributor.sendToPlayersTrackingChunk(
                 level,
-                new ChunkPos(pos),
+                ChunkPos.containing(pos),
                 payload
         );
     }

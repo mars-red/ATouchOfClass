@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:pale_oak_shutter"
+        "recipes": ["atouchofclass:pale_oak_shutter"]
       }
     }
   },

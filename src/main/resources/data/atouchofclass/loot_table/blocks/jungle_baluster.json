@@ -1,11 +1,9 @@
 {
   "pools": [
     {
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
       "entries": [
         {
           "name": "atouchofclass:jungle_baluster",
@@ -17,5 +15,3 @@
   ],
   "type": "minecraft:block"
 }
-
-

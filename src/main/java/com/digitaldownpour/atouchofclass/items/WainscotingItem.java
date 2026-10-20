@@ -1,10 +1,10 @@
 package com.digitaldownpour.atouchofclass.items;
 
 import com.digitaldownpour.atouchofclass.ATouchofClass;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public class WainscotingItem extends WallOverlayItemBase {
-    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(
+    private static final Identifier TEXTURE = Identifier.fromNamespaceAndPath(
             ATouchofClass.MODID,
             "item/wainscoting_2"
     );

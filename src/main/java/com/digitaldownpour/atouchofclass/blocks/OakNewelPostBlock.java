@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -16,13 +15,11 @@ import javax.annotation.Nullable;
 import net.minecraft.server.level.ServerLevel;
 
 public class OakNewelPostBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<OakNewelPostBlock> CODEC=simpleCodec(OakNewelPostBlock::new);
     public static final EnumProperty<DoubleBlockHalf> HALF=BlockStateProperties.DOUBLE_BLOCK_HALF;
     public OakNewelPostBlock(Properties properties) {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(FACING,Direction.NORTH).setValue(HALF,DoubleBlockHalf.LOWER));
     }
-    @Override protected MapCodec<? extends OakNewelPostBlock> codec(){return CODEC;}
 
     @Nullable @Override public BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockPos pos=context.getClickedPos();

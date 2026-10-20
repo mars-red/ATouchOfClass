@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:bamboo_lime_four_post_bed"
+        "recipes": ["atouchofclass:bamboo_lime_four_post_bed"]
       }
     }
   },

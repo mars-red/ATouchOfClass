@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:elevator_shaft_panel"
+        "recipes": ["atouchofclass:elevator_shaft_panel"]
       }
     }
   },

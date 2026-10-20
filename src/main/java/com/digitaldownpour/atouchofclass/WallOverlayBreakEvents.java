@@ -5,7 +5,7 @@ import com.digitaldownpour.atouchofclass.items.BlockOverlayItemBase;
 import com.digitaldownpour.atouchofclass.network.WallOverlayUpdatePacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.level.block.BreakBlockEvent;
 
 @EventBusSubscriber(
         modid = ATouchofClass.MODID
@@ -37,7 +37,7 @@ public final class WallOverlayBreakEvents {
 
         BlockPos pos = event.getPos();
         WallOverlaySavedData overlays = WallOverlaySavedData.get(level);
-        ResourceLocation texture = overlays.getFaceTexture(pos, face);
+        Identifier texture = overlays.getFaceTexture(pos, face);
         if (texture == null) {
             return;
         }
@@ -54,7 +54,7 @@ public final class WallOverlayBreakEvents {
     }
 
     @SubscribeEvent
-    public static void onBlockBreak(BlockEvent.BreakEvent event) {
+    public static void onBlockBreak(BreakBlockEvent event) {
         if (event.isCanceled() || !(event.getLevel() instanceof ServerLevel level)) {
             return;
         }
@@ -79,7 +79,7 @@ public final class WallOverlayBreakEvents {
     private static void dropOverlayItem(
             ServerLevel level,
             BlockPos pos,
-            ResourceLocation texture,
+            Identifier texture,
             @org.jetbrains.annotations.Nullable Player player
     ) {
         if (player != null && player.getAbilities().instabuild) {

@@ -5,7 +5,7 @@ import com.digitaldownpour.atouchofclass.components.WallOverlaySavedData;
 import com.digitaldownpour.atouchofclass.network.WallOverlayUpdatePacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
@@ -20,12 +20,12 @@ import java.util.concurrent.ConcurrentHashMap;
  * Base item for placing an overlay on any face of a block.
  */
 public abstract class BlockOverlayItemBase extends Item {
-    private static final Map<ResourceLocation, Item> ITEMS_BY_TEXTURE =
+    private static final Map<Identifier, Item> ITEMS_BY_TEXTURE =
             new ConcurrentHashMap<>();
 
-    private final ResourceLocation overlayTexture;
+    private final Identifier overlayTexture;
 
-    protected BlockOverlayItemBase(Properties properties, ResourceLocation overlayTexture) {
+    protected BlockOverlayItemBase(Properties properties, Identifier overlayTexture) {
         super(properties);
         this.overlayTexture = overlayTexture;
         ITEMS_BY_TEXTURE.put(overlayTexture, this);
@@ -37,7 +37,7 @@ public abstract class BlockOverlayItemBase extends Item {
      * is removed from a block.
      */
     @Nullable
-    public static Item getItemForTexture(@Nullable ResourceLocation texture) {
+    public static Item getItemForTexture(@Nullable Identifier texture) {
         return texture == null ? null : ITEMS_BY_TEXTURE.get(texture);
     }
 

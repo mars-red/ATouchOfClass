@@ -1,11 +1,11 @@
 package com.digitaldownpour.atouchofclass.gui;
 
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.client.renderer.RenderPipelines;
 
@@ -57,9 +57,9 @@ public class BetterImageButton extends Button {
     }
 
     @Override
-    public void renderWidget(GuiGraphics p_283502_, int p_281473_, int p_283021_, float p_282518_) {
-        ResourceLocation resourcelocation = this.sprites.get(this.isActive(), this.isPressed());
-        p_283502_.blitSprite(RenderPipelines.GUI_TEXTURED, resourcelocation, this.getX(), this.getY(), this.width, this.height);
+    public void extractContents(GuiGraphicsExtractor p_283502_, int p_281473_, int p_283021_, float p_282518_) {
+        Identifier sprite = this.sprites.get(this.isActive(), this.isPressed());
+        p_283502_.blitSprite(RenderPipelines.GUI_TEXTURED, sprite, this.getX(), this.getY(), this.width, this.height);
 
         if (!isEnabled()) {
             int x = getX();

@@ -1,7 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.level.BlockGetter;
@@ -13,10 +11,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Upright plaster column pieces; placement never changes their orientation. */
 public class PlasterColumnBlock extends Block {
-    public static final MapCodec<PlasterColumnBlock> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
-            Variant.CODEC.fieldOf("variant").forGetter(block -> block.variant),
-            propertiesCodec()
-    ).apply(instance, (variant, properties) -> new PlasterColumnBlock(properties, variant)));
 
     public enum Variant implements StringRepresentable {
         SQUARE_COLUMN("square_column", false, false, false),
@@ -79,10 +73,6 @@ public class PlasterColumnBlock extends Block {
         return Block.box(x0, inverted ? 16 - y1 : y0, z0, x1, inverted ? 16 - y0 : y1, z1);
     }
 
-    @Override
-    protected MapCodec<? extends PlasterColumnBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {

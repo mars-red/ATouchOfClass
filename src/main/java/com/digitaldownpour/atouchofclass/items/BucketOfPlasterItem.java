@@ -5,11 +5,15 @@ import com.digitaldownpour.atouchofclass.components.WallOverlaySavedData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemInstance;
+import net.minecraft.world.item.ItemStackTemplate;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -19,7 +23,7 @@ import net.minecraft.world.level.GameType;
 public class BucketOfPlasterItem extends BlockOverlayItemBase {
     public static final int APPLICATIONS = 32;
 
-    private static final ResourceLocation PLASTER_OVERLAY = ResourceLocation.fromNamespaceAndPath(
+    private static final Identifier PLASTER_OVERLAY = Identifier.fromNamespaceAndPath(
             "minecraft",
             "block/white_concrete"
     );
@@ -38,7 +42,7 @@ public class BucketOfPlasterItem extends BlockOverlayItemBase {
         BlockPos pos = context.getClickedPos();
         Direction face = context.getClickedFace();
         WallOverlayData overlay = WallOverlaySavedData.get(level)
-                .getChunkSnapshot(new ChunkPos(pos))
+                .getChunkSnapshot(ChunkPos.containing(pos))
                 .get(pos);
 
         if (overlay != null && PLASTER_OVERLAY.equals(overlay.getFace(face))) {
@@ -53,14 +57,20 @@ public class BucketOfPlasterItem extends BlockOverlayItemBase {
     }
 
     @Override
-    public ItemStack getCraftingRemainder(ItemStack stack) {
-        if (isLastApplication(stack)) {
-            return new ItemStack(Items.BUCKET);
+    public ItemStackTemplate getCraftingRemainder(ItemInstance stack) {
+        int damage = stack.getOrDefault(DataComponents.DAMAGE, 0);
+        if (damage >= stack.getOrDefault(DataComponents.MAX_DAMAGE, APPLICATIONS) - 1) {
+            return new ItemStackTemplate(Items.BUCKET);
         }
 
-        ItemStack remainder = stack.copyWithCount(1);
-        remainder.setDamageValue(stack.getDamageValue() + 1);
-        return remainder;
+        DataComponentPatch.Builder patch = DataComponentPatch.builder();
+        DataComponentPatch original = stack instanceof ItemStack itemStack ? itemStack.getComponentsPatch()
+                : stack instanceof ItemStackTemplate template ? template.components() : DataComponentPatch.EMPTY;
+        var components = original.split();
+        patch.set(components.added());
+        components.removed().forEach(patch::remove);
+        patch.set(DataComponents.DAMAGE, damage + 1);
+        return new ItemStackTemplate(this, patch.build());
     }
 
     @Override

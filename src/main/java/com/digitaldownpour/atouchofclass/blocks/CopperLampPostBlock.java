@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -24,7 +23,6 @@ import net.minecraft.server.level.ServerLevel;
 
 /** A one-block-wide, three-block-tall decorative lamp post. */
 public class CopperLampPostBlock extends Block {
-    public static final MapCodec<CopperLampPostBlock> CODEC = simpleCodec(CopperLampPostBlock::new);
     public static final IntegerProperty PART = IntegerProperty.create("part", 0, 2);
 
     private static final VoxelShape BASE_SHAPE = Shapes.or(
@@ -44,10 +42,6 @@ public class CopperLampPostBlock extends Block {
         registerDefaultState(stateDefinition.any().setValue(PART, 0));
     }
 
-    @Override
-    protected MapCodec<? extends CopperLampPostBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

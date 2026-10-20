@@ -8,7 +8,7 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ClickType;
+import net.minecraft.world.inventory.ContainerInput;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemContainerContents;
@@ -18,7 +18,14 @@ public class KeyRingMenu extends AbstractContainerMenu {
     private final Inventory inventory;
     private final int ringSlot;
     private final ItemStack ring;
-    private final SimpleContainer keys = new SimpleContainer(KeyRingItem.CAPACITY);
+    private boolean keysLoaded;
+    private final SimpleContainer keys = new SimpleContainer(KeyRingItem.CAPACITY) {
+        @Override
+        public void setChanged() {
+            super.setChanged();
+            if (keysLoaded) persistKeys();
+        }
+    };
 
     public KeyRingMenu(int id, Inventory inventory, RegistryFriendlyByteBuf buffer) {
         this(id, inventory, buffer.readVarInt());
@@ -46,18 +53,20 @@ public class KeyRingMenu extends AbstractContainerMenu {
             });
         }
         // Persist each edit, including partial transfers, before the ring can leave the inventory.
-        keys.addListener(container -> {
-            if (!inventory.player.level().isClientSide() && stillValid(inventory.player)) {
-                NonNullList<ItemStack> updated = NonNullList.withSize(KeyRingItem.CAPACITY, ItemStack.EMPTY);
-                for (int i = 0; i < updated.size(); i++) updated.set(i, keys.getItem(i));
-                ring.set(DataComponents.CONTAINER, ItemContainerContents.fromItems(updated));
-                inventory.setChanged();
-            }
-        });
+        keysLoaded = true;
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 9; col++) addInventorySlot(col + row * 9 + 9, 104 + col * 18, 18 + row * 18);
         }
         for (int col = 0; col < 9; col++) addInventorySlot(col, 104 + col * 18, 76);
+    }
+
+    private void persistKeys() {
+        if (!inventory.player.level().isClientSide() && stillValid(inventory.player)) {
+            NonNullList<ItemStack> updated = NonNullList.withSize(KeyRingItem.CAPACITY, ItemStack.EMPTY);
+            for (int i = 0; i < updated.size(); i++) updated.set(i, keys.getItem(i));
+            ring.set(DataComponents.CONTAINER, ItemContainerContents.fromItems(updated));
+            inventory.setChanged();
+        }
     }
 
     private void addInventorySlot(int index, int x, int y) {
@@ -75,8 +84,8 @@ public class KeyRingMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public void clicked(int slot, int button, ClickType type, Player player) {
-        if (!stillValid(player) || (type == ClickType.SWAP && button == ringSlot)) return;
+    public void clicked(int slot, int button, ContainerInput type, Player player) {
+        if (!stillValid(player) || (type == ContainerInput.SWAP && button == ringSlot)) return;
         // Also block creative cloning of the live ring while its contents are being edited.
         if (slot >= 0 && slot < slots.size() && slots.get(slot).container == inventory
                 && slots.get(slot).getContainerSlot() == ringSlot) return;

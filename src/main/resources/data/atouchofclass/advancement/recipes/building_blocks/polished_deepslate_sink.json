@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:polished_deepslate_sink"
+        "recipes": ["atouchofclass:polished_deepslate_sink"]
       }
     }
   },

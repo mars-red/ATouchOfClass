@@ -18,11 +18,11 @@ import net.minecraft.world.phys.Vec3;
 import com.mojang.authlib.GameProfile;
 import java.util.List;
 import java.util.UUID;
-import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ClientInformation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.Items;
@@ -161,7 +161,7 @@ public class ShutterGameTests {
     public static void recipeCraftsEightAndMaterialUnlocksIt(GameTestHelper helper) {
         var level = helper.getLevel();
         for (var definition : ShutterVariants.VALUES) {
-            var id = ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, definition.id());
+            var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, definition.id());
             var key = ResourceKey.create(Registries.RECIPE, id);
             var holder = level.getServer().getRecipeManager().byKey(key).orElseThrow();
             helper.assertTrue(holder.value() instanceof ShapedRecipe, Component.literal("Shutter recipe must load"));
@@ -171,7 +171,7 @@ public class ShutterGameTests {
             var input = CraftingInput.of(3, 2,
                     List.of(wood, stick, wood, wood, stick, wood));
             helper.assertTrue(recipe.matches(input, level), Component.literal("Matching planks and sticks must craft " + definition.id()));
-            var result = recipe.assemble(input, level.registryAccess());
+            var result = recipe.assemble(input);
             helper.assertTrue(result.is(ModItems.SHUTTER_ITEMS.get(definition.id()).get()) && result.getCount() == 8, Component.literal("Recipe must craft eight " + definition.id()));
             // Use a real ServerPlayer for advancement awards, with a no-op test
             // connection and without joining the world (which sends overlay payloads).
@@ -181,7 +181,7 @@ public class ShutterGameTests {
             player.connection = new FakePlayer(level,
                     new GameProfile(UUID.randomUUID(), "shutter-test-connection")).connection;
             var advancement = level.getServer().getAdvancements().get(
-                    ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "recipes/building_blocks/" + definition.id()));
+                    Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "recipes/building_blocks/" + definition.id()));
             helper.assertTrue(advancement != null, Component.literal("Shutter unlock advancement must load"));
             player.getInventory().add(wood.copy());
             CriteriaTriggers.INVENTORY_CHANGED.trigger(player, player.getInventory(), wood);

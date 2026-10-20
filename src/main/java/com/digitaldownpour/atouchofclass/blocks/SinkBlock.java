@@ -1,10 +1,8 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 
 /** A two-unit-tall countertop with a stepped oval opening biased toward its front. */
 public class SinkBlock extends HorizontalFurnitureBlock {
-    public static final MapCodec<SinkBlock> CODEC = simpleCodec(SinkBlock::new);
 
     private static final double[][] NORTH_FACING_BOXES = {
             {0, 0, 0, 16, 2, 2},
@@ -38,8 +36,4 @@ public class SinkBlock extends HorizontalFurnitureBlock {
         super(properties, NORTH_FACING_BOXES);
     }
 
-    @Override
-    protected MapCodec<? extends SinkBlock> codec() {
-        return CODEC;
-    }
 }

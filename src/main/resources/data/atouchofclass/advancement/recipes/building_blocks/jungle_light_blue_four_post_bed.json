@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:jungle_light_blue_four_post_bed"
+        "recipes": ["atouchofclass:jungle_light_blue_four_post_bed"]
       }
     }
   },

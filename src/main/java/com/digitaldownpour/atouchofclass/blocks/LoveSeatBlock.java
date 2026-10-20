@@ -2,7 +2,6 @@ package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.ModEntities;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
-import com.mojang.serialization.MapCodec;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -51,7 +50,6 @@ public class LoveSeatBlock extends HorizontalDirectionalBlock {
         }
     }
 
-    public static final MapCodec<LoveSeatBlock> CODEC = simpleCodec(LoveSeatBlock::new);
     public static final EnumProperty<Side> SIDE = EnumProperty.create("side", Side.class);
     private static final VoxelShape[][] SHAPES = createShapes();
 
@@ -62,10 +60,6 @@ public class LoveSeatBlock extends HorizontalDirectionalBlock {
                 .setValue(SIDE, Side.LEFT));
     }
 
-    @Override
-    protected MapCodec<? extends LoveSeatBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

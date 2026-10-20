@@ -13,7 +13,7 @@ import com.digitaldownpour.atouchofclass.entities.OvenBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.block.Block;
@@ -45,7 +45,7 @@ public class ModEntities {
                     .clientTrackingRange(8)
                     .updateInterval(1)
                     .build(ResourceKey.create(Registries.ENTITY_TYPE,
-                            ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID, "love_seat_seat"))));
+                            Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "love_seat_seat"))));
 
     public static final Supplier<BlockEntityType<KeyCutterBlockEntity>> KEY_CUTTER_BE = BLOCK_ENTITY_TYPES.register("key_cutter_be",
             () -> new BlockEntityType<>(

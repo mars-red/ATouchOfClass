@@ -15,7 +15,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:waxed_copper_wall_sconce"
+        "recipes": ["atouchofclass:waxed_copper_wall_sconce"]
       }
     },
     "has_sconce": {

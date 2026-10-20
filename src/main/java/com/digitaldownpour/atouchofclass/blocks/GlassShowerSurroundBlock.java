@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -19,7 +18,6 @@ import org.jetbrains.annotations.Nullable;
 
 /** A shower panel whose translucent perimeter disappears against matching, aligned panels. */
 public class GlassShowerSurroundBlock extends ThreeHighGlassPanelBlock {
-    public static final MapCodec<GlassShowerSurroundBlock> CODEC = simpleCodec(GlassShowerSurroundBlock::new);
     public static final BooleanProperty LEFT_CONNECTED = BooleanProperty.create("left_connected");
     public static final BooleanProperty RIGHT_CONNECTED = BooleanProperty.create("right_connected");
     public static final BooleanProperty UP_CONNECTED = BooleanProperty.create("up_connected");
@@ -34,10 +32,6 @@ public class GlassShowerSurroundBlock extends ThreeHighGlassPanelBlock {
                 .setValue(DOWN_CONNECTED, false));
     }
 
-    @Override
-    protected MapCodec<? extends GlassShowerSurroundBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

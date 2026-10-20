@@ -18,7 +18,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "atouchofclass:waxed_copper_chandelier"
+        "recipes": ["atouchofclass:waxed_copper_chandelier"]
       },
       "trigger": "minecraft:recipe_unlocked"
     }

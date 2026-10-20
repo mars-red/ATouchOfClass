@@ -1,7 +1,6 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.entities.NightstandBlockEntity;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -25,7 +24,6 @@ import org.jetbrains.annotations.Nullable;
 
 /** A full-height, single-block nightstand with a 27-slot chest inventory. */
 public class NightstandBlock extends HorizontalFurnitureBlock implements EntityBlock {
-    public static final MapCodec<NightstandBlock> CODEC = simpleCodec(NightstandBlock::new);
 
     /** Geometry for a north-facing nightstand; the shared base class rotates it. */
     private static final double[][] NORTH_FACING_BOXES = {
@@ -49,10 +47,6 @@ public class NightstandBlock extends HorizontalFurnitureBlock implements EntityB
         super(properties, NORTH_FACING_BOXES);
     }
 
-    @Override
-    protected MapCodec<? extends NightstandBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

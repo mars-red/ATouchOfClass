@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -16,7 +15,6 @@ import java.util.Arrays;
 
 /** Same-block connections: perimeter aprons and legs only at convex/concave corners. */
 public class DiningTableBlock extends Block {
-    public static final MapCodec<DiningTableBlock> CODEC = simpleCodec(DiningTableBlock::new);
     // Clockwise order also defines rotation and mirror permutations.
     public static final BooleanProperty[] EDGES = {
             BooleanProperty.create("north"), BooleanProperty.create("east"),
@@ -36,7 +34,6 @@ public class DiningTableBlock extends Block {
         registerDefaultState(state);
     }
 
-    @Override protected MapCodec<? extends DiningTableBlock> codec() { return CODEC; }
 
     private BlockState connected(BlockState state, BlockGetter level, BlockPos pos) {
         for (int i = 0; i < 4; i++) {

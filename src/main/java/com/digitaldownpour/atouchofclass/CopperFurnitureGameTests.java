@@ -16,10 +16,10 @@ import net.minecraft.network.chat.Component;
 
 public class CopperFurnitureGameTests {
     private static final Block[] VANILLA_STAGES = {
-            Blocks.CUT_COPPER,
-            Blocks.EXPOSED_CUT_COPPER,
-            Blocks.WEATHERED_CUT_COPPER,
-            Blocks.OXIDIZED_CUT_COPPER
+            Blocks.CUT_COPPER.weathering().unaffected(),
+            Blocks.CUT_COPPER.weathering().exposed(),
+            Blocks.CUT_COPPER.weathering().weathered(),
+            Blocks.CUT_COPPER.weathering().oxidized()
     };
 
     public static void countertopsOxidizeWaxAndUseVanillaCopperProperties(GameTestHelper helper) {

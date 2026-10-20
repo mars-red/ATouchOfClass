@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -18,7 +17,6 @@ import org.jetbrains.annotations.Nullable;
 
 /** A one-block-tall table lamp matching the copper floor lamp. */
 public class CopperTableLampBlock extends Block {
-    public static final MapCodec<CopperTableLampBlock> CODEC = simpleCodec(CopperTableLampBlock::new);
     private static final VoxelShape SHAPE = Shapes.or(
             Block.box(4, 0, 4, 12, 3, 12),
             Block.box(7, 3, 7, 9, 9, 9),
@@ -31,10 +29,6 @@ public class CopperTableLampBlock extends Block {
         super(properties);
     }
 
-    @Override
-    protected MapCodec<? extends CopperTableLampBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

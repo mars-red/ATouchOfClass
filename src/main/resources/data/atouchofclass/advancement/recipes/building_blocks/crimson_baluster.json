@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:crimson_baluster"
+        "recipes": ["atouchofclass:crimson_baluster"]
       }
     }
   },

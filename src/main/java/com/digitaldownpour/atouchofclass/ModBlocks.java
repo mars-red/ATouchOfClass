@@ -894,66 +894,66 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()
                             .noOcclusion()));
     public static final DeferredBlock<CountertopBlock> CUT_COPPER_COUNTERTOP =
-            registerCopperCountertop("cut_copper_countertop", WeatherState.UNAFFECTED, false, Blocks.CUT_COPPER);
+            registerCopperCountertop("cut_copper_countertop", WeatherState.UNAFFECTED, false, Blocks.CUT_COPPER.weathering().unaffected());
 
     public static final DeferredBlock<SinkBlock> CUT_COPPER_SINK =
-            registerCopperSink("cut_copper_sink", WeatherState.UNAFFECTED, false, Blocks.CUT_COPPER);
+            registerCopperSink("cut_copper_sink", WeatherState.UNAFFECTED, false, Blocks.CUT_COPPER.weathering().unaffected());
 
     public static final DeferredBlock<CountertopBlock> EXPOSED_CUT_COPPER_COUNTERTOP =
             registerCopperCountertop("exposed_cut_copper_countertop", WeatherState.EXPOSED, false,
-                    Blocks.EXPOSED_CUT_COPPER);
+                    Blocks.CUT_COPPER.weathering().exposed());
 
     public static final DeferredBlock<SinkBlock> EXPOSED_CUT_COPPER_SINK =
             registerCopperSink("exposed_cut_copper_sink", WeatherState.EXPOSED, false,
-                    Blocks.EXPOSED_CUT_COPPER);
+                    Blocks.CUT_COPPER.weathering().exposed());
 
     public static final DeferredBlock<CountertopBlock> WEATHERED_CUT_COPPER_COUNTERTOP =
             registerCopperCountertop("weathered_cut_copper_countertop", WeatherState.WEATHERED, false,
-                    Blocks.WEATHERED_CUT_COPPER);
+                    Blocks.CUT_COPPER.weathering().weathered());
 
     public static final DeferredBlock<SinkBlock> WEATHERED_CUT_COPPER_SINK =
             registerCopperSink("weathered_cut_copper_sink", WeatherState.WEATHERED, false,
-                    Blocks.WEATHERED_CUT_COPPER);
+                    Blocks.CUT_COPPER.weathering().weathered());
 
     public static final DeferredBlock<CountertopBlock> OXIDIZED_CUT_COPPER_COUNTERTOP =
             registerCopperCountertop("oxidized_cut_copper_countertop", WeatherState.OXIDIZED, false,
-                    Blocks.OXIDIZED_CUT_COPPER);
+                    Blocks.CUT_COPPER.weathering().oxidized());
 
     public static final DeferredBlock<SinkBlock> OXIDIZED_CUT_COPPER_SINK =
             registerCopperSink("oxidized_cut_copper_sink", WeatherState.OXIDIZED, false,
-                    Blocks.OXIDIZED_CUT_COPPER);
+                    Blocks.CUT_COPPER.weathering().oxidized());
 
     public static final DeferredBlock<CountertopBlock> WAXED_CUT_COPPER_COUNTERTOP =
             registerCopperCountertop("waxed_cut_copper_countertop", WeatherState.UNAFFECTED, true,
-                    Blocks.WAXED_CUT_COPPER);
+                    Blocks.CUT_COPPER.waxed().unaffected());
 
     public static final DeferredBlock<SinkBlock> WAXED_CUT_COPPER_SINK =
             registerCopperSink("waxed_cut_copper_sink", WeatherState.UNAFFECTED, true,
-                    Blocks.WAXED_CUT_COPPER);
+                    Blocks.CUT_COPPER.waxed().unaffected());
 
     public static final DeferredBlock<CountertopBlock> WAXED_EXPOSED_CUT_COPPER_COUNTERTOP =
             registerCopperCountertop("waxed_exposed_cut_copper_countertop", WeatherState.EXPOSED, true,
-                    Blocks.WAXED_EXPOSED_CUT_COPPER);
+                    Blocks.CUT_COPPER.waxed().exposed());
 
     public static final DeferredBlock<SinkBlock> WAXED_EXPOSED_CUT_COPPER_SINK =
             registerCopperSink("waxed_exposed_cut_copper_sink", WeatherState.EXPOSED, true,
-                    Blocks.WAXED_EXPOSED_CUT_COPPER);
+                    Blocks.CUT_COPPER.waxed().exposed());
 
     public static final DeferredBlock<CountertopBlock> WAXED_WEATHERED_CUT_COPPER_COUNTERTOP =
             registerCopperCountertop("waxed_weathered_cut_copper_countertop", WeatherState.WEATHERED, true,
-                    Blocks.WAXED_WEATHERED_CUT_COPPER);
+                    Blocks.CUT_COPPER.waxed().weathered());
 
     public static final DeferredBlock<SinkBlock> WAXED_WEATHERED_CUT_COPPER_SINK =
             registerCopperSink("waxed_weathered_cut_copper_sink", WeatherState.WEATHERED, true,
-                    Blocks.WAXED_WEATHERED_CUT_COPPER);
+                    Blocks.CUT_COPPER.waxed().weathered());
 
     public static final DeferredBlock<CountertopBlock> WAXED_OXIDIZED_CUT_COPPER_COUNTERTOP =
             registerCopperCountertop("waxed_oxidized_cut_copper_countertop", WeatherState.OXIDIZED, true,
-                    Blocks.WAXED_OXIDIZED_CUT_COPPER);
+                    Blocks.CUT_COPPER.waxed().oxidized());
 
     public static final DeferredBlock<SinkBlock> WAXED_OXIDIZED_CUT_COPPER_SINK =
             registerCopperSink("waxed_oxidized_cut_copper_sink", WeatherState.OXIDIZED, true,
-                    Blocks.WAXED_OXIDIZED_CUT_COPPER);
+                    Blocks.CUT_COPPER.waxed().oxidized());
 
     private static DeferredBlock<CountertopBlock> registerCopperCountertop(
             String name, WeatherState age, boolean waxed, Block vanillaBlock) {
@@ -1063,7 +1063,7 @@ public class ModBlocks {
                             .mapColor(MapColor.COLOR_ORANGE)
                             .strength(1.5F)
                             .sound(net.minecraft.world.level.block.SoundType.WOOL)
-                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.IMMOVEABLE)
                             .noOcclusion()));
 
     public static final DeferredBlock<SofaBlock> LEATHER_SOFA =
@@ -1073,7 +1073,7 @@ public class ModBlocks {
                             .mapColor(MapColor.COLOR_ORANGE)
                             .strength(1.5F)
                             .sound(net.minecraft.world.level.block.SoundType.WOOL)
-                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.IMMOVEABLE)
                             .noOcclusion()));
 
     public static final DeferredBlock<ChairBlock> LEATHER_CHAIR =
@@ -1083,7 +1083,7 @@ public class ModBlocks {
                             .mapColor(MapColor.COLOR_ORANGE)
                             .strength(1.5F)
                             .sound(net.minecraft.world.level.block.SoundType.WOOL)
-                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.IMMOVEABLE)
                             .noOcclusion()));
 
     public static final java.util.Map<String, DeferredBlock<DiningChairBlock>> DINING_CHAIRS = registerDiningChairs();
@@ -1142,7 +1142,7 @@ public class ModBlocks {
                         .mapColor(MapColor.COLOR_BROWN)
                         .strength(2.0F)
                         .sound(net.minecraft.world.level.block.SoundType.WOOD)
-                        .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                        .pushReaction(net.minecraft.world.level.material.PushReaction.IMMOVEABLE)
                         .noOcclusion()));
         DRESSER_REGISTRATIONS.add(dresser);
         return dresser;
@@ -1150,13 +1150,13 @@ public class ModBlocks {
 
     // Registration has no world or position: intentionally copy the material's default values.
     @SuppressWarnings("deprecation")
-    private static BlockBehaviour.Properties furnitureProperties(Block source, net.minecraft.resources.ResourceLocation registryName) {
+    private static BlockBehaviour.Properties furnitureProperties(Block source, net.minecraft.resources.Identifier registryName) {
         BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .mapColor(source.defaultMapColor())
                 .strength(source.defaultDestroyTime(), source.getExplosionResistance())
                 .sound(source.defaultBlockState().getSoundType())
-                .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                .pushReaction(net.minecraft.world.level.material.PushReaction.IMMOVEABLE)
                 .noOcclusion();
         if (source.defaultBlockState().ignitedByLava()) properties.ignitedByLava();
         return properties;
@@ -1248,7 +1248,7 @@ public class ModBlocks {
             BLOCKS.register("oak_newel_post",key->new com.digitaldownpour.atouchofclass.blocks.OakNewelPostBlock(
                     BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK,key))
                             .mapColor(MapColor.WOOD).strength(2.0F).sound(net.minecraft.world.level.block.SoundType.WOOD)
-                            .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK).noOcclusion()));
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.IMMOVEABLE).noOcclusion()));
     public static final java.util.Map<String, WoodRailingVariants.Family> WOOD_RAILINGS = WoodRailingVariants.register();
 
     public static final DeferredBlock<CrownMouldingBlock> CROWN_MOULDING = BLOCKS.register("crown_moulding",
@@ -1498,7 +1498,7 @@ public class ModBlocks {
                     .strength(3.0F, 6.0F)
                     .sound(net.minecraft.world.level.block.SoundType.METAL)
                     .requiresCorrectToolForDrops()
-                    .pushReaction(net.minecraft.world.level.material.PushReaction.BLOCK)
+                    .pushReaction(net.minecraft.world.level.material.PushReaction.IMMOVEABLE)
                     .noOcclusion()
             )
     );
@@ -1740,10 +1740,10 @@ public class ModBlocks {
 
     private static MapColor copperMapColor(WeatherState age) {
         return switch (age) {
-            case UNAFFECTED -> Blocks.CUT_COPPER.defaultMapColor();
-            case EXPOSED -> Blocks.EXPOSED_CUT_COPPER.defaultMapColor();
-            case WEATHERED -> Blocks.WEATHERED_CUT_COPPER.defaultMapColor();
-            case OXIDIZED -> Blocks.OXIDIZED_CUT_COPPER.defaultMapColor();
+            case UNAFFECTED -> Blocks.CUT_COPPER.weathering().unaffected().defaultMapColor();
+            case EXPOSED -> Blocks.CUT_COPPER.weathering().exposed().defaultMapColor();
+            case WEATHERED -> Blocks.CUT_COPPER.weathering().weathered().defaultMapColor();
+            case OXIDIZED -> Blocks.CUT_COPPER.weathering().oxidized().defaultMapColor();
         };
     }
 

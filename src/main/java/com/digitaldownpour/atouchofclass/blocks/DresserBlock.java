@@ -1,7 +1,6 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.entities.DresserBlockEntity;
-import com.mojang.serialization.MapCodec;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -53,7 +52,6 @@ public class DresserBlock extends HorizontalDirectionalBlock implements EntityBl
         }
     }
 
-    public static final MapCodec<DresserBlock> CODEC = simpleCodec(DresserBlock::new);
     public static final EnumProperty<Side> SIDE = EnumProperty.create("side", Side.class);
     public static final BooleanProperty UPPER = BooleanProperty.create("upper");
     private static final VoxelShape[][] SHAPES = createShapes();
@@ -66,10 +64,6 @@ public class DresserBlock extends HorizontalDirectionalBlock implements EntityBl
                 .setValue(UPPER, false));
     }
 
-    @Override
-    protected MapCodec<? extends DresserBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

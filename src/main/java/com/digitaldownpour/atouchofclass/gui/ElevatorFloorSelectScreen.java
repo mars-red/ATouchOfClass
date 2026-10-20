@@ -1,7 +1,7 @@
 package com.digitaldownpour.atouchofclass.gui;
 
 import com.digitaldownpour.atouchofclass.network.SelectElevatorFloorPayload;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
@@ -60,10 +60,9 @@ public class ElevatorFloorSelectScreen extends Screen {
     }
 
     @Override
-    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        renderBackground(graphics, mouseX, mouseY, partialTick);
-        super.render(graphics, mouseX, mouseY, partialTick);
-        graphics.drawCenteredString(font, title, width / 2, (height - floorIndices.size() * BUTTON_SPACING) / 2 - 20, 0xFFFFFF);
+    public void extractRenderState(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
+        super.extractRenderState(graphics, mouseX, mouseY, partialTick);
+        graphics.centeredText(font, title, width / 2, (height - floorIndices.size() * BUTTON_SPACING) / 2 - 20, 0xFFFFFFFF);
     }
 
     @Override

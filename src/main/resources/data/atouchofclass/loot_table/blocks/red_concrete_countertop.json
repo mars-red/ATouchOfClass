@@ -1,19 +1,17 @@
 {
-    "type":  "minecraft:block",
-    "pools":  [
-                  {
-                      "rolls":  1,
-                      "conditions":  [
-                                         {
-                                             "condition":  "minecraft:survives_explosion"
-                                         }
-                                     ],
-                      "entries":  [
-                                      {
-                                          "type":  "minecraft:item",
-                                          "name":  "atouchofclass:red_concrete_countertop"
-                                      }
-                                  ]
-                  }
-              ]
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "atouchofclass:red_concrete_countertop"
+        }
+      ]
+    }
+  ]
 }

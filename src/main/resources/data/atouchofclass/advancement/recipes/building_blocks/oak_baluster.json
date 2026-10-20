@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:oak_baluster"
+        "recipes": ["atouchofclass:oak_baluster"]
       }
     }
   },

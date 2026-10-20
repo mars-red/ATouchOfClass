@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:octagonal_inset_tile"
+        "recipes": ["atouchofclass:octagonal_inset_tile"]
       }
     }
   },

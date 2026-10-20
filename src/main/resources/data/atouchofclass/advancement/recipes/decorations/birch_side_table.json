@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:birch_side_table"
+        "recipes": ["atouchofclass:birch_side_table"]
       }
     }
   },

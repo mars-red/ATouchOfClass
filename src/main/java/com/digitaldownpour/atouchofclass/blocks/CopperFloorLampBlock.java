@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -24,7 +23,6 @@ import net.minecraft.server.level.ServerLevel;
 
 /** A centered-shade indoor floor lamp with a visual height of two and a half blocks. */
 public class CopperFloorLampBlock extends Block {
-    public static final MapCodec<CopperFloorLampBlock> CODEC = simpleCodec(CopperFloorLampBlock::new);
     public static final IntegerProperty PART = IntegerProperty.create("part", 0, 2);
 
     private static final VoxelShape BASE_SHAPE = Shapes.or(
@@ -48,10 +46,6 @@ public class CopperFloorLampBlock extends Block {
         registerDefaultState(stateDefinition.any().setValue(PART, 0));
     }
 
-    @Override
-    protected MapCodec<? extends CopperFloorLampBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

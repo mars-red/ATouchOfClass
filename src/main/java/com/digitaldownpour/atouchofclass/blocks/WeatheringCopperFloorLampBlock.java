@@ -1,7 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -9,10 +7,6 @@ import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class WeatheringCopperFloorLampBlock extends CopperFloorLampBlock implements WeatheringCopper {
-    public static final MapCodec<WeatheringCopperFloorLampBlock> CODEC = RecordCodecBuilder.mapCodec(instance ->
-            instance.group(WeatherState.CODEC.fieldOf("weathering_state")
-                            .forGetter(WeatheringCopperFloorLampBlock::getAge),
-                    propertiesCodec()).apply(instance, WeatheringCopperFloorLampBlock::new));
 
     private final WeatherState age;
 
@@ -21,10 +15,6 @@ public class WeatheringCopperFloorLampBlock extends CopperFloorLampBlock impleme
         this.age = age;
     }
 
-    @Override
-    protected MapCodec<WeatheringCopperFloorLampBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public WeatherState getAge() {

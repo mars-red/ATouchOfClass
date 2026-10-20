@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -20,7 +19,6 @@ import java.util.EnumMap;
 import java.util.Map;
 
 public class WallSconceBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<WallSconceBlock> CODEC = simpleCodec(WallSconceBlock::new);
     private static final Map<Direction, VoxelShape> SHAPES = new EnumMap<>(Direction.class);
 
     static {
@@ -51,8 +49,6 @@ public class WallSconceBlock extends HorizontalDirectionalBlock {
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
-    @Override
-    protected MapCodec<? extends WallSconceBlock> codec() { return CODEC; }
 
     @Nullable
     @Override

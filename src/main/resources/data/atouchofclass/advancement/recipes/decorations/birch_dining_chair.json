@@ -17,7 +17,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:birch_dining_chair"
+        "recipes": ["atouchofclass:birch_dining_chair"]
       }
     }
   },

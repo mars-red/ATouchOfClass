@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -21,7 +20,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** A cosmetic, countertop-height cooktop that can form one seamless two-block pair. */
 public class InductionCooktopBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<InductionCooktopBlock> CODEC = simpleCodec(InductionCooktopBlock::new);
     public static final EnumProperty<ChestType> TYPE = EnumProperty.create("type", ChestType.class);
     private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 2, 16);
 
@@ -32,10 +30,6 @@ public class InductionCooktopBlock extends HorizontalDirectionalBlock {
                 .setValue(TYPE, ChestType.SINGLE));
     }
 
-    @Override
-    protected MapCodec<? extends InductionCooktopBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {

@@ -17,7 +17,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:jungle_dining_table"
+        "recipes": ["atouchofclass:jungle_dining_table"]
       }
     }
   },

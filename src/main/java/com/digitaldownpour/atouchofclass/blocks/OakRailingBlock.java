@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -26,7 +25,6 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.phys.shapes.BooleanOp;
 
 public class OakRailingBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<OakRailingBlock> CODEC = simpleCodec(OakRailingBlock::new);
     public enum Slope implements StringRepresentable {
         FLAT, UPPER_LEFT, LOWER_RIGHT, LOWER_LEFT, UPPER_RIGHT, TRANSITION_LEFT, TRANSITION_RIGHT,
         BOTTOM_LEFT, BOTTOM_RIGHT, INNER_LEFT, INNER_RIGHT, OUTER_LEFT, OUTER_RIGHT;
@@ -104,8 +102,6 @@ public class OakRailingBlock extends HorizontalDirectionalBlock {
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(SLOPE, Slope.FLAT));
     }
 
-    @Override
-    protected MapCodec<? extends OakRailingBlock> codec() { return CODEC; }
 
     @Nullable
     @Override

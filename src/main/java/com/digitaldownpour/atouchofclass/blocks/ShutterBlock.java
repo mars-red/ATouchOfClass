@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -31,7 +30,6 @@ import org.jetbrains.annotations.Nullable;
 
 /** Independent one-block panels: vertical connections affect appearance and use, never survival. */
 public class ShutterBlock extends Block {
-    public static final MapCodec<ShutterBlock> CODEC = simpleCodec(ShutterBlock::new);
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final EnumProperty<DoorHingeSide> HINGE = BlockStateProperties.DOOR_HINGE;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
@@ -45,8 +43,6 @@ public class ShutterBlock extends Block {
                 .setValue(JOINED_ABOVE, false).setValue(JOINED_BELOW, false));
     }
 
-    @Override
-    protected MapCodec<? extends ShutterBlock> codec() { return CODEC; }
 
     private boolean joins(BlockState state, BlockState neighbor) {
         return neighbor.is(this) && neighbor.getValue(FACING) == state.getValue(FACING)

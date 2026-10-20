@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -22,7 +21,6 @@ import org.jetbrains.annotations.Nullable;
 
 /** A three-block-tall frameless glass door that pivots inside its occupied block column. */
 public class GlassShowerDoorBlock extends ThreeHighGlassPanelBlock {
-    public static final MapCodec<GlassShowerDoorBlock> CODEC = simpleCodec(GlassShowerDoorBlock::new);
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
     public static final EnumProperty<DoorHingeSide> HINGE = BlockStateProperties.DOOR_HINGE;
 
@@ -33,10 +31,6 @@ public class GlassShowerDoorBlock extends ThreeHighGlassPanelBlock {
                 .setValue(HINGE, DoorHingeSide.LEFT));
     }
 
-    @Override
-    protected MapCodec<? extends GlassShowerDoorBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     @Nullable

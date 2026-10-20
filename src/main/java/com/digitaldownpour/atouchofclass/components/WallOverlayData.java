@@ -4,7 +4,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import io.netty.buffer.ByteBuf;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ import java.util.Set;
 
 public class WallOverlayData {
 
-    private final EnumMap<Direction, ResourceLocation> faces =
+    private final EnumMap<Direction, Identifier> faces =
             new EnumMap<>(Direction.class);
 
     private static final String TAG_FACES = "faces";
@@ -25,7 +25,7 @@ public class WallOverlayData {
         CompoundTag facesTag = new CompoundTag();
 
         for (Direction direction : Direction.values()) {
-            ResourceLocation texture = faces.get(direction);
+            Identifier texture = faces.get(direction);
 
             if (texture != null) {
                 facesTag.putString(
@@ -55,8 +55,8 @@ public class WallOverlayData {
                 continue;
             }
 
-            ResourceLocation texture =
-                    ResourceLocation.tryParse(facesTag.getStringOr(key, ""));
+            Identifier texture =
+                    Identifier.tryParse(facesTag.getStringOr(key, ""));
 
             if (texture != null) {
                 data.setFace(direction, texture);
@@ -71,14 +71,14 @@ public class WallOverlayData {
 
     public record FaceEntry(
             Direction direction,
-            ResourceLocation texture
+            Identifier texture
     ) {
         public static final StreamCodec<ByteBuf, FaceEntry> STREAM_CODEC =
                 StreamCodec.composite(
                         Direction.STREAM_CODEC,
                         FaceEntry::direction,
 
-                        ResourceLocation.STREAM_CODEC,
+                        Identifier.STREAM_CODEC,
                         FaceEntry::texture,
 
                         FaceEntry::new
@@ -99,7 +99,7 @@ public class WallOverlayData {
 
     public void setFace(
             Direction direction,
-            @Nullable ResourceLocation texture
+            @Nullable Identifier texture
     ) {
         if (texture == null) {
             faces.remove(direction);
@@ -109,7 +109,7 @@ public class WallOverlayData {
     }
 
     @Nullable
-    public ResourceLocation getFace(Direction direction) {
+    public Identifier getFace(Direction direction) {
         return faces.get(direction);
     }
 

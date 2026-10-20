@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:oak_drawer_cabinet"
+        "recipes": ["atouchofclass:oak_drawer_cabinet"]
       }
     }
   },

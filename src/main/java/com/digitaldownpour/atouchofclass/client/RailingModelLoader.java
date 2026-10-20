@@ -3,11 +3,20 @@ package com.digitaldownpour.atouchofclass.client;
 import com.digitaldownpour.atouchofclass.ATouchofClass;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
-import net.minecraft.client.renderer.block.model.*;
+import net.minecraft.client.model.geom.builders.UVPair;
+import net.minecraft.client.renderer.block.dispatch.ModelState;
+import net.minecraft.client.resources.model.cuboid.CuboidModel;
+import net.minecraft.client.resources.model.cuboid.CuboidModelElement;
+import net.minecraft.client.resources.model.cuboid.CuboidFace;
+import net.minecraft.client.resources.model.cuboid.FaceBakery;
+import net.minecraft.client.resources.model.geometry.BakedQuad;
+import net.minecraft.client.resources.model.geometry.QuadCollection;
+import net.minecraft.client.resources.model.sprite.TextureSlots;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.resources.model.*;
+import net.minecraft.client.resources.model.ModelBaker;
+import net.minecraft.client.resources.model.ModelDebugName;
 import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.context.ContextMap;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -22,24 +31,24 @@ import java.util.List;
 import net.neoforged.neoforge.client.model.ExtendedUnbakedGeometry;
 
 @EventBusSubscriber(modid=ATouchofClass.MODID, value=Dist.CLIENT)
-public final class RailingModelLoader implements UnbakedModelLoader<BlockModel> {
+public final class RailingModelLoader implements UnbakedModelLoader<CuboidModel> {
     @SubscribeEvent
     public static void register(ModelEvent.RegisterLoaders event) {
-        event.register(ResourceLocation.fromNamespaceAndPath(ATouchofClass.MODID,"railing"), new RailingModelLoader());
+        event.register(Identifier.fromNamespaceAndPath(ATouchofClass.MODID,"railing"), new RailingModelLoader());
     }
 
     @Override
-    public BlockModel read(JsonObject json, JsonDeserializationContext context) {
-        BlockModel base=context.deserialize(json,BlockModel.class);
-        List<BlockElement> elements=new ArrayList<>();
-        for(var e:json.getAsJsonArray("elements")) elements.add(context.deserialize(e,BlockElement.class));
-        return new BlockModel(new RailingGeometry(elements, json.get("grain_slope").getAsInt(),
+    public CuboidModel read(JsonObject json, JsonDeserializationContext context) {
+        CuboidModel base=context.deserialize(json,CuboidModel.class);
+        List<CuboidModelElement> elements=new ArrayList<>();
+        for(var e:json.getAsJsonArray("elements")) elements.add(context.deserialize(e,CuboidModelElement.class));
+        return new CuboidModel(new RailingGeometry(elements, json.get("grain_slope").getAsInt(),
                 json.get("grain_lower").getAsBoolean()), base.guiLight(), base.ambientOcclusion(),
                 base.transforms(), base.textureSlots(), base.parent(), base.rootTransform(),
-                base.renderTypeGroup(), base.partVisibility());
+                base.partVisibility(), base.itemLayerFaceData());
     }
 
-    private record RailingGeometry(List<BlockElement> elements, int slope, boolean lower)
+    private record RailingGeometry(List<CuboidModelElement> elements, int slope, boolean lower)
             implements ExtendedUnbakedGeometry {
         RailingGeometry {
             if (slope != 1 && slope != -1) throw new IllegalArgumentException("grain_slope must be 1 or -1");
@@ -50,12 +59,14 @@ public final class RailingModelLoader implements UnbakedModelLoader<BlockModel> 
                                    ModelDebugName debugName, ContextMap properties) {
             var builder = new QuadCollection.Builder();
             Matrix4f inverse=new Matrix4f(state.transformation().getMatrix()).invert();
-            for(BlockElement element:elements) {
+            for(CuboidModelElement element:elements) {
                 for(var entry:element.faces().entrySet()) {
                     Direction face=entry.getKey();
-                    BlockElementFace definition=entry.getValue();
-                    TextureAtlasSprite sprite = baker.sprites().resolveSlot(slots, definition.texture(), debugName);
-                    BakedQuad quad=SimpleUnbakedGeometry.bakeFace(element,definition,sprite,face,state);
+                    CuboidFace definition=entry.getValue();
+                    var material = baker.materials().resolveSlot(slots, definition.texture(), debugName);
+                    BakedQuad quad=FaceBakery.bakeQuad(baker, element.from(), element.to(), definition,
+                            material, face, state, element.rotation(), element.shadeDirectionOverride(),
+                            element.lightEmission());
                     // The generator reserves #oak for diagonal wood. Level wood,
                     // log end grain and copper retain their ordinary vanilla mapping.
                     if(!definition.texture().equals("#oak")) builder.addUnculledFace(quad);
@@ -67,11 +78,10 @@ public final class RailingModelLoader implements UnbakedModelLoader<BlockModel> 
     }
 
     private static List<BakedQuad> remap(BakedQuad quad,Matrix4f inverse,Direction face,int slope,boolean lower) {
-        int[] data=quad.vertices();
-        int stride=data.length/4;
         List<RailingUvMapping.Vertex> polygon=new ArrayList<>();
         for(int i=0;i<4;i++) {
-            float x=Float.intBitsToFloat(data[i*stride]),y=Float.intBitsToFloat(data[i*stride+1]),z=Float.intBitsToFloat(data[i*stride+2]);
+            var position=quad.position(i);
+            float x=position.x(), y=position.y(), z=position.z();
             Vector3f local=inverse.transformPosition(new Vector3f(x-.5f,y-.5f,z-.5f)).add(.5f,.5f,.5f).mul(16);
             double[] uv=RailingUvMapping.coordinates(local.x,local.y,local.z,slope,lower,face.getAxis()==Direction.Axis.Z);
             polygon.add(new RailingUvMapping.Vertex(x,y,z,uv[0],uv[1]));
@@ -88,16 +98,19 @@ public final class RailingModelLoader implements UnbakedModelLoader<BlockModel> 
     }
 
     private static BakedQuad writeQuad(BakedQuad original,List<RailingUvMapping.Vertex> points) {
-        int[] data=original.vertices().clone();int stride=data.length/4;
-        TextureAtlasSprite sprite=original.sprite();
+        Vector3f[] positions=new Vector3f[4];
+        long[] uvs=new long[4];
+        TextureAtlasSprite sprite=original.materialInfo().sprite();
         // Keep interpolation inside this sprite even at a tile seam.
         final double inset=0.0001;
         for(int i=0;i<4;i++) {
-            var p=points.get(i);int n=i*stride;
-            data[n]=Float.floatToRawIntBits((float)p.x());data[n+1]=Float.floatToRawIntBits((float)p.y());data[n+2]=Float.floatToRawIntBits((float)p.z());
-            data[n+4]=Float.floatToRawIntBits(sprite.getU((float)Math.clamp(p.u()/16,inset,1-inset)));
-            data[n+5]=Float.floatToRawIntBits(sprite.getV((float)Math.clamp(p.v()/16,inset,1-inset)));
+            var p=points.get(i);
+            positions[i]=new Vector3f((float)p.x(),(float)p.y(),(float)p.z());
+            uvs[i]=UVPair.pack(sprite.getU((float)Math.clamp(p.u()/16,inset,1-inset)),
+                    sprite.getV((float)Math.clamp(p.v()/16,inset,1-inset)));
         }
-        return new BakedQuad(data,original.tintIndex(),original.direction(),sprite,original.shade(),original.lightEmission(),original.hasAmbientOcclusion());
+        return new BakedQuad(positions[0],positions[1],positions[2],positions[3],
+                uvs[0],uvs[1],uvs[2],uvs[3],original.direction(),original.materialInfo(),
+                original.bakedNormals(),original.bakedColors());
     }
 }

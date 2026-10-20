@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:elevator_destination_control"
+        "recipes": ["atouchofclass:elevator_destination_control"]
       }
     }
   },

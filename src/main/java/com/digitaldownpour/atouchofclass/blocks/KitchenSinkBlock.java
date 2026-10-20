@@ -1,6 +1,5 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
-import com.mojang.serialization.MapCodec;
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.Map;
@@ -24,7 +23,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Individually placed sinks pair side-by-side, with the left model owning the shared faucet. */
 public class KitchenSinkBlock extends HorizontalFurnitureBlock {
-    public static final MapCodec<KitchenSinkBlock> CODEC = simpleCodec(KitchenSinkBlock::new);
     public static final EnumProperty<ChestType> TYPE = BlockStateProperties.CHEST_TYPE;
     private static final Map<ChestType, Map<Direction, VoxelShape>> SHAPES = createShapes();
 
@@ -33,10 +31,6 @@ public class KitchenSinkBlock extends HorizontalFurnitureBlock {
         registerDefaultState(defaultBlockState().setValue(TYPE, ChestType.SINGLE));
     }
 
-    @Override
-    protected MapCodec<? extends KitchenSinkBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {

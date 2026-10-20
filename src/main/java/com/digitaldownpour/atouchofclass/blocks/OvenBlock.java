@@ -2,7 +2,6 @@ package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.ModEntities;
 import com.digitaldownpour.atouchofclass.entities.OvenBlockEntity;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -23,16 +22,11 @@ import org.jetbrains.annotations.Nullable;
 
 /** A stainless-steel oven with the behavior and recipes of a vanilla furnace. */
 public class OvenBlock extends AbstractFurnaceBlock {
-    public static final MapCodec<OvenBlock> CODEC = simpleCodec(OvenBlock::new);
 
     public OvenBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
-    @Override
-    protected MapCodec<? extends AbstractFurnaceBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atouchofclass:buff_brick"
+        "recipes": ["atouchofclass:buff_brick"]
       }
     }
   },

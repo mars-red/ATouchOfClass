@@ -7,7 +7,7 @@
     },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
-      "conditions": { "recipe": "atouchofclass:buff_brick_slab" }
+      "conditions": { "recipes": ["atouchofclass:buff_brick_slab"] }
     }
   },
   "requirements": [["has_bricks", "has_the_recipe"]],
