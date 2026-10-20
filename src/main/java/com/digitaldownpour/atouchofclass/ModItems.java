@@ -256,6 +256,11 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("spruce_drawer_cabinet", ModBlocks.SPRUCE_DRAWER_CABINET);
     public static final DeferredItem<BlockItem> BIRCH_DOOR_CABINET =
             ITEMS.registerSimpleBlockItem("birch_door_cabinet", ModBlocks.BIRCH_DOOR_CABINET);
+
+    public static final DeferredItem<BlockItem> POPLAR_DOOR_CABINET =
+            ITEMS.registerSimpleBlockItem("poplar_door_cabinet", ModBlocks.POPLAR_DOOR_CABINET);
+    public static final DeferredItem<BlockItem> POPLAR_DRAWER_CABINET =
+            ITEMS.registerSimpleBlockItem("poplar_drawer_cabinet", ModBlocks.POPLAR_DRAWER_CABINET);
     public static final DeferredItem<BlockItem> BIRCH_DRAWER_CABINET =
             ITEMS.registerSimpleBlockItem("birch_drawer_cabinet", ModBlocks.BIRCH_DRAWER_CABINET);
     public static final DeferredItem<BlockItem> JUNGLE_DOOR_CABINET =
@@ -765,6 +770,8 @@ public class ModItems {
             event.accept(DARK_OAK_DRAWER_CABINET);
             event.accept(PALE_OAK_DOOR_CABINET);
             event.accept(PALE_OAK_DRAWER_CABINET);
+            event.accept(POPLAR_DOOR_CABINET);
+            event.accept(POPLAR_DRAWER_CABINET);
             event.accept(OAK_DOOR_CABINET);
             event.accept(OAK_DRAWER_CABINET);
             event.accept(SPRUCE_DOOR_CABINET);

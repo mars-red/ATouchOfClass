@@ -16,6 +16,43 @@ import net.minecraft.world.level.storage.TagValueInput;
 
 public class CabinetGameTests {
 
+    public static void poplarCabinetsCraftDropAndStack(GameTestHelper helper) {
+        var level = helper.getLevel();
+        for (var holder : java.util.List.of(ModBlocks.POPLAR_DOOR_CABINET, ModBlocks.POPLAR_DRAWER_CABINET)) {
+            var id = holder.getId();
+            var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.RECIPE, id);
+            var recipe = (net.minecraft.world.item.crafting.ShapedRecipe) level.getServer()
+                    .getRecipeManager().byKey(key).orElseThrow().value();
+            var ingredients = new java.util.ArrayList<ItemStack>();
+            int emptySlot = holder == ModBlocks.POPLAR_DOOR_CABINET ? 4 : 1;
+            for (int i = 0; i < 9; i++) ingredients.add(i == emptySlot ? ItemStack.EMPTY : new ItemStack(Items.POPLAR_SLAB));
+            var input = net.minecraft.world.item.crafting.CraftingInput.of(3, 3, ingredients);
+            helper.assertTrue(recipe.matches(input, level), Component.literal(id + " must use poplar slabs"));
+            var result = recipe.assemble(input);
+            helper.assertTrue(result.is(holder.get().asItem()) && result.getCount() == 2,
+                    Component.literal(id + " must craft two cabinets"));
+            var advancement = level.getServer().getAdvancements().get(net.minecraft.resources.Identifier.fromNamespaceAndPath(
+                    ATouchofClass.MODID, "recipes/building_blocks/" + id.getPath()));
+            helper.assertTrue(advancement != null && advancement.value().rewards().recipes().contains(key),
+                    Component.literal(id + " must have a recipe unlock advancement"));
+            var drops = net.minecraft.world.level.block.Block.getDrops(holder.get().defaultBlockState(),
+                    level, helper.absolutePos(new BlockPos(2, 1, 2)), null);
+            helper.assertTrue(drops.size() == 1 && drops.getFirst().is(holder.get().asItem()),
+                    Component.literal(id + " must drop its matching item"));
+        }
+        BlockPos lower = new BlockPos(2, 1, 2);
+        var state = ModBlocks.POPLAR_DOOR_CABINET.get().defaultBlockState();
+        helper.setBlock(lower, state);
+        helper.setBlock(lower.above(), state);
+        helper.assertTrue(helper.getBlockState(lower).getValue(DoorCabinetBlock.JOINED_ABOVE)
+                        && helper.getBlockState(lower.above()).getValue(DoorCabinetBlock.JOINED_BELOW),
+                Component.literal("Poplar door cabinets must join vertically"));
+        helper.setBlock(lower.above(), Blocks.AIR);
+        helper.assertTrue(!helper.getBlockState(lower).getValue(DoorCabinetBlock.JOINED_ABOVE),
+                Component.literal("Removing a poplar cabinet must clear the join"));
+        helper.succeed();
+    }
+
     public static void everyCabinetVariantProvidesPersistentChestStorage(GameTestHelper helper) {
         var player = helper.makeMockPlayer(GameType.CREATIVE);
         int x = 1;
