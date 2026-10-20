@@ -90,7 +90,7 @@ public class DiningTableGameTests {
     }
 
     public static void everyWoodFormsFourLegRectangle(GameTestHelper helper) {
-        helper.assertTrue(ModBlocks.DINING_TABLES.size() == 12 && ModItems.DINING_TABLE_ITEMS.size() == 12, Component.literal("all twelve vanilla woods must have blocks and items"));
+        helper.assertTrue(ModBlocks.DINING_TABLES.size() == 13 && ModItems.DINING_TABLE_ITEMS.size() == 13, Component.literal("all thirteen supported woods must have blocks and items"));
         for (var definition : DiningTableVariants.VALUES) {
             var block = ModBlocks.DINING_TABLES.get(definition.id()).get();
             helper.assertTrue(ModItems.DINING_TABLE_ITEMS.get(definition.id()).get().getBlock() == block, Component.literal("each dining-table item must place its matching wood"));

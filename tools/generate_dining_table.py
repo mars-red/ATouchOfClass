@@ -24,6 +24,7 @@ CORNERS = ['north_east', 'south_east', 'south_west', 'north_west']
 WOODS = {
     'oak': 'stripped_oak_log',
     'spruce': 'stripped_spruce_log',
+    'poplar': 'stripped_poplar_log',
     'birch': 'stripped_birch_log',
     'jungle': 'stripped_jungle_log',
     'acacia': 'stripped_acacia_log',
