@@ -61,9 +61,8 @@ public class ElevatorFloorSelectScreen extends Screen {
 
     @Override
     public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        renderBackground(graphics, mouseX, mouseY, partialTick);
         super.render(graphics, mouseX, mouseY, partialTick);
-        graphics.drawCenteredString(font, title, width / 2, (height - floorIndices.size() * BUTTON_SPACING) / 2 - 20, 0xFFFFFF);
+        graphics.drawCenteredString(font, title, width / 2, (height - floorIndices.size() * BUTTON_SPACING) / 2 - 20, 0xFFFFFFFF);
     }
 
     @Override
