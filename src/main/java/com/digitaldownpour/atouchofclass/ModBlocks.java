@@ -1412,6 +1412,9 @@ public class ModBlocks {
     public static final DeferredHolder<Block, TallSidelightBlock> TALL_WARPED_SIDELIGHT =
             registerTallSidelight("tall_warped_sidelight", MapColor.WOOD);
 
+    public static final DeferredHolder<Block, TallSidelightBlock> TALL_POPLAR_SIDELIGHT =
+            registerTallSidelight("tall_poplar_sidelight", MapColor.WOOD);
+
     // TALL_SIDELIGHT_VARIANT_REGISTRATIONS
 
     public static final DeferredHolder<Block, GlassShowerSurroundBlock> GLASS_SHOWER_SURROUND =

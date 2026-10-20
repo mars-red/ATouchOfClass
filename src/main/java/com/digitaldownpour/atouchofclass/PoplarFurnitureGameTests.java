@@ -16,6 +16,47 @@ import net.minecraft.world.level.block.Block;
 public final class PoplarFurnitureGameTests {
     private PoplarFurnitureGameTests() {}
 
+    public static void tallSidelightCraftsPlacesAndDrops(GameTestHelper helper) {
+        var level = helper.getLevel();
+        var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "tall_poplar_sidelight");
+        var block = ModBlocks.TALL_POPLAR_SIDELIGHT.get();
+        var key = ResourceKey.create(Registries.RECIPE, id);
+        var recipe = (ShapedRecipe) level.getServer().getRecipeManager().byKey(key).orElseThrow().value();
+        var plank = new ItemStack(Items.POPLAR_PLANKS);
+        var glass = new ItemStack(Items.GLASS);
+        var input = CraftingInput.of(2, 3, List.of(plank, glass, plank, glass, plank, glass));
+        helper.assertTrue(recipe.matches(input, level), Component.literal("Poplar planks and glass must craft sidelights"));
+        var result = recipe.assemble(input);
+        helper.assertTrue(result.is(ModItems.TALL_POPLAR_SIDELIGHT_ITEM.get()) && result.getCount() == 4,
+                Component.literal("Recipe must produce four tall poplar sidelights"));
+        var advancement = level.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath(
+                ATouchofClass.MODID, "recipes/misc/tall_poplar_sidelight"));
+        helper.assertTrue(advancement != null && advancement.value().rewards().recipes().contains(key),
+                Component.literal("Tall poplar sidelight must unlock its recipe"));
+        var base = helper.absolutePos(new BlockPos(2, 1, 2));
+        level.setBlockAndUpdate(base.below(), net.minecraft.world.level.block.Blocks.STONE.defaultBlockState());
+        for (var facing : net.minecraft.core.Direction.Plane.HORIZONTAL) {
+            level.setBlockAndUpdate(base, block.defaultBlockState().setValue(
+                    com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock.FACING, facing));
+            for (int part = 0; part < 3; part++) {
+                var state = level.getBlockState(base.above(part));
+                helper.assertTrue(state.is(block)
+                        && state.getValue(com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock.PART) == part
+                        && state.getValue(com.digitaldownpour.atouchofclass.blocks.TallSidelightBlock.FACING) == facing,
+                        Component.literal("All three sidelight sections must face the placement direction"));
+                var drops = Block.getDrops(state, level, base.above(part), null);
+                helper.assertTrue(drops.size() == 1 && drops.getFirst().is(block.asItem()),
+                        Component.literal("Each broken sidelight section must drop the matching item"));
+            }
+            level.destroyBlock(base.above(), false);
+            for (int part = 0; part < 3; part++) {
+                helper.assertTrue(level.getBlockState(base.above(part)).isAir(),
+                        Component.literal("Breaking the middle must remove all three sidelight sections"));
+            }
+        }
+        helper.succeed();
+    }
+
     public static void parquetCraftsUnlocksAndDrops(GameTestHelper helper) {
         var level = helper.getLevel();
         var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "poplar_parquet");

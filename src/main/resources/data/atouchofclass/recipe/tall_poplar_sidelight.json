@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": "minecraft:poplar_planks",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "DG ",
+    "DG ",
+    "DG "
+  ],
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:tall_poplar_sidelight"
+  }
+}

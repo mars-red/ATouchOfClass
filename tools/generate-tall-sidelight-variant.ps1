@@ -6,7 +6,7 @@ $root = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $resources = Join-Path $root 'src\main\resources'
 $wood = $WoodName.Trim().ToLowerInvariant().Replace(' ', '_')
 if ($wood -notmatch '^[a-z0-9]+(?:_[a-z0-9]+)*$') { throw 'Wood name must be a valid Minecraft resource name.' }
-$validWoods = @('oak','spruce','birch','jungle','acacia','dark_oak','mangrove','cherry','pale_oak','bamboo','crimson','warped')
+$validWoods = @('oak','spruce','birch','jungle','acacia','dark_oak','mangrove','cherry','pale_oak','bamboo','crimson','warped','poplar')
 if ($wood -notin $validWoods) { throw "Unknown Minecraft wood '$wood'. Expected one of: $($validWoods -join ', ')" }
 $id = "tall_${wood}_sidelight"; $constant = $id.ToUpperInvariant()
 $displayWood = (($wood -split '_') | ForEach-Object { $_.Substring(0,1).ToUpperInvariant() + $_.Substring(1) }) -join ' '
@@ -19,6 +19,7 @@ $textureRoot = Join-Path $resources 'assets\atouchofclass\textures'
 @('bottom','middle','top') | ForEach-Object { Require-File (Join-Path $textureRoot "block\${id}_$_.png") }; Require-File (Join-Path $textureRoot "item\$id.png")
 $modBlocksPath=Join-Path $root 'src\main\java\com\digitaldownpour\atouchofclass\ModBlocks.java'; if([IO.File]::ReadAllText($modBlocksPath).Contains($id)){throw "Tall sidelight variant '$id' is already registered."}
 $templates=@(@('assets\atouchofclass\blockstates\tall_mangrove_sidelight.json',"assets\atouchofclass\blockstates\$id.json"),@('assets\atouchofclass\items\tall_mangrove_sidelight.json',"assets\atouchofclass\items\$id.json"),@('assets\atouchofclass\models\item\tall_mangrove_sidelight.json',"assets\atouchofclass\models\item\$id.json"),@('data\atouchofclass\loot_table\blocks\tall_mangrove_sidelight.json',"data\atouchofclass\loot_table\blocks\$id.json"),@('data\atouchofclass\recipe\tall_mangrove_sidelight.json',"data\atouchofclass\recipe\$id.json"))
+$templates += ,@('data\atouchofclass\advancement\recipes\misc\tall_mangrove_sidelight.json', "data\atouchofclass\advancement\recipes\misc\$id.json")
 @('bottom','middle','top') | ForEach-Object { $templates += ,@("assets\atouchofclass\models\block\tall_mangrove_sidelight_$_.json","assets\atouchofclass\models\block\${id}_$_.json") }
 foreach($pair in $templates){$target=Join-Path $resources $pair[1]; if(Test-Path -LiteralPath $target){throw "Refusing to overwrite existing file: $target"}}
 foreach($pair in $templates){Copy-Template (Join-Path $resources $pair[0]) (Join-Path $resources $pair[1])}
