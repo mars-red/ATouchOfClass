@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PWP",
+    "P P"
+  ],
+  "key": {
+    "P": "minecraft:poplar_planks",
+    "W": "minecraft:stripped_poplar_wood"
+  },
+  "result": {
+    "id": "atouchofclass:poplar_dining_table",
+    "count": 4
+  }
+}

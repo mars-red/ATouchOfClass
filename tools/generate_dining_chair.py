@@ -12,6 +12,7 @@ DATA = ROOT / 'src/main/resources/data/atouchofclass'
 JAVA = ROOT / 'src/main/java/com/digitaldownpour/atouchofclass/blocks'
 WOODS = {
     'oak': 'stripped_oak_log', 'spruce': 'stripped_spruce_log',
+    'poplar': 'stripped_poplar_log',
     'birch': 'stripped_birch_log', 'jungle': 'stripped_jungle_log',
     'acacia': 'stripped_acacia_log', 'dark_oak': 'stripped_dark_oak_log',
     'mangrove': 'stripped_mangrove_log', 'cherry': 'stripped_cherry_log',

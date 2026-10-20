@@ -76,7 +76,7 @@ public class DiningChairGameTests {
         var level = helper.getLevel();
         var pos = helper.absolutePos(POS);
         helper.setBlock(POS.below(), Blocks.STONE);
-        helper.assertTrue(ModBlocks.DINING_CHAIRS.size() == 12 && ModItems.DINING_CHAIR_ITEMS.size() == 12, Component.literal("all twelve vanilla woods must have dining-chair blocks and items"));
+        helper.assertTrue(ModBlocks.DINING_CHAIRS.size() == 13 && ModItems.DINING_CHAIR_ITEMS.size() == 13, Component.literal("all thirteen supported woods must have dining-chair blocks and items"));
         for (var definition : DiningChairVariants.VALUES) {
             var block = ModBlocks.DINING_CHAIRS.get(definition.id()).get();
             var item = ModItems.DINING_CHAIR_ITEMS.get(definition.id()).get();

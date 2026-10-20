@@ -16,6 +16,37 @@ import net.minecraft.world.level.block.Block;
 public final class PoplarFurnitureGameTests {
     private PoplarFurnitureGameTests() {}
 
+    public static void diningTableAndChairCraftAndDrop(GameTestHelper helper) {
+        var level = helper.getLevel();
+        for (String kind : List.of("dining_table", "dining_chair")) {
+            var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "poplar_" + kind);
+            var holder = kind.equals("dining_table") ? ModBlocks.DINING_TABLES.get(id.getPath())
+                    : ModBlocks.DINING_CHAIRS.get(id.getPath());
+            var key = ResourceKey.create(Registries.RECIPE, id);
+            var recipe = (ShapedRecipe) level.getServer().getRecipeManager().byKey(key).orElseThrow().value();
+            var plank = new ItemStack(Items.POPLAR_PLANKS);
+            var stick = new ItemStack(Items.STICK);
+            var slab = new ItemStack(Items.POPLAR_SLAB);
+            var input = kind.equals("dining_table")
+                    ? CraftingInput.of(3, 2, List.of(plank, new ItemStack(Items.STRIPPED_POPLAR_WOOD), plank,
+                            plank, ItemStack.EMPTY, plank))
+                    : CraftingInput.of(3, 3, List.of(stick, stick, stick, slab, slab, slab, stick, ItemStack.EMPTY, stick));
+            helper.assertTrue(recipe.matches(input, level), Component.literal(id + " must craft from matching poplar ingredients"));
+            var result = recipe.assemble(input);
+            helper.assertTrue(result.is(holder.get().asItem()) && result.getCount() == (kind.equals("dining_table") ? 4 : 2),
+                    Component.literal(id + " must craft the matching item and quantity"));
+            var advancement = level.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath(
+                    ATouchofClass.MODID, "recipes/decorations/" + id.getPath()));
+            helper.assertTrue(advancement != null && advancement.value().rewards().recipes().contains(key),
+                    Component.literal(id + " must have a recipe unlock"));
+            var drops = Block.getDrops(holder.get().defaultBlockState(), level,
+                    helper.absolutePos(new BlockPos(2, 1, 2)), null);
+            helper.assertTrue(drops.size() == 1 && drops.getFirst().is(holder.get().asItem()),
+                    Component.literal(id + " must drop its matching item"));
+        }
+        helper.succeed();
+    }
+
     public static void tablesNightstandsAndDressersCraftAndDrop(GameTestHelper helper) {
         var level = helper.getLevel();
         for (String kind : List.of("side_table", "nightstand", "dresser")) {
