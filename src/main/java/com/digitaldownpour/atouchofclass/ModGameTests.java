@@ -16,6 +16,7 @@ public final class ModGameTests {
             DeferredRegister.create(Registries.TEST_FUNCTION, ATouchofClass.MODID);
 
     static {
+        FUNCTIONS.register("poplarfurnituregametests.railingfamilycraftsunlocksanddrops", () -> PoplarFurnitureGameTests::railingFamilyCraftsUnlocksAndDrops);
         FUNCTIONS.register("poplarfurnituregametests.talldoorcraftsplacesandpreserveskeys", () -> PoplarFurnitureGameTests::tallDoorCraftsPlacesAndPreservesKeys);
         FUNCTIONS.register("poplarfurnituregametests.tallsidelightcraftsplacesanddrops", () -> PoplarFurnitureGameTests::tallSidelightCraftsPlacesAndDrops);
         FUNCTIONS.register("poplarfurnituregametests.everybedcolorcraftsunlocksanddrops", () -> PoplarFurnitureGameTests::everyBedColorCraftsUnlocksAndDrops);

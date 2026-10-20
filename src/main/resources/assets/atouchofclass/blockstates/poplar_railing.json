@@ -1,0 +1,264 @@
+{
+  "variants": {
+    "facing=north,slope=flat": {
+      "model": "atouchofclass:block/poplar_railing",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,slope=flat": {
+      "model": "atouchofclass:block/poplar_railing",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,slope=flat": {
+      "model": "atouchofclass:block/poplar_railing",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,slope=flat": {
+      "model": "atouchofclass:block/poplar_railing",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,slope=upper_left": {
+      "model": "atouchofclass:block/poplar_railing_upper_left",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,slope=upper_left": {
+      "model": "atouchofclass:block/poplar_railing_upper_left",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,slope=upper_left": {
+      "model": "atouchofclass:block/poplar_railing_upper_left",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,slope=upper_left": {
+      "model": "atouchofclass:block/poplar_railing_upper_left",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,slope=lower_right": {
+      "model": "atouchofclass:block/poplar_railing_lower_right",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,slope=lower_right": {
+      "model": "atouchofclass:block/poplar_railing_lower_right",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,slope=lower_right": {
+      "model": "atouchofclass:block/poplar_railing_lower_right",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,slope=lower_right": {
+      "model": "atouchofclass:block/poplar_railing_lower_right",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,slope=lower_left": {
+      "model": "atouchofclass:block/poplar_railing_lower_left",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,slope=lower_left": {
+      "model": "atouchofclass:block/poplar_railing_lower_left",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,slope=lower_left": {
+      "model": "atouchofclass:block/poplar_railing_lower_left",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,slope=lower_left": {
+      "model": "atouchofclass:block/poplar_railing_lower_left",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,slope=upper_right": {
+      "model": "atouchofclass:block/poplar_railing_upper_right",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,slope=upper_right": {
+      "model": "atouchofclass:block/poplar_railing_upper_right",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,slope=upper_right": {
+      "model": "atouchofclass:block/poplar_railing_upper_right",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,slope=upper_right": {
+      "model": "atouchofclass:block/poplar_railing_upper_right",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,slope=transition_right": {
+      "model": "atouchofclass:block/poplar_railing_transition_right",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,slope=transition_right": {
+      "model": "atouchofclass:block/poplar_railing_transition_right",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,slope=transition_right": {
+      "model": "atouchofclass:block/poplar_railing_transition_right",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,slope=transition_right": {
+      "model": "atouchofclass:block/poplar_railing_transition_right",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,slope=transition_left": {
+      "model": "atouchofclass:block/poplar_railing_transition_left",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,slope=transition_left": {
+      "model": "atouchofclass:block/poplar_railing_transition_left",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,slope=transition_left": {
+      "model": "atouchofclass:block/poplar_railing_transition_left",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,slope=transition_left": {
+      "model": "atouchofclass:block/poplar_railing_transition_left",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,slope=inner_left": {
+      "model": "atouchofclass:block/poplar_railing_inner_left",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,slope=inner_left": {
+      "model": "atouchofclass:block/poplar_railing_inner_left",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,slope=inner_left": {
+      "model": "atouchofclass:block/poplar_railing_inner_left",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,slope=inner_left": {
+      "model": "atouchofclass:block/poplar_railing_inner_left",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,slope=inner_right": {
+      "model": "atouchofclass:block/poplar_railing_inner_right",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,slope=inner_right": {
+      "model": "atouchofclass:block/poplar_railing_inner_right",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,slope=inner_right": {
+      "model": "atouchofclass:block/poplar_railing_inner_right",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,slope=inner_right": {
+      "model": "atouchofclass:block/poplar_railing_inner_right",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,slope=outer_left": {
+      "model": "atouchofclass:block/poplar_railing_outer_left",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,slope=outer_left": {
+      "model": "atouchofclass:block/poplar_railing_outer_left",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,slope=outer_left": {
+      "model": "atouchofclass:block/poplar_railing_outer_left",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,slope=outer_left": {
+      "model": "atouchofclass:block/poplar_railing_outer_left",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,slope=outer_right": {
+      "model": "atouchofclass:block/poplar_railing_outer_right",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,slope=outer_right": {
+      "model": "atouchofclass:block/poplar_railing_outer_right",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,slope=outer_right": {
+      "model": "atouchofclass:block/poplar_railing_outer_right",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,slope=outer_right": {
+      "model": "atouchofclass:block/poplar_railing_outer_right",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,slope=bottom_left": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/poplar_railing_bottom_left"
+    },
+    "facing=east,slope=bottom_left": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/poplar_railing_bottom_left"
+    },
+    "facing=south,slope=bottom_left": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/poplar_railing_bottom_left"
+    },
+    "facing=west,slope=bottom_left": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/poplar_railing_bottom_left"
+    },
+    "facing=north,slope=bottom_right": {
+      "y": 0,
+      "uvlock": true,
+      "model": "atouchofclass:block/poplar_railing_bottom_right"
+    },
+    "facing=east,slope=bottom_right": {
+      "y": 90,
+      "uvlock": true,
+      "model": "atouchofclass:block/poplar_railing_bottom_right"
+    },
+    "facing=south,slope=bottom_right": {
+      "y": 180,
+      "uvlock": true,
+      "model": "atouchofclass:block/poplar_railing_bottom_right"
+    },
+    "facing=west,slope=bottom_right": {
+      "y": 270,
+      "uvlock": true,
+      "model": "atouchofclass:block/poplar_railing_bottom_right"
+    }
+  }
+}

@@ -21,7 +21,7 @@ public final class WoodRailingVariants {
 
     static Map<String,Family> register() {
         Map<String,Family> families=new LinkedHashMap<>();
-        for(String wood:new String[]{"spruce","birch","jungle","acacia","dark_oak","mangrove","cherry","pale_oak","bamboo","crimson","warped"}) {
+        for(String wood:new String[]{"spruce","birch","poplar","jungle","acacia","dark_oak","mangrove","cherry","pale_oak","bamboo","crimson","warped"}) {
             var rail=ModBlocks.BLOCKS.register(wood+"_railing",key->new OakRailingBlock(properties(key)));
             var post=ModBlocks.BLOCKS.register(wood+"_baluster",key->new OakBalusterBlock(properties(key)));
             var balustrade=ModBlocks.BLOCKS.register(wood+"_balustrade",key->new OakBalustradeBlock(properties(key)));
