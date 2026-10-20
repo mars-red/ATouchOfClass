@@ -36,7 +36,7 @@ def generate_recipe(wood):
               "has_material": {"trigger": "minecraft:inventory_changed", "conditions": {
                   "items": [{"items": planks}]}},
               "has_the_recipe": {"trigger": "minecraft:recipe_unlocked", "conditions": {
-                  "recipe": shutter_id}}},
+                  "recipes": [shutter_id]}}},
           "requirements": [["has_material", "has_the_recipe"]],
           "rewards": {"recipes": [shutter_id]}})
 
@@ -97,7 +97,7 @@ def generate_variant(wood):
     write(ASSETS / f"items/{shutter}.json", {"model": {"type": "minecraft:model", "model": f"atouchofclass:item/{shutter}"}})
     generate_recipe(wood)
     write(DATA / f"loot_table/blocks/{shutter}.json", {"type": "minecraft:block", "pools": [{
-          "rolls": 1, "conditions": [{"condition": "minecraft:survives_explosion"}],
+          "rolls": 1, "condition": {"type": "minecraft:survives_explosion"},
           "entries": [{"type": "minecraft:item", "name": f"atouchofclass:{shutter}"}]}]})
     lang_path = ASSETS / "lang/en_us.json"
     lang = lang_path.read_text(encoding="utf-8")

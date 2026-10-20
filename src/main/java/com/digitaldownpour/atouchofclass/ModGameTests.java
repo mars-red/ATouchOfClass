@@ -17,6 +17,7 @@ public final class ModGameTests {
 
     static {
         FUNCTIONS.register("poplarfurnituregametests.everybedcolorcraftsunlocksanddrops", () -> PoplarFurnitureGameTests::everyBedColorCraftsUnlocksAndDrops);
+        FUNCTIONS.register("poplarfurnituregametests.parquetcraftsunlocksanddrops", () -> PoplarFurnitureGameTests::parquetCraftsUnlocksAndDrops);
         FUNCTIONS.register("poplarfurnituregametests.diningtableandchaircraftanddrop", () -> PoplarFurnitureGameTests::diningTableAndChairCraftAndDrop);
         FUNCTIONS.register("poplarfurnituregametests.tablesnightstandsanddresserscraftanddrop", () -> PoplarFurnitureGameTests::tablesNightstandsAndDressersCraftAndDrop);
         FUNCTIONS.register("cabinetgametests.poplarcabinetscraftdropandstack", () -> CabinetGameTests::poplarCabinetsCraftDropAndStack);
