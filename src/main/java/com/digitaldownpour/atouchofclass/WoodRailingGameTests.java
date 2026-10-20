@@ -11,7 +11,7 @@ import net.minecraft.network.chat.Component;
 public class WoodRailingGameTests {
 
     public static void everyWoodSupportsPostsStairsAndWallMounts(GameTestHelper helper) {
-        helper.assertTrue(ModBlocks.WOOD_RAILINGS.size()==11, Component.literal("All vanilla wood families must be registered"));
+        helper.assertTrue(ModBlocks.WOOD_RAILINGS.size()==12, Component.literal("All twelve additional wood families must be registered alongside oak"));
         for(var entry:ModBlocks.WOOD_RAILINGS.entrySet()) {
             var family=entry.getValue();
             BlockPos pos=new BlockPos(2,2,2);

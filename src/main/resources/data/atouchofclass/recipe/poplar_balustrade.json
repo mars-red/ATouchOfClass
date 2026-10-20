@@ -1,0 +1,16 @@
+{
+  "result": {
+    "id": "atouchofclass:poplar_balustrade",
+    "count": 2
+  },
+  "category": "building",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "O",
+    "B"
+  ],
+  "key": {
+    "O": "minecraft:poplar_slab",
+    "B": "atouchofclass:poplar_baluster"
+  }
+}

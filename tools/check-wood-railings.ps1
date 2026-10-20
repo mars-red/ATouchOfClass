@@ -2,9 +2,9 @@ $ErrorActionPreference='Stop'
 $root=Split-Path $PSScriptRoot -Parent
 $resources="$root/src/main/resources"
 Add-Type -AssemblyName System.IO.Compression.FileSystem
-$vanilla=[IO.Compression.ZipFile]::OpenRead("$root/build/moddev/artifacts/neoforge-21.4.136-client-extra-aka-minecraft-resources.jar")
+$vanilla=[IO.Compression.ZipFile]::OpenRead("$root/build/neoForm/neoFormJoined26.3-1/raw.jar")
 try {
-    $woods=@('spruce','birch','jungle','acacia','dark_oak','mangrove','cherry','pale_oak','bamboo','crimson','warped')
+    $woods=@('spruce','birch','poplar','jungle','acacia','dark_oak','mangrove','cherry','pale_oak','bamboo','crimson','warped')
     foreach($wood in $woods) {
         $stripped=switch($wood){'bamboo'{'stripped_bamboo_block'} 'crimson'{'stripped_crimson_stem'} 'warped'{'stripped_warped_stem'} default{"stripped_${wood}_log"}}
         foreach($source in Get-ChildItem "$resources/assets/atouchofclass/models/block" -Filter 'oak_*.json' | Where-Object {$_.BaseName -match '^oak_(railing|baluster|balustrade|newel_post)($|_)'}) {
@@ -41,5 +41,5 @@ try {
             if($item.model.model -notmatch "^atouchofclass:(item|block)/${wood}_"){throw "Wrong species in item $id"}
         }
     }
-    Write-Output 'All 44 blocks passed: model parity, existing vanilla textures and ingredients, blockstate model references, recipes, items, and loot.'
+    Write-Output "All $($woods.Count * 4) blocks passed: model parity, existing vanilla textures and ingredients, blockstate model references, recipes, items, and loot."
 } finally {$vanilla.Dispose()}

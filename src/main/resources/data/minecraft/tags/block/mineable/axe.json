@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "atouchofclass:poplar_newel_post",
+    "atouchofclass:poplar_balustrade",
+    "atouchofclass:poplar_baluster",
+    "atouchofclass:poplar_railing",
     "atouchofclass:tall_poplar_patio_door",
     "atouchofclass:poplar_shutter",
     "atouchofclass:warped_shutter",

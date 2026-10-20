@@ -1,8 +1,8 @@
 $ErrorActionPreference='Stop'
 $root=Split-Path $PSScriptRoot -Parent
 $resources=Join-Path $root 'src/main/resources'
-$woods=@('spruce','birch','jungle','acacia','dark_oak','mangrove','cherry','pale_oak','bamboo','crimson','warped')
-$folders=@('assets/atouchofclass/models/block','assets/atouchofclass/models/item','assets/atouchofclass/items','assets/atouchofclass/blockstates','data/atouchofclass/recipe','data/atouchofclass/loot_table/blocks')
+$woods=@('spruce','birch','poplar','jungle','acacia','dark_oak','mangrove','cherry','pale_oak','bamboo','crimson','warped')
+$folders=@('assets/atouchofclass/models/block','assets/atouchofclass/models/item','assets/atouchofclass/items','assets/atouchofclass/blockstates','data/atouchofclass/recipe','data/atouchofclass/loot_table/blocks','data/atouchofclass/advancement/recipes/building_blocks')
 $languagePath="$resources/assets/atouchofclass/lang/en_us.json"
 $language=Get-Content $languagePath -Raw | ConvertFrom-Json -AsHashtable
 foreach($wood in $woods) {
@@ -29,4 +29,4 @@ $values=@($tag.values)
 foreach($wood in $woods){foreach($kind in @('railing','baluster','balustrade','newel_post')){$values+="atouchofclass:${wood}_$kind"}}
 $tag.values=@($values | Select-Object -Unique)
 $tag | ConvertTo-Json -Depth 10 | Set-Content $tagPath
-Write-Output 'Generated all eleven additional wood families from the current oak models and recipes.'
+Write-Output "Generated all $($woods.Count) additional wood families from the current oak models and recipes."

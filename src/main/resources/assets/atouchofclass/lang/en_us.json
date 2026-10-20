@@ -1,4 +1,12 @@
 {
+    "block.atouchofclass.poplar_railing": "Wall Mounted Poplar Railing",
+    "item.atouchofclass.poplar_railing": "Wall Mounted Poplar Railing",
+    "block.atouchofclass.poplar_baluster": "Poplar Baluster",
+    "item.atouchofclass.poplar_baluster": "Poplar Baluster",
+    "block.atouchofclass.poplar_balustrade": "Poplar Balustrade",
+    "item.atouchofclass.poplar_balustrade": "Poplar Balustrade",
+    "block.atouchofclass.poplar_newel_post": "Poplar Newel Post",
+    "item.atouchofclass.poplar_newel_post": "Poplar Newel Post",
     "block.atouchofclass.tall_poplar_door": "Tall Poplar Door",
     "item.atouchofclass.tall_poplar_door": "Tall Poplar Door",
     "block.atouchofclass.tall_poplar_patio_door": "Tall Poplar Patio Door",

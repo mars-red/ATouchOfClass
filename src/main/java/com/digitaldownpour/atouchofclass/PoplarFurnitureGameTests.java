@@ -16,6 +16,52 @@ import net.minecraft.world.level.block.Block;
 public final class PoplarFurnitureGameTests {
     private PoplarFurnitureGameTests() {}
 
+    public static void railingFamilyCraftsUnlocksAndDrops(GameTestHelper helper) {
+        var level = helper.getLevel();
+        var family = ModBlocks.WOOD_RAILINGS.get("poplar");
+        var plank = new ItemStack(Items.POPLAR_PLANKS);
+        var copper = new ItemStack(Items.COPPER_INGOT);
+        var log = new ItemStack(Items.STRIPPED_POPLAR_LOG);
+        for (String kind : List.of("railing", "baluster", "balustrade", "newel_post")) {
+            var block = switch (kind) {
+                case "railing" -> family.railing().get();
+                case "baluster" -> family.baluster().get();
+                case "balustrade" -> family.balustrade().get();
+                default -> family.newelPost().get();
+            };
+            var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "poplar_" + kind);
+            var key = ResourceKey.create(Registries.RECIPE, id);
+            var recipe = (ShapedRecipe) level.getServer().getRecipeManager().byKey(key).orElseThrow().value();
+            var input = switch (kind) {
+                case "railing" -> CraftingInput.of(3, 2, List.of(plank, plank, plank, copper, ItemStack.EMPTY, copper));
+                case "baluster" -> CraftingInput.of(1, 2, List.of(log, log));
+                case "balustrade" -> CraftingInput.of(1, 2, List.of(new ItemStack(Items.POPLAR_SLAB),
+                        new ItemStack(family.baluster().get())));
+                default -> CraftingInput.of(1, 3, List.of(log, log, log));
+            };
+            int count = switch (kind) {
+                case "railing" -> 6;
+                case "baluster" -> 32;
+                case "balustrade" -> 2;
+                default -> 8;
+            };
+            helper.assertTrue(recipe.matches(input, level), Component.literal(id + " must craft from matching poplar materials"));
+            var result = recipe.assemble(input);
+            helper.assertTrue(result.is(block.asItem()) && result.getCount() == count,
+                    Component.literal(id + " must produce the matching item and quantity"));
+            var advancement = level.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath(
+                    ATouchofClass.MODID, "recipes/building_blocks/" + id.getPath()));
+            helper.assertTrue(advancement != null && advancement.value().rewards().recipes().contains(key),
+                    Component.literal(id + " must have a matching recipe unlock"));
+            helper.assertTrue(block.defaultBlockState().is(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE),
+                    Component.literal(id + " must be mineable with an axe"));
+            var drops = Block.getDrops(block.defaultBlockState(), level, helper.absolutePos(new BlockPos(2, 1, 2)), null);
+            helper.assertTrue(drops.size() == 1 && drops.getFirst().is(block.asItem()) && drops.getFirst().getCount() == 1,
+                    Component.literal(id + " must drop one matching item"));
+        }
+        helper.succeed();
+    }
+
     public static void tallDoorCraftsPlacesAndPreservesKeys(GameTestHelper helper) {
         var level = helper.getLevel();
         var block = ModBlocks.TALL_POPLAR_DOOR.get();
