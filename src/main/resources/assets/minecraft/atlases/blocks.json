@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "atouchofclass:item/wainscoting_2"
+    }
+  ]
+}
