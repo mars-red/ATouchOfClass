@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "src/main/resources/assets/atouchofclass"
 DATA = ROOT / "src/main/resources/data/atouchofclass"
 WOODS = (
-    "oak", "spruce", "birch", "jungle", "acacia", "dark_oak",
+    "oak", "spruce", "birch", "poplar", "jungle", "acacia", "dark_oak",
     "mangrove", "cherry", "pale_oak", "bamboo", "crimson", "warped",
 )
 COLORS = (
@@ -24,7 +24,8 @@ COLORS = (
 )
 SECTIONS = ("head", "middle", "foot")
 SIDES = ("left", "right")
-FACINGS = {"north": 0, "east": 90, "south": 180, "west": 270}
+# Stored facing follows vanilla's foot-to-head direction; the model faces the foot.
+FACINGS = {"north": 180, "east": 270, "south": 0, "west": 90}
 
 
 def bed_id(wood: str, color: str) -> str:
@@ -94,7 +95,7 @@ def generate_variant(wood: str, color: str) -> None:
         "type": "minecraft:block",
         "pools": [{
             "rolls": 1,
-            "conditions": [{"condition": "minecraft:survives_explosion"}],
+            "condition": {"type": "minecraft:survives_explosion"},
             "entries": [{"type": "minecraft:item", "name": f"atouchofclass:{name}"}],
         }],
     })
@@ -113,7 +114,7 @@ def generate_variant(wood: str, color: str) -> None:
             },
             "has_the_recipe": {
                 "trigger": "minecraft:recipe_unlocked",
-                "conditions": {"recipe": f"atouchofclass:{name}"},
+                "conditions": {"recipes": [f"atouchofclass:{name}"]},
             },
         },
         "requirements": [["has_bed", "has_the_recipe"]],
