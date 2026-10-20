@@ -16,6 +16,56 @@ import net.minecraft.world.level.block.Block;
 public final class PoplarFurnitureGameTests {
     private PoplarFurnitureGameTests() {}
 
+    public static void tallDoorCraftsPlacesAndPreservesKeys(GameTestHelper helper) {
+        var level = helper.getLevel();
+        var block = ModBlocks.TALL_POPLAR_DOOR.get();
+        var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "tall_poplar_door");
+        var key = ResourceKey.create(Registries.RECIPE, id);
+        var recipe = (ShapedRecipe) level.getServer().getRecipeManager().byKey(key).orElseThrow().value();
+        var plank = new ItemStack(Items.POPLAR_PLANKS);
+        var input = CraftingInput.of(3, 3, List.of(plank, plank, ItemStack.EMPTY,
+                plank, plank, new ItemStack(Items.GOLD_NUGGET), plank, plank, ItemStack.EMPTY));
+        helper.assertTrue(recipe.matches(input, level), Component.literal("Poplar planks and gold nugget must craft tall doors"));
+        var result = recipe.assemble(input);
+        helper.assertTrue(result.is(ModItems.TALL_POPLAR_DOOR_ITEM.get()) && result.getCount() == 2,
+                Component.literal("Recipe must produce two tall poplar doors"));
+        var advancement = level.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath(
+                ATouchofClass.MODID, "recipes/misc/tall_poplar_door"));
+        helper.assertTrue(advancement != null && advancement.value().rewards().recipes().contains(key),
+                Component.literal("Tall poplar door must have a recipe unlock"));
+        var player = helper.makeMockPlayer(net.minecraft.world.level.GameType.SURVIVAL);
+        var menu = new KeyCutterMenu(0, player.getInventory());
+        menu.getSlot(0).set(result);
+        helper.assertTrue(menu.areSlotsKeyable(), Component.literal("Key cutter must accept tall poplar doors"));
+        menu.craft("poplar-code", "Poplar Door");
+        var coded = menu.getSlot(1).getItem().copy();
+        var base = new BlockPos(2, 2, 2);
+        helper.setBlock(base.below(), net.minecraft.world.level.block.Blocks.STONE);
+        var support = helper.absolutePos(base.below());
+        var hit = new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.atCenterOf(support),
+                net.minecraft.core.Direction.UP, support, false);
+        helper.assertTrue(coded.useOn(new net.minecraft.world.item.context.UseOnContext(level, player,
+                net.minecraft.world.InteractionHand.MAIN_HAND, coded, hit)).consumesAction(),
+                Component.literal("Coded poplar door item must place"));
+        for (int part = 0; part < 3; part++) {
+            var state = helper.getBlockState(base.above(part));
+            helper.assertTrue(state.is(block) && state.getValue(
+                    com.digitaldownpour.atouchofclass.blocks.TallDoorBlock.PART) == part,
+                    Component.literal("Tall poplar door must place all three sections"));
+        }
+        var pos = helper.absolutePos(base);
+        var entity = GameTestChecks.requireType(level.getBlockEntity(pos),
+                com.digitaldownpour.atouchofclass.entities.TallDoorBlockEntity.class);
+        var expected = coded.get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE);
+        helper.assertTrue(expected != null && expected.keyCode().equals("poplar-code"),
+                Component.literal("Key cutter must assign the requested code"));
+        var drops = Block.getDrops(level.getBlockState(pos), level, pos, entity);
+        helper.assertTrue(drops.size() == 1 && drops.getFirst().is(block.asItem())
+                && expected.equals(drops.getFirst().get(ModComponents.KEYABLE_INFO_DATA_COMPONENT_TYPE)),
+                Component.literal("Tall poplar door loot must preserve its key code"));
+        helper.succeed();
+    }
+
     public static void tallSidelightCraftsPlacesAndDrops(GameTestHelper helper) {
         var level = helper.getLevel();
         var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "tall_poplar_sidelight");

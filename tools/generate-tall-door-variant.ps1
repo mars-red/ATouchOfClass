@@ -6,7 +6,7 @@ $root = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $resources = Join-Path $root 'src\main\resources'
 $wood = $WoodName.Trim().ToLowerInvariant().Replace(' ', '_')
 if ($wood -notmatch '^[a-z0-9]+(?:_[a-z0-9]+)*$') { throw 'Wood name must be a valid Minecraft resource name.' }
-$validWoods = @('oak','spruce','birch','jungle','acacia','dark_oak','mangrove','cherry','pale_oak','bamboo','crimson','warped')
+$validWoods = @('oak','spruce','birch','jungle','acacia','dark_oak','mangrove','cherry','pale_oak','bamboo','crimson','warped','poplar')
 if ($wood -notin $validWoods) { throw "Unknown Minecraft wood '$wood'. Expected one of: $($validWoods -join ', ')" }
 $id = "tall_${wood}_door"
 $constant = $id.ToUpperInvariant()
@@ -38,6 +38,7 @@ $templates = @(
     @('data\atouchofclass\loot_table\blocks\tall_mangrove_door.json', "data\atouchofclass\loot_table\blocks\$id.json"),
     @('data\atouchofclass\recipe\tall_mangrove_door.json', "data\atouchofclass\recipe\$id.json")
 )
+$templates += ,@('data\atouchofclass\advancement\recipes\misc\tall_mangrove_door.json', "data\atouchofclass\advancement\recipes\misc\$id.json")
 @('bottom','middle','top') | ForEach-Object { $templates += ,@("assets\atouchofclass\models\block\tall_mangrove_door_$_.json", "assets\atouchofclass\models\block\${id}_$_.json") }
 foreach ($pair in $templates) { $target = Join-Path $resources $pair[1]; if (Test-Path -LiteralPath $target) { throw "Refusing to overwrite existing file: $target" } }
 foreach ($pair in $templates) { Copy-Template (Join-Path $resources $pair[0]) (Join-Path $resources $pair[1]) }

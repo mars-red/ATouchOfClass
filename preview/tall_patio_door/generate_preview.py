@@ -10,7 +10,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).absolute().parents[2]
 ASSETS = ROOT / 'src/main/resources/assets/atouchofclass'
 HERE = Path(__file__).absolute().parent
-JAR = Path(r'C:\Users\vwner\.gradle\caches\neoformruntime\artifacts\minecraft_1.21.4_client.jar')
+JAR = ROOT / 'build/neoForm/neoFormJoined26.3-1/raw.jar'
 
 
 def texture(name):

@@ -512,6 +512,12 @@ public class ModItems {
                     new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
     );
 
+    public static final DeferredItem<TallDoorItem> TALL_POPLAR_DOOR_ITEM = ITEMS.register(
+            "tall_poplar_door",
+            key -> new TallDoorItem(ModBlocks.TALL_POPLAR_DOOR.get(),
+                    new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
+    );
+
     // TALL_DOOR_VARIANT_ITEM_REGISTRATIONS
     public static final DeferredItem<BlockItem> TALL_OAK_SIDELIGHT_ITEM =
             ITEMS.registerSimpleBlockItem("tall_oak_sidelight", ModBlocks.TALL_OAK_SIDELIGHT);
@@ -930,6 +936,7 @@ public class ModItems {
             event.accept(TALL_PALE_OAK_DOOR_ITEM);
             event.accept(TALL_CRIMSON_DOOR_ITEM);
             event.accept(TALL_WARPED_DOOR_ITEM);
+            event.accept(TALL_POPLAR_DOOR_ITEM);
             // TALL_DOOR_VARIANT_CREATIVE_ENTRIES
             event.accept(TALL_OAK_SIDELIGHT_ITEM);
             event.accept(TALL_SPRUCE_SIDELIGHT_ITEM);

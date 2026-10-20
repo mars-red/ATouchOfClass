@@ -1,0 +1,26 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "atouchofclass:tall_poplar_patio_door",
+          "modifier": [
+            {
+              "source": "block_entity",
+              "include": [
+                "atouchofclass:keyable_info_data_component_type"
+              ],
+              "type": "minecraft:copy_components"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:block"
+}
