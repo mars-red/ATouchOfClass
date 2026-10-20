@@ -10,6 +10,7 @@ public final class SideTableVariants {
             new Definition("oak", Blocks.STRIPPED_OAK_WOOD),
             new Definition("spruce", Blocks.STRIPPED_SPRUCE_WOOD),
             new Definition("birch", Blocks.STRIPPED_BIRCH_WOOD),
+            new Definition("poplar", Blocks.STRIPPED_POPLAR_WOOD),
             new Definition("jungle", Blocks.STRIPPED_JUNGLE_WOOD),
             new Definition("acacia", Blocks.STRIPPED_ACACIA_WOOD),
             new Definition("dark_oak", Blocks.STRIPPED_DARK_OAK_WOOD),

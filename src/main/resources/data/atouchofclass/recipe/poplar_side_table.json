@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "L L"
+  ],
+  "key": {
+    "S": "minecraft:poplar_slab",
+    "L": "minecraft:poplar_planks"
+  },
+  "result": {
+    "id": "atouchofclass:poplar_side_table",
+    "count": 3
+  }
+}

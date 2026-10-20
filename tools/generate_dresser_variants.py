@@ -13,6 +13,7 @@ WOODS = {
     "oak": "Oak",
     "spruce": "Spruce",
     "birch": "Birch",
+    "poplar": "Poplar",
     "jungle": "Jungle",
     "acacia": "Acacia",
     "dark_oak": "Dark Oak",

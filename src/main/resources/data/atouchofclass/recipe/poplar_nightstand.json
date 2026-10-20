@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "PPP",
+    "P P"
+  ],
+  "key": {
+    "S": "minecraft:poplar_slab",
+    "P": "minecraft:poplar_planks"
+  },
+  "result": {
+    "count": 3,
+    "id": "atouchofclass:poplar_nightstand"
+  }
+}
