@@ -6,7 +6,7 @@ Use structural blocks for floors and walls, face-applied finishes for their appe
 
 ## Materials and flooring
 
-The building palette includes buff bricks and their slabs, stairs, and walls; calcite slabs, calcite tile, marble tile, and octagonal inset tile; parquet wood flooring; and brushed stainless steel. See the catalog for exact variants and the recipe reference for crafting, smelting, and stonecutting routes. Parquet is a building block, while wallpaper and siding are applied finishes.
+The building palette includes buff bricks and their slabs, stairs, and walls; calcite slabs, calcite tile, marble tile, and octagonal inset tile; parquet wood flooring; and brushed stainless steel. See the catalog for exact variants and the recipe reference for crafting, smelting, and stonecutting routes. Parquet comes in all 13 woods listed in the [reference](reference.md), including poplar. Parquet is a building block, while wallpaper and siding are applied finishes.
 
 ## Apply plaster and wall finishes
 
@@ -39,7 +39,7 @@ Applying a replacement finish directly overwrites the old finish. Remove a non-p
 
 ## Wood shutters
 
-Shutters are available in oak, spruce, birch, jungle, acacia, dark oak,
+Shutters are available in oak, spruce, birch, poplar, jungle, acacia, dark oak,
 mangrove, cherry, pale oak, bamboo, crimson, and warped.
 Place a shutter against a wall's side face. It sits flush against that
 face; clicking the left or right half selects that hinge as viewed from
@@ -102,7 +102,7 @@ Every recipe combines a bucket of plaster with **any wood planks**, including cr
 
 ## Railings, balusters, balustrades, and newel posts
 
-All four families have the 12 wood variants listed in the [reference](reference.md). Their roles differ:
+All four families have the 13 wood variants listed in the [reference](reference.md). Their roles differ:
 
 - **Railing:** a wall-mounted handrail. It needs a wall behind it or a supported outside-corner continuation. Extend a level run by clicking its end. Nearby stair geometry and neighboring rails determine slopes and transitions.
 - **Baluster:** a freestanding post supported from below. Place on a suitable floor surface.

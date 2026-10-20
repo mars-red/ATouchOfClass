@@ -1240,6 +1240,81 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_yellow_four_post_bed.json)
 
+## black-concrete-countertop
+
+**Output:** 6 × Black Concrete Countertop (`atouchofclass:black_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:black_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_countertop.json)
+
+## black-concrete-sink
+
+**Output:** 6 × Black Concrete Sink (`atouchofclass:black_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:black_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_sink.json)
+
+## blue-concrete-countertop
+
+**Output:** 6 × Blue Concrete Countertop (`atouchofclass:blue_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:blue_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_countertop.json)
+
+## blue-concrete-sink
+
+**Output:** 6 × Blue Concrete Sink (`atouchofclass:blue_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:blue_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_sink.json)
+
+## brown-concrete-countertop
+
+**Output:** 6 × Brown Concrete Countertop (`atouchofclass:brown_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:brown_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_countertop.json)
+
+## brown-concrete-sink
+
+**Output:** 6 × Brown Concrete Sink (`atouchofclass:brown_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:brown_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_sink.json)
+
 ## brushed-stainless-steel
 
 **Output:** 4 × Brushed Stainless Steel (`atouchofclass:brushed_stainless_steel`). **Type:** `minecraft:crafting_shaped`.
@@ -1866,7 +1941,7 @@ QTQ
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_bowl_ceiling_light.json)
 
-## copper-chandelier-chain
+## copper-chain
 
 **Output:** 1 × Copper Chandelier Chain (`atouchofclass:copper_chain`). **Type:** `minecraft:crafting_shaped`.
 
@@ -1922,7 +1997,6 @@ CCC
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_floor_lamp.json)
 
-
 ## copper-lamp-post
 
 **Output:** 1 × Copper Lamp Post (`atouchofclass:copper_lamp_post`). **Type:** `minecraft:crafting_shaped`.
@@ -1936,7 +2010,6 @@ CCC
 `C` = `minecraft:copper_ingot`; `G` = `minecraft:torch`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_lamp_post.json)
-
 
 ## copper-table-lamp
 
@@ -2430,6 +2503,31 @@ S.S
 `S` = `minecraft:cut_copper_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cut_copper_sink.json)
+
+## cyan-concrete-countertop
+
+**Output:** 6 × Cyan Concrete Countertop (`atouchofclass:cyan_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:cyan_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_countertop.json)
+
+## cyan-concrete-sink
+
+**Output:** 6 × Cyan Concrete Sink (`atouchofclass:cyan_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:cyan_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_sink.json)
 
 ## dark-oak-baluster
 
@@ -3127,6 +3225,56 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/granite_sink.json)
 
+## gray-concrete-countertop
+
+**Output:** 6 × Gray Concrete Countertop (`atouchofclass:gray_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:gray_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_countertop.json)
+
+## gray-concrete-sink
+
+**Output:** 6 × Gray Concrete Sink (`atouchofclass:gray_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:gray_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_sink.json)
+
+## green-concrete-countertop
+
+**Output:** 6 × Green Concrete Countertop (`atouchofclass:green_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:green_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_countertop.json)
+
+## green-concrete-sink
+
+**Output:** 6 × Green Concrete Sink (`atouchofclass:green_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:green_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_sink.json)
+
 ## induction-cooktop
 
 **Output:** 1 × Induction Cooktop (`atouchofclass:induction_cooktop`). **Type:** `minecraft:crafting_shaped`.
@@ -3621,6 +3769,106 @@ SSS
 `L` = `minecraft:leather`; `S` = `#minecraft:wooden_slabs`; `W` = `#minecraft:wool`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/leather_sofa.json)
+
+## light-blue-concrete-countertop
+
+**Output:** 6 × Light Blue Concrete Countertop (`atouchofclass:light_blue_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:light_blue_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_countertop.json)
+
+## light-blue-concrete-sink
+
+**Output:** 6 × Light Blue Concrete Sink (`atouchofclass:light_blue_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:light_blue_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_sink.json)
+
+## light-gray-concrete-countertop
+
+**Output:** 6 × Light Gray Concrete Countertop (`atouchofclass:light_gray_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:light_gray_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_countertop.json)
+
+## light-gray-concrete-sink
+
+**Output:** 6 × Light Gray Concrete Sink (`atouchofclass:light_gray_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:light_gray_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_sink.json)
+
+## lime-concrete-countertop
+
+**Output:** 6 × Lime Concrete Countertop (`atouchofclass:lime_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:lime_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_countertop.json)
+
+## lime-concrete-sink
+
+**Output:** 6 × Lime Concrete Sink (`atouchofclass:lime_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:lime_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_sink.json)
+
+## magenta-concrete-countertop
+
+**Output:** 6 × Magenta Concrete Countertop (`atouchofclass:magenta_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:magenta_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_countertop.json)
+
+## magenta-concrete-sink
+
+**Output:** 6 × Magenta Concrete Sink (`atouchofclass:magenta_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:magenta_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_sink.json)
 
 ## mangrove-baluster
 
@@ -4487,6 +4735,31 @@ PGP
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/ogee_lattice_wallpaper.json)
 
+## orange-concrete-countertop
+
+**Output:** 6 × Orange Concrete Countertop (`atouchofclass:orange_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:orange_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_countertop.json)
+
+## orange-concrete-sink
+
+**Output:** 6 × Orange Concrete Sink (`atouchofclass:orange_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:orange_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_sink.json)
+
 ## oven
 
 **Output:** 1 × Oven (`atouchofclass:oven`). **Type:** `minecraft:crafting_shaped`.
@@ -4925,6 +5198,31 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_yellow_four_post_bed.json)
 
+## pink-concrete-countertop
+
+**Output:** 6 × Pink Concrete Countertop (`atouchofclass:pink_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:pink_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_countertop.json)
+
+## pink-concrete-sink
+
+**Output:** 6 × Pink Concrete Sink (`atouchofclass:pink_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:pink_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_sink.json)
+
 ## plinth-block
 
 **Output:** 10 × Plinth Block (`atouchofclass:plinth_block`). **Type:** `minecraft:crafting_shaped`.
@@ -5089,6 +5387,405 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/polished_granite_sink.json)
 
+## poplar-baluster
+
+**Output:** 32 × Poplar Baluster (`atouchofclass:poplar_baluster`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+O
+O
+```
+
+`O` = `minecraft:stripped_poplar_log`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_baluster.json)
+
+## poplar-balustrade
+
+**Output:** 2 × Poplar Balustrade (`atouchofclass:poplar_balustrade`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+O
+B
+```
+
+`B` = `atouchofclass:poplar_baluster`; `O` = `minecraft:poplar_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_balustrade.json)
+
+## poplar-black-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Black) (`atouchofclass:poplar_black_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:black_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_black_four_post_bed.json)
+
+## poplar-blue-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Blue) (`atouchofclass:poplar_blue_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:blue_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_blue_four_post_bed.json)
+
+## poplar-brown-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Brown) (`atouchofclass:poplar_brown_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:brown_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_brown_four_post_bed.json)
+
+## poplar-cyan-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Cyan) (`atouchofclass:poplar_cyan_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:cyan_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_cyan_four_post_bed.json)
+
+## poplar-dining-chair
+
+**Output:** 2 × Poplar Dining Chair (`atouchofclass:poplar_dining_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+TTT
+LLL
+T.T
+```
+
+`L` = `minecraft:poplar_slab`; `T` = `minecraft:stick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_dining_chair.json)
+
+## poplar-dining-table
+
+**Output:** 4 × Poplar Dining Table (`atouchofclass:poplar_dining_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+P.P
+```
+
+`P` = `minecraft:poplar_planks`; `W` = `minecraft:stripped_poplar_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_dining_table.json)
+
+## poplar-door-cabinet
+
+**Output:** 2 × Poplar Door Cabinet (`atouchofclass:poplar_door_cabinet`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+S.S
+SSS
+```
+
+`S` = `minecraft:poplar_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_door_cabinet.json)
+
+## poplar-drawer-cabinet
+
+**Output:** 2 × Poplar Drawer Cabinet (`atouchofclass:poplar_drawer_cabinet`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+SSS
+SSS
+```
+
+`S` = `minecraft:poplar_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_drawer_cabinet.json)
+
+## poplar-dresser
+
+**Output:** 1 × Poplar Dresser (`atouchofclass:poplar_dresser`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SS
+CC
+```
+
+`C` = `minecraft:chest`; `S` = `minecraft:stripped_poplar_log`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_dresser.json)
+
+## poplar-gray-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Gray) (`atouchofclass:poplar_gray_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:gray_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_gray_four_post_bed.json)
+
+## poplar-green-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Green) (`atouchofclass:poplar_green_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:green_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_green_four_post_bed.json)
+
+## poplar-light-blue-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Light Blue) (`atouchofclass:poplar_light_blue_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:light_blue_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_light_blue_four_post_bed.json)
+
+## poplar-light-gray-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Light Gray) (`atouchofclass:poplar_light_gray_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:light_gray_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_light_gray_four_post_bed.json)
+
+## poplar-lime-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Lime) (`atouchofclass:poplar_lime_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:lime_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_lime_four_post_bed.json)
+
+## poplar-magenta-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Magenta) (`atouchofclass:poplar_magenta_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:magenta_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_magenta_four_post_bed.json)
+
+## poplar-newel-post
+
+**Output:** 8 × Poplar Newel Post (`atouchofclass:poplar_newel_post`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+O
+O
+O
+```
+
+`O` = `minecraft:stripped_poplar_log`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_newel_post.json)
+
+## poplar-nightstand
+
+**Output:** 3 × Poplar Nightstand (`atouchofclass:poplar_nightstand`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+PPP
+P.P
+```
+
+`P` = `minecraft:poplar_planks`; `S` = `minecraft:poplar_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_nightstand.json)
+
+## poplar-orange-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Orange) (`atouchofclass:poplar_orange_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:orange_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_orange_four_post_bed.json)
+
+## poplar-parquet
+
+**Output:** 5 × Poplar Parquet (`atouchofclass:poplar_parquet`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P.P
+.P.
+P.P
+```
+
+`P` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_parquet.json)
+
+## poplar-pink-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Pink) (`atouchofclass:poplar_pink_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:pink_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_pink_four_post_bed.json)
+
+## poplar-purple-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Purple) (`atouchofclass:poplar_purple_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:purple_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_purple_four_post_bed.json)
+
+## poplar-railing
+
+**Output:** 6 × Wall Mounted Poplar Railing (`atouchofclass:poplar_railing`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+OOO
+C.C
+```
+
+`C` = `minecraft:copper_ingot`; `O` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_railing.json)
+
+## poplar-red-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Red) (`atouchofclass:poplar_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:red_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_red_four_post_bed.json)
+
+## poplar-shutter
+
+**Output:** 8 × Poplar Shutter (`atouchofclass:poplar_shutter`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WSW
+WSW
+```
+
+`S` = `minecraft:stick`; `W` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_shutter.json)
+
+## poplar-side-table
+
+**Output:** 3 × Poplar Side Table (`atouchofclass:poplar_side_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+L.L
+```
+
+`L` = `minecraft:poplar_planks`; `S` = `minecraft:poplar_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_side_table.json)
+
+## poplar-white-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (White) (`atouchofclass:poplar_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:white_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_white_four_post_bed.json)
+
+## poplar-yellow-four-post-bed
+
+**Output:** 1 × Poplar Four-Post Bed (Yellow) (`atouchofclass:poplar_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+LL
+BB
+LL
+```
+
+`B` = `minecraft:yellow_bed`; `L` = `#minecraft:poplar_logs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_yellow_four_post_bed.json)
+
 ## prismarine-brick-countertop
 
 **Output:** 6 × Prismarine Brick Countertop (`atouchofclass:prismarine_brick_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -5113,6 +5810,31 @@ S.S
 `S` = `minecraft:prismarine_brick_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/prismarine_brick_sink.json)
+
+## purple-concrete-countertop
+
+**Output:** 6 × Purple Concrete Countertop (`atouchofclass:purple_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:purple_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_countertop.json)
+
+## purple-concrete-sink
+
+**Output:** 6 × Purple Concrete Sink (`atouchofclass:purple_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:purple_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_sink.json)
 
 ## purpur-countertop
 
@@ -5199,6 +5921,31 @@ BB
 `B` = `minecraft:bricks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_brick.json)
+
+## red-concrete-countertop
+
+**Output:** 6 × Red Concrete Countertop (`atouchofclass:red_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:red_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_countertop.json)
+
+## red-concrete-sink
+
+**Output:** 6 × Red Concrete Sink (`atouchofclass:red_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:red_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_sink.json)
 
 ## red-nether-brick-countertop
 
@@ -6305,6 +7052,48 @@ DG.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_pale_oak_sidelight.json)
 
+## tall-poplar-door
+
+**Output:** 2 × Tall Poplar Door (`atouchofclass:tall_poplar_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+DD.
+DDN
+DD.
+```
+
+`D` = `minecraft:poplar_planks`; `N` = `minecraft:gold_nugget`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_poplar_door.json)
+
+## tall-poplar-patio-door
+
+**Output:** 4 × Tall Poplar Patio Door (`atouchofclass:tall_poplar_patio_door`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WGW
+WGW
+WGW
+```
+
+`G` = `minecraft:glass`; `W` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_poplar_patio_door.json)
+
+## tall-poplar-sidelight
+
+**Output:** 4 × Tall Poplar Sidelight (`atouchofclass:tall_poplar_sidelight`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+DG.
+DG.
+DG.
+```
+
+`D` = `minecraft:poplar_planks`; `G` = `minecraft:glass`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/tall_poplar_sidelight.json)
+
 ## tall-spruce-door
 
 **Output:** 2 × Tall Spruce Door (`atouchofclass:tall_spruce_door`). **Type:** `minecraft:crafting_shaped`.
@@ -6832,7 +7621,7 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_copper_bowl_ceiling_light.json)
 
-## waxed-copper-chandelier-chain
+## waxed-copper-chain
 
 **Output:** 1 × Waxed Copper Chandelier Chain (`atouchofclass:waxed_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
 
@@ -6921,7 +7710,7 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_bowl_ceiling_light.json)
 
-## waxed-exposed-copper-chandelier-chain
+## waxed-exposed-copper-chain
 
 **Output:** 1 × Waxed Exposed Copper Chandelier Chain (`atouchofclass:waxed_exposed_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
 
@@ -7010,7 +7799,7 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_bowl_ceiling_light.json)
 
-## waxed-oxidized-copper-chandelier-chain
+## waxed-oxidized-copper-chain
 
 **Output:** 1 × Waxed Oxidized Copper Chandelier Chain (`atouchofclass:waxed_oxidized_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
 
@@ -7099,7 +7888,7 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_bowl_ceiling_light.json)
 
-## waxed-weathered-copper-chandelier-chain
+## waxed-weathered-copper-chain
 
 **Output:** 1 × Waxed Weathered Copper Chandelier Chain (`atouchofclass:waxed_weathered_copper_chain`). **Type:** `minecraft:crafting_shapeless`.
 
@@ -7205,6 +7994,31 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/weathered_cut_copper_sink.json)
 
+## white-concrete-countertop
+
+**Output:** 6 × White Concrete Countertop (`atouchofclass:white_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:white_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_countertop.json)
+
+## white-concrete-sink
+
+**Output:** 6 × White Concrete Sink (`atouchofclass:white_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:white_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_sink.json)
+
 ## white-stucco
 
 **Output:** 1 × White Stucco (`atouchofclass:white_stucco`). **Type:** `minecraft:crafting_shaped`.
@@ -7231,3 +8045,28 @@ SP
 `P` = `atouchofclass:bucket_of_plaster`; `S` = `#minecraft:wooden_slabs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/window_apron.json)
+
+## yellow-concrete-countertop
+
+**Output:** 6 × Yellow Concrete Countertop (`atouchofclass:yellow_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:yellow_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_countertop.json)
+
+## yellow-concrete-sink
+
+**Output:** 6 × Yellow Concrete Sink (`atouchofclass:yellow_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:yellow_concrete_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_sink.json)

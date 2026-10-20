@@ -6,7 +6,7 @@ A Touch of Class adds world blocks, items, inventories, saved decoration data, a
 
 ## Install on a server
 
-1. Prepare a Java 21 environment and a NeoForge server for Minecraft 1.21.9. This source tree declares NeoForge 21.9.16-beta as the minimum; use the tested loader distributed with your pack.
+1. Prepare a Java 25 environment and a NeoForge server for Minecraft 26.3. This source tree declares NeoForge 26.3.0.92 as the minimum; use the tested loader distributed with your pack.
 2. Follow the [official NeoForge server installation instructions](https://docs.neoforged.net/user/docs/server/). On Windows, the installed server uses `run.bat`; complete the normal first-run setup and EULA acceptance yourself.
 3. Stop the server and place the mod JAR in its `mods` folder. Put the matching JAR in each client's game-instance `mods` folder.
 4. Start the server, inspect startup output, and connect with a matching client. Confirm the mod content appears before opening the world to players.

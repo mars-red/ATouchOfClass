@@ -4,9 +4,9 @@
 
 Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, dining-chair, nightstand, shutter, patio-door, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
 
-Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe. Concrete exceptions are intentional.
+Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**601 registered player-content items.**
+**632 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -100,12 +100,12 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Birch Side Table | `atouchofclass:birch_side_table` | Survival obtainable — [birch_side_table](recipes.md#birch-side-table) |
 | Birch Four-Post Bed (White) | `atouchofclass:birch_white_four_post_bed` | Survival obtainable — [birch_white_four_post_bed](recipes.md#birch-white-four-post-bed) |
 | Birch Four-Post Bed (Yellow) | `atouchofclass:birch_yellow_four_post_bed` | Survival obtainable — [birch_yellow_four_post_bed](recipes.md#birch-yellow-four-post-bed) |
-| Black Concrete Countertop | `atouchofclass:black_concrete_countertop` | Creative only — intentionally no recipe |
-| Black Concrete Sink | `atouchofclass:black_concrete_sink` | Creative only — intentionally no recipe |
-| Blue Concrete Countertop | `atouchofclass:blue_concrete_countertop` | Creative only — intentionally no recipe |
-| Blue Concrete Sink | `atouchofclass:blue_concrete_sink` | Creative only — intentionally no recipe |
-| Brown Concrete Countertop | `atouchofclass:brown_concrete_countertop` | Creative only — intentionally no recipe |
-| Brown Concrete Sink | `atouchofclass:brown_concrete_sink` | Creative only — intentionally no recipe |
+| Black Concrete Countertop | `atouchofclass:black_concrete_countertop` | Survival obtainable — [black_concrete_countertop](recipes.md#black-concrete-countertop) |
+| Black Concrete Sink | `atouchofclass:black_concrete_sink` | Survival obtainable — [black_concrete_sink](recipes.md#black-concrete-sink) |
+| Blue Concrete Countertop | `atouchofclass:blue_concrete_countertop` | Survival obtainable — [blue_concrete_countertop](recipes.md#blue-concrete-countertop) |
+| Blue Concrete Sink | `atouchofclass:blue_concrete_sink` | Survival obtainable — [blue_concrete_sink](recipes.md#blue-concrete-sink) |
+| Brown Concrete Countertop | `atouchofclass:brown_concrete_countertop` | Survival obtainable — [brown_concrete_countertop](recipes.md#brown-concrete-countertop) |
+| Brown Concrete Sink | `atouchofclass:brown_concrete_sink` | Survival obtainable — [brown_concrete_sink](recipes.md#brown-concrete-sink) |
 | Brushed Stainless Steel | `atouchofclass:brushed_stainless_steel` | Survival obtainable — [brushed_stainless_steel](recipes.md#brushed-stainless-steel) |
 | Bucket of Plaster | `atouchofclass:bucket_of_plaster` | Survival obtainable — [bucket_of_plaster](recipes.md#bucket-of-plaster) |
 | Buff Brick Siding | `atouchofclass:buff_brick` | Survival obtainable — [buff_brick](recipes.md#buff-brick) |
@@ -151,7 +151,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Clay Clawfoot Bathtub | `atouchofclass:clay_clawfoot_bathtub` | Survival obtainable — [clay_clawfoot_bathtub](recipes.md#clay-clawfoot-bathtub) |
 | Clay Toilet | `atouchofclass:clay_toilet` | Survival obtainable — [clay_toilet](recipes.md#clay-toilet) |
 | Copper Bowl Ceiling Light | `atouchofclass:copper_bowl_ceiling_light` | Survival obtainable — [copper_bowl_ceiling_light](recipes.md#copper-bowl-ceiling-light) |
-| Copper Chandelier Chain | `atouchofclass:copper_chain` | Survival obtainable — [Copper Chandelier Chain](recipes.md#copper-chandelier-chain) |
+| Copper Chandelier Chain | `atouchofclass:copper_chain` | Survival obtainable — [copper_chain](recipes.md#copper-chain) |
 | Copper Chandelier | `atouchofclass:copper_chandelier` | Survival obtainable — [copper_chandelier](recipes.md#copper-chandelier) |
 | Copper Coffered Ceiling Light | `atouchofclass:copper_coffered_ceiling_light` | Survival obtainable — [copper_coffered_ceiling_light](recipes.md#copper-coffered-ceiling-light) |
 | Copper Floor Lamp | `atouchofclass:copper_floor_lamp` | Survival obtainable — [copper_floor_lamp](recipes.md#copper-floor-lamp) |
@@ -192,8 +192,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Crown Moulding | `atouchofclass:crown_moulding` | Survival obtainable — [crown_moulding](recipes.md#crown-moulding) |
 | Cut Copper Countertop | `atouchofclass:cut_copper_countertop` | Survival obtainable — [cut_copper_countertop](recipes.md#cut-copper-countertop) |
 | Cut Copper Sink | `atouchofclass:cut_copper_sink` | Survival obtainable — [cut_copper_sink](recipes.md#cut-copper-sink) |
-| Cyan Concrete Countertop | `atouchofclass:cyan_concrete_countertop` | Creative only — intentionally no recipe |
-| Cyan Concrete Sink | `atouchofclass:cyan_concrete_sink` | Creative only — intentionally no recipe |
+| Cyan Concrete Countertop | `atouchofclass:cyan_concrete_countertop` | Survival obtainable — [cyan_concrete_countertop](recipes.md#cyan-concrete-countertop) |
+| Cyan Concrete Sink | `atouchofclass:cyan_concrete_sink` | Survival obtainable — [cyan_concrete_sink](recipes.md#cyan-concrete-sink) |
 | Dark Oak Baluster | `atouchofclass:dark_oak_baluster` | Survival obtainable — [dark_oak_baluster](recipes.md#dark-oak-baluster) |
 | Dark Oak Balustrade | `atouchofclass:dark_oak_balustrade` | Survival obtainable — [dark_oak_balustrade](recipes.md#dark-oak-balustrade) |
 | Dark Oak Four-Post Bed (Black) | `atouchofclass:dark_oak_black_four_post_bed` | Survival obtainable — [dark_oak_black_four_post_bed](recipes.md#dark-oak-black-four-post-bed) |
@@ -254,10 +254,10 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Gothic Wallpaper | `atouchofclass:gothic_wallpaper` | Survival obtainable — [gothic_wallpaper](recipes.md#gothic-wallpaper) |
 | Granite Countertop | `atouchofclass:granite_countertop` | Survival obtainable — [granite_countertop](recipes.md#granite-countertop) |
 | Granite Sink | `atouchofclass:granite_sink` | Survival obtainable — [granite_sink](recipes.md#granite-sink) |
-| Gray Concrete Countertop | `atouchofclass:gray_concrete_countertop` | Creative only — intentionally no recipe |
-| Gray Concrete Sink | `atouchofclass:gray_concrete_sink` | Creative only — intentionally no recipe |
-| Green Concrete Countertop | `atouchofclass:green_concrete_countertop` | Creative only — intentionally no recipe |
-| Green Concrete Sink | `atouchofclass:green_concrete_sink` | Creative only — intentionally no recipe |
+| Gray Concrete Countertop | `atouchofclass:gray_concrete_countertop` | Survival obtainable — [gray_concrete_countertop](recipes.md#gray-concrete-countertop) |
+| Gray Concrete Sink | `atouchofclass:gray_concrete_sink` | Survival obtainable — [gray_concrete_sink](recipes.md#gray-concrete-sink) |
+| Green Concrete Countertop | `atouchofclass:green_concrete_countertop` | Survival obtainable — [green_concrete_countertop](recipes.md#green-concrete-countertop) |
+| Green Concrete Sink | `atouchofclass:green_concrete_sink` | Survival obtainable — [green_concrete_sink](recipes.md#green-concrete-sink) |
 | Induction Cooktop | `atouchofclass:induction_cooktop` | Survival obtainable — [induction_cooktop](recipes.md#induction-cooktop) |
 | Jungle Baluster | `atouchofclass:jungle_baluster` | Survival obtainable — [jungle_baluster](recipes.md#jungle-baluster) |
 | Jungle Balustrade | `atouchofclass:jungle_balustrade` | Survival obtainable — [jungle_balustrade](recipes.md#jungle-balustrade) |
@@ -294,14 +294,14 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Leather Chair | `atouchofclass:leather_chair` | Survival obtainable — [leather_chair](recipes.md#leather-chair) |
 | Leather Love Seat | `atouchofclass:leather_love_seat` | Survival obtainable — [leather_love_seat](recipes.md#leather-love-seat) |
 | Leather Sofa | `atouchofclass:leather_sofa` | Survival obtainable — [leather_sofa](recipes.md#leather-sofa) |
-| Light Blue Concrete Countertop | `atouchofclass:light_blue_concrete_countertop` | Creative only — intentionally no recipe |
-| Light Blue Concrete Sink | `atouchofclass:light_blue_concrete_sink` | Creative only — intentionally no recipe |
-| Light Gray Concrete Countertop | `atouchofclass:light_gray_concrete_countertop` | Creative only — intentionally no recipe |
-| Light Gray Concrete Sink | `atouchofclass:light_gray_concrete_sink` | Creative only — intentionally no recipe |
-| Lime Concrete Countertop | `atouchofclass:lime_concrete_countertop` | Creative only — intentionally no recipe |
-| Lime Concrete Sink | `atouchofclass:lime_concrete_sink` | Creative only — intentionally no recipe |
-| Magenta Concrete Countertop | `atouchofclass:magenta_concrete_countertop` | Creative only — intentionally no recipe |
-| Magenta Concrete Sink | `atouchofclass:magenta_concrete_sink` | Creative only — intentionally no recipe |
+| Light Blue Concrete Countertop | `atouchofclass:light_blue_concrete_countertop` | Survival obtainable — [light_blue_concrete_countertop](recipes.md#light-blue-concrete-countertop) |
+| Light Blue Concrete Sink | `atouchofclass:light_blue_concrete_sink` | Survival obtainable — [light_blue_concrete_sink](recipes.md#light-blue-concrete-sink) |
+| Light Gray Concrete Countertop | `atouchofclass:light_gray_concrete_countertop` | Survival obtainable — [light_gray_concrete_countertop](recipes.md#light-gray-concrete-countertop) |
+| Light Gray Concrete Sink | `atouchofclass:light_gray_concrete_sink` | Survival obtainable — [light_gray_concrete_sink](recipes.md#light-gray-concrete-sink) |
+| Lime Concrete Countertop | `atouchofclass:lime_concrete_countertop` | Survival obtainable — [lime_concrete_countertop](recipes.md#lime-concrete-countertop) |
+| Lime Concrete Sink | `atouchofclass:lime_concrete_sink` | Survival obtainable — [lime_concrete_sink](recipes.md#lime-concrete-sink) |
+| Magenta Concrete Countertop | `atouchofclass:magenta_concrete_countertop` | Survival obtainable — [magenta_concrete_countertop](recipes.md#magenta-concrete-countertop) |
+| Magenta Concrete Sink | `atouchofclass:magenta_concrete_sink` | Survival obtainable — [magenta_concrete_sink](recipes.md#magenta-concrete-sink) |
 | Mangrove Baluster | `atouchofclass:mangrove_baluster` | Survival obtainable — [mangrove_baluster](recipes.md#mangrove-baluster) |
 | Mangrove Balustrade | `atouchofclass:mangrove_balustrade` | Survival obtainable — [mangrove_balustrade](recipes.md#mangrove-balustrade) |
 | Mangrove Four-Post Bed (Black) | `atouchofclass:mangrove_black_four_post_bed` | Survival obtainable — [mangrove_black_four_post_bed](recipes.md#mangrove-black-four-post-bed) |
@@ -365,8 +365,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Oak Four-Post Bed (Yellow) | `atouchofclass:oak_yellow_four_post_bed` | Survival obtainable — [oak_yellow_four_post_bed](recipes.md#oak-yellow-four-post-bed) |
 | Octagonal Inset Tile | `atouchofclass:octagonal_inset_tile` | Survival obtainable — [octagonal_inset_tile](recipes.md#octagonal-inset-tile) |
 | Ogee Lattice Wallpaper | `atouchofclass:ogee_lattice_wallpaper` | Survival obtainable — [ogee_lattice_wallpaper](recipes.md#ogee-lattice-wallpaper) |
-| Orange Concrete Countertop | `atouchofclass:orange_concrete_countertop` | Creative only — intentionally no recipe |
-| Orange Concrete Sink | `atouchofclass:orange_concrete_sink` | Creative only — intentionally no recipe |
+| Orange Concrete Countertop | `atouchofclass:orange_concrete_countertop` | Survival obtainable — [orange_concrete_countertop](recipes.md#orange-concrete-countertop) |
+| Orange Concrete Sink | `atouchofclass:orange_concrete_sink` | Survival obtainable — [orange_concrete_sink](recipes.md#orange-concrete-sink) |
 | Oven | `atouchofclass:oven` | Survival obtainable — [oven](recipes.md#oven) |
 | Oxidized Copper Bowl Ceiling Light | `atouchofclass:oxidized_copper_bowl_ceiling_light` | Survival obtainable — oxidation of `atouchofclass:weathered_copper_bowl_ceiling_light` |
 | Oxidized Copper Chandelier Chain | `atouchofclass:oxidized_copper_chain` | Survival obtainable — oxidation of `atouchofclass:weathered_copper_chain` |
@@ -407,8 +407,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Pale Oak Side Table | `atouchofclass:pale_oak_side_table` | Survival obtainable — [pale_oak_side_table](recipes.md#pale-oak-side-table) |
 | Pale Oak Four-Post Bed (White) | `atouchofclass:pale_oak_white_four_post_bed` | Survival obtainable — [pale_oak_white_four_post_bed](recipes.md#pale-oak-white-four-post-bed) |
 | Pale Oak Four-Post Bed (Yellow) | `atouchofclass:pale_oak_yellow_four_post_bed` | Survival obtainable — [pale_oak_yellow_four_post_bed](recipes.md#pale-oak-yellow-four-post-bed) |
-| Pink Concrete Countertop | `atouchofclass:pink_concrete_countertop` | Creative only — intentionally no recipe |
-| Pink Concrete Sink | `atouchofclass:pink_concrete_sink` | Creative only — intentionally no recipe |
+| Pink Concrete Countertop | `atouchofclass:pink_concrete_countertop` | Survival obtainable — [pink_concrete_countertop](recipes.md#pink-concrete-countertop) |
+| Pink Concrete Sink | `atouchofclass:pink_concrete_sink` | Survival obtainable — [pink_concrete_sink](recipes.md#pink-concrete-sink) |
 | Plinth Block | `atouchofclass:plinth_block` | Survival obtainable — [plinth_block](recipes.md#plinth-block) |
 | Polished Andesite Countertop | `atouchofclass:polished_andesite_countertop` | Survival obtainable — [polished_andesite_countertop](recipes.md#polished-andesite-countertop) |
 | Polished Andesite Sink | `atouchofclass:polished_andesite_sink` | Survival obtainable — [polished_andesite_sink](recipes.md#polished-andesite-sink) |
@@ -422,10 +422,39 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Polished Diorite Sink | `atouchofclass:polished_diorite_sink` | Survival obtainable — [polished_diorite_sink](recipes.md#polished-diorite-sink) |
 | Polished Granite Countertop | `atouchofclass:polished_granite_countertop` | Survival obtainable — [polished_granite_countertop](recipes.md#polished-granite-countertop) |
 | Polished Granite Sink | `atouchofclass:polished_granite_sink` | Survival obtainable — [polished_granite_sink](recipes.md#polished-granite-sink) |
+| Poplar Baluster | `atouchofclass:poplar_baluster` | Survival obtainable — [poplar_baluster](recipes.md#poplar-baluster) |
+| Poplar Balustrade | `atouchofclass:poplar_balustrade` | Survival obtainable — [poplar_balustrade](recipes.md#poplar-balustrade) |
+| Poplar Four-Post Bed (Black) | `atouchofclass:poplar_black_four_post_bed` | Survival obtainable — [poplar_black_four_post_bed](recipes.md#poplar-black-four-post-bed) |
+| Poplar Four-Post Bed (Blue) | `atouchofclass:poplar_blue_four_post_bed` | Survival obtainable — [poplar_blue_four_post_bed](recipes.md#poplar-blue-four-post-bed) |
+| Poplar Four-Post Bed (Brown) | `atouchofclass:poplar_brown_four_post_bed` | Survival obtainable — [poplar_brown_four_post_bed](recipes.md#poplar-brown-four-post-bed) |
+| Poplar Four-Post Bed (Cyan) | `atouchofclass:poplar_cyan_four_post_bed` | Survival obtainable — [poplar_cyan_four_post_bed](recipes.md#poplar-cyan-four-post-bed) |
+| Poplar Dining Chair | `atouchofclass:poplar_dining_chair` | Survival obtainable — [poplar_dining_chair](recipes.md#poplar-dining-chair) |
+| Poplar Dining Table | `atouchofclass:poplar_dining_table` | Survival obtainable — [poplar_dining_table](recipes.md#poplar-dining-table) |
+| Poplar Door Cabinet | `atouchofclass:poplar_door_cabinet` | Survival obtainable — [poplar_door_cabinet](recipes.md#poplar-door-cabinet) |
+| Poplar Drawer Cabinet | `atouchofclass:poplar_drawer_cabinet` | Survival obtainable — [poplar_drawer_cabinet](recipes.md#poplar-drawer-cabinet) |
+| Poplar Dresser | `atouchofclass:poplar_dresser` | Survival obtainable — [poplar_dresser](recipes.md#poplar-dresser) |
+| Poplar Four-Post Bed (Gray) | `atouchofclass:poplar_gray_four_post_bed` | Survival obtainable — [poplar_gray_four_post_bed](recipes.md#poplar-gray-four-post-bed) |
+| Poplar Four-Post Bed (Green) | `atouchofclass:poplar_green_four_post_bed` | Survival obtainable — [poplar_green_four_post_bed](recipes.md#poplar-green-four-post-bed) |
+| Poplar Four-Post Bed (Light Blue) | `atouchofclass:poplar_light_blue_four_post_bed` | Survival obtainable — [poplar_light_blue_four_post_bed](recipes.md#poplar-light-blue-four-post-bed) |
+| Poplar Four-Post Bed (Light Gray) | `atouchofclass:poplar_light_gray_four_post_bed` | Survival obtainable — [poplar_light_gray_four_post_bed](recipes.md#poplar-light-gray-four-post-bed) |
+| Poplar Four-Post Bed (Lime) | `atouchofclass:poplar_lime_four_post_bed` | Survival obtainable — [poplar_lime_four_post_bed](recipes.md#poplar-lime-four-post-bed) |
+| Poplar Four-Post Bed (Magenta) | `atouchofclass:poplar_magenta_four_post_bed` | Survival obtainable — [poplar_magenta_four_post_bed](recipes.md#poplar-magenta-four-post-bed) |
+| Poplar Newel Post | `atouchofclass:poplar_newel_post` | Survival obtainable — [poplar_newel_post](recipes.md#poplar-newel-post) |
+| Poplar Nightstand | `atouchofclass:poplar_nightstand` | Survival obtainable — [poplar_nightstand](recipes.md#poplar-nightstand) |
+| Poplar Four-Post Bed (Orange) | `atouchofclass:poplar_orange_four_post_bed` | Survival obtainable — [poplar_orange_four_post_bed](recipes.md#poplar-orange-four-post-bed) |
+| Poplar Parquet | `atouchofclass:poplar_parquet` | Survival obtainable — [poplar_parquet](recipes.md#poplar-parquet) |
+| Poplar Four-Post Bed (Pink) | `atouchofclass:poplar_pink_four_post_bed` | Survival obtainable — [poplar_pink_four_post_bed](recipes.md#poplar-pink-four-post-bed) |
+| Poplar Four-Post Bed (Purple) | `atouchofclass:poplar_purple_four_post_bed` | Survival obtainable — [poplar_purple_four_post_bed](recipes.md#poplar-purple-four-post-bed) |
+| Wall Mounted Poplar Railing | `atouchofclass:poplar_railing` | Survival obtainable — [poplar_railing](recipes.md#poplar-railing) |
+| Poplar Four-Post Bed (Red) | `atouchofclass:poplar_red_four_post_bed` | Survival obtainable — [poplar_red_four_post_bed](recipes.md#poplar-red-four-post-bed) |
+| Poplar Shutter | `atouchofclass:poplar_shutter` | Survival obtainable — [poplar_shutter](recipes.md#poplar-shutter) |
+| Poplar Side Table | `atouchofclass:poplar_side_table` | Survival obtainable — [poplar_side_table](recipes.md#poplar-side-table) |
+| Poplar Four-Post Bed (White) | `atouchofclass:poplar_white_four_post_bed` | Survival obtainable — [poplar_white_four_post_bed](recipes.md#poplar-white-four-post-bed) |
+| Poplar Four-Post Bed (Yellow) | `atouchofclass:poplar_yellow_four_post_bed` | Survival obtainable — [poplar_yellow_four_post_bed](recipes.md#poplar-yellow-four-post-bed) |
 | Prismarine Brick Countertop | `atouchofclass:prismarine_brick_countertop` | Survival obtainable — [prismarine_brick_countertop](recipes.md#prismarine-brick-countertop) |
 | Prismarine Brick Sink | `atouchofclass:prismarine_brick_sink` | Survival obtainable — [prismarine_brick_sink](recipes.md#prismarine-brick-sink) |
-| Purple Concrete Countertop | `atouchofclass:purple_concrete_countertop` | Creative only — intentionally no recipe |
-| Purple Concrete Sink | `atouchofclass:purple_concrete_sink` | Creative only — intentionally no recipe |
+| Purple Concrete Countertop | `atouchofclass:purple_concrete_countertop` | Survival obtainable — [purple_concrete_countertop](recipes.md#purple-concrete-countertop) |
+| Purple Concrete Sink | `atouchofclass:purple_concrete_sink` | Survival obtainable — [purple_concrete_sink](recipes.md#purple-concrete-sink) |
 | Purpur Countertop | `atouchofclass:purpur_countertop` | Survival obtainable — [purpur_countertop](recipes.md#purpur-countertop) |
 | Purpur Sink | `atouchofclass:purpur_sink` | Survival obtainable — [purpur_sink](recipes.md#purpur-sink) |
 | Quartz Countertop | `atouchofclass:quartz_countertop` | Survival obtainable — [quartz_countertop](recipes.md#quartz-countertop) |
@@ -433,8 +462,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Quicklime Powder | `atouchofclass:quicklime_powder` | Survival obtainable — [quicklime_powder](recipes.md#quicklime-powder) |
 | Rain Shower Head | `atouchofclass:rain_shower_head` | Survival obtainable — [rain_shower_head](recipes.md#rain-shower-head) |
 | Red Brick Siding | `atouchofclass:red_brick` | Survival obtainable — [red_brick](recipes.md#red-brick) |
-| Red Concrete Countertop | `atouchofclass:red_concrete_countertop` | Creative only — intentionally no recipe |
-| Red Concrete Sink | `atouchofclass:red_concrete_sink` | Creative only — intentionally no recipe |
+| Red Concrete Countertop | `atouchofclass:red_concrete_countertop` | Survival obtainable — [red_concrete_countertop](recipes.md#red-concrete-countertop) |
+| Red Concrete Sink | `atouchofclass:red_concrete_sink` | Survival obtainable — [red_concrete_sink](recipes.md#red-concrete-sink) |
 | Red Nether Brick Countertop | `atouchofclass:red_nether_brick_countertop` | Survival obtainable — [red_nether_brick_countertop](recipes.md#red-nether-brick-countertop) |
 | Red Nether Brick Sink | `atouchofclass:red_nether_brick_sink` | Survival obtainable — [red_nether_brick_sink](recipes.md#red-nether-brick-sink) |
 | Refrigerator | `atouchofclass:refrigerator` | Survival obtainable — [refrigerator](recipes.md#refrigerator) |
@@ -516,6 +545,9 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Tall Pale Oak Door | `atouchofclass:tall_pale_oak_door` | Survival obtainable — [tall_pale_oak_door](recipes.md#tall-pale-oak-door) |
 | Tall Pale Oak Patio Door | `atouchofclass:tall_pale_oak_patio_door` | Survival obtainable — [tall_pale_oak_patio_door](recipes.md#tall-pale-oak-patio-door) |
 | Tall Pale Oak Sidelight | `atouchofclass:tall_pale_oak_sidelight` | Survival obtainable — [tall_pale_oak_sidelight](recipes.md#tall-pale-oak-sidelight) |
+| Tall Poplar Door | `atouchofclass:tall_poplar_door` | Survival obtainable — [tall_poplar_door](recipes.md#tall-poplar-door) |
+| Tall Poplar Patio Door | `atouchofclass:tall_poplar_patio_door` | Survival obtainable — [tall_poplar_patio_door](recipes.md#tall-poplar-patio-door) |
+| Tall Poplar Sidelight | `atouchofclass:tall_poplar_sidelight` | Survival obtainable — [tall_poplar_sidelight](recipes.md#tall-poplar-sidelight) |
 | Tall Spruce Door | `atouchofclass:tall_spruce_door` | Survival obtainable — [tall_spruce_door](recipes.md#tall-spruce-door) |
 | Tall Spruce Patio Door | `atouchofclass:tall_spruce_patio_door` | Survival obtainable — [tall_spruce_patio_door](recipes.md#tall-spruce-patio-door) |
 | Tall Spruce Sidelight | `atouchofclass:tall_spruce_sidelight` | Survival obtainable — [tall_spruce_sidelight](recipes.md#tall-spruce-sidelight) |
@@ -555,7 +587,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Warped Four-Post Bed (White) | `atouchofclass:warped_white_four_post_bed` | Survival obtainable — [warped_white_four_post_bed](recipes.md#warped-white-four-post-bed) |
 | Warped Four-Post Bed (Yellow) | `atouchofclass:warped_yellow_four_post_bed` | Survival obtainable — [warped_yellow_four_post_bed](recipes.md#warped-yellow-four-post-bed) |
 | Waxed Copper Bowl Ceiling Light | `atouchofclass:waxed_copper_bowl_ceiling_light` | Survival obtainable — [waxed_copper_bowl_ceiling_light](recipes.md#waxed-copper-bowl-ceiling-light) |
-| Waxed Copper Chandelier Chain | `atouchofclass:waxed_copper_chain` | Survival obtainable — [Waxed Copper Chandelier Chain](recipes.md#waxed-copper-chandelier-chain) |
+| Waxed Copper Chandelier Chain | `atouchofclass:waxed_copper_chain` | Survival obtainable — [waxed_copper_chain](recipes.md#waxed-copper-chain) |
 | Waxed Copper Chandelier | `atouchofclass:waxed_copper_chandelier` | Survival obtainable — [waxed_copper_chandelier](recipes.md#waxed-copper-chandelier) |
 | Waxed Copper Coffered Ceiling Light | `atouchofclass:waxed_copper_coffered_ceiling_light` | Survival obtainable — [waxed_copper_coffered_ceiling_light](recipes.md#waxed-copper-coffered-ceiling-light) |
 | Waxed Copper Floor Lamp | `atouchofclass:waxed_copper_floor_lamp` | Survival obtainable — [waxed_copper_floor_lamp](recipes.md#waxed-copper-floor-lamp) |
@@ -565,7 +597,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Waxed Cut Copper Countertop | `atouchofclass:waxed_cut_copper_countertop` | Survival obtainable — [waxed_cut_copper_countertop](recipes.md#waxed-cut-copper-countertop) |
 | Waxed Cut Copper Sink | `atouchofclass:waxed_cut_copper_sink` | Survival obtainable — [waxed_cut_copper_sink](recipes.md#waxed-cut-copper-sink) |
 | Waxed Exposed Copper Bowl Ceiling Light | `atouchofclass:waxed_exposed_copper_bowl_ceiling_light` | Survival obtainable — [waxed_exposed_copper_bowl_ceiling_light](recipes.md#waxed-exposed-copper-bowl-ceiling-light) |
-| Waxed Exposed Copper Chandelier Chain | `atouchofclass:waxed_exposed_copper_chain` | Survival obtainable — [Waxed Exposed Copper Chandelier Chain](recipes.md#waxed-exposed-copper-chandelier-chain) |
+| Waxed Exposed Copper Chandelier Chain | `atouchofclass:waxed_exposed_copper_chain` | Survival obtainable — [waxed_exposed_copper_chain](recipes.md#waxed-exposed-copper-chain) |
 | Waxed Exposed Copper Chandelier | `atouchofclass:waxed_exposed_copper_chandelier` | Survival obtainable — [waxed_exposed_copper_chandelier](recipes.md#waxed-exposed-copper-chandelier) |
 | Waxed Exposed Copper Coffered Ceiling Light | `atouchofclass:waxed_exposed_copper_coffered_ceiling_light` | Survival obtainable — [waxed_exposed_copper_coffered_ceiling_light](recipes.md#waxed-exposed-copper-coffered-ceiling-light) |
 | Waxed Exposed Copper Floor Lamp | `atouchofclass:waxed_exposed_copper_floor_lamp` | Survival obtainable — [waxed_exposed_copper_floor_lamp](recipes.md#waxed-exposed-copper-floor-lamp) |
@@ -575,7 +607,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Waxed Exposed Cut Copper Countertop | `atouchofclass:waxed_exposed_cut_copper_countertop` | Survival obtainable — [waxed_exposed_cut_copper_countertop](recipes.md#waxed-exposed-cut-copper-countertop) |
 | Waxed Exposed Cut Copper Sink | `atouchofclass:waxed_exposed_cut_copper_sink` | Survival obtainable — [waxed_exposed_cut_copper_sink](recipes.md#waxed-exposed-cut-copper-sink) |
 | Waxed Oxidized Copper Bowl Ceiling Light | `atouchofclass:waxed_oxidized_copper_bowl_ceiling_light` | Survival obtainable — [waxed_oxidized_copper_bowl_ceiling_light](recipes.md#waxed-oxidized-copper-bowl-ceiling-light) |
-| Waxed Oxidized Copper Chandelier Chain | `atouchofclass:waxed_oxidized_copper_chain` | Survival obtainable — [Waxed Oxidized Copper Chandelier Chain](recipes.md#waxed-oxidized-copper-chandelier-chain) |
+| Waxed Oxidized Copper Chandelier Chain | `atouchofclass:waxed_oxidized_copper_chain` | Survival obtainable — [waxed_oxidized_copper_chain](recipes.md#waxed-oxidized-copper-chain) |
 | Waxed Oxidized Copper Chandelier | `atouchofclass:waxed_oxidized_copper_chandelier` | Survival obtainable — [waxed_oxidized_copper_chandelier](recipes.md#waxed-oxidized-copper-chandelier) |
 | Waxed Oxidized Copper Coffered Ceiling Light | `atouchofclass:waxed_oxidized_copper_coffered_ceiling_light` | Survival obtainable — [waxed_oxidized_copper_coffered_ceiling_light](recipes.md#waxed-oxidized-copper-coffered-ceiling-light) |
 | Waxed Oxidized Copper Floor Lamp | `atouchofclass:waxed_oxidized_copper_floor_lamp` | Survival obtainable — [waxed_oxidized_copper_floor_lamp](recipes.md#waxed-oxidized-copper-floor-lamp) |
@@ -585,7 +617,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Waxed Oxidized Cut Copper Countertop | `atouchofclass:waxed_oxidized_cut_copper_countertop` | Survival obtainable — [waxed_oxidized_cut_copper_countertop](recipes.md#waxed-oxidized-cut-copper-countertop) |
 | Waxed Oxidized Cut Copper Sink | `atouchofclass:waxed_oxidized_cut_copper_sink` | Survival obtainable — [waxed_oxidized_cut_copper_sink](recipes.md#waxed-oxidized-cut-copper-sink) |
 | Waxed Weathered Copper Bowl Ceiling Light | `atouchofclass:waxed_weathered_copper_bowl_ceiling_light` | Survival obtainable — [waxed_weathered_copper_bowl_ceiling_light](recipes.md#waxed-weathered-copper-bowl-ceiling-light) |
-| Waxed Weathered Copper Chandelier Chain | `atouchofclass:waxed_weathered_copper_chain` | Survival obtainable — [Waxed Weathered Copper Chandelier Chain](recipes.md#waxed-weathered-copper-chandelier-chain) |
+| Waxed Weathered Copper Chandelier Chain | `atouchofclass:waxed_weathered_copper_chain` | Survival obtainable — [waxed_weathered_copper_chain](recipes.md#waxed-weathered-copper-chain) |
 | Waxed Weathered Copper Chandelier | `atouchofclass:waxed_weathered_copper_chandelier` | Survival obtainable — [waxed_weathered_copper_chandelier](recipes.md#waxed-weathered-copper-chandelier) |
 | Waxed Weathered Copper Coffered Ceiling Light | `atouchofclass:waxed_weathered_copper_coffered_ceiling_light` | Survival obtainable — [waxed_weathered_copper_coffered_ceiling_light](recipes.md#waxed-weathered-copper-coffered-ceiling-light) |
 | Waxed Weathered Copper Floor Lamp | `atouchofclass:waxed_weathered_copper_floor_lamp` | Survival obtainable — [waxed_weathered_copper_floor_lamp](recipes.md#waxed-weathered-copper-floor-lamp) |
@@ -604,9 +636,9 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Weathered Copper Wall Sconce | `atouchofclass:weathered_copper_wall_sconce` | Survival obtainable — oxidation of `atouchofclass:exposed_copper_wall_sconce` |
 | Weathered Cut Copper Countertop | `atouchofclass:weathered_cut_copper_countertop` | Survival obtainable — [weathered_cut_copper_countertop](recipes.md#weathered-cut-copper-countertop) |
 | Weathered Cut Copper Sink | `atouchofclass:weathered_cut_copper_sink` | Survival obtainable — [weathered_cut_copper_sink](recipes.md#weathered-cut-copper-sink) |
-| White Concrete Countertop | `atouchofclass:white_concrete_countertop` | Creative only — intentionally no recipe |
-| White Concrete Sink | `atouchofclass:white_concrete_sink` | Creative only — intentionally no recipe |
+| White Concrete Countertop | `atouchofclass:white_concrete_countertop` | Survival obtainable — [white_concrete_countertop](recipes.md#white-concrete-countertop) |
+| White Concrete Sink | `atouchofclass:white_concrete_sink` | Survival obtainable — [white_concrete_sink](recipes.md#white-concrete-sink) |
 | White Stucco | `atouchofclass:white_stucco` | Survival obtainable — [white_stucco](recipes.md#white-stucco) |
 | Window Apron | `atouchofclass:window_apron` | Survival obtainable — [window_apron](recipes.md#window-apron) |
-| Yellow Concrete Countertop | `atouchofclass:yellow_concrete_countertop` | Creative only — intentionally no recipe |
-| Yellow Concrete Sink | `atouchofclass:yellow_concrete_sink` | Creative only — intentionally no recipe |
+| Yellow Concrete Countertop | `atouchofclass:yellow_concrete_countertop` | Survival obtainable — [yellow_concrete_countertop](recipes.md#yellow-concrete-countertop) |
+| Yellow Concrete Sink | `atouchofclass:yellow_concrete_sink` | Survival obtainable — [yellow_concrete_sink](recipes.md#yellow-concrete-sink) |

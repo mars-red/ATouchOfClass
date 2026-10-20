@@ -2,17 +2,17 @@
 
 [Manual contents](README.md) · [Reference](reference.md)
 
-A Touch of Class adds architectural finishes, furniture, lighting, kitchen and bathroom fittings, coded tall doors, and elevators. You can build a furnished home in Survival or explore the full palette in Creative. This manual describes the current Minecraft 1.21.9 source tree; modpacks can change recipes and other behavior.
+A Touch of Class adds architectural finishes, furniture, lighting, kitchen and bathroom fittings, coded tall doors, and elevators. You can build a furnished home in Survival or explore the full palette in Creative. This manual describes the current Minecraft 26.3 source tree; modpacks can change recipes and other behavior.
 
 ## Install and check the mod
 
-1. Use Minecraft **Java Edition 1.21.9** with a compatible **NeoForge 21.9.16-beta** installation. This checkout declares **21.9.16-beta** as its minimum NeoForge version; use the version supplied with your mod build or modpack.
+1. Use Minecraft **Java Edition 26.3** with a compatible **NeoForge 26.3.0.92** installation. This checkout declares **26.3.0.92** as its minimum NeoForge version; use the version supplied with your mod build or modpack.
 2. Close the game, if already running. Place the A Touch of Class mod JAR in the `mods` folder of that game instance. Do not unzip the JAR. Avoid keeping two versions of the same mod in the folder.
 3. Launch that NeoForge instance. Check the Mods screen for A Touch of Class, then open a test world.
 4. In Creative inventory, find the **A Touch of Class** tab. In Survival, use the crafting recipes in the [recipe reference](recipes.md).
 5. For multiplayer, install matching mod builds on the server and clients. See the [server owner guide](server-owners.md).
 
-Java 21 is the runtime baseline for this target. Follow the [NeoForge user guide](https://docs.neoforged.net/user/docs/) for launcher and Java setup. The repository's declared mod version is 1.0.0; that identifies this source configuration, not a guarantee that a public release exists.
+Java 25 is the runtime baseline for this target. Follow the [NeoForge user guide](https://docs.neoforged.net/user/docs/) for launcher and Java setup. The repository's declared mod version is 1.2.0; that identifies this source configuration, not a guarantee that a public release exists.
 
 <!-- screenshot:start-01:start -->
 ![The A Touch of Class Creative inventory tab showing the mod content.](images/getting-started/creative-tab.png)
@@ -57,7 +57,7 @@ Gather 3 oak slabs and 2 oak planks for a side-table recipe; another 3 oak slabs
 - **Server owners:** review [installation, shared access, backups, and troubleshooting](server-owners.md).
 - **Modpack authors:** use the [customization guide](modpack-authors.md) and [catalog](catalog.md) for exact identifiers and acquisition routes.
 
-Concrete countertops and sinks are intentionally **Creative only** in the bundled mod. Their recipes are deferred until the mod targets a Minecraft version with vanilla concrete slabs. The catalog distinguishes these from items obtained by transformation, such as oxidized copper lighting.
+Concrete countertops and sinks are **Survival obtainable** in all 16 colors. Three matching vanilla concrete slabs craft six countertops or six sinks, using the grids in the [kitchen guide](kitchens-and-bathrooms.md#concrete-countertops-and-sinks). Obtaining a slab unlocks both recipes for that color.
 
 ## If something goes wrong
 
