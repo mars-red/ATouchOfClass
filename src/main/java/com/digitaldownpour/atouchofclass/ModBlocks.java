@@ -1004,6 +1004,12 @@ public class ModBlocks {
     public static final DeferredBlock<DoorCabinetBlock> BIRCH_DOOR_CABINET =
             registerDoorCabinet("birch_door_cabinet");
 
+    public static final DeferredBlock<DoorCabinetBlock> POPLAR_DOOR_CABINET =
+            registerDoorCabinet("poplar_door_cabinet");
+
+    public static final DeferredBlock<CabinetBlock> POPLAR_DRAWER_CABINET =
+            registerCabinet("poplar_drawer_cabinet");
+
     public static final DeferredBlock<CabinetBlock> BIRCH_DRAWER_CABINET =
             registerCabinet("birch_drawer_cabinet");
     public static final DeferredBlock<DoorCabinetBlock> JUNGLE_DOOR_CABINET =

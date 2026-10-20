@@ -1,0 +1,64 @@
+{
+    "variants":  {
+                     "facing=north,joined_above=false,joined_below=false":  {
+                                                                                "model":  "atouchofclass:block/poplar_door_cabinet"
+                                                                            },
+                     "facing=north,joined_above=false,joined_below=true":  {
+                                                                               "model":  "atouchofclass:block/poplar_door_cabinet_joined_below"
+                                                                           },
+                     "facing=north,joined_above=true,joined_below=false":  {
+                                                                               "model":  "atouchofclass:block/poplar_door_cabinet_joined_above"
+                                                                           },
+                     "facing=north,joined_above=true,joined_below=true":  {
+                                                                              "model":  "atouchofclass:block/poplar_door_cabinet_joined_vertical"
+                                                                          },
+                     "facing=east,joined_above=false,joined_below=false":  {
+                                                                               "model":  "atouchofclass:block/poplar_door_cabinet",
+                                                                               "y":  90
+                                                                           },
+                     "facing=east,joined_above=false,joined_below=true":  {
+                                                                              "model":  "atouchofclass:block/poplar_door_cabinet_joined_below",
+                                                                              "y":  90
+                                                                          },
+                     "facing=east,joined_above=true,joined_below=false":  {
+                                                                              "model":  "atouchofclass:block/poplar_door_cabinet_joined_above",
+                                                                              "y":  90
+                                                                          },
+                     "facing=east,joined_above=true,joined_below=true":  {
+                                                                             "model":  "atouchofclass:block/poplar_door_cabinet_joined_vertical",
+                                                                             "y":  90
+                                                                         },
+                     "facing=south,joined_above=false,joined_below=false":  {
+                                                                                "model":  "atouchofclass:block/poplar_door_cabinet",
+                                                                                "y":  180
+                                                                            },
+                     "facing=south,joined_above=false,joined_below=true":  {
+                                                                               "model":  "atouchofclass:block/poplar_door_cabinet_joined_below",
+                                                                               "y":  180
+                                                                           },
+                     "facing=south,joined_above=true,joined_below=false":  {
+                                                                               "model":  "atouchofclass:block/poplar_door_cabinet_joined_above",
+                                                                               "y":  180
+                                                                           },
+                     "facing=south,joined_above=true,joined_below=true":  {
+                                                                              "model":  "atouchofclass:block/poplar_door_cabinet_joined_vertical",
+                                                                              "y":  180
+                                                                          },
+                     "facing=west,joined_above=false,joined_below=false":  {
+                                                                               "model":  "atouchofclass:block/poplar_door_cabinet",
+                                                                               "y":  270
+                                                                           },
+                     "facing=west,joined_above=false,joined_below=true":  {
+                                                                              "model":  "atouchofclass:block/poplar_door_cabinet_joined_below",
+                                                                              "y":  270
+                                                                          },
+                     "facing=west,joined_above=true,joined_below=false":  {
+                                                                              "model":  "atouchofclass:block/poplar_door_cabinet_joined_above",
+                                                                              "y":  270
+                                                                          },
+                     "facing=west,joined_above=true,joined_below=true":  {
+                                                                             "model":  "atouchofclass:block/poplar_door_cabinet_joined_vertical",
+                                                                             "y":  270
+                                                                         }
+                 }
+}
