@@ -100,6 +100,7 @@ public class ModEntities {
                     ModBlocks.TALL_PALE_OAK_DOOR.get(),
                     ModBlocks.TALL_CRIMSON_DOOR.get(),
                     ModBlocks.TALL_WARPED_DOOR.get(),
+                    ModBlocks.TALL_POPLAR_DOOR.get(),
                     // TALL_DOOR_VARIANT_BLOCK_ENTITY_ENTRIES
                     ModBlocks.TALL_MANGROVE_DOOR.get(),
                     ModBlocks.TALL_BIRCH_DOOR.get()),

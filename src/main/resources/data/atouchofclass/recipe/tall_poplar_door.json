@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": "minecraft:poplar_planks",
+    "N": "minecraft:gold_nugget"
+  },
+  "pattern": [
+    "DD ",
+    "DDN",
+    "DD "
+  ],
+  "result": {
+    "count": 2,
+    "id": "atouchofclass:tall_poplar_door"
+  }
+}
