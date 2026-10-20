@@ -543,6 +543,9 @@ public class ModItems {
     public static final DeferredItem<BlockItem> TALL_WARPED_SIDELIGHT_ITEM =
             ITEMS.registerSimpleBlockItem("tall_warped_sidelight", ModBlocks.TALL_WARPED_SIDELIGHT);
 
+    public static final DeferredItem<BlockItem> TALL_POPLAR_SIDELIGHT_ITEM =
+            ITEMS.registerSimpleBlockItem("tall_poplar_sidelight", ModBlocks.TALL_POPLAR_SIDELIGHT);
+
     // TALL_SIDELIGHT_VARIANT_ITEM_REGISTRATIONS
 
     public static final DeferredItem<BlockItem> GLASS_SHOWER_SURROUND_ITEM =
@@ -938,6 +941,7 @@ public class ModItems {
             event.accept(TALL_PALE_OAK_SIDELIGHT_ITEM);
             event.accept(TALL_CRIMSON_SIDELIGHT_ITEM);
             event.accept(TALL_WARPED_SIDELIGHT_ITEM);
+            event.accept(TALL_POPLAR_SIDELIGHT_ITEM);
             // TALL_SIDELIGHT_VARIANT_CREATIVE_ENTRIES
             event.accept(GLASS_SHOWER_SURROUND_ITEM);
             event.accept(GLASS_SHOWER_DOOR_ITEM);
