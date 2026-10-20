@@ -16,6 +16,38 @@ import net.minecraft.world.level.block.Block;
 public final class PoplarFurnitureGameTests {
     private PoplarFurnitureGameTests() {}
 
+    public static void everyBedColorCraftsUnlocksAndDrops(GameTestHelper helper) {
+        var level = helper.getLevel();
+        for (String color : FourPostBedVariants.COLORS) {
+            var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "poplar_" + color + "_four_post_bed");
+            var block = ModBlocks.FOUR_POST_BEDS.get(id.getPath()).get();
+            var item = ModItems.FOUR_POST_BED_ITEMS.get(id.getPath()).get();
+            var key = ResourceKey.create(Registries.RECIPE, id);
+            var recipe = (ShapedRecipe) level.getServer().getRecipeManager().byKey(key).orElseThrow().value();
+            var bed = new ItemStack(net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(
+                    Identifier.withDefaultNamespace(color + "_bed")));
+            var log = new ItemStack(Items.POPLAR_LOG);
+            var input = CraftingInput.of(2, 3, List.of(log, log, bed, bed, log, log));
+            helper.assertTrue(recipe.matches(input, level), Component.literal(id + " must craft from poplar logs and matching beds"));
+            var wrong = new ItemStack(Items.BIRCH_LOG);
+            helper.assertTrue(!recipe.matches(CraftingInput.of(2, 3, List.of(wrong, wrong, bed, bed, wrong, wrong)), level),
+                    Component.literal(id + " must reject other wood varieties"));
+            var result = recipe.assemble(input);
+            helper.assertTrue(result.is(item) && result.getCount() == 1 && item.getBlock() == block,
+                    Component.literal(id + " must craft one matching bed"));
+            var advancement = level.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath(
+                    ATouchofClass.MODID, "recipes/building_blocks/" + id.getPath()));
+            helper.assertTrue(advancement != null && advancement.value().rewards().recipes().contains(key),
+                    Component.literal(id + " must have a matching recipe unlock"));
+            helper.assertTrue(block.defaultBlockState().is(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE),
+                    Component.literal(id + " must be mineable with an axe"));
+            var drops = Block.getDrops(block.defaultBlockState(), level, helper.absolutePos(new BlockPos(2, 1, 2)), null);
+            helper.assertTrue(drops.size() == 1 && drops.getFirst().is(item) && drops.getFirst().getCount() == 1,
+                    Component.literal(id + " must drop one matching bed"));
+        }
+        helper.succeed();
+    }
+
     public static void diningTableAndChairCraftAndDrop(GameTestHelper helper) {
         var level = helper.getLevel();
         for (String kind : List.of("dining_table", "dining_chair")) {
