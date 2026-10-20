@@ -16,6 +16,7 @@ WOODS = {
     "oak": {"label": "Oak", "texture": "stripped_oak_log", "slab": "oak_slab", "planks": "oak_planks"},
     "spruce": {"label": "Spruce", "texture": "stripped_spruce_log", "slab": "spruce_slab", "planks": "spruce_planks"},
     "birch": {"label": "Birch", "texture": "stripped_birch_log", "slab": "birch_slab", "planks": "birch_planks"},
+    "poplar": {"label": "Poplar", "texture": "stripped_poplar_log", "slab": "poplar_slab", "planks": "poplar_planks"},
     "jungle": {"label": "Jungle", "texture": "stripped_jungle_log", "slab": "jungle_slab", "planks": "jungle_planks"},
     "acacia": {"label": "Acacia", "texture": "stripped_acacia_log", "slab": "acacia_slab", "planks": "acacia_planks"},
     "dark_oak": {"label": "Dark Oak", "texture": "stripped_dark_oak_log", "slab": "dark_oak_slab", "planks": "dark_oak_planks"},

@@ -42,6 +42,13 @@ WOODS = {
         "planks": "birch_planks",
         "source": "STRIPPED_BIRCH_WOOD",
     },
+    "poplar": {
+        "label": "Poplar",
+        "texture": "stripped_poplar_log",
+        "slab": "poplar_slab",
+        "planks": "poplar_planks",
+        "source": "STRIPPED_POPLAR_WOOD",
+    },
     "jungle": {
         "label": "Jungle",
         "texture": "stripped_jungle_log",
