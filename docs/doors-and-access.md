@@ -17,7 +17,7 @@ All items in this chapter are **survival obtainable** through bundled crafting r
 | Door key | `N..` / `N..` / `...` | N = gold nugget | 4 blank keys |
 | Key ring | `.N.` / `N.N` / `.N.` | N = iron nugget | 1 ring |
 
-Tall doors, tall patio doors, and tall sidelights come in oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped variants. Their recipes use the corresponding planks.
+Tall doors, tall patio doors, and tall sidelights come in oak, spruce, birch, poplar, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped variants. Their recipes use the corresponding planks.
 
 ## Tall doors
 

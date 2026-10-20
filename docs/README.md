@@ -1,6 +1,6 @@
 # A Touch of Class manual
 
-**Manual for the current Minecraft 1.21.9 source tree.** Source review was completed on October 8, 2026; author review of all chapters and sections was completed on October 10, 2026, with only minor changes. All 24 screenshots are integrated, including dining tables and dining chairs supplied on October 16, 2026. The author confirmed completion of the original in-game acceptance checks on October 10, 2026; later additions have their own status in the [verification record](contributing/content-audit.md).
+**Current target: Minecraft 26.3, NeoForge 26.3.0.92, Java 25.** Target-version references were updated on October 19, 2026. The review and screenshot records below describe the earlier documentation reviews. Source review was completed on October 8, 2026; author review of all chapters and sections was completed on October 10, 2026, with only minor changes. All 24 screenshots are integrated, including dining tables and dining chairs supplied on October 16, 2026. The author confirmed completion of the original in-game acceptance checks on October 10, 2026; later additions have their own status in the [verification record](contributing/content-audit.md).
 
 Start as a [player](getting-started.md), [server owner](server-owners.md), or [modpack author](modpack-authors.md).
 
@@ -17,7 +17,7 @@ Start as a [player](getting-started.md), [server owner](server-owners.md), or [m
 9. [Modpack author guide](modpack-authors.md)
 10. [Reference and troubleshooting](reference.md)
 
-The [content catalog](catalog.md) covers 584 registered player-content items. The [recipe reference](recipes.md) contains all 532 bundled recipes, including vanilla-item outputs supplied by the mod. The [building guide](building.md#plaster-columns) now includes square and round plaster columns, confirmed in game by the author on October 13, 2026.
+The [content catalog](catalog.md) covers 632 registered player-content items. The [recipe reference](recipes.md) contains all 611 bundled recipes, including vanilla-item outputs supplied by the mod.
 
 ## Availability labels
 

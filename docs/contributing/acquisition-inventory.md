@@ -2,6 +2,10 @@
 
 [Audit scope and evidence](content-audit.md)
 
+**Historical pilot snapshot; see the [current catalog](../catalog.md) for all variants, including poplar.**
+
+Concrete recipe links were refreshed on October 19, 2026; other entries retain the pilot inventory.
+
 Candidate inventory from English block/item labels and all bundled mod recipe output IDs. This is not a runtime registry dump. A recipe does not by itself prove that every ingredient is survival obtainable. Items without recipes require a transformation/loot review unless intent has been confirmed. The tab icon is an internal item, excluded from the mod Creative tab.
 
 | Content | ID | Bundled recipe output |
@@ -71,12 +75,12 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Birch Side Table | `atouchofclass:birch_side_table` | [birch_side_table](../../src/main/resources/data/atouchofclass/recipe/birch_side_table.json) |
 | Birch Four-Post Bed (White) | `atouchofclass:birch_white_four_post_bed` | [birch_white_four_post_bed](../../src/main/resources/data/atouchofclass/recipe/birch_white_four_post_bed.json) |
 | Birch Four-Post Bed (Yellow) | `atouchofclass:birch_yellow_four_post_bed` | [birch_yellow_four_post_bed](../../src/main/resources/data/atouchofclass/recipe/birch_yellow_four_post_bed.json) |
-| Black Concrete Countertop | `atouchofclass:black_concrete_countertop` | None — intentional Creative only |
-| Black Concrete Sink | `atouchofclass:black_concrete_sink` | None — intentional Creative only |
-| Blue Concrete Countertop | `atouchofclass:blue_concrete_countertop` | None — intentional Creative only |
-| Blue Concrete Sink | `atouchofclass:blue_concrete_sink` | None — intentional Creative only |
-| Brown Concrete Countertop | `atouchofclass:brown_concrete_countertop` | None — intentional Creative only |
-| Brown Concrete Sink | `atouchofclass:brown_concrete_sink` | None — intentional Creative only |
+| Black Concrete Countertop | `atouchofclass:black_concrete_countertop` | [black_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/black_concrete_countertop.json) |
+| Black Concrete Sink | `atouchofclass:black_concrete_sink` | [black_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/black_concrete_sink.json) |
+| Blue Concrete Countertop | `atouchofclass:blue_concrete_countertop` | [blue_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/blue_concrete_countertop.json) |
+| Blue Concrete Sink | `atouchofclass:blue_concrete_sink` | [blue_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/blue_concrete_sink.json) |
+| Brown Concrete Countertop | `atouchofclass:brown_concrete_countertop` | [brown_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/brown_concrete_countertop.json) |
+| Brown Concrete Sink | `atouchofclass:brown_concrete_sink` | [brown_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/brown_concrete_sink.json) |
 | Brushed Stainless Steel | `atouchofclass:brushed_stainless_steel` | [brushed_stainless_steel](../../src/main/resources/data/atouchofclass/recipe/brushed_stainless_steel.json) |
 | Bucket of Plaster | `atouchofclass:bucket_of_plaster` | [bucket_of_plaster](../../src/main/resources/data/atouchofclass/recipe/bucket_of_plaster.json) |
 | Buff Brick Siding | `atouchofclass:buff_brick` | [buff_brick](../../src/main/resources/data/atouchofclass/recipe/buff_brick.json) |
@@ -157,8 +161,8 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Crown Moulding | `atouchofclass:crown_moulding` | [crown_moulding](../../src/main/resources/data/atouchofclass/recipe/crown_moulding.json) |
 | Cut Copper Countertop | `atouchofclass:cut_copper_countertop` | [cut_copper_countertop](../../src/main/resources/data/atouchofclass/recipe/cut_copper_countertop.json) |
 | Cut Copper Sink | `atouchofclass:cut_copper_sink` | [cut_copper_sink](../../src/main/resources/data/atouchofclass/recipe/cut_copper_sink.json) |
-| Cyan Concrete Countertop | `atouchofclass:cyan_concrete_countertop` | None — intentional Creative only |
-| Cyan Concrete Sink | `atouchofclass:cyan_concrete_sink` | None — intentional Creative only |
+| Cyan Concrete Countertop | `atouchofclass:cyan_concrete_countertop` | [cyan_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/cyan_concrete_countertop.json) |
+| Cyan Concrete Sink | `atouchofclass:cyan_concrete_sink` | [cyan_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/cyan_concrete_sink.json) |
 | Dark Oak Baluster | `atouchofclass:dark_oak_baluster` | [dark_oak_baluster](../../src/main/resources/data/atouchofclass/recipe/dark_oak_baluster.json) |
 | Dark Oak Balustrade | `atouchofclass:dark_oak_balustrade` | [dark_oak_balustrade](../../src/main/resources/data/atouchofclass/recipe/dark_oak_balustrade.json) |
 | Dark Oak Four-Post Bed (Black) | `atouchofclass:dark_oak_black_four_post_bed` | [dark_oak_black_four_post_bed](../../src/main/resources/data/atouchofclass/recipe/dark_oak_black_four_post_bed.json) |
@@ -216,10 +220,10 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Gothic Wallpaper | `atouchofclass:gothic_wallpaper` | [gothic_wallpaper](../../src/main/resources/data/atouchofclass/recipe/gothic_wallpaper.json) |
 | Granite Countertop | `atouchofclass:granite_countertop` | [granite_countertop](../../src/main/resources/data/atouchofclass/recipe/granite_countertop.json) |
 | Granite Sink | `atouchofclass:granite_sink` | [granite_sink](../../src/main/resources/data/atouchofclass/recipe/granite_sink.json) |
-| Gray Concrete Countertop | `atouchofclass:gray_concrete_countertop` | None — intentional Creative only |
-| Gray Concrete Sink | `atouchofclass:gray_concrete_sink` | None — intentional Creative only |
-| Green Concrete Countertop | `atouchofclass:green_concrete_countertop` | None — intentional Creative only |
-| Green Concrete Sink | `atouchofclass:green_concrete_sink` | None — intentional Creative only |
+| Gray Concrete Countertop | `atouchofclass:gray_concrete_countertop` | [gray_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/gray_concrete_countertop.json) |
+| Gray Concrete Sink | `atouchofclass:gray_concrete_sink` | [gray_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/gray_concrete_sink.json) |
+| Green Concrete Countertop | `atouchofclass:green_concrete_countertop` | [green_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/green_concrete_countertop.json) |
+| Green Concrete Sink | `atouchofclass:green_concrete_sink` | [green_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/green_concrete_sink.json) |
 | Induction Cooktop | `atouchofclass:induction_cooktop` | [induction_cooktop](../../src/main/resources/data/atouchofclass/recipe/induction_cooktop.json) |
 | Jungle Baluster | `atouchofclass:jungle_baluster` | [jungle_baluster](../../src/main/resources/data/atouchofclass/recipe/jungle_baluster.json) |
 | Jungle Balustrade | `atouchofclass:jungle_balustrade` | [jungle_balustrade](../../src/main/resources/data/atouchofclass/recipe/jungle_balustrade.json) |
@@ -252,14 +256,14 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Leather Chair | `atouchofclass:leather_chair` | [leather_chair](../../src/main/resources/data/atouchofclass/recipe/leather_chair.json) |
 | Leather Love Seat | `atouchofclass:leather_love_seat` | [leather_love_seat](../../src/main/resources/data/atouchofclass/recipe/leather_love_seat.json) |
 | Leather Sofa | `atouchofclass:leather_sofa` | [leather_sofa](../../src/main/resources/data/atouchofclass/recipe/leather_sofa.json) |
-| Light Blue Concrete Countertop | `atouchofclass:light_blue_concrete_countertop` | None — intentional Creative only |
-| Light Blue Concrete Sink | `atouchofclass:light_blue_concrete_sink` | None — intentional Creative only |
-| Light Gray Concrete Countertop | `atouchofclass:light_gray_concrete_countertop` | None — intentional Creative only |
-| Light Gray Concrete Sink | `atouchofclass:light_gray_concrete_sink` | None — intentional Creative only |
-| Lime Concrete Countertop | `atouchofclass:lime_concrete_countertop` | None — intentional Creative only |
-| Lime Concrete Sink | `atouchofclass:lime_concrete_sink` | None — intentional Creative only |
-| Magenta Concrete Countertop | `atouchofclass:magenta_concrete_countertop` | None — intentional Creative only |
-| Magenta Concrete Sink | `atouchofclass:magenta_concrete_sink` | None — intentional Creative only |
+| Light Blue Concrete Countertop | `atouchofclass:light_blue_concrete_countertop` | [light_blue_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_countertop.json) |
+| Light Blue Concrete Sink | `atouchofclass:light_blue_concrete_sink` | [light_blue_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_sink.json) |
+| Light Gray Concrete Countertop | `atouchofclass:light_gray_concrete_countertop` | [light_gray_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_countertop.json) |
+| Light Gray Concrete Sink | `atouchofclass:light_gray_concrete_sink` | [light_gray_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_sink.json) |
+| Lime Concrete Countertop | `atouchofclass:lime_concrete_countertop` | [lime_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/lime_concrete_countertop.json) |
+| Lime Concrete Sink | `atouchofclass:lime_concrete_sink` | [lime_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/lime_concrete_sink.json) |
+| Magenta Concrete Countertop | `atouchofclass:magenta_concrete_countertop` | [magenta_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/magenta_concrete_countertop.json) |
+| Magenta Concrete Sink | `atouchofclass:magenta_concrete_sink` | [magenta_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/magenta_concrete_sink.json) |
 | Mangrove Baluster | `atouchofclass:mangrove_baluster` | [mangrove_baluster](../../src/main/resources/data/atouchofclass/recipe/mangrove_baluster.json) |
 | Mangrove Balustrade | `atouchofclass:mangrove_balustrade` | [mangrove_balustrade](../../src/main/resources/data/atouchofclass/recipe/mangrove_balustrade.json) |
 | Mangrove Four-Post Bed (Black) | `atouchofclass:mangrove_black_four_post_bed` | [mangrove_black_four_post_bed](../../src/main/resources/data/atouchofclass/recipe/mangrove_black_four_post_bed.json) |
@@ -317,8 +321,8 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Oak Four-Post Bed (Yellow) | `atouchofclass:oak_yellow_four_post_bed` | [oak_yellow_four_post_bed](../../src/main/resources/data/atouchofclass/recipe/oak_yellow_four_post_bed.json) |
 | Octagonal Inset Tile | `atouchofclass:octagonal_inset_tile` | [octagonal_inset_tile](../../src/main/resources/data/atouchofclass/recipe/octagonal_inset_tile.json) |
 | Ogee Lattice Wallpaper | `atouchofclass:ogee_lattice_wallpaper` | [ogee_lattice_wallpaper](../../src/main/resources/data/atouchofclass/recipe/ogee_lattice_wallpaper.json) |
-| Orange Concrete Countertop | `atouchofclass:orange_concrete_countertop` | None — intentional Creative only |
-| Orange Concrete Sink | `atouchofclass:orange_concrete_sink` | None — intentional Creative only |
+| Orange Concrete Countertop | `atouchofclass:orange_concrete_countertop` | [orange_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/orange_concrete_countertop.json) |
+| Orange Concrete Sink | `atouchofclass:orange_concrete_sink` | [orange_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/orange_concrete_sink.json) |
 | Oven | `atouchofclass:oven` | [oven](../../src/main/resources/data/atouchofclass/recipe/oven.json) |
 | Oxidized Copper Bowl Ceiling Light | `atouchofclass:oxidized_copper_bowl_ceiling_light` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
 | Oxidized Copper Chandelier Chain | `atouchofclass:oxidized_copper_chain` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
@@ -356,8 +360,8 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Pale Oak Side Table | `atouchofclass:pale_oak_side_table` | [pale_oak_side_table](../../src/main/resources/data/atouchofclass/recipe/pale_oak_side_table.json) |
 | Pale Oak Four-Post Bed (White) | `atouchofclass:pale_oak_white_four_post_bed` | [pale_oak_white_four_post_bed](../../src/main/resources/data/atouchofclass/recipe/pale_oak_white_four_post_bed.json) |
 | Pale Oak Four-Post Bed (Yellow) | `atouchofclass:pale_oak_yellow_four_post_bed` | [pale_oak_yellow_four_post_bed](../../src/main/resources/data/atouchofclass/recipe/pale_oak_yellow_four_post_bed.json) |
-| Pink Concrete Countertop | `atouchofclass:pink_concrete_countertop` | None — intentional Creative only |
-| Pink Concrete Sink | `atouchofclass:pink_concrete_sink` | None — intentional Creative only |
+| Pink Concrete Countertop | `atouchofclass:pink_concrete_countertop` | [pink_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/pink_concrete_countertop.json) |
+| Pink Concrete Sink | `atouchofclass:pink_concrete_sink` | [pink_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/pink_concrete_sink.json) |
 | Plinth Block | `atouchofclass:plinth_block` | [plinth_block](../../src/main/resources/data/atouchofclass/recipe/plinth_block.json) |
 | Polished Andesite Countertop | `atouchofclass:polished_andesite_countertop` | [polished_andesite_countertop](../../src/main/resources/data/atouchofclass/recipe/polished_andesite_countertop.json) |
 | Polished Andesite Sink | `atouchofclass:polished_andesite_sink` | [polished_andesite_sink](../../src/main/resources/data/atouchofclass/recipe/polished_andesite_sink.json) |
@@ -373,8 +377,8 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Polished Granite Sink | `atouchofclass:polished_granite_sink` | [polished_granite_sink](../../src/main/resources/data/atouchofclass/recipe/polished_granite_sink.json) |
 | Prismarine Brick Countertop | `atouchofclass:prismarine_brick_countertop` | [prismarine_brick_countertop](../../src/main/resources/data/atouchofclass/recipe/prismarine_brick_countertop.json) |
 | Prismarine Brick Sink | `atouchofclass:prismarine_brick_sink` | [prismarine_brick_sink](../../src/main/resources/data/atouchofclass/recipe/prismarine_brick_sink.json) |
-| Purple Concrete Countertop | `atouchofclass:purple_concrete_countertop` | None — intentional Creative only |
-| Purple Concrete Sink | `atouchofclass:purple_concrete_sink` | None — intentional Creative only |
+| Purple Concrete Countertop | `atouchofclass:purple_concrete_countertop` | [purple_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/purple_concrete_countertop.json) |
+| Purple Concrete Sink | `atouchofclass:purple_concrete_sink` | [purple_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/purple_concrete_sink.json) |
 | Purpur Countertop | `atouchofclass:purpur_countertop` | [purpur_countertop](../../src/main/resources/data/atouchofclass/recipe/purpur_countertop.json) |
 | Purpur Sink | `atouchofclass:purpur_sink` | [purpur_sink](../../src/main/resources/data/atouchofclass/recipe/purpur_sink.json) |
 | Quartz Countertop | `atouchofclass:quartz_countertop` | [quartz_countertop](../../src/main/resources/data/atouchofclass/recipe/quartz_countertop.json) |
@@ -382,8 +386,8 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Quicklime Powder | `atouchofclass:quicklime_powder` | [quicklime_powder](../../src/main/resources/data/atouchofclass/recipe/quicklime_powder.json) |
 | Rain Shower Head | `atouchofclass:rain_shower_head` | [rain_shower_head](../../src/main/resources/data/atouchofclass/recipe/rain_shower_head.json) |
 | Red Brick Siding | `atouchofclass:red_brick` | [red_brick](../../src/main/resources/data/atouchofclass/recipe/red_brick.json) |
-| Red Concrete Countertop | `atouchofclass:red_concrete_countertop` | None — intentional Creative only |
-| Red Concrete Sink | `atouchofclass:red_concrete_sink` | None — intentional Creative only |
+| Red Concrete Countertop | `atouchofclass:red_concrete_countertop` | [red_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/red_concrete_countertop.json) |
+| Red Concrete Sink | `atouchofclass:red_concrete_sink` | [red_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/red_concrete_sink.json) |
 | Red Nether Brick Countertop | `atouchofclass:red_nether_brick_countertop` | [red_nether_brick_countertop](../../src/main/resources/data/atouchofclass/recipe/red_nether_brick_countertop.json) |
 | Red Nether Brick Sink | `atouchofclass:red_nether_brick_sink` | [red_nether_brick_sink](../../src/main/resources/data/atouchofclass/recipe/red_nether_brick_sink.json) |
 | Refrigerator | `atouchofclass:refrigerator` | [refrigerator](../../src/main/resources/data/atouchofclass/recipe/refrigerator.json) |
@@ -530,9 +534,9 @@ Candidate inventory from English block/item labels and all bundled mod recipe ou
 | Weathered Copper Wall Sconce | `atouchofclass:weathered_copper_wall_sconce` | No direct recipe; [oxidation route](../../src/main/resources/data/neoforge/data_maps/block/oxidizables.json) |
 | Weathered Cut Copper Countertop | `atouchofclass:weathered_cut_copper_countertop` | [weathered_cut_copper_countertop](../../src/main/resources/data/atouchofclass/recipe/weathered_cut_copper_countertop.json) |
 | Weathered Cut Copper Sink | `atouchofclass:weathered_cut_copper_sink` | [weathered_cut_copper_sink](../../src/main/resources/data/atouchofclass/recipe/weathered_cut_copper_sink.json) |
-| White Concrete Countertop | `atouchofclass:white_concrete_countertop` | None — intentional Creative only |
-| White Concrete Sink | `atouchofclass:white_concrete_sink` | None — intentional Creative only |
+| White Concrete Countertop | `atouchofclass:white_concrete_countertop` | [white_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/white_concrete_countertop.json) |
+| White Concrete Sink | `atouchofclass:white_concrete_sink` | [white_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/white_concrete_sink.json) |
 | White Stucco | `atouchofclass:white_stucco` | [white_stucco](../../src/main/resources/data/atouchofclass/recipe/white_stucco.json) |
 | Window Apron | `atouchofclass:window_apron` | [window_apron](../../src/main/resources/data/atouchofclass/recipe/window_apron.json) |
-| Yellow Concrete Countertop | `atouchofclass:yellow_concrete_countertop` | None — intentional Creative only |
-| Yellow Concrete Sink | `atouchofclass:yellow_concrete_sink` | None — intentional Creative only |
+| Yellow Concrete Countertop | `atouchofclass:yellow_concrete_countertop` | [yellow_concrete_countertop](../../src/main/resources/data/atouchofclass/recipe/yellow_concrete_countertop.json) |
+| Yellow Concrete Sink | `atouchofclass:yellow_concrete_sink` | [yellow_concrete_sink](../../src/main/resources/data/atouchofclass/recipe/yellow_concrete_sink.json) |

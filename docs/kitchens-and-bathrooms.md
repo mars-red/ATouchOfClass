@@ -20,11 +20,9 @@ Build the supporting room first, then add storage and fittings. The table below 
 
 ## Cabinets and work surfaces
 
-Cabinets come in door and drawer styles across the 12 woods in the [reference](reference.md). Use one with an empty hand to open its inventory. Each cabinet keeps its own 27 slots; stacking cabinets does not merge inventories. Door cabinets of the same wood and facing connect their appearance vertically.
+Cabinets come in door and drawer styles across the 13 woods in the [reference](reference.md). Use one with an empty hand to open its inventory. Each cabinet keeps its own 27 slots; stacking cabinets does not merge inventories. Door cabinets of the same wood and facing connect their appearance vertically.
 
 Place countertops or sinks on top of the base units. Sneak-place against a cabinet to avoid opening it. These surfaces occupy their own block space; the countertop is a thin ⅛-block slab at the bottom of that space. Sinks add a basin model and faucet within that space. They are decorative and do not supply water buckets.
-
-Stone-based, copper, and other material variants have individual recipes. All **32 concrete countertops and sinks** (16 colors of each) are intentionally **Creative only**. Crafting is deferred until the mod targets a Minecraft version with vanilla concrete slabs; no release date is promised. Survival kitchen examples use calcite or another craftable material instead.
 
 The **Stainless Steel Kitchen Sink**  is farmhouse style with a front apron. Place a second sink beside it with the same facing to form a double sink with one shared sprayer faucet. Pairs stop at two sinks; adding another sink leaves the existing pair intact. Breaking either half restores the remaining sink's single appearance. The apron is decorative and does not block access to the cabinet below.
 
@@ -35,6 +33,25 @@ Like the other sinks, it has no fluid inventory or water interaction.
 
 *Cabinets store items; countertops, sinks, and cooktops complete the kitchen appearance.*
 <!-- screenshot:kitchen-01:end -->
+
+## Concrete countertops and sinks
+
+All **16 colors of concrete countertops and sinks** are Survival obtainable in Minecraft 26.3. Each recipe uses **three vanilla concrete slabs of the same color** and produces **six fittings**. Full concrete blocks, concrete powder, and mixed slab colors do not substitute.
+
+For countertops, place the slabs in one horizontal row:
+
+```text
+SSS
+```
+
+For sinks, use this two-row grid (`.` is an empty slot):
+
+```text
+S.S
+.S.
+```
+
+`S` is the matching concrete slab, such as `minecraft:white_concrete_slab`. Obtaining one unlocks both recipes for that color. See the [white countertop recipe](recipes.md#white-concrete-countertop), [white sink recipe](recipes.md#white-concrete-sink), and [catalog](catalog.md) for every color. The resulting fittings remain decorative; sinks have no fluid inventory or water interaction.
 
 ## Refrigerator
 
@@ -93,5 +110,5 @@ Glass shower surrounds and shower doors are three blocks high. Place on a suppor
 | Fridge or bathtub will not fit | Check reserved block spaces, not just the visible model dimensions. |
 | Oven does not cook a particular item | It accepts furnace smelting recipes and needs valid fuel plus room for output. |
 | Cooktops do not join | Check that both are unpaired neighbors with the same facing. |
-| Concrete sink has no recipe | This is intentional Creative-only content. |
+| Concrete fitting will not craft | Use three matching-color concrete slabs, not full concrete blocks or mixed colors; check the recipe grid and pack overrides. |
 | Shower door does not respond to a coded key | Use it normally; coded access belongs to tall doors. |

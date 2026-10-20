@@ -43,14 +43,14 @@ Feature chapters cover purpose, acquisition, placement, operation, variants, and
 
 Always name the mod's **tall doors** explicitly when describing placement, keys, codes, or access. These features do not apply to vanilla doors. Keep the actual item name **Door Key** and example labels such as **Front Door** unchanged.
 
-Use **Survival obtainable**, **Creative only**, and **Acquisition under review** consistently. Concrete countertops and sinks are intentionally Creative-only until the mod targets a Minecraft version with vanilla concrete slabs. Do not invent recipes or treat that omission as a bug.
+Use **Survival obtainable**, **Creative only**, and **Acquisition under review** consistently. Concrete countertops and sinks are Survival obtainable in all 16 colors using matching vanilla concrete slabs. Check the bundled recipes before documenting availability, ingredients, or output counts.
 
 ## Pilot review record
 
 - Text review: complete as part of the full-manual author review on October 10, 2026.
 - In-game behavior review: completed, confirmed by the author on October 10, 2026.
 - Screenshot visual review: all five supplied images accepted for the pilot on October 8, 2026. Entrances and both cutter states show the required details. The ring uses its default title; the manifest and alt text now reflect that, and renaming is optional. Its tooltip overlaps empty slots while leaving both keys visible.
-- Capture details: all five PNGs are 856 × 512, including the window frame. These screenshots were captured before the current Minecraft 1.21.9 / NeoForge 21.9.16-beta update; exact original mod/loader builds and GUI scale were not supplied. Text remains legible at native size. Window frames are retained as supplied; future captures should preferably use the in-game screenshot function to omit desktop window chrome.
+- Capture details: all five PNGs are 856 × 512, including the window frame. These screenshots were captured before the earlier Minecraft 1.21.9 / NeoForge 21.9.16-beta migration (the current target is Minecraft 26.3 / NeoForge 26.3.0.92 / Java 25); exact original mod/loader builds and GUI scale were not supplied. Text remains legible at native size. Window frames are retained as supplied; future captures should preferably use the in-game screenshot function to omit desktop window chrome.
 - Acceptance: all steps reproduce, images are legible and match their captions, and capture instructions have been revised for any ambiguity.
 
 ## Refresh the reference

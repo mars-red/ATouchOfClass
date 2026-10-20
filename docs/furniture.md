@@ -38,7 +38,7 @@ Dining chairs have an open slatted back, square legs, and a stripped wood finish
 
 Use an empty hand without sneaking to sit. An occupied chair cannot take a second player, and you must dismount another vehicle before sitting. Use the normal dismount control to stand up onto clear floor beside the chair. If all exits are blocked, you are placed slightly above the seat. Breaking the chair or removing its floor support dismounts its rider and clears the seat.
 
-All 12 woods are available: oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped.
+All 13 woods are available: oak, spruce, birch, poplar, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped.
 
 The recipe is `TTT` / `LLL` / `T.T`, where `T` is a stick and `L` is a matching wood slab. Five sticks and three matching slabs yield **two chairs** of that wood.
 
@@ -54,7 +54,7 @@ Side tables offer a supported top for a lamp but do not open a storage screen. N
 
 Use a nightstand or any dresser section to open storage. Click, drag, or shift-click items as in a normal chest interface. A dresser's sections share one inventory, not separate drawers. Storage fullness can be read by comparators. Breaking the storage furniture drops its contents; it is not a portable filled container like a key ring. Empty it first when moving a room's furnishings.
 
-These three families each have 12 woods: oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped. Match a species across pieces to create a coordinated room.
+These three families each have 13 woods: oak, spruce, birch, poplar, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped. Match a species across pieces to create a coordinated room.
 
 <!-- screenshot:furniture-02:start -->
 ![Dresser interface showing six rows of shared storage.](images/furniture/dresser-storage.png)
@@ -68,7 +68,7 @@ Place dining table blocks side by side on a sturdy floor to build a table of you
 
 A single dining table has the same proportions as a side table. Joined tables keep legs at outside corners and at inward corners, such as the bend of an L. Straight edges and filled interior corners have no legs. A 2 × 3 rectangle made from six blocks has four legs; a three-block L has six, including the leg at its inward corner. Every block still needs support underneath, even where there is no visible leg. The tabletop supports lamps and other suitable decorations, and has no storage screen.
 
-All 12 woods are available: oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped. Each finish combines a wood-colored base with softened stripped-wood grain.
+All 13 woods are available: oak, spruce, birch, poplar, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped. Each finish combines a wood-colored base with softened stripped-wood grain.
 
 Craft four tables with the pattern `PWP` / `P.P`, where `P` is matching planks and `W` is matching stripped wood. For bamboo, use a stripped bamboo block; for crimson and warped, use matching stripped hyphae. See the [oak recipe](recipes.md#oak-dining-table) or choose another wood in the [catalog](catalog.md). The recipes yield four blocks of the selected variety.
 
@@ -88,7 +88,7 @@ Use the bed to sleep. Interaction is routed to the middle mattress position on t
 
 **Beds explode in dimensions where beds cannot set spawn**, as vanilla beds do. Use the Overworld for the first demonstration.
 
-Four-post beds have 16 bedding colors and 12 woods: oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped. Bamboo beds use stripped bamboo frames and are crafted with bamboo blocks (regular or stripped) and matching vanilla beds. See the [catalog](catalog.md) for all variants.
+Four-post beds have 16 bedding colors and 13 woods: oak, spruce, birch, poplar, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped. Bamboo beds use stripped bamboo frames and are crafted with bamboo blocks (regular or stripped) and matching vanilla beds. See the [catalog](catalog.md) for all variants.
 
 <!-- screenshot:furniture-03:start -->
 ![An oak four-post bed with red bedding and clear walkways around its sides.](images/furniture/four-post-bed.png)

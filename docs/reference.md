@@ -6,9 +6,9 @@ Use the [content catalog](catalog.md) to find exact item IDs and acquisition rou
 
 ## Material families
 
-The common 12-wood set is **oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped**. It applies to regular tall doors, tall patio doors, sidelights, cabinets, dressers, nightstands, side tables, dining tables, dining chairs, and wood rail families. Four-post beds use that set **without bamboo**, combined with 16 bedding colors.
+The common 13-wood set is **oak, spruce, birch, poplar, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped**. It applies to regular tall doors, tall patio doors, sidelights, cabinets, dressers, nightstands, side tables, dining tables, dining chairs, wood rail families, shutters, and parquet flooring. Four-post beds use all 13 woods, including bamboo and poplar, combined with 16 bedding colors (208 variants).
 
-The 16 colors are white, orange, magenta, light blue, yellow, lime, pink, gray, light gray, cyan, purple, blue, brown, green, red, and black. Concrete countertops and sinks use these colors but are Creative-only. Wood and copper finishes are separate item variants; do not assume dyeing or swapping a material in an unspecified grid will create one.
+The 16 colors are white, orange, magenta, light blue, yellow, lime, pink, gray, light gray, cyan, purple, blue, brown, green, red, and black. Concrete countertops and sinks use these colors and are craftable from matching vanilla concrete slabs. Wood and copper finishes are separate item variants; do not assume dyeing or swapping a material in an unspecified grid will create one.
 
 Copper lighting/chain families use unaffected, exposed, weathered, and oxidized stages, each with waxed forms. Refer to [lighting](lighting.md) for how to reach and preserve those stages.
 
@@ -60,7 +60,7 @@ These are implemented values, not exposed configuration settings. Width and dept
 | --- | --- |
 | Mod absent | Correct Java Edition instance, Minecraft/NeoForge target, one matching mod JAR in `mods`; inspect startup logs |
 | Server connection fails | Match server/client builds and required mods; retain the actual error text |
-| Recipe absent | Consult catalog availability, exact inputs, and pack overrides; concrete fittings are intentionally Creative-only |
+| Recipe absent | Consult catalog availability, exact inputs, and pack overrides; concrete fittings require matching-color concrete slabs |
 | Large furnishing does not place | Full volume clear, support below every base section, correct clicked face |
 | Surface finish appears on the wrong face | Reapply to the intended face; each face stores its own overlay |
 | A decorative fitting does nothing | Check the kitchen functionality table; not every appliance model has a simulation |

@@ -2,7 +2,7 @@
 
 [Manual contents](README.md) Â· [Catalog](catalog.md) Â· [Recipe reference](recipes.md)
 
-Use this guide to change acquisition and presentation while keeping the mod's implemented behavior clear to players. It describes Minecraft 1.21.9 with the mod's current NeoForge target. Keep a copy of the unmodified recipes for comparison.
+Use this guide to change acquisition and presentation while keeping the mod's implemented behavior clear to players. It describes Minecraft 26.3 with NeoForge 26.3.0.92 and Java 25. Keep a copy of the unmodified recipes for comparison.
 
 ## Supported customization surfaces
 
@@ -20,7 +20,7 @@ There is no custom config file or custom command tree registered in this source.
 
 The namespace is `atouchofclass`. Recipe files live under `data/atouchofclass/recipe/` (singular `recipe`). For example, the key-ring recipe ID is `atouchofclass:key_ring`. Use the same namespace and path in a higher-priority data pack to override that recipe. Use your pack's own namespace for an additional recipe that should coexist.
 
-Minecraft 1.21.9 uses **data-pack format 88.0** and **resource-pack format 69.0**. Use the required `min_format` and `max_format` fields in `pack.mcmeta`; these version-specific values must be reviewed when changing Minecraft targets. [Minecraft 1.21.9 release notes](https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-9)
+Minecraft 26.3 uses **data-pack format 121.0** and **resource-pack format 97.1**. Use the required `min_format` and `max_format` fields in `pack.mcmeta`; these version-specific values must be reviewed when changing Minecraft targets. These values come from `version.json` in the Minecraft 26.3 client JAR used by this checkout.
 
 ### Worked example: make key rings cost iron ingots
 
@@ -37,9 +37,9 @@ atoc-pack-tweaks/
 ```json
 {
   "pack": {
-    "min_format": [88, 0],
-    "max_format": [88, 0],
-    "description": "A Touch of Class recipe tweaks for Minecraft 1.21.9"
+    "min_format": [121, 0],
+    "max_format": [121, 0],
+    "description": "A Touch of Class recipe tweaks for Minecraft 26.3"
   }
 }
 ```
@@ -75,15 +75,15 @@ For an additive item tag, use `data/<namespace>/tags/item/<path>.json` and a str
 
 This illustrates adding the vanilla copper nugget to a pack-defined item tag. Avoid `replace: true` unless removing the existing members is the intended pack-wide effect.
 
-## Creative-only content and progression
+## Crafting and progression
 
-Concrete countertops and sinks are intentionally Creative-only in the base mod. Their deferred recipes depend on a future target containing vanilla concrete slabs. You may deliberately add pack-specific acquisition, but document it as your pack's change rather than a missing base-mod recipe.
+All 16 colors of concrete countertops and sinks have bundled shaped recipes using three matching vanilla concrete slabs. A horizontal row crafts six countertops; `S.S` / `.S.` crafts six sinks (`S` is the matching slab). Acquiring that slab unlocks both recipes. Override these recipes by their IDs, such as `atouchofclass:white_concrete_countertop` and `atouchofclass:white_concrete_sink`, if changing pack progression.
 
 Aged copper lighting and chains can lack direct crafting recipes because oxidation provides them. Consider every route before claiming an item is unobtainable or gated: crafting, smelting, stonecutting, waxing, scraping, and in-world transformations. Decorative overlay items are reusable in the current implementation, while plaster consumes applications. Applied plaster drops nothing when stripped or when its supporting block is broken. That difference matters when balancing material costs.
 
 ## Resource-pack changes
 
-Use `"min_format": [69, 0]` and `"max_format": [69, 0]` in the resource pack's `pack.mcmeta`, and mirror paths under `assets/atouchofclass/`. For example, replacing `textures/item/key_ring_empty.png` changes the empty-ring image; the filled state uses `textures/item/key_ring_filled.png`. Keep both states consistent. Override language entries in `assets/atouchofclass/lang/en_us.json` to change English labels.
+Use `"min_format": [97, 1]` and `"max_format": [97, 1]` in the resource pack's `pack.mcmeta`, and mirror paths under `assets/atouchofclass/`. For example, replacing `textures/item/key_ring_empty.png` changes the empty-ring image; the filled state uses `textures/item/key_ring_filled.png`. Keep both states consistent. Override language entries in `assets/atouchofclass/lang/en_us.json` to change English labels.
 
 Texture changes do not change collision, reserved placement volumes, inventory sizes, or access checks. A visual redesign of a tall door or bathtub must still fit the implemented spaces. Item definitions, models, and blockstates may select different textures by state, so inspect the relevant assets rather than replacing just the inventory image.
 

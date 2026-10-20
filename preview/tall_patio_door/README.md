@@ -1,7 +1,7 @@
 # Tall patio doors
 
 The preview is rendered from the shipped block model cuboids, face UVs, and
-Minecraft textures. The current mod target is Minecraft 1.21.9 with NeoForge 21.9.16-beta. It is a model preview, not an in-game screenshot.
+Minecraft textures. The current mod target is Minecraft 26.3 with NeoForge 26.3.0.92 and Java 25. It is a model preview, not an in-game screenshot.
 
 Each leaf is 16 × 48 model units with a 3-unit-thick wooden frame, matching
 the existing tall doors. Two-unit stiles and outer rails surround a single
