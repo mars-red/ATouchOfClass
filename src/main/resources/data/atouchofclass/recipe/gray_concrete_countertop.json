@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:gray_concrete_slab"
+  },
+  "result": {
+    "count": 6,
+    "id": "atouchofclass:gray_concrete_countertop"
+  }
+}

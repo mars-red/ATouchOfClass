@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "S S",
+    " S "
+  ],
+  "key": {
+    "S": "minecraft:blue_concrete_slab"
+  },
+  "result": {
+    "count": 6,
+    "id": "atouchofclass:blue_concrete_sink"
+  }
+}
