@@ -10,6 +10,7 @@ public final class ShutterVariants {
             new Definition("oak", Blocks.OAK_PLANKS),
             new Definition("spruce", Blocks.SPRUCE_PLANKS),
             new Definition("birch", Blocks.BIRCH_PLANKS),
+            new Definition("poplar", Blocks.POPLAR_PLANKS),
             new Definition("jungle", Blocks.JUNGLE_PLANKS),
             new Definition("acacia", Blocks.ACACIA_PLANKS),
             new Definition("dark_oak", Blocks.DARK_OAK_PLANKS),

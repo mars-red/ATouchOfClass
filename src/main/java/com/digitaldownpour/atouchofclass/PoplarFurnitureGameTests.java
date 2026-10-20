@@ -16,6 +16,31 @@ import net.minecraft.world.level.block.Block;
 public final class PoplarFurnitureGameTests {
     private PoplarFurnitureGameTests() {}
 
+    public static void parquetCraftsUnlocksAndDrops(GameTestHelper helper) {
+        var level = helper.getLevel();
+        var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "poplar_parquet");
+        var block = ModBlocks.BASIC_BLOCKS.get(id.getPath()).get();
+        var key = ResourceKey.create(Registries.RECIPE, id);
+        var recipe = (ShapedRecipe) level.getServer().getRecipeManager().byKey(key).orElseThrow().value();
+        var plank = new ItemStack(Items.POPLAR_PLANKS);
+        var input = CraftingInput.of(3, 3, List.of(plank, ItemStack.EMPTY, plank,
+                ItemStack.EMPTY, plank, ItemStack.EMPTY, plank, ItemStack.EMPTY, plank));
+        helper.assertTrue(recipe.matches(input, level), Component.literal("Parquet must craft from poplar planks"));
+        var result = recipe.assemble(input);
+        helper.assertTrue(result.is(block.asItem()) && result.getCount() == 5,
+                Component.literal("Five poplar planks must produce five poplar parquet blocks"));
+        var advancement = level.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath(
+                ATouchofClass.MODID, "recipes/building_blocks/poplar_parquet"));
+        helper.assertTrue(advancement != null && advancement.value().rewards().recipes().contains(key),
+                Component.literal("Poplar parquet must unlock its recipe"));
+        helper.assertTrue(block.defaultBlockState().is(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE),
+                Component.literal("Poplar parquet must use the same mining tag as other parquet"));
+        var drops = Block.getDrops(block.defaultBlockState(), level, helper.absolutePos(new BlockPos(2, 1, 2)), null);
+        helper.assertTrue(drops.size() == 1 && drops.getFirst().is(block.asItem()) && drops.getFirst().getCount() == 1,
+                Component.literal("Poplar parquet must drop itself"));
+        helper.succeed();
+    }
+
     public static void everyBedColorCraftsUnlocksAndDrops(GameTestHelper helper) {
         var level = helper.getLevel();
         for (String color : FourPostBedVariants.COLORS) {

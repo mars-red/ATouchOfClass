@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "WSW",
+    "WSW"
+  ],
+  "key": {
+    "W": "minecraft:poplar_planks",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "atouchofclass:poplar_shutter",
+    "count": 8
+  }
+}

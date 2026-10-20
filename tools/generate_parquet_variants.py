@@ -2,7 +2,7 @@
 
 Only colors change: each source RGBA color maps to one target RGBA color,
 preserving every joint, grain pixel, transparent pixel, and repeating edge.
-Requires Pillow and a local Minecraft 1.21.4 client jar.
+Requires Pillow and a local Minecraft client jar containing the selected woods.
 """
 
 import argparse
@@ -21,8 +21,8 @@ ROOT = Path(__file__).absolute().parents[1]
 TEXTURES = ROOT / 'src/main/resources/assets/atouchofclass/textures/block'
 PREVIEW = ROOT / 'preview/parquet'
 WOODS = ('oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak',
-         'mangrove', 'cherry', 'pale_oak', 'bamboo', 'crimson', 'warped')
-CLIENT_JAR = Path.home() / '.gradle/caches/neoformruntime/artifacts/minecraft_1.21.4_client.jar'
+         'mangrove', 'cherry', 'pale_oak', 'bamboo', 'crimson', 'warped', 'poplar')
+CLIENT_JAR = ROOT / 'build/neoForm/neoFormJoined26.3-1/raw.jar'
 
 
 def color_center(image):
@@ -57,7 +57,7 @@ def recolor(source, target):
 
 def preview(images, references):
     cell_w, cell_h = 280, 306
-    sheet = Image.new('RGB', (cell_w * 4, cell_h * 3 + 38), '#202124')
+    sheet = Image.new('RGB', (cell_w * 4, cell_h * math.ceil(len(WOODS) / 4) + 38), '#202124')
     draw = ImageDraw.Draw(sheet)
     font_path = Path('C:/Windows/Fonts/segoeui.ttf')
     font = ImageFont.truetype(str(font_path), 17) if font_path.exists() else ImageFont.load_default()

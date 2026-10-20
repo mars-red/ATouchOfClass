@@ -87,6 +87,7 @@ public class ModBlocks {
             "acacia_parquet",
             "bamboo_parquet",
             "birch_parquet",
+            "poplar_parquet",
             "calcite_tile",
             "cherry_parquet",
             "crimson_parquet",
