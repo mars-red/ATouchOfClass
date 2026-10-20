@@ -27,22 +27,21 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
                 ServerPayloadHandler::handleDataOnMain
         );
 
+        // Register only codecs here: dedicated servers must never load client screen handlers.
+        // ClientPayloadHandler binds the handlers in the client-only registration event.
         registrar.playToClient(
                 WallOverlayUpdatePacket.TYPE,
-                WallOverlayUpdatePacket.STREAM_CODEC,
-                ClientPayloadHandler::handleDataOnMain
+                WallOverlayUpdatePacket.STREAM_CODEC
         );
 
         registrar.playToClient(
                 WallOverlayChunkSyncPacket.TYPE,
-                WallOverlayChunkSyncPacket.STREAM_CODEC,
-                ClientPayloadHandler::handleDataOnMain
+                WallOverlayChunkSyncPacket.STREAM_CODEC
         );
 
         registrar.playToClient(
                 OpenElevatorFloorsPayload.TYPE,
-                OpenElevatorFloorsPayload.STREAM_CODEC,
-                ClientPayloadHandler::handleDataOnMain
+                OpenElevatorFloorsPayload.STREAM_CODEC
         );
 
         registrar.playToServer(
