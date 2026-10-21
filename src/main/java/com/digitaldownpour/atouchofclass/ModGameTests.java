@@ -17,7 +17,7 @@ public final class ModGameTests {
 
     static {
         FUNCTIONS.register("windowledgegametests.placesoneverywallfacewithmatchingshape", () -> WindowLedgeGameTests::placesOnEveryWallFaceWithMatchingShape);
-        FUNCTIONS.register("windowledgegametests.twoindividualbrickscraftoneandunlockanddrop", () -> WindowLedgeGameTests::twoIndividualBricksCraftOneAndUnlockAndDrop);
+        FUNCTIONS.register("windowledgegametests.twoindividualbrickscraftoneandunlockanddrop", () -> WindowLedgeGameTests::twoBrickBlocksCraftSixteenAndUnlockAndDrop);
         FUNCTIONS.register("poplarfurnituregametests.railingfamilycraftsunlocksanddrops", () -> PoplarFurnitureGameTests::railingFamilyCraftsUnlocksAndDrops);
         FUNCTIONS.register("poplarfurnituregametests.talldoorcraftsplacesandpreserveskeys", () -> PoplarFurnitureGameTests::tallDoorCraftsPlacesAndPreservesKeys);
         FUNCTIONS.register("poplarfurnituregametests.tallsidelightcraftsplacesanddrops", () -> PoplarFurnitureGameTests::tallSidelightCraftsPlacesAndDrops);

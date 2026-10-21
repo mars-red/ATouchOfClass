@@ -5,10 +5,10 @@
     "BB"
   ],
   "key": {
-    "B": "atouchofclass:red_brick"
+    "B": "minecraft:bricks"
   },
   "result": {
-    "count": 1,
+    "count": 16,
     "id": "atouchofclass:brick_window_ledge"
   }
 }

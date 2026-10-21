@@ -18,7 +18,7 @@ def write(path, data):
     path.write_text(json.dumps(data, indent=2) + '\n')
 
 def main():
-    for material, ingredient in [('brick', 'red_brick'), ('buff_brick', 'buff_brick')]:
+    for material, ingredient in [('brick', 'minecraft:bricks'), ('buff_brick', 'atouchofclass:buff_bricks')]:
         name = material + '_window_ledge'
         ident = 'atouchofclass:' + name
         texture = ASSETS / f'textures/block/{name}.png'
@@ -50,14 +50,14 @@ def main():
         write(ASSETS / f'items/{name}.json',{'model':{'type':'minecraft:model','model':f'atouchofclass:item/{name}'}})
         write(RES / f'data/atouchofclass/recipe/{name}.json',{
             'type':'minecraft:crafting_shaped','category':'building','pattern':['BB'],
-            'key':{'B':'atouchofclass:'+ingredient},'result':{'count':1,'id':ident}})
+            'key':{'B':ingredient},'result':{'count':16,'id':ident}})
         write(RES / f'data/atouchofclass/loot_table/blocks/{name}.json',{
             'type':'minecraft:block','pools':[{'rolls':1,
                 'conditions':[{'condition':'minecraft:survives_explosion'}],
                 'entries':[{'type':'minecraft:item','name':ident}]}]})
         write(RES / f'data/atouchofclass/advancement/recipes/building_blocks/{name}.json',{
             'parent':'minecraft:recipes/root','criteria':{
-                'has_brick':{'trigger':'minecraft:inventory_changed','conditions':{'items':[{'items':'atouchofclass:'+ingredient}]}},
+                'has_brick':{'trigger':'minecraft:inventory_changed','conditions':{'items':[{'items':ingredient}]}},
                 'has_the_recipe':{'trigger':'minecraft:recipe_unlocked','conditions':{'recipes':[ident]}}},
             'requirements':[['has_brick','has_the_recipe']],'rewards':{'recipes':[ident]}})
 
