@@ -1890,6 +1890,31 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_yellow_four_post_bed.json)
 
+## cinnabar-countertop
+
+**Output:** 6 × Cinnabar Countertop (`atouchofclass:cinnabar_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:cinnabar_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cinnabar_countertop.json)
+
+## cinnabar-sink
+
+**Output:** 6 × Cinnabar Sink (`atouchofclass:cinnabar_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:cinnabar_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cinnabar_sink.json)
+
 ## clawfoot-bathtub
 
 **Output:** 1 × Clawfoot Bathtub (`atouchofclass:clawfoot_bathtub`). **Type:** `minecraft:smelting`.

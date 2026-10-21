@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**632 registered player-content items.**
+**634 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -147,6 +147,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Cherry Side Table | `atouchofclass:cherry_side_table` | Survival obtainable — [cherry_side_table](recipes.md#cherry-side-table) |
 | Cherry Four-Post Bed (White) | `atouchofclass:cherry_white_four_post_bed` | Survival obtainable — [cherry_white_four_post_bed](recipes.md#cherry-white-four-post-bed) |
 | Cherry Four-Post Bed (Yellow) | `atouchofclass:cherry_yellow_four_post_bed` | Survival obtainable — [cherry_yellow_four_post_bed](recipes.md#cherry-yellow-four-post-bed) |
+| Cinnabar Countertop | `atouchofclass:cinnabar_countertop` | Survival obtainable — [cinnabar_countertop](recipes.md#cinnabar-countertop) |
+| Cinnabar Sink | `atouchofclass:cinnabar_sink` | Survival obtainable — [cinnabar_sink](recipes.md#cinnabar-sink) |
 | Clawfoot Bathtub | `atouchofclass:clawfoot_bathtub` | Survival obtainable — [clawfoot_bathtub](recipes.md#clawfoot-bathtub) |
 | Clay Clawfoot Bathtub | `atouchofclass:clay_clawfoot_bathtub` | Survival obtainable — [clay_clawfoot_bathtub](recipes.md#clay-clawfoot-bathtub) |
 | Clay Toilet | `atouchofclass:clay_toilet` | Survival obtainable — [clay_toilet](recipes.md#clay-toilet) |

@@ -976,6 +976,25 @@ public class ModBlocks {
         });
     }
 
+    public static final DeferredBlock<CountertopBlock> CINNABAR_COUNTERTOP =
+            BLOCKS.register("cinnabar_countertop", registryName -> new CountertopBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+
+    public static final DeferredBlock<SinkBlock> CINNABAR_SINK =
+            BLOCKS.register("cinnabar_sink", registryName -> new SinkBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.STONE)
+                            .strength(1.5F, 6.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
     // COUNTERTOP_SINK_VARIANT_REGISTRATIONS
 
     private static final java.util.List<DeferredHolder<Block, ? extends CabinetBlock>> CABINET_REGISTRATIONS =

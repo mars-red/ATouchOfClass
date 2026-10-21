@@ -291,6 +291,10 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("warped_door_cabinet", ModBlocks.WARPED_DOOR_CABINET);
     public static final DeferredItem<BlockItem> WARPED_DRAWER_CABINET =
             ITEMS.registerSimpleBlockItem("warped_drawer_cabinet", ModBlocks.WARPED_DRAWER_CABINET);
+    public static final DeferredItem<BlockItem> CINNABAR_COUNTERTOP =
+            ITEMS.registerSimpleBlockItem("cinnabar_countertop", ModBlocks.CINNABAR_COUNTERTOP);
+    public static final DeferredItem<BlockItem> CINNABAR_SINK =
+            ITEMS.registerSimpleBlockItem("cinnabar_sink", ModBlocks.CINNABAR_SINK);
     // FURNITURE_VARIANT_ITEM_REGISTRATIONS
 
     public static final java.util.Map<String, DeferredItem<BlockItem>> DRESSER_ITEMS = registerDresserItems();
@@ -915,6 +919,8 @@ public class ModItems {
             event.accept(WAXED_WEATHERED_CUT_COPPER_SINK);
             event.accept(WAXED_OXIDIZED_CUT_COPPER_COUNTERTOP);
             event.accept(WAXED_OXIDIZED_CUT_COPPER_SINK);
+            event.accept(CINNABAR_COUNTERTOP);
+            event.accept(CINNABAR_SINK);
             // FURNITURE_VARIANT_CREATIVE_ENTRIES
             event.accept(OAK_RAILING);
             event.accept(OAK_BALUSTRADE);
