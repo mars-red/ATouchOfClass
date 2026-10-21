@@ -104,3 +104,11 @@ Elevator layout revision, October 9, 2026: follows the author's reference images
 ## Poplar manual refresh — October 19, 2026
 
 Regenerated the catalog and recipe reference from the current registrations and recipe JSON. Updated the building, doors, furniture, kitchen, and material-reference chapters to include poplar in the common 13-wood set. The existing acquisition inventory remains a historical pilot snapshot. All 104 required game tests and the build passed after implementation of the poplar railing family; these documentation edits were checked for generated-reference consistency, poplar coverage, and local recipe links. No new in-game appearance review is claimed.
+
+## Cinnabar work surfaces — October 20, 2026
+
+Generated Cinnabar Countertop and Cinnabar Sink with the existing countertop/sink variant generator, using vanilla cinnabar slabs and the vanilla cinnabar block texture. Regenerated the catalog and recipe reference, updated the manual totals, and documented acquisition and placement in the kitchen chapter. The build and all 104 required game tests passed; generated-reference consistency and JSON parsing checks passed. No new in-game appearance review is claimed.
+
+## Exterior window ledges — October 20, 2026
+
+Added regular brick and buff brick window ledges with the approved 16 × 4 × 4 top-aligned geometry. Placement follows any clicked vertical face without a wall-material restriction. Recipes consume two matching individual Red Brick or Buff Brick items in one BB row and yield one ledge. Updated the building chapter, catalog, recipe reference, and totals (636 items and 615 recipes). The build and all 106 required game tests passed, including new placement, selection/collision, recipe, unlock, and loot checks for both variants. Visual review used the model preview; no in-game appearance review is claimed.

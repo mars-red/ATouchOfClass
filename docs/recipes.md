@@ -1290,6 +1290,18 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_sink.json)
 
+## brick-window-ledge
+
+**Output:** 1 × Brick Window Ledge (`atouchofclass:brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+BB
+```
+
+`B` = `atouchofclass:red_brick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brick_window_ledge.json)
+
 ## brown-concrete-countertop
 
 **Output:** 6 × Brown Concrete Countertop (`atouchofclass:brown_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -1399,6 +1411,18 @@ III
 `#` = `atouchofclass:buff_bricks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/buff_brick_wall.json)
+
+## buff-brick-window-ledge
+
+**Output:** 1 × Buff Brick Window Ledge (`atouchofclass:buff_brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+BB
+```
+
+`B` = `atouchofclass:buff_brick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/buff_brick_window_ledge.json)
 
 ## buff-brick
 
@@ -1889,6 +1913,31 @@ LL
 `B` = `minecraft:yellow_bed`; `L` = `#minecraft:cherry_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_yellow_four_post_bed.json)
+
+## cinnabar-countertop
+
+**Output:** 6 × Cinnabar Countertop (`atouchofclass:cinnabar_countertop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `minecraft:cinnabar_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cinnabar_countertop.json)
+
+## cinnabar-sink
+
+**Output:** 6 × Cinnabar Sink (`atouchofclass:cinnabar_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.S
+.S.
+```
+
+`S` = `minecraft:cinnabar_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cinnabar_sink.json)
 
 ## clawfoot-bathtub
 

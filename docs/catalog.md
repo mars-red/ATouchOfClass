@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**632 registered player-content items.**
+**636 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -104,6 +104,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Black Concrete Sink | `atouchofclass:black_concrete_sink` | Survival obtainable — [black_concrete_sink](recipes.md#black-concrete-sink) |
 | Blue Concrete Countertop | `atouchofclass:blue_concrete_countertop` | Survival obtainable — [blue_concrete_countertop](recipes.md#blue-concrete-countertop) |
 | Blue Concrete Sink | `atouchofclass:blue_concrete_sink` | Survival obtainable — [blue_concrete_sink](recipes.md#blue-concrete-sink) |
+| Brick Window Ledge | `atouchofclass:brick_window_ledge` | Survival obtainable — [brick_window_ledge](recipes.md#brick-window-ledge) |
 | Brown Concrete Countertop | `atouchofclass:brown_concrete_countertop` | Survival obtainable — [brown_concrete_countertop](recipes.md#brown-concrete-countertop) |
 | Brown Concrete Sink | `atouchofclass:brown_concrete_sink` | Survival obtainable — [brown_concrete_sink](recipes.md#brown-concrete-sink) |
 | Brushed Stainless Steel | `atouchofclass:brushed_stainless_steel` | Survival obtainable — [brushed_stainless_steel](recipes.md#brushed-stainless-steel) |
@@ -112,6 +113,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Buff Brick Slab | `atouchofclass:buff_brick_slab` | Survival obtainable — [buff_brick_slab_from_buff_bricks_stonecutting](recipes.md#buff-brick-slab-from-buff-bricks-stonecutting), [buff_brick_slab](recipes.md#buff-brick-slab) |
 | Buff Brick Stairs | `atouchofclass:buff_brick_stairs` | Survival obtainable — [buff_brick_stairs_from_buff_bricks_stonecutting](recipes.md#buff-brick-stairs-from-buff-bricks-stonecutting), [buff_brick_stairs](recipes.md#buff-brick-stairs) |
 | Buff Brick Wall | `atouchofclass:buff_brick_wall` | Survival obtainable — [buff_brick_wall_from_buff_bricks_stonecutting](recipes.md#buff-brick-wall-from-buff-bricks-stonecutting), [buff_brick_wall](recipes.md#buff-brick-wall) |
+| Buff Brick Window Ledge | `atouchofclass:buff_brick_window_ledge` | Survival obtainable — [buff_brick_window_ledge](recipes.md#buff-brick-window-ledge) |
 | Buff Bricks | `atouchofclass:buff_bricks` | Survival obtainable — [buff_bricks](recipes.md#buff-bricks) |
 | Calcite Countertop | `atouchofclass:calcite_countertop` | Survival obtainable — [calcite_countertop](recipes.md#calcite-countertop) |
 | Calcite Sink | `atouchofclass:calcite_sink` | Survival obtainable — [calcite_sink](recipes.md#calcite-sink) |
@@ -147,6 +149,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Cherry Side Table | `atouchofclass:cherry_side_table` | Survival obtainable — [cherry_side_table](recipes.md#cherry-side-table) |
 | Cherry Four-Post Bed (White) | `atouchofclass:cherry_white_four_post_bed` | Survival obtainable — [cherry_white_four_post_bed](recipes.md#cherry-white-four-post-bed) |
 | Cherry Four-Post Bed (Yellow) | `atouchofclass:cherry_yellow_four_post_bed` | Survival obtainable — [cherry_yellow_four_post_bed](recipes.md#cherry-yellow-four-post-bed) |
+| Cinnabar Countertop | `atouchofclass:cinnabar_countertop` | Survival obtainable — [cinnabar_countertop](recipes.md#cinnabar-countertop) |
+| Cinnabar Sink | `atouchofclass:cinnabar_sink` | Survival obtainable — [cinnabar_sink](recipes.md#cinnabar-sink) |
 | Clawfoot Bathtub | `atouchofclass:clawfoot_bathtub` | Survival obtainable — [clawfoot_bathtub](recipes.md#clawfoot-bathtub) |
 | Clay Clawfoot Bathtub | `atouchofclass:clay_clawfoot_bathtub` | Survival obtainable — [clay_clawfoot_bathtub](recipes.md#clay-clawfoot-bathtub) |
 | Clay Toilet | `atouchofclass:clay_toilet` | Survival obtainable — [clay_toilet](recipes.md#clay-toilet) |
