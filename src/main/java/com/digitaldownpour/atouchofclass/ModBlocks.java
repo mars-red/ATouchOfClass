@@ -23,6 +23,7 @@ import com.digitaldownpour.atouchofclass.blocks.CasingBlock;
 import com.digitaldownpour.atouchofclass.blocks.CrownMouldingBlock;
 import com.digitaldownpour.atouchofclass.blocks.BaseboardBlock;
 import com.digitaldownpour.atouchofclass.blocks.WindowApronBlock;
+import com.digitaldownpour.atouchofclass.blocks.WindowLedgeBlock;
 import com.digitaldownpour.atouchofclass.blocks.PlinthBlock;
 import com.digitaldownpour.atouchofclass.blocks.PlasterColumnBlock;
 import com.digitaldownpour.atouchofclass.blocks.CornerBlock;
@@ -102,6 +103,18 @@ public class ModBlocks {
             "warped_parquet"
     );
     public static final java.util.Map<String, DeferredBlock<Block>> BASIC_BLOCKS = registerBasicBlocks();
+
+    public static final DeferredBlock<WindowLedgeBlock> BRICK_WINDOW_LEDGE =
+            BLOCKS.register("brick_window_ledge", registryName -> new WindowLedgeBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .noOcclusion()));
+
+    public static final DeferredBlock<WindowLedgeBlock> BUFF_BRICK_WINDOW_LEDGE =
+            BLOCKS.register("buff_brick_window_ledge", registryName -> new WindowLedgeBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .noOcclusion()));
 
     public static final DeferredBlock<SlabBlock> CALCITE_SLAB =
             BLOCKS.register("calcite_slab", registryName -> new SlabBlock(

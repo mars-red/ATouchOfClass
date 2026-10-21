@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "BB"
+  ],
+  "key": {
+    "B": "atouchofclass:buff_brick"
+  },
+  "result": {
+    "count": 1,
+    "id": "atouchofclass:buff_brick_window_ledge"
+  }
+}

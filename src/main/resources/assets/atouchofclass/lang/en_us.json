@@ -1080,5 +1080,9 @@
     "block.atouchofclass.cinnabar_countertop": "Cinnabar Countertop",
     "item.atouchofclass.cinnabar_countertop": "Cinnabar Countertop",
     "block.atouchofclass.cinnabar_sink": "Cinnabar Sink",
-    "item.atouchofclass.cinnabar_sink": "Cinnabar Sink"
+    "item.atouchofclass.cinnabar_sink": "Cinnabar Sink",
+    "block.atouchofclass.brick_window_ledge": "Brick Window Ledge",
+    "item.atouchofclass.brick_window_ledge": "Brick Window Ledge",
+    "block.atouchofclass.buff_brick_window_ledge": "Buff Brick Window Ledge",
+    "item.atouchofclass.buff_brick_window_ledge": "Buff Brick Window Ledge"
 }

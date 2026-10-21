@@ -108,3 +108,7 @@ Regenerated the catalog and recipe reference from the current registrations and 
 ## Cinnabar work surfaces — October 20, 2026
 
 Generated Cinnabar Countertop and Cinnabar Sink with the existing countertop/sink variant generator, using vanilla cinnabar slabs and the vanilla cinnabar block texture. Regenerated the catalog and recipe reference, updated the manual totals, and documented acquisition and placement in the kitchen chapter. The build and all 104 required game tests passed; generated-reference consistency and JSON parsing checks passed. No new in-game appearance review is claimed.
+
+## Exterior window ledges — October 20, 2026
+
+Added regular brick and buff brick window ledges with the approved 16 × 4 × 4 top-aligned geometry. Placement follows any clicked vertical face without a wall-material restriction. Recipes consume two matching individual Red Brick or Buff Brick items in one BB row and yield one ledge. Updated the building chapter, catalog, recipe reference, and totals (636 items and 615 recipes). The build and all 106 required game tests passed, including new placement, selection/collision, recipe, unlock, and loot checks for both variants. Visual review used the model preview; no in-game appearance review is claimed.
