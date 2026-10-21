@@ -1076,5 +1076,9 @@
     "block.atouchofclass.pale_oak_dining_chair": "Pale Oak Dining Chair",
     "block.atouchofclass.bamboo_dining_chair": "Bamboo Dining Chair",
     "block.atouchofclass.crimson_dining_chair": "Crimson Dining Chair",
-    "block.atouchofclass.warped_dining_chair": "Warped Dining Chair"
+    "block.atouchofclass.warped_dining_chair": "Warped Dining Chair",
+    "block.atouchofclass.cinnabar_countertop": "Cinnabar Countertop",
+    "item.atouchofclass.cinnabar_countertop": "Cinnabar Countertop",
+    "block.atouchofclass.cinnabar_sink": "Cinnabar Sink",
+    "item.atouchofclass.cinnabar_sink": "Cinnabar Sink"
 }

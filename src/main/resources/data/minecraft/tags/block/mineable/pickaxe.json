@@ -186,7 +186,9 @@
                    "atouchofclass:waxed_oxidized_cut_copper_sink",
                    "atouchofclass:refrigerator",
                    "atouchofclass:oven",
-                   "atouchofclass:induction_cooktop"
+                   "atouchofclass:induction_cooktop",
+                   "atouchofclass:cinnabar_countertop",
+                   "atouchofclass:cinnabar_sink"
                ],
     "replace":  false
 }

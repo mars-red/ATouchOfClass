@@ -24,6 +24,8 @@ Cabinets come in door and drawer styles across the 13 woods in the [reference](r
 
 Place countertops or sinks on top of the base units. Sneak-place against a cabinet to avoid opening it. These surfaces occupy their own block space; the countertop is a thin ⅛-block slab at the bottom of that space. Sinks add a basin model and faucet within that space. They are decorative and do not supply water buckets.
 
+Cinnabar countertops and sinks use the vanilla cinnabar block texture. Craft six fittings from three `minecraft:cinnabar_slab` slabs: one horizontal row for countertops, or a V shape for sinks. See the [countertop recipe](recipes.md#cinnabar-countertop) and [sink recipe](recipes.md#cinnabar-sink). Placement and decorative behavior match the other work surfaces.
+
 The **Stainless Steel Kitchen Sink**  is farmhouse style with a front apron. Place a second sink beside it with the same facing to form a double sink with one shared sprayer faucet. Pairs stop at two sinks; adding another sink leaves the existing pair intact. Breaking either half restores the remaining sink's single appearance. The apron is decorative and does not block access to the cabinet below.
 
 Like the other sinks, it has no fluid inventory or water interaction.
