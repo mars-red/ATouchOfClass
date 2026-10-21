@@ -16,6 +16,7 @@ public final class ModGameTests {
             DeferredRegister.create(Registries.TEST_FUNCTION, ATouchofClass.MODID);
 
     static {
+        FUNCTIONS.register("stochasticblockgametests.marbleplacementrerollsanddropsplainitems", () -> StochasticBlockGameTests::marblePlacementRerollsAndDropsPlainItems);
         FUNCTIONS.register("windowledgegametests.placesoneverywallfacewithmatchingshape", () -> WindowLedgeGameTests::placesOnEveryWallFaceWithMatchingShape);
         FUNCTIONS.register("windowledgegametests.twoindividualbrickscraftoneandunlockanddrop", () -> WindowLedgeGameTests::twoBrickBlocksCraftSixteenAndUnlockAndDrop);
         FUNCTIONS.register("poplarfurnituregametests.railingfamilycraftsunlocksanddrops", () -> PoplarFurnitureGameTests::railingFamilyCraftsUnlocksAndDrops);

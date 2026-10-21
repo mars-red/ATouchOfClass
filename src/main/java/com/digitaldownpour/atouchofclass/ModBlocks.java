@@ -1131,12 +1131,22 @@ public class ModBlocks {
     private static java.util.Map<String, DeferredBlock<Block>> registerBasicBlocks() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<Block>>();
         BASIC_BLOCK_NAMES.forEach(name -> blocks.put(name, BLOCKS.register(name,
-                registryName -> new Block(BlockBehaviour.Properties.of()
+                registryName -> createBasicBlock(name, BlockBehaviour.Properties.of()
                         .setId(ResourceKey.create(Registries.BLOCK, registryName))
                         .mapColor(MapColor.STONE)
                         .strength(1.5F, 6.0F)
                         .requiresCorrectToolForDrops()))));
         return java.util.Collections.unmodifiableMap(blocks);
+    }
+
+    private static Block createBasicBlock(String name, BlockBehaviour.Properties properties) {
+        if (name.equals("marble_tile")) {
+            return new com.digitaldownpour.atouchofclass.blocks.StochasticBlock(properties, 4);
+        }
+        else if (name.equals("calcite_tile")) {
+            return new com.digitaldownpour.atouchofclass.blocks.StochasticBlock(properties, 1);
+        }
+        return new Block(properties);
     }
 
     private static DeferredBlock<CabinetBlock> registerCabinet(String name) {
