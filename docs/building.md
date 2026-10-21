@@ -8,6 +8,18 @@ Use structural blocks for floors and walls, face-applied finishes for their appe
 
 The building palette includes buff bricks and their slabs, stairs, and walls; calcite slabs, calcite tile, marble tile, and octagonal inset tile; parquet wood flooring; and brushed stainless steel. See the catalog for exact variants and the recipe reference for crafting, smelting, and stonecutting routes. Parquet comes in all 13 woods listed in the [reference](reference.md), including poplar. Parquet is a building block, while wallpaper and siding are applied finishes.
 
+### Natural variation in calcite and marble tile
+
+**Calcite Tile** and **Marble Tile** use stochastic placement: each time you place a tile, its texture receives a randomly chosen rotation of 0°, 90°, 180°, or 270°. Marble tile also randomly chooses from several marble textures. These variations give stone veining a more natural appearance across a floor or wall.
+
+The same texture rotation applies to all six faces of a tile; its shape and placement orientation stay unchanged. Each placed tile keeps its appearance when you leave the area or reload the world. Mining it returns the ordinary tile item without preserving the chosen appearance, so placing it again makes a fresh random choice. A fresh choice can still produce the same result.
+
+Tiles already placed before this feature was added retain the original texture with no rotation. Break and replace them if you want to introduce variation into an existing floor.
+
+![A green marble tile floor with varied stone veining and texture rotations between tiles.](images/building/stochastic-marble-tiles.png)
+
+*Marble tiles mix texture variants and rotations automatically as you place them.*
+
 ## Exterior window ledges
 
 **Brick Window Ledge** and **Buff Brick Window Ledge** finish the exterior below a window. Each ledge occupies its own block space at the top, measuring 16 units wide, 4 units high, and 4 units deep. Place adjacent ledges against the same wall face to form a continuous run with matching brick and mortar detail.
