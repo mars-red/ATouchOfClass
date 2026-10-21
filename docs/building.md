@@ -8,6 +8,14 @@ Use structural blocks for floors and walls, face-applied finishes for their appe
 
 The building palette includes buff bricks and their slabs, stairs, and walls; calcite slabs, calcite tile, marble tile, and octagonal inset tile; parquet wood flooring; and brushed stainless steel. See the catalog for exact variants and the recipe reference for crafting, smelting, and stonecutting routes. Parquet is a building block, while wallpaper and siding are applied finishes.
 
+## Exterior window ledges
+
+**Brick Window Ledge** and **Buff Brick Window Ledge** finish the exterior below a window. Each ledge occupies its own block space at the top, measuring 16 units wide, 4 units high, and 4 units deep. Place adjacent ledges against the same wall face to form a continuous run with matching brick and mortar detail.
+
+Use a ledge on any vertical block face, including stone, wood, or glass; the supporting wall does not need to be brick. The ledge faces outward from the clicked face and stays at the top of its block space regardless of click height. Floor and ceiling faces do not accept placement. Sneak-place against blocks that normally open an interface.
+
+Craft **16 ledges** from **two matching brick blocks** in a single horizontal `BB` row: use **Bricks** (`minecraft:bricks`) for the [regular brick ledge](recipes.md#brick-window-ledge), or **Buff Bricks** (`atouchofclass:buff_bricks`) for the [buff brick ledge](recipes.md#buff-brick-window-ledge). Obtaining the matching brick block unlocks its recipe. Mixed brick types do not substitute. Mine ledges with a pickaxe to recover them.
+
 ## Apply plaster and wall finishes
 
 Use a finish item on the face you want to cover. Each face stores one finish: applying another replaces its appearance rather than adding another layer. Different faces of the same block can carry different finishes.

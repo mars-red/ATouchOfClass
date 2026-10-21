@@ -185,7 +185,9 @@
                    "atouchofclass:waxed_oxidized_cut_copper_sink",
                    "atouchofclass:refrigerator",
                    "atouchofclass:oven",
-                   "atouchofclass:induction_cooktop"
+                   "atouchofclass:induction_cooktop",
+                   "atouchofclass:brick_window_ledge",
+                   "atouchofclass:buff_brick_window_ledge"
                ],
     "replace":  false
 }

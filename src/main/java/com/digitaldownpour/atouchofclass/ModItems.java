@@ -35,6 +35,11 @@ public class ModItems {
 
     public static final DeferredItem<BlockItem> CALCITE_SLAB =
             ITEMS.registerSimpleBlockItem("calcite_slab", ModBlocks.CALCITE_SLAB);
+    public static final DeferredItem<BlockItem> BRICK_WINDOW_LEDGE =
+            ITEMS.registerSimpleBlockItem("brick_window_ledge", ModBlocks.BRICK_WINDOW_LEDGE);
+    public static final DeferredItem<BlockItem> BUFF_BRICK_WINDOW_LEDGE =
+            ITEMS.registerSimpleBlockItem("buff_brick_window_ledge", ModBlocks.BUFF_BRICK_WINDOW_LEDGE);
+
     public static final DeferredItem<BlockItem> BUFF_BRICKS =
             ITEMS.registerSimpleBlockItem("buff_bricks", ModBlocks.BUFF_BRICKS);
     public static final DeferredItem<BlockItem> BUFF_BRICK_SLAB =
@@ -800,6 +805,8 @@ public class ModItems {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             BASIC_BLOCK_ITEMS.forEach(event::accept);
             event.accept(CALCITE_SLAB);
+            event.accept(BRICK_WINDOW_LEDGE);
+            event.accept(BUFF_BRICK_WINDOW_LEDGE);
             event.accept(BUFF_BRICKS);
             event.accept(BUFF_BRICK_SLAB);
             event.accept(BUFF_BRICK_STAIRS);

@@ -1240,6 +1240,18 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_yellow_four_post_bed.json)
 
+## brick-window-ledge
+
+**Output:** 16 × Brick Window Ledge (`atouchofclass:brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+BB
+```
+
+`B` = `minecraft:bricks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brick_window_ledge.json)
+
 ## brushed-stainless-steel
 
 **Output:** 4 × Brushed Stainless Steel (`atouchofclass:brushed_stainless_steel`). **Type:** `minecraft:crafting_shaped`.
@@ -1324,6 +1336,18 @@ III
 `#` = `atouchofclass:buff_bricks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/buff_brick_wall.json)
+
+## buff-brick-window-ledge
+
+**Output:** 16 × Buff Brick Window Ledge (`atouchofclass:buff_brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+BB
+```
+
+`B` = `atouchofclass:buff_bricks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/buff_brick_window_ledge.json)
 
 ## buff-brick
 
