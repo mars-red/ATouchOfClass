@@ -20,7 +20,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.server.level.ServerLevel;
 
@@ -32,13 +31,9 @@ import net.minecraft.server.level.ServerLevel;
  * Part 0 (bottom) must sit directly on an ElevatorFloorBlock, which is what
  * lets the rest of the elevator system discover which cab a door belongs to.
  *
- * <p>Doors placed side by side along the wall (perpendicular to FACING) form
- * one double-sliding-door opening: the MIRROR property is recomputed
- * reactively from the contiguous run of door columns whenever one is placed
- * or removed, so the low-coordinate half of the run retracts toward the low
- * side and the high-coordinate half retracts toward the high side - each
- * leaf visually slides away from the shared center line instead of all
- * leaves retracting the same direction.</p>
+ * <p>The clicked half of the placement block selects the side the door
+ * retracts toward. This choice is preserved when neighboring doors change,
+ * so each leaf of a double door can retract toward its outer edge.</p>
  */
 public class ElevatorDoorBlock extends Block {
     public static final IntegerProperty PART = IntegerProperty.create("part", 0, 2); // 0 = bottom, 1 = middle, 2 = top
@@ -65,71 +60,15 @@ public class ElevatorDoorBlock extends Block {
         if (visibleWidth <= 0) {
             return Shapes.empty();
         }
-        double lo = mirror ? 16 - visibleWidth : 0;
-        double hi = mirror ? 16 : visibleWidth;
+        // Models rotate 180 degrees for SOUTH/WEST, reversing the mirrored edge.
+        boolean retractHigh = mirror ^ (facing == Direction.SOUTH || facing == Direction.WEST);
+        double lo = retractHigh ? 16 - visibleWidth : 0;
+        double hi = retractHigh ? 16 : visibleWidth;
         return switch (facing) {
             case NORTH, SOUTH -> Block.box(lo, 0, THICKNESS_MIN, hi, 16, THICKNESS_MAX);
             case EAST, WEST -> Block.box(THICKNESS_MIN, 0, lo, THICKNESS_MAX, 16, hi);
             default -> Shapes.block();
         };
-    }
-
-    /** The horizontal axis along which side-by-side door columns of the same facing line up. */
-    private static Direction perpAxis(Direction facing) {
-        return switch (facing) {
-            case EAST, WEST -> Direction.SOUTH;
-            default -> Direction.EAST;
-        };
-    }
-
-    private static boolean isDoorBase(Level level, BlockPos pos, Direction facing) {
-        BlockState s = level.getBlockState(pos);
-        return s.getBlock() instanceof ElevatorDoorBlock && s.getValue(PART) == 0 && s.getValue(FACING) == facing;
-    }
-
-    /** Finds the contiguous run of PART-0 door columns (same facing) touching basePos, in ascending order. */
-    private static List<BlockPos> findRun(Level level, BlockPos basePos, Direction facing) {
-        Direction axis = perpAxis(facing);
-        List<BlockPos> run = new ArrayList<>();
-        run.add(basePos);
-        BlockPos cursor = basePos;
-        while (true) {
-            BlockPos next = cursor.relative(axis.getOpposite());
-            if (!isDoorBase(level, next, facing)) {
-                break;
-            }
-            run.addFirst(next);
-            cursor = next;
-        }
-        cursor = basePos;
-        while (true) {
-            BlockPos next = cursor.relative(axis);
-            if (!isDoorBase(level, next, facing)) {
-                break;
-            }
-            run.add(next);
-            cursor = next;
-        }
-        return run;
-    }
-
-    /** Recomputes MIRROR for every column in the run touching basePos: low half unmirrored, high half mirrored. */
-    private static void refreshMirrorForRun(Level level, BlockPos basePos, Direction facing) {
-        List<BlockPos> run = findRun(level, basePos, facing);
-        int size = run.size();
-        for (int i = 0; i < size; i++) {
-            applyMirror(level, run.get(i), i >= size / 2);
-        }
-    }
-
-    private static void applyMirror(Level level, BlockPos basePos, boolean mirror) {
-        for (int part = 0; part < 3; part++) {
-            BlockPos p = basePos.above(part);
-            BlockState s = level.getBlockState(p);
-            if (s.getBlock() instanceof ElevatorDoorBlock && s.getValue(MIRROR) != mirror) {
-                level.setBlock(p, s.setValue(MIRROR, mirror), 3);
-            }
-        }
     }
 
     @Override
@@ -161,7 +100,17 @@ public class ElevatorDoorBlock extends Block {
                 .setValue(FACING, facing)
                 .setValue(SLIDE_STEP, 0)
                 .setValue(PART, 0)
-                .setValue(MIRROR, false);
+                .setValue(MIRROR, mirrorForPlacement(context, facing));
+    }
+
+    private static boolean mirrorForPlacement(BlockPlaceContext context, Direction facing) {
+        BlockPos pos = context.getClickedPos();
+        double click = facing.getAxis() == Direction.Axis.Z
+                ? context.getClickLocation().x - pos.getX()
+                : context.getClickLocation().z - pos.getZ();
+        boolean retractHigh = click > 0.5;
+        // MIRROR is model-local; convert the clicked world edge through its rotation.
+        return retractHigh ^ (facing == Direction.SOUTH || facing == Direction.WEST);
     }
 
     @Override
@@ -170,7 +119,6 @@ public class ElevatorDoorBlock extends Block {
             Direction facing = state.getValue(FACING);
             level.setBlock(pos.above(), state.setValue(PART, 1).setValue(FACING, facing), 3);
             level.setBlock(pos.above(2), state.setValue(PART, 2).setValue(FACING, facing), 3);
-            refreshMirrorForRun(level, pos, facing);
         }
     }
 
@@ -188,18 +136,7 @@ public class ElevatorDoorBlock extends Block {
                     level.destroyBlock(p, false);
                 }
             }
-            if (part == 0) {
-                Direction facing = state.getValue(FACING);
-                Direction axis = perpAxis(facing);
-                BlockPos lowNeighbor = basePos.relative(axis.getOpposite());
-                BlockPos highNeighbor = basePos.relative(axis);
-                if (isDoorBase(level, lowNeighbor, facing)) {
-                    refreshMirrorForRun(level, lowNeighbor, facing);
-                }
-                if (isDoorBase(level, highNeighbor, facing)) {
-                    refreshMirrorForRun(level, highNeighbor, facing);
-                }
-            }
+
         }
         super.affectNeighborsAfterRemoval(state, level, pos, isMoving);
     }
