@@ -14,7 +14,7 @@ The building palette includes buff bricks and their slabs, stairs, and walls; ca
 
 Use a ledge on any vertical block face, including stone, wood, or glass; the supporting wall does not need to be brick. The ledge faces outward from the clicked face and stays at the top of its block space regardless of click height. Floor and ceiling faces do not accept placement. Sneak-place against blocks that normally open an interface.
 
-Craft **one ledge** from **two matching individual bricks** in a single horizontal `BB` row: use the mod's **Red Brick** (`atouchofclass:red_brick`) for the [regular brick ledge](recipes.md#brick-window-ledge), or **Buff Brick** (`atouchofclass:buff_brick`) for the [buff brick ledge](recipes.md#buff-brick-window-ledge). These are the existing brick finish items, rather than full brick blocks. Mixed brick types do not substitute. Mine ledges with a pickaxe to recover them.
+Craft **16 ledges** from **two matching brick blocks** in a single horizontal `BB` row: use **Bricks** (`minecraft:bricks`) for the [regular brick ledge](recipes.md#brick-window-ledge), or **Buff Bricks** (`atouchofclass:buff_bricks`) for the [buff brick ledge](recipes.md#buff-brick-window-ledge). Obtaining the matching brick block unlocks its recipe. Mixed brick types do not substitute. Mine ledges with a pickaxe to recover them.
 
 ## Apply plaster and wall finishes
 

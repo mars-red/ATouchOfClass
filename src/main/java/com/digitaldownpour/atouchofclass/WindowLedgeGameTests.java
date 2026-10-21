@@ -72,10 +72,10 @@ public final class WindowLedgeGameTests {
         helper.succeed();
     }
 
-    public static void twoIndividualBricksCraftOneAndUnlockAndDrop(GameTestHelper helper) {
+    public static void twoBrickBlocksCraftSixteenAndUnlockAndDrop(GameTestHelper helper) {
         var level = helper.getLevel();
         var blocks = List.of(ModBlocks.BRICK_WINDOW_LEDGE.get(), ModBlocks.BUFF_BRICK_WINDOW_LEDGE.get());
-        var ingredients = List.of(ModItems.RED_BRICK.get(), ModItems.BUFF_BRICK.get());
+        var ingredients = List.of(Blocks.BRICKS.asItem(), ModBlocks.BUFF_BRICKS.get().asItem());
         var names = List.of("brick_window_ledge", "buff_brick_window_ledge");
         for (int i = 0; i < blocks.size(); i++) {
             var id = Identifier.fromNamespaceAndPath(ATouchofClass.MODID, names.get(i));
@@ -85,8 +85,8 @@ public final class WindowLedgeGameTests {
             var input = CraftingInput.of(2, 1, List.of(new ItemStack(ingredient), new ItemStack(ingredient)));
             helper.assertTrue(recipe.matches(input, level), Component.literal("BB row must craft " + id));
             var result = recipe.assemble(input);
-            helper.assertTrue(result.is(blocks.get(i).asItem()) && result.getCount() == 1,
-                    Component.literal("Two single bricks must yield one matching ledge"));
+            helper.assertTrue(result.is(blocks.get(i).asItem()) && result.getCount() == 16,
+                    Component.literal("Two brick blocks must yield sixteen matching ledges"));
             var square = CraftingInput.of(2, 2, List.of(new ItemStack(ingredient), new ItemStack(ingredient),
                     new ItemStack(ingredient), new ItemStack(ingredient)));
             var mixed = CraftingInput.of(2, 1, List.of(new ItemStack(ingredients.get(0)), new ItemStack(ingredients.get(1))));
@@ -95,7 +95,7 @@ public final class WindowLedgeGameTests {
             var advancement = level.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath(
                     ATouchofClass.MODID, "recipes/building_blocks/" + names.get(i)));
             helper.assertTrue(advancement != null && advancement.value().rewards().recipes().contains(key),
-                    Component.literal("Brick pickup must unlock matching recipe"));
+                    Component.literal("Brick block pickup must unlock matching recipe"));
             var pos = helper.absolutePos(new BlockPos(2, 2, 2));
             var state = blocks.get(i).defaultBlockState();
             level.setBlockAndUpdate(pos, state);
