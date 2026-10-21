@@ -188,7 +188,9 @@
                    "atouchofclass:oven",
                    "atouchofclass:induction_cooktop",
                    "atouchofclass:cinnabar_countertop",
-                   "atouchofclass:cinnabar_sink"
+                   "atouchofclass:cinnabar_sink",
+                   "atouchofclass:brick_window_ledge",
+                   "atouchofclass:buff_brick_window_ledge"
                ],
     "replace":  false
 }

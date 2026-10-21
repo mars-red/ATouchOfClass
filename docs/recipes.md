@@ -1290,6 +1290,18 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_sink.json)
 
+## brick-window-ledge
+
+**Output:** 1 × Brick Window Ledge (`atouchofclass:brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+BB
+```
+
+`B` = `atouchofclass:red_brick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brick_window_ledge.json)
+
 ## brown-concrete-countertop
 
 **Output:** 6 × Brown Concrete Countertop (`atouchofclass:brown_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -1399,6 +1411,18 @@ III
 `#` = `atouchofclass:buff_bricks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/buff_brick_wall.json)
+
+## buff-brick-window-ledge
+
+**Output:** 1 × Buff Brick Window Ledge (`atouchofclass:buff_brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+BB
+```
+
+`B` = `atouchofclass:buff_brick`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/buff_brick_window_ledge.json)
 
 ## buff-brick
 

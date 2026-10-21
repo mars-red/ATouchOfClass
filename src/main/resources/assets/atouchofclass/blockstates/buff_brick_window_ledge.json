@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/buff_brick_window_ledge",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/buff_brick_window_ledge",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/buff_brick_window_ledge",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/buff_brick_window_ledge",
+      "y": 270
+    }
+  }
+}
