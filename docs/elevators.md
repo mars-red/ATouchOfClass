@@ -90,7 +90,7 @@ A cabin is a floor footprint with a destination control directly above one of it
 
 Separate footprints touching the same shaft at the same height become one stop. If several have controls, their bounding boxes are combined, potentially including the space between them. A call-button-only footprint can act as a waiting area, but a destination needs a footprint with a control to receive travelers. Prefer one rectangular cabin per height until the basic build is verified.
 
-Elevator doors are controlled by the elevator; clicking them does not manually toggle them. Adjacent doors of the same facing can make a wider sliding entrance. They are separate from coded tall doors and do not use door keys or key rings.
+Elevator doors are controlled by the elevator; clicking them does not manually toggle them. Adjacent doors of the same facing can make a wider sliding entrance. Click the half of the placement block toward which each door should retract; for a double entrance, click the outer half for each leaf. Adding or removing neighboring doors preserves that choice. They are separate from coded tall doors and do not use door keys or key rings.
 
 ## Troubleshooting
 
