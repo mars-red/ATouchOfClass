@@ -1292,13 +1292,13 @@ S.S
 
 ## brick-window-ledge
 
-**Output:** 1 × Brick Window Ledge (`atouchofclass:brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
+**Output:** 16 × Brick Window Ledge (`atouchofclass:brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
 
 ```text
 BB
 ```
 
-`B` = `atouchofclass:red_brick`
+`B` = `minecraft:bricks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brick_window_ledge.json)
 
@@ -1414,13 +1414,13 @@ III
 
 ## buff-brick-window-ledge
 
-**Output:** 1 × Buff Brick Window Ledge (`atouchofclass:buff_brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
+**Output:** 16 × Buff Brick Window Ledge (`atouchofclass:buff_brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
 
 ```text
 BB
 ```
 
-`B` = `atouchofclass:buff_brick`
+`B` = `atouchofclass:buff_bricks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/buff_brick_window_ledge.json)
 
