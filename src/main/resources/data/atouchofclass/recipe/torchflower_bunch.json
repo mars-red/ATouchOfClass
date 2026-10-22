@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "key": {
+    "F": "minecraft:torchflower"
+  },
+  "result": {
+    "id": "atouchofclass:torchflower_bunch",
+    "count": 1
+  }
+}

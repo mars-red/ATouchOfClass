@@ -8,6 +8,26 @@ Use structural blocks for floors and walls, face-applied finishes for their appe
 
 The building palette includes buff bricks and their slabs, stairs, and walls; calcite slabs, calcite tile, marble tile, and octagonal inset tile; parquet wood flooring; and brushed stainless steel. See the catalog for exact variants and the recipe reference for crafting, smelting, and stonecutting routes. Parquet comes in all 13 woods listed in the [reference](reference.md), including poplar. Parquet is a building block, while wallpaper and siding are applied finishes.
 
+### Natural variation in calcite and marble tile
+
+**Calcite Tile** and **Marble Tile** use stochastic placement: each time you place a tile, its texture receives a randomly chosen rotation of 0°, 90°, 180°, or 270°. Marble tile also randomly chooses from several marble textures. These variations give stone veining a more natural appearance across a floor or wall.
+
+The same texture rotation applies to all six faces of a tile; its shape and placement orientation stay unchanged. Each placed tile keeps its appearance when you leave the area or reload the world. Mining it returns the ordinary tile item without preserving the chosen appearance, so placing it again makes a fresh random choice. A fresh choice can still produce the same result.
+
+Tiles already placed before this feature was added retain the original texture with no rotation. Break and replace them if you want to introduce variation into an existing floor.
+
+![A green marble tile floor with varied stone veining and texture rotations between tiles.](images/building/stochastic-marble-tiles.png)
+
+*Marble tiles mix texture variants and rotations automatically as you place them.*
+
+## Wood-framed window panes
+
+Window panes come in all 13 woods listed in the [reference](reference.md). They use the same clear glass and thin wooden border as [transoms](doors-and-access.md#add-transoms-above-an-entrance), but are only **1 unit deep** and sit at the **center of the block**. Each panel fills one block in width and height. Place matching panes beside and above one another in a window opening: their retained borders give the appearance of wooden muntins between the glass panels. Keep the panes facing along the same axis to form a flat window.
+
+Placement follows the player's facing, or automatically takes the facing of a tall door or sidelight directly below. Panes can be placed elsewhere and remain without supporting blocks. They share the transom's special merge rule: matching panes directly over paired tall doors merge only across that pair. Ordinary window grids retain their frames.
+
+Craft **4 window panes** with a horizontal `SGS` row: `S` is the matching wood slab and `G` is a **glass block**. Transoms use planks around a glass block instead. Obtaining the matching slab unlocks the recipe. Breaking a framed window pane drops one matching item. See the [oak recipe](recipes.md#oak-window-pane) or the catalog for other woods.
+
 ## Exterior window ledges
 
 **Brick Window Ledge** and **Buff Brick Window Ledge** finish the exterior below a window. Each ledge occupies its own block space at the top, measuring 16 units wide, 4 units high, and 4 units deep. Place adjacent ledges against the same wall face to form a continuous run with matching brick and mortar detail.
@@ -66,6 +86,59 @@ Craft eight shutters from four matching planks and two sticks, with
 `WSW` in two crafting rows. Obtaining those planks unlocks that wood's recipe.
 Every model face uses the matching stripped wood grain, including the narrow
 edges (stripped bamboo block for bamboo, stripped hyphae for crimson and warped).
+
+## Wood window boxes
+
+Window boxes come in all 13 vanilla wood varieties, including poplar. Every
+panel uses matching stripped wood with horizontal grain. Bamboo uses stripped
+bamboo block; crimson and warped use stripped stem side grain on every face.
+
+Place a box against any horizontal-facing block side. Its back sits flush
+against that face. The box occupies the upper eight units of its block space,
+projects ten units from the wall, and contains dirt two units below its rim.
+The front and exposed ends taper inward by one unit toward the bottom.
+Floor and ceiling clicks do not place window boxes. Sneak-place against
+blocks that normally open an interface.
+
+Matching boxes with the same facing merge into one continuous horizontal
+trough. Click an end to extend it, or place each section against the wall.
+Different woods and different facings stay separate. Breaking a section
+leaves the others intact and restores their exposed end panels. Each section
+drops one matching window box, including its dirt. Axes mine them efficiently.
+
+Craft **six window boxes** using `WWW`, `DDD`, `WWW`, where `W` is that wood's
+planks and `D` is an ordinary dirt block. Obtaining the matching planks unlocks
+the recipe.
+
+### Plant flower bunches
+
+Craft **one flower bunch** from **four matching vanilla flowers** in a 2×2
+square. Picking up the matching flower unlocks its recipe. Use the bunch on
+any face of a window box to plant it; each section holds one bunch. The block
+space directly above that section must be clear. Bunches cannot be planted
+on ordinary soil, in vanilla flower pots, or on other blocks.
+
+Small flowers use twelve dense clusters that reach adjacent bunches. Rose
+bushes, lilacs, and peonies become compact shrubs. Sunflowers have five
+shortened stalks with their heads facing outward from the wall; pitcher
+plants use five compact pitchers. Pink petals and wildflowers form low mats.
+The bunches are decorative and keep their crafted flower type, including
+the separate open and closed eyeblossom varieties.
+
+<!-- screenshot:building-05:start -->
+![Pale oak window boxes filled with daisy bunches beneath a window framed by shutters.](images/building/pale-oak-window-boxes-with-daisy-bunches.png)
+
+*Pale oak window boxes with daisy bunches form a continuous planting beneath the window.*
+<!-- screenshot:building-05:end -->
+
+Mine a bunch to recover it without removing the box. Breaking the box also
+releases its bunch; neighboring planted sections remain intact. One bunch
+drops as one reusable bunch item. Their stems sit two units below the rim,
+at the dirt surface, and the foliage has no collision.
+
+There are **25 bunch varieties**, including golden dandelion and cactus flower.
+Mangrove propagule, spore blossom, azalea (including flowering azalea),
+chorus flower, and flowering leaf blocks have no bunch variants.
 
 ## Add trim
 

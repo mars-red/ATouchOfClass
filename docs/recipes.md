@@ -377,6 +377,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_side_table.json)
 
+## acacia-transom
+
+**Output:** 4 × Acacia Transom (`atouchofclass:acacia_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:acacia_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_transom.json)
+
 ## acacia-white-four-post-bed
 
 **Output:** 1 × Acacia Four-Post Bed (White) (`atouchofclass:acacia_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -391,6 +403,32 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_white_four_post_bed.json)
 
+## acacia-window-box
+
+**Output:** 6 × Acacia Window Box (`atouchofclass:acacia_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:acacia_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_window_box.json)
+
+## acacia-window-pane
+
+**Output:** 4 × Acacia Window Pane (`atouchofclass:acacia_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:acacia_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_window_pane.json)
+
 ## acacia-yellow-four-post-bed
 
 **Output:** 1 × Acacia Four-Post Bed (Yellow) (`atouchofclass:acacia_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -404,6 +442,19 @@ LL
 `B` = `minecraft:yellow_bed`; `L` = `#minecraft:acacia_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_yellow_four_post_bed.json)
+
+## allium-bunch
+
+**Output:** 1 × Allium Bunch (`atouchofclass:allium_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:allium`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/allium_bunch.json)
 
 ## andesite-countertop
 
@@ -429,6 +480,19 @@ S.S
 `S` = `minecraft:andesite_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/andesite_sink.json)
+
+## azure-bluet-bunch
+
+**Output:** 1 × Azure Bluet Bunch (`atouchofclass:azure_bluet_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:azure_bluet`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/azure_bluet_bunch.json)
 
 ## bamboo-baluster
 
@@ -801,6 +865,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_side_table.json)
 
+## bamboo-transom
+
+**Output:** 4 × Bamboo Transom (`atouchofclass:bamboo_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:bamboo_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_transom.json)
+
 ## bamboo-white-four-post-bed
 
 **Output:** 1 × Bamboo Four-Post Bed (White) (`atouchofclass:bamboo_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -814,6 +890,32 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:bamboo_blocks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_white_four_post_bed.json)
+
+## bamboo-window-box
+
+**Output:** 6 × Bamboo Window Box (`atouchofclass:bamboo_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:bamboo_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_window_box.json)
+
+## bamboo-window-pane
+
+**Output:** 4 × Bamboo Window Pane (`atouchofclass:bamboo_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:bamboo_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_window_pane.json)
 
 ## bamboo-yellow-four-post-bed
 
@@ -1212,6 +1314,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_side_table.json)
 
+## birch-transom
+
+**Output:** 4 × Birch Transom (`atouchofclass:birch_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:birch_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_transom.json)
+
 ## birch-white-four-post-bed
 
 **Output:** 1 × Birch Four-Post Bed (White) (`atouchofclass:birch_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -1225,6 +1339,32 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:birch_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_white_four_post_bed.json)
+
+## birch-window-box
+
+**Output:** 6 × Birch Window Box (`atouchofclass:birch_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:birch_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_window_box.json)
+
+## birch-window-pane
+
+**Output:** 4 × Birch Window Pane (`atouchofclass:birch_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:birch_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_window_pane.json)
 
 ## birch-yellow-four-post-bed
 
@@ -1289,6 +1429,19 @@ S.S
 `S` = `minecraft:blue_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_sink.json)
+
+## blue-orchid-bunch
+
+**Output:** 1 × Blue Orchid Bunch (`atouchofclass:blue_orchid_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:blue_orchid`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_orchid_bunch.json)
 
 ## brick-window-ledge
 
@@ -1450,6 +1603,19 @@ BBB
 `B` = `minecraft:bricks`; `W` = `minecraft:white_dye`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/buff_bricks.json)
+
+## cactus-flower-bunch
+
+**Output:** 1 × Cactus Flower Bunch (`atouchofclass:cactus_flower_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:cactus_flower`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cactus_flower_bunch.json)
 
 ## calcite-countertop
 
@@ -1886,6 +2052,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_side_table.json)
 
+## cherry-transom
+
+**Output:** 4 × Cherry Transom (`atouchofclass:cherry_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:cherry_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_transom.json)
+
 ## cherry-white-four-post-bed
 
 **Output:** 1 × Cherry Four-Post Bed (White) (`atouchofclass:cherry_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -1899,6 +2077,32 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:cherry_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_white_four_post_bed.json)
+
+## cherry-window-box
+
+**Output:** 6 × Cherry Window Box (`atouchofclass:cherry_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:cherry_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_window_box.json)
+
+## cherry-window-pane
+
+**Output:** 4 × Cherry Window Pane (`atouchofclass:cherry_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:cherry_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_window_pane.json)
 
 ## cherry-yellow-four-post-bed
 
@@ -1975,6 +2179,19 @@ CCC
 `C` = `minecraft:clay_ball`; `W` = `minecraft:white_dye`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/clay_toilet.json)
+
+## closed-eyeblossom-bunch
+
+**Output:** 1 × Closed Eyeblossom Bunch (`atouchofclass:closed_eyeblossom_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:closed_eyeblossom`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/closed_eyeblossom_bunch.json)
 
 ## copper-bowl-ceiling-light
 
@@ -2100,6 +2317,19 @@ S
 `P` = `atouchofclass:bucket_of_plaster`; `S` = `#minecraft:wooden_slabs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/corner_block.json)
+
+## cornflower-bunch
+
+**Output:** 1 × Cornflower Bunch (`atouchofclass:cornflower_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:cornflower`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cornflower_bunch.json)
 
 ## cornflower-wallpaper
 
@@ -2486,6 +2716,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_side_table.json)
 
+## crimson-transom
+
+**Output:** 4 × Crimson Transom (`atouchofclass:crimson_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:crimson_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_transom.json)
+
 ## crimson-white-four-post-bed
 
 **Output:** 1 × Crimson Four-Post Bed (White) (`atouchofclass:crimson_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -2499,6 +2741,32 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:crimson_stems`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_white_four_post_bed.json)
+
+## crimson-window-box
+
+**Output:** 6 × Crimson Window Box (`atouchofclass:crimson_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:crimson_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_window_box.json)
+
+## crimson-window-pane
+
+**Output:** 4 × Crimson Window Pane (`atouchofclass:crimson_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:crimson_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_window_pane.json)
 
 ## crimson-yellow-four-post-bed
 
@@ -2577,6 +2845,19 @@ S.S
 `S` = `minecraft:cyan_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_sink.json)
+
+## dandelion-bunch
+
+**Output:** 1 × Dandelion Bunch (`atouchofclass:dandelion_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:dandelion`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dandelion_bunch.json)
 
 ## dark-oak-baluster
 
@@ -2949,6 +3230,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_side_table.json)
 
+## dark-oak-transom
+
+**Output:** 4 × Dark Oak Transom (`atouchofclass:dark_oak_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:dark_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_transom.json)
+
 ## dark-oak-white-four-post-bed
 
 **Output:** 1 × Dark Oak Four-Post Bed (White) (`atouchofclass:dark_oak_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -2962,6 +3255,32 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:dark_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_white_four_post_bed.json)
+
+## dark-oak-window-box
+
+**Output:** 6 × Dark Oak Window Box (`atouchofclass:dark_oak_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:dark_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_window_box.json)
+
+## dark-oak-window-pane
+
+**Output:** 4 × Dark Oak Window Pane (`atouchofclass:dark_oak_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:dark_oak_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_window_pane.json)
 
 ## dark-oak-yellow-four-post-bed
 
@@ -3234,6 +3553,19 @@ G
 `G` = `minecraft:glass_pane`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/glass_shower_surround.json)
+
+## golden-dandelion-bunch
+
+**Output:** 1 × Golden Dandelion Bunch (`atouchofclass:golden_dandelion_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:golden_dandelion`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/golden_dandelion_bunch.json)
 
 ## gothic-wallpaper
 
@@ -3708,6 +4040,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_side_table.json)
 
+## jungle-transom
+
+**Output:** 4 × Jungle Transom (`atouchofclass:jungle_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:jungle_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_transom.json)
+
 ## jungle-white-four-post-bed
 
 **Output:** 1 × Jungle Four-Post Bed (White) (`atouchofclass:jungle_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -3721,6 +4065,32 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:jungle_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_white_four_post_bed.json)
+
+## jungle-window-box
+
+**Output:** 6 × Jungle Window Box (`atouchofclass:jungle_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:jungle_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_window_box.json)
+
+## jungle-window-pane
+
+**Output:** 4 × Jungle Window Pane (`atouchofclass:jungle_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:jungle_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_window_pane.json)
 
 ## jungle-yellow-four-post-bed
 
@@ -3868,6 +4238,32 @@ S.S
 `S` = `minecraft:light_gray_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_sink.json)
+
+## lilac-bunch
+
+**Output:** 1 × Lilac Bunch (`atouchofclass:lilac_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:lilac`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lilac_bunch.json)
+
+## lily-of-the-valley-bunch
+
+**Output:** 1 × Lily Of The Valley Bunch (`atouchofclass:lily_of_the_valley_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:lily_of_the_valley`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lily_of_the_valley_bunch.json)
 
 ## lime-concrete-countertop
 
@@ -4290,6 +4686,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_side_table.json)
 
+## mangrove-transom
+
+**Output:** 4 × Mangrove Transom (`atouchofclass:mangrove_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:mangrove_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_transom.json)
+
 ## mangrove-white-four-post-bed
 
 **Output:** 1 × Mangrove Four-Post Bed (White) (`atouchofclass:mangrove_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -4303,6 +4711,32 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:mangrove_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_white_four_post_bed.json)
+
+## mangrove-window-box
+
+**Output:** 6 × Mangrove Window Box (`atouchofclass:mangrove_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:mangrove_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_window_box.json)
+
+## mangrove-window-pane
+
+**Output:** 4 × Mangrove Window Pane (`atouchofclass:mangrove_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:mangrove_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_window_pane.json)
 
 ## mangrove-yellow-four-post-bed
 
@@ -4728,6 +5162,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_side_table.json)
 
+## oak-transom
+
+**Output:** 4 × Oak Transom (`atouchofclass:oak_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_transom.json)
+
 ## oak-white-four-post-bed
 
 **Output:** 1 × Oak Four-Post Bed (White) (`atouchofclass:oak_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -4741,6 +5187,32 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_white_four_post_bed.json)
+
+## oak-window-box
+
+**Output:** 6 × Oak Window Box (`atouchofclass:oak_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_window_box.json)
+
+## oak-window-pane
+
+**Output:** 4 × Oak Window Pane (`atouchofclass:oak_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:oak_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_window_pane.json)
 
 ## oak-yellow-four-post-bed
 
@@ -4784,6 +5256,19 @@ PGP
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/ogee_lattice_wallpaper.json)
 
+## open-eyeblossom-bunch
+
+**Output:** 1 × Open Eyeblossom Bunch (`atouchofclass:open_eyeblossom_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:open_eyeblossom`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/open_eyeblossom_bunch.json)
+
 ## orange-concrete-countertop
 
 **Output:** 6 × Orange Concrete Countertop (`atouchofclass:orange_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4809,6 +5294,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_sink.json)
 
+## orange-tulip-bunch
+
+**Output:** 1 × Orange Tulip Bunch (`atouchofclass:orange_tulip_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:orange_tulip`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_tulip_bunch.json)
+
 ## oven
 
 **Output:** 1 × Oven (`atouchofclass:oven`). **Type:** `minecraft:crafting_shaped`.
@@ -4822,6 +5320,19 @@ SSS
 `F` = `minecraft:furnace`; `S` = `atouchofclass:brushed_stainless_steel`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oven.json)
+
+## oxeye-daisy-bunch
+
+**Output:** 1 × Oxeye Daisy Bunch (`atouchofclass:oxeye_daisy_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:oxeye_daisy`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oxeye_daisy_bunch.json)
 
 ## oxidized-cut-copper-countertop
 
@@ -5219,6 +5730,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_side_table.json)
 
+## pale-oak-transom
+
+**Output:** 4 × Pale Oak Transom (`atouchofclass:pale_oak_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:pale_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_transom.json)
+
 ## pale-oak-white-four-post-bed
 
 **Output:** 1 × Pale Oak Four-Post Bed (White) (`atouchofclass:pale_oak_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -5233,6 +5756,32 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_white_four_post_bed.json)
 
+## pale-oak-window-box
+
+**Output:** 6 × Pale Oak Window Box (`atouchofclass:pale_oak_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:pale_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_window_box.json)
+
+## pale-oak-window-pane
+
+**Output:** 4 × Pale Oak Window Pane (`atouchofclass:pale_oak_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:pale_oak_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_window_pane.json)
+
 ## pale-oak-yellow-four-post-bed
 
 **Output:** 1 × Pale Oak Four-Post Bed (Yellow) (`atouchofclass:pale_oak_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -5246,6 +5795,19 @@ LL
 `B` = `minecraft:yellow_bed`; `L` = `#minecraft:pale_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_yellow_four_post_bed.json)
+
+## peony-bunch
+
+**Output:** 1 × Peony Bunch (`atouchofclass:peony_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:peony`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/peony_bunch.json)
 
 ## pink-concrete-countertop
 
@@ -5271,6 +5833,45 @@ S.S
 `S` = `minecraft:pink_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_sink.json)
+
+## pink-petals-bunch
+
+**Output:** 1 × Pink Petals Bunch (`atouchofclass:pink_petals_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:pink_petals`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_petals_bunch.json)
+
+## pink-tulip-bunch
+
+**Output:** 1 × Pink Tulip Bunch (`atouchofclass:pink_tulip_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:pink_tulip`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_tulip_bunch.json)
+
+## pitcher-plant-bunch
+
+**Output:** 1 × Pitcher Plant Bunch (`atouchofclass:pitcher_plant_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:pitcher_plant`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pitcher_plant_bunch.json)
 
 ## plinth-block
 
@@ -5807,6 +6408,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_side_table.json)
 
+## poplar-transom
+
+**Output:** 4 × Poplar Transom (`atouchofclass:poplar_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_transom.json)
+
 ## poplar-white-four-post-bed
 
 **Output:** 1 × Poplar Four-Post Bed (White) (`atouchofclass:poplar_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -5821,6 +6434,32 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_white_four_post_bed.json)
 
+## poplar-window-box
+
+**Output:** 6 × Poplar Window Box (`atouchofclass:poplar_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_window_box.json)
+
+## poplar-window-pane
+
+**Output:** 4 × Poplar Window Pane (`atouchofclass:poplar_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:poplar_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_window_pane.json)
+
 ## poplar-yellow-four-post-bed
 
 **Output:** 1 × Poplar Four-Post Bed (Yellow) (`atouchofclass:poplar_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -5834,6 +6473,19 @@ LL
 `B` = `minecraft:yellow_bed`; `L` = `#minecraft:poplar_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_yellow_four_post_bed.json)
+
+## poppy-bunch
+
+**Output:** 1 × Poppy Bunch (`atouchofclass:poppy_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:poppy`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poppy_bunch.json)
 
 ## prismarine-brick-countertop
 
@@ -6021,6 +6673,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_nether_brick_sink.json)
 
+## red-tulip-bunch
+
+**Output:** 1 × Red Tulip Bunch (`atouchofclass:red_tulip_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:red_tulip`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_tulip_bunch.json)
+
 ## refrigerator
 
 **Output:** 1 × Refrigerator (`atouchofclass:refrigerator`). **Type:** `minecraft:crafting_shaped`.
@@ -6059,6 +6724,19 @@ S.S
 `S` = `minecraft:resin_brick_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/resin_brick_sink.json)
+
+## rose-bush-bunch
+
+**Output:** 1 × Rose Bush Bunch (`atouchofclass:rose_bush_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:rose_bush`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/rose_bush_bunch.json)
 
 ## round-plaster-column-base
 
@@ -6549,6 +7227,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_side_table.json)
 
+## spruce-transom
+
+**Output:** 4 × Spruce Transom (`atouchofclass:spruce_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:spruce_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_transom.json)
+
 ## spruce-white-four-post-bed
 
 **Output:** 1 × Spruce Four-Post Bed (White) (`atouchofclass:spruce_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -6562,6 +7252,32 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:spruce_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_white_four_post_bed.json)
+
+## spruce-window-box
+
+**Output:** 6 × Spruce Window Box (`atouchofclass:spruce_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:spruce_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_window_box.json)
+
+## spruce-window-pane
+
+**Output:** 4 × Spruce Window Pane (`atouchofclass:spruce_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:spruce_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_window_pane.json)
 
 ## spruce-yellow-four-post-bed
 
@@ -6680,6 +7396,19 @@ PGP
 `B` = `minecraft:blue_dye`; `G` = `atouchofclass:bucket_of_plaster`; `P` = `minecraft:paper`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/striped_wallpaper.json)
+
+## sunflower-bunch
+
+**Output:** 1 × Sunflower Bunch (`atouchofclass:sunflower_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:sunflower`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/sunflower_bunch.json)
 
 ## tall-acacia-door
 
@@ -7236,6 +7965,19 @@ DG.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/toilet.json)
 
+## torchflower-bunch
+
+**Output:** 1 × Torchflower Bunch (`atouchofclass:torchflower_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:torchflower`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/torchflower_bunch.json)
+
 ## wainscoting
 
 **Output:** 2 × Wainscoting (`atouchofclass:wainscoting`). **Type:** `minecraft:crafting_shaped`.
@@ -7634,6 +8376,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_side_table.json)
 
+## warped-transom
+
+**Output:** 4 × Warped Transom (`atouchofclass:warped_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:warped_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_transom.json)
+
 ## warped-white-four-post-bed
 
 **Output:** 1 × Warped Four-Post Bed (White) (`atouchofclass:warped_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -7647,6 +8401,32 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:warped_stems`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_white_four_post_bed.json)
+
+## warped-window-box
+
+**Output:** 6 × Warped Window Box (`atouchofclass:warped_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:warped_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_window_box.json)
+
+## warped-window-pane
+
+**Output:** 4 × Warped Window Pane (`atouchofclass:warped_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:warped_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_window_pane.json)
 
 ## warped-yellow-four-post-bed
 
@@ -8082,6 +8862,32 @@ I.I
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_stucco.json)
 
+## white-tulip-bunch
+
+**Output:** 1 × White Tulip Bunch (`atouchofclass:white_tulip_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:white_tulip`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_tulip_bunch.json)
+
+## wildflowers-bunch
+
+**Output:** 1 × Wildflowers Bunch (`atouchofclass:wildflowers_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:wildflowers`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/wildflowers_bunch.json)
+
 ## window-apron
 
 **Output:** 6 × Window Apron (`atouchofclass:window_apron`). **Type:** `minecraft:crafting_shaped`.
@@ -8094,6 +8900,19 @@ SP
 `P` = `atouchofclass:bucket_of_plaster`; `S` = `#minecraft:wooden_slabs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/window_apron.json)
+
+## wither-rose-bunch
+
+**Output:** 1 × Wither Rose Bunch (`atouchofclass:wither_rose_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:wither_rose`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/wither_rose_bunch.json)
 
 ## yellow-concrete-countertop
 

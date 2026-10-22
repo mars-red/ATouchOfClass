@@ -310,5 +310,18 @@
     "avoid": "Use default textures without shaders. Close chat and debug overlays. Use F2; hide the HUD for world views, but keep menus visible for interface captures. Supply an unedited PNG. Report any setup that does not reproduce the requested state.",
     "alt": "Elevator destination screen offering Floor 2 from the lower landing.",
     "caption": "Floor numbering follows height; the current stop is omitted from the destination choices."
+  },
+  {
+    "id": "building-05",
+    "title": "Flower bunches in pale oak window boxes",
+    "page": "docs/building.md",
+    "file": "docs/images/building/pale-oak-window-boxes-with-daisy-bunches.png",
+    "session": "Window boxes and flower bunches",
+    "setup": "Place matching pale oak window boxes side by side beneath a window, then plant a daisy bunch in each section.",
+    "capture": "Show the planted window boxes from the front at a slight angle, including the window for placement context. Hide the HUD.",
+    "mustShow": "Joined pale oak window boxes with dense daisy bunches spanning the planting area.",
+    "avoid": "Keep the boxes and flowers uncropped and free of chat, debug overlays, and interface elements.",
+    "alt": "Pale oak window boxes filled with daisy bunches beneath a window framed by shutters.",
+    "caption": "Pale oak window boxes with daisy bunches form a continuous planting beneath the window."
   }
 ]

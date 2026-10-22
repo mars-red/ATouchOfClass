@@ -1,7 +1,196 @@
 {
   "variants": {
-    "": {
-      "model": "atouchofclass:block/marble_tile"
+    "texture_variant=0,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=0,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=0,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=0,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=1,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_1_rotation_0"
+    },
+    "texture_variant=1,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_1_rotation_1"
+    },
+    "texture_variant=1,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_1_rotation_2"
+    },
+    "texture_variant=1,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_1_rotation_3"
+    },
+    "texture_variant=2,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_2_rotation_0"
+    },
+    "texture_variant=2,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_2_rotation_1"
+    },
+    "texture_variant=2,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_2_rotation_2"
+    },
+    "texture_variant=2,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_2_rotation_3"
+    },
+    "texture_variant=3,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=3,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=3,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=3,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=4,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=4,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=4,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=4,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=5,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=5,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=5,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=5,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=6,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=6,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=6,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=6,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=7,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=7,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=7,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=7,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=8,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=8,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=8,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=8,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=9,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=9,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=9,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=9,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=10,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=10,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=10,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=10,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=11,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=11,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=11,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=11,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=12,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=12,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=12,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=12,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=13,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=13,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=13,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=13,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=14,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=14,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=14,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=14,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
+    },
+    "texture_variant=15,texture_rotation=0": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_0"
+    },
+    "texture_variant=15,texture_rotation=1": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_1"
+    },
+    "texture_variant=15,texture_rotation=2": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_2"
+    },
+    "texture_variant=15,texture_rotation=3": {
+      "model": "atouchofclass:block/marble_tile_variant_0_rotation_3"
     }
   }
 }

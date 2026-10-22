@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/pitcher_plant_bunch_planted.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "pitcher_crop_bottom_stage_4": "minecraft:block/pitcher_crop_bottom_stage_4",
+    "pitcher_crop_top_stage_4": "minecraft:block/pitcher_crop_top_stage_4",
+    "particle": "minecraft:block/pitcher_crop_bottom_stage_4"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/red_tulip_bunch_planted.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "red_tulip": "minecraft:block/red_tulip",
+    "particle": "minecraft:block/red_tulip"
+  }
+}

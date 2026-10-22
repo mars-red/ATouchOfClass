@@ -495,3 +495,25 @@ Generated from screenshots.json. Tasks are grouped by shared setup. The five tal
 **Alt text:** Elevator destination screen offering Floor 2 from the lower landing.
 
 **Caption:** Floor numbering follows height; the current stop is omitted from the destination choices.
+
+## Window boxes and flower bunches
+
+### building-05 — Flower bunches in pale oak window boxes
+
+**Status:** Image supplied; see the contributor guide for visual review status
+
+**Purpose:** Flower bunches in pale oak window boxes
+
+**Setup:** Place matching pale oak window boxes side by side beneath a window, then plant a daisy bunch in each section.
+
+**Capture:** Show the planted window boxes from the front at a slight angle, including the window for placement context. Hide the HUD.
+
+**Must show:** Joined pale oak window boxes with dense daisy bunches spanning the planting area.
+
+**Avoid:** Keep the boxes and flowers uncropped and free of chat, debug overlays, and interface elements.
+
+**Save as:** `docs/images/building/pale-oak-window-boxes-with-daisy-bunches.png`
+
+**Alt text:** Pale oak window boxes filled with daisy bunches beneath a window framed by shutters.
+
+**Caption:** Pale oak window boxes with daisy bunches form a continuous planting beneath the window.

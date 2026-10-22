@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": "minecraft:spruce_planks",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "PGP"
+  ],
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:spruce_transom"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/wildflowers_bunch_planted.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "wildflowers": "minecraft:block/wildflowers",
+    "wildflowers_stem": "minecraft:block/wildflowers_stem",
+    "particle": "minecraft:block/wildflowers"
+  }
+}

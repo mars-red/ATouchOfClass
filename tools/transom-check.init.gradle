@@ -1,0 +1,8 @@
+gradle.afterProject { p ->
+    if (p != p.rootProject) return
+    p.runs.gameTestServer {
+        arguments.addAll '--tests', 'atouchofclass:transomgametests.*',
+                '--universe', p.file('build/transom-gametest/world').absolutePath,
+                '--report', p.file('build/transom-gametest/results.xml').absolutePath
+    }
+}

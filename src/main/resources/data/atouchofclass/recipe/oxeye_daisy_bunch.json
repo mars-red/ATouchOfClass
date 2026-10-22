@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "key": {
+    "F": "minecraft:oxeye_daisy"
+  },
+  "result": {
+    "id": "atouchofclass:oxeye_daisy_bunch",
+    "count": 1
+  }
+}

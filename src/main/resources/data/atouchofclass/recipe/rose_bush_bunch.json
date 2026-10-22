@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "key": {
+    "F": "minecraft:rose_bush"
+  },
+  "result": {
+    "id": "atouchofclass:rose_bush_bunch",
+    "count": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/pink_petals_bunch_planted.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "pink_petals": "minecraft:block/pink_petals",
+    "pink_petals_stem": "minecraft:block/pink_petals_stem",
+    "particle": "minecraft:block/pink_petals"
+  }
+}

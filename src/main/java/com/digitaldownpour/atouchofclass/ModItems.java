@@ -23,6 +23,27 @@ public class ModItems {
 
     public static final java.util.List<DeferredItem<BlockItem>> BASIC_BLOCK_ITEMS = registerBasicBlockItems();
 
+    public static final java.util.Map<String, DeferredItem<com.digitaldownpour.atouchofclass.items.FlowerBunchItem>> FLOWER_BUNCH_ITEMS = registerFlowerBunchItems();
+
+    private static java.util.Map<String, DeferredItem<com.digitaldownpour.atouchofclass.items.FlowerBunchItem>> registerFlowerBunchItems() {
+        var items = new java.util.LinkedHashMap<String, DeferredItem<com.digitaldownpour.atouchofclass.items.FlowerBunchItem>>();
+        FlowerBunchVariants.VALUES.forEach(definition -> items.put(definition.id(),
+                ITEMS.register(definition.id(), key -> new com.digitaldownpour.atouchofclass.items.FlowerBunchItem(
+                        ModBlocks.FLOWER_BUNCHES.get(definition.id()).get(), new Item.Properties()
+                                .setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix()))));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
+    public static final java.util.Map<String, DeferredItem<BlockItem>> WINDOW_BOX_ITEMS = registerWindowBoxItems();
+    public static final DeferredItem<BlockItem> OAK_WINDOW_BOX = WINDOW_BOX_ITEMS.get("oak_window_box");
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerWindowBoxItems() {
+        var items = new java.util.LinkedHashMap<String, DeferredItem<BlockItem>>();
+        WindowBoxVariants.VALUES.forEach(definition -> items.put(definition.id(),
+                ITEMS.registerSimpleBlockItem(definition.id(), ModBlocks.WINDOW_BOXES.get(definition.id()))));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
     public static final java.util.Map<String, DeferredItem<BlockItem>> SHUTTER_ITEMS = registerShutterItems();
     public static final DeferredItem<BlockItem> OAK_SHUTTER = SHUTTER_ITEMS.get("oak_shutter");
 
@@ -455,6 +476,22 @@ public class ModItems {
             key -> new TallDoorItem(ModBlocks.TALL_OAK_DOOR.get(),
                     new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
     );
+
+    public static final java.util.Map<String, DeferredItem<BlockItem>> TRANSOM_ITEMS = registerTransomItems();
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerTransomItems() {
+        var items = new java.util.LinkedHashMap<String, DeferredItem<BlockItem>>();
+        ModBlocks.TRANSOMS.forEach((id, block) -> items.put(id, ITEMS.registerSimpleBlockItem(id, block)));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
+    public static final java.util.Map<String, DeferredItem<BlockItem>> WINDOW_PANE_ITEMS = registerWindowPaneItems();
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerWindowPaneItems() {
+        var items = new java.util.LinkedHashMap<String, DeferredItem<BlockItem>>();
+        ModBlocks.WINDOW_PANES.forEach((id, block) -> items.put(id, ITEMS.registerSimpleBlockItem(id, block)));
+        return java.util.Collections.unmodifiableMap(items);
+    }
 
     public static final java.util.Map<String, DeferredItem<TallDoorItem>> TALL_PATIO_DOOR_ITEMS = registerPatioDoorItems();
     public static final DeferredItem<TallDoorItem> TALL_OAK_PATIO_DOOR_ITEM = TALL_PATIO_DOOR_ITEMS.get("tall_oak_patio_door");
@@ -940,6 +977,8 @@ public class ModItems {
             event.accept(TALL_BIRCH_SIDELIGHT_ITEM);
             event.accept(TALL_OAK_DOOR_ITEM);
             TALL_PATIO_DOOR_ITEMS.values().forEach(event::accept);
+            TRANSOM_ITEMS.values().forEach(event::accept);
+            WINDOW_PANE_ITEMS.values().forEach(event::accept);
             event.accept(TALL_SPRUCE_DOOR_ITEM);
             event.accept(TALL_JUNGLE_DOOR_ITEM);
             event.accept(TALL_ACACIA_DOOR_ITEM);

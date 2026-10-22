@@ -1131,12 +1131,22 @@ public class ModBlocks {
     private static java.util.Map<String, DeferredBlock<Block>> registerBasicBlocks() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<Block>>();
         BASIC_BLOCK_NAMES.forEach(name -> blocks.put(name, BLOCKS.register(name,
-                registryName -> new Block(BlockBehaviour.Properties.of()
+                registryName -> createBasicBlock(name, BlockBehaviour.Properties.of()
                         .setId(ResourceKey.create(Registries.BLOCK, registryName))
                         .mapColor(MapColor.STONE)
                         .strength(1.5F, 6.0F)
                         .requiresCorrectToolForDrops()))));
         return java.util.Collections.unmodifiableMap(blocks);
+    }
+
+    private static Block createBasicBlock(String name, BlockBehaviour.Properties properties) {
+        if (name.equals("marble_tile")) {
+            return new com.digitaldownpour.atouchofclass.blocks.StochasticBlock(properties, 4);
+        }
+        else if (name.equals("calcite_tile")) {
+            return new com.digitaldownpour.atouchofclass.blocks.StochasticBlock(properties, 1);
+        }
+        return new Block(properties);
     }
 
     private static DeferredBlock<CabinetBlock> registerCabinet(String name) {
@@ -1253,6 +1263,30 @@ public class ModBlocks {
     /** All dresser variants, used to attach their shared storage block entity. */
     public static java.util.List<DeferredHolder<Block, ? extends DresserBlock>> dresserBlocks() {
         return java.util.Collections.unmodifiableList(DRESSER_REGISTRATIONS);
+    }
+
+    public static final java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FlowerBunchBlock>> FLOWER_BUNCHES = registerFlowerBunches();
+
+    private static java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FlowerBunchBlock>> registerFlowerBunches() {
+        var bunches = new java.util.LinkedHashMap<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FlowerBunchBlock>>();
+        FlowerBunchVariants.VALUES.forEach(definition -> bunches.put(definition.id(),
+                BLOCKS.register(definition.id(), key -> new com.digitaldownpour.atouchofclass.blocks.FlowerBunchBlock(definition.height(),
+                        BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                                .mapColor(definition.sourceBlock().defaultMapColor()).instabreak().noCollision().noOcclusion()
+                                .sound(net.minecraft.world.level.block.SoundType.GRASS)))));
+        return java.util.Collections.unmodifiableMap(bunches);
+    }
+
+    public static final java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.WindowBoxBlock>> WINDOW_BOXES = registerWindowBoxes();
+    public static final DeferredBlock<com.digitaldownpour.atouchofclass.blocks.WindowBoxBlock> OAK_WINDOW_BOX = WINDOW_BOXES.get("oak_window_box");
+
+    private static java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.WindowBoxBlock>> registerWindowBoxes() {
+        var boxes = new java.util.LinkedHashMap<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.WindowBoxBlock>>();
+        WindowBoxVariants.VALUES.forEach(definition -> boxes.put(definition.id(),
+                BLOCKS.register(definition.id(), key -> new com.digitaldownpour.atouchofclass.blocks.WindowBoxBlock(
+                        BlockBehaviour.Properties.ofFullCopy(definition.sourceBlock())
+                                .setId(ResourceKey.create(Registries.BLOCK, key)).noOcclusion()))));
+        return java.util.Collections.unmodifiableMap(boxes);
     }
 
     public static final java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.ShutterBlock>> SHUTTERS = registerShutters();
@@ -1375,6 +1409,34 @@ public class ModBlocks {
 
     public static final DeferredHolder<Block, TallDoorBlock> TALL_OAK_DOOR =
             registerTallDoor("tall_oak_door", MapColor.WOOD);
+
+    public static final java.util.Map<String, DeferredHolder<Block, com.digitaldownpour.atouchofclass.blocks.TransomBlock>> TRANSOMS = registerTransoms();
+
+    private static java.util.Map<String, DeferredHolder<Block, com.digitaldownpour.atouchofclass.blocks.TransomBlock>> registerTransoms() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredHolder<Block, com.digitaldownpour.atouchofclass.blocks.TransomBlock>>();
+        PatioDoorVariants.VALUES.forEach(definition -> {
+            String id = definition.wood() + "_transom";
+            blocks.put(id, BLOCKS.register(id, key -> new com.digitaldownpour.atouchofclass.blocks.TransomBlock(
+                    BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                            .mapColor(definition.sourceBlock().defaultMapColor()).strength(1.5F)
+                            .sound(net.minecraft.world.level.block.SoundType.WOOD).noOcclusion())));
+        });
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
+    public static final java.util.Map<String, DeferredHolder<Block, com.digitaldownpour.atouchofclass.blocks.WindowPaneBlock>> WINDOW_PANES = registerWindowPanes();
+
+    private static java.util.Map<String, DeferredHolder<Block, com.digitaldownpour.atouchofclass.blocks.WindowPaneBlock>> registerWindowPanes() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredHolder<Block, com.digitaldownpour.atouchofclass.blocks.WindowPaneBlock>>();
+        PatioDoorVariants.VALUES.forEach(definition -> {
+            String id = definition.wood() + "_window_pane";
+            blocks.put(id, BLOCKS.register(id, key -> new com.digitaldownpour.atouchofclass.blocks.WindowPaneBlock(
+                    BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                            .mapColor(definition.sourceBlock().defaultMapColor()).strength(1.5F)
+                            .sound(net.minecraft.world.level.block.SoundType.WOOD).noOcclusion())));
+        });
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
 
     public static final java.util.Map<String, DeferredHolder<Block, TallDoorBlock>> TALL_PATIO_DOORS = registerPatioDoors();
     public static final DeferredHolder<Block, TallDoorBlock> TALL_OAK_PATIO_DOOR = TALL_PATIO_DOORS.get("tall_oak_patio_door");

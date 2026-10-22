@@ -16,6 +16,24 @@ public final class ModGameTests {
             DeferredRegister.create(Registries.TEST_FUNCTION, ATouchofClass.MODID);
 
     static {
+        FUNCTIONS.register("windowpanegametests.pairsstayseparateandupdate", () -> WindowPaneGameTests::pairsStaySeparateAndUpdate);
+        FUNCTIONS.register("windowpanegametests.unrelatedneighborsstaysingle", () -> WindowPaneGameTests::unrelatedNeighborsStaySingle);
+        FUNCTIONS.register("windowpanegametests.placementalignsandneedsnodoor", () -> WindowPaneGameTests::placementAlignsAndNeedsNoDoor);
+        FUNCTIONS.register("windowpanegametests.everywoodcraftsfourunlocksanddrops", () -> WindowPaneGameTests::everyWoodCraftsFourUnlocksAndDrops);
+        FUNCTIONS.register("windowpanegametests.windowgridretainsmuntins", () -> WindowPaneGameTests::windowGridRetainsMuntins);
+
+        FUNCTIONS.register("transomgametests.placementalignsandneedsnodoor", () -> TransomGameTests::placementAlignsAndNeedsNoDoor);
+        FUNCTIONS.register("transomgametests.pairsstayseparateandupdate", () -> TransomGameTests::pairsStaySeparateAndUpdate);
+        FUNCTIONS.register("transomgametests.unrelatedneighborsstaysingle", () -> TransomGameTests::unrelatedNeighborsStaySingle);
+        FUNCTIONS.register("transomgametests.everywoodcraftsfourunlocksanddrops", () -> TransomGameTests::everyWoodCraftsFourUnlocksAndDrops);
+        FUNCTIONS.register("flowerbunchgametests.everyflowerplantsineverywindowbox", () -> FlowerBunchGameTests::everyFlowerPlantsInEveryWindowBox);
+        FUNCTIONS.register("flowerbunchgametests.rejectsgroundoccupiedboxesandexcludedplants", () -> FlowerBunchGameTests::rejectsGroundOccupiedBoxesAndExcludedPlants);
+        FUNCTIONS.register("flowerbunchgametests.harvestandsupportlossdropexactlyonebunch", () -> FlowerBunchGameTests::harvestAndSupportLossDropExactlyOneBunch);
+        FUNCTIONS.register("flowerbunchgametests.fourmatchingflowerscraftoneandunlock", () -> FlowerBunchGameTests::fourMatchingFlowersCraftOneAndUnlock);
+        FUNCTIONS.register("windowboxgametests.everywoodplacesflushoneverywall", () -> WindowBoxGameTests::everyWoodPlacesFlushOnEveryWall);
+        FUNCTIONS.register("windowboxgametests.joinsextendsandbreaksindependently", () -> WindowBoxGameTests::joinsExtendsAndBreaksIndependently);
+        FUNCTIONS.register("windowboxgametests.everywoodcraftssixunlocksanddrops", () -> WindowBoxGameTests::everyWoodCraftsSixUnlocksAndDrops);
+        FUNCTIONS.register("stochasticblockgametests.marbleplacementrerollsanddropsplainitems", () -> StochasticBlockGameTests::marblePlacementRerollsAndDropsPlainItems);
         FUNCTIONS.register("windowledgegametests.placesoneverywallfacewithmatchingshape", () -> WindowLedgeGameTests::placesOnEveryWallFaceWithMatchingShape);
         FUNCTIONS.register("windowledgegametests.twoindividualbrickscraftoneandunlockanddrop", () -> WindowLedgeGameTests::twoBrickBlocksCraftSixteenAndUnlockAndDrop);
         FUNCTIONS.register("poplarfurnituregametests.railingfamilycraftsunlocksanddrops", () -> PoplarFurnitureGameTests::railingFamilyCraftsUnlocksAndDrops);

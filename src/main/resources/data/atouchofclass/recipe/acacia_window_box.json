@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "WWW",
+    "DDD",
+    "WWW"
+  ],
+  "key": {
+    "W": "minecraft:acacia_planks",
+    "D": "minecraft:dirt"
+  },
+  "result": {
+    "id": "atouchofclass:acacia_window_box",
+    "count": 6
+  }
+}

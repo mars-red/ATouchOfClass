@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/window_box_single.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "minecraft:block/stripped_mangrove_log",
+    "wood": "minecraft:block/stripped_mangrove_log",
+    "dirt": "minecraft:block/dirt"
+  }
+}

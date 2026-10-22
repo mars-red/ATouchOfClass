@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/window_box_right.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "minecraft:block/stripped_bamboo_block",
+    "wood": "minecraft:block/stripped_bamboo_block",
+    "dirt": "minecraft:block/dirt"
+  }
+}

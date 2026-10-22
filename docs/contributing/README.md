@@ -5,7 +5,7 @@
 ## Review the manual
 
 1. Read the chapter you are reviewing. Note unclear wording or behavior that differs in game. The tall-door pilot already has its five images.
-2. All 24 captures are supplied and integrated, including `furniture-04` (rectangular and L-shaped dining tables) and `furniture-05` (oak, mangrove, and warped dining chairs). Use the capture checklist when reviewing existing images or preparing replacements. Use Creative for setup unless a task says otherwise; follow the chapter separately in Survival when checking acquisition.
+2. All 29 chapter screenshots are supplied and integrated, including `building-05` (pale oak window boxes with daisy bunches). The manifest tracks 25 of these; the marble tiles, plaster columns, patio doors, and pale oak entryway with transoms also have chapter images. Use the capture checklist when reviewing existing images or preparing replacements. Use Creative for setup unless a task says otherwise; follow the chapter separately in Survival when checking acquisition.
 3. Save PNG files at the exact listed paths, or provide the images with their stable IDs (for example, `building-01` or `elevator-02`) so they can be placed for you.
 4. Include the Minecraft, NeoForge, and mod build used, GUI scale, and any deviations from the instructions. We will inspect the images and refine the matching chapter and capture instructions.
 

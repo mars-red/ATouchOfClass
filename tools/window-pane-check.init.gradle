@@ -1,0 +1,8 @@
+gradle.afterProject { p ->
+    if (p != p.rootProject) return
+    p.runs.gameTestServer {
+        arguments.addAll '--tests', 'atouchofclass:windowpanegametests.*',
+                '--universe', p.file('build/window-pane-gametest/world').absolutePath,
+                '--report', p.file('build/window-pane-gametest/results.xml').absolutePath
+    }
+}

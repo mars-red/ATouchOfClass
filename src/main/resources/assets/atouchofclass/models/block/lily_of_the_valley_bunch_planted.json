@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/lily_of_the_valley_bunch_planted.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "lily_of_the_valley": "minecraft:block/lily_of_the_valley",
+    "particle": "minecraft:block/lily_of_the_valley"
+  }
+}

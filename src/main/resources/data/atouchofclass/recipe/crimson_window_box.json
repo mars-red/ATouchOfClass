@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "WWW",
+    "DDD",
+    "WWW"
+  ],
+  "key": {
+    "W": "minecraft:crimson_planks",
+    "D": "minecraft:dirt"
+  },
+  "result": {
+    "id": "atouchofclass:crimson_window_box",
+    "count": 6
+  }
+}
