@@ -79,6 +79,59 @@ Craft eight shutters from four matching planks and two sticks, with
 Every model face uses the matching stripped wood grain, including the narrow
 edges (stripped bamboo block for bamboo, stripped hyphae for crimson and warped).
 
+## Wood window boxes
+
+Window boxes come in all 13 vanilla wood varieties, including poplar. Every
+panel uses matching stripped wood with horizontal grain. Bamboo uses stripped
+bamboo block; crimson and warped use stripped stem side grain on every face.
+
+Place a box against any horizontal-facing block side. Its back sits flush
+against that face. The box occupies the upper eight units of its block space,
+projects ten units from the wall, and contains dirt two units below its rim.
+The front and exposed ends taper inward by one unit toward the bottom.
+Floor and ceiling clicks do not place window boxes. Sneak-place against
+blocks that normally open an interface.
+
+Matching boxes with the same facing merge into one continuous horizontal
+trough. Click an end to extend it, or place each section against the wall.
+Different woods and different facings stay separate. Breaking a section
+leaves the others intact and restores their exposed end panels. Each section
+drops one matching window box, including its dirt. Axes mine them efficiently.
+
+Craft **six window boxes** using `WWW`, `DDD`, `WWW`, where `W` is that wood's
+planks and `D` is an ordinary dirt block. Obtaining the matching planks unlocks
+the recipe.
+
+### Plant flower bunches
+
+Craft **one flower bunch** from **four matching vanilla flowers** in a 2×2
+square. Picking up the matching flower unlocks its recipe. Use the bunch on
+any face of a window box to plant it; each section holds one bunch. The block
+space directly above that section must be clear. Bunches cannot be planted
+on ordinary soil, in vanilla flower pots, or on other blocks.
+
+Small flowers use twelve dense clusters that reach adjacent bunches. Rose
+bushes, lilacs, and peonies become compact shrubs. Sunflowers have five
+shortened stalks with their heads facing outward from the wall; pitcher
+plants use five compact pitchers. Pink petals and wildflowers form low mats.
+The bunches are decorative and keep their crafted flower type, including
+the separate open and closed eyeblossom varieties.
+
+<!-- screenshot:building-05:start -->
+![Pale oak window boxes filled with daisy bunches beneath a window framed by shutters.](images/building/pale-oak-window-boxes-with-daisy-bunches.png)
+
+*Pale oak window boxes with daisy bunches form a continuous planting beneath the window.*
+<!-- screenshot:building-05:end -->
+
+Mine a bunch to recover it without removing the box. Breaking the box also
+releases its bunch; neighboring planted sections remain intact. One bunch
+drops as one reusable bunch item. Their stems sit two units below the rim,
+at the dirt surface, and the foliage has no collision.
+
+There are **25 bunch varieties**, including golden dandelion and cactus flower.
+Mangrove propagule, spore blossom, azalea (including flowering azalea),
+chorus flower, and flowering leaf blocks have no bunch variants.
+
 ## Add trim
 
 | Piece | Placement technique |

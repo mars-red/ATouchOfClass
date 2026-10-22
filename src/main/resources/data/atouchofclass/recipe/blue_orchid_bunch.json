@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "key": {
+    "F": "minecraft:blue_orchid"
+  },
+  "result": {
+    "id": "atouchofclass:blue_orchid_bunch",
+    "count": 1
+  }
+}

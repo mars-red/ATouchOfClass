@@ -1265,6 +1265,30 @@ public class ModBlocks {
         return java.util.Collections.unmodifiableList(DRESSER_REGISTRATIONS);
     }
 
+    public static final java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FlowerBunchBlock>> FLOWER_BUNCHES = registerFlowerBunches();
+
+    private static java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FlowerBunchBlock>> registerFlowerBunches() {
+        var bunches = new java.util.LinkedHashMap<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FlowerBunchBlock>>();
+        FlowerBunchVariants.VALUES.forEach(definition -> bunches.put(definition.id(),
+                BLOCKS.register(definition.id(), key -> new com.digitaldownpour.atouchofclass.blocks.FlowerBunchBlock(definition.height(),
+                        BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                                .mapColor(definition.sourceBlock().defaultMapColor()).instabreak().noCollision().noOcclusion()
+                                .sound(net.minecraft.world.level.block.SoundType.GRASS)))));
+        return java.util.Collections.unmodifiableMap(bunches);
+    }
+
+    public static final java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.WindowBoxBlock>> WINDOW_BOXES = registerWindowBoxes();
+    public static final DeferredBlock<com.digitaldownpour.atouchofclass.blocks.WindowBoxBlock> OAK_WINDOW_BOX = WINDOW_BOXES.get("oak_window_box");
+
+    private static java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.WindowBoxBlock>> registerWindowBoxes() {
+        var boxes = new java.util.LinkedHashMap<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.WindowBoxBlock>>();
+        WindowBoxVariants.VALUES.forEach(definition -> boxes.put(definition.id(),
+                BLOCKS.register(definition.id(), key -> new com.digitaldownpour.atouchofclass.blocks.WindowBoxBlock(
+                        BlockBehaviour.Properties.ofFullCopy(definition.sourceBlock())
+                                .setId(ResourceKey.create(Registries.BLOCK, key)).noOcclusion()))));
+        return java.util.Collections.unmodifiableMap(boxes);
+    }
+
     public static final java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.ShutterBlock>> SHUTTERS = registerShutters();
     public static final DeferredBlock<com.digitaldownpour.atouchofclass.blocks.ShutterBlock> OAK_SHUTTER = SHUTTERS.get("oak_shutter");
 

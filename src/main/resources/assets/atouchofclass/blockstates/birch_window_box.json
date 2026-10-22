@@ -1,0 +1,68 @@
+{
+  "variants": {
+    "facing=south,joined_left=false,joined_right=false": {
+      "model": "atouchofclass:block/birch_window_box_single",
+      "y": 0
+    },
+    "facing=west,joined_left=false,joined_right=false": {
+      "model": "atouchofclass:block/birch_window_box_single",
+      "y": 90
+    },
+    "facing=north,joined_left=false,joined_right=false": {
+      "model": "atouchofclass:block/birch_window_box_single",
+      "y": 180
+    },
+    "facing=east,joined_left=false,joined_right=false": {
+      "model": "atouchofclass:block/birch_window_box_single",
+      "y": 270
+    },
+    "facing=south,joined_left=false,joined_right=true": {
+      "model": "atouchofclass:block/birch_window_box_left",
+      "y": 0
+    },
+    "facing=west,joined_left=false,joined_right=true": {
+      "model": "atouchofclass:block/birch_window_box_left",
+      "y": 90
+    },
+    "facing=north,joined_left=false,joined_right=true": {
+      "model": "atouchofclass:block/birch_window_box_left",
+      "y": 180
+    },
+    "facing=east,joined_left=false,joined_right=true": {
+      "model": "atouchofclass:block/birch_window_box_left",
+      "y": 270
+    },
+    "facing=south,joined_left=true,joined_right=true": {
+      "model": "atouchofclass:block/birch_window_box_middle",
+      "y": 0
+    },
+    "facing=west,joined_left=true,joined_right=true": {
+      "model": "atouchofclass:block/birch_window_box_middle",
+      "y": 90
+    },
+    "facing=north,joined_left=true,joined_right=true": {
+      "model": "atouchofclass:block/birch_window_box_middle",
+      "y": 180
+    },
+    "facing=east,joined_left=true,joined_right=true": {
+      "model": "atouchofclass:block/birch_window_box_middle",
+      "y": 270
+    },
+    "facing=south,joined_left=true,joined_right=false": {
+      "model": "atouchofclass:block/birch_window_box_right",
+      "y": 0
+    },
+    "facing=west,joined_left=true,joined_right=false": {
+      "model": "atouchofclass:block/birch_window_box_right",
+      "y": 90
+    },
+    "facing=north,joined_left=true,joined_right=false": {
+      "model": "atouchofclass:block/birch_window_box_right",
+      "y": 180
+    },
+    "facing=east,joined_left=true,joined_right=false": {
+      "model": "atouchofclass:block/birch_window_box_right",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/closed_eyeblossom_bunch_inventory.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "closed_eyeblossom": "minecraft:block/closed_eyeblossom",
+    "particle": "minecraft:block/closed_eyeblossom"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    }
+  }
+}

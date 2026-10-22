@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "WWW",
+    "DDD",
+    "WWW"
+  ],
+  "key": {
+    "W": "minecraft:oak_planks",
+    "D": "minecraft:dirt"
+  },
+  "result": {
+    "id": "atouchofclass:oak_window_box",
+    "count": 6
+  }
+}

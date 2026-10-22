@@ -1,0 +1,9 @@
+gradle.afterProject { p ->
+    if (p != p.rootProject) return
+    p.runs.gameTestServer {
+        arguments.addAll '--tests', 'atouchofclass:flowerbunchgametests.*',
+                '--universe', p.file('build/flower-bunch-gametest/world').absolutePath,
+                '--report', p.file('build/flower-bunch-gametest/results.xml').absolutePath
+        systemProperty 'forge.logging.console.level', 'info'
+    }
+}

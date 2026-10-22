@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/golden_dandelion_bunch_planted.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "golden_dandelion": "minecraft:block/golden_dandelion",
+    "particle": "minecraft:block/golden_dandelion"
+  }
+}

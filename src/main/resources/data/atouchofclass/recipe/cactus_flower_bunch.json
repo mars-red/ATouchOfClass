@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "key": {
+    "F": "minecraft:cactus_flower"
+  },
+  "result": {
+    "id": "atouchofclass:cactus_flower_bunch",
+    "count": 1
+  }
+}

@@ -23,6 +23,27 @@ public class ModItems {
 
     public static final java.util.List<DeferredItem<BlockItem>> BASIC_BLOCK_ITEMS = registerBasicBlockItems();
 
+    public static final java.util.Map<String, DeferredItem<com.digitaldownpour.atouchofclass.items.FlowerBunchItem>> FLOWER_BUNCH_ITEMS = registerFlowerBunchItems();
+
+    private static java.util.Map<String, DeferredItem<com.digitaldownpour.atouchofclass.items.FlowerBunchItem>> registerFlowerBunchItems() {
+        var items = new java.util.LinkedHashMap<String, DeferredItem<com.digitaldownpour.atouchofclass.items.FlowerBunchItem>>();
+        FlowerBunchVariants.VALUES.forEach(definition -> items.put(definition.id(),
+                ITEMS.register(definition.id(), key -> new com.digitaldownpour.atouchofclass.items.FlowerBunchItem(
+                        ModBlocks.FLOWER_BUNCHES.get(definition.id()).get(), new Item.Properties()
+                                .setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix()))));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
+    public static final java.util.Map<String, DeferredItem<BlockItem>> WINDOW_BOX_ITEMS = registerWindowBoxItems();
+    public static final DeferredItem<BlockItem> OAK_WINDOW_BOX = WINDOW_BOX_ITEMS.get("oak_window_box");
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerWindowBoxItems() {
+        var items = new java.util.LinkedHashMap<String, DeferredItem<BlockItem>>();
+        WindowBoxVariants.VALUES.forEach(definition -> items.put(definition.id(),
+                ITEMS.registerSimpleBlockItem(definition.id(), ModBlocks.WINDOW_BOXES.get(definition.id()))));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
     public static final java.util.Map<String, DeferredItem<BlockItem>> SHUTTER_ITEMS = registerShutterItems();
     public static final DeferredItem<BlockItem> OAK_SHUTTER = SHUTTER_ITEMS.get("oak_shutter");
 

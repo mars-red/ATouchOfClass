@@ -81,6 +81,16 @@ All 16 colors of concrete countertops and sinks have bundled shaped recipes usin
 
 Aged copper lighting and chains can lack direct crafting recipes because oxidation provides them. Consider every route before claiming an item is unobtainable or gated: crafting, smelting, stonecutting, waxing, scraping, and in-world transformations. Decorative overlay items are reusable in the current implementation, while plaster consumes applications. Applied plaster drops nothing when stripped or when its supporting block is broken. That difference matters when balancing material costs.
 
+## Flower bunch planters
+
+`data/atouchofclass/tags/block/flower_bunch_planters.json` defines which blocks
+accept flower bunches. The bundled tag contains only the thirteen window-box
+variants. Future planter families can join this tag without changing the
+flower blocks or their items. Current bunch models sit two units below their
+block space, meeting soil at Y=14 in the supporting planter; compatible planter
+models must use that soil height. Planters with a `facing` property orient the
+bunches automatically, including sunflower heads.
+
 ## Resource-pack changes
 
 Use `"min_format": [97, 1]` and `"max_format": [97, 1]` in the resource pack's `pack.mcmeta`, and mirror paths under `assets/atouchofclass/`. For example, replacing `textures/item/key_ring_empty.png` changes the empty-ring image; the filled state uses `textures/item/key_ring_filled.png`. Keep both states consistent. Override language entries in `assets/atouchofclass/lang/en_us.json` to change English labels.
