@@ -12,12 +12,13 @@ All items in this chapter are **survival obtainable** through bundled crafting r
 | --- | --- | --- | --- |
 | Tall door | `PP.` / `PPN` / `PP.` | P = matching wood planks; N = gold nugget | 2 tall doors |
 | Tall patio door | `WGW` / `WGW` / `WGW` | W = matching wood planks; G = glass block | 4 patio doors |
+| Transom | `PGP` | P = matching wood planks; G = glass block | 4 transoms |
 | Tall sidelight | `PG.` / `PG.` / `PG.` | P = matching wood planks; G = glass block | 4 sidelights |
 | Key cutter | `IDI` / `III` / `...` | I = iron ingot; D = diamond | 1 cutter |
 | Door key | `N..` / `N..` / `...` | N = gold nugget | 4 blank keys |
 | Key ring | `.N.` / `N.N` / `.N.` | N = iron nugget | 1 ring |
 
-Tall doors, tall patio doors, and tall sidelights come in oak, spruce, birch, poplar, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped variants. Their recipes use the corresponding planks.
+Tall doors, tall patio doors, tall sidelights, and transoms come in oak, spruce, birch, poplar, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped variants. Their recipes use the corresponding planks.
 
 ## Tall doors
 
@@ -58,6 +59,18 @@ Use the same code on both leaves. The current implementation checks access on th
 
 *Paired tall doors open together when their facing and hinges form a pair.*
 <!-- screenshot:doors-02:end -->
+
+## Add transoms above an entrance
+
+Transoms are fixed glass panels with a thin wooden frame. Each occupies one block above an entrance and sits at the same depth as a closed tall door or sidelight. Place a transom directly above the top section to align it automatically with that door or sidelight. A three-block-high entrance with transoms needs a four-block-high opening. Transoms may also be placed elsewhere; they do not require a door, sidelight, or supporting block to remain in place.
+
+Two matching transoms merge into one wide pane only when directly above a correctly paired set of tall doors, including tall patio doors. Both transoms must have the same wood and facing. Only the frame at the pair's center disappears: four doors arranged as two pairs produce two separate double-width transoms. Transoms above sidelights, single doors, or ordinary blocks keep their individual frames. Removing a partner transom or a door below restores the remaining frames.
+
+Craft **4 transoms** with one horizontal `PGP` row: two matching wood planks around one **glass block**. Glass panes do not substitute. Obtaining the matching planks unlocks the recipe. Each broken transom drops one matching item.
+
+![A pale oak entryway with paired tall doors between sidelights, topped by a double-width transom over the doors and single transoms over the sidelights.](images/doors/pale-oak-entry-with-transom.png)
+
+*Pale oak transoms form a single, double, single arrangement across this four-block-wide entryway.*
 
 ## Make a coded entrance with a tall door
 

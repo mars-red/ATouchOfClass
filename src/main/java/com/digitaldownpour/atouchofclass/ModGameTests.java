@@ -16,6 +16,10 @@ public final class ModGameTests {
             DeferredRegister.create(Registries.TEST_FUNCTION, ATouchofClass.MODID);
 
     static {
+        FUNCTIONS.register("transomgametests.placementalignsandneedsnodoor", () -> TransomGameTests::placementAlignsAndNeedsNoDoor);
+        FUNCTIONS.register("transomgametests.pairsstayseparateandupdate", () -> TransomGameTests::pairsStaySeparateAndUpdate);
+        FUNCTIONS.register("transomgametests.unrelatedneighborsstaysingle", () -> TransomGameTests::unrelatedNeighborsStaySingle);
+        FUNCTIONS.register("transomgametests.everywoodcraftsfourunlocksanddrops", () -> TransomGameTests::everyWoodCraftsFourUnlocksAndDrops);
         FUNCTIONS.register("flowerbunchgametests.everyflowerplantsineverywindowbox", () -> FlowerBunchGameTests::everyFlowerPlantsInEveryWindowBox);
         FUNCTIONS.register("flowerbunchgametests.rejectsgroundoccupiedboxesandexcludedplants", () -> FlowerBunchGameTests::rejectsGroundOccupiedBoxesAndExcludedPlants);
         FUNCTIONS.register("flowerbunchgametests.harvestandsupportlossdropexactlyonebunch", () -> FlowerBunchGameTests::harvestAndSupportLossDropExactlyOneBunch);

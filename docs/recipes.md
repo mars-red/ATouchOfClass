@@ -377,6 +377,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_side_table.json)
 
+## acacia-transom
+
+**Output:** 4 × Acacia Transom (`atouchofclass:acacia_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:acacia_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_transom.json)
+
 ## acacia-white-four-post-bed
 
 **Output:** 1 × Acacia Four-Post Bed (White) (`atouchofclass:acacia_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -841,6 +853,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_side_table.json)
 
+## bamboo-transom
+
+**Output:** 4 × Bamboo Transom (`atouchofclass:bamboo_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:bamboo_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_transom.json)
+
 ## bamboo-white-four-post-bed
 
 **Output:** 1 × Bamboo Four-Post Bed (White) (`atouchofclass:bamboo_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -1265,6 +1289,18 @@ L.L
 `L` = `minecraft:birch_planks`; `S` = `minecraft:birch_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_side_table.json)
+
+## birch-transom
+
+**Output:** 4 × Birch Transom (`atouchofclass:birch_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:birch_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_transom.json)
 
 ## birch-white-four-post-bed
 
@@ -1980,6 +2016,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_side_table.json)
 
+## cherry-transom
+
+**Output:** 4 × Cherry Transom (`atouchofclass:cherry_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:cherry_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_transom.json)
+
 ## cherry-white-four-post-bed
 
 **Output:** 1 × Cherry Four-Post Bed (White) (`atouchofclass:cherry_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -2620,6 +2668,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_side_table.json)
 
+## crimson-transom
+
+**Output:** 4 × Crimson Transom (`atouchofclass:crimson_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:crimson_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_transom.json)
+
 ## crimson-white-four-post-bed
 
 **Output:** 1 × Crimson Four-Post Bed (White) (`atouchofclass:crimson_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -3109,6 +3169,18 @@ L.L
 `L` = `minecraft:dark_oak_planks`; `S` = `minecraft:dark_oak_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_side_table.json)
+
+## dark-oak-transom
+
+**Output:** 4 × Dark Oak Transom (`atouchofclass:dark_oak_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:dark_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_transom.json)
 
 ## dark-oak-white-four-post-bed
 
@@ -3896,6 +3968,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_side_table.json)
 
+## jungle-transom
+
+**Output:** 4 × Jungle Transom (`atouchofclass:jungle_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:jungle_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_transom.json)
+
 ## jungle-white-four-post-bed
 
 **Output:** 1 × Jungle Four-Post Bed (White) (`atouchofclass:jungle_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -4518,6 +4602,18 @@ L.L
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_side_table.json)
 
+## mangrove-transom
+
+**Output:** 4 × Mangrove Transom (`atouchofclass:mangrove_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:mangrove_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_transom.json)
+
 ## mangrove-white-four-post-bed
 
 **Output:** 1 × Mangrove Four-Post Bed (White) (`atouchofclass:mangrove_white_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -4969,6 +5065,18 @@ L.L
 `L` = `minecraft:oak_planks`; `S` = `minecraft:oak_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_side_table.json)
+
+## oak-transom
+
+**Output:** 4 × Oak Transom (`atouchofclass:oak_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_transom.json)
 
 ## oak-white-four-post-bed
 
@@ -5513,6 +5621,18 @@ L.L
 `L` = `minecraft:pale_oak_planks`; `S` = `minecraft:pale_oak_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_side_table.json)
+
+## pale-oak-transom
+
+**Output:** 4 × Pale Oak Transom (`atouchofclass:pale_oak_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:pale_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_transom.json)
 
 ## pale-oak-white-four-post-bed
 
@@ -6167,6 +6287,18 @@ L.L
 `L` = `minecraft:poplar_planks`; `S` = `minecraft:poplar_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_side_table.json)
+
+## poplar-transom
+
+**Output:** 4 × Poplar Transom (`atouchofclass:poplar_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_transom.json)
 
 ## poplar-white-four-post-bed
 
@@ -6962,6 +7094,18 @@ L.L
 `L` = `minecraft:spruce_planks`; `S` = `minecraft:spruce_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_side_table.json)
+
+## spruce-transom
+
+**Output:** 4 × Spruce Transom (`atouchofclass:spruce_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:spruce_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_transom.json)
 
 ## spruce-white-four-post-bed
 
@@ -8087,6 +8231,18 @@ L.L
 `L` = `minecraft:warped_planks`; `S` = `minecraft:warped_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_side_table.json)
+
+## warped-transom
+
+**Output:** 4 × Warped Transom (`atouchofclass:warped_transom`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PGP
+```
+
+`G` = `minecraft:glass`; `P` = `minecraft:warped_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_transom.json)
 
 ## warped-white-four-post-bed
 
