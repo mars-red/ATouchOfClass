@@ -391,6 +391,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_white_four_post_bed.json)
 
+## acacia-window-box
+
+**Output:** 6 × Acacia Window Box (`atouchofclass:acacia_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:acacia_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_window_box.json)
+
 ## acacia-yellow-four-post-bed
 
 **Output:** 1 × Acacia Four-Post Bed (Yellow) (`atouchofclass:acacia_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -815,6 +829,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_white_four_post_bed.json)
 
+## bamboo-window-box
+
+**Output:** 6 × Bamboo Window Box (`atouchofclass:bamboo_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:bamboo_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_window_box.json)
+
 ## bamboo-yellow-four-post-bed
 
 **Output:** 1 × Bamboo Four-Post Bed (Yellow) (`atouchofclass:bamboo_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -1225,6 +1253,20 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:birch_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_white_four_post_bed.json)
+
+## birch-window-box
+
+**Output:** 6 × Birch Window Box (`atouchofclass:birch_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:birch_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_window_box.json)
 
 ## birch-yellow-four-post-bed
 
@@ -1900,6 +1942,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_white_four_post_bed.json)
 
+## cherry-window-box
+
+**Output:** 6 × Cherry Window Box (`atouchofclass:cherry_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:cherry_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_window_box.json)
+
 ## cherry-yellow-four-post-bed
 
 **Output:** 1 × Cherry Four-Post Bed (Yellow) (`atouchofclass:cherry_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -2500,6 +2556,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_white_four_post_bed.json)
 
+## crimson-window-box
+
+**Output:** 6 × Crimson Window Box (`atouchofclass:crimson_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:crimson_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_window_box.json)
+
 ## crimson-yellow-four-post-bed
 
 **Output:** 1 × Crimson Four-Post Bed (Yellow) (`atouchofclass:crimson_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -2962,6 +3032,20 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:dark_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_white_four_post_bed.json)
+
+## dark-oak-window-box
+
+**Output:** 6 × Dark Oak Window Box (`atouchofclass:dark_oak_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:dark_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_window_box.json)
 
 ## dark-oak-yellow-four-post-bed
 
@@ -3722,6 +3806,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_white_four_post_bed.json)
 
+## jungle-window-box
+
+**Output:** 6 × Jungle Window Box (`atouchofclass:jungle_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:jungle_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_window_box.json)
+
 ## jungle-yellow-four-post-bed
 
 **Output:** 1 × Jungle Four-Post Bed (Yellow) (`atouchofclass:jungle_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -4304,6 +4402,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_white_four_post_bed.json)
 
+## mangrove-window-box
+
+**Output:** 6 × Mangrove Window Box (`atouchofclass:mangrove_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:mangrove_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_window_box.json)
+
 ## mangrove-yellow-four-post-bed
 
 **Output:** 1 × Mangrove Four-Post Bed (Yellow) (`atouchofclass:mangrove_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -4741,6 +4853,20 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_white_four_post_bed.json)
+
+## oak-window-box
+
+**Output:** 6 × Oak Window Box (`atouchofclass:oak_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_window_box.json)
 
 ## oak-yellow-four-post-bed
 
@@ -5232,6 +5358,20 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:pale_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_white_four_post_bed.json)
+
+## pale-oak-window-box
+
+**Output:** 6 × Pale Oak Window Box (`atouchofclass:pale_oak_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:pale_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_window_box.json)
 
 ## pale-oak-yellow-four-post-bed
 
@@ -5820,6 +5960,20 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:poplar_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_white_four_post_bed.json)
+
+## poplar-window-box
+
+**Output:** 6 × Poplar Window Box (`atouchofclass:poplar_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_window_box.json)
 
 ## poplar-yellow-four-post-bed
 
@@ -6562,6 +6716,20 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:spruce_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_white_four_post_bed.json)
+
+## spruce-window-box
+
+**Output:** 6 × Spruce Window Box (`atouchofclass:spruce_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:spruce_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_window_box.json)
 
 ## spruce-yellow-four-post-bed
 
@@ -7647,6 +7815,20 @@ LL
 `B` = `minecraft:white_bed`; `L` = `#minecraft:warped_stems`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_white_four_post_bed.json)
+
+## warped-window-box
+
+**Output:** 6 × Warped Window Box (`atouchofclass:warped_window_box`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+WWW
+DDD
+WWW
+```
+
+`D` = `minecraft:dirt`; `W` = `minecraft:warped_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_window_box.json)
 
 ## warped-yellow-four-post-bed
 

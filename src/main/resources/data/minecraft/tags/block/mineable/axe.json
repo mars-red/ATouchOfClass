@@ -379,6 +379,19 @@
     "atouchofclass:poplar_brown_four_post_bed",
     "atouchofclass:poplar_green_four_post_bed",
     "atouchofclass:poplar_red_four_post_bed",
-    "atouchofclass:poplar_black_four_post_bed"
+    "atouchofclass:poplar_black_four_post_bed",
+    "atouchofclass:oak_window_box",
+    "atouchofclass:spruce_window_box",
+    "atouchofclass:birch_window_box",
+    "atouchofclass:poplar_window_box",
+    "atouchofclass:jungle_window_box",
+    "atouchofclass:acacia_window_box",
+    "atouchofclass:dark_oak_window_box",
+    "atouchofclass:mangrove_window_box",
+    "atouchofclass:cherry_window_box",
+    "atouchofclass:pale_oak_window_box",
+    "atouchofclass:bamboo_window_box",
+    "atouchofclass:crimson_window_box",
+    "atouchofclass:warped_window_box"
   ]
 }

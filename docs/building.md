@@ -79,6 +79,29 @@ Craft eight shutters from four matching planks and two sticks, with
 Every model face uses the matching stripped wood grain, including the narrow
 edges (stripped bamboo block for bamboo, stripped hyphae for crimson and warped).
 
+## Wood window boxes
+
+Window boxes come in all 13 vanilla wood varieties, including poplar. Every
+panel uses matching stripped wood with horizontal grain. Bamboo uses stripped
+bamboo block; crimson and warped use stripped stem side grain on every face.
+
+Place a box against any horizontal-facing block side. Its back sits flush
+against that face. The box occupies the upper eight units of its block space,
+projects ten units from the wall, and contains dirt two units below its rim.
+The front and exposed ends taper inward by one unit toward the bottom.
+Floor and ceiling clicks do not place window boxes. Sneak-place against
+blocks that normally open an interface.
+
+Matching boxes with the same facing merge into one continuous horizontal
+trough. Click an end to extend it, or place each section against the wall.
+Different woods and different facings stay separate. Breaking a section
+leaves the others intact and restores their exposed end panels. Each section
+drops one matching window box, including its dirt. Axes mine them efficiently.
+
+Craft **six window boxes** using `WWW`, `DDD`, `WWW`, where `W` is that wood's
+planks and `D` is an ordinary dirt block. Obtaining the matching planks unlocks
+the recipe. Dirt is part of the model; these boxes do not yet plant or grow flowers.
+
 ## Add trim
 
 | Piece | Placement technique |

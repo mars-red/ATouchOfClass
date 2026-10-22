@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "WWW",
+    "DDD",
+    "WWW"
+  ],
+  "key": {
+    "W": "minecraft:spruce_planks",
+    "D": "minecraft:dirt"
+  },
+  "result": {
+    "id": "atouchofclass:spruce_window_box",
+    "count": 6
+  }
+}

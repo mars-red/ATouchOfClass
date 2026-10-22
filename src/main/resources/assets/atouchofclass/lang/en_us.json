@@ -1084,5 +1084,18 @@
     "block.atouchofclass.brick_window_ledge": "Brick Window Ledge",
     "item.atouchofclass.brick_window_ledge": "Brick Window Ledge",
     "block.atouchofclass.buff_brick_window_ledge": "Buff Brick Window Ledge",
-    "item.atouchofclass.buff_brick_window_ledge": "Buff Brick Window Ledge"
+    "item.atouchofclass.buff_brick_window_ledge": "Buff Brick Window Ledge",
+    "block.atouchofclass.oak_window_box": "Oak Window Box",
+    "block.atouchofclass.spruce_window_box": "Spruce Window Box",
+    "block.atouchofclass.birch_window_box": "Birch Window Box",
+    "block.atouchofclass.poplar_window_box": "Poplar Window Box",
+    "block.atouchofclass.jungle_window_box": "Jungle Window Box",
+    "block.atouchofclass.acacia_window_box": "Acacia Window Box",
+    "block.atouchofclass.dark_oak_window_box": "Dark Oak Window Box",
+    "block.atouchofclass.mangrove_window_box": "Mangrove Window Box",
+    "block.atouchofclass.cherry_window_box": "Cherry Window Box",
+    "block.atouchofclass.pale_oak_window_box": "Pale Oak Window Box",
+    "block.atouchofclass.bamboo_window_box": "Bamboo Window Box",
+    "block.atouchofclass.crimson_window_box": "Crimson Window Box",
+    "block.atouchofclass.warped_window_box": "Warped Window Box"
 }

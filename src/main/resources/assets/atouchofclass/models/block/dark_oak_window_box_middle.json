@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/window_box_middle.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "minecraft:block/stripped_dark_oak_log",
+    "wood": "minecraft:block/stripped_dark_oak_log",
+    "dirt": "minecraft:block/dirt"
+  }
+}

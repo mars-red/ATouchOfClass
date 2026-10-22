@@ -1,0 +1,8 @@
+gradle.afterProject { p ->
+    if (p != p.rootProject) return
+    p.sourceSets.main.java.srcDir('tools/window-box-client-check')
+    p.runs.client {
+        systemProperty 'windowBox.checkReport', p.file('build/window-box-client-check/results.txt').absolutePath
+        systemProperty 'forge.logging.console.level', 'info'
+    }
+}
