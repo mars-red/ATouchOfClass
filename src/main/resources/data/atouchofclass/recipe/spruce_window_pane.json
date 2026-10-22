@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": "minecraft:spruce_slab",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "SGS"
+  ],
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:spruce_window_pane"
+  }
+}

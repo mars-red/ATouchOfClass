@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": "minecraft:acacia_slab",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "SGS"
+  ],
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:acacia_window_pane"
+  }
+}

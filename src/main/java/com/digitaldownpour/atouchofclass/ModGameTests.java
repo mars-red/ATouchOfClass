@@ -16,6 +16,12 @@ public final class ModGameTests {
             DeferredRegister.create(Registries.TEST_FUNCTION, ATouchofClass.MODID);
 
     static {
+        FUNCTIONS.register("windowpanegametests.pairsstayseparateandupdate", () -> WindowPaneGameTests::pairsStaySeparateAndUpdate);
+        FUNCTIONS.register("windowpanegametests.unrelatedneighborsstaysingle", () -> WindowPaneGameTests::unrelatedNeighborsStaySingle);
+        FUNCTIONS.register("windowpanegametests.placementalignsandneedsnodoor", () -> WindowPaneGameTests::placementAlignsAndNeedsNoDoor);
+        FUNCTIONS.register("windowpanegametests.everywoodcraftsfourunlocksanddrops", () -> WindowPaneGameTests::everyWoodCraftsFourUnlocksAndDrops);
+        FUNCTIONS.register("windowpanegametests.windowgridretainsmuntins", () -> WindowPaneGameTests::windowGridRetainsMuntins);
+
         FUNCTIONS.register("transomgametests.placementalignsandneedsnodoor", () -> TransomGameTests::placementAlignsAndNeedsNoDoor);
         FUNCTIONS.register("transomgametests.pairsstayseparateandupdate", () -> TransomGameTests::pairsStaySeparateAndUpdate);
         FUNCTIONS.register("transomgametests.unrelatedneighborsstaysingle", () -> TransomGameTests::unrelatedNeighborsStaySingle);

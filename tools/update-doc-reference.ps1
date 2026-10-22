@@ -24,6 +24,7 @@ foreach ($family in @('SideTable','DiningTable','DiningChair','Nightstand','Shut
         if ($family -eq 'PatioDoor') {
             Add-Id ('tall_' + $m.Groups[1].Value + '_patio_door')
             Add-Id ($m.Groups[1].Value + '_transom')
+            Add-Id ($m.Groups[1].Value + '_window_pane')
         }
         else { Add-Id ($m.Groups[1].Value + $suffix) }
     }
@@ -69,7 +70,7 @@ function Ingredient($value) {
     throw 'Unsupported ingredient format'
 }
 $catalog = [Collections.Generic.List[string]]::new()
-@('# Content catalog','','[Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)','','Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, dining-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.','','Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.','') | ForEach-Object { $catalog.Add($_) }
+@('# Content catalog','','[Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)','','Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, dining-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.','','Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.','') | ForEach-Object { $catalog.Add($_) }
 $catalog.Add("**$($registered.Count) registered player-content items.**")
 $catalog.Add('')
 $catalog.Add('| Item | Identifier | Acquisition |')

@@ -1424,6 +1424,20 @@ public class ModBlocks {
         return java.util.Collections.unmodifiableMap(blocks);
     }
 
+    public static final java.util.Map<String, DeferredHolder<Block, com.digitaldownpour.atouchofclass.blocks.WindowPaneBlock>> WINDOW_PANES = registerWindowPanes();
+
+    private static java.util.Map<String, DeferredHolder<Block, com.digitaldownpour.atouchofclass.blocks.WindowPaneBlock>> registerWindowPanes() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredHolder<Block, com.digitaldownpour.atouchofclass.blocks.WindowPaneBlock>>();
+        PatioDoorVariants.VALUES.forEach(definition -> {
+            String id = definition.wood() + "_window_pane";
+            blocks.put(id, BLOCKS.register(id, key -> new com.digitaldownpour.atouchofclass.blocks.WindowPaneBlock(
+                    BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                            .mapColor(definition.sourceBlock().defaultMapColor()).strength(1.5F)
+                            .sound(net.minecraft.world.level.block.SoundType.WOOD).noOcclusion())));
+        });
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
     public static final java.util.Map<String, DeferredHolder<Block, TallDoorBlock>> TALL_PATIO_DOORS = registerPatioDoors();
     public static final DeferredHolder<Block, TallDoorBlock> TALL_OAK_PATIO_DOOR = TALL_PATIO_DOORS.get("tall_oak_patio_door");
 

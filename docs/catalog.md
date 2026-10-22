@@ -2,11 +2,11 @@
 
 [Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)
 
-Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, dining-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
+Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, dining-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**687 registered player-content items.**
+**700 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -40,6 +40,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Acacia Transom | `atouchofclass:acacia_transom` | Survival obtainable — [acacia_transom](recipes.md#acacia-transom) |
 | Acacia Four-Post Bed (White) | `atouchofclass:acacia_white_four_post_bed` | Survival obtainable — [acacia_white_four_post_bed](recipes.md#acacia-white-four-post-bed) |
 | Acacia Window Box | `atouchofclass:acacia_window_box` | Survival obtainable — [acacia_window_box](recipes.md#acacia-window-box) |
+| Acacia Window Pane | `atouchofclass:acacia_window_pane` | Survival obtainable — [acacia_window_pane](recipes.md#acacia-window-pane) |
 | Acacia Four-Post Bed (Yellow) | `atouchofclass:acacia_yellow_four_post_bed` | Survival obtainable — [acacia_yellow_four_post_bed](recipes.md#acacia-yellow-four-post-bed) |
 | Allium Bunch | `atouchofclass:allium_bunch` | Survival obtainable — [allium_bunch](recipes.md#allium-bunch) |
 | Andesite Countertop | `atouchofclass:andesite_countertop` | Survival obtainable — [andesite_countertop](recipes.md#andesite-countertop) |
@@ -75,6 +76,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Bamboo Transom | `atouchofclass:bamboo_transom` | Survival obtainable — [bamboo_transom](recipes.md#bamboo-transom) |
 | Bamboo Four-Post Bed (White) | `atouchofclass:bamboo_white_four_post_bed` | Survival obtainable — [bamboo_white_four_post_bed](recipes.md#bamboo-white-four-post-bed) |
 | Bamboo Window Box | `atouchofclass:bamboo_window_box` | Survival obtainable — [bamboo_window_box](recipes.md#bamboo-window-box) |
+| Bamboo Window Pane | `atouchofclass:bamboo_window_pane` | Survival obtainable — [bamboo_window_pane](recipes.md#bamboo-window-pane) |
 | Bamboo Four-Post Bed (Yellow) | `atouchofclass:bamboo_yellow_four_post_bed` | Survival obtainable — [bamboo_yellow_four_post_bed](recipes.md#bamboo-yellow-four-post-bed) |
 | Baseboard | `atouchofclass:baseboard` | Survival obtainable — [baseboard](recipes.md#baseboard) |
 | Birch Baluster | `atouchofclass:birch_baluster` | Survival obtainable — [birch_baluster](recipes.md#birch-baluster) |
@@ -107,6 +109,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Birch Transom | `atouchofclass:birch_transom` | Survival obtainable — [birch_transom](recipes.md#birch-transom) |
 | Birch Four-Post Bed (White) | `atouchofclass:birch_white_four_post_bed` | Survival obtainable — [birch_white_four_post_bed](recipes.md#birch-white-four-post-bed) |
 | Birch Window Box | `atouchofclass:birch_window_box` | Survival obtainable — [birch_window_box](recipes.md#birch-window-box) |
+| Birch Window Pane | `atouchofclass:birch_window_pane` | Survival obtainable — [birch_window_pane](recipes.md#birch-window-pane) |
 | Birch Four-Post Bed (Yellow) | `atouchofclass:birch_yellow_four_post_bed` | Survival obtainable — [birch_yellow_four_post_bed](recipes.md#birch-yellow-four-post-bed) |
 | Black Concrete Countertop | `atouchofclass:black_concrete_countertop` | Survival obtainable — [black_concrete_countertop](recipes.md#black-concrete-countertop) |
 | Black Concrete Sink | `atouchofclass:black_concrete_sink` | Survival obtainable — [black_concrete_sink](recipes.md#black-concrete-sink) |
@@ -160,6 +163,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Cherry Transom | `atouchofclass:cherry_transom` | Survival obtainable — [cherry_transom](recipes.md#cherry-transom) |
 | Cherry Four-Post Bed (White) | `atouchofclass:cherry_white_four_post_bed` | Survival obtainable — [cherry_white_four_post_bed](recipes.md#cherry-white-four-post-bed) |
 | Cherry Window Box | `atouchofclass:cherry_window_box` | Survival obtainable — [cherry_window_box](recipes.md#cherry-window-box) |
+| Cherry Window Pane | `atouchofclass:cherry_window_pane` | Survival obtainable — [cherry_window_pane](recipes.md#cherry-window-pane) |
 | Cherry Four-Post Bed (Yellow) | `atouchofclass:cherry_yellow_four_post_bed` | Survival obtainable — [cherry_yellow_four_post_bed](recipes.md#cherry-yellow-four-post-bed) |
 | Cinnabar Countertop | `atouchofclass:cinnabar_countertop` | Survival obtainable — [cinnabar_countertop](recipes.md#cinnabar-countertop) |
 | Cinnabar Sink | `atouchofclass:cinnabar_sink` | Survival obtainable — [cinnabar_sink](recipes.md#cinnabar-sink) |
@@ -208,6 +212,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Crimson Transom | `atouchofclass:crimson_transom` | Survival obtainable — [crimson_transom](recipes.md#crimson-transom) |
 | Crimson Four-Post Bed (White) | `atouchofclass:crimson_white_four_post_bed` | Survival obtainable — [crimson_white_four_post_bed](recipes.md#crimson-white-four-post-bed) |
 | Crimson Window Box | `atouchofclass:crimson_window_box` | Survival obtainable — [crimson_window_box](recipes.md#crimson-window-box) |
+| Crimson Window Pane | `atouchofclass:crimson_window_pane` | Survival obtainable — [crimson_window_pane](recipes.md#crimson-window-pane) |
 | Crimson Four-Post Bed (Yellow) | `atouchofclass:crimson_yellow_four_post_bed` | Survival obtainable — [crimson_yellow_four_post_bed](recipes.md#crimson-yellow-four-post-bed) |
 | Crown Moulding | `atouchofclass:crown_moulding` | Survival obtainable — [crown_moulding](recipes.md#crown-moulding) |
 | Cut Copper Countertop | `atouchofclass:cut_copper_countertop` | Survival obtainable — [cut_copper_countertop](recipes.md#cut-copper-countertop) |
@@ -245,6 +250,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Dark Oak Transom | `atouchofclass:dark_oak_transom` | Survival obtainable — [dark_oak_transom](recipes.md#dark-oak-transom) |
 | Dark Oak Four-Post Bed (White) | `atouchofclass:dark_oak_white_four_post_bed` | Survival obtainable — [dark_oak_white_four_post_bed](recipes.md#dark-oak-white-four-post-bed) |
 | Dark Oak Window Box | `atouchofclass:dark_oak_window_box` | Survival obtainable — [dark_oak_window_box](recipes.md#dark-oak-window-box) |
+| Dark Oak Window Pane | `atouchofclass:dark_oak_window_pane` | Survival obtainable — [dark_oak_window_pane](recipes.md#dark-oak-window-pane) |
 | Dark Oak Four-Post Bed (Yellow) | `atouchofclass:dark_oak_yellow_four_post_bed` | Survival obtainable — [dark_oak_yellow_four_post_bed](recipes.md#dark-oak-yellow-four-post-bed) |
 | Dark Prismarine Countertop | `atouchofclass:dark_prismarine_countertop` | Survival obtainable — [dark_prismarine_countertop](recipes.md#dark-prismarine-countertop) |
 | Dark Prismarine Sink | `atouchofclass:dark_prismarine_sink` | Survival obtainable — [dark_prismarine_sink](recipes.md#dark-prismarine-sink) |
@@ -313,6 +319,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Jungle Transom | `atouchofclass:jungle_transom` | Survival obtainable — [jungle_transom](recipes.md#jungle-transom) |
 | Jungle Four-Post Bed (White) | `atouchofclass:jungle_white_four_post_bed` | Survival obtainable — [jungle_white_four_post_bed](recipes.md#jungle-white-four-post-bed) |
 | Jungle Window Box | `atouchofclass:jungle_window_box` | Survival obtainable — [jungle_window_box](recipes.md#jungle-window-box) |
+| Jungle Window Pane | `atouchofclass:jungle_window_pane` | Survival obtainable — [jungle_window_pane](recipes.md#jungle-window-pane) |
 | Jungle Four-Post Bed (Yellow) | `atouchofclass:jungle_yellow_four_post_bed` | Survival obtainable — [jungle_yellow_four_post_bed](recipes.md#jungle-yellow-four-post-bed) |
 | Key Cutter | `atouchofclass:key_cutter` | Survival obtainable — [key_cutter](recipes.md#key-cutter) |
 | Key Ring | `atouchofclass:key_ring` | Survival obtainable — [key_ring](recipes.md#key-ring) |
@@ -360,6 +367,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Mangrove Transom | `atouchofclass:mangrove_transom` | Survival obtainable — [mangrove_transom](recipes.md#mangrove-transom) |
 | Mangrove Four-Post Bed (White) | `atouchofclass:mangrove_white_four_post_bed` | Survival obtainable — [mangrove_white_four_post_bed](recipes.md#mangrove-white-four-post-bed) |
 | Mangrove Window Box | `atouchofclass:mangrove_window_box` | Survival obtainable — [mangrove_window_box](recipes.md#mangrove-window-box) |
+| Mangrove Window Pane | `atouchofclass:mangrove_window_pane` | Survival obtainable — [mangrove_window_pane](recipes.md#mangrove-window-pane) |
 | Mangrove Four-Post Bed (Yellow) | `atouchofclass:mangrove_yellow_four_post_bed` | Survival obtainable — [mangrove_yellow_four_post_bed](recipes.md#mangrove-yellow-four-post-bed) |
 | Marble Tile | `atouchofclass:marble_tile` | Survival obtainable — [marble_tile](recipes.md#marble-tile) |
 | Nether Brick Countertop | `atouchofclass:nether_brick_countertop` | Survival obtainable — [nether_brick_countertop](recipes.md#nether-brick-countertop) |
@@ -394,6 +402,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Oak Transom | `atouchofclass:oak_transom` | Survival obtainable — [oak_transom](recipes.md#oak-transom) |
 | Oak Four-Post Bed (White) | `atouchofclass:oak_white_four_post_bed` | Survival obtainable — [oak_white_four_post_bed](recipes.md#oak-white-four-post-bed) |
 | Oak Window Box | `atouchofclass:oak_window_box` | Survival obtainable — [oak_window_box](recipes.md#oak-window-box) |
+| Oak Window Pane | `atouchofclass:oak_window_pane` | Survival obtainable — [oak_window_pane](recipes.md#oak-window-pane) |
 | Oak Four-Post Bed (Yellow) | `atouchofclass:oak_yellow_four_post_bed` | Survival obtainable — [oak_yellow_four_post_bed](recipes.md#oak-yellow-four-post-bed) |
 | Octagonal Inset Tile | `atouchofclass:octagonal_inset_tile` | Survival obtainable — [octagonal_inset_tile](recipes.md#octagonal-inset-tile) |
 | Ogee Lattice Wallpaper | `atouchofclass:ogee_lattice_wallpaper` | Survival obtainable — [ogee_lattice_wallpaper](recipes.md#ogee-lattice-wallpaper) |
@@ -443,6 +452,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Pale Oak Transom | `atouchofclass:pale_oak_transom` | Survival obtainable — [pale_oak_transom](recipes.md#pale-oak-transom) |
 | Pale Oak Four-Post Bed (White) | `atouchofclass:pale_oak_white_four_post_bed` | Survival obtainable — [pale_oak_white_four_post_bed](recipes.md#pale-oak-white-four-post-bed) |
 | Pale Oak Window Box | `atouchofclass:pale_oak_window_box` | Survival obtainable — [pale_oak_window_box](recipes.md#pale-oak-window-box) |
+| Pale Oak Window Pane | `atouchofclass:pale_oak_window_pane` | Survival obtainable — [pale_oak_window_pane](recipes.md#pale-oak-window-pane) |
 | Pale Oak Four-Post Bed (Yellow) | `atouchofclass:pale_oak_yellow_four_post_bed` | Survival obtainable — [pale_oak_yellow_four_post_bed](recipes.md#pale-oak-yellow-four-post-bed) |
 | Peony Bunch | `atouchofclass:peony_bunch` | Survival obtainable — [peony_bunch](recipes.md#peony-bunch) |
 | Pink Concrete Countertop | `atouchofclass:pink_concrete_countertop` | Survival obtainable — [pink_concrete_countertop](recipes.md#pink-concrete-countertop) |
@@ -493,6 +503,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Poplar Transom | `atouchofclass:poplar_transom` | Survival obtainable — [poplar_transom](recipes.md#poplar-transom) |
 | Poplar Four-Post Bed (White) | `atouchofclass:poplar_white_four_post_bed` | Survival obtainable — [poplar_white_four_post_bed](recipes.md#poplar-white-four-post-bed) |
 | Poplar Window Box | `atouchofclass:poplar_window_box` | Survival obtainable — [poplar_window_box](recipes.md#poplar-window-box) |
+| Poplar Window Pane | `atouchofclass:poplar_window_pane` | Survival obtainable — [poplar_window_pane](recipes.md#poplar-window-pane) |
 | Poplar Four-Post Bed (Yellow) | `atouchofclass:poplar_yellow_four_post_bed` | Survival obtainable — [poplar_yellow_four_post_bed](recipes.md#poplar-yellow-four-post-bed) |
 | Poppy Bunch | `atouchofclass:poppy_bunch` | Survival obtainable — [poppy_bunch](recipes.md#poppy-bunch) |
 | Prismarine Brick Countertop | `atouchofclass:prismarine_brick_countertop` | Survival obtainable — [prismarine_brick_countertop](recipes.md#prismarine-brick-countertop) |
@@ -554,6 +565,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Spruce Transom | `atouchofclass:spruce_transom` | Survival obtainable — [spruce_transom](recipes.md#spruce-transom) |
 | Spruce Four-Post Bed (White) | `atouchofclass:spruce_white_four_post_bed` | Survival obtainable — [spruce_white_four_post_bed](recipes.md#spruce-white-four-post-bed) |
 | Spruce Window Box | `atouchofclass:spruce_window_box` | Survival obtainable — [spruce_window_box](recipes.md#spruce-window-box) |
+| Spruce Window Pane | `atouchofclass:spruce_window_pane` | Survival obtainable — [spruce_window_pane](recipes.md#spruce-window-pane) |
 | Spruce Four-Post Bed (Yellow) | `atouchofclass:spruce_yellow_four_post_bed` | Survival obtainable — [spruce_yellow_four_post_bed](recipes.md#spruce-yellow-four-post-bed) |
 | Square Plaster Column | `atouchofclass:square_plaster_column` | Survival obtainable — [square_plaster_column](recipes.md#square-plaster-column) |
 | Square Plaster Column Base | `atouchofclass:square_plaster_column_base` | Survival obtainable — [square_plaster_column_base](recipes.md#square-plaster-column-base) |
@@ -637,6 +649,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Warped Transom | `atouchofclass:warped_transom` | Survival obtainable — [warped_transom](recipes.md#warped-transom) |
 | Warped Four-Post Bed (White) | `atouchofclass:warped_white_four_post_bed` | Survival obtainable — [warped_white_four_post_bed](recipes.md#warped-white-four-post-bed) |
 | Warped Window Box | `atouchofclass:warped_window_box` | Survival obtainable — [warped_window_box](recipes.md#warped-window-box) |
+| Warped Window Pane | `atouchofclass:warped_window_pane` | Survival obtainable — [warped_window_pane](recipes.md#warped-window-pane) |
 | Warped Four-Post Bed (Yellow) | `atouchofclass:warped_yellow_four_post_bed` | Survival obtainable — [warped_yellow_four_post_bed](recipes.md#warped-yellow-four-post-bed) |
 | Waxed Copper Bowl Ceiling Light | `atouchofclass:waxed_copper_bowl_ceiling_light` | Survival obtainable — [waxed_copper_bowl_ceiling_light](recipes.md#waxed-copper-bowl-ceiling-light) |
 | Waxed Copper Chandelier Chain | `atouchofclass:waxed_copper_chain` | Survival obtainable — [waxed_copper_chain](recipes.md#waxed-copper-chain) |

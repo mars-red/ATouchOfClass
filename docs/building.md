@@ -20,6 +20,14 @@ Tiles already placed before this feature was added retain the original texture w
 
 *Marble tiles mix texture variants and rotations automatically as you place them.*
 
+## Wood-framed window panes
+
+Window panes come in all 13 woods listed in the [reference](reference.md). They use the same clear glass and thin wooden border as [transoms](doors-and-access.md#add-transoms-above-an-entrance), but are only **1 unit deep** and sit at the **center of the block**. Each panel fills one block in width and height. Place matching panes beside and above one another in a window opening: their retained borders give the appearance of wooden muntins between the glass panels. Keep the panes facing along the same axis to form a flat window.
+
+Placement follows the player's facing, or automatically takes the facing of a tall door or sidelight directly below. Panes can be placed elsewhere and remain without supporting blocks. They share the transom's special merge rule: matching panes directly over paired tall doors merge only across that pair. Ordinary window grids retain their frames.
+
+Craft **4 window panes** with a horizontal `SGS` row: `S` is the matching wood slab and `G` is a **glass block**. Transoms use planks around a glass block instead. Obtaining the matching slab unlocks the recipe. Breaking a framed window pane drops one matching item. See the [oak recipe](recipes.md#oak-window-pane) or the catalog for other woods.
+
 ## Exterior window ledges
 
 **Brick Window Ledge** and **Buff Brick Window Ledge** finish the exterior below a window. Each ledge occupies its own block space at the top, measuring 16 units wide, 4 units high, and 4 units deep. Place adjacent ledges against the same wall face to form a continuous run with matching brick and mortar detail.
