@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/oxeye_daisy_bunch_planted.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "oxeye_daisy": "minecraft:block/oxeye_daisy",
+    "particle": "minecraft:block/oxeye_daisy"
+  }
+}

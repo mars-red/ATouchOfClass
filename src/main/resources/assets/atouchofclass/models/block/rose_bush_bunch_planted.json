@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/rose_bush_bunch_planted.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "rose_bush_bottom": "minecraft:block/rose_bush_bottom",
+    "rose_bush_top": "minecraft:block/rose_bush_top",
+    "particle": "minecraft:block/rose_bush_bottom"
+  }
+}

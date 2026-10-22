@@ -16,6 +16,10 @@ public final class ModGameTests {
             DeferredRegister.create(Registries.TEST_FUNCTION, ATouchofClass.MODID);
 
     static {
+        FUNCTIONS.register("flowerbunchgametests.everyflowerplantsineverywindowbox", () -> FlowerBunchGameTests::everyFlowerPlantsInEveryWindowBox);
+        FUNCTIONS.register("flowerbunchgametests.rejectsgroundoccupiedboxesandexcludedplants", () -> FlowerBunchGameTests::rejectsGroundOccupiedBoxesAndExcludedPlants);
+        FUNCTIONS.register("flowerbunchgametests.harvestandsupportlossdropexactlyonebunch", () -> FlowerBunchGameTests::harvestAndSupportLossDropExactlyOneBunch);
+        FUNCTIONS.register("flowerbunchgametests.fourmatchingflowerscraftoneandunlock", () -> FlowerBunchGameTests::fourMatchingFlowersCraftOneAndUnlock);
         FUNCTIONS.register("windowboxgametests.everywoodplacesflushoneverywall", () -> WindowBoxGameTests::everyWoodPlacesFlushOnEveryWall);
         FUNCTIONS.register("windowboxgametests.joinsextendsandbreaksindependently", () -> WindowBoxGameTests::joinsExtendsAndBreaksIndependently);
         FUNCTIONS.register("windowboxgametests.everywoodcraftssixunlocksanddrops", () -> WindowBoxGameTests::everyWoodCraftsSixUnlocksAndDrops);

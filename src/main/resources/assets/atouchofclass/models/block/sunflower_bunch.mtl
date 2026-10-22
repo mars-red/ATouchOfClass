@@ -1,0 +1,12 @@
+newmtl sunflower_back
+Kd 1 1 1
+map_Kd #sunflower_back
+newmtl sunflower_bottom
+Kd 1 1 1
+map_Kd #sunflower_bottom
+newmtl sunflower_front
+Kd 1 1 1
+map_Kd #sunflower_front
+newmtl sunflower_top
+Kd 1 1 1
+map_Kd #sunflower_top

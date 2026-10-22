@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/peony_bunch_planted.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "peony_bottom": "minecraft:block/peony_bottom",
+    "peony_top": "minecraft:block/peony_top",
+    "particle": "minecraft:block/peony_bottom"
+  }
+}

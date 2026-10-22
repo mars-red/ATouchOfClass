@@ -419,6 +419,19 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_yellow_four_post_bed.json)
 
+## allium-bunch
+
+**Output:** 1 × Allium Bunch (`atouchofclass:allium_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:allium`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/allium_bunch.json)
+
 ## andesite-countertop
 
 **Output:** 6 × Andesite Countertop (`atouchofclass:andesite_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -443,6 +456,19 @@ S.S
 `S` = `minecraft:andesite_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/andesite_sink.json)
+
+## azure-bluet-bunch
+
+**Output:** 1 × Azure Bluet Bunch (`atouchofclass:azure_bluet_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:azure_bluet`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/azure_bluet_bunch.json)
 
 ## bamboo-baluster
 
@@ -1332,6 +1358,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_sink.json)
 
+## blue-orchid-bunch
+
+**Output:** 1 × Blue Orchid Bunch (`atouchofclass:blue_orchid_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:blue_orchid`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_orchid_bunch.json)
+
 ## brick-window-ledge
 
 **Output:** 16 × Brick Window Ledge (`atouchofclass:brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
@@ -1492,6 +1531,19 @@ BBB
 `B` = `minecraft:bricks`; `W` = `minecraft:white_dye`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/buff_bricks.json)
+
+## cactus-flower-bunch
+
+**Output:** 1 × Cactus Flower Bunch (`atouchofclass:cactus_flower_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:cactus_flower`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cactus_flower_bunch.json)
 
 ## calcite-countertop
 
@@ -2032,6 +2084,19 @@ CCC
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/clay_toilet.json)
 
+## closed-eyeblossom-bunch
+
+**Output:** 1 × Closed Eyeblossom Bunch (`atouchofclass:closed_eyeblossom_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:closed_eyeblossom`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/closed_eyeblossom_bunch.json)
+
 ## copper-bowl-ceiling-light
 
 **Output:** 1 × Copper Bowl Ceiling Light (`atouchofclass:copper_bowl_ceiling_light`). **Type:** `minecraft:crafting_shaped`.
@@ -2156,6 +2221,19 @@ S
 `P` = `atouchofclass:bucket_of_plaster`; `S` = `#minecraft:wooden_slabs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/corner_block.json)
+
+## cornflower-bunch
+
+**Output:** 1 × Cornflower Bunch (`atouchofclass:cornflower_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:cornflower`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cornflower_bunch.json)
 
 ## cornflower-wallpaper
 
@@ -2647,6 +2725,19 @@ S.S
 `S` = `minecraft:cyan_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_sink.json)
+
+## dandelion-bunch
+
+**Output:** 1 × Dandelion Bunch (`atouchofclass:dandelion_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:dandelion`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dandelion_bunch.json)
 
 ## dark-oak-baluster
 
@@ -3319,6 +3410,19 @@ G
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/glass_shower_surround.json)
 
+## golden-dandelion-bunch
+
+**Output:** 1 × Golden Dandelion Bunch (`atouchofclass:golden_dandelion_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:golden_dandelion`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/golden_dandelion_bunch.json)
+
 ## gothic-wallpaper
 
 **Output:** 4 × Gothic Wallpaper (`atouchofclass:gothic_wallpaper`). **Type:** `minecraft:crafting_shaped`.
@@ -3966,6 +4070,32 @@ S.S
 `S` = `minecraft:light_gray_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_sink.json)
+
+## lilac-bunch
+
+**Output:** 1 × Lilac Bunch (`atouchofclass:lilac_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:lilac`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lilac_bunch.json)
+
+## lily-of-the-valley-bunch
+
+**Output:** 1 × Lily Of The Valley Bunch (`atouchofclass:lily_of_the_valley_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:lily_of_the_valley`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lily_of_the_valley_bunch.json)
 
 ## lime-concrete-countertop
 
@@ -4910,6 +5040,19 @@ PGP
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/ogee_lattice_wallpaper.json)
 
+## open-eyeblossom-bunch
+
+**Output:** 1 × Open Eyeblossom Bunch (`atouchofclass:open_eyeblossom_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:open_eyeblossom`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/open_eyeblossom_bunch.json)
+
 ## orange-concrete-countertop
 
 **Output:** 6 × Orange Concrete Countertop (`atouchofclass:orange_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4935,6 +5078,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_sink.json)
 
+## orange-tulip-bunch
+
+**Output:** 1 × Orange Tulip Bunch (`atouchofclass:orange_tulip_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:orange_tulip`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_tulip_bunch.json)
+
 ## oven
 
 **Output:** 1 × Oven (`atouchofclass:oven`). **Type:** `minecraft:crafting_shaped`.
@@ -4948,6 +5104,19 @@ SSS
 `F` = `minecraft:furnace`; `S` = `atouchofclass:brushed_stainless_steel`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oven.json)
+
+## oxeye-daisy-bunch
+
+**Output:** 1 × Oxeye Daisy Bunch (`atouchofclass:oxeye_daisy_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:oxeye_daisy`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oxeye_daisy_bunch.json)
 
 ## oxidized-cut-copper-countertop
 
@@ -5387,6 +5556,19 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_yellow_four_post_bed.json)
 
+## peony-bunch
+
+**Output:** 1 × Peony Bunch (`atouchofclass:peony_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:peony`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/peony_bunch.json)
+
 ## pink-concrete-countertop
 
 **Output:** 6 × Pink Concrete Countertop (`atouchofclass:pink_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -5411,6 +5593,45 @@ S.S
 `S` = `minecraft:pink_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_sink.json)
+
+## pink-petals-bunch
+
+**Output:** 1 × Pink Petals Bunch (`atouchofclass:pink_petals_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:pink_petals`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_petals_bunch.json)
+
+## pink-tulip-bunch
+
+**Output:** 1 × Pink Tulip Bunch (`atouchofclass:pink_tulip_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:pink_tulip`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_tulip_bunch.json)
+
+## pitcher-plant-bunch
+
+**Output:** 1 × Pitcher Plant Bunch (`atouchofclass:pitcher_plant_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:pitcher_plant`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pitcher_plant_bunch.json)
 
 ## plinth-block
 
@@ -5989,6 +6210,19 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_yellow_four_post_bed.json)
 
+## poppy-bunch
+
+**Output:** 1 × Poppy Bunch (`atouchofclass:poppy_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:poppy`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poppy_bunch.json)
+
 ## prismarine-brick-countertop
 
 **Output:** 6 × Prismarine Brick Countertop (`atouchofclass:prismarine_brick_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -6175,6 +6409,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_nether_brick_sink.json)
 
+## red-tulip-bunch
+
+**Output:** 1 × Red Tulip Bunch (`atouchofclass:red_tulip_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:red_tulip`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_tulip_bunch.json)
+
 ## refrigerator
 
 **Output:** 1 × Refrigerator (`atouchofclass:refrigerator`). **Type:** `minecraft:crafting_shaped`.
@@ -6213,6 +6460,19 @@ S.S
 `S` = `minecraft:resin_brick_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/resin_brick_sink.json)
+
+## rose-bush-bunch
+
+**Output:** 1 × Rose Bush Bunch (`atouchofclass:rose_bush_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:rose_bush`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/rose_bush_bunch.json)
 
 ## round-plaster-column-base
 
@@ -6849,6 +7109,19 @@ PGP
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/striped_wallpaper.json)
 
+## sunflower-bunch
+
+**Output:** 1 × Sunflower Bunch (`atouchofclass:sunflower_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:sunflower`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/sunflower_bunch.json)
+
 ## tall-acacia-door
 
 **Output:** 2 × Tall Acacia Door (`atouchofclass:tall_acacia_door`). **Type:** `minecraft:crafting_shaped`.
@@ -7403,6 +7676,19 @@ DG.
 **Cooking:** 600 ticks; experience: 3.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/toilet.json)
+
+## torchflower-bunch
+
+**Output:** 1 × Torchflower Bunch (`atouchofclass:torchflower_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:torchflower`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/torchflower_bunch.json)
 
 ## wainscoting
 
@@ -8264,6 +8550,32 @@ I.I
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_stucco.json)
 
+## white-tulip-bunch
+
+**Output:** 1 × White Tulip Bunch (`atouchofclass:white_tulip_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:white_tulip`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_tulip_bunch.json)
+
+## wildflowers-bunch
+
+**Output:** 1 × Wildflowers Bunch (`atouchofclass:wildflowers_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:wildflowers`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/wildflowers_bunch.json)
+
 ## window-apron
 
 **Output:** 6 × Window Apron (`atouchofclass:window_apron`). **Type:** `minecraft:crafting_shaped`.
@@ -8276,6 +8588,19 @@ SP
 `P` = `atouchofclass:bucket_of_plaster`; `S` = `#minecraft:wooden_slabs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/window_apron.json)
+
+## wither-rose-bunch
+
+**Output:** 1 × Wither Rose Bunch (`atouchofclass:wither_rose_bunch`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+FF
+FF
+```
+
+`F` = `minecraft:wither_rose`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/wither_rose_bunch.json)
 
 ## yellow-concrete-countertop
 

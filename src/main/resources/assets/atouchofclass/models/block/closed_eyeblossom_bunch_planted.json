@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/closed_eyeblossom_bunch_planted.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "closed_eyeblossom": "minecraft:block/closed_eyeblossom",
+    "particle": "minecraft:block/closed_eyeblossom"
+  }
+}

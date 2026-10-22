@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "model": "atouchofclass:models/block/sunflower_bunch_planted.obj",
+  "automatic_culling": false,
+  "flip_v": false,
+  "shade_quads": false,
+  "ambientocclusion": false,
+  "textures": {
+    "sunflower_back": "minecraft:block/sunflower_back",
+    "sunflower_bottom": "minecraft:block/sunflower_bottom",
+    "sunflower_front": "minecraft:block/sunflower_front",
+    "sunflower_top": "minecraft:block/sunflower_top",
+    "particle": "minecraft:block/sunflower_back"
+  }
+}
