@@ -477,6 +477,14 @@ public class ModItems {
                     new Item.Properties().setId(ResourceKey.create(Registries.ITEM, key)).useBlockDescriptionPrefix())
     );
 
+    public static final java.util.Map<String, DeferredItem<BlockItem>> TRANSOM_ITEMS = registerTransomItems();
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerTransomItems() {
+        var items = new java.util.LinkedHashMap<String, DeferredItem<BlockItem>>();
+        ModBlocks.TRANSOMS.forEach((id, block) -> items.put(id, ITEMS.registerSimpleBlockItem(id, block)));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
     public static final java.util.Map<String, DeferredItem<TallDoorItem>> TALL_PATIO_DOOR_ITEMS = registerPatioDoorItems();
     public static final DeferredItem<TallDoorItem> TALL_OAK_PATIO_DOOR_ITEM = TALL_PATIO_DOOR_ITEMS.get("tall_oak_patio_door");
 
@@ -961,6 +969,7 @@ public class ModItems {
             event.accept(TALL_BIRCH_SIDELIGHT_ITEM);
             event.accept(TALL_OAK_DOOR_ITEM);
             TALL_PATIO_DOOR_ITEMS.values().forEach(event::accept);
+            TRANSOM_ITEMS.values().forEach(event::accept);
             event.accept(TALL_SPRUCE_DOOR_ITEM);
             event.accept(TALL_JUNGLE_DOOR_ITEM);
             event.accept(TALL_ACACIA_DOOR_ITEM);
