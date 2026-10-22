@@ -417,6 +417,18 @@ WWW
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_window_box.json)
 
+## acacia-window-pane
+
+**Output:** 4 × Acacia Window Pane (`atouchofclass:acacia_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:acacia_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_window_pane.json)
+
 ## acacia-yellow-four-post-bed
 
 **Output:** 1 × Acacia Four-Post Bed (Yellow) (`atouchofclass:acacia_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -893,6 +905,18 @@ WWW
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_window_box.json)
 
+## bamboo-window-pane
+
+**Output:** 4 × Bamboo Window Pane (`atouchofclass:bamboo_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:bamboo_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_window_pane.json)
+
 ## bamboo-yellow-four-post-bed
 
 **Output:** 1 × Bamboo Four-Post Bed (Yellow) (`atouchofclass:bamboo_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -1329,6 +1353,18 @@ WWW
 `D` = `minecraft:dirt`; `W` = `minecraft:birch_planks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_window_box.json)
+
+## birch-window-pane
+
+**Output:** 4 × Birch Window Pane (`atouchofclass:birch_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:birch_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_window_pane.json)
 
 ## birch-yellow-four-post-bed
 
@@ -2056,6 +2092,18 @@ WWW
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_window_box.json)
 
+## cherry-window-pane
+
+**Output:** 4 × Cherry Window Pane (`atouchofclass:cherry_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:cherry_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_window_pane.json)
+
 ## cherry-yellow-four-post-bed
 
 **Output:** 1 × Cherry Four-Post Bed (Yellow) (`atouchofclass:cherry_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -2708,6 +2756,18 @@ WWW
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_window_box.json)
 
+## crimson-window-pane
+
+**Output:** 4 × Crimson Window Pane (`atouchofclass:crimson_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:crimson_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_window_pane.json)
+
 ## crimson-yellow-four-post-bed
 
 **Output:** 1 × Crimson Four-Post Bed (Yellow) (`atouchofclass:crimson_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -3209,6 +3269,18 @@ WWW
 `D` = `minecraft:dirt`; `W` = `minecraft:dark_oak_planks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_window_box.json)
+
+## dark-oak-window-pane
+
+**Output:** 4 × Dark Oak Window Pane (`atouchofclass:dark_oak_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:dark_oak_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_window_pane.json)
 
 ## dark-oak-yellow-four-post-bed
 
@@ -4008,6 +4080,18 @@ WWW
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_window_box.json)
 
+## jungle-window-pane
+
+**Output:** 4 × Jungle Window Pane (`atouchofclass:jungle_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:jungle_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_window_pane.json)
+
 ## jungle-yellow-four-post-bed
 
 **Output:** 1 × Jungle Four-Post Bed (Yellow) (`atouchofclass:jungle_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -4642,6 +4726,18 @@ WWW
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_window_box.json)
 
+## mangrove-window-pane
+
+**Output:** 4 × Mangrove Window Pane (`atouchofclass:mangrove_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:mangrove_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_window_pane.json)
+
 ## mangrove-yellow-four-post-bed
 
 **Output:** 1 × Mangrove Four-Post Bed (Yellow) (`atouchofclass:mangrove_yellow_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -5105,6 +5201,18 @@ WWW
 `D` = `minecraft:dirt`; `W` = `minecraft:oak_planks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_window_box.json)
+
+## oak-window-pane
+
+**Output:** 4 × Oak Window Pane (`atouchofclass:oak_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:oak_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_window_pane.json)
 
 ## oak-yellow-four-post-bed
 
@@ -5661,6 +5769,18 @@ WWW
 `D` = `minecraft:dirt`; `W` = `minecraft:pale_oak_planks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_window_box.json)
+
+## pale-oak-window-pane
+
+**Output:** 4 × Pale Oak Window Pane (`atouchofclass:pale_oak_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:pale_oak_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_window_pane.json)
 
 ## pale-oak-yellow-four-post-bed
 
@@ -6327,6 +6447,18 @@ WWW
 `D` = `minecraft:dirt`; `W` = `minecraft:poplar_planks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_window_box.json)
+
+## poplar-window-pane
+
+**Output:** 4 × Poplar Window Pane (`atouchofclass:poplar_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:poplar_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_window_pane.json)
 
 ## poplar-yellow-four-post-bed
 
@@ -7134,6 +7266,18 @@ WWW
 `D` = `minecraft:dirt`; `W` = `minecraft:spruce_planks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_window_box.json)
+
+## spruce-window-pane
+
+**Output:** 4 × Spruce Window Pane (`atouchofclass:spruce_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:spruce_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_window_pane.json)
 
 ## spruce-yellow-four-post-bed
 
@@ -8271,6 +8415,18 @@ WWW
 `D` = `minecraft:dirt`; `W` = `minecraft:warped_planks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_window_box.json)
+
+## warped-window-pane
+
+**Output:** 4 × Warped Window Pane (`atouchofclass:warped_window_pane`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SGS
+```
+
+`G` = `minecraft:glass`; `S` = `minecraft:warped_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_window_pane.json)
 
 ## warped-yellow-four-post-bed
 

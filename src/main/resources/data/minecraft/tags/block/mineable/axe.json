@@ -405,6 +405,19 @@
     "atouchofclass:pale_oak_transom",
     "atouchofclass:bamboo_transom",
     "atouchofclass:crimson_transom",
-    "atouchofclass:warped_transom"
+    "atouchofclass:warped_transom",
+    "atouchofclass:oak_window_pane",
+    "atouchofclass:spruce_window_pane",
+    "atouchofclass:birch_window_pane",
+    "atouchofclass:poplar_window_pane",
+    "atouchofclass:jungle_window_pane",
+    "atouchofclass:acacia_window_pane",
+    "atouchofclass:dark_oak_window_pane",
+    "atouchofclass:mangrove_window_pane",
+    "atouchofclass:cherry_window_pane",
+    "atouchofclass:pale_oak_window_pane",
+    "atouchofclass:bamboo_window_pane",
+    "atouchofclass:crimson_window_pane",
+    "atouchofclass:warped_window_pane"
   ]
 }
