@@ -6,7 +6,7 @@ Use the [content catalog](catalog.md) to find exact item IDs and acquisition rou
 
 ## Material families
 
-The common 13-wood set is **oak, spruce, birch, poplar, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped**. It applies to regular tall doors, tall patio doors, sidelights, cabinets, dressers, nightstands, side tables, dining tables, dining chairs, wood rail families, shutters, and parquet flooring. Four-post beds use all 13 woods, including bamboo and poplar, combined with 16 bedding colors (208 variants).
+The common 13-wood set is **oak, spruce, birch, poplar, jungle, acacia, dark oak, mangrove, cherry, pale oak, bamboo, crimson, and warped**. It applies to regular tall doors, tall patio doors, sidelights, transoms, cabinets, dressers, nightstands, side tables, dining tables, dining chairs, wood rail families, shutters, and parquet flooring. Four-post beds use all 13 woods, including bamboo and poplar, combined with 16 bedding colors (208 variants).
 
 The 16 colors are white, orange, magenta, light blue, yellow, lime, pink, gray, light gray, cyan, purple, blue, brown, green, red, and black. Concrete countertops and sinks use these colors and are craftable from matching vanilla concrete slabs. Wood and copper finishes are separate item variants; do not assume dyeing or swapping a material in an unspecified grid will create one.
 
@@ -23,6 +23,7 @@ Copper lighting/chain families use unaffected, exposed, weathered, and oxidized 
 | Plaster bucket | 32 applications |
 | Plaster column shaft, base, or capital | One block high per piece; vertical placement only |
 | Tall door, tall patio door, sidelight, shower surround/door, elevator door | Three blocks high |
+| Transom | One block wide and high; 3/16-block depth with a 1/16-block wooden border; joins only over a tall-door pair |
 | Tall patio door leaf | One block wide; 3/16-block frame depth, including recessed handles |
 | Floor lamp or lamp post | Three blocks high |
 | Elevator call/destination control; newel post | Two blocks high |
