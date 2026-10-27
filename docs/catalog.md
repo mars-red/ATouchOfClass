@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**703 registered player-content items.**
+**704 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -220,6 +220,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Cyan Concrete Countertop | `atouchofclass:cyan_concrete_countertop` | Survival obtainable — [cyan_concrete_countertop](recipes.md#cyan-concrete-countertop) |
 | Cyan Concrete Sink | `atouchofclass:cyan_concrete_sink` | Survival obtainable — [cyan_concrete_sink](recipes.md#cyan-concrete-sink) |
 | Dandelion Bunch | `atouchofclass:dandelion_bunch` | Survival obtainable — [dandelion_bunch](recipes.md#dandelion-bunch) |
+| Dark Blue Floral Wallpaper | `atouchofclass:dark_blue_floral_wallpaper` | Survival obtainable — [dark_blue_floral_wallpaper](recipes.md#dark-blue-floral-wallpaper) |
 | Dark Oak Baluster | `atouchofclass:dark_oak_baluster` | Survival obtainable — [dark_oak_baluster](recipes.md#dark-oak-baluster) |
 | Dark Oak Balustrade | `atouchofclass:dark_oak_balustrade` | Survival obtainable — [dark_oak_balustrade](recipes.md#dark-oak-balustrade) |
 | Dark Oak Four-Post Bed (Black) | `atouchofclass:dark_oak_black_four_post_bed` | Survival obtainable — [dark_oak_black_four_post_bed](recipes.md#dark-oak-black-four-post-bed) |
