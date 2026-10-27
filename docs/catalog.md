@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**701 registered player-content items.**
+**704 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -220,6 +220,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Cyan Concrete Countertop | `atouchofclass:cyan_concrete_countertop` | Survival obtainable — [cyan_concrete_countertop](recipes.md#cyan-concrete-countertop) |
 | Cyan Concrete Sink | `atouchofclass:cyan_concrete_sink` | Survival obtainable — [cyan_concrete_sink](recipes.md#cyan-concrete-sink) |
 | Dandelion Bunch | `atouchofclass:dandelion_bunch` | Survival obtainable — [dandelion_bunch](recipes.md#dandelion-bunch) |
+| Dark Blue Floral Wallpaper | `atouchofclass:dark_blue_floral_wallpaper` | Survival obtainable — [dark_blue_floral_wallpaper](recipes.md#dark-blue-floral-wallpaper) |
 | Dark Oak Baluster | `atouchofclass:dark_oak_baluster` | Survival obtainable — [dark_oak_baluster](recipes.md#dark-oak-baluster) |
 | Dark Oak Balustrade | `atouchofclass:dark_oak_balustrade` | Survival obtainable — [dark_oak_balustrade](recipes.md#dark-oak-balustrade) |
 | Dark Oak Four-Post Bed (Black) | `atouchofclass:dark_oak_black_four_post_bed` | Survival obtainable — [dark_oak_black_four_post_bed](recipes.md#dark-oak-black-four-post-bed) |
@@ -457,6 +458,8 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Peony Bunch | `atouchofclass:peony_bunch` | Survival obtainable — [peony_bunch](recipes.md#peony-bunch) |
 | Pink Concrete Countertop | `atouchofclass:pink_concrete_countertop` | Survival obtainable — [pink_concrete_countertop](recipes.md#pink-concrete-countertop) |
 | Pink Concrete Sink | `atouchofclass:pink_concrete_sink` | Survival obtainable — [pink_concrete_sink](recipes.md#pink-concrete-sink) |
+| Pink Floral Wallpaper | `atouchofclass:pink_floral_wallpaper` | Survival obtainable — [pink_floral_wallpaper](recipes.md#pink-floral-wallpaper) |
+| Pink Geometric Wallpaper | `atouchofclass:pink_geometric_wallpaper` | Survival obtainable — [pink_geometric_wallpaper](recipes.md#pink-geometric-wallpaper) |
 | Pink Petals Bunch | `atouchofclass:pink_petals_bunch` | Survival obtainable — [pink_petals_bunch](recipes.md#pink-petals-bunch) |
 | Pink Tulip Bunch | `atouchofclass:pink_tulip_bunch` | Survival obtainable — [pink_tulip_bunch](recipes.md#pink-tulip-bunch) |
 | Pitcher Plant Bunch | `atouchofclass:pitcher_plant_bunch` | Survival obtainable — [pitcher_plant_bunch](recipes.md#pitcher-plant-bunch) |

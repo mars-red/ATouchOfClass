@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "minecraft:paper",
+    "G": "atouchofclass:bucket_of_plaster",
+    "W": "minecraft:white_dye",
+    "R": "minecraft:red_dye"
+  },
+  "pattern": [
+    " WR",
+    "PPP",
+    "PGP"
+  ],
+  "result": {
+    "count": 4,
+    "id": "atouchofclass:pink_floral_wallpaper"
+  }
+}

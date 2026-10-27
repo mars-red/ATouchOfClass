@@ -2859,6 +2859,20 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dandelion_bunch.json)
 
+## dark-blue-floral-wallpaper
+
+**Output:** 4 × Dark Blue Floral Wallpaper (`atouchofclass:dark_blue_floral_wallpaper`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.KB
+PPP
+PGP
+```
+
+`B` = `minecraft:blue_dye`; `G` = `atouchofclass:bucket_of_plaster`; `K` = `minecraft:black_dye`; `P` = `minecraft:paper`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_blue_floral_wallpaper.json)
+
 ## dark-oak-baluster
 
 **Output:** 32 × Dark Oak Baluster (`atouchofclass:dark_oak_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -5833,6 +5847,34 @@ S.S
 `S` = `minecraft:pink_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_sink.json)
+
+## pink-floral-wallpaper
+
+**Output:** 4 × Pink Floral Wallpaper (`atouchofclass:pink_floral_wallpaper`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.WR
+PPP
+PGP
+```
+
+`G` = `atouchofclass:bucket_of_plaster`; `P` = `minecraft:paper`; `R` = `minecraft:red_dye`; `W` = `minecraft:white_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_floral_wallpaper.json)
+
+## pink-geometric-wallpaper
+
+**Output:** 4 × Pink Geometric Wallpaper (`atouchofclass:pink_geometric_wallpaper`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+RW.
+PPP
+PGP
+```
+
+`G` = `atouchofclass:bucket_of_plaster`; `P` = `minecraft:paper`; `R` = `minecraft:red_dye`; `W` = `minecraft:white_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_geometric_wallpaper.json)
 
 ## pink-petals-bunch
 
