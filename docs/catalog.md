@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**701 registered player-content items.**
+**702 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -457,6 +457,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Peony Bunch | `atouchofclass:peony_bunch` | Survival obtainable — [peony_bunch](recipes.md#peony-bunch) |
 | Pink Concrete Countertop | `atouchofclass:pink_concrete_countertop` | Survival obtainable — [pink_concrete_countertop](recipes.md#pink-concrete-countertop) |
 | Pink Concrete Sink | `atouchofclass:pink_concrete_sink` | Survival obtainable — [pink_concrete_sink](recipes.md#pink-concrete-sink) |
+| Pink Floral Wallpaper | `atouchofclass:pink_floral_wallpaper` | Survival obtainable — [pink_floral_wallpaper](recipes.md#pink-floral-wallpaper) |
 | Pink Petals Bunch | `atouchofclass:pink_petals_bunch` | Survival obtainable — [pink_petals_bunch](recipes.md#pink-petals-bunch) |
 | Pink Tulip Bunch | `atouchofclass:pink_tulip_bunch` | Survival obtainable — [pink_tulip_bunch](recipes.md#pink-tulip-bunch) |
 | Pitcher Plant Bunch | `atouchofclass:pitcher_plant_bunch` | Survival obtainable — [pitcher_plant_bunch](recipes.md#pitcher-plant-bunch) |

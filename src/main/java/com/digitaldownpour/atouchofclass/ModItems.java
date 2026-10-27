@@ -406,6 +406,7 @@ public class ModItems {
     public static final DeferredItem<WallpaperItem> OGEE_LATTICE_WALLPAPER = registerWallpaper("ogee_lattice_wallpaper");
     public static final DeferredItem<WallpaperItem> STRIPED_WALLPAPER = registerWallpaper("striped_wallpaper");
     public static final DeferredItem<WallpaperItem> GOTHIC_WALLPAPER = registerWallpaper("gothic_wallpaper");
+    public static final DeferredItem<WallpaperItem> PINK_FLORAL_WALLPAPER = registerWallpaper("pink_floral_wallpaper");
 
     public static final DeferredItem<StoneQuoinItem> STONE_QUOIN =
             ITEMS.registerItem("stone_quoin", StoneQuoinItem::new, () -> new Item.Properties());
@@ -739,6 +740,7 @@ public class ModItems {
             event.accept(OGEE_LATTICE_WALLPAPER);
             event.accept(STRIPED_WALLPAPER);
             event.accept(GOTHIC_WALLPAPER);
+            event.accept(PINK_FLORAL_WALLPAPER);
             event.accept(SHAKE_SIDING);
             event.accept(STONE_QUOIN);
             event.accept(WHITE_STUCCO);

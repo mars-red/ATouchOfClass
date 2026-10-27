@@ -5834,6 +5834,20 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_sink.json)
 
+## pink-floral-wallpaper
+
+**Output:** 4 × Pink Floral Wallpaper (`atouchofclass:pink_floral_wallpaper`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.WR
+PPP
+PGP
+```
+
+`G` = `atouchofclass:bucket_of_plaster`; `P` = `minecraft:paper`; `R` = `minecraft:red_dye`; `W` = `minecraft:white_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_floral_wallpaper.json)
+
 ## pink-petals-bunch
 
 **Output:** 1 × Pink Petals Bunch (`atouchofclass:pink_petals_bunch`). **Type:** `minecraft:crafting_shaped`.
