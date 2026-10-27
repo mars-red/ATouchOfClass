@@ -21,23 +21,23 @@
     { "when": { "part": 0, "hinge": "right", "open": true, "facing": "west" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_bottom", "y": 0 } },
 
     { "when": { "part": 1, "hinge": "left", "open": false, "facing": "north" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 0 } },
-    { "when": { "part": 1, "hinge": "right", "open": false, "facing": "north" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 0 } },
-    { "when": { "part": 1, "hinge": "left", "open": true, "facing": "north" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 270 } },
+    { "when": { "part": 1, "hinge": "right", "open": false, "facing": "north" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle_right", "y": 0 } },
+    { "when": { "part": 1, "hinge": "left", "open": true, "facing": "north" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle_right", "y": 270 } },
     { "when": { "part": 1, "hinge": "right", "open": true, "facing": "north" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 90 } },
 
     { "when": { "part": 1, "hinge": "left", "open": false, "facing": "east" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 90 } },
-    { "when": { "part": 1, "hinge": "right", "open": false, "facing": "east" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 90 } },
-    { "when": { "part": 1, "hinge": "left", "open": true, "facing": "east" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 0 } },
+    { "when": { "part": 1, "hinge": "right", "open": false, "facing": "east" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle_right", "y": 90 } },
+    { "when": { "part": 1, "hinge": "left", "open": true, "facing": "east" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle_right", "y": 0 } },
     { "when": { "part": 1, "hinge": "right", "open": true, "facing": "east" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 180 } },
 
     { "when": { "part": 1, "hinge": "left", "open": false, "facing": "south" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 180 } },
-    { "when": { "part": 1, "hinge": "right", "open": false, "facing": "south" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 180 } },
-    { "when": { "part": 1, "hinge": "left", "open": true, "facing": "south" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 90 } },
+    { "when": { "part": 1, "hinge": "right", "open": false, "facing": "south" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle_right", "y": 180 } },
+    { "when": { "part": 1, "hinge": "left", "open": true, "facing": "south" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle_right", "y": 90 } },
     { "when": { "part": 1, "hinge": "right", "open": true, "facing": "south" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 270 } },
 
     { "when": { "part": 1, "hinge": "left", "open": false, "facing": "west" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 270 } },
-    { "when": { "part": 1, "hinge": "right", "open": false, "facing": "west" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 270 } },
-    { "when": { "part": 1, "hinge": "left", "open": true, "facing": "west" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 180 } },
+    { "when": { "part": 1, "hinge": "right", "open": false, "facing": "west" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle_right", "y": 270 } },
+    { "when": { "part": 1, "hinge": "left", "open": true, "facing": "west" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle_right", "y": 180 } },
     { "when": { "part": 1, "hinge": "right", "open": true, "facing": "west" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_middle", "y": 0 } },
 
     { "when": { "part": 2, "hinge": "left", "open": false, "facing": "north" }, "apply": { "model": "atouchofclass:block/tall_cherry_door_top", "y": 0 } },
