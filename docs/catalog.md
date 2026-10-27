@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**700 registered player-content items.**
+**701 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -573,6 +573,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Stone Brick Countertop | `atouchofclass:stone_brick_countertop` | Survival obtainable — [stone_brick_countertop](recipes.md#stone-brick-countertop) |
 | Stone Brick Sink | `atouchofclass:stone_brick_sink` | Survival obtainable — [stone_brick_sink](recipes.md#stone-brick-sink) |
 | Stone Countertop | `atouchofclass:stone_countertop` | Survival obtainable — [stone_countertop](recipes.md#stone-countertop) |
+| Stone Quoin | `atouchofclass:stone_quoin` | Survival obtainable — [stone_quoin](recipes.md#stone-quoin) |
 | Stone Sink | `atouchofclass:stone_sink` | Survival obtainable — [stone_sink](recipes.md#stone-sink) |
 | Striped Wallpaper | `atouchofclass:striped_wallpaper` | Survival obtainable — [striped_wallpaper](recipes.md#striped-wallpaper) |
 | Sunflower Bunch | `atouchofclass:sunflower_bunch` | Survival obtainable — [sunflower_bunch](recipes.md#sunflower-bunch) |

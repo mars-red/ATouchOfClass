@@ -46,6 +46,7 @@ Use a finish item on the face you want to cover. Each face stores one finish: ap
 | Wallpaper: cornflower, scalloped, ogee lattice, striped, gothic | Four side faces | Reusable item  |
 | Wainscoting | Four side faces | Reusable item |
 | Shake siding | Four side faces | Reusable item |
+| Stone Quoin | Four side faces | Reusable item; clicked half selects the left or right texture |
 | White stucco | All six faces | Reusable item |
 | Red brick and buff brick finishes | Side faces and top | Reusable item; cannot apply underneath |
 
@@ -64,6 +65,20 @@ To decorate a room, apply wainscoting to the lower row of wall faces and wallpap
 Start mining the decorated face to remove its overlay first. That initial action is intercepted so the supporting block is not broken by the same start action. Non-plaster overlays return their associated items in Survival; Creative removal drops nothing. Plaster overlays drop nothing, whether stripped from a face or removed by breaking the supporting block. Stop mining after stripping the face if you want to keep the wall intact. Breaking a block through an undecorated face also clears its remaining finishes.
 
 Applying a replacement finish directly overwrites the old finish. Remove a non-plaster finish first if you want its item back. Applied plaster cannot be recovered.
+
+## Stone quoins
+
+Use **Stone Quoin** to add stone corner details to brick or stone walls. Apply it to any side face of a block: click the left half for the left texture or the right half for the right texture. Top and underside faces do not accept quoins. The supporting block does not need to be stone or brick.
+
+For a finished corner, apply quoins separately to the two wall faces that meet there, choosing the half nearest the corner on each face. Repeat up the wall. Quoins use the same overlay system as wallpaper and siding: they do not occupy an extra block space, and each face can hold only one finish. Applying a quoin over a brick siding overlay replaces that face's siding; use brick blocks underneath if you want the brickwork to remain visible around the quoin.
+
+Craft **one Stone Quoin** from **two Stone Bricks blocks** placed diagonally in a 2×2 crafting grid, using `S ` on the first row and ` S` on the second. See the [recipe reference](recipes.md#stone-quoin). The item is reusable; strip it from a face using the [finish removal technique](#remove-or-replace-a-finish) to recover a Stone Quoin in Survival.
+
+<!-- screenshot:building-06:start -->
+![Brick walls meeting at an outside corner decorated with stone quoins on both faces.](images/building/stone-quoins.png)
+
+*Apply quoins to each face separately to continue the stone detail around a brick corner.*
+<!-- screenshot:building-06:end -->
 
 ## Wood shutters
 

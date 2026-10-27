@@ -7370,6 +7370,19 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/stone_countertop.json)
 
+## stone-quoin
+
+**Output:** 1 × Stone Quoin (`atouchofclass:stone_quoin`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+S.
+.S
+```
+
+`S` = `minecraft:stone_bricks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/stone_quoin.json)
+
 ## stone-sink
 
 **Output:** 6 × Stone Sink (`atouchofclass:stone_sink`). **Type:** `minecraft:crafting_shaped`.

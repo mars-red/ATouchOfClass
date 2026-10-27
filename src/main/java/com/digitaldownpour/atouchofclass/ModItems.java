@@ -7,6 +7,7 @@ import com.digitaldownpour.atouchofclass.items.TallDoorItem;
 import com.digitaldownpour.atouchofclass.items.WallFinishItem;
 import com.digitaldownpour.atouchofclass.items.WallpaperItem;
 import com.digitaldownpour.atouchofclass.items.WainscotingItem;
+import com.digitaldownpour.atouchofclass.items.StoneQuoinItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
@@ -406,6 +407,9 @@ public class ModItems {
     public static final DeferredItem<WallpaperItem> STRIPED_WALLPAPER = registerWallpaper("striped_wallpaper");
     public static final DeferredItem<WallpaperItem> GOTHIC_WALLPAPER = registerWallpaper("gothic_wallpaper");
 
+    public static final DeferredItem<StoneQuoinItem> STONE_QUOIN =
+            ITEMS.registerItem("stone_quoin", StoneQuoinItem::new, () -> new Item.Properties());
+
     public static final DeferredItem<WallFinishItem> SHAKE_SIDING = registerWallFinish(
             "shake_siding", WallFinishItem.Placement.WALLS_ONLY
     );
@@ -736,6 +740,7 @@ public class ModItems {
             event.accept(STRIPED_WALLPAPER);
             event.accept(GOTHIC_WALLPAPER);
             event.accept(SHAKE_SIDING);
+            event.accept(STONE_QUOIN);
             event.accept(WHITE_STUCCO);
             event.accept(RED_BRICK);
             event.accept(BUFF_BRICK);
