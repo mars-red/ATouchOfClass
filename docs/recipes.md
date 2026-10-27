@@ -5848,6 +5848,20 @@ PGP
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_floral_wallpaper.json)
 
+## pink-geometric-wallpaper
+
+**Output:** 4 × Pink Geometric Wallpaper (`atouchofclass:pink_geometric_wallpaper`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+RW.
+PPP
+PGP
+```
+
+`G` = `atouchofclass:bucket_of_plaster`; `P` = `minecraft:paper`; `R` = `minecraft:red_dye`; `W` = `minecraft:white_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_geometric_wallpaper.json)
+
 ## pink-petals-bunch
 
 **Output:** 1 × Pink Petals Bunch (`atouchofclass:pink_petals_bunch`). **Type:** `minecraft:crafting_shaped`.

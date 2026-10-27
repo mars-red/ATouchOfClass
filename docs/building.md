@@ -43,7 +43,7 @@ Use a finish item on the face you want to cover. Each face stores one finish: ap
 | Finish | Allowed faces | Use behavior |
 | --- | --- | --- |
 | Bucket of plaster | Any face, including top and underside | 32 applications in Survival; returns an empty bucket after the last use |
-| Wallpaper: cornflower, scalloped, ogee lattice, striped, gothic, pink floral | Four side faces | Reusable item  |
+| Wallpaper: cornflower, scalloped, ogee lattice, striped, gothic, pink floral, pink geometric | Four side faces | Reusable item  |
 | Wainscoting | Four side faces | Reusable item |
 | Shake siding | Four side faces | Reusable item |
 | Stone Quoin | Four side faces | Reusable item; clicked half selects the left or right texture |

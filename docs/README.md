@@ -17,7 +17,7 @@ Start as a [player](getting-started.md), [server owner](server-owners.md), or [m
 9. [Modpack author guide](modpack-authors.md)
 10. [Reference and troubleshooting](reference.md)
 
-The [content catalog](catalog.md) covers 702 registered player-content items. The [recipe reference](recipes.md) contains all 681 bundled recipes, including vanilla-item outputs supplied by the mod.
+The [content catalog](catalog.md) covers 703 registered player-content items. The [recipe reference](recipes.md) contains all 682 bundled recipes, including vanilla-item outputs supplied by the mod.
 
 ## Availability labels
 
