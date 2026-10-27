@@ -517,3 +517,25 @@ Generated from screenshots.json. Tasks are grouped by shared setup. The five tal
 **Alt text:** Pale oak window boxes filled with daisy bunches beneath a window framed by shutters.
 
 **Caption:** Pale oak window boxes with daisy bunches form a continuous planting beneath the window.
+
+## Stone quoins
+
+### building-06 — Stone quoins on brick corners
+
+**Status:** Image supplied; see the contributor guide for visual review status
+
+**Purpose:** Stone quoins on brick corners
+
+**Setup:** Build two brick walls meeting at an outside corner. Apply Stone Quoin overlays to both faces along the corner, choosing the clicked half nearest the edge.
+
+**Capture:** Show the corner at an angle so both decorated wall faces and the full height of the quoins are visible. Hide the HUD.
+
+**Must show:** Stone quoin details on both faces of a brick corner, with surrounding brickwork visible.
+
+**Avoid:** Keep the corner uncropped and free of chat, debug overlays, and interface elements.
+
+**Save as:** `docs/images/building/stone-quoins.png`
+
+**Alt text:** Brick walls meeting at an outside corner decorated with stone quoins on both faces.
+
+**Caption:** Apply quoins to each face separately to continue the stone detail around a brick corner.
