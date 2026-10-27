@@ -6554,6 +6554,20 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/prismarine_brick_sink.json)
 
+## prismarine-fish-scale-wall-tiles
+
+**Output:** 40 × Prismarine Fish Scale Wall Tiles (`atouchofclass:prismarine_fish_scale_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.P.
+P.P
+P.P
+```
+
+`P` = `minecraft:prismarine`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/prismarine_fish_scale_wall_tiles.json)
+
 ## purple-concrete-countertop
 
 **Output:** 6 × Purple Concrete Countertop (`atouchofclass:purple_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.

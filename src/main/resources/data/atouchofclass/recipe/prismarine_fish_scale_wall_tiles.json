@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "minecraft:prismarine"
+  },
+  "pattern": [
+    " P ",
+    "P P",
+    "P P"
+  ],
+  "result": {
+    "count": 40,
+    "id": "atouchofclass:prismarine_fish_scale_wall_tiles"
+  }
+}

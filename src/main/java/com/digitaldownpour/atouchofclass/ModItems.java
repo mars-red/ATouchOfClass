@@ -413,6 +413,10 @@ public class ModItems {
     public static final DeferredItem<StoneQuoinItem> STONE_QUOIN =
             ITEMS.registerItem("stone_quoin", StoneQuoinItem::new, () -> new Item.Properties());
 
+    public static final DeferredItem<WallFinishItem> PRISMARINE_FISH_SCALE_WALL_TILES = registerWallFinish(
+            "prismarine_fish_scale_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
     public static final DeferredItem<WallFinishItem> SHAKE_SIDING = registerWallFinish(
             "shake_siding", WallFinishItem.Placement.WALLS_ONLY
     );
@@ -747,6 +751,7 @@ public class ModItems {
             event.accept(DARK_BLUE_FLORAL_WALLPAPER);
             event.accept(SHAKE_SIDING);
             event.accept(STONE_QUOIN);
+            event.accept(PRISMARINE_FISH_SCALE_WALL_TILES);
             event.accept(WHITE_STUCCO);
             event.accept(RED_BRICK);
             event.accept(BUFF_BRICK);

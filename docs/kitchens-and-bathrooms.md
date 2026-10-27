@@ -55,6 +55,28 @@ S.S
 
 `S` is the matching concrete slab, such as `minecraft:white_concrete_slab`. Obtaining one unlocks both recipes for that color. See the [white countertop recipe](recipes.md#white-concrete-countertop), [white sink recipe](recipes.md#white-concrete-sink), and [catalog](catalog.md) for every color. The resulting fittings remain decorative; sinks have no fluid inventory or water interaction.
 
+## Wall tile overlays
+
+Use wall tile overlays for kitchen backsplashes, shower surrounds, or other decorative walls. Like wallpaper, they cover the clicked face without occupying another block space.
+
+| Wall tile | Allowed faces | Use behavior | Crafting recipe |
+| --- | --- | --- | --- |
+| Prismarine Fish Scale Wall Tiles | Four side faces | Reusable item | Five Prismarine blocks yield [40 wall tile items](recipes.md#prismarine-fish-scale-wall-tiles) |
+
+Apply tiles to any side face of a block; top and underside faces do not accept them. Each face holds one finish, so applying tiles replaces any existing finish on that face. Different faces of the same block can carry different finishes.
+
+Start mining a tiled face to strip its overlay first. Stop mining after stripping it if you want to keep the supporting block intact. Removal returns the wall tile item in Survival; Creative removal drops nothing. Remove tiles before applying another finish if you want their item back. See [finish removal and replacement](building.md#remove-or-replace-a-finish) for the shared overlay behavior.
+
+Craft Prismarine Fish Scale Wall Tiles using this pattern (`.` is an empty slot):
+
+```text
+.P.
+P.P
+P.P
+```
+
+`P` is a **Prismarine block**. Five blocks yield **40 wall tile items**, or eight items per block. Obtaining prismarine unlocks the recipe.
+
 ## Refrigerator
 
 Reserve a **2-wide × 1-deep × 3-high** space on a sturdy floor. The six sections form one refrigerator; you do not place each section separately. Use any section to open the six-row, 54-slot inventory.
