@@ -63,6 +63,7 @@ Use wall tile overlays for kitchen backsplashes, shower surrounds, or other deco
 | --- | --- | --- | --- |
 | Prismarine Fish Scale Wall Tiles | Four side faces | Reusable item | Five Prismarine blocks yield [40 wall tile items](recipes.md#prismarine-fish-scale-wall-tiles) |
 | Calcite Subway Tiles | Four side faces | Reusable item | Two Calcite blocks yield [16 wall tile items](recipes.md#calcite-subway-tiles) |
+| Deepslate Wall Tiles | Four side faces | Reusable item | Two Deepslate blocks yield [16 wall tile items](recipes.md#deepslate-wall-tiles) |
 
 Apply tiles to any side face of a block; top and underside faces do not accept them. Each face holds one finish, so applying tiles replaces any existing finish on that face. Different faces of the same block can carry different finishes.
 
@@ -79,6 +80,8 @@ P.P
 `P` is a **Prismarine block**. Five blocks yield **40 wall tile items**, or eight items per block. Obtaining prismarine unlocks the recipe.
 
 Craft **Calcite Subway Tiles** from two **Calcite blocks** placed diagonally in a 2×2 grid, using rows `C ` and ` C`. The recipe yields **16 wall tile items**, or eight items per block. Obtaining calcite unlocks the recipe.
+
+Craft **Deepslate Wall Tiles** with the same diagonal pattern as Calcite Subway Tiles, using **Deepslate blocks** instead of calcite. Two blocks yield **16 wall tile items**. Use ordinary deepslate, not cobbled deepslate; obtaining deepslate unlocks the recipe.
 
 ## Refrigerator
 

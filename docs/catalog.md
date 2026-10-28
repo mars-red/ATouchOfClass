@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**706 registered player-content items.**
+**707 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -260,6 +260,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Deepslate Brick Sink | `atouchofclass:deepslate_brick_sink` | Survival obtainable — [deepslate_brick_sink](recipes.md#deepslate-brick-sink) |
 | Deepslate Tile Countertop | `atouchofclass:deepslate_tile_countertop` | Survival obtainable — [deepslate_tile_countertop](recipes.md#deepslate-tile-countertop) |
 | Deepslate Tile Sink | `atouchofclass:deepslate_tile_sink` | Survival obtainable — [deepslate_tile_sink](recipes.md#deepslate-tile-sink) |
+| Deepslate Wall Tiles | `atouchofclass:deepslate_wall_tiles` | Survival obtainable — [deepslate_wall_tiles](recipes.md#deepslate-wall-tiles) |
 | Diorite Countertop | `atouchofclass:diorite_countertop` | Survival obtainable — [diorite_countertop](recipes.md#diorite-countertop) |
 | Diorite Sink | `atouchofclass:diorite_sink` | Survival obtainable — [diorite_sink](recipes.md#diorite-sink) |
 | Door Key | `atouchofclass:door_key` | Survival obtainable — [door_key](recipes.md#door-key) |

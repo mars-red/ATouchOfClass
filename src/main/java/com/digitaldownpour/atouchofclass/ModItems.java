@@ -413,6 +413,10 @@ public class ModItems {
     public static final DeferredItem<StoneQuoinItem> STONE_QUOIN =
             ITEMS.registerItem("stone_quoin", StoneQuoinItem::new, () -> new Item.Properties());
 
+    public static final DeferredItem<WallFinishItem> DEEPSLATE_WALL_TILES = registerWallFinish(
+            "deepslate_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
     public static final DeferredItem<WallFinishItem> CALCITE_SUBWAY_TILES = registerWallFinish(
             "calcite_subway_tiles", WallFinishItem.Placement.WALLS_ONLY
     );
@@ -757,6 +761,7 @@ public class ModItems {
             event.accept(STONE_QUOIN);
             event.accept(PRISMARINE_FISH_SCALE_WALL_TILES);
             event.accept(CALCITE_SUBWAY_TILES);
+            event.accept(DEEPSLATE_WALL_TILES);
             event.accept(WHITE_STUCCO);
             event.accept(RED_BRICK);
             event.accept(BUFF_BRICK);

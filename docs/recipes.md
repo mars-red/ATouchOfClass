@@ -3398,6 +3398,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/deepslate_tile_sink.json)
 
+## deepslate-wall-tiles
+
+**Output:** 16 × Deepslate Wall Tiles (`atouchofclass:deepslate_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+C.
+.C
+```
+
+`C` = `minecraft:deepslate`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/deepslate_wall_tiles.json)
+
 ## diorite-countertop
 
 **Output:** 6 × Diorite Countertop (`atouchofclass:diorite_countertop`). **Type:** `minecraft:crafting_shaped`.
