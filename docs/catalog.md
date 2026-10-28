@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**705 registered player-content items.**
+**706 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -131,6 +131,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Calcite Countertop | `atouchofclass:calcite_countertop` | Survival obtainable — [calcite_countertop](recipes.md#calcite-countertop) |
 | Calcite Sink | `atouchofclass:calcite_sink` | Survival obtainable — [calcite_sink](recipes.md#calcite-sink) |
 | Calcite Slab | `atouchofclass:calcite_slab` | Survival obtainable — [calcite_slab](recipes.md#calcite-slab) |
+| Calcite Subway Tiles | `atouchofclass:calcite_subway_tiles` | Survival obtainable — [calcite_subway_tiles](recipes.md#calcite-subway-tiles) |
 | Calcite Tile | `atouchofclass:calcite_tile` | Survival obtainable — [calcite_tile](recipes.md#calcite-tile) |
 | Casing | `atouchofclass:casing` | Survival obtainable — [casing](recipes.md#casing) |
 | Cherry Baluster | `atouchofclass:cherry_baluster` | Survival obtainable — [cherry_baluster](recipes.md#cherry-baluster) |

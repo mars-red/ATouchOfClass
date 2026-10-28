@@ -1654,6 +1654,19 @@ CCC
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/calcite_slab.json)
 
+## calcite-subway-tiles
+
+**Output:** 16 × Calcite Subway Tiles (`atouchofclass:calcite_subway_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+C.
+.C
+```
+
+`C` = `minecraft:calcite`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/calcite_subway_tiles.json)
+
 ## calcite-tile
 
 **Output:** 16 × Calcite Tile (`atouchofclass:calcite_tile`). **Type:** `minecraft:crafting_shaped`.
