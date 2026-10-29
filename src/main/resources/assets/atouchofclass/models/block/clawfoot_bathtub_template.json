@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/block",
-  "ambientocclusion": false,
+  "ambientocclusion": true,
   "textures": {
     "porcelain": "minecraft:block/white_concrete",
     "shadow": "minecraft:block/light_gray_concrete",
