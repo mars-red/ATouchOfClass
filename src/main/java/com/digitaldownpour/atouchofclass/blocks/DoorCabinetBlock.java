@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 
-/** A cabinet whose paired doors continue through matching cabinets stacked vertically. */
+/** Matching vertical cabinets form two-block door pairs, starting at the stack bottom. */
 public class DoorCabinetBlock extends CabinetBlock {
     public static final BooleanProperty JOINED_ABOVE = BooleanProperty.create("joined_above");
     public static final BooleanProperty JOINED_BELOW = BooleanProperty.create("joined_below");
@@ -34,19 +34,25 @@ public class DoorCabinetBlock extends CabinetBlock {
     protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks,
                                      BlockPos pos, Direction direction, BlockPos neighborPos,
                                      BlockState neighborState, RandomSource random) {
-        if (direction == Direction.UP) {
-            return state.setValue(JOINED_ABOVE, joins(state, neighborState));
-        }
-        if (direction == Direction.DOWN) {
-            return state.setValue(JOINED_BELOW, joins(state, neighborState));
+        if (direction == Direction.UP || direction == Direction.DOWN) {
+            return connections(state, level, pos);
         }
         return super.updateShape(state, level, ticks, pos, direction, neighborPos, neighborState, random);
     }
 
     private BlockState connections(BlockState state, LevelReader level, BlockPos pos) {
+        // Derive pairing from positions, never from neighbors' potentially stale
+        // join flags. Changed flags propagate upward through shape updates.
+        int index = 0;
+        BlockPos below = pos.below();
+        while (joins(state, level.getBlockState(below))) {
+            index++;
+            below = below.below();
+        }
+        boolean upper = (index & 1) != 0;
         return state
-                .setValue(JOINED_ABOVE, joins(state, level.getBlockState(pos.above())))
-                .setValue(JOINED_BELOW, joins(state, level.getBlockState(pos.below())));
+                .setValue(JOINED_ABOVE, !upper && joins(state, level.getBlockState(pos.above())))
+                .setValue(JOINED_BELOW, upper);
     }
 
     private boolean joins(BlockState state, BlockState neighbor) {

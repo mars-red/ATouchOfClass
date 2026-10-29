@@ -1,6 +1,6 @@
 {
     "model":  {
                   "type":  "minecraft:model",
-                  "model":  "atouchofclass:item/crimson_door_cabinet"
+                  "model":  "atouchofclass:item/crimson_door_cabinet", "tints": [{"type": "minecraft:constant", "value": -986896}]
               }
 }

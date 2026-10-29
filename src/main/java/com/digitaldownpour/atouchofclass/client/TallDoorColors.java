@@ -13,6 +13,8 @@ import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 public final class TallDoorColors {
     // Neutral gray multiplies the original grain by about 90%, without a hue shift.
     private static final int PANEL_COLOR = 0xFFE6E6E6;
+    // Cabinet panels retain about 94% of the original texture brightness.
+    private static final int CABINET_PANEL_COLOR = 0xFFF0F0F0;
 
     private TallDoorColors() {}
 
@@ -26,5 +28,13 @@ public final class TallDoorColors {
                 ModBlocks.TALL_BAMBOO_DOOR.get(), ModBlocks.TALL_PALE_OAK_DOOR.get(),
                 ModBlocks.TALL_CRIMSON_DOOR.get(), ModBlocks.TALL_WARPED_DOOR.get(),
                 ModBlocks.TALL_POPLAR_DOOR.get());
+        event.register(List.of(BlockTintSources.constant(CABINET_PANEL_COLOR)),
+                ModBlocks.OAK_DOOR_CABINET.get(), ModBlocks.SPRUCE_DOOR_CABINET.get(),
+                ModBlocks.BIRCH_DOOR_CABINET.get(), ModBlocks.JUNGLE_DOOR_CABINET.get(),
+                ModBlocks.ACACIA_DOOR_CABINET.get(), ModBlocks.DARK_OAK_DOOR_CABINET.get(),
+                ModBlocks.MANGROVE_DOOR_CABINET.get(), ModBlocks.CHERRY_DOOR_CABINET.get(),
+                ModBlocks.BAMBOO_DOOR_CABINET.get(), ModBlocks.PALE_OAK_DOOR_CABINET.get(),
+                ModBlocks.CRIMSON_DOOR_CABINET.get(), ModBlocks.WARPED_DOOR_CABINET.get(),
+                ModBlocks.POPLAR_DOOR_CABINET.get());
     }
 }

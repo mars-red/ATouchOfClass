@@ -20,7 +20,7 @@ Build the supporting room first, then add storage and fittings. The table below 
 
 ## Cabinets and work surfaces
 
-Cabinets come in door and drawer styles across the 13 woods in the [reference](reference.md). Use one with an empty hand to open its inventory. Each cabinet keeps its own 27 slots; stacking cabinets does not merge inventories. Door cabinets of the same wood and facing connect their appearance vertically.
+Cabinets come in door and drawer styles across the 13 woods in the [reference](reference.md). Use one with an empty hand to open its inventory. Each cabinet keeps its own 27 slots; stacking cabinets does not merge inventories. Pairs of door cabinets of the same wood and facing connect their appearance vertically.
 
 Place countertops or sinks on top of the base units. Sneak-place against a cabinet to avoid opening it. These surfaces occupy their own block space; the countertop is a thin ⅛-block slab at the bottom of that space. Sinks add a basin model and faucet within that space. They are decorative and do not supply water buckets.
 
