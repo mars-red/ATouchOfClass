@@ -102,6 +102,36 @@ public class CabinetGameTests {
         helper.assertTrue(!lower.getValue(DoorCabinetBlock.JOINED_ABOVE), Component.literal("door cabinets facing different directions must not join"));
         helper.assertTrue(!upper.getValue(DoorCabinetBlock.JOINED_BELOW), Component.literal("a rotated door cabinet must not join the cabinet below"));
 
+        // Six cabinets must form three independent pairs, in either placement order.
+        for (Direction facing : Direction.Plane.HORIZONTAL) {
+            for (boolean topDown : new boolean[]{false, true}) {
+                for (int i = 0; i < 6; i++) helper.setBlock(lowerPos.above(i), Blocks.AIR);
+                var state = northFacing.setValue(DoorCabinetBlock.FACING, facing);
+                for (int i = 0; i < 6; i++) helper.setBlock(lowerPos.above(topDown ? 5-i : i), state);
+                assertPairs(helper, lowerPos, 6);
+                // Removing the bottom shifts the remaining stack's pair boundaries.
+                helper.setBlock(lowerPos, Blocks.AIR);
+                assertPairs(helper, lowerPos.above(), 5);
+                helper.setBlock(lowerPos, state);
+                assertPairs(helper, lowerPos, 6);
+                // A gap splits the column into independently paired runs.
+                helper.setBlock(lowerPos.above(2), Blocks.AIR);
+                assertPairs(helper, lowerPos, 2);
+                assertPairs(helper, lowerPos.above(3), 3);
+                helper.setBlock(lowerPos.above(2), state);
+                assertPairs(helper, lowerPos, 6);
+            }
+        }
         helper.succeed();
+    }
+
+    private static void assertPairs(GameTestHelper helper, BlockPos bottom, int height) {
+        for (int i = 0; i < height; i++) {
+            var state = helper.getBlockState(bottom.above(i));
+            boolean upper = (i & 1) != 0;
+            helper.assertTrue(state.getValue(DoorCabinetBlock.JOINED_BELOW) == upper
+                            && state.getValue(DoorCabinetBlock.JOINED_ABOVE) == (!upper && i+1 < height),
+                    Component.literal("Cabinet at stack index " + i + " must join only its pair"));
+        }
     }
 }

@@ -90,7 +90,7 @@
                                                   "texture":  "#wood"
                                               },
                                        "north":  {
-                                                     "texture":  "#wood"
+                                                     "texture":  "#wood", "tintindex": 0
                                                  },
                                        "south":  {
                                                      "texture":  "#wood"
@@ -250,7 +250,7 @@
                                                   "texture":  "#wood"
                                               },
                                        "north":  {
-                                                     "texture":  "#wood"
+                                                     "texture":  "#wood", "tintindex": 0
                                                  },
                                        "south":  {
                                                      "texture":  "#wood"

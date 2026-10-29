@@ -176,7 +176,9 @@ function Add-DoorElements([System.Collections.ArrayList] $Elements, [double] $X0
                           [bool] $JoinedAbove, [bool] $JoinedBelow) {
     $y0 = if ($JoinedBelow) { 0 } else { 1.5 }
     $y1 = if ($JoinedAbove) { 16 } else { 15.25 }
-    [void]$Elements.Add((New-Element @($X0, $y0, 1.5) @($X1, $y1, 2) "#wood"))
+    $panel = New-Element @($X0, $y0, 1.5) @($X1, $y1, 2) "#wood"
+    $panel.faces.north.tintindex = 0
+    [void]$Elements.Add($panel)
     [void]$Elements.Add((New-Element @($X0, $y0, 1.2) @(($X0 + .75), $y1, 1.5) "#wood"))
     [void]$Elements.Add((New-Element @(($X1 - .75), $y0, 1.2) @($X1, $y1, 1.5) "#wood"))
     if (-not $JoinedBelow) {
@@ -199,6 +201,13 @@ function Write-Cabinet([string] $Name, [ValidateSet("door", "drawer")] [string] 
                        [string] $WoodTexture, [string] $HandleTexture) {
     Write-SharedAssets $Name $true
     if ($Style -eq "door") {
+        Write-JsonFile (Join-Path $assetsRoot "items/$Name.json") ([ordered]@{
+            model = [ordered]@{
+                type = "minecraft:model"
+                model = "atouchofclass:item/$Name"
+                tints = @([ordered]@{ type = "minecraft:constant"; value = -986896 })
+            }
+        })
         Write-DoorCabinetBlockstate $Name
         Write-DoorCabinetModel $Name $WoodTexture $HandleTexture $false $false ""
         Write-DoorCabinetModel $Name $WoodTexture $HandleTexture $true $false "_joined_above"
@@ -233,8 +242,10 @@ function Write-DoorCabinetModel([string] $Name, [string] $WoodTexture, [string] 
     }
     Add-DoorElements $elements .75 7.75 $JoinedAbove $JoinedBelow
     Add-DoorElements $elements 8.25 15.25 $JoinedAbove $JoinedBelow
-    [void]$elements.Add((New-Element @(6.7, 8.7, 1) @(7.25, 9.25, 1.2) "#handle"))
-    [void]$elements.Add((New-Element @(8.75, 8.7, 1) @(9.3, 9.25, 1.2) "#handle"))
+    if (-not $JoinedBelow) {
+        [void]$elements.Add((New-Element @(6.7, 8.7, 1) @(7.25, 9.25, 1.2) "#handle"))
+        [void]$elements.Add((New-Element @(8.75, 8.7, 1) @(9.3, 9.25, 1.2) "#handle"))
+    }
 
     Write-JsonFile (Join-Path $assetsRoot "models/block/$Name$Suffix.json") ([ordered]@{
         parent = "minecraft:block/block"
