@@ -485,6 +485,10 @@ public class ModItems {
             "deepslate_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
     );
 
+    public static final DeferredItem<WallFinishItem> CALCITE_WALL_TILES = registerWallFinish(
+            "calcite_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
     public static final DeferredItem<WallFinishItem> CALCITE_SUBWAY_TILES = registerWallFinish(
             "calcite_subway_tiles", WallFinishItem.Placement.WALLS_ONLY
     );
@@ -829,6 +833,7 @@ public class ModItems {
             event.accept(STONE_QUOIN);
             event.accept(PRISMARINE_FISH_SCALE_WALL_TILES);
             event.accept(CALCITE_SUBWAY_TILES);
+            event.accept(CALCITE_WALL_TILES);
             event.accept(DEEPSLATE_WALL_TILES);
             event.accept(RESIN_WALL_TILES);
             event.accept(YELLOW_GLAZED_TERRACOTTA_WALL_TILES);

@@ -1719,6 +1719,19 @@ CC
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/calcite_tile.json)
 
+## calcite-wall-tiles
+
+**Output:** 32 × Calcite Wall Tiles (`atouchofclass:calcite_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CC
+CC
+```
+
+`C` = `minecraft:calcite`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/calcite_wall_tiles.json)
+
 ## casing
 
 **Output:** 8 × Casing (`atouchofclass:casing`). **Type:** `minecraft:crafting_shaped`.

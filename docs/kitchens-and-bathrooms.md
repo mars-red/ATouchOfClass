@@ -63,6 +63,7 @@ Use wall tile overlays for kitchen backsplashes, shower surrounds, or other deco
 | --- | --- | --- | --- |
 | Prismarine Fish Scale Wall Tiles | Four side faces | Reusable item | Five Prismarine blocks yield [40 wall tile items](recipes.md#prismarine-fish-scale-wall-tiles) |
 | Calcite Subway Tiles | Four side faces | Reusable item | Two Calcite blocks yield [16 wall tile items](recipes.md#calcite-subway-tiles) |
+| Calcite Wall Tiles | Four side faces | Reusable item | Four Calcite blocks yield [32 wall tile items](recipes.md#calcite-wall-tiles) |
 | Deepslate Wall Tiles | Four side faces | Reusable item | Two Deepslate blocks yield [16 wall tile items](recipes.md#deepslate-wall-tiles) |
 | Resin Wall Tiles | Four side faces | Reusable item | Three Blocks of Resin yield [24 wall tile items](recipes.md#resin-wall-tiles) |
 | Yellow Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#yellow-glazed-terracotta-wall-tiles) |
@@ -103,6 +104,8 @@ Craft **Deepslate Wall Tiles** with the same diagonal pattern as Calcite Subway 
 Craft **Resin Wall Tiles** from three **Blocks of Resin** using rows `R R` and ` R `. The recipe yields **24 wall tile items**, or eight items per block. Obtaining a Block of Resin unlocks the recipe.
 
 Craft **Glazed Terracotta Wall Tiles** in all 16 colors using two matching glazed terracotta blocks diagonally, with rows `G ` and ` G`. Each recipe yields **16 wall tile items**. Use glazed terracotta of the matching color; ordinary terracotta and mixed colors do not substitute. Obtaining the matching glazed terracotta unlocks its recipe.
+
+Craft **Calcite Wall Tiles** from four **Calcite blocks** in a 2×2 square, using rows `CC` and `CC`. The recipe yields **32 wall tile items**, or eight items per block. Obtaining calcite unlocks the recipe.
 
 ## Refrigerator
 
