@@ -6807,6 +6807,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/resin_brick_sink.json)
 
+## resin-wall-tiles
+
+**Output:** 24 × Resin Wall Tiles (`atouchofclass:resin_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+R.R
+.R.
+```
+
+`R` = `minecraft:resin_block`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/resin_wall_tiles.json)
+
 ## rose-bush-bunch
 
 **Output:** 1 × Rose Bush Bunch (`atouchofclass:rose_bush_bunch`). **Type:** `minecraft:crafting_shaped`.

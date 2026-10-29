@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**707 registered player-content items.**
+**708 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -531,6 +531,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Refrigerator | `atouchofclass:refrigerator` | Survival obtainable — [refrigerator](recipes.md#refrigerator) |
 | Resin Brick Countertop | `atouchofclass:resin_brick_countertop` | Survival obtainable — [resin_brick_countertop](recipes.md#resin-brick-countertop) |
 | Resin Brick Sink | `atouchofclass:resin_brick_sink` | Survival obtainable — [resin_brick_sink](recipes.md#resin-brick-sink) |
+| Resin Wall Tiles | `atouchofclass:resin_wall_tiles` | Survival obtainable — [resin_wall_tiles](recipes.md#resin-wall-tiles) |
 | Rose Bush Bunch | `atouchofclass:rose_bush_bunch` | Survival obtainable — [rose_bush_bunch](recipes.md#rose-bush-bunch) |
 | Round Plaster Column | `atouchofclass:round_plaster_column` | Survival obtainable — [round_plaster_column](recipes.md#round-plaster-column) |
 | Round Plaster Column Base | `atouchofclass:round_plaster_column_base` | Survival obtainable — [round_plaster_column_base](recipes.md#round-plaster-column-base) |
