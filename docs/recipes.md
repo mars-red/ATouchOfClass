@@ -1405,6 +1405,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_sink.json)
 
+## black-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Black Glazed Terracotta Wall Tiles (`atouchofclass:black_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:black_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_glazed_terracotta_wall_tiles.json)
+
 ## blue-concrete-countertop
 
 **Output:** 6 × Blue Concrete Countertop (`atouchofclass:blue_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -1429,6 +1442,19 @@ S.S
 `S` = `minecraft:blue_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_sink.json)
+
+## blue-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Blue Glazed Terracotta Wall Tiles (`atouchofclass:blue_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:blue_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_glazed_terracotta_wall_tiles.json)
 
 ## blue-orchid-bunch
 
@@ -1479,6 +1505,19 @@ S.S
 `S` = `minecraft:brown_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_sink.json)
+
+## brown-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Brown Glazed Terracotta Wall Tiles (`atouchofclass:brown_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:brown_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_glazed_terracotta_wall_tiles.json)
 
 ## brushed-stainless-steel
 
@@ -2859,6 +2898,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_sink.json)
 
+## cyan-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Cyan Glazed Terracotta Wall Tiles (`atouchofclass:cyan_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:cyan_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_glazed_terracotta_wall_tiles.json)
+
 ## dandelion-bunch
 
 **Output:** 1 × Dandelion Bunch (`atouchofclass:dandelion_bunch`). **Type:** `minecraft:crafting_shaped`.
@@ -3671,6 +3723,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_sink.json)
 
+## gray-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Gray Glazed Terracotta Wall Tiles (`atouchofclass:gray_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:gray_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_glazed_terracotta_wall_tiles.json)
+
 ## green-concrete-countertop
 
 **Output:** 6 × Green Concrete Countertop (`atouchofclass:green_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -3695,6 +3760,19 @@ S.S
 `S` = `minecraft:green_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_sink.json)
+
+## green-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Green Glazed Terracotta Wall Tiles (`atouchofclass:green_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:green_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_glazed_terracotta_wall_tiles.json)
 
 ## induction-cooktop
 
@@ -4254,6 +4332,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_sink.json)
 
+## light-blue-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Light Blue Glazed Terracotta Wall Tiles (`atouchofclass:light_blue_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:light_blue_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_glazed_terracotta_wall_tiles.json)
+
 ## light-gray-concrete-countertop
 
 **Output:** 6 × Light Gray Concrete Countertop (`atouchofclass:light_gray_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4278,6 +4369,19 @@ S.S
 `S` = `minecraft:light_gray_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_sink.json)
+
+## light-gray-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Light Gray Glazed Terracotta Wall Tiles (`atouchofclass:light_gray_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:light_gray_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_glazed_terracotta_wall_tiles.json)
 
 ## lilac-bunch
 
@@ -4330,6 +4434,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_sink.json)
 
+## lime-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Lime Glazed Terracotta Wall Tiles (`atouchofclass:lime_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:lime_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_glazed_terracotta_wall_tiles.json)
+
 ## magenta-concrete-countertop
 
 **Output:** 6 × Magenta Concrete Countertop (`atouchofclass:magenta_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4354,6 +4471,19 @@ S.S
 `S` = `minecraft:magenta_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_sink.json)
+
+## magenta-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Magenta Glazed Terracotta Wall Tiles (`atouchofclass:magenta_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:magenta_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_glazed_terracotta_wall_tiles.json)
 
 ## mangrove-baluster
 
@@ -5334,6 +5464,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_sink.json)
 
+## orange-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Orange Glazed Terracotta Wall Tiles (`atouchofclass:orange_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:orange_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_glazed_terracotta_wall_tiles.json)
+
 ## orange-tulip-bunch
 
 **Output:** 1 × Orange Tulip Bunch (`atouchofclass:orange_tulip_bunch`). **Type:** `minecraft:crafting_shaped`.
@@ -5901,6 +6044,19 @@ PGP
 `G` = `atouchofclass:bucket_of_plaster`; `P` = `minecraft:paper`; `R` = `minecraft:red_dye`; `W` = `minecraft:white_dye`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_geometric_wallpaper.json)
+
+## pink-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Pink Glazed Terracotta Wall Tiles (`atouchofclass:pink_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:pink_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_glazed_terracotta_wall_tiles.json)
 
 ## pink-petals-bunch
 
@@ -6619,6 +6775,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_sink.json)
 
+## purple-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Purple Glazed Terracotta Wall Tiles (`atouchofclass:purple_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:purple_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_glazed_terracotta_wall_tiles.json)
+
 ## purpur-countertop
 
 **Output:** 6 × Purpur Countertop (`atouchofclass:purpur_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -6729,6 +6898,19 @@ S.S
 `S` = `minecraft:red_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_sink.json)
+
+## red-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Red Glazed Terracotta Wall Tiles (`atouchofclass:red_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:red_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_glazed_terracotta_wall_tiles.json)
 
 ## red-nether-brick-countertop
 
@@ -8956,6 +9138,19 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_sink.json)
 
+## white-glazed-terracotta-wall-tiles
+
+**Output:** 16 × White Glazed Terracotta Wall Tiles (`atouchofclass:white_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:white_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_glazed_terracotta_wall_tiles.json)
+
 ## white-stucco
 
 **Output:** 1 × White Stucco (`atouchofclass:white_stucco`). **Type:** `minecraft:crafting_shaped`.
@@ -9046,3 +9241,16 @@ S.S
 `S` = `minecraft:yellow_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_sink.json)
+
+## yellow-glazed-terracotta-wall-tiles
+
+**Output:** 16 × Yellow Glazed Terracotta Wall Tiles (`atouchofclass:yellow_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+G.
+.G
+```
+
+`G` = `minecraft:yellow_glazed_terracotta`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_glazed_terracotta_wall_tiles.json)

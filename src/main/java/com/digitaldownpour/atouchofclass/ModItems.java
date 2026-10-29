@@ -413,6 +413,70 @@ public class ModItems {
     public static final DeferredItem<StoneQuoinItem> STONE_QUOIN =
             ITEMS.registerItem("stone_quoin", StoneQuoinItem::new, () -> new Item.Properties());
 
+    public static final DeferredItem<WallFinishItem> YELLOW_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "yellow_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> WHITE_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "white_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> RED_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "red_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> PURPLE_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "purple_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> PINK_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "pink_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> ORANGE_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "orange_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> MAGENTA_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "magenta_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> LIME_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "lime_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> LIGHT_GRAY_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "light_gray_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> LIGHT_BLUE_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "light_blue_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> GREEN_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "green_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> GRAY_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "gray_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> CYAN_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "cyan_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> BROWN_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "brown_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> BLUE_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "blue_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> BLACK_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "black_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
     public static final DeferredItem<WallFinishItem> RESIN_WALL_TILES = registerWallFinish(
             "resin_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
     );
@@ -767,6 +831,22 @@ public class ModItems {
             event.accept(CALCITE_SUBWAY_TILES);
             event.accept(DEEPSLATE_WALL_TILES);
             event.accept(RESIN_WALL_TILES);
+            event.accept(YELLOW_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(WHITE_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(RED_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(PURPLE_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(PINK_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(ORANGE_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(MAGENTA_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(LIME_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(LIGHT_GRAY_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(LIGHT_BLUE_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(GREEN_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(GRAY_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(CYAN_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(BROWN_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(BLUE_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(BLACK_GLAZED_TERRACOTTA_WALL_TILES);
             event.accept(WHITE_STUCCO);
             event.accept(RED_BRICK);
             event.accept(BUFF_BRICK);
