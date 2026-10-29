@@ -23,16 +23,19 @@ public final class StochasticBlockGameTests {
         var pos = support.above();
         level.setBlockAndUpdate(support, Blocks.STONE.defaultBlockState());
         var hit = new BlockHitResult(Vec3.atCenterOf(support).add(0, .5, 0), Direction.UP, support, false);
-        int seen = 0;
+        int seenRotations = 0;
+        int seenVariants = 0;
         ItemStack item = new ItemStack(block.asItem());
         for (int i = 0; i < 128; i++) {
             player.setItemInHand(InteractionHand.MAIN_HAND, item);
             item.useOn(new UseOnContext(level, player, InteractionHand.MAIN_HAND, item, hit));
             var state = level.getBlockState(pos);
             helper.assertTrue(state.is(block), Component.literal("Collected marble item must place"));
-            helper.assertTrue(state.getValue(StochasticBlock.TEXTURE_VARIANT) == 0,
-                    Component.literal("Only the existing marble texture is enabled"));
-            seen |= 1 << state.getValue(StochasticBlock.TEXTURE_ROTATION);
+            int variant = state.getValue(StochasticBlock.TEXTURE_VARIANT);
+            helper.assertTrue(variant >= 0 && variant < 4,
+                    Component.literal("Placed marble must use one of the four enabled textures"));
+            seenVariants |= 1 << variant;
+            seenRotations |= 1 << state.getValue(StochasticBlock.TEXTURE_ROTATION);
             var drops = Block.getDrops(state, level, pos, null);
             helper.assertTrue(drops.size() == 1 && ItemStack.isSameItemSameComponents(
                             drops.getFirst(), new ItemStack(block.asItem())),
@@ -40,7 +43,8 @@ public final class StochasticBlockGameTests {
             item = drops.getFirst();
             level.destroyBlock(pos, false);
         }
-        helper.assertTrue(seen == 15, Component.literal("Repeated placement at one position must reroll rotation"));
+        helper.assertTrue(seenVariants == 15, Component.literal("Repeated placement at one position must use all four marble textures"));
+        helper.assertTrue(seenRotations == 15, Component.literal("Repeated placement at one position must reroll rotation"));
         helper.succeed();
     }
 }
