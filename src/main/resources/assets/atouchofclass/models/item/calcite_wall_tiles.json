@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "atouchofclass:block/calcite_wall_tiles"
+  }
+}
