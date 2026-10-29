@@ -2,63 +2,77 @@ package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.client.OverlayLightingRenderer;
 import com.digitaldownpour.atouchofclass.components.ClientWallOverlayData;
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.rendertype.RenderTypes;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.client.resources.model.geometry.BakedQuad;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.Identifier;
-import net.minecraft.util.context.ContextKey;
-import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.ChunkPos;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.event.ExtractLevelRenderStateEvent;
-import net.neoforged.neoforge.client.event.SubmitCustomGeometryEvent;
+import net.neoforged.neoforge.client.event.AddSectionGeometryEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.client.model.ao.EnhancedBlockModelLighter;
+import net.neoforged.neoforge.event.level.ChunkEvent;
+import net.neoforged.neoforge.event.level.LevelEvent;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @EventBusSubscriber(modid = ATouchofClass.MODID, value = Dist.CLIENT)
 public final class ModRenderers {
-    private static final ContextKey<List<OverlayBlock>> OVERLAY_BLOCKS = new ContextKey<>(
-            Identifier.fromNamespaceAndPath(ATouchofClass.MODID, "overlay_blocks"));
-    private static final OverlayLightingRenderer OVERLAYS = new OverlayLightingRenderer();
-
-    private record OverlayBlock(BlockPos pos, List<OverlayLightingRenderer.RenderFace> faces) {}
+    private record OverlayBlock(BlockPos pos, List<BakedQuad> faces) {}
 
     @SubscribeEvent
-    public static void extractRenderState(ExtractLevelRenderStateEvent event) {
+    public static void addSectionGeometry(AddSectionGeometryEvent event) {
         Minecraft mc = Minecraft.getInstance();
+        if (event.getLevel() != mc.level) return;
+        BlockPos origin = event.getSectionOrigin();
+        var overlays = ClientWallOverlayData.getChunks().get(ChunkPos.containing(origin));
+        if (overlays == null || overlays.isEmpty()) return;
+
+        // Capture all mutable client data before handing the work to the meshing thread.
         List<OverlayBlock> blocks = new ArrayList<>();
-        for (var chunk : ClientWallOverlayData.getChunks().values()) {
-            for (var entry : chunk.entrySet()) {
-                BlockPos pos = entry.getKey();
-                if (!entry.getValue().hasAny() || !event.getFrustum().isVisible(new AABB(pos).inflate(0.01))) continue;
-                var faces = OVERLAYS.extract(mc, pos, entry.getValue());
-                if (!faces.isEmpty()) blocks.add(new OverlayBlock(pos.immutable(), faces));
+        overlays.forEach((pos, data) -> {
+            if ((pos.getY() >> 4) == (origin.getY() >> 4) && data.hasAny()) {
+                blocks.add(new OverlayBlock(pos.immutable(), OverlayLightingRenderer.snapshot(mc, data)));
             }
-        }
-        event.getRenderState().setRenderData(OVERLAY_BLOCKS, List.copyOf(blocks));
+        });
+        if (blocks.isEmpty()) return;
+        var snapshot = List.copyOf(blocks);
+        boolean smooth = mc.options.ambientOcclusion().get();
+        event.addRenderer(context -> {
+            // Lighters own thread-local caches: construct one on the executing worker.
+            var lighter = EnhancedBlockModelLighter.newInstance();
+            var consumer = context.getOrCreateChunkBuffer(ChunkSectionLayer.CUTOUT);
+            for (OverlayBlock block : snapshot) {
+                OverlayLightingRenderer.draw(context.getRegion(), block.pos(), block.faces(), smooth, lighter, consumer);
+            }
+        });
     }
 
     @SubscribeEvent
-    public static void submitGeometry(SubmitCustomGeometryEvent event) {
-        var blocks = event.getLevelRenderState().getRenderData(OVERLAY_BLOCKS);
-        if (blocks == null || blocks.isEmpty()) return;
-        var camera = event.getLevelRenderState().cameraRenderState.pos;
-        PoseStack pose = event.getPoseStack();
-        for (OverlayBlock block : blocks) {
-            pose.pushPose();
-            try {
-                pose.translate(block.pos().getX() - camera.x, block.pos().getY() - camera.y,
-                        block.pos().getZ() - camera.z);
-                event.getSubmitNodeCollector().submitCustomGeometry(pose, RenderTypes.cutoutMovingBlock(),
-                        (transform, consumer) -> {
-                            for (var face : block.faces()) face.draw(transform.pose(), consumer);
-                        });
-            } finally {
-                pose.popPose();
-            }
+    public static void flushOverlayUpdates(ClientTickEvent.Post event) {
+        Minecraft mc = Minecraft.getInstance();
+        var sections = ClientWallOverlayData.drainDirtySections();
+        if (mc.level == null) return;
+        for (var section : sections) {
+            mc.level.setSectionRangeDirty(section.x(), section.y(), section.z(),
+                    section.x(), section.y(), section.z());
+        }
+    }
+
+    @SubscribeEvent
+    public static void unloadChunk(ChunkEvent.Unload event) {
+        if (event.getLevel() == Minecraft.getInstance().level) {
+            ClientWallOverlayData.forgetChunk(event.getChunk().getPos());
+        }
+    }
+
+    @SubscribeEvent
+    public static void unloadLevel(LevelEvent.Unload event) {
+        if (event.getLevel() == Minecraft.getInstance().level) {
+            ClientWallOverlayData.clear();
         }
     }
 }

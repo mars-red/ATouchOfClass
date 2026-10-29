@@ -1,4 +1,7 @@
 import com.digitaldownpour.atouchofclass.components.WallOverlayData;
+import com.digitaldownpour.atouchofclass.components.ClientWallOverlayData;
+import net.minecraft.core.SectionPos;
+import java.util.Set;
 import com.digitaldownpour.atouchofclass.components.WallOverlayStore;
 import io.netty.buffer.Unpooled;
 import net.minecraft.core.BlockPos;
@@ -36,6 +39,32 @@ public final class CheckWallOverlayStore {
         require(store.getChunkIfPresent(chunk).size() == 1, "Accepted overlay from another chunk");
         for (var face : Direction.values()) store.setFace(pos, face, null);
         require(!store.getChunks().containsKey(chunk), "Retained empty chunk");
+        ClientWallOverlayData.clear();
+        var a = new BlockPos(-1, -1, 15);
+        var b = new BlockPos(-2, -2, 14);
+        ClientWallOverlayData.setFace(a, Direction.NORTH, texture);
+        ClientWallOverlayData.setFace(b, Direction.SOUTH, texture);
+        require(ClientWallOverlayData.drainDirtySections().equals(Set.of(SectionPos.of(a))),
+                "Edits in one section must coalesce, including negative coordinates");
+        require(ClientWallOverlayData.drainDirtySections().isEmpty(), "Dirty sections were not drained");
+        ClientWallOverlayData.setFace(a, Direction.NORTH, null);
+        require(ClientWallOverlayData.drainDirtySections().contains(SectionPos.of(a)), "Removal did not request rebuild");
+        var replacement = new BlockPos(-1, 16, 15);
+        ClientWallOverlayData.replaceChunk(ChunkPos.containing(b), Map.of(replacement, loaded));
+        require(ClientWallOverlayData.drainDirtySections().equals(Set.of(SectionPos.of(b), SectionPos.of(replacement))),
+                "Replacement must rebuild both removed and added sections");
+        ClientWallOverlayData.replaceChunk(ChunkPos.containing(b), Map.of());
+        require(ClientWallOverlayData.drainDirtySections().equals(Set.of(SectionPos.of(replacement))),
+                "Empty sync must erase old geometry");
+        ClientWallOverlayData.setFace(a, Direction.NORTH, texture);
+        ClientWallOverlayData.forgetChunk(ChunkPos.containing(a));
+        require(ClientWallOverlayData.getChunks().isEmpty() && ClientWallOverlayData.drainDirtySections().isEmpty(),
+                "Chunk unload retained overlays or rebuild requests");
+        ClientWallOverlayData.setFace(a, Direction.NORTH, texture);
+        ClientWallOverlayData.clear();
+        require(ClientWallOverlayData.getChunks().isEmpty() && ClientWallOverlayData.drainDirtySections().isEmpty(),
+                "Level unload retained overlays or rebuild requests");
+        System.out.println("Client overlay checks passed: rebuild batching, removal, replacement sync, empty sync, and unload cleanup.");
         System.out.println("Overlay checks passed: negative and positive chunk boundaries, all six faces, NBT/network round trips, replacement filtering, and empty-chunk cleanup.");
     }
 }
