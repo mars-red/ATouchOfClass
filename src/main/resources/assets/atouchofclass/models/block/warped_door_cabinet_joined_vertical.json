@@ -58,7 +58,7 @@
                                                   "texture":  "#wood"
                                               },
                                        "north":  {
-                                                     "texture":  "#wood"
+                                                     "texture":  "#wood", "tintindex": 0
                                                  },
                                        "south":  {
                                                      "texture":  "#wood"
@@ -154,7 +154,7 @@
                                                   "texture":  "#wood"
                                               },
                                        "north":  {
-                                                     "texture":  "#wood"
+                                                     "texture":  "#wood", "tintindex": 0
                                                  },
                                        "south":  {
                                                      "texture":  "#wood"
@@ -228,70 +228,6 @@
                                                 },
                                        "east":  {
                                                     "texture":  "#wood"
-                                                }
-                                   }
-                     },
-                     {
-                         "from":  [
-                                      6.7,
-                                      8.7,
-                                      1
-                                  ],
-                         "to":  [
-                                    7.25,
-                                    9.25,
-                                    1.2
-                                ],
-                         "faces":  {
-                                       "down":  {
-                                                    "texture":  "#handle"
-                                                },
-                                       "up":  {
-                                                  "texture":  "#handle"
-                                              },
-                                       "north":  {
-                                                     "texture":  "#handle"
-                                                 },
-                                       "south":  {
-                                                     "texture":  "#handle"
-                                                 },
-                                       "west":  {
-                                                    "texture":  "#handle"
-                                                },
-                                       "east":  {
-                                                    "texture":  "#handle"
-                                                }
-                                   }
-                     },
-                     {
-                         "from":  [
-                                      8.75,
-                                      8.7,
-                                      1
-                                  ],
-                         "to":  [
-                                    9.3,
-                                    9.25,
-                                    1.2
-                                ],
-                         "faces":  {
-                                       "down":  {
-                                                    "texture":  "#handle"
-                                                },
-                                       "up":  {
-                                                  "texture":  "#handle"
-                                              },
-                                       "north":  {
-                                                     "texture":  "#handle"
-                                                 },
-                                       "south":  {
-                                                     "texture":  "#handle"
-                                                 },
-                                       "west":  {
-                                                    "texture":  "#handle"
-                                                },
-                                       "east":  {
-                                                    "texture":  "#handle"
                                                 }
                                    }
                      }

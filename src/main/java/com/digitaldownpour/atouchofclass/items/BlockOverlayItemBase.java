@@ -28,7 +28,15 @@ public abstract class BlockOverlayItemBase extends Item {
     protected BlockOverlayItemBase(Properties properties, Identifier overlayTexture) {
         super(properties);
         this.overlayTexture = overlayTexture;
-        ITEMS_BY_TEXTURE.put(overlayTexture, this);
+        registerOverlayTexture(overlayTexture);
+    }
+
+    protected final void registerOverlayTexture(Identifier texture) {
+        ITEMS_BY_TEXTURE.put(texture, this);
+    }
+
+    protected Identifier getOverlayTexture(UseOnContext context) {
+        return overlayTexture;
     }
 
     /**
@@ -52,6 +60,7 @@ public abstract class BlockOverlayItemBase extends Item {
         BlockPos pos = context.getClickedPos();
         Direction face = context.getClickedFace();
         ServerLevel serverLevel = (ServerLevel) level;
+        Identifier overlayTexture = getOverlayTexture(context);
 
         WallOverlaySavedData.get(serverLevel).setFace(pos, face, overlayTexture);
 

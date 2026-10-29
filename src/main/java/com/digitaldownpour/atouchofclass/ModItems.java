@@ -7,6 +7,7 @@ import com.digitaldownpour.atouchofclass.items.TallDoorItem;
 import com.digitaldownpour.atouchofclass.items.WallFinishItem;
 import com.digitaldownpour.atouchofclass.items.WallpaperItem;
 import com.digitaldownpour.atouchofclass.items.WainscotingItem;
+import com.digitaldownpour.atouchofclass.items.StoneQuoinItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
@@ -405,6 +406,96 @@ public class ModItems {
     public static final DeferredItem<WallpaperItem> OGEE_LATTICE_WALLPAPER = registerWallpaper("ogee_lattice_wallpaper");
     public static final DeferredItem<WallpaperItem> STRIPED_WALLPAPER = registerWallpaper("striped_wallpaper");
     public static final DeferredItem<WallpaperItem> GOTHIC_WALLPAPER = registerWallpaper("gothic_wallpaper");
+    public static final DeferredItem<WallpaperItem> PINK_FLORAL_WALLPAPER = registerWallpaper("pink_floral_wallpaper");
+    public static final DeferredItem<WallpaperItem> PINK_GEOMETRIC_WALLPAPER = registerWallpaper("pink_geometric_wallpaper");
+    public static final DeferredItem<WallpaperItem> DARK_BLUE_FLORAL_WALLPAPER = registerWallpaper("dark_blue_floral_wallpaper");
+
+    public static final DeferredItem<StoneQuoinItem> STONE_QUOIN =
+            ITEMS.registerItem("stone_quoin", StoneQuoinItem::new, () -> new Item.Properties());
+
+    public static final DeferredItem<WallFinishItem> YELLOW_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "yellow_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> WHITE_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "white_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> RED_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "red_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> PURPLE_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "purple_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> PINK_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "pink_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> ORANGE_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "orange_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> MAGENTA_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "magenta_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> LIME_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "lime_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> LIGHT_GRAY_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "light_gray_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> LIGHT_BLUE_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "light_blue_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> GREEN_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "green_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> GRAY_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "gray_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> CYAN_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "cyan_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> BROWN_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "brown_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> BLUE_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "blue_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> BLACK_GLAZED_TERRACOTTA_WALL_TILES = registerWallFinish(
+            "black_glazed_terracotta_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> RESIN_WALL_TILES = registerWallFinish(
+            "resin_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> DEEPSLATE_WALL_TILES = registerWallFinish(
+            "deepslate_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> CALCITE_WALL_TILES = registerWallFinish(
+            "calcite_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> CALCITE_SUBWAY_TILES = registerWallFinish(
+            "calcite_subway_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
+
+    public static final DeferredItem<WallFinishItem> PRISMARINE_FISH_SCALE_WALL_TILES = registerWallFinish(
+            "prismarine_fish_scale_wall_tiles", WallFinishItem.Placement.WALLS_ONLY
+    );
 
     public static final DeferredItem<WallFinishItem> SHAKE_SIDING = registerWallFinish(
             "shake_siding", WallFinishItem.Placement.WALLS_ONLY
@@ -735,7 +826,32 @@ public class ModItems {
             event.accept(OGEE_LATTICE_WALLPAPER);
             event.accept(STRIPED_WALLPAPER);
             event.accept(GOTHIC_WALLPAPER);
+            event.accept(PINK_FLORAL_WALLPAPER);
+            event.accept(PINK_GEOMETRIC_WALLPAPER);
+            event.accept(DARK_BLUE_FLORAL_WALLPAPER);
             event.accept(SHAKE_SIDING);
+            event.accept(STONE_QUOIN);
+            event.accept(PRISMARINE_FISH_SCALE_WALL_TILES);
+            event.accept(CALCITE_SUBWAY_TILES);
+            event.accept(CALCITE_WALL_TILES);
+            event.accept(DEEPSLATE_WALL_TILES);
+            event.accept(RESIN_WALL_TILES);
+            event.accept(YELLOW_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(WHITE_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(RED_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(PURPLE_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(PINK_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(ORANGE_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(MAGENTA_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(LIME_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(LIGHT_GRAY_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(LIGHT_BLUE_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(GREEN_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(GRAY_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(CYAN_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(BROWN_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(BLUE_GLAZED_TERRACOTTA_WALL_TILES);
+            event.accept(BLACK_GLAZED_TERRACOTTA_WALL_TILES);
             event.accept(WHITE_STUCCO);
             event.accept(RED_BRICK);
             event.accept(BUFF_BRICK);

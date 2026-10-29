@@ -20,7 +20,7 @@ Build the supporting room first, then add storage and fittings. The table below 
 
 ## Cabinets and work surfaces
 
-Cabinets come in door and drawer styles across the 13 woods in the [reference](reference.md). Use one with an empty hand to open its inventory. Each cabinet keeps its own 27 slots; stacking cabinets does not merge inventories. Door cabinets of the same wood and facing connect their appearance vertically.
+Cabinets come in door and drawer styles across the 13 woods in the [reference](reference.md). Use one with an empty hand to open its inventory. Each cabinet keeps its own 27 slots; stacking cabinets does not merge inventories. Pairs of door cabinets of the same wood and facing connect their appearance vertically.
 
 Place countertops or sinks on top of the base units. Sneak-place against a cabinet to avoid opening it. These surfaces occupy their own block space; the countertop is a thin ⅛-block slab at the bottom of that space. Sinks add a basin model and faucet within that space. They are decorative and do not supply water buckets.
 
@@ -54,6 +54,58 @@ S.S
 ```
 
 `S` is the matching concrete slab, such as `minecraft:white_concrete_slab`. Obtaining one unlocks both recipes for that color. See the [white countertop recipe](recipes.md#white-concrete-countertop), [white sink recipe](recipes.md#white-concrete-sink), and [catalog](catalog.md) for every color. The resulting fittings remain decorative; sinks have no fluid inventory or water interaction.
+
+## Wall tile overlays
+
+Use wall tile overlays for kitchen backsplashes, shower surrounds, or other decorative walls. Like wallpaper, they cover the clicked face without occupying another block space.
+
+| Wall tile | Allowed faces | Use behavior | Crafting recipe |
+| --- | --- | --- | --- |
+| Prismarine Fish Scale Wall Tiles | Four side faces | Reusable item | Five Prismarine blocks yield [40 wall tile items](recipes.md#prismarine-fish-scale-wall-tiles) |
+| Calcite Subway Tiles | Four side faces | Reusable item | Two Calcite blocks yield [16 wall tile items](recipes.md#calcite-subway-tiles) |
+| Calcite Wall Tiles | Four side faces | Reusable item | Four Calcite blocks yield [32 wall tile items](recipes.md#calcite-wall-tiles) |
+| Deepslate Wall Tiles | Four side faces | Reusable item | Two Deepslate blocks yield [16 wall tile items](recipes.md#deepslate-wall-tiles) |
+| Resin Wall Tiles | Four side faces | Reusable item | Three Blocks of Resin yield [24 wall tile items](recipes.md#resin-wall-tiles) |
+| Yellow Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#yellow-glazed-terracotta-wall-tiles) |
+| White Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#white-glazed-terracotta-wall-tiles) |
+| Red Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#red-glazed-terracotta-wall-tiles) |
+| Purple Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#purple-glazed-terracotta-wall-tiles) |
+| Pink Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#pink-glazed-terracotta-wall-tiles) |
+| Orange Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#orange-glazed-terracotta-wall-tiles) |
+| Magenta Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#magenta-glazed-terracotta-wall-tiles) |
+| Lime Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#lime-glazed-terracotta-wall-tiles) |
+| Light Gray Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#light-gray-glazed-terracotta-wall-tiles) |
+| Light Blue Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#light-blue-glazed-terracotta-wall-tiles) |
+| Green Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#green-glazed-terracotta-wall-tiles) |
+| Gray Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#gray-glazed-terracotta-wall-tiles) |
+| Cyan Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#cyan-glazed-terracotta-wall-tiles) |
+| Brown Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#brown-glazed-terracotta-wall-tiles) |
+| Blue Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#blue-glazed-terracotta-wall-tiles) |
+| Black Glazed Terracotta Wall Tiles | Four side faces | Reusable item | Two matching glazed terracotta blocks yield [16 wall tile items](recipes.md#black-glazed-terracotta-wall-tiles) |
+
+Apply tiles to any side face of a block; top and underside faces do not accept them. Each face holds one finish, so applying tiles replaces any existing finish on that face. Different faces of the same block can carry different finishes.
+
+Start mining a tiled face to strip its overlay first. Stop mining after stripping it if you want to keep the supporting block intact. Removal returns the wall tile item in Survival; Creative removal drops nothing. Remove tiles before applying another finish if you want their item back. See [finish removal and replacement](building.md#remove-or-replace-a-finish) for the shared overlay behavior.
+
+Craft Prismarine Fish Scale Wall Tiles using this pattern (`.` is an empty slot):
+
+```text
+.P.
+P.P
+P.P
+```
+
+`P` is a **Prismarine block**. Five blocks yield **40 wall tile items**, or eight items per block. Obtaining prismarine unlocks the recipe.
+
+Craft **Calcite Subway Tiles** from two **Calcite blocks** placed diagonally in a 2×2 grid, using rows `C ` and ` C`. The recipe yields **16 wall tile items**, or eight items per block. Obtaining calcite unlocks the recipe.
+
+Craft **Deepslate Wall Tiles** with the same diagonal pattern as Calcite Subway Tiles, using **Deepslate blocks** instead of calcite. Two blocks yield **16 wall tile items**. Use ordinary deepslate, not cobbled deepslate; obtaining deepslate unlocks the recipe.
+
+Craft **Resin Wall Tiles** from three **Blocks of Resin** using rows `R R` and ` R `. The recipe yields **24 wall tile items**, or eight items per block. Obtaining a Block of Resin unlocks the recipe.
+
+Craft **Glazed Terracotta Wall Tiles** in all 16 colors using two matching glazed terracotta blocks diagonally, with rows `G ` and ` G`. Each recipe yields **16 wall tile items**. Use glazed terracotta of the matching color; ordinary terracotta and mixed colors do not substitute. Obtaining the matching glazed terracotta unlocks its recipe.
+
+Craft **Calcite Wall Tiles** from four **Calcite blocks** in a 2×2 square, using rows `CC` and `CC`. The recipe yields **32 wall tile items**, or eight items per block. Obtaining calcite unlocks the recipe.
 
 ## Refrigerator
 

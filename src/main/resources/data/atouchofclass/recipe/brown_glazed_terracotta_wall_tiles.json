@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": "minecraft:brown_glazed_terracotta"
+  },
+  "pattern": [
+    "G ",
+    " G"
+  ],
+  "result": {
+    "count": 16,
+    "id": "atouchofclass:brown_glazed_terracotta_wall_tiles"
+  }
+}
