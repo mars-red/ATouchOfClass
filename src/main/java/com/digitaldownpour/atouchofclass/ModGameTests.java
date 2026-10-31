@@ -16,6 +16,7 @@ public final class ModGameTests {
             DeferredRegister.create(Registries.TEST_FUNCTION, ATouchofClass.MODID);
 
     static {
+        FUNCTIONS.register("walltiletrimstripgametests.placementandrecipe", () -> WallTileTrimStripGameTests::placementAndRecipe);
         FUNCTIONS.register("windowpanegametests.pairsstayseparateandupdate", () -> WindowPaneGameTests::pairsStaySeparateAndUpdate);
         FUNCTIONS.register("windowpanegametests.unrelatedneighborsstaysingle", () -> WindowPaneGameTests::unrelatedNeighborsStaySingle);
         FUNCTIONS.register("windowpanegametests.placementalignsandneedsnodoor", () -> WindowPaneGameTests::placementAlignsAndNeedsNoDoor);

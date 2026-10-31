@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS"
+  ],
+  "key": {
+    "S": "atouchofclass:brushed_stainless_steel"
+  },
+  "result": {
+    "id": "atouchofclass:wall_tile_trim_strip",
+    "count": 64
+  }
+}
