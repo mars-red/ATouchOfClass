@@ -2,8 +2,8 @@
     "parent":  "minecraft:block/block",
     "ambientocclusion":  true,
     "textures":  {
-                     "particle":  "minecraft:block/deepslate_tile",
-                     "material":  "minecraft:block/deepslate_tile",
+                     "particle":  "minecraft:block/deepslate_tiles",
+                     "material":  "minecraft:block/deepslate_tiles",
                      "basin":  "minecraft:block/black_concrete",
                      "faucet":  "atouchofclass:block/brushed_stainless_steel"
                  },
