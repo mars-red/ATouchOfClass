@@ -1,6 +1,12 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
 import com.digitaldownpour.atouchofclass.entities.CabinetBlockEntity;
+import com.digitaldownpour.atouchofclass.CabinetAttachments;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
+import java.util.ArrayList;
+import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.stats.Stats;
@@ -24,9 +30,30 @@ public class CabinetBlock extends HorizontalFurnitureBlock implements EntityBloc
     };
 
     public CabinetBlock(Properties properties) {
-        super(properties, NORTH_FACING_BOXES);
+        super(properties.randomTicks(), NORTH_FACING_BOXES);
     }
 
+
+    @Override
+    protected List<ItemStack> getDrops(BlockState state, LootParams.Builder params) {
+        var drops = new ArrayList<>(super.getDrops(state, params));
+        if (params.getOptionalParameter(LootContextParams.BLOCK_ENTITY) instanceof CabinetBlockEntity cabinet
+                && !cabinet.getAttachment().isAir()) {
+            drops.addAll(cabinet.getAttachment().getDrops(params));
+        }
+        return drops;
+    }
+
+    @Override
+    protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        CabinetAttachments.weather(level, pos, random);
+    }
+
+    @Override
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
+        super.affectNeighborsAfterRemoval(state, level, pos, moved);
+        CabinetAttachments.refreshPairs(level, pos);
+    }
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

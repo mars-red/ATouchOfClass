@@ -9,7 +9,7 @@ Build the supporting room first, then add storage and fittings. The table below 
 | Door/drawer cabinet | 27-slot storage per block |
 | Refrigerator | 54-slot storage shared across the appliance |
 | Oven | Furnace-style smelting with input, fuel, and output |
-| Induction cooktop | Decorative surface; adjacent matching cooktops can pair visually |
+| Induction cooktop | Attaches to cabinets; decorative surface; adjacent matching cooktops can pair visually |
 | Countertop and sink | Decorative surfaces; sinks have no fluid inventory or faucet interaction |
 | Stainless steel kitchen sink | Two side-by-side sinks with the same facing share a center sprayer faucet |
 | Clawfoot bathtub | Use to toggle its filled appearance |
@@ -22,11 +22,19 @@ Build the supporting room first, then add storage and fittings. The table below 
 
 Cabinets come in door and drawer styles across the 13 woods in the [reference](reference.md). Use one with an empty hand to open its inventory. Each cabinet keeps its own 27 slots; stacking cabinets does not merge inventories. Pairs of door cabinets of the same wood and facing connect their appearance vertically.
 
-Place countertops or sinks on top of the base units. Sneak-place against a cabinet to avoid opening it. These surfaces occupy their own block space; the countertop is a thin ⅛-block slab at the bottom of that space. Sinks add a basin model and faucet within that space. They are decorative and do not supply water buckets.
+Use any countertop, sink, or induction cooktop item on a door or drawer cabinet to attach it, consuming one item in Survival. This includes every stone, concrete, and copper variety, the stainless steel kitchen sink, and the induction cooktop. You do not need to sneak to attach a fitting. Each cabinet holds one attachment; trying to attach another fitting, or place a standalone fitting in the block space immediately above an occupied cabinet, is rejected.
 
-Cinnabar countertops and sinks use the vanilla cinnabar block texture. Craft six fittings from three `minecraft:cinnabar_slab` slabs: one horizontal row for countertops, or a V shape for sinks. See the [countertop recipe](recipes.md#cinnabar-countertop) and [sink recipe](recipes.md#cinnabar-sink). Placement and decorative behavior match the other work surfaces.
+Attached fittings belong to the cabinet and leave the block position above it free. Their models extend into that space: countertops remain 1/8 block thick, while sinks include their basin and faucet. Ordinary blocks and decorations can be placed above them without restrictions, even if their models overlap. Sneak-place ordinary blocks against the cabinet to avoid opening its storage. Attachments are decorative and do not add a separate collision surface or faucet target; interact with the cabinet to open its storage. Sinks do not supply water buckets.
 
-The **Stainless Steel Kitchen Sink**  is farmhouse style with a front apron. Place a second sink beside it with the same facing to form a double sink with one shared sprayer faucet. Pairs stop at two sinks; adding another sink leaves the existing pair intact. Breaking either half restores the remaining sink's single appearance. The apron is decorative and does not block access to the cabinet below.
+**Sneak-use the cabinet with an empty hand to remove only its attachment.** In Survival, the fitting returns to your inventory, or drops beside the cabinet if your inventory is full. The cabinet and its contents stay in place. Normally breaking a cabinet drops both its cabinet item and its attached fitting, along with its stored contents, under the usual Survival drop rules. Creative removal does not return an attachment item.
+
+Attached induction cooktops pair side by side when they have the same facing. Pairs stop at two; removing either attachment or breaking its cabinet restores the remaining cooktop's single appearance. Cooktops share the same one-attachment limit as sinks and countertops, so a cooktop cannot be stacked over an attached countertop or sink. Attached cooktops pair with other attached cooktops; standalone cooktops pair separately. They remain decorative and do not cook food.
+
+Copper attachments continue to oxidize. Use honeycomb on the cabinet to wax its fitting, or an axe to remove wax or scrape oxidation. Facing and the current copper stage are saved with the cabinet.
+
+Countertops, sinks, and induction cooktops placed elsewhere still work as standalone blocks. Existing builds keep their standalone fittings and original block occupancy when upgrading; there is no automatic conversion. To free the space above an existing cabinet, break its old standalone fitting and use that item on the cabinet to attach it.
+
+The **Stainless Steel Kitchen Sink**  is farmhouse style with a front apron. Place a second sink beside it with the same facing to form a double sink with one shared sprayer faucet. Pairs stop at two sinks; adding another sink leaves the existing pair intact. Removing either attachment or breaking its cabinet restores the remaining sink's single appearance. Standalone kitchen sinks also retain their existing pairing behavior; an attached sink pairs with another attached sink, not a standalone sink. The apron is decorative and does not block access to the cabinet below.
 
 Like the other sinks, it has no fluid inventory or water interaction.
 
