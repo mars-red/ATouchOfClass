@@ -23,6 +23,7 @@ import com.digitaldownpour.atouchofclass.blocks.CasingBlock;
 import com.digitaldownpour.atouchofclass.blocks.CrownMouldingBlock;
 import com.digitaldownpour.atouchofclass.blocks.BaseboardBlock;
 import com.digitaldownpour.atouchofclass.blocks.WindowApronBlock;
+import com.digitaldownpour.atouchofclass.blocks.WallTileTrimStripBlock;
 import com.digitaldownpour.atouchofclass.blocks.WindowLedgeBlock;
 import com.digitaldownpour.atouchofclass.blocks.PlinthBlock;
 import com.digitaldownpour.atouchofclass.blocks.PlasterColumnBlock;
@@ -1680,6 +1681,14 @@ public class ModBlocks {
                     .sound(net.minecraft.world.level.block.SoundType.METAL)
             )
     );
+
+    public static final DeferredBlock<WallTileTrimStripBlock> WALL_TILE_TRIM_STRIP =
+            BLOCKS.register("wall_tile_trim_strip", registryName -> new WallTileTrimStripBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .mapColor(MapColor.METAL).strength(3.0F)
+                            .sound(net.minecraft.world.level.block.SoundType.METAL)
+                            .requiresCorrectToolForDrops().noOcclusion()));
 
     public static final DeferredHolder<Block, Block> BRUSHED_STAINLESS_STEEL = BLOCKS.register("brushed_stainless_steel",
             registryName -> new Block(BlockBehaviour.Properties.of()

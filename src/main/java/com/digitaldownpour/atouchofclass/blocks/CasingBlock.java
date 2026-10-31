@@ -26,7 +26,7 @@ public class CasingBlock extends Block {
         this(properties, 3, 7);
     }
 
-    protected CasingBlock(Properties properties, int depth, int width) {
+    protected CasingBlock(Properties properties, double depth, double width) {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.SOUTH).setValue(EDGE, Edge.RIGHT));
         for (BlockState state : stateDefinition.getPossibleStates()) {
@@ -40,7 +40,7 @@ public class CasingBlock extends Block {
         }
     }
 
-    private static void restrict(double[] min, double[] max, Direction direction, int size) {
+    private static void restrict(double[] min, double[] max, Direction direction, double size) {
         int axis = switch (direction.getAxis()) { case X -> 0; case Y -> 1; case Z -> 2; };
         if (direction.getAxisDirection() == Direction.AxisDirection.POSITIVE) min[axis] = 16 - size;
         else max[axis] = size;

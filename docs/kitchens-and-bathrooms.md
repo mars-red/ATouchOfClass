@@ -107,6 +107,20 @@ Craft **Glazed Terracotta Wall Tiles** in all 16 colors using two matching glaze
 
 Craft **Calcite Wall Tiles** from four **Calcite blocks** in a 2×2 square, using rows `CC` and `CC`. The recipe yields **32 wall tile items**, or eight items per block. Obtaining calcite unlocks the recipe.
 
+## Wall tile trim strips
+
+**Wall Tile Trim Strip** is a straight stainless steel strip for finishing tile edges, such as the top of a backsplash. It is **Survival obtainable** and can be placed against blocks whether or not they have a tile overlay.
+
+Click near the **top, bottom, left, or right edge** of a block's side face to place the strip along that edge. The nearest edge to the click determines placement. Top and underside faces do not accept strips. Each strip spans the full block edge, projects **1/2 model unit (1/32 block)** from the wall, and is **1 model unit (1/16 block)** wide across the face. Strips remain straight and do not form corner joins. They occupy the adjacent block space; mine the visible strip to remove it.
+
+Craft **64 strips** from **three Brushed Stainless Steel blocks** in one horizontal row:
+
+```text
+SSS
+```
+
+`S` is a **Brushed Stainless Steel block** (`atouchofclass:brushed_stainless_steel`). Obtaining one unlocks the recipe. See the [trim strip recipe](recipes.md#wall-tile-trim-strip) and [catalog entry](catalog.md).
+
 ## Refrigerator
 
 Reserve a **2-wide × 1-deep × 3-high** space on a sturdy floor. The six sections form one refrigerator; you do not place each section separately. Use any section to open the six-row, 54-slot inventory.
