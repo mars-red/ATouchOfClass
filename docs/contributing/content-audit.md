@@ -142,3 +142,8 @@ Validation: the release build and all 129 required game tests passed. New tests 
 
 
 Induction cooktop follow-up, October 31, 2026: induction cooktops now use the same cabinet attachment system and occupancy limit. Attached cooktops preserve two-part pairing, their standalone right-neighbor bridge preference, and splitting after attachment removal or cabinet destruction. The manual includes cooktop placement, removal, decorative behavior, and standalone compatibility. The build and all 130 required game tests passed; the client check validated 416 attachment models including all cooktop facings and pair states. No new in-world appearance or multiplayer acceptance review is claimed.
+
+
+Cabinet attachment lighting correction, October 31, 2026: attached countertops, sinks, and cooktops now use Minecraft's normal block model renderer for ambient occlusion, directional light sampling, per-model/per-quad lighting settings, and tinting. Model parts are captured before section meshing, retaining their AO settings and face groups. Decorative overlap remains allowed, and geometry still uses the owning cabinet's section origin.
+
+The opt-in client regression check compares attached and normally placed vertex colors and packed light for all 416 attachment models with smooth lighting both enabled and disabled. The attachment position is empty in the attachment fixture, light levels vary spatially, and geometry crosses a section boundary. All comparisons passed; 392 models exercise the difference between flat lighting and ambient shading. The release build passed. This is an automated lighting comparison; shader-specific and in-world visual acceptance have not been recorded.

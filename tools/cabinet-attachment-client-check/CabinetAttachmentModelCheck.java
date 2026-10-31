@@ -24,6 +24,7 @@ public final class CabinetAttachmentModelCheck {
         String result;
         try {
             int count = 0;
+            int shadedModels = 0;
             for (var block : BuiltInRegistries.BLOCK) {
                 if (!CabinetAttachments.isAttachment(block.defaultBlockState())) continue;
                 for (var state : block.getStateDefinition().getPossibleStates()) {
@@ -45,10 +46,12 @@ public final class CabinetAttachmentModelCheck {
                             if (y < 0 || y > 2) throw new AssertionError("Invalid cabinet-relative height " + state);
                         }
                     }
+                    if (CabinetAttachmentLightingCheck.verify(state, model, parts)) shadedModels++;
                     count++;
                 }
             }
-            result = "PASS: " + count + " attachment models with textures and cabinet-relative heights validated.\n";
+            if (shadedModels == 0) throw new AssertionError("Lighting fixture must distinguish ambient shading from flat lighting");
+            result = "PASS: " + count + " attachment models validated; placed/attached vertex colors and light match with smooth lighting on and off; " + shadedModels + " models exercise ambient shading.\n";
         } catch (Throwable error) { result = "FAIL: " + error + "\n"; error.printStackTrace(); }
         try {
             var path = Path.of(System.getProperty("cabinetAttachment.checkReport"));
