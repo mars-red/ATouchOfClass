@@ -1,6 +1,13 @@
 package com.digitaldownpour.atouchofclass.entities;
 
 import com.digitaldownpour.atouchofclass.ModEntities;
+import com.digitaldownpour.atouchofclass.CabinetAttachments;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.util.ProblemReporter;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.TagValueOutput;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
@@ -24,6 +31,33 @@ import net.minecraft.world.level.storage.ValueOutput;
 /** Shared 27-slot storage used by every cabinet material and front style. */
 public class CabinetBlockEntity extends RandomizableContainerBlockEntity {
     public static final int CONTAINER_SIZE = 27;
+
+    private BlockState attachment = Blocks.AIR.defaultBlockState();
+
+    public BlockState getAttachment() {
+        return attachment;
+    }
+
+    public void setAttachment(BlockState state) {
+        attachment = state;
+        setChanged();
+        if (level != null) {
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        }
+    }
+
+    @Override
+    public ClientboundBlockEntityDataPacket getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        // Only attachment data belongs in chunk tracking packets, never cabinet contents.
+        var output = TagValueOutput.createWithContext(ProblemReporter.DISCARDING, registries);
+        output.store("Attachment", BlockState.CODEC, attachment);
+        return output.buildResult();
+    }
 
     private NonNullList<ItemStack> items = NonNullList.withSize(CONTAINER_SIZE, ItemStack.EMPTY);
     private final ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
@@ -80,6 +114,8 @@ public class CabinetBlockEntity extends RandomizableContainerBlockEntity {
     @Override
     protected void loadAdditional(ValueInput tag) {
         super.loadAdditional(tag);
+        attachment = tag.read("Attachment", BlockState.CODEC).filter(CabinetAttachments::isAttachment).orElse(Blocks.AIR.defaultBlockState());
+        if (level != null && level.isClientSide()) level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
         items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         if (!tryLoadLootTable(tag)) {
             ContainerHelper.loadAllItems(tag, items);
@@ -89,6 +125,7 @@ public class CabinetBlockEntity extends RandomizableContainerBlockEntity {
     @Override
     protected void saveAdditional(ValueOutput tag) {
         super.saveAdditional(tag);
+        tag.store("Attachment", BlockState.CODEC, attachment);
         if (!trySaveLootTable(tag)) {
             ContainerHelper.saveAllItems(tag, items);
         }

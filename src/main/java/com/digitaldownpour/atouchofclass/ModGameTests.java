@@ -16,6 +16,12 @@ public final class ModGameTests {
             DeferredRegister.create(Registries.TEST_FUNCTION, ATouchofClass.MODID);
 
     static {
+        FUNCTIONS.register("cabinetattachmentgametests.everycabinetbreakdropsattachmentandcontents", () -> CabinetAttachmentGameTests::everyCabinetBreakDropsAttachmentAndContents);
+        FUNCTIONS.register("cabinetattachmentgametests.everysurfaceattachespersistsanddrops", () -> CabinetAttachmentGameTests::everySurfaceAttachesPersistsAndDrops);
+        FUNCTIONS.register("cabinetattachmentgametests.freeupperspaceandsideplacementguard", () -> CabinetAttachmentGameTests::freeUpperSpaceAndSidePlacementGuard);
+        FUNCTIONS.register("cabinetattachmentgametests.cooktoppairssplitineveryfacing", () -> CabinetAttachmentGameTests::cooktopPairsSplitInEveryFacing);
+        FUNCTIONS.register("cabinetattachmentgametests.kitchenpairssplitineveryfacing", () -> CabinetAttachmentGameTests::kitchenPairsSplitInEveryFacing);
+        FUNCTIONS.register("cabinetattachmentgametests.attachedcopperwaxesscrapesandweathers", () -> CabinetAttachmentGameTests::attachedCopperWaxesScrapesAndWeathers);
         FUNCTIONS.register("walltiletrimstripgametests.placementandrecipe", () -> WallTileTrimStripGameTests::placementAndRecipe);
         FUNCTIONS.register("windowpanegametests.pairsstayseparateandupdate", () -> WindowPaneGameTests::pairsStaySeparateAndUpdate);
         FUNCTIONS.register("windowpanegametests.unrelatedneighborsstaysingle", () -> WindowPaneGameTests::unrelatedNeighborsStaySingle);
