@@ -3,6 +3,7 @@ gradle.afterProject { p ->
     def checks = p.tasks.register('compileOverlayCheck', JavaCompile) {
         source = p.files('src/main/java/com/digitaldownpour/atouchofclass/components/WallOverlayData.java',
                 'src/main/java/com/digitaldownpour/atouchofclass/components/WallOverlayStore.java',
+                'src/main/java/com/digitaldownpour/atouchofclass/components/ClientWallOverlayData.java',
                 'tools/CheckWallOverlayStore.java')
         classpath = p.sourceSets.main.compileClasspath
         destinationDirectory = p.layout.buildDirectory.dir('overlay-check-classes')
