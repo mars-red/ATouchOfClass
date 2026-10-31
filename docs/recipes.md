@@ -8308,6 +8308,18 @@ NNN
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/wall_shower_head.json)
 
+## wall-tile-trim-strip
+
+**Output:** 64 × Wall Tile Trim Strip (`atouchofclass:wall_tile_trim_strip`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+```
+
+`S` = `atouchofclass:brushed_stainless_steel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/wall_tile_trim_strip.json)
+
 ## warped-baluster
 
 **Output:** 32 × Warped Baluster (`atouchofclass:warped_baluster`). **Type:** `minecraft:crafting_shaped`.

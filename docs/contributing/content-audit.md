@@ -126,3 +126,9 @@ The build, five focused window-pane game tests, and four existing transom regres
 ## Stone quoins â€” October 26, 2026
 
 Added Stone Quoin instructions to the building chapter, covering side-face placement, clicked-half texture selection, separate application to both faces of a corner, finish replacement, removal, and the two-stone-bricks diagonal recipe yielding one reusable item. Integrated the supplied `stone-quoins.png` screenshot and its capture record; visual inspection shows stone quoins on both faces of a brick corner. Regenerated the catalog and recipe reference: 701 player-content items, 680 recipes, and no unresolved acquisition routes. Both documentation generators pass their consistency checks; the implementation build and existing overlay-store checks passed separately. The screenshot does not verify every placement direction or removal behavior.
+
+## Wall tile trim strips — October 31, 2026
+
+Added trim strips immediately after wall tile overlays in the kitchen/bathroom chapter. Documented independent block placement, nearest-edge selection on side faces, straight geometry, adjacent block occupancy, dimensions, and the `SSS` recipe using three Brushed Stainless Steel blocks to yield 64 strips. Source references: `WallTileTrimStripBlock`, `CasingBlock`, and `recipe/wall_tile_trim_strip.json`. Regenerated the catalog and recipe reference and updated the manual overview: 726 player-content items, 705 recipes, and no unresolved acquisition routes.
+
+The focused game test passed placement on all four edges of every wall face against stone, wood, and glass, floor/ceiling rejection, recipe output, dimensions, and model-file bounds matching selection/collision bounds. The author reported reversed visible strips; corrected left/right models for all horizontal facings. This records the automated geometry checks, not a completed in-game appearance review of the final correction.

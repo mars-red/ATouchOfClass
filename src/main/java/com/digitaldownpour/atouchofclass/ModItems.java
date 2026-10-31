@@ -726,6 +726,7 @@ public class ModItems {
     public static final DeferredItem<BlockItem> ELEVATOR_DOOR_ITEM = ITEMS.registerSimpleBlockItem("elevator_door", ModBlocks.ELEVATOR_DOOR);
     public static final DeferredItem<BlockItem> ELEVATOR_CALL_BUTTON_ITEM = ITEMS.registerSimpleBlockItem("elevator_call_button", ModBlocks.ELEVATOR_CALL_BUTTON);
     public static final DeferredItem<BlockItem> ELEVATOR_DESTINATION_CONTROL_ITEM = ITEMS.registerSimpleBlockItem("elevator_destination_control", ModBlocks.ELEVATOR_DESTINATION_CONTROL);
+    public static final DeferredItem<BlockItem> WALL_TILE_TRIM_STRIP_ITEM = ITEMS.registerSimpleBlockItem("wall_tile_trim_strip", ModBlocks.WALL_TILE_TRIM_STRIP);
     public static final DeferredItem<BlockItem> BRUSHED_STAINLESS_STEEL_ITEM = ITEMS.registerSimpleBlockItem("brushed_stainless_steel", ModBlocks.BRUSHED_STAINLESS_STEEL);
     public static final DeferredItem<BlockItem> CASING_ITEM = ITEMS.registerSimpleBlockItem("casing", ModBlocks.CASING);
     public static final DeferredItem<BlockItem> WINDOW_APRON_ITEM = ITEMS.registerSimpleBlockItem("window_apron", ModBlocks.WINDOW_APRON);
@@ -1137,6 +1138,7 @@ public class ModItems {
             event.accept(ELEVATOR_SHAFT_PANEL_ITEM);
             event.accept(ELEVATOR_FLOOR_ITEM);
             event.accept(BRUSHED_STAINLESS_STEEL_ITEM);
+            event.accept(WALL_TILE_TRIM_STRIP_ITEM);
         }
     }
 

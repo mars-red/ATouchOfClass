@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**725 registered player-content items.**
+**726 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -642,6 +642,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Torchflower Bunch | `atouchofclass:torchflower_bunch` | Survival obtainable — [torchflower_bunch](recipes.md#torchflower-bunch) |
 | Wainscoting | `atouchofclass:wainscoting` | Survival obtainable — [wainscoting](recipes.md#wainscoting) |
 | Wall-Mounted Shower Head | `atouchofclass:wall_shower_head` | Survival obtainable — [wall_shower_head](recipes.md#wall-shower-head) |
+| Wall Tile Trim Strip | `atouchofclass:wall_tile_trim_strip` | Survival obtainable — [wall_tile_trim_strip](recipes.md#wall-tile-trim-strip) |
 | Warped Baluster | `atouchofclass:warped_baluster` | Survival obtainable — [warped_baluster](recipes.md#warped-baluster) |
 | Warped Balustrade | `atouchofclass:warped_balustrade` | Survival obtainable — [warped_balustrade](recipes.md#warped-balustrade) |
 | Warped Four-Post Bed (Black) | `atouchofclass:warped_black_four_post_bed` | Survival obtainable — [warped_black_four_post_bed](recipes.md#warped-black-four-post-bed) |
