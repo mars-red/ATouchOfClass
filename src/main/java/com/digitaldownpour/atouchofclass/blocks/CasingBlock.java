@@ -17,6 +17,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class CasingBlock extends Block {
+    public static final net.minecraft.world.level.block.state.properties.BooleanProperty DADO_TOP = net.minecraft.world.level.block.state.properties.BooleanProperty.create("dado_top");
+    public static final net.minecraft.world.level.block.state.properties.BooleanProperty DADO_BOTTOM = net.minecraft.world.level.block.state.properties.BooleanProperty.create("dado_bottom");
+    public static final net.minecraft.world.level.block.state.properties.BooleanProperty DADO_CORNER_TOP = net.minecraft.world.level.block.state.properties.BooleanProperty.create("dado_corner_top");
+    public static final net.minecraft.world.level.block.state.properties.BooleanProperty DADO_CORNER_BOTTOM = net.minecraft.world.level.block.state.properties.BooleanProperty.create("dado_corner_bottom");
     // Facing points out from the supporting face, toward the player.
     public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
     public static final EnumProperty<Edge> EDGE = EnumProperty.create("edge", Edge.class);
@@ -77,7 +81,7 @@ public class CasingBlock extends Block {
         if (horizontal == 0 && vertical == 0 && facing.getAxis().isVertical()) {
             edge = edgeForDirection(facing, context.getHorizontalDirection().getClockWise());
         }
-        return defaultBlockState().setValue(FACING, facing).setValue(EDGE, edge);
+        return dadoConnections(defaultBlockState().setValue(FACING, facing).setValue(EDGE, edge), context.getLevel(), context.getClickedPos());
     }
 
     private static double projection(Vec3 hit, Direction direction) {
@@ -105,17 +109,81 @@ public class CasingBlock extends Block {
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return shapes.get(state);
+        return dadoShape(state);
     }
 
     @Override
     protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return shapes.get(state);
+        return dadoShape(state);
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, EDGE);
+        builder.add(FACING, EDGE, DADO_TOP, DADO_BOTTOM, DADO_CORNER_TOP, DADO_CORNER_BOTTOM);
+    }
+
+    private BlockState dadoConnections(BlockState state, BlockGetter level, BlockPos pos) {
+        boolean top = false, bottom = false, cornerTop = false, cornerBottom = false;
+        Direction facing = state.getValue(FACING);
+        Edge edge = state.getValue(EDGE);
+        if (getClass() == CasingBlock.class && facing.getAxis().isHorizontal()
+                && (edge == Edge.LEFT || edge == Edge.RIGHT)) {
+            BlockState neighbor = level.getBlockState(pos.relative(edgeDirection(facing, edge).getOpposite()));
+            if (neighbor.getBlock() instanceof DadoRailBlock
+                    && (neighbor.getValue(DadoRailBlock.FACING) == facing
+                    || neighbor.getValue(DadoRailBlock.FACING) == edgeDirection(facing, edge))) {
+                top = neighbor.getValue(DadoRailBlock.HALF) == net.minecraft.world.level.block.state.properties.Half.TOP;
+                bottom = !top;
+            }
+            // The casing itself occupies the inside corner: a perpendicular
+            // rail in front needs a return across this block before reaching it.
+            BlockState front = level.getBlockState(pos.relative(facing));
+            if (front.getBlock() instanceof DadoRailBlock
+                    && front.getValue(DadoRailBlock.FACING) == edgeDirection(facing, edge)) {
+                cornerTop = front.getValue(DadoRailBlock.HALF) == net.minecraft.world.level.block.state.properties.Half.TOP;
+                cornerBottom = !cornerTop;
+                top |= cornerTop;
+                bottom |= cornerBottom;
+            }
+        }
+        return state.setValue(DADO_TOP, top).setValue(DADO_BOTTOM, bottom)
+                .setValue(DADO_CORNER_TOP, cornerTop).setValue(DADO_CORNER_BOTTOM, cornerBottom);
+    }
+
+    @Override
+    protected BlockState updateShape(BlockState state, net.minecraft.world.level.LevelReader level,
+            net.minecraft.world.level.ScheduledTickAccess ticks, BlockPos pos, Direction direction,
+            BlockPos neighborPos, BlockState neighborState, net.minecraft.util.RandomSource random) {
+        return dadoConnections(state, level, pos);
+    }
+
+    private VoxelShape dadoShape(BlockState state) {
+        VoxelShape result = shapes.get(state);
+        // Minecraft evaluates geometry for every possible state during bootstrap,
+        // including connection flags that placement would never produce.
+        if (getClass() != CasingBlock.class || state.getValue(FACING).getAxis().isVertical()
+                || (state.getValue(EDGE) != Edge.LEFT && state.getValue(EDGE) != Edge.RIGHT)) return result;
+        for (boolean top : new boolean[] {false, true}) {
+            if (!state.getValue(top ? DADO_TOP : DADO_BOTTOM)) continue;
+            Direction facing = state.getValue(FACING);
+            Direction side = edgeDirection(facing, state.getValue(EDGE)).getOpposite();
+            double y = top ? 12 : 0;
+            for (double[] tier : new double[][] {{0,.5,1.5},{.5,1,2},{1,3,1.5},{3,3.5,2},{3.5,4,1.5}}) {
+                double[] min = {0,y+tier[0],0}, max = {16,y+tier[1],16};
+                restrict(min, max, facing.getOpposite(), tier[2]);
+                restrict(min, max, side, 9);
+                result = net.minecraft.world.phys.shapes.Shapes.or(result, Block.box(min[0],min[1],min[2],max[0],max[1],max[2]));
+                if (state.getValue(top ? DADO_CORNER_TOP : DADO_CORNER_BOTTOM)) {
+                    // The perpendicular leg runs from the wall to the front
+                    // boundary, joining the existing rail without a gap.
+                    double[] turnMin = {0,y+tier[0],0}, turnMax = {16,y+tier[1],16};
+                    restrict(turnMin, turnMax, side, tier[2]);
+                    result = net.minecraft.world.phys.shapes.Shapes.or(result,
+                            Block.box(turnMin[0],turnMin[1],turnMin[2],turnMax[0],turnMax[1],turnMax[2]));
+                }
+            }
+        }
+        return result;
     }
 
     public enum Edge implements StringRepresentable {

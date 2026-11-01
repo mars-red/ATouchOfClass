@@ -22,6 +22,7 @@ import com.digitaldownpour.atouchofclass.blocks.KeyCutterBlock;
 import com.digitaldownpour.atouchofclass.blocks.CasingBlock;
 import com.digitaldownpour.atouchofclass.blocks.CrownMouldingBlock;
 import com.digitaldownpour.atouchofclass.blocks.BaseboardBlock;
+import com.digitaldownpour.atouchofclass.blocks.DadoRailBlock;
 import com.digitaldownpour.atouchofclass.blocks.WindowApronBlock;
 import com.digitaldownpour.atouchofclass.blocks.WallTileTrimStripBlock;
 import com.digitaldownpour.atouchofclass.blocks.WindowLedgeBlock;
@@ -1335,6 +1336,14 @@ public class ModBlocks {
 
     public static final DeferredBlock<BaseboardBlock> BASEBOARD = BLOCKS.register("baseboard",
             registryName -> new BaseboardBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.SNOW)
+                    .strength(2.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.WOOD)
+                    .noOcclusion()));
+
+    public static final DeferredBlock<DadoRailBlock> DADO_RAIL = BLOCKS.register("dado_rail",
+            registryName -> new DadoRailBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
                     .mapColor(MapColor.SNOW)
                     .strength(2.0F)
