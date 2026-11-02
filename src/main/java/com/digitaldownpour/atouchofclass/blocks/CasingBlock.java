@@ -32,7 +32,11 @@ public class CasingBlock extends Block {
 
     protected CasingBlock(Properties properties, double depth, double width) {
         super(properties);
-        registerDefaultState(stateDefinition.any().setValue(FACING, Direction.SOUTH).setValue(EDGE, Edge.RIGHT));
+        // Missing properties in older saves fall back to this state. Keep all
+        // optional dado geometry disabled until a real neighbor enables it.
+        registerDefaultState(stateDefinition.any().setValue(FACING, Direction.SOUTH).setValue(EDGE, Edge.RIGHT)
+                .setValue(DADO_TOP, false).setValue(DADO_BOTTOM, false)
+                .setValue(DADO_CORNER_TOP, false).setValue(DADO_CORNER_BOTTOM, false));
         for (BlockState state : stateDefinition.getPossibleStates()) {
             Direction facing = state.getValue(FACING);
             Direction edge = edgeDirection(facing, state.getValue(EDGE));
