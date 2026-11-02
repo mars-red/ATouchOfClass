@@ -22,6 +22,20 @@ import net.minecraft.network.chat.Component;
 public class BaseboardGameTests {
 
     public static void uprightPlinthsCreateBaseboardCorners(GameTestHelper helper) {
+        // Old palettes contain only facing/edge. Their missing dado properties
+        // inherit defaults, including on casing subclasses.
+        for (var block : new CasingBlock[] {ModBlocks.CASING.get(), ModBlocks.PLINTH_BLOCK.get(), ModBlocks.WINDOW_APRON.get()}) {
+            for (Direction facing : Direction.values()) {
+                for (CasingBlock.Edge edge : CasingBlock.Edge.values()) {
+                    BlockState legacy = block.defaultBlockState().setValue(CasingBlock.FACING, facing).setValue(CasingBlock.EDGE, edge);
+                    helper.assertTrue(!legacy.getValue(CasingBlock.DADO_TOP)
+                            && !legacy.getValue(CasingBlock.DADO_BOTTOM)
+                            && !legacy.getValue(CasingBlock.DADO_CORNER_TOP)
+                            && !legacy.getValue(CasingBlock.DADO_CORNER_BOTTOM),
+                            Component.literal("Legacy casing must default to no dado connections"));
+                }
+            }
+        }
         checkCorners(helper, false);
     }
 

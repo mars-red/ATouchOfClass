@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": "#minecraft:wooden_slabs",
+    "P": "atouchofclass:bucket_of_plaster"
+  },
+  "pattern": [
+    "PSS"
+  ],
+  "result": {
+    "count": 16,
+    "id": "atouchofclass:dado_rail"
+  }
+}

@@ -160,6 +160,7 @@ chorus flower, and flowering leaf blocks have no bunch variants.
 | Piece | Placement technique |
 | --- | --- |
 | Baseboard | Click a side face near the bottom of the wall; the piece is bottom-aligned. Adjacent pieces determine corner shapes. |
+| Dado rail | Click the lower or upper half of a side face to align the rail to the bottom or top edge of its block space. Only horizontal rails on side faces are supported. |
 | Crown moulding | Click a side face at the ceiling line; the piece is top-aligned. Floor/ceiling-face clicks are not accepted. |
 | Casing | Click near the desired edge of a face. The nearest horizontal or vertical edge determines orientation. |
 | Plinth block | Uses casing's edge selection and adapts beside baseboard. Useful at the foot of an opening. |
@@ -167,6 +168,12 @@ chorus flower, and flowering leaf blocks have no bunch variants.
 | Window apron | Starts along the top edge of the clicked face. Clicking the end of an existing apron adds an end cap; a capped end cannot be extended again that way. |
 
 Build the supporting wall and opening first. Place straight runs before checking their corners, then add the casing, plinths, and apron. If a joint looks wrong, check the clicked face and edge rather than adding more pieces over it. The automatic corner rules depend on the orientation and positions of neighboring trim.
+
+Dado rail has a traditional stepped profile, 4 model units tall (one quarter of a block). Adjacent rails at the same height form inside and outside corners automatically; top and bottom runs do not connect to each other. Adding or removing neighboring trim updates the joint.
+
+Vertical casing on a side face accepts dado rail at either height. A rail meeting the near edge ends against the casing. When it approaches the far edge, the casing adds a short matching section to bridge the gap. Perpendicular connections form an inside return where the faces and edges meet. If the casing occupies the inside corner itself, it adds an angled section instead of a straight stub. These connections apply to left/right casing, rather than horizontal casing or casing on floors and ceilings.
+
+Craft **16 Dado Rails** with one **Bucket of Plaster** followed by two **wooden slabs** in a single row (`PSS`); see the [recipe](recipes.md#dado-rail). Shaped recipes are mirrored by Minecraft, so this pattern overlaps the baseboard recipe (`SSP`). The crafting result may therefore be ambiguous in the current build.
 
 <!-- screenshot:building-02:start -->
 ![A framed window with an apron, baseboard, and crown moulding continuing around a wall corner.](images/building/window-trim.png)

@@ -732,6 +732,7 @@ public class ModItems {
     public static final DeferredItem<BlockItem> WINDOW_APRON_ITEM = ITEMS.registerSimpleBlockItem("window_apron", ModBlocks.WINDOW_APRON);
     public static final DeferredItem<BlockItem> CROWN_MOULDING_ITEM = ITEMS.registerSimpleBlockItem("crown_moulding", ModBlocks.CROWN_MOULDING);
     public static final DeferredItem<BlockItem> BASEBOARD_ITEM = ITEMS.registerSimpleBlockItem("baseboard", ModBlocks.BASEBOARD);
+    public static final DeferredItem<BlockItem> DADO_RAIL_ITEM = ITEMS.registerSimpleBlockItem("dado_rail", ModBlocks.DADO_RAIL);
     public static final DeferredItem<BlockItem> PLINTH_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("plinth_block", ModBlocks.PLINTH_BLOCK);
     public static final DeferredItem<BlockItem> SQUARE_PLASTER_COLUMN_ITEM =
             ITEMS.registerSimpleBlockItem("square_plaster_column", ModBlocks.SQUARE_PLASTER_COLUMN);
@@ -1127,6 +1128,7 @@ public class ModItems {
             event.accept(WINDOW_APRON_ITEM);
             event.accept(CROWN_MOULDING_ITEM);
             event.accept(BASEBOARD_ITEM);
+            event.accept(DADO_RAIL_ITEM);
             event.accept(PLINTH_BLOCK_ITEM);
             event.accept(SQUARE_PLASTER_COLUMN_ITEM);
             event.accept(SQUARE_PLASTER_COLUMN_BASE_ITEM);
