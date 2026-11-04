@@ -33,6 +33,22 @@
     "sounds": ["atouchofclass:key_cutter"]
   },
 
+  "refrigerator_open": {
+    "sounds": ["atouchofclass:refrigerator_open"]
+  },
+
+  "refrigerator_close": {
+    "sounds": ["atouchofclass:refrigerator_close"]
+  },
+
+  "drawer_open": {
+    "sounds": ["atouchofclass:drawer_open"]
+  },
+
+  "drawer_close": {
+    "sounds": ["atouchofclass:drawer_close"]
+  },
+
   "locked_door": {
     "sounds": ["atouchofclass:locked_door"]
   }

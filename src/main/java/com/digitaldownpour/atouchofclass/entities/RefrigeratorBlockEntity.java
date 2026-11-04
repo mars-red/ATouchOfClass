@@ -1,11 +1,11 @@
 package com.digitaldownpour.atouchofclass.entities;
 
+import com.digitaldownpour.atouchofclass.ModSounds;
 import com.digitaldownpour.atouchofclass.ModEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
@@ -29,12 +29,12 @@ public class RefrigeratorBlockEntity extends RandomizableContainerBlockEntity {
     private final ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
         @Override
         protected void onOpen(Level level, BlockPos pos, BlockState state) {
-            playSound(level, pos, SoundEvents.BARREL_OPEN);
+            playSound(level, pos, ModSounds.REFRIGERATOR_OPEN.value());
         }
 
         @Override
         protected void onClose(Level level, BlockPos pos, BlockState state) {
-            playSound(level, pos, SoundEvents.BARREL_CLOSE);
+            playSound(level, pos, ModSounds.REFRIGERATOR_CLOSE.value());
         }
 
         @Override
@@ -116,6 +116,6 @@ public class RefrigeratorBlockEntity extends RandomizableContainerBlockEntity {
 
     private static void playSound(Level level, BlockPos pos, SoundEvent sound) {
         level.playSound(null, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
-                sound, SoundSource.BLOCKS, 0.5F, level.getRandom().nextFloat() * 0.1F + 0.9F);
+                sound, SoundSource.BLOCKS, 2.0F, level.getRandom().nextFloat() * 0.1F + 0.9F);
     }
 }

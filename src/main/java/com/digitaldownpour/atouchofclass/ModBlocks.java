@@ -22,6 +22,7 @@ import com.digitaldownpour.atouchofclass.blocks.KeyCutterBlock;
 import com.digitaldownpour.atouchofclass.blocks.CasingBlock;
 import com.digitaldownpour.atouchofclass.blocks.CrownMouldingBlock;
 import com.digitaldownpour.atouchofclass.blocks.BaseboardBlock;
+import com.digitaldownpour.atouchofclass.blocks.DadoRailBlock;
 import com.digitaldownpour.atouchofclass.blocks.WindowApronBlock;
 import com.digitaldownpour.atouchofclass.blocks.WallTileTrimStripBlock;
 import com.digitaldownpour.atouchofclass.blocks.WindowLedgeBlock;
@@ -67,6 +68,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -534,7 +536,7 @@ public class ModBlocks {
                             .setId(ResourceKey.create(Registries.BLOCK, registryName))
                             .mapColor(MapColor.STONE)
                             .strength(1.5F, 6.0F)
-                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .sound(net.minecraft.world.level.block.SoundType.RESIN)
                             .requiresCorrectToolForDrops()
                             .noOcclusion()));
 
@@ -544,7 +546,7 @@ public class ModBlocks {
                             .setId(ResourceKey.create(Registries.BLOCK, registryName))
                             .mapColor(MapColor.STONE)
                             .strength(1.5F, 6.0F)
-                            .sound(net.minecraft.world.level.block.SoundType.STONE)
+                            .sound(net.minecraft.world.level.block.SoundType.RESIN)
                             .requiresCorrectToolForDrops()
                             .noOcclusion()));
     public static final DeferredBlock<CountertopBlock> PRISMARINE_BRICK_COUNTERTOP =
@@ -975,6 +977,7 @@ public class ModBlocks {
         return BLOCKS.register(name, registryName -> {
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.ofFullCopy(vanillaBlock)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .sound(net.minecraft.world.level.block.SoundType.COPPER)
                     .noOcclusion();
             return waxed ? new CountertopBlock(properties) : new WeatheringCountertopBlock(age, properties);
         });
@@ -985,6 +988,7 @@ public class ModBlocks {
         return BLOCKS.register(name, registryName -> {
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.ofFullCopy(vanillaBlock)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .sound(net.minecraft.world.level.block.SoundType.COPPER)
                     .noOcclusion();
             return waxed ? new SinkBlock(properties) : new WeatheringSinkBlock(age, properties);
         });
@@ -1141,6 +1145,9 @@ public class ModBlocks {
     }
 
     private static Block createBasicBlock(String name, BlockBehaviour.Properties properties) {
+        if (name.endsWith("_parquet")) {
+            return new Block(properties.sound(net.minecraft.world.level.block.SoundType.WOOD));
+        }
         if (name.equals("marble_tile")) {
             return new com.digitaldownpour.atouchofclass.blocks.StochasticBlock(properties, 4);
         }
@@ -1341,6 +1348,14 @@ public class ModBlocks {
                     .sound(net.minecraft.world.level.block.SoundType.WOOD)
                     .noOcclusion()));
 
+    public static final DeferredBlock<DadoRailBlock> DADO_RAIL = BLOCKS.register("dado_rail",
+            registryName -> new DadoRailBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .mapColor(MapColor.SNOW)
+                    .strength(2.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.WOOD)
+                    .noOcclusion()));
+
     public static final DeferredBlock<WindowApronBlock> WINDOW_APRON = BLOCKS.register("window_apron",
             registryName -> new WindowApronBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
@@ -1420,7 +1435,7 @@ public class ModBlocks {
             blocks.put(id, BLOCKS.register(id, key -> new com.digitaldownpour.atouchofclass.blocks.TransomBlock(
                     BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
                             .mapColor(definition.sourceBlock().defaultMapColor()).strength(1.5F)
-                            .sound(net.minecraft.world.level.block.SoundType.WOOD).noOcclusion())));
+                            .sound(net.minecraft.world.level.block.SoundType.GLASS).noOcclusion())));
         });
         return java.util.Collections.unmodifiableMap(blocks);
     }
@@ -1434,7 +1449,7 @@ public class ModBlocks {
             blocks.put(id, BLOCKS.register(id, key -> new com.digitaldownpour.atouchofclass.blocks.WindowPaneBlock(
                     BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
                             .mapColor(definition.sourceBlock().defaultMapColor()).strength(1.5F)
-                            .sound(net.minecraft.world.level.block.SoundType.WOOD).noOcclusion())));
+                            .sound(net.minecraft.world.level.block.SoundType.GLASS).noOcclusion())));
         });
         return java.util.Collections.unmodifiableMap(blocks);
     }
@@ -1445,7 +1460,7 @@ public class ModBlocks {
     private static java.util.Map<String, DeferredHolder<Block, TallDoorBlock>> registerPatioDoors() {
         var doors = new java.util.LinkedHashMap<String, DeferredHolder<Block, TallDoorBlock>>();
         PatioDoorVariants.VALUES.forEach(definition -> doors.put(definition.id(),
-                registerTallDoor(definition.id(), definition.sourceBlock().defaultMapColor())));
+                registerTallDoor(definition.id(), definition.sourceBlock().defaultMapColor(), SoundType.GLASS)));
         return java.util.Collections.unmodifiableMap(doors);
     }
 
@@ -1557,6 +1572,7 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_LIGHT_GRAY)
                     .noOcclusion()
                     .strength(3.0F)
+                    .sound(net.minecraft.world.level.block.SoundType.IRON)
             )
     );
 
@@ -1734,7 +1750,7 @@ public class ModBlocks {
         return BLOCKS.register(name, key -> {
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
                     .mapColor(copperMapColor(age))
-                    .strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.COPPER).noOcclusion();
+                    .strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CHAIN).noOcclusion();
             return waxed ? new CopperChandelierChainBlock(properties) : new WeatheringCopperChandelierChainBlock(age, properties);
         });
     }
@@ -1868,10 +1884,15 @@ public class ModBlocks {
     }
 
     private static DeferredHolder<Block, TallDoorBlock> registerTallDoor(String name, MapColor mapColor) {
+        return registerTallDoor(name, mapColor, SoundType.WOOD);
+    }
+
+    private static DeferredHolder<Block, TallDoorBlock> registerTallDoor(String name, MapColor mapColor, SoundType soundType) {
         return BLOCKS.register(name, registryName -> new TallDoorBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .mapColor(mapColor)
                 .strength(3.0F)
+                .sound(soundType)
                 .noOcclusion()));
     }
 
@@ -1880,6 +1901,7 @@ public class ModBlocks {
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .mapColor(mapColor)
                 .strength(3.0F)
+                .sound(net.minecraft.world.level.block.SoundType.GLASS)
                 .noOcclusion()));
     }
 

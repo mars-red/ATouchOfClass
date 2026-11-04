@@ -35,6 +35,18 @@ public class ModSounds {
     public static final Holder<SoundEvent> KEY_CUTTER =
             SOUNDS.register("key_cutter", SoundEvent::createVariableRangeEvent);
 
+    public static final Holder<SoundEvent> REFRIGERATOR_OPEN =
+            SOUNDS.register("refrigerator_open", SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> REFRIGERATOR_CLOSE =
+            SOUNDS.register("refrigerator_close", SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> DRAWER_OPEN =
+            SOUNDS.register("drawer_open", SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> DRAWER_CLOSE =
+            SOUNDS.register("drawer_close", SoundEvent::createVariableRangeEvent);
+
     public static final Holder<SoundEvent> LOCKED_DOOR =
             SOUNDS.register("locked_door", SoundEvent::createVariableRangeEvent);
 }

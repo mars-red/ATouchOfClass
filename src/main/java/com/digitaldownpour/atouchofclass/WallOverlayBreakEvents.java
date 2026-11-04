@@ -7,6 +7,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -44,6 +46,7 @@ public final class WallOverlayBreakEvents {
 
         event.setCanceled(true);
         overlays.setFace(pos, face, null);
+        level.playSound(null, pos, SoundEvents.CINNABAR_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
         ModNetworking.sendToTracking(
                 level,
                 pos,
@@ -60,7 +63,11 @@ public final class WallOverlayBreakEvents {
         }
 
         BlockPos pos = event.getPos();
-        for (var entry : WallOverlaySavedData.get(level).removeAllFaces(pos).entrySet()) {
+        var removedFaces = WallOverlaySavedData.get(level).removeAllFaces(pos);
+        if (!removedFaces.isEmpty()) {
+            level.playSound(null, pos, SoundEvents.CINNABAR_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
+        }
+        for (var entry : removedFaces.entrySet()) {
             Direction face = entry.getKey();
             ModNetworking.sendToTracking(
                     level,

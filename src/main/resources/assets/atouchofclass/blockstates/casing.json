@@ -1,76 +1,572 @@
 {
-  "variants": {
-    "facing=south,edge=right": {
-      "model": "atouchofclass:block/casing"
+  "multipart": [
+    {
+      "when": {
+        "facing": "south",
+        "edge": "right"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing"
+      }
     },
-    "facing=south,edge=left": {
-      "model": "atouchofclass:block/casing_south_left"
+    {
+      "when": {
+        "facing": "south",
+        "edge": "right",
+        "dado_top": "true",
+        "dado_corner_top": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_south_right_dado_top"
+      }
     },
-    "facing=south,edge=top": {
-      "model": "atouchofclass:block/casing_south_top"
+    {
+      "when": {
+        "facing": "south",
+        "edge": "right",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_south_right_dado_bottom"
+      }
     },
-    "facing=south,edge=bottom": {
-      "model": "atouchofclass:block/casing_south_bottom"
+    {
+      "when": {
+        "facing": "south",
+        "edge": "left"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_south_left"
+      }
     },
-    "facing=west,edge=right": {
-      "model": "atouchofclass:block/casing_west_right"
+    {
+      "when": {
+        "facing": "south",
+        "edge": "left",
+        "dado_top": "true",
+        "dado_corner_top": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_south_left_dado_top"
+      }
     },
-    "facing=west,edge=left": {
-      "model": "atouchofclass:block/casing_west_left"
+    {
+      "when": {
+        "facing": "south",
+        "edge": "left",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_south_left_dado_bottom"
+      }
     },
-    "facing=west,edge=top": {
-      "model": "atouchofclass:block/casing_west_top"
+    {
+      "when": {
+        "facing": "south",
+        "edge": "top"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_south_top"
+      }
     },
-    "facing=west,edge=bottom": {
-      "model": "atouchofclass:block/casing_west_bottom"
+    {
+      "when": {
+        "facing": "south",
+        "edge": "bottom"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_south_bottom"
+      }
     },
-    "facing=north,edge=right": {
-      "model": "atouchofclass:block/casing_north_right"
+    {
+      "when": {
+        "facing": "west",
+        "edge": "right"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_right"
+      }
     },
-    "facing=north,edge=left": {
-      "model": "atouchofclass:block/casing_north_left"
+    {
+      "when": {
+        "facing": "west",
+        "edge": "right",
+        "dado_top": "true",
+        "dado_corner_top": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_right_dado_top"
+      }
     },
-    "facing=north,edge=top": {
-      "model": "atouchofclass:block/casing_north_top"
+    {
+      "when": {
+        "facing": "west",
+        "edge": "right",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_right_dado_bottom"
+      }
     },
-    "facing=north,edge=bottom": {
-      "model": "atouchofclass:block/casing_north_bottom"
+    {
+      "when": {
+        "facing": "west",
+        "edge": "left"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_left"
+      }
     },
-    "facing=east,edge=right": {
-      "model": "atouchofclass:block/casing_east_right"
+    {
+      "when": {
+        "facing": "west",
+        "edge": "left",
+        "dado_top": "true",
+        "dado_corner_top": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_left_dado_top"
+      }
     },
-    "facing=east,edge=left": {
-      "model": "atouchofclass:block/casing_east_left"
+    {
+      "when": {
+        "facing": "west",
+        "edge": "left",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_left_dado_bottom"
+      }
     },
-    "facing=east,edge=top": {
-      "model": "atouchofclass:block/casing_east_top"
+    {
+      "when": {
+        "facing": "west",
+        "edge": "top"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_top"
+      }
     },
-    "facing=east,edge=bottom": {
-      "model": "atouchofclass:block/casing_east_bottom"
+    {
+      "when": {
+        "facing": "west",
+        "edge": "bottom"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_bottom"
+      }
     },
-    "facing=up,edge=right": {
-      "model": "atouchofclass:block/casing_up_right"
+    {
+      "when": {
+        "facing": "north",
+        "edge": "right"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_right"
+      }
     },
-    "facing=up,edge=left": {
-      "model": "atouchofclass:block/casing_up_left"
+    {
+      "when": {
+        "facing": "north",
+        "edge": "right",
+        "dado_top": "true",
+        "dado_corner_top": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_right_dado_top"
+      }
     },
-    "facing=up,edge=top": {
-      "model": "atouchofclass:block/casing_up_top"
+    {
+      "when": {
+        "facing": "north",
+        "edge": "right",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_right_dado_bottom"
+      }
     },
-    "facing=up,edge=bottom": {
-      "model": "atouchofclass:block/casing_up_bottom"
+    {
+      "when": {
+        "facing": "north",
+        "edge": "left"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_left"
+      }
     },
-    "facing=down,edge=right": {
-      "model": "atouchofclass:block/casing_down_right"
+    {
+      "when": {
+        "facing": "north",
+        "edge": "left",
+        "dado_top": "true",
+        "dado_corner_top": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_left_dado_top"
+      }
     },
-    "facing=down,edge=left": {
-      "model": "atouchofclass:block/casing_down_left"
+    {
+      "when": {
+        "facing": "north",
+        "edge": "left",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_left_dado_bottom"
+      }
     },
-    "facing=down,edge=top": {
-      "model": "atouchofclass:block/casing_down_top"
+    {
+      "when": {
+        "facing": "north",
+        "edge": "top"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_top"
+      }
     },
-    "facing=down,edge=bottom": {
-      "model": "atouchofclass:block/casing_down_bottom"
+    {
+      "when": {
+        "facing": "north",
+        "edge": "bottom"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_bottom"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "right"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_right"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "right",
+        "dado_top": "true",
+        "dado_corner_top": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_right_dado_top"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "right",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_right_dado_bottom"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "left"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_left"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "left",
+        "dado_top": "true",
+        "dado_corner_top": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_left_dado_top"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "left",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "false"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_left_dado_bottom"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "top"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_top"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "bottom"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_bottom"
+      }
+    },
+    {
+      "when": {
+        "facing": "up",
+        "edge": "right"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_up_right"
+      }
+    },
+    {
+      "when": {
+        "facing": "up",
+        "edge": "left"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_up_left"
+      }
+    },
+    {
+      "when": {
+        "facing": "up",
+        "edge": "top"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_up_top"
+      }
+    },
+    {
+      "when": {
+        "facing": "up",
+        "edge": "bottom"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_up_bottom"
+      }
+    },
+    {
+      "when": {
+        "facing": "down",
+        "edge": "right"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_down_right"
+      }
+    },
+    {
+      "when": {
+        "facing": "down",
+        "edge": "left"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_down_left"
+      }
+    },
+    {
+      "when": {
+        "facing": "down",
+        "edge": "top"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_down_top"
+      }
+    },
+    {
+      "when": {
+        "facing": "down",
+        "edge": "bottom"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_down_bottom"
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "edge": "right",
+        "dado_top": "true",
+        "dado_corner_top": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_south_right_dado_top_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "edge": "right",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_south_right_dado_bottom_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "edge": "left",
+        "dado_top": "true",
+        "dado_corner_top": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_south_left_dado_top_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "edge": "left",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_south_left_dado_bottom_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "edge": "right",
+        "dado_top": "true",
+        "dado_corner_top": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_right_dado_top_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "edge": "right",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_right_dado_bottom_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "edge": "left",
+        "dado_top": "true",
+        "dado_corner_top": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_left_dado_top_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "edge": "left",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_west_left_dado_bottom_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "edge": "right",
+        "dado_top": "true",
+        "dado_corner_top": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_right_dado_top_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "edge": "right",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_right_dado_bottom_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "edge": "left",
+        "dado_top": "true",
+        "dado_corner_top": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_left_dado_top_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "edge": "left",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_north_left_dado_bottom_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "right",
+        "dado_top": "true",
+        "dado_corner_top": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_right_dado_top_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "right",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_right_dado_bottom_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "left",
+        "dado_top": "true",
+        "dado_corner_top": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_left_dado_top_corner"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "edge": "left",
+        "dado_bottom": "true",
+        "dado_corner_bottom": "true"
+      },
+      "apply": {
+        "model": "atouchofclass:block/casing_east_left_dado_bottom_corner"
+      }
     }
-  }
+  ]
 }

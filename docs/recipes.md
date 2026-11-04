@@ -2924,6 +2924,18 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_glazed_terracotta_wall_tiles.json)
 
+## dado-rail
+
+**Output:** 16 × Dado Rail (`atouchofclass:dado_rail`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PSS
+```
+
+`P` = `atouchofclass:bucket_of_plaster`; `S` = `#minecraft:wooden_slabs`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dado_rail.json)
+
 ## dandelion-bunch
 
 **Output:** 1 × Dandelion Bunch (`atouchofclass:dandelion_bunch`). **Type:** `minecraft:crafting_shaped`.
