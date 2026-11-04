@@ -1,7 +1,9 @@
 package com.digitaldownpour.atouchofclass.entities;
 
+import com.digitaldownpour.atouchofclass.ModSounds;
 import com.digitaldownpour.atouchofclass.ModEntities;
 import com.digitaldownpour.atouchofclass.CabinetAttachments;
+import com.digitaldownpour.atouchofclass.blocks.DoorCabinetBlock;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
@@ -63,12 +65,16 @@ public class CabinetBlockEntity extends RandomizableContainerBlockEntity {
     private final ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
         @Override
         protected void onOpen(Level level, BlockPos pos, BlockState state) {
-            playSound(level, pos, SoundEvents.CHEST_OPEN);
+            playSound(level, pos, state.getBlock() instanceof DoorCabinetBlock
+                    ? SoundEvents.CHEST_OPEN
+                    : ModSounds.DRAWER_OPEN.value());
         }
 
         @Override
         protected void onClose(Level level, BlockPos pos, BlockState state) {
-            playSound(level, pos, SoundEvents.CHEST_CLOSE);
+            playSound(level, pos, state.getBlock() instanceof DoorCabinetBlock
+                    ? SoundEvents.CHEST_CLOSE
+                    : ModSounds.DRAWER_CLOSE.value());
         }
 
         @Override

@@ -1,11 +1,11 @@
 package com.digitaldownpour.atouchofclass.entities;
 
+import com.digitaldownpour.atouchofclass.ModSounds;
 import com.digitaldownpour.atouchofclass.ModEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
@@ -29,12 +29,12 @@ public class DresserBlockEntity extends RandomizableContainerBlockEntity {
     private final ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
         @Override
         protected void onOpen(Level level, BlockPos pos, BlockState state) {
-            playSound(level, pos, SoundEvents.CHEST_OPEN);
+            playSound(level, pos, ModSounds.DRAWER_OPEN.value());
         }
 
         @Override
         protected void onClose(Level level, BlockPos pos, BlockState state) {
-            playSound(level, pos, SoundEvents.CHEST_CLOSE);
+            playSound(level, pos, ModSounds.DRAWER_CLOSE.value());
         }
 
         @Override
