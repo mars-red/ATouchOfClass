@@ -3,6 +3,7 @@ package com.digitaldownpour.atouchofclass;
 import com.digitaldownpour.atouchofclass.blocks.WallSconceBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakRailingBlock;
 import com.digitaldownpour.atouchofclass.blocks.RakeBoardBlock;
+import com.digitaldownpour.atouchofclass.blocks.SpandrelBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakBalustradeBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakBalusterBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperChandelierChainBlock;
@@ -1333,21 +1334,25 @@ public class ModBlocks {
                             .pushReaction(net.minecraft.world.level.material.PushReaction.IMMOVEABLE).noOcclusion()));
     public static final java.util.Map<String, WoodRailingVariants.Family> WOOD_RAILINGS = WoodRailingVariants.register();
 
-    public static final java.util.Map<String, DeferredBlock<RakeBoardBlock>> RAKE_BOARDS = registerRakeBoards();
+    public static final java.util.Map<String, DeferredBlock<RakeBoardBlock>> RAKE_BOARDS =
+            registerWoodTrim("_rake_board", RakeBoardBlock::new);
+    public static final java.util.Map<String, DeferredBlock<SpandrelBlock>> SPANDRELS =
+            registerWoodTrim("_spandrel", SpandrelBlock::new);
 
-    private static java.util.Map<String, DeferredBlock<RakeBoardBlock>> registerRakeBoards() {
+    private static <T extends Block> java.util.Map<String, DeferredBlock<T>> registerWoodTrim(
+            String suffix, java.util.function.Function<BlockBehaviour.Properties, T> factory) {
         var woods = new java.util.ArrayList<String>();
         woods.add("oak");
         woods.addAll(WOOD_RAILINGS.keySet());
-        var boards = new java.util.LinkedHashMap<String, DeferredBlock<RakeBoardBlock>>();
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<T>>();
         for (String wood : woods) {
-            String id = wood + "_rake_board";
-            boards.put(id, BLOCKS.register(id, key -> new RakeBoardBlock(
+            String id = wood + suffix;
+            blocks.put(id, BLOCKS.register(id, key -> factory.apply(
                     BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
                             .mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.WOOD).noOcclusion()
                             .pushReaction(net.minecraft.world.level.material.PushReaction.POPPED))));
         }
-        return java.util.Collections.unmodifiableMap(boards);
+        return java.util.Collections.unmodifiableMap(blocks);
     }
 
     public static final DeferredBlock<CrownMouldingBlock> CROWN_MOULDING = BLOCKS.register("crown_moulding",

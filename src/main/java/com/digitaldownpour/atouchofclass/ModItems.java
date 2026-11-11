@@ -385,6 +385,9 @@ public class ModItems {
     public static final java.util.List<DeferredItem<BlockItem>> RAKE_BOARDS = ModBlocks.RAKE_BOARDS.entrySet().stream()
             .map(entry -> ITEMS.registerSimpleBlockItem(entry.getKey(), entry.getValue()))
             .toList();
+    public static final java.util.List<DeferredItem<BlockItem>> SPANDRELS = ModBlocks.SPANDRELS.entrySet().stream()
+            .map(entry -> ITEMS.registerSimpleBlockItem(entry.getKey(), entry.getValue()))
+            .toList();
     public static final DeferredItem<BlockItem> OAK_RAILING = ITEMS.registerSimpleBlockItem("oak_railing", ModBlocks.OAK_RAILING);
 
     public static final DeferredItem<BlockItem> OAK_BALUSTRADE = ITEMS.registerSimpleBlockItem("oak_balustrade", ModBlocks.OAK_BALUSTRADE);
@@ -1089,6 +1092,7 @@ public class ModItems {
             // FURNITURE_VARIANT_CREATIVE_ENTRIES
             event.accept(OAK_RAILING);
             RAKE_BOARDS.forEach(event::accept);
+            SPANDRELS.forEach(event::accept);
             event.accept(OAK_BALUSTRADE);
             event.accept(OAK_BALUSTER);
             event.accept(OAK_NEWEL_POST);

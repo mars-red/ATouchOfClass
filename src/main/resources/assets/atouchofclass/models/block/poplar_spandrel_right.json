@@ -1,0 +1,10 @@
+{
+  "loader": "atouchofclass:spandrel",
+  "section": "right",
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "minecraft:block/poplar_planks",
+    "wood": "minecraft:block/poplar_planks"
+  }
+}

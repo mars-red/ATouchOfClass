@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "spandrels",
+  "pattern": [
+    " W ",
+    "W W"
+  ],
+  "key": {
+    "W": "minecraft:cherry_planks"
+  },
+  "result": {
+    "id": "atouchofclass:cherry_spandrel",
+    "count": 8
+  }
+}

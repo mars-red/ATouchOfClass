@@ -1,0 +1,30 @@
+{
+  "loader": "atouchofclass:spandrel",
+  "section": "straight",
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "minecraft:block/birch_planks",
+    "wood": "minecraft:block/birch_planks"
+  },
+  "gui_light": "front",
+  "display": {
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        -3,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    }
+  }
+}

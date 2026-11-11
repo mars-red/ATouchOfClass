@@ -71,13 +71,13 @@ public final class RakeBoardModelLoader implements UnbakedModelLoader<CuboidMode
         }
     }
 
-    private record Point(double x, double y) {}
+    record Point(double x, double y) {}
 
     private static Point boardPoint(double x, double across) {
         return new Point(x, x - across * ROOT_TWO);
     }
 
-    private record Mesh(QuadCollection.Builder quads, ModelState state, boolean mirrored) {
+    record Mesh(QuadCollection.Builder quads, ModelState state, boolean mirrored) {
         void boardHalf(double start, double along, double across, Material.Baked material) {
             double end = start + 8;
             double center = start + 4;
