@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "spandrels",
+  "pattern": [
+    " W ",
+    "W W"
+  ],
+  "key": {
+    "W": "minecraft:crimson_planks"
+  },
+  "result": {
+    "id": "atouchofclass:crimson_spandrel",
+    "count": 8
+  }
+}

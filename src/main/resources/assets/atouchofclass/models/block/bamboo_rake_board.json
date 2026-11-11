@@ -1,0 +1,11 @@
+{
+  "loader": "atouchofclass:rake_board",
+  "rises_left": false,
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "minecraft:block/bamboo_planks",
+    "board": "minecraft:block/bamboo_planks",
+    "filler": "minecraft:block/deepslate_tiles"
+  }
+}
