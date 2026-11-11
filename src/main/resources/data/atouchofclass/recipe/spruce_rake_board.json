@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "rake_boards",
+  "pattern": [
+    "W  ",
+    " W ",
+    "  W"
+  ],
+  "key": {
+    "W": "minecraft:spruce_planks"
+  },
+  "result": {
+    "id": "atouchofclass:spruce_rake_board",
+    "count": 12
+  }
+}

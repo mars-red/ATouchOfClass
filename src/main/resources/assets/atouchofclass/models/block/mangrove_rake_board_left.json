@@ -1,0 +1,11 @@
+{
+  "loader": "atouchofclass:rake_board",
+  "rises_left": true,
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "minecraft:block/mangrove_planks",
+    "board": "minecraft:block/mangrove_planks",
+    "filler": "minecraft:block/deepslate_tiles"
+  }
+}

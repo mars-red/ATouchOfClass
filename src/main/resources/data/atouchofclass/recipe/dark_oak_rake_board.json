@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "rake_boards",
+  "pattern": [
+    "W  ",
+    " W ",
+    "  W"
+  ],
+  "key": {
+    "W": "minecraft:dark_oak_planks"
+  },
+  "result": {
+    "id": "atouchofclass:dark_oak_rake_board",
+    "count": 12
+  }
+}

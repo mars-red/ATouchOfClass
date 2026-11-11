@@ -2,6 +2,7 @@ package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.blocks.WallSconceBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakRailingBlock;
+import com.digitaldownpour.atouchofclass.blocks.RakeBoardBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakBalustradeBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakBalusterBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperChandelierChainBlock;
@@ -1331,6 +1332,23 @@ public class ModBlocks {
                             .mapColor(MapColor.WOOD).strength(2.0F).sound(net.minecraft.world.level.block.SoundType.WOOD)
                             .pushReaction(net.minecraft.world.level.material.PushReaction.IMMOVEABLE).noOcclusion()));
     public static final java.util.Map<String, WoodRailingVariants.Family> WOOD_RAILINGS = WoodRailingVariants.register();
+
+    public static final java.util.Map<String, DeferredBlock<RakeBoardBlock>> RAKE_BOARDS = registerRakeBoards();
+
+    private static java.util.Map<String, DeferredBlock<RakeBoardBlock>> registerRakeBoards() {
+        var woods = new java.util.ArrayList<String>();
+        woods.add("oak");
+        woods.addAll(WOOD_RAILINGS.keySet());
+        var boards = new java.util.LinkedHashMap<String, DeferredBlock<RakeBoardBlock>>();
+        for (String wood : woods) {
+            String id = wood + "_rake_board";
+            boards.put(id, BLOCKS.register(id, key -> new RakeBoardBlock(
+                    BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                            .mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.WOOD).noOcclusion()
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.POPPED))));
+        }
+        return java.util.Collections.unmodifiableMap(boards);
+    }
 
     public static final DeferredBlock<CrownMouldingBlock> CROWN_MOULDING = BLOCKS.register("crown_moulding",
             registryName -> new CrownMouldingBlock(BlockBehaviour.Properties.of()
