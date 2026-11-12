@@ -1,5 +1,6 @@
 package com.digitaldownpour.atouchofclass;
 
+import com.digitaldownpour.atouchofclass.client.MergedFixtureRenderer;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -13,6 +14,8 @@ public final class ModEntityRenderers {
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ModEntities.MERGED_FIXTURE_BE.get(), context -> new MergedFixtureRenderer<>(context, false));
+        event.registerBlockEntityRenderer(ModEntities.CABINET_BE.get(), context -> new MergedFixtureRenderer<>(context, true));
         event.registerEntityRenderer(ModEntities.LOVE_SEAT_SEAT.get(), NoopRenderer::new);
     }
 }

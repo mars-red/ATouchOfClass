@@ -3,6 +3,7 @@ package com.digitaldownpour.atouchofclass.blocks;
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.Map;
+import com.digitaldownpour.atouchofclass.entities.MergedFixtureBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -11,6 +12,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
@@ -22,7 +25,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** Individually placed sinks pair side-by-side, with the left model owning the shared faucet. */
-public class KitchenSinkBlock extends HorizontalFurnitureBlock {
+public class KitchenSinkBlock extends HorizontalFurnitureBlock implements EntityBlock {
     public static final EnumProperty<ChestType> TYPE = BlockStateProperties.CHEST_TYPE;
     private static final Map<ChestType, Map<Direction, VoxelShape>> SHAPES = createShapes();
 
@@ -31,6 +34,16 @@ public class KitchenSinkBlock extends HorizontalFurnitureBlock {
         registerDefaultState(defaultBlockState().setValue(TYPE, ChestType.SINGLE));
     }
 
+
+    @Override
+    public @org.jetbrains.annotations.Nullable MergedFixtureBlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return state.getValue(TYPE) == ChestType.SINGLE ? null : new MergedFixtureBlockEntity(pos, state);
+    }
+
+    @Override
+    protected RenderShape getRenderShape(BlockState state) {
+        return state.getValue(TYPE) == ChestType.SINGLE ? RenderShape.MODEL : RenderShape.INVISIBLE;
+    }
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
