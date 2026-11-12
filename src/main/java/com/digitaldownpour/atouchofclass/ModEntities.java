@@ -11,6 +11,7 @@ import com.digitaldownpour.atouchofclass.entities.NightstandBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.RefrigeratorBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.OvenBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
+import com.digitaldownpour.atouchofclass.entities.MergedFixtureBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
@@ -85,6 +86,10 @@ public class ModEntities {
                     OvenBlockEntity::new,
                     ModBlocks.OVEN.get()
             ));
+
+    public static final Supplier<BlockEntityType<MergedFixtureBlockEntity>> MERGED_FIXTURE_BE =
+            BLOCK_ENTITY_TYPES.register("merged_fixture", () -> new BlockEntityType<>(
+                    MergedFixtureBlockEntity::new, ModBlocks.INDUCTION_COOKTOP.get(), ModBlocks.KITCHEN_SINK.get()));
 
     public static final Supplier<BlockEntityType<TallDoorBlockEntity>> TALL_DOOR_BE = BLOCK_ENTITY_TYPES.register("tall_door_be",
             () -> new BlockEntityType<>(

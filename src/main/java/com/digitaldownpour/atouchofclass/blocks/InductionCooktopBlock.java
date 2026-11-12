@@ -1,5 +1,6 @@
 package com.digitaldownpour.atouchofclass.blocks;
 
+import com.digitaldownpour.atouchofclass.entities.MergedFixtureBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -8,6 +9,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
@@ -19,7 +22,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /** A cosmetic, countertop-height cooktop that can form one seamless two-block pair. */
-public class InductionCooktopBlock extends HorizontalDirectionalBlock {
+public class InductionCooktopBlock extends HorizontalDirectionalBlock implements EntityBlock {
     public static final EnumProperty<ChestType> TYPE = EnumProperty.create("type", ChestType.class);
     private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 2, 16);
 
@@ -30,6 +33,16 @@ public class InductionCooktopBlock extends HorizontalDirectionalBlock {
                 .setValue(TYPE, ChestType.SINGLE));
     }
 
+
+    @Override
+    public @org.jetbrains.annotations.Nullable MergedFixtureBlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return state.getValue(TYPE) == ChestType.SINGLE ? null : new MergedFixtureBlockEntity(pos, state);
+    }
+
+    @Override
+    protected RenderShape getRenderShape(BlockState state) {
+        return state.getValue(TYPE) == ChestType.SINGLE ? RenderShape.MODEL : RenderShape.INVISIBLE;
+    }
 
     @Override
     public @org.jetbrains.annotations.Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
