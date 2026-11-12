@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/plaster_corbel"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/plaster_corbel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/plaster_corbel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/plaster_corbel",
+      "y": 270
+    }
+  }
+}

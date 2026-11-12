@@ -388,6 +388,11 @@ public class ModItems {
     public static final java.util.List<DeferredItem<BlockItem>> SPANDRELS = ModBlocks.SPANDRELS.entrySet().stream()
             .map(entry -> ITEMS.registerSimpleBlockItem(entry.getKey(), entry.getValue()))
             .toList();
+    public static final java.util.List<DeferredItem<BlockItem>> WOOD_CORBELS = ModBlocks.WOOD_CORBELS.entrySet().stream()
+            .map(entry -> ITEMS.registerSimpleBlockItem(entry.getKey(), entry.getValue()))
+            .toList();
+    public static final DeferredItem<BlockItem> PLASTER_CORBEL =
+            ITEMS.registerSimpleBlockItem("plaster_corbel", ModBlocks.PLASTER_CORBEL);
     public static final DeferredItem<BlockItem> OAK_RAILING = ITEMS.registerSimpleBlockItem("oak_railing", ModBlocks.OAK_RAILING);
 
     public static final DeferredItem<BlockItem> OAK_BALUSTRADE = ITEMS.registerSimpleBlockItem("oak_balustrade", ModBlocks.OAK_BALUSTRADE);
@@ -1093,6 +1098,8 @@ public class ModItems {
             event.accept(OAK_RAILING);
             RAKE_BOARDS.forEach(event::accept);
             SPANDRELS.forEach(event::accept);
+            WOOD_CORBELS.forEach(event::accept);
+            event.accept(PLASTER_CORBEL);
             event.accept(OAK_BALUSTRADE);
             event.accept(OAK_BALUSTER);
             event.accept(OAK_NEWEL_POST);

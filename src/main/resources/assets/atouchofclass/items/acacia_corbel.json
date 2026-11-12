@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "atouchofclass:block/acacia_corbel",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": -2171170
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/mangrove_corbel"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/mangrove_corbel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/mangrove_corbel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/mangrove_corbel",
+      "y": 270
+    }
+  }
+}

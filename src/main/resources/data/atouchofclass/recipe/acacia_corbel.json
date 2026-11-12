@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "corbels",
+  "pattern": [
+    "XX ",
+    "X  ",
+    "X  "
+  ],
+  "key": {
+    "X": "minecraft:acacia_planks"
+  },
+  "result": {
+    "id": "atouchofclass:acacia_corbel",
+    "count": 8
+  }
+}

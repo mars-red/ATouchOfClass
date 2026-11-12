@@ -1,0 +1,7 @@
+{
+  "parent": "atouchofclass:block/corbel",
+  "textures": {
+    "material": "minecraft:block/white_concrete",
+    "particle": "minecraft:block/white_concrete"
+  }
+}
