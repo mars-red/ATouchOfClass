@@ -4,6 +4,7 @@ import com.digitaldownpour.atouchofclass.blocks.WallSconceBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakRailingBlock;
 import com.digitaldownpour.atouchofclass.blocks.RakeBoardBlock;
 import com.digitaldownpour.atouchofclass.blocks.SpandrelBlock;
+import com.digitaldownpour.atouchofclass.blocks.CorbelBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakBalustradeBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakBalusterBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperChandelierChainBlock;
@@ -1338,6 +1339,13 @@ public class ModBlocks {
             registerWoodTrim("_rake_board", RakeBoardBlock::new);
     public static final java.util.Map<String, DeferredBlock<SpandrelBlock>> SPANDRELS =
             registerWoodTrim("_spandrel", SpandrelBlock::new);
+    public static final java.util.Map<String, DeferredBlock<CorbelBlock>> WOOD_CORBELS =
+            registerWoodTrim("_corbel", CorbelBlock::new);
+    public static final DeferredBlock<CorbelBlock> PLASTER_CORBEL =
+            BLOCKS.register("plaster_corbel", key -> new CorbelBlock(
+                    BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                            .mapColor(MapColor.SNOW).strength(1.8F).sound(SoundType.STONE).noOcclusion()
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.POPPED)));
 
     private static <T extends Block> java.util.Map<String, DeferredBlock<T>> registerWoodTrim(
             String suffix, java.util.function.Function<BlockBehaviour.Properties, T> factory) {

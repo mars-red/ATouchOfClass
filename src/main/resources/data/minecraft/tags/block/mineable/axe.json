@@ -444,6 +444,19 @@
     "atouchofclass:pale_oak_window_pane",
     "atouchofclass:bamboo_window_pane",
     "atouchofclass:crimson_window_pane",
-    "atouchofclass:warped_window_pane"
+    "atouchofclass:warped_window_pane",
+    "atouchofclass:acacia_corbel",
+    "atouchofclass:bamboo_corbel",
+    "atouchofclass:birch_corbel",
+    "atouchofclass:cherry_corbel",
+    "atouchofclass:crimson_corbel",
+    "atouchofclass:dark_oak_corbel",
+    "atouchofclass:jungle_corbel",
+    "atouchofclass:mangrove_corbel",
+    "atouchofclass:oak_corbel",
+    "atouchofclass:pale_oak_corbel",
+    "atouchofclass:poplar_corbel",
+    "atouchofclass:spruce_corbel",
+    "atouchofclass:warped_corbel"
   ]
 }
