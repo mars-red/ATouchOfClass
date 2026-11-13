@@ -1,0 +1,7 @@
+{
+  "parent": "atouchofclass:block/corbel",
+  "textures": {
+    "material": "minecraft:block/stripped_bamboo_block",
+    "particle": "minecraft:block/stripped_bamboo_block"
+  }
+}

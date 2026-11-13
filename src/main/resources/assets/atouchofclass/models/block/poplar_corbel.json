@@ -1,0 +1,7 @@
+{
+  "parent": "atouchofclass:block/corbel",
+  "textures": {
+    "material": "minecraft:block/stripped_poplar_log",
+    "particle": "minecraft:block/stripped_poplar_log"
+  }
+}

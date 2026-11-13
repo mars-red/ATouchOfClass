@@ -119,6 +119,54 @@
     },
     "atouchofclass:oxidized_cut_copper_sink": {
       "waxed": "atouchofclass:waxed_oxidized_cut_copper_sink"
+    },
+    "atouchofclass:copper_induction_cooktop": {
+      "waxed": "atouchofclass:waxed_copper_induction_cooktop"
+    },
+    "atouchofclass:exposed_copper_induction_cooktop": {
+      "waxed": "atouchofclass:waxed_exposed_copper_induction_cooktop"
+    },
+    "atouchofclass:weathered_copper_induction_cooktop": {
+      "waxed": "atouchofclass:waxed_weathered_copper_induction_cooktop"
+    },
+    "atouchofclass:oxidized_copper_induction_cooktop": {
+      "waxed": "atouchofclass:waxed_oxidized_copper_induction_cooktop"
+    },
+    "atouchofclass:copper_kitchen_sink": {
+      "waxed": "atouchofclass:waxed_copper_kitchen_sink"
+    },
+    "atouchofclass:exposed_copper_kitchen_sink": {
+      "waxed": "atouchofclass:waxed_exposed_copper_kitchen_sink"
+    },
+    "atouchofclass:weathered_copper_kitchen_sink": {
+      "waxed": "atouchofclass:waxed_weathered_copper_kitchen_sink"
+    },
+    "atouchofclass:oxidized_copper_kitchen_sink": {
+      "waxed": "atouchofclass:waxed_oxidized_copper_kitchen_sink"
+    },
+    "atouchofclass:copper_refrigerator": {
+      "waxed": "atouchofclass:waxed_copper_refrigerator"
+    },
+    "atouchofclass:exposed_copper_refrigerator": {
+      "waxed": "atouchofclass:waxed_exposed_copper_refrigerator"
+    },
+    "atouchofclass:weathered_copper_refrigerator": {
+      "waxed": "atouchofclass:waxed_weathered_copper_refrigerator"
+    },
+    "atouchofclass:oxidized_copper_refrigerator": {
+      "waxed": "atouchofclass:waxed_oxidized_copper_refrigerator"
+    },
+    "atouchofclass:copper_oven": {
+      "waxed": "atouchofclass:waxed_copper_oven"
+    },
+    "atouchofclass:exposed_copper_oven": {
+      "waxed": "atouchofclass:waxed_exposed_copper_oven"
+    },
+    "atouchofclass:weathered_copper_oven": {
+      "waxed": "atouchofclass:waxed_weathered_copper_oven"
+    },
+    "atouchofclass:oxidized_copper_oven": {
+      "waxed": "atouchofclass:waxed_oxidized_copper_oven"
     }
   }
 }

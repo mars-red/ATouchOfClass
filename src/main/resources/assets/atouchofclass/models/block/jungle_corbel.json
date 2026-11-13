@@ -1,0 +1,7 @@
+{
+  "parent": "atouchofclass:block/corbel",
+  "textures": {
+    "material": "minecraft:block/stripped_jungle_log",
+    "particle": "minecraft:block/stripped_jungle_log"
+  }
+}

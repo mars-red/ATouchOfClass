@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=north,type=single": {
+      "model": "atouchofclass:block/copper_kitchen_sink"
+    },
+    "facing=east,type=single": {
+      "model": "atouchofclass:block/copper_kitchen_sink",
+      "y": 90
+    },
+    "facing=south,type=single": {
+      "model": "atouchofclass:block/copper_kitchen_sink",
+      "y": 180
+    },
+    "facing=west,type=single": {
+      "model": "atouchofclass:block/copper_kitchen_sink",
+      "y": 270
+    },
+    "facing=north,type=left": {
+      "model": "atouchofclass:block/copper_kitchen_sink_double_left"
+    },
+    "facing=east,type=left": {
+      "model": "atouchofclass:block/copper_kitchen_sink_double_left",
+      "y": 90
+    },
+    "facing=south,type=left": {
+      "model": "atouchofclass:block/copper_kitchen_sink_double_left",
+      "y": 180
+    },
+    "facing=west,type=left": {
+      "model": "atouchofclass:block/copper_kitchen_sink_double_left",
+      "y": 270
+    },
+    "facing=north,type=right": {
+      "model": "atouchofclass:block/copper_kitchen_sink_double_right"
+    },
+    "facing=east,type=right": {
+      "model": "atouchofclass:block/copper_kitchen_sink_double_right",
+      "y": 90
+    },
+    "facing=south,type=right": {
+      "model": "atouchofclass:block/copper_kitchen_sink_double_right",
+      "y": 180
+    },
+    "facing=west,type=right": {
+      "model": "atouchofclass:block/copper_kitchen_sink_double_right",
+      "y": 270
+    }
+  }
+}

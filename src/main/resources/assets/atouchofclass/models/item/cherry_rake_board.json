@@ -1,0 +1,16 @@
+{
+  "loader": "atouchofclass:rake_board",
+  "rises_left": false,
+  "include_filler": false,
+  "gui_light": "front",
+  "textures": {
+    "particle": "minecraft:block/cherry_planks",
+    "board": "minecraft:block/cherry_planks"
+  },
+  "display": {
+    "gui": {
+      "translation": [0, 4.25, 0],
+      "scale": [0.75, 0.75, 0.75]
+    }
+  }
+}

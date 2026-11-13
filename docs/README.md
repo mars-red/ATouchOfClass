@@ -17,7 +17,7 @@ Start as a [player](getting-started.md), [server owner](server-owners.md), or [m
 9. [Modpack author guide](modpack-authors.md)
 10. [Reference and troubleshooting](reference.md)
 
-The [content catalog](catalog.md) covers 727 registered player-content items. The [recipe reference](recipes.md) contains all 706 bundled recipes, including vanilla-item outputs supplied by the mod.
+The [content catalog](catalog.md) covers 799 registered player-content items. The [recipe reference](recipes.md) contains all 766 bundled recipes, including vanilla-item outputs supplied by the mod.
 
 ## Availability labels
 
@@ -26,4 +26,3 @@ The [content catalog](catalog.md) covers 727 registered player-content items. Th
 - **Acquisition under review:** no recipe was found, but other acquisition methods or intent have not yet been established.
 
 A missing recipe alone is not evidence that an item is Creative-only. Copper transformations, for example, also need to be considered.
-

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SCS"
+  ],
+  "key": {
+    "S": "minecraft:copper_ingot",
+    "C": "minecraft:chest"
+  },
+  "result": {
+    "count": 1,
+    "id": "atouchofclass:copper_refrigerator"
+  }
+}

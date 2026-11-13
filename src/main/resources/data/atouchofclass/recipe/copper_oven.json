@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "SFS",
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:copper_ingot",
+    "F": "minecraft:furnace"
+  },
+  "result": {
+    "count": 1,
+    "id": "atouchofclass:copper_oven"
+  }
+}

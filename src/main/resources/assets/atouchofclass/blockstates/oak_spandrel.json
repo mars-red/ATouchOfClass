@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=north,section=straight": {
+      "model": "atouchofclass:block/oak_spandrel"
+    },
+    "facing=east,section=straight": {
+      "model": "atouchofclass:block/oak_spandrel",
+      "y": 90
+    },
+    "facing=south,section=straight": {
+      "model": "atouchofclass:block/oak_spandrel",
+      "y": 180
+    },
+    "facing=west,section=straight": {
+      "model": "atouchofclass:block/oak_spandrel",
+      "y": 270
+    },
+    "facing=north,section=left": {
+      "model": "atouchofclass:block/oak_spandrel_left"
+    },
+    "facing=east,section=left": {
+      "model": "atouchofclass:block/oak_spandrel_left",
+      "y": 90
+    },
+    "facing=south,section=left": {
+      "model": "atouchofclass:block/oak_spandrel_left",
+      "y": 180
+    },
+    "facing=west,section=left": {
+      "model": "atouchofclass:block/oak_spandrel_left",
+      "y": 270
+    },
+    "facing=north,section=right": {
+      "model": "atouchofclass:block/oak_spandrel_right"
+    },
+    "facing=east,section=right": {
+      "model": "atouchofclass:block/oak_spandrel_right",
+      "y": 90
+    },
+    "facing=south,section=right": {
+      "model": "atouchofclass:block/oak_spandrel_right",
+      "y": 180
+    },
+    "facing=west,section=right": {
+      "model": "atouchofclass:block/oak_spandrel_right",
+      "y": 270
+    }
+  }
+}

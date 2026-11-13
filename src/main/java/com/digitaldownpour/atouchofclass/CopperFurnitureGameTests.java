@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.WeatheringCopper;
+import net.minecraft.world.level.block.WeatheringCopperCollection;
 import net.minecraft.world.level.block.state.BlockState;
 import com.digitaldownpour.atouchofclass.blocks.CopperLampPostBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperFloorLampBlock;
@@ -181,7 +182,7 @@ public class CopperFurnitureGameTests {
                         ModBlocks.WAXED_EXPOSED_COPPER_CHANDELIER_CHAIN.get(),
                         ModBlocks.WAXED_WEATHERED_COPPER_CHANDELIER_CHAIN.get(),
                         ModBlocks.WAXED_OXIDIZED_COPPER_CHANDELIER_CHAIN.get()
-                }, false);
+                }, false, Blocks.COPPER_CHAIN);
         verifyFamily(helper,
                 new Block[]{
                         ModBlocks.COPPER_CHANDELIER.get(),
@@ -199,6 +200,11 @@ public class CopperFurnitureGameTests {
     }
 
     private static void verifyFamily(GameTestHelper helper, Block[] stages, Block[] waxedStages, boolean oriented) {
+        verifyFamily(helper, stages, waxedStages, oriented, Blocks.CUT_COPPER);
+    }
+
+    private static void verifyFamily(GameTestHelper helper, Block[] stages, Block[] waxedStages, boolean oriented,
+                                     WeatheringCopperCollection<Block> soundReference) {
         BlockPos mapColorPos = helper.absolutePos(new BlockPos(1, 2, 1));
 
         for (int i = 0; i < stages.length; i++) {
@@ -209,7 +215,10 @@ public class CopperFurnitureGameTests {
             }
 
             helper.assertTrue(stage instanceof WeatheringCopper, Component.literal("Every unwaxed copper furniture stage must implement WeatheringCopper"));
-            helper.assertTrue(state.getSoundType(helper.getLevel(), BlockPos.ZERO, null) == VANILLA_STAGES[i].defaultBlockState().getSoundType(helper.getLevel(), BlockPos.ZERO, null), Component.literal("Copper furniture must use the matching vanilla copper sound"));
+            Block vanillaSoundBlock = soundReference.weathering().pick(((WeatheringCopper) stage).getAge());
+            helper.assertTrue(state.getSoundType(helper.getLevel(), BlockPos.ZERO, null)
+                            == vanillaSoundBlock.defaultBlockState().getSoundType(helper.getLevel(), BlockPos.ZERO, null),
+                    Component.literal(stage + " must use the same sound as " + vanillaSoundBlock));
             helper.assertTrue(state.getMapColor(helper.getLevel(), mapColorPos)
                             == VANILLA_STAGES[i].defaultBlockState().getMapColor(helper.getLevel(), mapColorPos), Component.literal("Copper furniture must use the matching vanilla copper map color"));
 

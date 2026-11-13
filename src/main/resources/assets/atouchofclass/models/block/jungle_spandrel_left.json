@@ -1,0 +1,10 @@
+{
+  "loader": "atouchofclass:spandrel",
+  "section": "left",
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "minecraft:block/jungle_planks",
+    "wood": "minecraft:block/jungle_planks"
+  }
+}

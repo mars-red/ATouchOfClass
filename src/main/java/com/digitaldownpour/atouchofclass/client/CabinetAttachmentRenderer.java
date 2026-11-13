@@ -2,6 +2,7 @@ package com.digitaldownpour.atouchofclass.client;
 
 import com.digitaldownpour.atouchofclass.ATouchofClass;
 import com.digitaldownpour.atouchofclass.entities.CabinetBlockEntity;
+import com.digitaldownpour.atouchofclass.entities.MergedFixtureBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.builders.UVPair;
 import net.minecraft.client.renderer.block.dispatch.BlockStateModelPart;
@@ -14,6 +15,7 @@ import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.ChestType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -56,7 +58,7 @@ public final class CabinetAttachmentRenderer {
         for (var be : mc.level.getChunkAt(origin).getBlockEntities().values()) {
             if (!(be instanceof CabinetBlockEntity cabinet) || (be.getBlockPos().getY() >> 4) != (origin.getY() >> 4)) continue;
             var state = cabinet.getAttachment();
-            if (state.isAir()) continue;
+            if (state.isAir() || MergedFixtureBlockEntity.part(state) != ChestType.SINGLE) continue;
             var model = mc.getModelManager().getBlockStateModelSet().get(state);
             var parts = new ArrayList<BlockStateModelPart>();
             model.collectParts(mc.level, be.getBlockPos().above(), state, RandomSource.create(42), parts);

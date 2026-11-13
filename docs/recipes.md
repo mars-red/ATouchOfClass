@@ -74,6 +74,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_brown_four_post_bed.json)
 
+## acacia-corbel
+
+**Output:** 8 × Acacia Corbel (`atouchofclass:acacia_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:acacia_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_corbel.json)
+
 ## acacia-cyan-four-post-bed
 
 **Output:** 1 × Acacia Four-Post Bed (Cyan) (`atouchofclass:acacia_cyan_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -337,6 +351,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_railing.json)
 
+## acacia-rake-board
+
+**Output:** 12 × Acacia Rake Board (`atouchofclass:acacia_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:acacia_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_rake_board.json)
+
 ## acacia-red-four-post-bed
 
 **Output:** 1 × Acacia Four-Post Bed (Red) (`atouchofclass:acacia_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -376,6 +404,19 @@ L.L
 `L` = `minecraft:acacia_planks`; `S` = `minecraft:acacia_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_side_table.json)
+
+## acacia-spandrel
+
+**Output:** 8 × Acacia Spandrel (`atouchofclass:acacia_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:acacia_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_spandrel.json)
 
 ## acacia-transom
 
@@ -561,6 +602,20 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:bamboo_blocks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_brown_four_post_bed.json)
+
+## bamboo-corbel
+
+**Output:** 8 × Bamboo Corbel (`atouchofclass:bamboo_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:bamboo_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_corbel.json)
 
 ## bamboo-cyan-four-post-bed
 
@@ -825,6 +880,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_railing.json)
 
+## bamboo-rake-board
+
+**Output:** 12 × Bamboo Rake Board (`atouchofclass:bamboo_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:bamboo_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_rake_board.json)
+
 ## bamboo-red-four-post-bed
 
 **Output:** 1 × Bamboo Four-Post Bed (Red) (`atouchofclass:bamboo_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -864,6 +933,19 @@ L.L
 `L` = `minecraft:bamboo_planks`; `S` = `minecraft:bamboo_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_side_table.json)
+
+## bamboo-spandrel
+
+**Output:** 8 × Bamboo Spandrel (`atouchofclass:bamboo_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:bamboo_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_spandrel.json)
 
 ## bamboo-transom
 
@@ -1010,6 +1092,20 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:birch_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_brown_four_post_bed.json)
+
+## birch-corbel
+
+**Output:** 8 × Birch Corbel (`atouchofclass:birch_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:birch_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_corbel.json)
 
 ## birch-cyan-four-post-bed
 
@@ -1274,6 +1370,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_railing.json)
 
+## birch-rake-board
+
+**Output:** 12 × Birch Rake Board (`atouchofclass:birch_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:birch_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_rake_board.json)
+
 ## birch-red-four-post-bed
 
 **Output:** 1 × Birch Four-Post Bed (Red) (`atouchofclass:birch_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -1313,6 +1423,19 @@ L.L
 `L` = `minecraft:birch_planks`; `S` = `minecraft:birch_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_side_table.json)
+
+## birch-spandrel
+
+**Output:** 8 × Birch Spandrel (`atouchofclass:birch_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:birch_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_spandrel.json)
 
 ## birch-transom
 
@@ -1814,6 +1937,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_brown_four_post_bed.json)
 
+## cherry-corbel
+
+**Output:** 8 × Cherry Corbel (`atouchofclass:cherry_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:cherry_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_corbel.json)
+
 ## cherry-cyan-four-post-bed
 
 **Output:** 1 × Cherry Four-Post Bed (Cyan) (`atouchofclass:cherry_cyan_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -2077,6 +2214,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_railing.json)
 
+## cherry-rake-board
+
+**Output:** 12 × Cherry Rake Board (`atouchofclass:cherry_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:cherry_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_rake_board.json)
+
 ## cherry-red-four-post-bed
 
 **Output:** 1 × Cherry Four-Post Bed (Red) (`atouchofclass:cherry_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -2116,6 +2267,19 @@ L.L
 `L` = `minecraft:cherry_planks`; `S` = `minecraft:cherry_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_side_table.json)
+
+## cherry-spandrel
+
+**Output:** 8 × Cherry Spandrel (`atouchofclass:cherry_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:cherry_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_spandrel.json)
 
 ## cherry-transom
 
@@ -2328,6 +2492,33 @@ CCC
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_floor_lamp.json)
 
+## copper-induction-cooktop
+
+**Output:** 1 × Copper Induction Cooktop (`atouchofclass:copper_induction_cooktop`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+GGG
+IRI
+```
+
+`G` = `minecraft:black_stained_glass`; `I` = `minecraft:copper_ingot`; `R` = `minecraft:redstone`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_induction_cooktop.json)
+
+## copper-kitchen-sink
+
+**Output:** 1 × Copper Kitchen Sink (`atouchofclass:copper_kitchen_sink`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.N.
+I.I
+III
+```
+
+`I` = `minecraft:copper_ingot`; `N` = `minecraft:iron_nugget`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_kitchen_sink.json)
+
 ## copper-lamp-post
 
 **Output:** 1 × Copper Lamp Post (`atouchofclass:copper_lamp_post`). **Type:** `minecraft:crafting_shaped`.
@@ -2341,6 +2532,34 @@ CCC
 `C` = `minecraft:copper_ingot`; `G` = `minecraft:torch`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_lamp_post.json)
+
+## copper-oven
+
+**Output:** 1 × Copper Oven (`atouchofclass:copper_oven`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+SFS
+SSS
+```
+
+`F` = `minecraft:furnace`; `S` = `minecraft:copper_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_oven.json)
+
+## copper-refrigerator
+
+**Output:** 1 × Copper Refrigerator (`atouchofclass:copper_refrigerator`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SSS
+SCS
+SCS
+```
+
+`C` = `minecraft:chest`; `S` = `minecraft:copper_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/copper_refrigerator.json)
 
 ## copper-table-lamp
 
@@ -2477,6 +2696,20 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:crimson_stems`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_brown_four_post_bed.json)
+
+## crimson-corbel
+
+**Output:** 8 × Crimson Corbel (`atouchofclass:crimson_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:crimson_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_corbel.json)
 
 ## crimson-cyan-four-post-bed
 
@@ -2741,6 +2974,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_railing.json)
 
+## crimson-rake-board
+
+**Output:** 12 × Crimson Rake Board (`atouchofclass:crimson_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:crimson_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_rake_board.json)
+
 ## crimson-red-four-post-bed
 
 **Output:** 1 × Crimson Four-Post Bed (Red) (`atouchofclass:crimson_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -2780,6 +3027,19 @@ L.L
 `L` = `minecraft:crimson_planks`; `S` = `minecraft:crimson_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_side_table.json)
+
+## crimson-spandrel
+
+**Output:** 8 × Crimson Spandrel (`atouchofclass:crimson_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:crimson_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_spandrel.json)
 
 ## crimson-transom
 
@@ -3030,6 +3290,20 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:dark_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_brown_four_post_bed.json)
+
+## dark-oak-corbel
+
+**Output:** 8 × Dark Oak Corbel (`atouchofclass:dark_oak_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:dark_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_corbel.json)
 
 ## dark-oak-cyan-four-post-bed
 
@@ -3294,6 +3568,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_railing.json)
 
+## dark-oak-rake-board
+
+**Output:** 12 × Dark Oak Rake Board (`atouchofclass:dark_oak_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:dark_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_rake_board.json)
+
 ## dark-oak-red-four-post-bed
 
 **Output:** 1 × Dark Oak Four-Post Bed (Red) (`atouchofclass:dark_oak_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -3333,6 +3621,19 @@ L.L
 `L` = `minecraft:dark_oak_planks`; `S` = `minecraft:dark_oak_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_side_table.json)
+
+## dark-oak-spandrel
+
+**Output:** 8 × Dark Oak Spandrel (`atouchofclass:dark_oak_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:dark_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_spandrel.json)
 
 ## dark-oak-transom
 
@@ -3880,6 +4181,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_brown_four_post_bed.json)
 
+## jungle-corbel
+
+**Output:** 8 × Jungle Corbel (`atouchofclass:jungle_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:jungle_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_corbel.json)
+
 ## jungle-cyan-four-post-bed
 
 **Output:** 1 × Jungle Four-Post Bed (Cyan) (`atouchofclass:jungle_cyan_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -4143,6 +4458,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_railing.json)
 
+## jungle-rake-board
+
+**Output:** 12 × Jungle Rake Board (`atouchofclass:jungle_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:jungle_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_rake_board.json)
+
 ## jungle-red-four-post-bed
 
 **Output:** 1 × Jungle Four-Post Bed (Red) (`atouchofclass:jungle_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -4182,6 +4511,19 @@ L.L
 `L` = `minecraft:jungle_planks`; `S` = `minecraft:jungle_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_side_table.json)
+
+## jungle-spandrel
+
+**Output:** 8 × Jungle Spandrel (`atouchofclass:jungle_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:jungle_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_spandrel.json)
 
 ## jungle-transom
 
@@ -4578,6 +4920,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_brown_four_post_bed.json)
 
+## mangrove-corbel
+
+**Output:** 8 × Mangrove Corbel (`atouchofclass:mangrove_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:mangrove_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_corbel.json)
+
 ## mangrove-cyan-four-post-bed
 
 **Output:** 1 × Mangrove Four-Post Bed (Cyan) (`atouchofclass:mangrove_cyan_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -4841,6 +5197,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_railing.json)
 
+## mangrove-rake-board
+
+**Output:** 12 × Mangrove Rake Board (`atouchofclass:mangrove_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:mangrove_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_rake_board.json)
+
 ## mangrove-red-four-post-bed
 
 **Output:** 1 × Mangrove Four-Post Bed (Red) (`atouchofclass:mangrove_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -4880,6 +5250,19 @@ L.L
 `L` = `minecraft:mangrove_planks`; `S` = `minecraft:mangrove_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_side_table.json)
+
+## mangrove-spandrel
+
+**Output:** 8 × Mangrove Spandrel (`atouchofclass:mangrove_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:mangrove_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_spandrel.json)
 
 ## mangrove-transom
 
@@ -5053,6 +5436,20 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_brown_four_post_bed.json)
+
+## oak-corbel
+
+**Output:** 8 × Oak Corbel (`atouchofclass:oak_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_corbel.json)
 
 ## oak-cyan-four-post-bed
 
@@ -5317,6 +5714,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_railing.json)
 
+## oak-rake-board
+
+**Output:** 12 × Oak Rake Board (`atouchofclass:oak_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_rake_board.json)
+
 ## oak-red-four-post-bed
 
 **Output:** 1 × Oak Four-Post Bed (Red) (`atouchofclass:oak_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -5356,6 +5767,19 @@ L.L
 `L` = `minecraft:oak_planks`; `S` = `minecraft:oak_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_side_table.json)
+
+## oak-spandrel
+
+**Output:** 8 × Oak Spandrel (`atouchofclass:oak_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_spandrel.json)
 
 ## oak-transom
 
@@ -5635,6 +6059,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_brown_four_post_bed.json)
 
+## pale-oak-corbel
+
+**Output:** 8 × Pale Oak Corbel (`atouchofclass:pale_oak_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:pale_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_corbel.json)
+
 ## pale-oak-cyan-four-post-bed
 
 **Output:** 1 × Pale Oak Four-Post Bed (Cyan) (`atouchofclass:pale_oak_cyan_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -5898,6 +6336,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_railing.json)
 
+## pale-oak-rake-board
+
+**Output:** 12 × Pale Oak Rake Board (`atouchofclass:pale_oak_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:pale_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_rake_board.json)
+
 ## pale-oak-red-four-post-bed
 
 **Output:** 1 × Pale Oak Four-Post Bed (Red) (`atouchofclass:pale_oak_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -5937,6 +6389,19 @@ L.L
 `L` = `minecraft:pale_oak_planks`; `S` = `minecraft:pale_oak_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_side_table.json)
+
+## pale-oak-spandrel
+
+**Output:** 8 × Pale Oak Spandrel (`atouchofclass:pale_oak_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:pale_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_spandrel.json)
 
 ## pale-oak-transom
 
@@ -6121,6 +6586,20 @@ FF
 `F` = `minecraft:pitcher_plant`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pitcher_plant_bunch.json)
+
+## plaster-corbel
+
+**Output:** 8 × Plaster Corbel (`atouchofclass:plaster_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+XP.
+X..
+```
+
+`P` = `atouchofclass:bucket_of_plaster`; `X` = `#minecraft:planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/plaster_corbel.json)
 
 ## plinth-block
 
@@ -6353,6 +6832,20 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:poplar_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_brown_four_post_bed.json)
+
+## poplar-corbel
+
+**Output:** 8 × Poplar Corbel (`atouchofclass:poplar_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_corbel.json)
 
 ## poplar-cyan-four-post-bed
 
@@ -6617,6 +7110,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_railing.json)
 
+## poplar-rake-board
+
+**Output:** 12 × Poplar Rake Board (`atouchofclass:poplar_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_rake_board.json)
+
 ## poplar-red-four-post-bed
 
 **Output:** 1 × Poplar Four-Post Bed (Red) (`atouchofclass:poplar_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -6656,6 +7163,19 @@ L.L
 `L` = `minecraft:poplar_planks`; `S` = `minecraft:poplar_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_side_table.json)
+
+## poplar-spandrel
+
+**Output:** 8 × Poplar Spandrel (`atouchofclass:poplar_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_spandrel.json)
 
 ## poplar-transom
 
@@ -7226,6 +7746,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_brown_four_post_bed.json)
 
+## spruce-corbel
+
+**Output:** 8 × Spruce Corbel (`atouchofclass:spruce_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:spruce_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_corbel.json)
+
 ## spruce-cyan-four-post-bed
 
 **Output:** 1 × Spruce Four-Post Bed (Cyan) (`atouchofclass:spruce_cyan_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -7489,6 +8023,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_railing.json)
 
+## spruce-rake-board
+
+**Output:** 12 × Spruce Rake Board (`atouchofclass:spruce_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:spruce_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_rake_board.json)
+
 ## spruce-red-four-post-bed
 
 **Output:** 1 × Spruce Four-Post Bed (Red) (`atouchofclass:spruce_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -7528,6 +8076,19 @@ L.L
 `L` = `minecraft:spruce_planks`; `S` = `minecraft:spruce_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_side_table.json)
+
+## spruce-spandrel
+
+**Output:** 8 × Spruce Spandrel (`atouchofclass:spruce_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:spruce_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_spandrel.json)
 
 ## spruce-transom
 
@@ -8400,6 +8961,20 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_brown_four_post_bed.json)
 
+## warped-corbel
+
+**Output:** 8 × Warped Corbel (`atouchofclass:warped_corbel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+XX.
+X..
+X..
+```
+
+`X` = `minecraft:warped_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_corbel.json)
+
 ## warped-cyan-four-post-bed
 
 **Output:** 1 × Warped Four-Post Bed (Cyan) (`atouchofclass:warped_cyan_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -8663,6 +9238,20 @@ C.C
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_railing.json)
 
+## warped-rake-board
+
+**Output:** 12 × Warped Rake Board (`atouchofclass:warped_rake_board`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+W..
+.W.
+..W
+```
+
+`W` = `minecraft:warped_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_rake_board.json)
+
 ## warped-red-four-post-bed
 
 **Output:** 1 × Warped Four-Post Bed (Red) (`atouchofclass:warped_red_four_post_bed`). **Type:** `minecraft:crafting_shaped`.
@@ -8702,6 +9291,19 @@ L.L
 `L` = `minecraft:warped_planks`; `S` = `minecraft:warped_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_side_table.json)
+
+## warped-spandrel
+
+**Output:** 8 × Warped Spandrel (`atouchofclass:warped_spandrel`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+.W.
+W.W
+```
+
+`W` = `minecraft:warped_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_spandrel.json)
 
 ## warped-transom
 
@@ -8809,6 +9411,22 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_copper_floor_lamp.json)
 
+## waxed-copper-induction-cooktop
+
+**Output:** 1 × Waxed Copper Induction Cooktop (`atouchofclass:waxed_copper_induction_cooktop`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:copper_induction_cooktop`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_copper_induction_cooktop.json)
+
+## waxed-copper-kitchen-sink
+
+**Output:** 1 × Waxed Copper Kitchen Sink (`atouchofclass:waxed_copper_kitchen_sink`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:copper_kitchen_sink`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_copper_kitchen_sink.json)
+
 ## waxed-copper-lamp-post
 
 **Output:** 1 × Waxed Copper Lamp Post (`atouchofclass:waxed_copper_lamp_post`). **Type:** `minecraft:crafting_shapeless`.
@@ -8816,6 +9434,22 @@ LL
 **Ingredients (each occurrence is one item):** `atouchofclass:copper_lamp_post`, `minecraft:honeycomb`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_copper_lamp_post.json)
+
+## waxed-copper-oven
+
+**Output:** 1 × Waxed Copper Oven (`atouchofclass:waxed_copper_oven`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:copper_oven`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_copper_oven.json)
+
+## waxed-copper-refrigerator
+
+**Output:** 1 × Waxed Copper Refrigerator (`atouchofclass:waxed_copper_refrigerator`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:copper_refrigerator`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_copper_refrigerator.json)
 
 ## waxed-copper-table-lamp
 
@@ -8898,6 +9532,22 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_floor_lamp.json)
 
+## waxed-exposed-copper-induction-cooktop
+
+**Output:** 1 × Waxed Exposed Copper Induction Cooktop (`atouchofclass:waxed_exposed_copper_induction_cooktop`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:exposed_copper_induction_cooktop`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_induction_cooktop.json)
+
+## waxed-exposed-copper-kitchen-sink
+
+**Output:** 1 × Waxed Exposed Copper Kitchen Sink (`atouchofclass:waxed_exposed_copper_kitchen_sink`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:exposed_copper_kitchen_sink`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_kitchen_sink.json)
+
 ## waxed-exposed-copper-lamp-post
 
 **Output:** 1 × Waxed Exposed Copper Lamp Post (`atouchofclass:waxed_exposed_copper_lamp_post`). **Type:** `minecraft:crafting_shapeless`.
@@ -8905,6 +9555,22 @@ S.S
 **Ingredients (each occurrence is one item):** `atouchofclass:exposed_copper_lamp_post`, `minecraft:honeycomb`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_lamp_post.json)
+
+## waxed-exposed-copper-oven
+
+**Output:** 1 × Waxed Exposed Copper Oven (`atouchofclass:waxed_exposed_copper_oven`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:exposed_copper_oven`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_oven.json)
+
+## waxed-exposed-copper-refrigerator
+
+**Output:** 1 × Waxed Exposed Copper Refrigerator (`atouchofclass:waxed_exposed_copper_refrigerator`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:exposed_copper_refrigerator`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_exposed_copper_refrigerator.json)
 
 ## waxed-exposed-copper-table-lamp
 
@@ -8987,6 +9653,22 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_floor_lamp.json)
 
+## waxed-oxidized-copper-induction-cooktop
+
+**Output:** 1 × Waxed Oxidized Copper Induction Cooktop (`atouchofclass:waxed_oxidized_copper_induction_cooktop`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:oxidized_copper_induction_cooktop`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_induction_cooktop.json)
+
+## waxed-oxidized-copper-kitchen-sink
+
+**Output:** 1 × Waxed Oxidized Copper Kitchen Sink (`atouchofclass:waxed_oxidized_copper_kitchen_sink`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:oxidized_copper_kitchen_sink`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_kitchen_sink.json)
+
 ## waxed-oxidized-copper-lamp-post
 
 **Output:** 1 × Waxed Oxidized Copper Lamp Post (`atouchofclass:waxed_oxidized_copper_lamp_post`). **Type:** `minecraft:crafting_shapeless`.
@@ -8994,6 +9676,22 @@ S.S
 **Ingredients (each occurrence is one item):** `atouchofclass:oxidized_copper_lamp_post`, `minecraft:honeycomb`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_lamp_post.json)
+
+## waxed-oxidized-copper-oven
+
+**Output:** 1 × Waxed Oxidized Copper Oven (`atouchofclass:waxed_oxidized_copper_oven`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:oxidized_copper_oven`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_oven.json)
+
+## waxed-oxidized-copper-refrigerator
+
+**Output:** 1 × Waxed Oxidized Copper Refrigerator (`atouchofclass:waxed_oxidized_copper_refrigerator`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:oxidized_copper_refrigerator`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_oxidized_copper_refrigerator.json)
 
 ## waxed-oxidized-copper-table-lamp
 
@@ -9076,6 +9774,22 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_floor_lamp.json)
 
+## waxed-weathered-copper-induction-cooktop
+
+**Output:** 1 × Waxed Weathered Copper Induction Cooktop (`atouchofclass:waxed_weathered_copper_induction_cooktop`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:weathered_copper_induction_cooktop`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_induction_cooktop.json)
+
+## waxed-weathered-copper-kitchen-sink
+
+**Output:** 1 × Waxed Weathered Copper Kitchen Sink (`atouchofclass:waxed_weathered_copper_kitchen_sink`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:weathered_copper_kitchen_sink`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_kitchen_sink.json)
+
 ## waxed-weathered-copper-lamp-post
 
 **Output:** 1 × Waxed Weathered Copper Lamp Post (`atouchofclass:waxed_weathered_copper_lamp_post`). **Type:** `minecraft:crafting_shapeless`.
@@ -9083,6 +9797,22 @@ S.S
 **Ingredients (each occurrence is one item):** `atouchofclass:weathered_copper_lamp_post`, `minecraft:honeycomb`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_lamp_post.json)
+
+## waxed-weathered-copper-oven
+
+**Output:** 1 × Waxed Weathered Copper Oven (`atouchofclass:waxed_weathered_copper_oven`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:weathered_copper_oven`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_oven.json)
+
+## waxed-weathered-copper-refrigerator
+
+**Output:** 1 × Waxed Weathered Copper Refrigerator (`atouchofclass:waxed_weathered_copper_refrigerator`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:weathered_copper_refrigerator`, `minecraft:honeycomb`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/waxed_weathered_copper_refrigerator.json)
 
 ## waxed-weathered-copper-table-lamp
 

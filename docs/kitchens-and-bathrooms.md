@@ -11,18 +11,29 @@ Build the supporting room first, then add storage and fittings. The table below 
 | Oven | Furnace-style smelting with input, fuel, and output |
 | Induction cooktop | Attaches to cabinets; decorative surface; adjacent matching cooktops can pair visually |
 | Countertop and sink | Decorative surfaces; sinks have no fluid inventory or faucet interaction |
-| Stainless steel kitchen sink | Two side-by-side sinks with the same facing share a center sprayer faucet |
+| Farmhouse kitchen sink | Two side-by-side sinks with the same facing share a center sprayer faucet |
 | Clawfoot bathtub | Use to toggle its filled appearance |
 | Toilet | Use to sit with the lid open or closed; Shift + use with an empty hand toggles the lid |
 | Shower heads | Decorative fittings; no flowing-water interaction |
 | Glass shower surround | Fixed panels with connections |
 | Glass shower door | Use to open or close it |
 
+## Appliance finishes
+
+The **farmhouse kitchen sink, oven, induction cooktop, and refrigerator** each come in **stainless steel and copper**. All four copper appliances are available in unoxidized, exposed, weathered, and oxidized stages, with a waxed version of each stage.
+
+| Appliance | Stainless steel recipe | Copper recipe |
+| --- | --- | --- |
+| Farmhouse kitchen sink | [Stainless steel](recipes.md#kitchen-sink) | [Copper](recipes.md#copper-kitchen-sink) |
+| Oven | [Stainless steel](recipes.md#oven) | [Copper](recipes.md#copper-oven) |
+| Induction cooktop | [Stainless steel](recipes.md#induction-cooktop) | [Copper](recipes.md#copper-induction-cooktop) |
+| Refrigerator | [Stainless steel](recipes.md#refrigerator) | [Copper](recipes.md#copper-refrigerator) |
+
 ## Cabinets and work surfaces
 
 Cabinets come in door and drawer styles across the 13 woods in the [reference](reference.md). Use one with an empty hand to open its inventory. Each cabinet keeps its own 27 slots; stacking cabinets does not merge inventories. Pairs of door cabinets of the same wood and facing connect their appearance vertically.
 
-Use any countertop, sink, or induction cooktop item on a door or drawer cabinet to attach it, consuming one item in Survival. This includes every stone, concrete, and copper variety, the stainless steel kitchen sink, and the induction cooktop. You do not need to sneak to attach a fitting. Each cabinet holds one attachment; trying to attach another fitting, or place a standalone fitting in the block space immediately above an occupied cabinet, is rejected.
+Use any countertop, sink, or induction cooktop item on a door or drawer cabinet to attach it, consuming one item in Survival. Both finishes of the farmhouse kitchen sink and induction cooktop can attach to cabinets. You do not need to sneak to attach a fitting. Each cabinet holds one attachment; trying to attach another fitting, or place a standalone fitting in the block space immediately above an occupied cabinet, is rejected.
 
 Attached fittings belong to the cabinet and leave the block position above it free. Their models extend into that space: countertops remain 1/8 block thick, while sinks include their basin and faucet. Ordinary blocks and decorations can be placed above them without restrictions, even if their models overlap. Sneak-place ordinary blocks against the cabinet to avoid opening its storage. Attachments are decorative and do not add a separate collision surface or faucet target; interact with the cabinet to open its storage. Sinks do not supply water buckets.
 
@@ -34,7 +45,7 @@ Copper attachments continue to oxidize. Use honeycomb on the cabinet to wax its 
 
 Countertops, sinks, and induction cooktops placed elsewhere still work as standalone blocks. Existing builds keep their standalone fittings and original block occupancy when upgrading; there is no automatic conversion. To free the space above an existing cabinet, break its old standalone fitting and use that item on the cabinet to attach it.
 
-The **Stainless Steel Kitchen Sink**  is farmhouse style with a front apron. Place a second sink beside it with the same facing to form a double sink with one shared sprayer faucet. Pairs stop at two sinks; adding another sink leaves the existing pair intact. Removing either attachment or breaking its cabinet restores the remaining sink's single appearance. Standalone kitchen sinks also retain their existing pairing behavior; an attached sink pairs with another attached sink, not a standalone sink. The apron is decorative and does not block access to the cabinet below.
+The **farmhouse kitchen sink** has a front apron in both finishes. Place a second sink beside it with the same facing to form a double sink with one shared sprayer faucet. Pairs stop at two sinks; adding another sink leaves the existing pair intact. Removing either attachment or breaking its cabinet restores the remaining sink's single appearance. Standalone kitchen sinks also retain their existing pairing behavior; an attached sink pairs with another attached sink, not a standalone sink. The apron is decorative and does not block access to the cabinet below.
 
 Like the other sinks, it has no fluid inventory or water interaction.
 
@@ -43,10 +54,6 @@ Like the other sinks, it has no fluid inventory or water interaction.
 
 *Cabinets store items; countertops, sinks, and cooktops complete the kitchen appearance.*
 <!-- screenshot:kitchen-01:end -->
-
-## Concrete countertops and sinks
-
-All **16 colors of concrete countertops and sinks** are Survival obtainable in Minecraft 26.3. Each recipe uses **three vanilla concrete slabs of the same color** and produces **six fittings**. Full concrete blocks, concrete powder, and mixed slab colors do not substitute.
 
 For countertops, place the slabs in one horizontal row:
 

@@ -1,0 +1,7 @@
+{
+  "parent": "atouchofclass:block/corbel",
+  "textures": {
+    "material": "minecraft:block/stripped_warped_stem",
+    "particle": "minecraft:block/stripped_warped_stem"
+  }
+}

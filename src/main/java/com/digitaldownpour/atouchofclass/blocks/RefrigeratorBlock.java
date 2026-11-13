@@ -6,6 +6,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionResult;
@@ -23,6 +24,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -90,6 +92,21 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
                 .setValue(SIDE, Side.LEFT));
     }
 
+
+    @Override
+    protected boolean shouldChangedStateKeepBlockEntity(BlockState oldState) {
+        return oldState.getBlock() instanceof RefrigeratorBlock
+                && CopperApplianceFinish.isFinishChange(oldState.getBlock(), this);
+    }
+
+    @Override
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos,
+                                          Player player, InteractionHand hand, BlockHitResult hit) {
+        if (CopperApplianceFinish.canApply(stack, state)) {
+            return InteractionResult.PASS;
+        }
+        return super.useItemOn(stack, state, level, pos, player, hand, hit);
+    }
 
     @Override
     @Nullable
@@ -174,9 +191,30 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
     }
 
     @Override
+    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean moved) {
+        super.onPlace(state, level, pos, oldState, moved);
+        if (level.isClientSide() || !(oldState.getBlock() instanceof RefrigeratorBlock oldFridge)
+                || !CopperApplianceFinish.isFinishChange(oldFridge, this)) {
+            return;
+        }
+        Direction facing = state.getValue(FACING);
+        BlockPos master = masterPos(state, pos);
+        for (Layer layer : Layer.values()) {
+            for (Side side : Side.values()) {
+                BlockPos partPos = partPos(master, facing, layer, side);
+                BlockState part = level.getBlockState(partPos);
+                if (oldFridge.matches(part, facing, layer, side)) {
+                    CopperApplianceFinish.replacePart(level, partPos, this, part);
+                }
+            }
+        }
+    }
+
+    @Override
     protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
         BlockState replacement = level.getBlockState(pos);
-        if (!level.isClientSide() && !replacement.is(this) && !REMOVING_STRUCTURE.get()) {
+        if (!level.isClientSide() && !replacement.is(this) && !REMOVING_STRUCTURE.get()
+                && !CopperApplianceFinish.isFinishChange(this, replacement.getBlock())) {
             REMOVING_STRUCTURE.set(true);
             try {
                 Direction facing = state.getValue(FACING);
@@ -200,6 +238,11 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
             }
         }
         super.affectNeighborsAfterRemoval(state, level, pos, moved);
+    }
+
+    @Override
+    protected RenderShape getRenderShape(BlockState state) {
+        return RenderShape.INVISIBLE;
     }
 
     @Override
@@ -245,7 +288,7 @@ public class RefrigeratorBlock extends HorizontalDirectionalBlock implements Ent
         builder.add(FACING, LAYER, SIDE);
     }
 
-    private static boolean isMaster(BlockState state) {
+    protected static boolean isMaster(BlockState state) {
         return state.getValue(LAYER) == Layer.LOWER && state.getValue(SIDE) == Side.LEFT;
     }
 

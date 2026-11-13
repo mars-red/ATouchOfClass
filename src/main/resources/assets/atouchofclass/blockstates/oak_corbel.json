@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/oak_corbel"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/oak_corbel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/oak_corbel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/oak_corbel",
+      "y": 270
+    }
+  }
+}

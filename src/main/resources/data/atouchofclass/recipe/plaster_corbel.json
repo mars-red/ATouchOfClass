@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "corbels",
+  "pattern": [
+    "XX ",
+    "XP ",
+    "X  "
+  ],
+  "key": {
+    "X": "#minecraft:planks",
+    "P": "atouchofclass:bucket_of_plaster"
+  },
+  "result": {
+    "id": "atouchofclass:plaster_corbel",
+    "count": 8
+  }
+}

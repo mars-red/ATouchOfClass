@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "corbels",
+  "pattern": [
+    "XX ",
+    "X  ",
+    "X  "
+  ],
+  "key": {
+    "X": "minecraft:poplar_planks"
+  },
+  "result": {
+    "id": "atouchofclass:poplar_corbel",
+    "count": 8
+  }
+}

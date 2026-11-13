@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "spandrels",
+  "pattern": [
+    " W ",
+    "W W"
+  ],
+  "key": {
+    "W": "minecraft:oak_planks"
+  },
+  "result": {
+    "id": "atouchofclass:oak_spandrel",
+    "count": 8
+  }
+}

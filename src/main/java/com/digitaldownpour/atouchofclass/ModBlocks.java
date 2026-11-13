@@ -2,6 +2,9 @@ package com.digitaldownpour.atouchofclass;
 
 import com.digitaldownpour.atouchofclass.blocks.WallSconceBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakRailingBlock;
+import com.digitaldownpour.atouchofclass.blocks.RakeBoardBlock;
+import com.digitaldownpour.atouchofclass.blocks.SpandrelBlock;
+import com.digitaldownpour.atouchofclass.blocks.CorbelBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakBalustradeBlock;
 import com.digitaldownpour.atouchofclass.blocks.OakBalusterBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperChandelierChainBlock;
@@ -46,6 +49,10 @@ import com.digitaldownpour.atouchofclass.blocks.FourPostBedBlock;
 import com.digitaldownpour.atouchofclass.blocks.RefrigeratorBlock;
 import com.digitaldownpour.atouchofclass.blocks.OvenBlock;
 import com.digitaldownpour.atouchofclass.blocks.InductionCooktopBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperInductionCooktopBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperKitchenSinkBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperRefrigeratorBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperOvenBlock;
 import com.digitaldownpour.atouchofclass.blocks.CabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DoorCabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DresserBlock;
@@ -1332,6 +1339,34 @@ public class ModBlocks {
                             .pushReaction(net.minecraft.world.level.material.PushReaction.IMMOVEABLE).noOcclusion()));
     public static final java.util.Map<String, WoodRailingVariants.Family> WOOD_RAILINGS = WoodRailingVariants.register();
 
+    public static final java.util.Map<String, DeferredBlock<RakeBoardBlock>> RAKE_BOARDS =
+            registerWoodTrim("_rake_board", RakeBoardBlock::new);
+    public static final java.util.Map<String, DeferredBlock<SpandrelBlock>> SPANDRELS =
+            registerWoodTrim("_spandrel", SpandrelBlock::new);
+    public static final java.util.Map<String, DeferredBlock<CorbelBlock>> WOOD_CORBELS =
+            registerWoodTrim("_corbel", CorbelBlock::new);
+    public static final DeferredBlock<CorbelBlock> PLASTER_CORBEL =
+            BLOCKS.register("plaster_corbel", key -> new CorbelBlock(
+                    BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                            .mapColor(MapColor.SNOW).strength(1.8F).sound(SoundType.STONE).noOcclusion()
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.POPPED)));
+
+    private static <T extends Block> java.util.Map<String, DeferredBlock<T>> registerWoodTrim(
+            String suffix, java.util.function.Function<BlockBehaviour.Properties, T> factory) {
+        var woods = new java.util.ArrayList<String>();
+        woods.add("oak");
+        woods.addAll(WOOD_RAILINGS.keySet());
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<T>>();
+        for (String wood : woods) {
+            String id = wood + suffix;
+            blocks.put(id, BLOCKS.register(id, key -> factory.apply(
+                    BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, key))
+                            .mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.WOOD).noOcclusion()
+                            .pushReaction(net.minecraft.world.level.material.PushReaction.POPPED))));
+        }
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
     public static final DeferredBlock<CrownMouldingBlock> CROWN_MOULDING = BLOCKS.register("crown_moulding",
             registryName -> new CrownMouldingBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
@@ -1648,6 +1683,45 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()
                             .noOcclusion()
                     ));
+
+    public static final java.util.List<DeferredBlock<InductionCooktopBlock>> COPPER_INDUCTION_COOKTOPS =
+            registerCopperAppliances("induction_cooktop", INDUCTION_COOKTOP, InductionCooktopBlock::new,
+                    WeatheringCopperInductionCooktopBlock::new);
+
+    public static final java.util.List<DeferredBlock<KitchenSinkBlock>> COPPER_KITCHEN_SINKS =
+            registerCopperAppliances("kitchen_sink", KITCHEN_SINK, KitchenSinkBlock::new,
+                    WeatheringCopperKitchenSinkBlock::new);
+
+    public static final java.util.List<DeferredBlock<RefrigeratorBlock>> COPPER_REFRIGERATORS =
+            registerCopperAppliances("refrigerator", REFRIGERATOR, RefrigeratorBlock::new,
+                    WeatheringCopperRefrigeratorBlock::new);
+
+    public static final java.util.List<DeferredBlock<OvenBlock>> COPPER_OVENS =
+            registerCopperAppliances("oven", OVEN, OvenBlock::new,
+                    WeatheringCopperOvenBlock::new);
+
+    private static <T extends Block> java.util.List<DeferredBlock<T>> registerCopperAppliances(
+            String name, Supplier<T> base, java.util.function.Function<BlockBehaviour.Properties, T> waxedFactory,
+            java.util.function.BiFunction<WeatherState, BlockBehaviour.Properties, T> weatheringFactory) {
+        var variants = new java.util.ArrayList<DeferredBlock<T>>();
+        for (boolean waxed : new boolean[] {false, true}) {
+            for (WeatherState age : WeatherState.values()) {
+                String prefix = switch (age) {
+                    case UNAFFECTED -> "";
+                    case EXPOSED -> "exposed_";
+                    case WEATHERED -> "weathered_";
+                    case OXIDIZED -> "oxidized_";
+                };
+                String id = (waxed ? "waxed_" : "") + prefix + "copper_" + name;
+                variants.add(BLOCKS.register(id, key -> {
+                    var properties = BlockBehaviour.Properties.ofFullCopy(base.get())
+                            .setId(ResourceKey.create(Registries.BLOCK, key));
+                    return waxed ? waxedFactory.apply(properties) : weatheringFactory.apply(age, properties);
+                }));
+            }
+        }
+        return java.util.List.copyOf(variants);
+    }
 
     public static final DeferredHolder<Block, ElevatorShaftPanelBlock> ELEVATOR_SHAFT_PANEL = BLOCKS.register("elevator_shaft_panel",
             registryName -> new ElevatorShaftPanelBlock(BlockBehaviour.Properties.of()

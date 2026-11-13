@@ -11,6 +11,7 @@ import com.digitaldownpour.atouchofclass.entities.NightstandBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.RefrigeratorBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.OvenBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
+import com.digitaldownpour.atouchofclass.entities.MergedFixtureBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
@@ -77,14 +78,24 @@ public class ModEntities {
     public static final Supplier<BlockEntityType<RefrigeratorBlockEntity>> REFRIGERATOR_BE =
             BLOCK_ENTITY_TYPES.register("refrigerator_be", () -> new BlockEntityType<>(
                     RefrigeratorBlockEntity::new,
-                    ModBlocks.REFRIGERATOR.get()
+                    java.util.stream.Stream.concat(java.util.stream.Stream.of(ModBlocks.REFRIGERATOR),
+                            ModBlocks.COPPER_REFRIGERATORS.stream()).map(DeferredHolder::get).toArray(Block[]::new)
             ));
 
     public static final Supplier<BlockEntityType<OvenBlockEntity>> OVEN_BE =
             BLOCK_ENTITY_TYPES.register("oven_be", () -> new BlockEntityType<>(
                     OvenBlockEntity::new,
-                    ModBlocks.OVEN.get()
+                    java.util.stream.Stream.concat(java.util.stream.Stream.of(ModBlocks.OVEN),
+                            ModBlocks.COPPER_OVENS.stream()).map(DeferredHolder::get).toArray(Block[]::new)
             ));
+
+    public static final Supplier<BlockEntityType<MergedFixtureBlockEntity>> MERGED_FIXTURE_BE =
+            BLOCK_ENTITY_TYPES.register("merged_fixture", () -> new BlockEntityType<>(
+                    MergedFixtureBlockEntity::new,
+                    java.util.stream.Stream.of(
+                            java.util.stream.Stream.of(ModBlocks.INDUCTION_COOKTOP, ModBlocks.KITCHEN_SINK),
+                            ModBlocks.COPPER_INDUCTION_COOKTOPS.stream(), ModBlocks.COPPER_KITCHEN_SINKS.stream())
+                            .flatMap(stream -> stream).map(DeferredHolder::get).toArray(Block[]::new)));
 
     public static final Supplier<BlockEntityType<TallDoorBlockEntity>> TALL_DOOR_BE = BLOCK_ENTITY_TYPES.register("tall_door_be",
             () -> new BlockEntityType<>(
