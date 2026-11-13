@@ -1,0 +1,94 @@
+{
+  "variants": {
+    "facing=north,layer=lower,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_lower_right"
+    },
+    "facing=east,layer=lower,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_lower_right",
+      "y": 90
+    },
+    "facing=south,layer=lower,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_lower_right",
+      "y": 180
+    },
+    "facing=west,layer=lower,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_lower_right",
+      "y": 270
+    },
+    "facing=north,layer=lower,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_lower_left"
+    },
+    "facing=east,layer=lower,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_lower_left",
+      "y": 90
+    },
+    "facing=south,layer=lower,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_lower_left",
+      "y": 180
+    },
+    "facing=west,layer=lower,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_lower_left",
+      "y": 270
+    },
+    "facing=north,layer=middle,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_middle_right"
+    },
+    "facing=east,layer=middle,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_middle_right",
+      "y": 90
+    },
+    "facing=south,layer=middle,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_middle_right",
+      "y": 180
+    },
+    "facing=west,layer=middle,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_middle_right",
+      "y": 270
+    },
+    "facing=north,layer=middle,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_middle_left"
+    },
+    "facing=east,layer=middle,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_middle_left",
+      "y": 90
+    },
+    "facing=south,layer=middle,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_middle_left",
+      "y": 180
+    },
+    "facing=west,layer=middle,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_middle_left",
+      "y": 270
+    },
+    "facing=north,layer=upper,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_upper_right"
+    },
+    "facing=east,layer=upper,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_upper_right",
+      "y": 90
+    },
+    "facing=south,layer=upper,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_upper_right",
+      "y": 180
+    },
+    "facing=west,layer=upper,side=left": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_upper_right",
+      "y": 270
+    },
+    "facing=north,layer=upper,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_upper_left"
+    },
+    "facing=east,layer=upper,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_upper_left",
+      "y": 90
+    },
+    "facing=south,layer=upper,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_upper_left",
+      "y": 180
+    },
+    "facing=west,layer=upper,side=right": {
+      "model": "atouchofclass:block/weathered_copper_refrigerator_upper_left",
+      "y": 270
+    }
+  }
+}

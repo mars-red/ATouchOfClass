@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "atouchofclass:copper_induction_cooktop",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "atouchofclass:waxed_copper_induction_cooktop",
+    "count": 1
+  }
+}

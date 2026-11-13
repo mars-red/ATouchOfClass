@@ -49,6 +49,10 @@ import com.digitaldownpour.atouchofclass.blocks.FourPostBedBlock;
 import com.digitaldownpour.atouchofclass.blocks.RefrigeratorBlock;
 import com.digitaldownpour.atouchofclass.blocks.OvenBlock;
 import com.digitaldownpour.atouchofclass.blocks.InductionCooktopBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperInductionCooktopBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperKitchenSinkBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperRefrigeratorBlock;
+import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperOvenBlock;
 import com.digitaldownpour.atouchofclass.blocks.CabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DoorCabinetBlock;
 import com.digitaldownpour.atouchofclass.blocks.DresserBlock;
@@ -1679,6 +1683,45 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()
                             .noOcclusion()
                     ));
+
+    public static final java.util.List<DeferredBlock<InductionCooktopBlock>> COPPER_INDUCTION_COOKTOPS =
+            registerCopperAppliances("induction_cooktop", INDUCTION_COOKTOP, InductionCooktopBlock::new,
+                    WeatheringCopperInductionCooktopBlock::new);
+
+    public static final java.util.List<DeferredBlock<KitchenSinkBlock>> COPPER_KITCHEN_SINKS =
+            registerCopperAppliances("kitchen_sink", KITCHEN_SINK, KitchenSinkBlock::new,
+                    WeatheringCopperKitchenSinkBlock::new);
+
+    public static final java.util.List<DeferredBlock<RefrigeratorBlock>> COPPER_REFRIGERATORS =
+            registerCopperAppliances("refrigerator", REFRIGERATOR, RefrigeratorBlock::new,
+                    WeatheringCopperRefrigeratorBlock::new);
+
+    public static final java.util.List<DeferredBlock<OvenBlock>> COPPER_OVENS =
+            registerCopperAppliances("oven", OVEN, OvenBlock::new,
+                    WeatheringCopperOvenBlock::new);
+
+    private static <T extends Block> java.util.List<DeferredBlock<T>> registerCopperAppliances(
+            String name, Supplier<T> base, java.util.function.Function<BlockBehaviour.Properties, T> waxedFactory,
+            java.util.function.BiFunction<WeatherState, BlockBehaviour.Properties, T> weatheringFactory) {
+        var variants = new java.util.ArrayList<DeferredBlock<T>>();
+        for (boolean waxed : new boolean[] {false, true}) {
+            for (WeatherState age : WeatherState.values()) {
+                String prefix = switch (age) {
+                    case UNAFFECTED -> "";
+                    case EXPOSED -> "exposed_";
+                    case WEATHERED -> "weathered_";
+                    case OXIDIZED -> "oxidized_";
+                };
+                String id = (waxed ? "waxed_" : "") + prefix + "copper_" + name;
+                variants.add(BLOCKS.register(id, key -> {
+                    var properties = BlockBehaviour.Properties.ofFullCopy(base.get())
+                            .setId(ResourceKey.create(Registries.BLOCK, key));
+                    return waxed ? waxedFactory.apply(properties) : weatheringFactory.apply(age, properties);
+                }));
+            }
+        }
+        return java.util.List.copyOf(variants);
+    }
 
     public static final DeferredHolder<Block, ElevatorShaftPanelBlock> ELEVATOR_SHAFT_PANEL = BLOCKS.register("elevator_shaft_panel",
             registryName -> new ElevatorShaftPanelBlock(BlockBehaviour.Properties.of()

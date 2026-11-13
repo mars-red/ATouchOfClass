@@ -81,7 +81,7 @@ public final class CabinetAttachments {
             event.setCanceled(true);
             event.setCancellationResult(InteractionResult.SUCCESS);
             if (!level.isClientSide()) {
-                cabinet.setAttachment(modified);
+                changeFinish(level, pos, cabinet, state, modified);
                 if (stack.is(Items.HONEYCOMB)) stack.consume(1, player);
                 else stack.hurtAndBreak(1, player, event.getHand().asEquipmentSlot());
             }
@@ -141,10 +141,26 @@ public final class CabinetAttachments {
         }
     }
 
+    private static void changeFinish(Level level, BlockPos pos, CabinetBlockEntity cabinet,
+                                     BlockState state, BlockState modified) {
+        if (canPair(state)) {
+            ChestType type = state.getValue(pairType(state));
+            Direction right = state.getValue(HorizontalDirectionalBlock.FACING).getClockWise();
+            if (type != ChestType.SINGLE
+                    && level.getBlockEntity(pos.relative(type == ChestType.LEFT ? right : right.getOpposite()))
+                    instanceof CabinetBlockEntity partner
+                    && matches(partner.getAttachment(), state, type.getOpposite())) {
+                partner.setAttachment(modified.getBlock().withPropertiesOf(partner.getAttachment()));
+            }
+        }
+        cabinet.setAttachment(modified);
+    }
+
     public static void weather(ServerLevel level, BlockPos pos, RandomSource random) {
         if (!(level.getBlockEntity(pos) instanceof CabinetBlockEntity cabinet)) return;
         var state = cabinet.getAttachment();
         if (!(state.getBlock() instanceof WeatheringCopper copper) || random.nextFloat() >= 0.05688889F) return;
+        if (canPair(state) && state.getValue(pairType(state)) == ChestType.RIGHT) return;
         int same = 0, older = 0, age = copper.getAge().ordinal();
         // Match vanilla copper's distance and probability, including nearby cabinet attachments.
         for (BlockPos neighbor : BlockPos.withinManhattan(pos.above(), 4)) {
@@ -159,6 +175,6 @@ public final class CabinetAttachments {
         }
         float chance = (older + 1F) / (older + same + 1F);
         if (random.nextFloat() < chance * chance * copper.getChanceModifier())
-            copper.getNext(state).ifPresent(cabinet::setAttachment);
+            copper.getNext(state).ifPresent(next -> changeFinish(level, pos, cabinet, state, next));
     }
 }

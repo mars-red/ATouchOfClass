@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "atouchofclass:weathered_copper_kitchen_sink",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "atouchofclass:waxed_weathered_copper_kitchen_sink",
+    "count": 1
+  }
+}

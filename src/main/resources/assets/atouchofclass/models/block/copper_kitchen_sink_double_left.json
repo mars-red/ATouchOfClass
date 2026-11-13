@@ -1,0 +1,7 @@
+{
+  "parent": "atouchofclass:block/kitchen_sink_double_left",
+  "textures": {
+    "steel": "atouchofclass:block/brushed_copper",
+    "particle": "atouchofclass:block/brushed_copper"
+  }
+}

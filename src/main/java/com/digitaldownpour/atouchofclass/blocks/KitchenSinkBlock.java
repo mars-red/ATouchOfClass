@@ -9,6 +9,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
@@ -38,6 +39,13 @@ public class KitchenSinkBlock extends HorizontalFurnitureBlock implements Entity
     @Override
     public @org.jetbrains.annotations.Nullable MergedFixtureBlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return state.getValue(TYPE) == ChestType.SINGLE ? null : new MergedFixtureBlockEntity(pos, state);
+    }
+
+    @Override
+    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean moved) {
+        super.onPlace(state, level, pos, oldState, moved);
+        CopperApplianceFinish.updatePartner(level, pos, state, oldState, TYPE, state.getValue(TYPE) == ChestType.LEFT
+                ? state.getValue(FACING).getClockWise() : state.getValue(FACING).getCounterClockWise());
     }
 
     @Override
