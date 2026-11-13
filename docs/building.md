@@ -181,6 +181,42 @@ Craft **16 Dado Rails** with one **Bucket of Plaster** followed by two **wooden 
 *Place the supporting wall first, then align trim to its faces and opening edges.*
 <!-- screenshot:building-02:end -->
 
+## Rake boards
+
+Use wooden rake boards to trim the sloped edges of a gable roof. **The only currently supported roof setup is a roof made from Deepslate Tile blocks (Stairs, Blocks, or Slabs in the bottom position).**
+
+Rake boards come in all 13 woods listed in the [reference](reference.md). Craft **12 rake boards** by placing three matching wood planks diagonally across a 3×3 crafting grid, one plank per row.
+
+<!-- screenshot:building-08:start -->
+![A deepslate tile roof with pale oak rakeboards applied.](images/building/rake-boards.png)
+
+*Click the undersides of the blocks along the gable edge, the board automatically follows the slope.*
+<!-- screenshot:building-08:end -->
+
+## Spandrels
+
+Use wooden spandrels to trim the top of a porch bay, doorway, or other opening. They come in all 13 woods listed in the [reference](reference.md).
+
+Stand in front of the opening and click the inward-facing side of a post or wall to place a tapered end. The taper mirrors automatically for the opposite side. Click the end of an existing spandrel to extend the run with a straight section that inherits its facing. You can also place a straight section against the underside of a beam. Spandrels can attach to any block material and stay in place when the supporting block is removed.
+
+Craft **8 spandrels** from **three matching wood planks**. Put one plank in the center of the first row and two in the outer slots of the second row. See the [oak recipe](recipes.md#oak-spandrel) for the crafting grid.
+
+<!-- screenshot:building-09:start -->
+![An example of Spruce Spandrels.](images/building/spandrel.png)
+<!-- screenshot:building-09:end -->
+
+## Corbels
+
+Use corbels as decorative brackets beneath beams, overhangs, or shelves. Each corbel is one block high and half a block wide, with a stepped profile and recessed carvings on its sides. Corbels come in all 13 woods listed in the [reference](reference.md), plus a white plaster variant.
+
+Click a vertical block face to place a corbel with its flat back against that face. The wide end stays at the top, so place it on the wall just below the feature you want to trim.
+
+Both recipes yield **8 corbels**. For [wooden corbels](recipes.md#oak-corbel), place four matching planks in an L shape down the left column, with the fourth plank in the top-center slot. For [plaster corbels](recipes.md#plaster-corbel), use the same pattern with any wood planks and add a Bucket of Plaster in the center slot.
+
+<!-- screenshot:building-10:start -->
+![An example of Plaster Corbels.](images/building/corbel.png)
+<!-- screenshot:building-10:end -->
+
 ## Plaster columns
 
 Plaster columns come in **square** and **round** variants. The round shaft uses a stepped, blocky circle; both variants have square stepped trim at their ends and the same white concrete appearance as plaster. Each variant has three separately crafted pieces:
@@ -231,3 +267,5 @@ For a first stair build, use a straight run of ordinary bottom-half stairs besid
 | Railing will not place | Check its supporting wall or valid corner continuation; use balustrades for freestanding edges. |
 | Stair rail remains flat or disappears | Check bottom-half stairs, orientation, physical tread support, and adjacent matching sections. |
 | Apron cannot be extended from its end | A cap is terminal. Rebuild the run with the desired length before finishing the end. |
+| Rake board cannot be placed | Rakeboards may only be placed on the undersides of Deepslate Tile Stairs, Blocks, and Slabs. Slabs must be in the bottom position. |
+| Rake boards do not join properly | They will only join along the underside of a 1:1 slope. Other slopes are not supported. |

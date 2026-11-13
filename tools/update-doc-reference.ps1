@@ -35,8 +35,20 @@ foreach ($wood in $woods) { foreach ($color in $colors) { Add-Id ($wood + '_' + 
 $railSource = Get-Content (Join-Path $java 'WoodRailingVariants.java') -Raw
 $railMatch = [regex]::Match($railSource, 'new String\[\]\{([^}]+)\}')
 if (-not $railMatch.Success) { throw 'Cannot parse railing variants' }
-foreach ($wood in (Strings $railMatch.Groups[1].Value)) {
+$railWoods = Strings $railMatch.Groups[1].Value
+foreach ($wood in $railWoods) {
     foreach ($suffix in @('_railing','_baluster','_balustrade','_newel_post')) { Add-Id ($wood + $suffix) }
+}
+$blocks = Get-Content (Join-Path $java 'ModBlocks.java') -Raw
+foreach ($match in [regex]::Matches($blocks, 'registerWoodTrim\("([a-z0-9_]+)"')) {
+    foreach ($wood in (@('oak') + $railWoods)) { Add-Id ($wood + $match.Groups[1].Value) }
+}
+foreach ($match in [regex]::Matches($blocks, 'registerCopperAppliances\("([a-z0-9_]+)"')) {
+    foreach ($wax in @('', 'waxed_')) {
+        foreach ($age in @('', 'exposed_', 'weathered_', 'oxidized_')) {
+            Add-Id ($wax + $age + 'copper_' + $match.Groups[1].Value)
+        }
+    }
 }
 $labels = Get-Content (Join-Path $resources 'assets/atouchofclass/lang/en_us.json') -Raw | ConvertFrom-Json -AsHashtable
 function Label([string]$id) {
@@ -70,7 +82,7 @@ function Ingredient($value) {
     throw 'Unsupported ingredient format'
 }
 $catalog = [Collections.Generic.List[string]]::new()
-@('# Content catalog','','[Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)','','Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, dining-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, and wood-railing registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.','','Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.','') | ForEach-Object { $catalog.Add($_) }
+@('# Content catalog','','[Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)','','Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, dining-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, wood-railing, wood-trim, and copper-appliance registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.','','Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.','') | ForEach-Object { $catalog.Add($_) }
 $catalog.Add("**$($registered.Count) registered player-content items.**")
 $catalog.Add('')
 $catalog.Add('| Item | Identifier | Acquisition |')
@@ -117,7 +129,15 @@ foreach ($record in $recipes) {
     $recipeDoc.Add('')
 }
 $changed = 0
-foreach ($entry in @(@{Path='docs/catalog.md';Lines=$catalog}, @{Path='docs/recipes.md';Lines=$recipeDoc})) {
+$manual = Get-Content (Join-Path $root 'docs/README.md') -Raw
+$manual = $manual -replace 'covers \d+ registered player-content items', "covers $($registered.Count) registered player-content items"
+$manual = $manual -replace 'contains all \d+ bundled recipes', "contains all $($recipes.Count) bundled recipes"
+$references = @(
+    @{Path='docs/catalog.md';Lines=$catalog}
+    @{Path='docs/recipes.md';Lines=$recipeDoc}
+    @{Path='docs/README.md';Lines=($manual -split '\r?\n')}
+)
+foreach ($entry in $references) {
     $path = Join-Path $root $entry.Path
     $desired = ($entry.Lines -join "`n").TrimEnd() + "`n"
     $current = if (Test-Path $path) { (Get-Content $path -Raw).Replace("`r`n","`n") } else { '' }
