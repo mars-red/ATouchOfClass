@@ -1,0 +1,6 @@
+{
+  "parent": "atouchofclass:block/induction_cooktop_single",
+  "textures": {
+    "trim": "atouchofclass:block/brushed_copper"
+  }
+}

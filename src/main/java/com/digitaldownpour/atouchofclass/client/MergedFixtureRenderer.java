@@ -118,11 +118,11 @@ public final class MergedFixtureRenderer<T extends BlockEntity> implements Block
         if (cabinetAttachments) {
             poseStack.translate(0, 1, 0);
         }
-        submitHalf(collector, poseStack, state.first, state.lightCoords);
+        submitParts(collector, poseStack, state.first, state.lightCoords);
         if (!state.second.isEmpty()) {
             poseStack.pushPose();
             poseStack.translate(state.right.getStepX(), 0, state.right.getStepZ());
-            submitHalf(collector, poseStack, state.second, state.lightCoords);
+            submitParts(collector, poseStack, state.second, state.lightCoords);
             poseStack.popPose();
         }
         poseStack.popPose();
@@ -143,7 +143,7 @@ public final class MergedFixtureRenderer<T extends BlockEntity> implements Block
         return state.getValue(BlockStateProperties.HORIZONTAL_FACING).getClockWise();
     }
 
-    private static List<BlockStateModelPart> collectParts(ClientLevel level, BlockPos pos, BlockState state) {
+    static List<BlockStateModelPart> collectParts(ClientLevel level, BlockPos pos, BlockState state) {
         var model = Minecraft.getInstance().getModelManager().getBlockStateModelSet().get(state);
         List<BlockStateModelPart> parts = new ArrayList<>();
         model.collectParts(level, pos, state, RandomSource.create(state.getSeed(pos)), parts);
@@ -156,7 +156,7 @@ public final class MergedFixtureRenderer<T extends BlockEntity> implements Block
         return LightCoordsUtil.smoothPack(block, sky);
     }
 
-    private static void submitHalf(SubmitNodeCollector collector, PoseStack poseStack,
+    static void submitParts(SubmitNodeCollector collector, PoseStack poseStack,
                                    List<BlockStateModelPart> parts, int light) {
         if (parts.isEmpty()) {
             return;

@@ -1,0 +1,11 @@
+{
+  "ambientocclusion": false,
+  "parent": "atouchofclass:block/refrigerator_lower_right",
+  "textures": {
+    "body": "atouchofclass:block/oxidized_brushed_copper",
+    "front": "atouchofclass:block/oxidized_brushed_copper_refrigerator_door",
+    "drawer_left": "atouchofclass:block/oxidized_brushed_copper_refrigerator_drawer_left",
+    "drawer_right": "atouchofclass:block/oxidized_brushed_copper_refrigerator_drawer_right",
+    "particle": "atouchofclass:block/oxidized_brushed_copper"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "atouchofclass:block/oven_lit",
+  "textures": {
+    "body": "atouchofclass:block/brushed_copper",
+    "particle": "atouchofclass:block/brushed_copper"
+  }
+}

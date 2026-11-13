@@ -78,18 +78,24 @@ public class ModEntities {
     public static final Supplier<BlockEntityType<RefrigeratorBlockEntity>> REFRIGERATOR_BE =
             BLOCK_ENTITY_TYPES.register("refrigerator_be", () -> new BlockEntityType<>(
                     RefrigeratorBlockEntity::new,
-                    ModBlocks.REFRIGERATOR.get()
+                    java.util.stream.Stream.concat(java.util.stream.Stream.of(ModBlocks.REFRIGERATOR),
+                            ModBlocks.COPPER_REFRIGERATORS.stream()).map(DeferredHolder::get).toArray(Block[]::new)
             ));
 
     public static final Supplier<BlockEntityType<OvenBlockEntity>> OVEN_BE =
             BLOCK_ENTITY_TYPES.register("oven_be", () -> new BlockEntityType<>(
                     OvenBlockEntity::new,
-                    ModBlocks.OVEN.get()
+                    java.util.stream.Stream.concat(java.util.stream.Stream.of(ModBlocks.OVEN),
+                            ModBlocks.COPPER_OVENS.stream()).map(DeferredHolder::get).toArray(Block[]::new)
             ));
 
     public static final Supplier<BlockEntityType<MergedFixtureBlockEntity>> MERGED_FIXTURE_BE =
             BLOCK_ENTITY_TYPES.register("merged_fixture", () -> new BlockEntityType<>(
-                    MergedFixtureBlockEntity::new, ModBlocks.INDUCTION_COOKTOP.get(), ModBlocks.KITCHEN_SINK.get()));
+                    MergedFixtureBlockEntity::new,
+                    java.util.stream.Stream.of(
+                            java.util.stream.Stream.of(ModBlocks.INDUCTION_COOKTOP, ModBlocks.KITCHEN_SINK),
+                            ModBlocks.COPPER_INDUCTION_COOKTOPS.stream(), ModBlocks.COPPER_KITCHEN_SINKS.stream())
+                            .flatMap(stream -> stream).map(DeferredHolder::get).toArray(Block[]::new)));
 
     public static final Supplier<BlockEntityType<TallDoorBlockEntity>> TALL_DOOR_BE = BLOCK_ENTITY_TYPES.register("tall_door_be",
             () -> new BlockEntityType<>(

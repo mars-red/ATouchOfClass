@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "atouchofclass:weathered_copper_refrigerator",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "atouchofclass:waxed_weathered_copper_refrigerator",
+    "count": 1
+  }
+}

@@ -61,6 +61,7 @@ public final class ModGameTests {
         FUNCTIONS.register("chandeliergametests.ceilingandchainsupport", () -> ChandelierGameTests::ceilingAndChainSupport);
         FUNCTIONS.register("chandeliergametests.oxidationwaxingandlight", () -> ChandelierGameTests::oxidationWaxingAndLight);
         FUNCTIONS.register("chandeliergametests.chainstatesurvivestransitions", () -> ChandelierGameTests::chainStateSurvivesTransitions);
+        FUNCTIONS.register("copperappliancegametests.assembliesandcontentssurvivefinishchanges", () -> CopperApplianceGameTests::assembliesAndContentsSurviveFinishChanges);
         FUNCTIONS.register("copperfurnituregametests.countertopsoxidizewaxandusevanillacopperproperties", () -> CopperFurnitureGameTests::countertopsOxidizeWaxAndUseVanillaCopperProperties);
         FUNCTIONS.register("copperfurnituregametests.sinkspreservefacingthroughcoppertransitions", () -> CopperFurnitureGameTests::sinksPreserveFacingThroughCopperTransitions);
         FUNCTIONS.register("copperfurnituregametests.lamppostspreservetheirsectionthroughcoppertransitions", () -> CopperFurnitureGameTests::lampPostsPreserveTheirSectionThroughCopperTransitions);

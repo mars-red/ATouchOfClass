@@ -728,6 +728,18 @@ public class ModItems {
         }
         return java.util.Collections.unmodifiableMap(items);
     }
+    private static final java.util.List<DeferredItem<BlockItem>> COPPER_INDUCTION_COOKTOP_ITEMS =
+            ModBlocks.COPPER_INDUCTION_COOKTOPS.stream().map(ITEMS::registerSimpleBlockItem).toList();
+
+    private static final java.util.List<DeferredItem<BlockItem>> COPPER_KITCHEN_SINK_ITEMS =
+            ModBlocks.COPPER_KITCHEN_SINKS.stream().map(ITEMS::registerSimpleBlockItem).toList();
+
+    private static final java.util.List<DeferredItem<BlockItem>> COPPER_REFRIGERATOR_ITEMS =
+            ModBlocks.COPPER_REFRIGERATORS.stream().map(ITEMS::registerSimpleBlockItem).toList();
+
+    private static final java.util.List<DeferredItem<BlockItem>> COPPER_OVEN_ITEMS =
+            ModBlocks.COPPER_OVENS.stream().map(ITEMS::registerSimpleBlockItem).toList();
+
     public static final DeferredItem<BlockItem> REFRIGERATOR_ITEM = ITEMS.registerSimpleBlockItem("refrigerator", ModBlocks.REFRIGERATOR);
     public static final DeferredItem<BlockItem> OVEN_ITEM = ITEMS.registerSimpleBlockItem("oven", ModBlocks.OVEN);
     public static final DeferredItem<BlockItem> INDUCTION_COOKTOP_ITEM =
@@ -884,8 +896,11 @@ public class ModItems {
             event.accept(LEATHER_CHAIR_ITEM);
             DINING_CHAIR_ITEMS.values().forEach(event::accept);
             event.accept(REFRIGERATOR_ITEM);
+            COPPER_REFRIGERATOR_ITEMS.forEach(event::accept);
             event.accept(OVEN_ITEM);
+            COPPER_OVEN_ITEMS.forEach(event::accept);
             event.accept(INDUCTION_COOKTOP_ITEM);
+            COPPER_INDUCTION_COOKTOP_ITEMS.forEach(event::accept);
             event.accept(COPPER_CHANDELIER_CHAIN);
             event.accept(EXPOSED_COPPER_CHANDELIER_CHAIN);
             event.accept(WEATHERED_COPPER_CHANDELIER_CHAIN);
@@ -998,6 +1013,7 @@ public class ModItems {
             event.accept(CALCITE_COUNTERTOP);
             event.accept(CALCITE_SINK);
             event.accept(KITCHEN_SINK);
+            COPPER_KITCHEN_SINK_ITEMS.forEach(event::accept);
             event.accept(SMOOTH_STONE_COUNTERTOP);
             event.accept(SMOOTH_STONE_SINK);
             event.accept(STONE_COUNTERTOP);

@@ -89,6 +89,42 @@
     },
     "atouchofclass:weathered_cut_copper_sink": {
       "next_oxidation_stage": "atouchofclass:oxidized_cut_copper_sink"
+    },
+    "atouchofclass:copper_induction_cooktop": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_induction_cooktop"
+    },
+    "atouchofclass:exposed_copper_induction_cooktop": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_induction_cooktop"
+    },
+    "atouchofclass:weathered_copper_induction_cooktop": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_induction_cooktop"
+    },
+    "atouchofclass:copper_kitchen_sink": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_kitchen_sink"
+    },
+    "atouchofclass:exposed_copper_kitchen_sink": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_kitchen_sink"
+    },
+    "atouchofclass:weathered_copper_kitchen_sink": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_kitchen_sink"
+    },
+    "atouchofclass:copper_refrigerator": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_refrigerator"
+    },
+    "atouchofclass:exposed_copper_refrigerator": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_refrigerator"
+    },
+    "atouchofclass:weathered_copper_refrigerator": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_refrigerator"
+    },
+    "atouchofclass:copper_oven": {
+      "next_oxidation_stage": "atouchofclass:exposed_copper_oven"
+    },
+    "atouchofclass:exposed_copper_oven": {
+      "next_oxidation_stage": "atouchofclass:weathered_copper_oven"
+    },
+    "atouchofclass:weathered_copper_oven": {
+      "next_oxidation_stage": "atouchofclass:oxidized_copper_oven"
     }
   }
 }
