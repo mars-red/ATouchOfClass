@@ -1,5 +1,6 @@
 {
   "loader": "atouchofclass:rake_board",
+  "parent": "minecraft:block/block",
   "rises_left": false,
   "include_filler": false,
   "gui_light": "front",
