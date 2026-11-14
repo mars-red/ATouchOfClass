@@ -4,7 +4,7 @@
     "property": "minecraft:display_context",
     "cases": [
       {
-        "when": "gui",
+        "when": ["gui", "firstperson_lefthand", "firstperson_righthand", "thirdperson_lefthand", "thirdperson_righthand"],
         "model": {
           "type": "minecraft:model",
           "model": "atouchofclass:item/oak_rake_board"
