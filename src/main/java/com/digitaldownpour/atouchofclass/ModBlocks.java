@@ -1104,6 +1104,9 @@ public class ModBlocks {
     public static final java.util.Map<String, DeferredBlock<DiningTableBlock>> DINING_TABLES = registerDiningTables();
     public static final DeferredBlock<DiningTableBlock> OAK_DINING_TABLE = DINING_TABLES.get("oak_dining_table");
 
+    public static final java.util.Map<String, DeferredBlock<DiningTableBlock>> COFFEE_TABLES = registerCoffeeTables();
+    public static final DeferredBlock<DiningTableBlock> OAK_COFFEE_TABLE = COFFEE_TABLES.get("oak_coffee_table");
+
     public static final java.util.Map<String, DeferredBlock<NightstandBlock>> NIGHTSTANDS = registerNightstands();
     public static final DeferredBlock<NightstandBlock> OAK_NIGHTSTAND = NIGHTSTANDS.get("oak_nightstand");
 
@@ -1245,6 +1248,14 @@ public class ModBlocks {
                     BlockBehaviour.Properties properties = furnitureProperties(source, registryName);
                     return new DiningTableBlock(properties);
                 })));
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
+    private static java.util.Map<String, DeferredBlock<DiningTableBlock>> registerCoffeeTables() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<DiningTableBlock>>();
+        DiningTableVariants.VALUES.forEach(definition -> blocks.put(definition.coffeeTableId(),
+                BLOCKS.register(definition.coffeeTableId(), registryName -> new DiningTableBlock(
+                        furnitureProperties(definition.sourceBlock(), registryName), true))));
         return java.util.Collections.unmodifiableMap(blocks);
     }
 

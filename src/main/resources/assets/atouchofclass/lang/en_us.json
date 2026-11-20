@@ -1273,5 +1273,18 @@
   "block.atouchofclass.weathered_copper_oven": "Weathered Copper Oven",
   "block.atouchofclass.waxed_weathered_copper_oven": "Waxed Weathered Copper Oven",
   "block.atouchofclass.oxidized_copper_oven": "Oxidized Copper Oven",
-  "block.atouchofclass.waxed_oxidized_copper_oven": "Waxed Oxidized Copper Oven"
+  "block.atouchofclass.waxed_oxidized_copper_oven": "Waxed Oxidized Copper Oven",
+    "block.atouchofclass.oak_coffee_table": "Oak Coffee Table",
+    "block.atouchofclass.spruce_coffee_table": "Spruce Coffee Table",
+    "block.atouchofclass.birch_coffee_table": "Birch Coffee Table",
+    "block.atouchofclass.poplar_coffee_table": "Poplar Coffee Table",
+    "block.atouchofclass.jungle_coffee_table": "Jungle Coffee Table",
+    "block.atouchofclass.acacia_coffee_table": "Acacia Coffee Table",
+    "block.atouchofclass.dark_oak_coffee_table": "Dark Oak Coffee Table",
+    "block.atouchofclass.mangrove_coffee_table": "Mangrove Coffee Table",
+    "block.atouchofclass.cherry_coffee_table": "Cherry Coffee Table",
+    "block.atouchofclass.pale_oak_coffee_table": "Pale Oak Coffee Table",
+    "block.atouchofclass.bamboo_coffee_table": "Bamboo Coffee Table",
+    "block.atouchofclass.crimson_coffee_table": "Crimson Coffee Table",
+    "block.atouchofclass.warped_coffee_table": "Warped Coffee Table"
 }

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PWP"
+  ],
+  "key": {
+    "P": "minecraft:crimson_planks",
+    "W": "minecraft:stripped_crimson_hyphae"
+  },
+  "result": {
+    "id": "atouchofclass:crimson_coffee_table",
+    "count": 4
+  }
+}

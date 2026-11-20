@@ -2,11 +2,11 @@
 
 [Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)
 
-Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, dining-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, wood-railing, wood-trim, and copper-appliance registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
+Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, coffee-table, dining-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, wood-railing, wood-trim, and copper-appliance registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**799 registered player-content items.**
+**812 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -15,6 +15,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Acacia Four-Post Bed (Black) | `atouchofclass:acacia_black_four_post_bed` | Survival obtainable — [acacia_black_four_post_bed](recipes.md#acacia-black-four-post-bed) |
 | Acacia Four-Post Bed (Blue) | `atouchofclass:acacia_blue_four_post_bed` | Survival obtainable — [acacia_blue_four_post_bed](recipes.md#acacia-blue-four-post-bed) |
 | Acacia Four-Post Bed (Brown) | `atouchofclass:acacia_brown_four_post_bed` | Survival obtainable — [acacia_brown_four_post_bed](recipes.md#acacia-brown-four-post-bed) |
+| Acacia Coffee Table | `atouchofclass:acacia_coffee_table` | Survival obtainable — [acacia_coffee_table](recipes.md#acacia-coffee-table) |
 | Acacia Corbel | `atouchofclass:acacia_corbel` | Survival obtainable — [acacia_corbel](recipes.md#acacia-corbel) |
 | Acacia Four-Post Bed (Cyan) | `atouchofclass:acacia_cyan_four_post_bed` | Survival obtainable — [acacia_cyan_four_post_bed](recipes.md#acacia-cyan-four-post-bed) |
 | Acacia Dining Chair | `atouchofclass:acacia_dining_chair` | Survival obtainable — [acacia_dining_chair](recipes.md#acacia-dining-chair) |
@@ -54,6 +55,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Bamboo Four-Post Bed (Black) | `atouchofclass:bamboo_black_four_post_bed` | Survival obtainable — [bamboo_black_four_post_bed](recipes.md#bamboo-black-four-post-bed) |
 | Bamboo Four-Post Bed (Blue) | `atouchofclass:bamboo_blue_four_post_bed` | Survival obtainable — [bamboo_blue_four_post_bed](recipes.md#bamboo-blue-four-post-bed) |
 | Bamboo Four-Post Bed (Brown) | `atouchofclass:bamboo_brown_four_post_bed` | Survival obtainable — [bamboo_brown_four_post_bed](recipes.md#bamboo-brown-four-post-bed) |
+| Bamboo Coffee Table | `atouchofclass:bamboo_coffee_table` | Survival obtainable — [bamboo_coffee_table](recipes.md#bamboo-coffee-table) |
 | Bamboo Corbel | `atouchofclass:bamboo_corbel` | Survival obtainable — [bamboo_corbel](recipes.md#bamboo-corbel) |
 | Bamboo Four-Post Bed (Cyan) | `atouchofclass:bamboo_cyan_four_post_bed` | Survival obtainable — [bamboo_cyan_four_post_bed](recipes.md#bamboo-cyan-four-post-bed) |
 | Bamboo Dining Chair | `atouchofclass:bamboo_dining_chair` | Survival obtainable — [bamboo_dining_chair](recipes.md#bamboo-dining-chair) |
@@ -90,6 +92,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Birch Four-Post Bed (Black) | `atouchofclass:birch_black_four_post_bed` | Survival obtainable — [birch_black_four_post_bed](recipes.md#birch-black-four-post-bed) |
 | Birch Four-Post Bed (Blue) | `atouchofclass:birch_blue_four_post_bed` | Survival obtainable — [birch_blue_four_post_bed](recipes.md#birch-blue-four-post-bed) |
 | Birch Four-Post Bed (Brown) | `atouchofclass:birch_brown_four_post_bed` | Survival obtainable — [birch_brown_four_post_bed](recipes.md#birch-brown-four-post-bed) |
+| Birch Coffee Table | `atouchofclass:birch_coffee_table` | Survival obtainable — [birch_coffee_table](recipes.md#birch-coffee-table) |
 | Birch Corbel | `atouchofclass:birch_corbel` | Survival obtainable — [birch_corbel](recipes.md#birch-corbel) |
 | Birch Four-Post Bed (Cyan) | `atouchofclass:birch_cyan_four_post_bed` | Survival obtainable — [birch_cyan_four_post_bed](recipes.md#birch-cyan-four-post-bed) |
 | Birch Dining Chair | `atouchofclass:birch_dining_chair` | Survival obtainable — [birch_dining_chair](recipes.md#birch-dining-chair) |
@@ -152,6 +155,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Cherry Four-Post Bed (Black) | `atouchofclass:cherry_black_four_post_bed` | Survival obtainable — [cherry_black_four_post_bed](recipes.md#cherry-black-four-post-bed) |
 | Cherry Four-Post Bed (Blue) | `atouchofclass:cherry_blue_four_post_bed` | Survival obtainable — [cherry_blue_four_post_bed](recipes.md#cherry-blue-four-post-bed) |
 | Cherry Four-Post Bed (Brown) | `atouchofclass:cherry_brown_four_post_bed` | Survival obtainable — [cherry_brown_four_post_bed](recipes.md#cherry-brown-four-post-bed) |
+| Cherry Coffee Table | `atouchofclass:cherry_coffee_table` | Survival obtainable — [cherry_coffee_table](recipes.md#cherry-coffee-table) |
 | Cherry Corbel | `atouchofclass:cherry_corbel` | Survival obtainable — [cherry_corbel](recipes.md#cherry-corbel) |
 | Cherry Four-Post Bed (Cyan) | `atouchofclass:cherry_cyan_four_post_bed` | Survival obtainable — [cherry_cyan_four_post_bed](recipes.md#cherry-cyan-four-post-bed) |
 | Cherry Dining Chair | `atouchofclass:cherry_dining_chair` | Survival obtainable — [cherry_dining_chair](recipes.md#cherry-dining-chair) |
@@ -208,6 +212,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Crimson Four-Post Bed (Black) | `atouchofclass:crimson_black_four_post_bed` | Survival obtainable — [crimson_black_four_post_bed](recipes.md#crimson-black-four-post-bed) |
 | Crimson Four-Post Bed (Blue) | `atouchofclass:crimson_blue_four_post_bed` | Survival obtainable — [crimson_blue_four_post_bed](recipes.md#crimson-blue-four-post-bed) |
 | Crimson Four-Post Bed (Brown) | `atouchofclass:crimson_brown_four_post_bed` | Survival obtainable — [crimson_brown_four_post_bed](recipes.md#crimson-brown-four-post-bed) |
+| Crimson Coffee Table | `atouchofclass:crimson_coffee_table` | Survival obtainable — [crimson_coffee_table](recipes.md#crimson-coffee-table) |
 | Crimson Corbel | `atouchofclass:crimson_corbel` | Survival obtainable — [crimson_corbel](recipes.md#crimson-corbel) |
 | Crimson Four-Post Bed (Cyan) | `atouchofclass:crimson_cyan_four_post_bed` | Survival obtainable — [crimson_cyan_four_post_bed](recipes.md#crimson-cyan-four-post-bed) |
 | Crimson Dining Chair | `atouchofclass:crimson_dining_chair` | Survival obtainable — [crimson_dining_chair](recipes.md#crimson-dining-chair) |
@@ -252,6 +257,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Dark Oak Four-Post Bed (Black) | `atouchofclass:dark_oak_black_four_post_bed` | Survival obtainable — [dark_oak_black_four_post_bed](recipes.md#dark-oak-black-four-post-bed) |
 | Dark Oak Four-Post Bed (Blue) | `atouchofclass:dark_oak_blue_four_post_bed` | Survival obtainable — [dark_oak_blue_four_post_bed](recipes.md#dark-oak-blue-four-post-bed) |
 | Dark Oak Four-Post Bed (Brown) | `atouchofclass:dark_oak_brown_four_post_bed` | Survival obtainable — [dark_oak_brown_four_post_bed](recipes.md#dark-oak-brown-four-post-bed) |
+| Dark Oak Coffee Table | `atouchofclass:dark_oak_coffee_table` | Survival obtainable — [dark_oak_coffee_table](recipes.md#dark-oak-coffee-table) |
 | Dark Oak Corbel | `atouchofclass:dark_oak_corbel` | Survival obtainable — [dark_oak_corbel](recipes.md#dark-oak-corbel) |
 | Dark Oak Four-Post Bed (Cyan) | `atouchofclass:dark_oak_cyan_four_post_bed` | Survival obtainable — [dark_oak_cyan_four_post_bed](recipes.md#dark-oak-cyan-four-post-bed) |
 | Dark Oak Dining Chair | `atouchofclass:dark_oak_dining_chair` | Survival obtainable — [dark_oak_dining_chair](recipes.md#dark-oak-dining-chair) |
@@ -331,6 +337,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Jungle Four-Post Bed (Black) | `atouchofclass:jungle_black_four_post_bed` | Survival obtainable — [jungle_black_four_post_bed](recipes.md#jungle-black-four-post-bed) |
 | Jungle Four-Post Bed (Blue) | `atouchofclass:jungle_blue_four_post_bed` | Survival obtainable — [jungle_blue_four_post_bed](recipes.md#jungle-blue-four-post-bed) |
 | Jungle Four-Post Bed (Brown) | `atouchofclass:jungle_brown_four_post_bed` | Survival obtainable — [jungle_brown_four_post_bed](recipes.md#jungle-brown-four-post-bed) |
+| Jungle Coffee Table | `atouchofclass:jungle_coffee_table` | Survival obtainable — [jungle_coffee_table](recipes.md#jungle-coffee-table) |
 | Jungle Corbel | `atouchofclass:jungle_corbel` | Survival obtainable — [jungle_corbel](recipes.md#jungle-corbel) |
 | Jungle Four-Post Bed (Cyan) | `atouchofclass:jungle_cyan_four_post_bed` | Survival obtainable — [jungle_cyan_four_post_bed](recipes.md#jungle-cyan-four-post-bed) |
 | Jungle Dining Chair | `atouchofclass:jungle_dining_chair` | Survival obtainable — [jungle_dining_chair](recipes.md#jungle-dining-chair) |
@@ -386,6 +393,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Mangrove Four-Post Bed (Black) | `atouchofclass:mangrove_black_four_post_bed` | Survival obtainable — [mangrove_black_four_post_bed](recipes.md#mangrove-black-four-post-bed) |
 | Mangrove Four-Post Bed (Blue) | `atouchofclass:mangrove_blue_four_post_bed` | Survival obtainable — [mangrove_blue_four_post_bed](recipes.md#mangrove-blue-four-post-bed) |
 | Mangrove Four-Post Bed (Brown) | `atouchofclass:mangrove_brown_four_post_bed` | Survival obtainable — [mangrove_brown_four_post_bed](recipes.md#mangrove-brown-four-post-bed) |
+| Mangrove Coffee Table | `atouchofclass:mangrove_coffee_table` | Survival obtainable — [mangrove_coffee_table](recipes.md#mangrove-coffee-table) |
 | Mangrove Corbel | `atouchofclass:mangrove_corbel` | Survival obtainable — [mangrove_corbel](recipes.md#mangrove-corbel) |
 | Mangrove Four-Post Bed (Cyan) | `atouchofclass:mangrove_cyan_four_post_bed` | Survival obtainable — [mangrove_cyan_four_post_bed](recipes.md#mangrove-cyan-four-post-bed) |
 | Mangrove Dining Chair | `atouchofclass:mangrove_dining_chair` | Survival obtainable — [mangrove_dining_chair](recipes.md#mangrove-dining-chair) |
@@ -424,6 +432,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Oak Four-Post Bed (Black) | `atouchofclass:oak_black_four_post_bed` | Survival obtainable — [oak_black_four_post_bed](recipes.md#oak-black-four-post-bed) |
 | Oak Four-Post Bed (Blue) | `atouchofclass:oak_blue_four_post_bed` | Survival obtainable — [oak_blue_four_post_bed](recipes.md#oak-blue-four-post-bed) |
 | Oak Four-Post Bed (Brown) | `atouchofclass:oak_brown_four_post_bed` | Survival obtainable — [oak_brown_four_post_bed](recipes.md#oak-brown-four-post-bed) |
+| Oak Coffee Table | `atouchofclass:oak_coffee_table` | Survival obtainable — [oak_coffee_table](recipes.md#oak-coffee-table) |
 | Oak Corbel | `atouchofclass:oak_corbel` | Survival obtainable — [oak_corbel](recipes.md#oak-corbel) |
 | Oak Four-Post Bed (Cyan) | `atouchofclass:oak_cyan_four_post_bed` | Survival obtainable — [oak_cyan_four_post_bed](recipes.md#oak-cyan-four-post-bed) |
 | Oak Dining Chair | `atouchofclass:oak_dining_chair` | Survival obtainable — [oak_dining_chair](recipes.md#oak-dining-chair) |
@@ -482,6 +491,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Pale Oak Four-Post Bed (Black) | `atouchofclass:pale_oak_black_four_post_bed` | Survival obtainable — [pale_oak_black_four_post_bed](recipes.md#pale-oak-black-four-post-bed) |
 | Pale Oak Four-Post Bed (Blue) | `atouchofclass:pale_oak_blue_four_post_bed` | Survival obtainable — [pale_oak_blue_four_post_bed](recipes.md#pale-oak-blue-four-post-bed) |
 | Pale Oak Four-Post Bed (Brown) | `atouchofclass:pale_oak_brown_four_post_bed` | Survival obtainable — [pale_oak_brown_four_post_bed](recipes.md#pale-oak-brown-four-post-bed) |
+| Pale Oak Coffee Table | `atouchofclass:pale_oak_coffee_table` | Survival obtainable — [pale_oak_coffee_table](recipes.md#pale-oak-coffee-table) |
 | Pale Oak Corbel | `atouchofclass:pale_oak_corbel` | Survival obtainable — [pale_oak_corbel](recipes.md#pale-oak-corbel) |
 | Pale Oak Four-Post Bed (Cyan) | `atouchofclass:pale_oak_cyan_four_post_bed` | Survival obtainable — [pale_oak_cyan_four_post_bed](recipes.md#pale-oak-cyan-four-post-bed) |
 | Pale Oak Dining Chair | `atouchofclass:pale_oak_dining_chair` | Survival obtainable — [pale_oak_dining_chair](recipes.md#pale-oak-dining-chair) |
@@ -540,6 +550,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Poplar Four-Post Bed (Black) | `atouchofclass:poplar_black_four_post_bed` | Survival obtainable — [poplar_black_four_post_bed](recipes.md#poplar-black-four-post-bed) |
 | Poplar Four-Post Bed (Blue) | `atouchofclass:poplar_blue_four_post_bed` | Survival obtainable — [poplar_blue_four_post_bed](recipes.md#poplar-blue-four-post-bed) |
 | Poplar Four-Post Bed (Brown) | `atouchofclass:poplar_brown_four_post_bed` | Survival obtainable — [poplar_brown_four_post_bed](recipes.md#poplar-brown-four-post-bed) |
+| Poplar Coffee Table | `atouchofclass:poplar_coffee_table` | Survival obtainable — [poplar_coffee_table](recipes.md#poplar-coffee-table) |
 | Poplar Corbel | `atouchofclass:poplar_corbel` | Survival obtainable — [poplar_corbel](recipes.md#poplar-corbel) |
 | Poplar Four-Post Bed (Cyan) | `atouchofclass:poplar_cyan_four_post_bed` | Survival obtainable — [poplar_cyan_four_post_bed](recipes.md#poplar-cyan-four-post-bed) |
 | Poplar Dining Chair | `atouchofclass:poplar_dining_chair` | Survival obtainable — [poplar_dining_chair](recipes.md#poplar-dining-chair) |
@@ -609,6 +620,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Spruce Four-Post Bed (Black) | `atouchofclass:spruce_black_four_post_bed` | Survival obtainable — [spruce_black_four_post_bed](recipes.md#spruce-black-four-post-bed) |
 | Spruce Four-Post Bed (Blue) | `atouchofclass:spruce_blue_four_post_bed` | Survival obtainable — [spruce_blue_four_post_bed](recipes.md#spruce-blue-four-post-bed) |
 | Spruce Four-Post Bed (Brown) | `atouchofclass:spruce_brown_four_post_bed` | Survival obtainable — [spruce_brown_four_post_bed](recipes.md#spruce-brown-four-post-bed) |
+| Spruce Coffee Table | `atouchofclass:spruce_coffee_table` | Survival obtainable — [spruce_coffee_table](recipes.md#spruce-coffee-table) |
 | Spruce Corbel | `atouchofclass:spruce_corbel` | Survival obtainable — [spruce_corbel](recipes.md#spruce-corbel) |
 | Spruce Four-Post Bed (Cyan) | `atouchofclass:spruce_cyan_four_post_bed` | Survival obtainable — [spruce_cyan_four_post_bed](recipes.md#spruce-cyan-four-post-bed) |
 | Spruce Dining Chair | `atouchofclass:spruce_dining_chair` | Survival obtainable — [spruce_dining_chair](recipes.md#spruce-dining-chair) |
@@ -698,6 +710,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Warped Four-Post Bed (Black) | `atouchofclass:warped_black_four_post_bed` | Survival obtainable — [warped_black_four_post_bed](recipes.md#warped-black-four-post-bed) |
 | Warped Four-Post Bed (Blue) | `atouchofclass:warped_blue_four_post_bed` | Survival obtainable — [warped_blue_four_post_bed](recipes.md#warped-blue-four-post-bed) |
 | Warped Four-Post Bed (Brown) | `atouchofclass:warped_brown_four_post_bed` | Survival obtainable — [warped_brown_four_post_bed](recipes.md#warped-brown-four-post-bed) |
+| Warped Coffee Table | `atouchofclass:warped_coffee_table` | Survival obtainable — [warped_coffee_table](recipes.md#warped-coffee-table) |
 | Warped Corbel | `atouchofclass:warped_corbel` | Survival obtainable — [warped_corbel](recipes.md#warped-corbel) |
 | Warped Four-Post Bed (Cyan) | `atouchofclass:warped_cyan_four_post_bed` | Survival obtainable — [warped_cyan_four_post_bed](recipes.md#warped-cyan-four-post-bed) |
 | Warped Dining Chair | `atouchofclass:warped_dining_chair` | Survival obtainable — [warped_dining_chair](recipes.md#warped-dining-chair) |

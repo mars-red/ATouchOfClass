@@ -27,6 +27,11 @@ package structure, naming conventions, loader boundaries, sidedness, save/networ
 compatibility expectations, and generated-resource workflow. Do not edit generated
 files when their generator is the source of truth.
 
+Implementation that involves new recipes should also implement corresponding recipe
+advancements and item breaks/drops. Similarly, implementation that affects existing
+recipes should ensure recipe advancements and item breaks/drops are updated when
+appropriate.
+
 When the user asks for discussion, planning, or a design, do not modify production
 code unless they also ask for implementation. Make assumptions and unresolved
 version-specific questions visible, compare realistic alternatives, and recommend

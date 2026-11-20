@@ -16,6 +16,7 @@ Dimensions below are the block spaces to reserve, in width × depth × height. A
 | Leather sofa | 3 × 1 × 1 | Three seating positions |
 | Side table | 1 × 1 × 1 | Decorative surface; no inventory |
 | Dining table | 1 × 1 × 1 per block | Joins matching tables into a larger decorative surface; no inventory |
+| Coffee table | 1 × 1 × 1 per block; 10 pixels tall | Low version of the dining table; joins matching tables; no inventory |
 | Nightstand | 1 × 1 × 1 | 27 storage slots |
 | Dresser | 2 × 1 × 2 | One shared 54-slot inventory; model is about 1¼ blocks high |
 | Four-post bed | 2 × 3 × 2 | Two mattress-side sleeping positions; normal sleep/spawn restrictions |
@@ -80,6 +81,12 @@ Add or remove individual blocks to reshape a table; neighboring tops, aprons, an
 *Matching dining tables join into rectangles and L shapes, with legs only at outside and inward corners.*
 <!-- screenshot:furniture-04:end -->
 
+## Coffee tables
+
+Coffee tables have the same finishes, the same one-block placement, and the same joining rules, as dining tables. Matching woods join along shared edges into larger surfaces, with legs only at outside and inward corners. Coffee tables never join dining tables or side tables, even in the same wood, and different woods stay separate.
+
+All 13 woods are available. Craft four tables with the single-row pattern `PWP`, where `P` is matching planks and `W` is matching stripped wood (a stripped bamboo block for bamboo, stripped hyphae for crimson and warped). See the [oak recipe](recipes.md#oak-coffee-table) or choose another wood in the [catalog](catalog.md).
+
 ## Four-post beds
 
 Reserve a supported 2 × 3 floor area and two clear block spaces above that footprint. Stand at the foot and look toward the head when placing the bed. The whole structure is placed from one item, and removing a section removes the whole bed.
@@ -103,6 +110,7 @@ Four-post beds have 16 bedding colors and 13 woods: oak, spruce, birch, poplar, 
 | Sofa, dresser, or bed will not place | Clear its complete footprint and upper spaces; check support below every lower section. |
 | Clicking a side table does nothing | It has no storage; use a nightstand for an inventory. |
 | Dining tables do not join | Use the same wood variety at the same height, sharing an edge. Side tables do not join dining tables. |
+| Coffee tables do not join dining tables | Expected: coffee tables join only matching coffee tables of the same wood. |
 | Dining table has fewer legs after joining | Expected: only outside and inward corners have legs. Every block still needs a sturdy floor beneath it. |
 | Cannot sit | Use an empty hand, choose an unoccupied section, and dismount any current vehicle. |
 | Storage items scatter when furniture is broken | Contents drop separately. Collect them or empty the furniture before moving it. |

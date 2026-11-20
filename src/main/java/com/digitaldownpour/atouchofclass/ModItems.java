@@ -329,6 +329,7 @@ public class ModItems {
     public static final DeferredItem<BlockItem> OAK_SIDE_TABLE_ITEM = SIDE_TABLE_ITEMS.get("oak_side_table");
     public static final java.util.Map<String, DeferredItem<BlockItem>> DINING_TABLE_ITEMS = registerDiningTableItems();
     public static final DeferredItem<BlockItem> OAK_DINING_TABLE_ITEM = DINING_TABLE_ITEMS.get("oak_dining_table");
+    public static final java.util.Map<String, DeferredItem<BlockItem>> COFFEE_TABLE_ITEMS = registerCoffeeTableItems();
     public static final java.util.Map<String, DeferredItem<BlockItem>> NIGHTSTAND_ITEMS = registerNightstandItems();
     public static final DeferredItem<BlockItem> OAK_NIGHTSTAND_ITEM = NIGHTSTAND_ITEMS.get("oak_nightstand");
     public static final DeferredItem<BlockItem> LEATHER_LOVE_SEAT_ITEM =
@@ -359,6 +360,14 @@ public class ModItems {
         java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
         DiningTableVariants.VALUES.forEach(definition -> items.put(definition.id(),
                 ITEMS.registerSimpleBlockItem(definition.id(), ModBlocks.DINING_TABLES.get(definition.id()))));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerCoffeeTableItems() {
+        java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
+        DiningTableVariants.VALUES.forEach(definition -> items.put(definition.coffeeTableId(),
+                ITEMS.registerSimpleBlockItem(definition.coffeeTableId(),
+                        ModBlocks.COFFEE_TABLES.get(definition.coffeeTableId()))));
         return java.util.Collections.unmodifiableMap(items);
     }
 
@@ -890,6 +899,7 @@ public class ModItems {
             DRESSER_ITEMS.values().forEach(event::accept);
             SIDE_TABLE_ITEMS.values().forEach(event::accept);
             DINING_TABLE_ITEMS.values().forEach(event::accept);
+            COFFEE_TABLE_ITEMS.values().forEach(event::accept);
             NIGHTSTAND_ITEMS.values().forEach(event::accept);
             event.accept(LEATHER_LOVE_SEAT_ITEM);
             event.accept(LEATHER_SOFA_ITEM);
