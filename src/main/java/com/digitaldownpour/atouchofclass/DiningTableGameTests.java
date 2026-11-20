@@ -104,6 +104,23 @@ public class DiningTableGameTests {
         helper.succeed();
     }
 
+    public static void coffeeTablesAreTenPixelsTallAndConnectWithMatchingWood(GameTestHelper helper) {
+        helper.assertTrue(ModBlocks.COFFEE_TABLES.size() == 13 && ModItems.COFFEE_TABLE_ITEMS.size() == 13, Component.literal("every wood must have a coffee table block and item"));
+        for (var definition : DiningTableVariants.VALUES) {
+            var block = ModBlocks.COFFEE_TABLES.get(definition.coffeeTableId()).get();
+            var shape = block.defaultBlockState().getShape(helper.getLevel(), BlockPos.ZERO);
+            helper.assertTrue(Math.abs(shape.max(Direction.Axis.Y) - 10 / 16.0) < 1e-6, Component.literal(definition.coffeeTableId() + " must be ten pixels tall"));
+            for (int x = 0; x < 2; x++) for (int z = 0; z < 3; z++) place(helper, x, z, block);
+            int total = 0;
+            for (int x = 0; x < 2; x++) for (int z = 0; z < 3; z++) total += legs(helper, x, z);
+            helper.assertTrue(total == 4, Component.literal(definition.coffeeTableId() + " rectangle must have four corner legs"));
+        }
+        place(helper, 0, 0, ModBlocks.OAK_COFFEE_TABLE.get());
+        place(helper, 1, 0, ModBlocks.OAK_DINING_TABLE.get());
+        helper.assertTrue(legs(helper, 0, 0) == 4, Component.literal("coffee tables must not join dining tables"));
+        helper.succeed();
+    }
+
     public static void onlyMatchingWoodPairsConnect(GameTestHelper helper) {
         for (var first : ModBlocks.DINING_TABLES.values()) for (var second : ModBlocks.DINING_TABLES.values()) {
             place(helper, 0, 0, first.get());

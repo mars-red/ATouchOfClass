@@ -74,6 +74,18 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_brown_four_post_bed.json)
 
+## acacia-coffee-table
+
+**Output:** 4 × Acacia Coffee Table (`atouchofclass:acacia_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:acacia_planks`; `W` = `minecraft:stripped_acacia_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_coffee_table.json)
+
 ## acacia-corbel
 
 **Output:** 8 × Acacia Corbel (`atouchofclass:acacia_corbel`). **Type:** `minecraft:crafting_shaped`.
@@ -603,6 +615,18 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_brown_four_post_bed.json)
 
+## bamboo-coffee-table
+
+**Output:** 4 × Bamboo Coffee Table (`atouchofclass:bamboo_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:bamboo_planks`; `W` = `minecraft:stripped_bamboo_block`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_coffee_table.json)
+
 ## bamboo-corbel
 
 **Output:** 8 × Bamboo Corbel (`atouchofclass:bamboo_corbel`). **Type:** `minecraft:crafting_shaped`.
@@ -1092,6 +1116,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:birch_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_brown_four_post_bed.json)
+
+## birch-coffee-table
+
+**Output:** 4 × Birch Coffee Table (`atouchofclass:birch_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:birch_planks`; `W` = `minecraft:stripped_birch_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_coffee_table.json)
 
 ## birch-corbel
 
@@ -1937,6 +1973,18 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_brown_four_post_bed.json)
 
+## cherry-coffee-table
+
+**Output:** 4 × Cherry Coffee Table (`atouchofclass:cherry_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:cherry_planks`; `W` = `minecraft:stripped_cherry_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_coffee_table.json)
+
 ## cherry-corbel
 
 **Output:** 8 × Cherry Corbel (`atouchofclass:cherry_corbel`). **Type:** `minecraft:crafting_shaped`.
@@ -2697,6 +2745,18 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_brown_four_post_bed.json)
 
+## crimson-coffee-table
+
+**Output:** 4 × Crimson Coffee Table (`atouchofclass:crimson_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:crimson_planks`; `W` = `minecraft:stripped_crimson_hyphae`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_coffee_table.json)
+
 ## crimson-corbel
 
 **Output:** 8 × Crimson Corbel (`atouchofclass:crimson_corbel`). **Type:** `minecraft:crafting_shaped`.
@@ -3290,6 +3350,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:dark_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_brown_four_post_bed.json)
+
+## dark-oak-coffee-table
+
+**Output:** 4 × Dark Oak Coffee Table (`atouchofclass:dark_oak_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:dark_oak_planks`; `W` = `minecraft:stripped_dark_oak_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_coffee_table.json)
 
 ## dark-oak-corbel
 
@@ -4181,6 +4253,18 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_brown_four_post_bed.json)
 
+## jungle-coffee-table
+
+**Output:** 4 × Jungle Coffee Table (`atouchofclass:jungle_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:jungle_planks`; `W` = `minecraft:stripped_jungle_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_coffee_table.json)
+
 ## jungle-corbel
 
 **Output:** 8 × Jungle Corbel (`atouchofclass:jungle_corbel`). **Type:** `minecraft:crafting_shaped`.
@@ -4920,6 +5004,18 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_brown_four_post_bed.json)
 
+## mangrove-coffee-table
+
+**Output:** 4 × Mangrove Coffee Table (`atouchofclass:mangrove_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:mangrove_planks`; `W` = `minecraft:stripped_mangrove_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_coffee_table.json)
+
 ## mangrove-corbel
 
 **Output:** 8 × Mangrove Corbel (`atouchofclass:mangrove_corbel`). **Type:** `minecraft:crafting_shaped`.
@@ -5436,6 +5532,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_brown_four_post_bed.json)
+
+## oak-coffee-table
+
+**Output:** 4 × Oak Coffee Table (`atouchofclass:oak_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:oak_planks`; `W` = `minecraft:stripped_oak_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_coffee_table.json)
 
 ## oak-corbel
 
@@ -6058,6 +6166,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:pale_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_brown_four_post_bed.json)
+
+## pale-oak-coffee-table
+
+**Output:** 4 × Pale Oak Coffee Table (`atouchofclass:pale_oak_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:pale_oak_planks`; `W` = `minecraft:stripped_pale_oak_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_coffee_table.json)
 
 ## pale-oak-corbel
 
@@ -6832,6 +6952,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:poplar_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_brown_four_post_bed.json)
+
+## poplar-coffee-table
+
+**Output:** 4 × Poplar Coffee Table (`atouchofclass:poplar_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:poplar_planks`; `W` = `minecraft:stripped_poplar_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_coffee_table.json)
 
 ## poplar-corbel
 
@@ -7745,6 +7877,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:spruce_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_brown_four_post_bed.json)
+
+## spruce-coffee-table
+
+**Output:** 4 × Spruce Coffee Table (`atouchofclass:spruce_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:spruce_planks`; `W` = `minecraft:stripped_spruce_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_coffee_table.json)
 
 ## spruce-corbel
 
@@ -8960,6 +9104,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:warped_stems`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_brown_four_post_bed.json)
+
+## warped-coffee-table
+
+**Output:** 4 × Warped Coffee Table (`atouchofclass:warped_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:warped_planks`; `W` = `minecraft:stripped_warped_hyphae`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_coffee_table.json)
 
 ## warped-corbel
 

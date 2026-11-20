@@ -26,5 +26,6 @@ public final class DiningTableVariants {
 
     public record Definition(String wood, Block sourceBlock) {
         public String id() { return wood + "_dining_table"; }
+        public String coffeeTableId() { return wood + "_coffee_table"; }
     }
 }

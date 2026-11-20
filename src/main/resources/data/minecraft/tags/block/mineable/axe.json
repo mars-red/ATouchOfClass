@@ -457,6 +457,19 @@
     "atouchofclass:pale_oak_corbel",
     "atouchofclass:poplar_corbel",
     "atouchofclass:spruce_corbel",
-    "atouchofclass:warped_corbel"
+    "atouchofclass:warped_corbel",
+    "atouchofclass:oak_coffee_table",
+    "atouchofclass:spruce_coffee_table",
+    "atouchofclass:birch_coffee_table",
+    "atouchofclass:poplar_coffee_table",
+    "atouchofclass:jungle_coffee_table",
+    "atouchofclass:acacia_coffee_table",
+    "atouchofclass:dark_oak_coffee_table",
+    "atouchofclass:mangrove_coffee_table",
+    "atouchofclass:cherry_coffee_table",
+    "atouchofclass:pale_oak_coffee_table",
+    "atouchofclass:bamboo_coffee_table",
+    "atouchofclass:crimson_coffee_table",
+    "atouchofclass:warped_coffee_table"
   ]
 }

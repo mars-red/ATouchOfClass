@@ -30,6 +30,7 @@ Copper lighting/chain families use unaffected, exposed, weathered, and oxidized 
 | Elevator call/destination control; newel post | Two blocks high |
 | Dresser | Reserve 2 × 1 × 2 block spaces |
 | Dining table | 1 × 1 × 1 per block; matching woods join along shared edges, with legs at outside and inward corners |
+| Coffee table | 1 × 1 × 10/16 per block; joins like dining tables, with matching legs and edges at the lower height |
 | Dining chair | One-block footprint; 1½-block back height; one seat facing the chair's front |
 | Refrigerator | Reserve 2 × 1 × 3 block spaces |
 | Four-post bed | Reserve 2 × 3 × 2 block spaces |

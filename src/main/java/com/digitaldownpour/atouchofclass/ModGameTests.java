@@ -84,6 +84,7 @@ public final class ModGameTests {
         FUNCTIONS.register("diningtablegametests.holehasfourinsidecornersandtransformspreservestate", () -> DiningTableGameTests::holeHasFourInsideCornersAndTransformsPreserveState);
         FUNCTIONS.register("diningtablegametests.everywoodformsfourlegrectangle", () -> DiningTableGameTests::everyWoodFormsFourLegRectangle);
         FUNCTIONS.register("diningtablegametests.onlymatchingwoodpairsconnect", () -> DiningTableGameTests::onlyMatchingWoodPairsConnect);
+        FUNCTIONS.register("diningtablegametests.coffeetablesaretenpixelstallandconnectwithmatchingwood", () -> DiningTableGameTests::coffeeTablesAreTenPixelsTallAndConnectWithMatchingWood);
         FUNCTIONS.register("diningtablegametests.differentwooddiagonaldoesnotfillinsidecorner", () -> DiningTableGameTests::differentWoodDiagonalDoesNotFillInsideCorner);
         FUNCTIONS.register("dressergametests.everyvariantusesthesharedsixrowinventory", () -> DresserGameTests::everyVariantUsesTheSharedSixRowInventory);
         FUNCTIONS.register("dressergametests.dresserbuildsandbreaksasonepersistentfourpartblock", () -> DresserGameTests::dresserBuildsAndBreaksAsOnePersistentFourPartBlock);
