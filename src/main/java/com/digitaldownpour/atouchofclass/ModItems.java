@@ -356,6 +356,15 @@ public class ModItems {
         return java.util.Collections.unmodifiableMap(items);
     }
 
+    public static final java.util.Map<String, DeferredItem<BlockItem>> FIRE_PIT_ITEMS = registerFirePitItems();
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerFirePitItems() {
+        java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
+        FirePitVariants.VALUES.forEach(definition -> items.put(definition.id(),
+                ITEMS.registerSimpleBlockItem(definition.id(), ModBlocks.FIRE_PITS.get(definition.id()))));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
     private static java.util.Map<String, DeferredItem<BlockItem>> registerDiningTableItems() {
         java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
         DiningTableVariants.VALUES.forEach(definition -> items.put(definition.id(),
@@ -900,6 +909,7 @@ public class ModItems {
             SIDE_TABLE_ITEMS.values().forEach(event::accept);
             DINING_TABLE_ITEMS.values().forEach(event::accept);
             COFFEE_TABLE_ITEMS.values().forEach(event::accept);
+            FIRE_PIT_ITEMS.values().forEach(event::accept);
             NIGHTSTAND_ITEMS.values().forEach(event::accept);
             event.accept(LEATHER_LOVE_SEAT_ITEM);
             event.accept(LEATHER_SOFA_ITEM);

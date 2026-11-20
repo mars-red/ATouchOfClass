@@ -1,5 +1,6 @@
 package com.digitaldownpour.atouchofclass;
 
+import com.digitaldownpour.atouchofclass.client.FirePitRenderer;
 import com.digitaldownpour.atouchofclass.client.MergedFixtureRenderer;
 import com.digitaldownpour.atouchofclass.client.RefrigeratorRenderer;
 import net.minecraft.client.renderer.entity.NoopRenderer;
@@ -18,6 +19,7 @@ public final class ModEntityRenderers {
         event.registerBlockEntityRenderer(ModEntities.MERGED_FIXTURE_BE.get(), context -> new MergedFixtureRenderer<>(context, false));
         event.registerBlockEntityRenderer(ModEntities.CABINET_BE.get(), context -> new MergedFixtureRenderer<>(context, true));
         event.registerBlockEntityRenderer(ModEntities.REFRIGERATOR_BE.get(), context -> new RefrigeratorRenderer());
+        event.registerBlockEntityRenderer(ModEntities.FIRE_PIT_BE.get(), context -> new FirePitRenderer<>());
         event.registerEntityRenderer(ModEntities.LOVE_SEAT_SEAT.get(), NoopRenderer::new);
     }
 }

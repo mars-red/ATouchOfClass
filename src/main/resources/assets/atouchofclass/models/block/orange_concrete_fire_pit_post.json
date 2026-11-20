@@ -1,0 +1,42 @@
+{
+  "textures": {
+    "concrete": "minecraft:block/orange_concrete",
+    "particle": "minecraft:block/orange_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        12,
+        2,
+        0
+      ],
+      "to": [
+        16,
+        10,
+        4
+      ],
+      "faces": {
+        "north": {
+          "texture": "#concrete",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "#concrete",
+          "cullface": "east"
+        },
+        "south": {
+          "texture": "#concrete"
+        },
+        "west": {
+          "texture": "#concrete"
+        },
+        "up": {
+          "texture": "#concrete"
+        },
+        "down": {
+          "texture": "#concrete"
+        }
+      }
+    }
+  ]
+}

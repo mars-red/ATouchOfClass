@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CGC",
+    " F "
+  ],
+  "key": {
+    "C": "minecraft:black_concrete",
+    "G": "minecraft:gravel",
+    "F": "minecraft:campfire"
+  },
+  "result": {
+    "count": 2,
+    "id": "atouchofclass:black_concrete_fire_pit"
+  }
+}

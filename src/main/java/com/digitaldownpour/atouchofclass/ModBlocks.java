@@ -1240,6 +1240,19 @@ public class ModBlocks {
         return java.util.Collections.unmodifiableMap(blocks);
     }
 
+    public static final java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FirePitBlock>> FIRE_PITS = registerFirePits();
+
+    private static java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FirePitBlock>> registerFirePits() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FirePitBlock>>();
+        FirePitVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
+                BLOCKS.register(definition.id(), registryName -> new com.digitaldownpour.atouchofclass.blocks.FirePitBlock(
+                        BlockBehaviour.Properties.ofFullCopy(definition.sourceBlock())
+                                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                                .noOcclusion()
+                                .lightLevel(state -> state.getValue(com.digitaldownpour.atouchofclass.blocks.FirePitBlock.LIT) ? 15 : 0)))));
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
     private static java.util.Map<String, DeferredBlock<DiningTableBlock>> registerDiningTables() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<DiningTableBlock>>();
         DiningTableVariants.VALUES.forEach(definition -> blocks.put(definition.id(),

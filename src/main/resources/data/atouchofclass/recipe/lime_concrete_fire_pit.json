@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CGC",
+    " F "
+  ],
+  "key": {
+    "C": "minecraft:lime_concrete",
+    "G": "minecraft:gravel",
+    "F": "minecraft:campfire"
+  },
+  "result": {
+    "count": 2,
+    "id": "atouchofclass:lime_concrete_fire_pit"
+  }
+}

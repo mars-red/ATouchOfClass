@@ -1,0 +1,25 @@
+{
+  "textures": {
+    "concrete": "minecraft:block/blue_concrete",
+    "particle": "minecraft:block/blue_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        2,
+        0,
+        0
+      ],
+      "to": [
+        14,
+        0,
+        2
+      ],
+      "faces": {
+        "down": {
+          "texture": "#concrete"
+        }
+      }
+    }
+  ]
+}

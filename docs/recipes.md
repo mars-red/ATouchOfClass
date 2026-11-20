@@ -1551,6 +1551,19 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_countertop.json)
 
+## black-concrete-fire-pit
+
+**Output:** 2 × Black Concrete Fire Pit (`atouchofclass:black_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:black_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_fire_pit.json)
+
 ## black-concrete-sink
 
 **Output:** 6 × Black Concrete Sink (`atouchofclass:black_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
@@ -1588,6 +1601,19 @@ SSS
 `S` = `minecraft:blue_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_countertop.json)
+
+## blue-concrete-fire-pit
+
+**Output:** 2 × Blue Concrete Fire Pit (`atouchofclass:blue_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:blue_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_fire_pit.json)
 
 ## blue-concrete-sink
 
@@ -1651,6 +1677,19 @@ SSS
 `S` = `minecraft:brown_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_countertop.json)
+
+## brown-concrete-fire-pit
+
+**Output:** 2 × Brown Concrete Fire Pit (`atouchofclass:brown_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:brown_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_fire_pit.json)
 
 ## brown-concrete-sink
 
@@ -3218,6 +3257,19 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_countertop.json)
 
+## cyan-concrete-fire-pit
+
+**Output:** 2 × Cyan Concrete Fire Pit (`atouchofclass:cyan_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:cyan_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_fire_pit.json)
+
 ## cyan-concrete-sink
 
 **Output:** 6 × Cyan Concrete Sink (`atouchofclass:cyan_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
@@ -4108,6 +4160,19 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_countertop.json)
 
+## gray-concrete-fire-pit
+
+**Output:** 2 × Gray Concrete Fire Pit (`atouchofclass:gray_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:gray_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_fire_pit.json)
+
 ## gray-concrete-sink
 
 **Output:** 6 × Gray Concrete Sink (`atouchofclass:gray_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
@@ -4145,6 +4210,19 @@ SSS
 `S` = `minecraft:green_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_countertop.json)
+
+## green-concrete-fire-pit
+
+**Output:** 2 × Green Concrete Fire Pit (`atouchofclass:green_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:green_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_fire_pit.json)
 
 ## green-concrete-sink
 
@@ -4770,6 +4848,19 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_countertop.json)
 
+## light-blue-concrete-fire-pit
+
+**Output:** 2 × Light Blue Concrete Fire Pit (`atouchofclass:light_blue_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:light_blue_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_fire_pit.json)
+
 ## light-blue-concrete-sink
 
 **Output:** 6 × Light Blue Concrete Sink (`atouchofclass:light_blue_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
@@ -4807,6 +4898,19 @@ SSS
 `S` = `minecraft:light_gray_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_countertop.json)
+
+## light-gray-concrete-fire-pit
+
+**Output:** 2 × Light Gray Concrete Fire Pit (`atouchofclass:light_gray_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:light_gray_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_fire_pit.json)
 
 ## light-gray-concrete-sink
 
@@ -4872,6 +4976,19 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_countertop.json)
 
+## lime-concrete-fire-pit
+
+**Output:** 2 × Lime Concrete Fire Pit (`atouchofclass:lime_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:lime_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_fire_pit.json)
+
 ## lime-concrete-sink
 
 **Output:** 6 × Lime Concrete Sink (`atouchofclass:lime_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
@@ -4909,6 +5026,19 @@ SSS
 `S` = `minecraft:magenta_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_countertop.json)
+
+## magenta-concrete-fire-pit
+
+**Output:** 2 × Magenta Concrete Fire Pit (`atouchofclass:magenta_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:magenta_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_fire_pit.json)
 
 ## magenta-concrete-sink
 
@@ -6008,6 +6138,19 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_countertop.json)
 
+## orange-concrete-fire-pit
+
+**Output:** 2 × Orange Concrete Fire Pit (`atouchofclass:orange_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:orange_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_fire_pit.json)
+
 ## orange-concrete-sink
 
 **Output:** 6 × Orange Concrete Sink (`atouchofclass:orange_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
@@ -6613,6 +6756,19 @@ SSS
 `S` = `minecraft:pink_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_countertop.json)
+
+## pink-concrete-fire-pit
+
+**Output:** 2 × Pink Concrete Fire Pit (`atouchofclass:pink_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:pink_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_fire_pit.json)
 
 ## pink-concrete-sink
 
@@ -7439,6 +7595,19 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_countertop.json)
 
+## purple-concrete-fire-pit
+
+**Output:** 2 × Purple Concrete Fire Pit (`atouchofclass:purple_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:purple_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_fire_pit.json)
+
 ## purple-concrete-sink
 
 **Output:** 6 × Purple Concrete Sink (`atouchofclass:purple_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
@@ -7562,6 +7731,19 @@ SSS
 `S` = `minecraft:red_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_countertop.json)
+
+## red-concrete-fire-pit
+
+**Output:** 2 × Red Concrete Fire Pit (`atouchofclass:red_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:red_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_fire_pit.json)
 
 ## red-concrete-sink
 
@@ -10048,6 +10230,19 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_countertop.json)
 
+## white-concrete-fire-pit
+
+**Output:** 2 × White Concrete Fire Pit (`atouchofclass:white_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:white_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_fire_pit.json)
+
 ## white-concrete-sink
 
 **Output:** 6 × White Concrete Sink (`atouchofclass:white_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
@@ -10151,6 +10346,19 @@ SSS
 `S` = `minecraft:yellow_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_countertop.json)
+
+## yellow-concrete-fire-pit
+
+**Output:** 2 × Yellow Concrete Fire Pit (`atouchofclass:yellow_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:yellow_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_fire_pit.json)
 
 ## yellow-concrete-sink
 
