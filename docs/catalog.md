@@ -2,11 +2,11 @@
 
 [Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)
 
-Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, coffee-table, dining-chair, Adirondack-chair, patio-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, concrete-fire-pit, concrete-wall, wood-railing, wood-trim, and copper-appliance registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
+Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, coffee-table, dining-chair, Adirondack-chair, patio-chair, bar-stool, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, concrete-fire-pit, concrete-wall, wood-railing, wood-trim, and copper-appliance registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**875 registered player-content items.**
+**891 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -126,12 +126,14 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Birch Window Box | `atouchofclass:birch_window_box` | Survival obtainable — [birch_window_box](recipes.md#birch-window-box) |
 | Birch Window Pane | `atouchofclass:birch_window_pane` | Survival obtainable — [birch_window_pane](recipes.md#birch-window-pane) |
 | Birch Four-Post Bed (Yellow) | `atouchofclass:birch_yellow_four_post_bed` | Survival obtainable — [birch_yellow_four_post_bed](recipes.md#birch-yellow-four-post-bed) |
+| Black Bar Stool | `atouchofclass:black_bar_stool` | Survival obtainable — [black_bar_stool_from_dye](recipes.md#black-bar-stool-from-dye), [black_bar_stool](recipes.md#black-bar-stool) |
 | Black Concrete Countertop | `atouchofclass:black_concrete_countertop` | Survival obtainable — [black_concrete_countertop](recipes.md#black-concrete-countertop) |
 | Black Concrete Fire Pit | `atouchofclass:black_concrete_fire_pit` | Survival obtainable — [black_concrete_fire_pit](recipes.md#black-concrete-fire-pit) |
 | Black Concrete Sink | `atouchofclass:black_concrete_sink` | Survival obtainable — [black_concrete_sink](recipes.md#black-concrete-sink) |
 | Black Concrete Wall | `atouchofclass:black_concrete_wall` | Survival obtainable — [black_concrete_wall_from_black_concrete_stonecutting](recipes.md#black-concrete-wall-from-black-concrete-stonecutting), [black_concrete_wall](recipes.md#black-concrete-wall) |
 | Black Glazed Terracotta Wall Tiles | `atouchofclass:black_glazed_terracotta_wall_tiles` | Survival obtainable — [black_glazed_terracotta_wall_tiles](recipes.md#black-glazed-terracotta-wall-tiles) |
 | Black Patio Chair | `atouchofclass:black_patio_chair` | Survival obtainable — [black_patio_chair_from_dye](recipes.md#black-patio-chair-from-dye), [black_patio_chair](recipes.md#black-patio-chair) |
+| Blue Bar Stool | `atouchofclass:blue_bar_stool` | Survival obtainable — [blue_bar_stool_from_dye](recipes.md#blue-bar-stool-from-dye), [blue_bar_stool](recipes.md#blue-bar-stool) |
 | Blue Concrete Countertop | `atouchofclass:blue_concrete_countertop` | Survival obtainable — [blue_concrete_countertop](recipes.md#blue-concrete-countertop) |
 | Blue Concrete Fire Pit | `atouchofclass:blue_concrete_fire_pit` | Survival obtainable — [blue_concrete_fire_pit](recipes.md#blue-concrete-fire-pit) |
 | Blue Concrete Sink | `atouchofclass:blue_concrete_sink` | Survival obtainable — [blue_concrete_sink](recipes.md#blue-concrete-sink) |
@@ -140,6 +142,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Blue Orchid Bunch | `atouchofclass:blue_orchid_bunch` | Survival obtainable — [blue_orchid_bunch](recipes.md#blue-orchid-bunch) |
 | Blue Patio Chair | `atouchofclass:blue_patio_chair` | Survival obtainable — [blue_patio_chair_from_dye](recipes.md#blue-patio-chair-from-dye), [blue_patio_chair](recipes.md#blue-patio-chair) |
 | Brick Window Ledge | `atouchofclass:brick_window_ledge` | Survival obtainable — [brick_window_ledge](recipes.md#brick-window-ledge) |
+| Brown Bar Stool | `atouchofclass:brown_bar_stool` | Survival obtainable — [brown_bar_stool_from_dye](recipes.md#brown-bar-stool-from-dye), [brown_bar_stool](recipes.md#brown-bar-stool) |
 | Brown Concrete Countertop | `atouchofclass:brown_concrete_countertop` | Survival obtainable — [brown_concrete_countertop](recipes.md#brown-concrete-countertop) |
 | Brown Concrete Fire Pit | `atouchofclass:brown_concrete_fire_pit` | Survival obtainable — [brown_concrete_fire_pit](recipes.md#brown-concrete-fire-pit) |
 | Brown Concrete Sink | `atouchofclass:brown_concrete_sink` | Survival obtainable — [brown_concrete_sink](recipes.md#brown-concrete-sink) |
@@ -260,6 +263,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Crown Moulding | `atouchofclass:crown_moulding` | Survival obtainable — [crown_moulding](recipes.md#crown-moulding) |
 | Cut Copper Countertop | `atouchofclass:cut_copper_countertop` | Survival obtainable — [cut_copper_countertop](recipes.md#cut-copper-countertop) |
 | Cut Copper Sink | `atouchofclass:cut_copper_sink` | Survival obtainable — [cut_copper_sink](recipes.md#cut-copper-sink) |
+| Cyan Bar Stool | `atouchofclass:cyan_bar_stool` | Survival obtainable — [cyan_bar_stool_from_dye](recipes.md#cyan-bar-stool-from-dye), [cyan_bar_stool](recipes.md#cyan-bar-stool) |
 | Cyan Concrete Countertop | `atouchofclass:cyan_concrete_countertop` | Survival obtainable — [cyan_concrete_countertop](recipes.md#cyan-concrete-countertop) |
 | Cyan Concrete Fire Pit | `atouchofclass:cyan_concrete_fire_pit` | Survival obtainable — [cyan_concrete_fire_pit](recipes.md#cyan-concrete-fire-pit) |
 | Cyan Concrete Sink | `atouchofclass:cyan_concrete_sink` | Survival obtainable — [cyan_concrete_sink](recipes.md#cyan-concrete-sink) |
@@ -344,12 +348,14 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Granite Countertop | `atouchofclass:granite_countertop` | Survival obtainable — [granite_countertop](recipes.md#granite-countertop) |
 | Granite Paver | `atouchofclass:granite_paver` | Survival obtainable — [granite_paver_from_granite_stonecutting](recipes.md#granite-paver-from-granite-stonecutting), [granite_paver](recipes.md#granite-paver) |
 | Granite Sink | `atouchofclass:granite_sink` | Survival obtainable — [granite_sink](recipes.md#granite-sink) |
+| Gray Bar Stool | `atouchofclass:gray_bar_stool` | Survival obtainable — [gray_bar_stool_from_dye](recipes.md#gray-bar-stool-from-dye), [gray_bar_stool](recipes.md#gray-bar-stool) |
 | Gray Concrete Countertop | `atouchofclass:gray_concrete_countertop` | Survival obtainable — [gray_concrete_countertop](recipes.md#gray-concrete-countertop) |
 | Gray Concrete Fire Pit | `atouchofclass:gray_concrete_fire_pit` | Survival obtainable — [gray_concrete_fire_pit](recipes.md#gray-concrete-fire-pit) |
 | Gray Concrete Sink | `atouchofclass:gray_concrete_sink` | Survival obtainable — [gray_concrete_sink](recipes.md#gray-concrete-sink) |
 | Gray Concrete Wall | `atouchofclass:gray_concrete_wall` | Survival obtainable — [gray_concrete_wall_from_gray_concrete_stonecutting](recipes.md#gray-concrete-wall-from-gray-concrete-stonecutting), [gray_concrete_wall](recipes.md#gray-concrete-wall) |
 | Gray Glazed Terracotta Wall Tiles | `atouchofclass:gray_glazed_terracotta_wall_tiles` | Survival obtainable — [gray_glazed_terracotta_wall_tiles](recipes.md#gray-glazed-terracotta-wall-tiles) |
 | Gray Patio Chair | `atouchofclass:gray_patio_chair` | Survival obtainable — [gray_patio_chair_from_dye](recipes.md#gray-patio-chair-from-dye), [gray_patio_chair](recipes.md#gray-patio-chair) |
+| Green Bar Stool | `atouchofclass:green_bar_stool` | Survival obtainable — [green_bar_stool_from_dye](recipes.md#green-bar-stool-from-dye), [green_bar_stool](recipes.md#green-bar-stool) |
 | Green Concrete Countertop | `atouchofclass:green_concrete_countertop` | Survival obtainable — [green_concrete_countertop](recipes.md#green-concrete-countertop) |
 | Green Concrete Fire Pit | `atouchofclass:green_concrete_fire_pit` | Survival obtainable — [green_concrete_fire_pit](recipes.md#green-concrete-fire-pit) |
 | Green Concrete Sink | `atouchofclass:green_concrete_sink` | Survival obtainable — [green_concrete_sink](recipes.md#green-concrete-sink) |
@@ -400,12 +406,14 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Leather Chair | `atouchofclass:leather_chair` | Survival obtainable — [leather_chair](recipes.md#leather-chair) |
 | Leather Love Seat | `atouchofclass:leather_love_seat` | Survival obtainable — [leather_love_seat](recipes.md#leather-love-seat) |
 | Leather Sofa | `atouchofclass:leather_sofa` | Survival obtainable — [leather_sofa](recipes.md#leather-sofa) |
+| Light Blue Bar Stool | `atouchofclass:light_blue_bar_stool` | Survival obtainable — [light_blue_bar_stool_from_dye](recipes.md#light-blue-bar-stool-from-dye), [light_blue_bar_stool](recipes.md#light-blue-bar-stool) |
 | Light Blue Concrete Countertop | `atouchofclass:light_blue_concrete_countertop` | Survival obtainable — [light_blue_concrete_countertop](recipes.md#light-blue-concrete-countertop) |
 | Light Blue Concrete Fire Pit | `atouchofclass:light_blue_concrete_fire_pit` | Survival obtainable — [light_blue_concrete_fire_pit](recipes.md#light-blue-concrete-fire-pit) |
 | Light Blue Concrete Sink | `atouchofclass:light_blue_concrete_sink` | Survival obtainable — [light_blue_concrete_sink](recipes.md#light-blue-concrete-sink) |
 | Light Blue Concrete Wall | `atouchofclass:light_blue_concrete_wall` | Survival obtainable — [light_blue_concrete_wall_from_light_blue_concrete_stonecutting](recipes.md#light-blue-concrete-wall-from-light-blue-concrete-stonecutting), [light_blue_concrete_wall](recipes.md#light-blue-concrete-wall) |
 | Light Blue Glazed Terracotta Wall Tiles | `atouchofclass:light_blue_glazed_terracotta_wall_tiles` | Survival obtainable — [light_blue_glazed_terracotta_wall_tiles](recipes.md#light-blue-glazed-terracotta-wall-tiles) |
 | Light Blue Patio Chair | `atouchofclass:light_blue_patio_chair` | Survival obtainable — [light_blue_patio_chair_from_dye](recipes.md#light-blue-patio-chair-from-dye), [light_blue_patio_chair](recipes.md#light-blue-patio-chair) |
+| Light Gray Bar Stool | `atouchofclass:light_gray_bar_stool` | Survival obtainable — [light_gray_bar_stool_from_dye](recipes.md#light-gray-bar-stool-from-dye), [light_gray_bar_stool](recipes.md#light-gray-bar-stool) |
 | Light Gray Concrete Countertop | `atouchofclass:light_gray_concrete_countertop` | Survival obtainable — [light_gray_concrete_countertop](recipes.md#light-gray-concrete-countertop) |
 | Light Gray Concrete Fire Pit | `atouchofclass:light_gray_concrete_fire_pit` | Survival obtainable — [light_gray_concrete_fire_pit](recipes.md#light-gray-concrete-fire-pit) |
 | Light Gray Concrete Sink | `atouchofclass:light_gray_concrete_sink` | Survival obtainable — [light_gray_concrete_sink](recipes.md#light-gray-concrete-sink) |
@@ -414,12 +422,14 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Light Gray Patio Chair | `atouchofclass:light_gray_patio_chair` | Survival obtainable — [light_gray_patio_chair_from_dye](recipes.md#light-gray-patio-chair-from-dye), [light_gray_patio_chair](recipes.md#light-gray-patio-chair) |
 | Lilac Bunch | `atouchofclass:lilac_bunch` | Survival obtainable — [lilac_bunch](recipes.md#lilac-bunch) |
 | Lily Of The Valley Bunch | `atouchofclass:lily_of_the_valley_bunch` | Survival obtainable — [lily_of_the_valley_bunch](recipes.md#lily-of-the-valley-bunch) |
+| Lime Bar Stool | `atouchofclass:lime_bar_stool` | Survival obtainable — [lime_bar_stool_from_dye](recipes.md#lime-bar-stool-from-dye), [lime_bar_stool](recipes.md#lime-bar-stool) |
 | Lime Concrete Countertop | `atouchofclass:lime_concrete_countertop` | Survival obtainable — [lime_concrete_countertop](recipes.md#lime-concrete-countertop) |
 | Lime Concrete Fire Pit | `atouchofclass:lime_concrete_fire_pit` | Survival obtainable — [lime_concrete_fire_pit](recipes.md#lime-concrete-fire-pit) |
 | Lime Concrete Sink | `atouchofclass:lime_concrete_sink` | Survival obtainable — [lime_concrete_sink](recipes.md#lime-concrete-sink) |
 | Lime Concrete Wall | `atouchofclass:lime_concrete_wall` | Survival obtainable — [lime_concrete_wall_from_lime_concrete_stonecutting](recipes.md#lime-concrete-wall-from-lime-concrete-stonecutting), [lime_concrete_wall](recipes.md#lime-concrete-wall) |
 | Lime Glazed Terracotta Wall Tiles | `atouchofclass:lime_glazed_terracotta_wall_tiles` | Survival obtainable — [lime_glazed_terracotta_wall_tiles](recipes.md#lime-glazed-terracotta-wall-tiles) |
 | Lime Patio Chair | `atouchofclass:lime_patio_chair` | Survival obtainable — [lime_patio_chair_from_dye](recipes.md#lime-patio-chair-from-dye), [lime_patio_chair](recipes.md#lime-patio-chair) |
+| Magenta Bar Stool | `atouchofclass:magenta_bar_stool` | Survival obtainable — [magenta_bar_stool_from_dye](recipes.md#magenta-bar-stool-from-dye), [magenta_bar_stool](recipes.md#magenta-bar-stool) |
 | Magenta Concrete Countertop | `atouchofclass:magenta_concrete_countertop` | Survival obtainable — [magenta_concrete_countertop](recipes.md#magenta-concrete-countertop) |
 | Magenta Concrete Fire Pit | `atouchofclass:magenta_concrete_fire_pit` | Survival obtainable — [magenta_concrete_fire_pit](recipes.md#magenta-concrete-fire-pit) |
 | Magenta Concrete Sink | `atouchofclass:magenta_concrete_sink` | Survival obtainable — [magenta_concrete_sink](recipes.md#magenta-concrete-sink) |
@@ -506,6 +516,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Octagonal Inset Tile | `atouchofclass:octagonal_inset_tile` | Survival obtainable — [octagonal_inset_tile](recipes.md#octagonal-inset-tile) |
 | Ogee Lattice Wallpaper | `atouchofclass:ogee_lattice_wallpaper` | Survival obtainable — [ogee_lattice_wallpaper](recipes.md#ogee-lattice-wallpaper) |
 | Open Eyeblossom Bunch | `atouchofclass:open_eyeblossom_bunch` | Survival obtainable — [open_eyeblossom_bunch](recipes.md#open-eyeblossom-bunch) |
+| Orange Bar Stool | `atouchofclass:orange_bar_stool` | Survival obtainable — [orange_bar_stool_from_dye](recipes.md#orange-bar-stool-from-dye), [orange_bar_stool](recipes.md#orange-bar-stool) |
 | Orange Concrete Countertop | `atouchofclass:orange_concrete_countertop` | Survival obtainable — [orange_concrete_countertop](recipes.md#orange-concrete-countertop) |
 | Orange Concrete Fire Pit | `atouchofclass:orange_concrete_fire_pit` | Survival obtainable — [orange_concrete_fire_pit](recipes.md#orange-concrete-fire-pit) |
 | Orange Concrete Sink | `atouchofclass:orange_concrete_sink` | Survival obtainable — [orange_concrete_sink](recipes.md#orange-concrete-sink) |
@@ -567,6 +578,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Pale Oak Window Pane | `atouchofclass:pale_oak_window_pane` | Survival obtainable — [pale_oak_window_pane](recipes.md#pale-oak-window-pane) |
 | Pale Oak Four-Post Bed (Yellow) | `atouchofclass:pale_oak_yellow_four_post_bed` | Survival obtainable — [pale_oak_yellow_four_post_bed](recipes.md#pale-oak-yellow-four-post-bed) |
 | Peony Bunch | `atouchofclass:peony_bunch` | Survival obtainable — [peony_bunch](recipes.md#peony-bunch) |
+| Pink Bar Stool | `atouchofclass:pink_bar_stool` | Survival obtainable — [pink_bar_stool_from_dye](recipes.md#pink-bar-stool-from-dye), [pink_bar_stool](recipes.md#pink-bar-stool) |
 | Pink Concrete Countertop | `atouchofclass:pink_concrete_countertop` | Survival obtainable — [pink_concrete_countertop](recipes.md#pink-concrete-countertop) |
 | Pink Concrete Fire Pit | `atouchofclass:pink_concrete_fire_pit` | Survival obtainable — [pink_concrete_fire_pit](recipes.md#pink-concrete-fire-pit) |
 | Pink Concrete Sink | `atouchofclass:pink_concrete_sink` | Survival obtainable — [pink_concrete_sink](recipes.md#pink-concrete-sink) |
@@ -633,6 +645,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Prismarine Brick Countertop | `atouchofclass:prismarine_brick_countertop` | Survival obtainable — [prismarine_brick_countertop](recipes.md#prismarine-brick-countertop) |
 | Prismarine Brick Sink | `atouchofclass:prismarine_brick_sink` | Survival obtainable — [prismarine_brick_sink](recipes.md#prismarine-brick-sink) |
 | Prismarine Fish Scale Wall Tiles | `atouchofclass:prismarine_fish_scale_wall_tiles` | Survival obtainable — [prismarine_fish_scale_wall_tiles](recipes.md#prismarine-fish-scale-wall-tiles) |
+| Purple Bar Stool | `atouchofclass:purple_bar_stool` | Survival obtainable — [purple_bar_stool_from_dye](recipes.md#purple-bar-stool-from-dye), [purple_bar_stool](recipes.md#purple-bar-stool) |
 | Purple Concrete Countertop | `atouchofclass:purple_concrete_countertop` | Survival obtainable — [purple_concrete_countertop](recipes.md#purple-concrete-countertop) |
 | Purple Concrete Fire Pit | `atouchofclass:purple_concrete_fire_pit` | Survival obtainable — [purple_concrete_fire_pit](recipes.md#purple-concrete-fire-pit) |
 | Purple Concrete Sink | `atouchofclass:purple_concrete_sink` | Survival obtainable — [purple_concrete_sink](recipes.md#purple-concrete-sink) |
@@ -645,6 +658,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Quartz Sink | `atouchofclass:quartz_sink` | Survival obtainable — [quartz_sink](recipes.md#quartz-sink) |
 | Quicklime Powder | `atouchofclass:quicklime_powder` | Survival obtainable — [quicklime_powder](recipes.md#quicklime-powder) |
 | Rain Shower Head | `atouchofclass:rain_shower_head` | Survival obtainable — [rain_shower_head](recipes.md#rain-shower-head) |
+| Red Bar Stool | `atouchofclass:red_bar_stool` | Survival obtainable — [red_bar_stool_from_dye](recipes.md#red-bar-stool-from-dye), [red_bar_stool](recipes.md#red-bar-stool) |
 | Red Brick Siding | `atouchofclass:red_brick` | Survival obtainable — [red_brick](recipes.md#red-brick) |
 | Red Concrete Countertop | `atouchofclass:red_concrete_countertop` | Survival obtainable — [red_concrete_countertop](recipes.md#red-concrete-countertop) |
 | Red Concrete Fire Pit | `atouchofclass:red_concrete_fire_pit` | Survival obtainable — [red_concrete_fire_pit](recipes.md#red-concrete-fire-pit) |
@@ -868,6 +882,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Weathered Copper Wall Sconce | `atouchofclass:weathered_copper_wall_sconce` | Survival obtainable — oxidation of `atouchofclass:exposed_copper_wall_sconce` |
 | Weathered Cut Copper Countertop | `atouchofclass:weathered_cut_copper_countertop` | Survival obtainable — [weathered_cut_copper_countertop](recipes.md#weathered-cut-copper-countertop) |
 | Weathered Cut Copper Sink | `atouchofclass:weathered_cut_copper_sink` | Survival obtainable — [weathered_cut_copper_sink](recipes.md#weathered-cut-copper-sink) |
+| White Bar Stool | `atouchofclass:white_bar_stool` | Survival obtainable — [white_bar_stool](recipes.md#white-bar-stool) |
 | White Concrete Countertop | `atouchofclass:white_concrete_countertop` | Survival obtainable — [white_concrete_countertop](recipes.md#white-concrete-countertop) |
 | White Concrete Fire Pit | `atouchofclass:white_concrete_fire_pit` | Survival obtainable — [white_concrete_fire_pit](recipes.md#white-concrete-fire-pit) |
 | White Concrete Sink | `atouchofclass:white_concrete_sink` | Survival obtainable — [white_concrete_sink](recipes.md#white-concrete-sink) |
@@ -879,6 +894,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Wildflowers Bunch | `atouchofclass:wildflowers_bunch` | Survival obtainable — [wildflowers_bunch](recipes.md#wildflowers-bunch) |
 | Window Apron | `atouchofclass:window_apron` | Survival obtainable — [window_apron](recipes.md#window-apron) |
 | Wither Rose Bunch | `atouchofclass:wither_rose_bunch` | Survival obtainable — [wither_rose_bunch](recipes.md#wither-rose-bunch) |
+| Yellow Bar Stool | `atouchofclass:yellow_bar_stool` | Survival obtainable — [yellow_bar_stool_from_dye](recipes.md#yellow-bar-stool-from-dye), [yellow_bar_stool](recipes.md#yellow-bar-stool) |
 | Yellow Concrete Countertop | `atouchofclass:yellow_concrete_countertop` | Survival obtainable — [yellow_concrete_countertop](recipes.md#yellow-concrete-countertop) |
 | Yellow Concrete Fire Pit | `atouchofclass:yellow_concrete_fire_pit` | Survival obtainable — [yellow_concrete_fire_pit](recipes.md#yellow-concrete-fire-pit) |
 | Yellow Concrete Sink | `atouchofclass:yellow_concrete_sink` | Survival obtainable — [yellow_concrete_sink](recipes.md#yellow-concrete-sink) |

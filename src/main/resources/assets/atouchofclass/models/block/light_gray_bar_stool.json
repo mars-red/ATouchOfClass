@@ -1,0 +1,6 @@
+{
+  "parent": "atouchofclass:block/template_bar_stool",
+  "textures": {
+    "fabric": "minecraft:block/light_gray_wool"
+  }
+}

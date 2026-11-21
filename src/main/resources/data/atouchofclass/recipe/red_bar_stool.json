@@ -1,0 +1,18 @@
+{
+  "category": "building",
+  "type": "minecraft:crafting_shaped",
+  "group": "atouchofclass:bar_stool",
+  "pattern": [
+    "IWI",
+    "I I",
+    "I I"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "W": "minecraft:red_wool"
+  },
+  "result": {
+    "id": "atouchofclass:red_bar_stool",
+    "count": 1
+  }
+}

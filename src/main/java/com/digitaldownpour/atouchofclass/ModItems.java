@@ -345,7 +345,10 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("leather_sofa", ModBlocks.LEATHER_SOFA);
     public static final DeferredItem<BlockItem> LEATHER_CHAIR_ITEM =
             ITEMS.registerSimpleBlockItem("leather_chair", ModBlocks.LEATHER_CHAIR);
-    public static final java.util.Map<DyeColor, DeferredItem<BlockItem>> PATIO_CHAIR_ITEMS = registerPatioChairItems();
+    public static final java.util.Map<DyeColor, DeferredItem<BlockItem>> PATIO_CHAIR_ITEMS =
+            registerDyeableChairItems(ModBlocks.PATIO_CHAIRS);
+    public static final java.util.Map<DyeColor, DeferredItem<BlockItem>> BAR_STOOL_ITEMS =
+            registerDyeableChairItems(ModBlocks.BAR_STOOLS);
 
     public static final java.util.Map<String, DeferredItem<BlockItem>> ADIRONDACK_CHAIR_ITEMS =
             registerAdirondackChairItems();
@@ -359,9 +362,10 @@ public class ModItems {
         return java.util.Collections.unmodifiableMap(items);
     }
 
-    private static java.util.Map<DyeColor, DeferredItem<BlockItem>> registerPatioChairItems() {
+    private static java.util.Map<DyeColor, DeferredItem<BlockItem>> registerDyeableChairItems(
+            java.util.Map<DyeColor, ? extends net.neoforged.neoforge.registries.DeferredBlock<?>> blocks) {
         var items = new java.util.EnumMap<DyeColor, DeferredItem<BlockItem>>(DyeColor.class);
-        ModBlocks.PATIO_CHAIRS.forEach((color, block) -> items.put(color, ITEMS.registerSimpleBlockItem(block)));
+        blocks.forEach((color, block) -> items.put(color, ITEMS.registerSimpleBlockItem(block)));
         return java.util.Collections.unmodifiableMap(items);
     }
 
@@ -943,6 +947,7 @@ public class ModItems {
             event.accept(LEATHER_CHAIR_ITEM);
             DINING_CHAIR_ITEMS.values().forEach(event::accept);
             PATIO_CHAIR_ITEMS.values().forEach(event::accept);
+            BAR_STOOL_ITEMS.values().forEach(event::accept);
             ADIRONDACK_CHAIR_ITEMS.values().forEach(event::accept);
             event.accept(REFRIGERATOR_ITEM);
             COPPER_REFRIGERATOR_ITEMS.forEach(event::accept);
