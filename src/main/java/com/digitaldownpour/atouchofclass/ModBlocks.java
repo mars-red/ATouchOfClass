@@ -152,6 +152,19 @@ public class ModBlocks {
                     BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_WALL)
                             .setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
+    public static final java.util.Map<DyeColor, DeferredBlock<WallBlock>> CONCRETE_WALLS = registerConcreteWalls();
+
+    private static java.util.Map<DyeColor, DeferredBlock<WallBlock>> registerConcreteWalls() {
+        var walls = new java.util.EnumMap<DyeColor, DeferredBlock<WallBlock>>(DyeColor.class);
+        for (DyeColor color : DyeColor.values()) {
+            walls.put(color, BLOCKS.register(color.getName() + "_concrete_wall", registryName -> new WallBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_WALL)
+                            .mapColor(color)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName)))));
+        }
+        return java.util.Collections.unmodifiableMap(walls);
+    }
+
     public static final DeferredBlock<CountertopBlock> CALCITE_COUNTERTOP =
             BLOCKS.register("calcite_countertop", registryName -> new CountertopBlock(
                     BlockBehaviour.Properties.of()

@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:light_blue_concrete",
+  "result": { "count": 1, "id": "atouchofclass:light_blue_concrete_wall" }
+}

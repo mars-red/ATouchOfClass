@@ -20,6 +20,12 @@ Tiles already placed before this feature was added retain the original texture w
 
 *Marble tiles mix texture variants and rotations automatically as you place them.*
 
+## Concrete walls
+
+Concrete walls come in all 16 vanilla concrete colors and use the matching concrete textures. They share the shape and collision of vanilla walls, connect to adjacent walls, and can be waterlogged. Find them in the Building Blocks creative tab or browse the [content catalog](catalog.md).
+
+Arrange six concrete blocks of the same color in two rows of three to craft **six matching walls**. A stonecutter converts one concrete block into **one matching wall**. Obtaining concrete unlocks both recipes for that color. See the [white concrete wall recipe](recipes.md#white-concrete-wall) for the crafting pattern and the [stonecutting recipe](recipes.md#white-concrete-wall-from-white-concrete-stonecutting) for the single-block option.
+
 ## Wood-framed window panes
 
 Window panes come in all 13 woods listed in the [reference](reference.md). They use the same clear glass and thin wooden border as [transoms](doors-and-access.md#add-transoms-above-an-entrance), but are only **1 unit deep** and sit at the **center of the block**. Each panel fills one block in width and height. Place matching panes beside and above one another in a window opening: their retained borders give the appearance of wooden muntins between the glass panels. Keep the panes facing along the same axis to form a flat window.
