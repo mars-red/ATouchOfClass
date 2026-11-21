@@ -151,3 +151,12 @@ The opt-in client regression check compares attached and normally placed vertex 
 ## Dado rail manual refresh — November 1, 2026
 
 Added dado rail placement, height, inside/outside corners, and casing connections to the building chapter. Covered straight gap stubs, perpendicular inside returns, and angled sections when casing occupies the corner, for both top and bottom placement. Source references: `DadoRailBlock`, `CasingBlock`, casing/dado blockstates and models, and `recipe/dado_rail.json`. Documented the mirrored `PSS`/`SSP` conflict with baseboard rather than claiming an unambiguous crafting result. Regenerated catalog and recipe reference. Geometry and diff checks were performed during implementation; the latest connections still require in-game verification, and no new screenshot approval or successful client test is claimed.
+
+## Coffee tables - November 20, 2026
+
+Added coffee tables (13 woods, 10 pixels tall, joining like dining tables, `PWP` recipe yielding four) to the furniture chapter and reference. The update helper now counts coffee tables via the dining-table variant list. Regenerated the catalog and recipe reference: 812 player-content items, 779 recipes, and no unresolved acquisition routes. The game-test server passed (132 tests) with a coffee-table height/leg/join check; no in-game visual review was done.
+
+
+## Fire pits - November 21, 2026
+
+Added the Decks and patios chapter documenting the concrete fire pit (16 colors, CGC/ F  recipe yielding two, same-color joining, flint-and-steel/fire-charge ignition, shovel dousing, light 15). Source references: `FirePitBlock`, `FirePitRenderer`, `FirePitVariants`. The update helper now counts fire pits via the bed color list. Regenerated catalog and recipe reference: 828 player-content items, 795 recipes, no unresolved acquisition routes. The game-test server passed (137 tests); no in-game visual review or Sodium/Iris check was done.

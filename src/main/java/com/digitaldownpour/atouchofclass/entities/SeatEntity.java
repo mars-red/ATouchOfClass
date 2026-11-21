@@ -2,6 +2,8 @@ package com.digitaldownpour.atouchofclass.entities;
 
 import com.digitaldownpour.atouchofclass.ModBlocks;
 import com.digitaldownpour.atouchofclass.blocks.DiningChairBlock;
+import com.digitaldownpour.atouchofclass.blocks.OutdoorChairBlock;
+import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -44,7 +46,16 @@ public class SeatEntity extends Entity {
                 || state.is(ModBlocks.LEATHER_SOFA.get())
                 || state.is(ModBlocks.LEATHER_CHAIR.get())
                 || state.getBlock() instanceof DiningChairBlock
+                || state.getBlock() instanceof OutdoorChairBlock
                 || state.is(ModBlocks.TOILET.get());
+    }
+
+    @Override
+    protected Vec3 getPassengerAttachmentPoint(Entity passenger, EntityDimensions dimensions, float scale) {
+        if (level().getBlockState(blockPosition()).getBlock() instanceof OutdoorChairBlock chair) {
+            return new Vec3(0, blockPosition().getY() + chair.seatHeight() - getY(), 0);
+        }
+        return super.getPassengerAttachmentPoint(passenger, dimensions, scale);
     }
 
     /** Mount first, then turn the rider's body, head, and client camera together. */
@@ -70,10 +81,11 @@ public class SeatEntity extends Entity {
     public Vec3 getDismountLocationForPassenger(LivingEntity passenger) {
         BlockPos pos = blockPosition();
         var state = level().getBlockState(pos);
-        boolean diningChair = state.getBlock() instanceof DiningChairBlock;
+        boolean tallBackChair = state.getBlock() instanceof DiningChairBlock
+                || state.getBlock() instanceof OutdoorChairBlock;
         boolean leatherSeating = state.is(ModBlocks.LEATHER_CHAIR.get())
                 || state.is(ModBlocks.LEATHER_LOVE_SEAT.get()) || state.is(ModBlocks.LEATHER_SOFA.get());
-        if (!diningChair && !leatherSeating) {
+        if (!tallBackChair && !leatherSeating) {
             return super.getDismountLocationForPassenger(passenger);
         }
 
@@ -103,13 +115,15 @@ public class SeatEntity extends Entity {
 
         // With all exits blocked, stand just above the seat. A small forward
         // offset keeps a standing player's body clear of the tall back posts.
+        double seatHeight = state.getBlock() instanceof OutdoorChairBlock chair ? chair.seatHeight() : 10.0 / 16;
         Vec3 aboveSeat = new Vec3(pos.getX() + 0.5 + front.getStepX() * 0.125,
-                pos.getY() + 10.0 / 16 + 0.01,
+                pos.getY() + seatHeight + 0.01,
                 pos.getZ() + 0.5 + front.getStepZ() * 0.125);
         if (DismountHelper.canDismountTo(level(), aboveSeat, passenger, passenger.getPose())) return aboveSeat;
 
         // If headroom above the seat is also obstructed, try above the backrest.
-        return new Vec3(pos.getX() + 0.5, pos.getY() + 1.5 + 0.01, pos.getZ() + 0.5);
+        double top = state.getCollisionShape(level(), pos).max(Direction.Axis.Y);
+        return new Vec3(pos.getX() + 0.5, pos.getY() + top + 0.01, pos.getZ() + 0.5);
     }
 
     @Override

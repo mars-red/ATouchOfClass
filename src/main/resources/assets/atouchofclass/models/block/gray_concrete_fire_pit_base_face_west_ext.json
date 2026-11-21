@@ -1,0 +1,25 @@
+{
+  "textures": {
+    "concrete": "minecraft:block/gray_concrete",
+    "particle": "minecraft:block/gray_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        2
+      ],
+      "to": [
+        2,
+        2,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#concrete"
+        }
+      }
+    }
+  ]
+}

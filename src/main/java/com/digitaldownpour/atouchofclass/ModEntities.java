@@ -75,6 +75,12 @@ public class ModEntities {
                     ModBlocks.nightstandBlocks().stream().map(DeferredHolder::get).toArray(Block[]::new)
             ));
 
+    public static final Supplier<BlockEntityType<com.digitaldownpour.atouchofclass.entities.FirePitBlockEntity>> FIRE_PIT_BE =
+            BLOCK_ENTITY_TYPES.register("fire_pit_be", () -> new BlockEntityType<>(
+                    com.digitaldownpour.atouchofclass.entities.FirePitBlockEntity::new,
+                    ModBlocks.FIRE_PITS.values().stream().map(DeferredHolder::get).toArray(Block[]::new)
+            ));
+
     public static final Supplier<BlockEntityType<RefrigeratorBlockEntity>> REFRIGERATOR_BE =
             BLOCK_ENTITY_TYPES.register("refrigerator_be", () -> new BlockEntityType<>(
                     RefrigeratorBlockEntity::new,

@@ -1,0 +1,13 @@
+{
+  "category": "building",
+  "type": "minecraft:crafting_shapeless",
+  "group": "atouchofclass:patio_chair_dyeing",
+  "ingredients": [
+    "atouchofclass:white_patio_chair",
+    "minecraft:purple_dye"
+  ],
+  "result": {
+    "id": "atouchofclass:purple_patio_chair",
+    "count": 1
+  }
+}

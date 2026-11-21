@@ -6,6 +6,20 @@ Generated from every recipe under the mod namespace. Names below are recipe IDs 
 
 Use the catalog links or search this page for the item ID. Recipes listed here are the bundled defaults; data packs can override them.
 
+## acacia-adirondack-chair
+
+**Output:** 2 × Acacia Adirondack Chair (`atouchofclass:acacia_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:acacia_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_adirondack_chair.json)
+
 ## acacia-baluster
 
 **Output:** 32 × Acacia Baluster (`atouchofclass:acacia_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -73,6 +87,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:acacia_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_brown_four_post_bed.json)
+
+## acacia-coffee-table
+
+**Output:** 4 × Acacia Coffee Table (`atouchofclass:acacia_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:acacia_planks`; `W` = `minecraft:stripped_acacia_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_coffee_table.json)
 
 ## acacia-corbel
 
@@ -535,6 +561,20 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/azure_bluet_bunch.json)
 
+## bamboo-adirondack-chair
+
+**Output:** 2 × Bamboo Adirondack Chair (`atouchofclass:bamboo_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:bamboo_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_adirondack_chair.json)
+
 ## bamboo-baluster
 
 **Output:** 32 × Bamboo Baluster (`atouchofclass:bamboo_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -602,6 +642,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:bamboo_blocks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_brown_four_post_bed.json)
+
+## bamboo-coffee-table
+
+**Output:** 4 × Bamboo Coffee Table (`atouchofclass:bamboo_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:bamboo_planks`; `W` = `minecraft:stripped_bamboo_block`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_coffee_table.json)
 
 ## bamboo-corbel
 
@@ -1025,6 +1077,20 @@ SSP
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/baseboard.json)
 
+## birch-adirondack-chair
+
+**Output:** 2 × Birch Adirondack Chair (`atouchofclass:birch_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:birch_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_adirondack_chair.json)
+
 ## birch-baluster
 
 **Output:** 32 × Birch Baluster (`atouchofclass:birch_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -1092,6 +1158,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:birch_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_brown_four_post_bed.json)
+
+## birch-coffee-table
+
+**Output:** 4 × Birch Coffee Table (`atouchofclass:birch_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:birch_planks`; `W` = `minecraft:stripped_birch_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_coffee_table.json)
 
 ## birch-corbel
 
@@ -1503,6 +1581,28 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_yellow_four_post_bed.json)
 
+## black-bar-stool-from-dye
+
+**Output:** 1 × Black Bar Stool (`atouchofclass:black_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:black_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_bar_stool_from_dye.json)
+
+## black-bar-stool
+
+**Output:** 1 × Black Bar Stool (`atouchofclass:black_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:black_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_bar_stool.json)
+
 ## black-concrete-countertop
 
 **Output:** 6 × Black Concrete Countertop (`atouchofclass:black_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -1514,6 +1614,19 @@ SSS
 `S` = `minecraft:black_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_countertop.json)
+
+## black-concrete-fire-pit
+
+**Output:** 2 × Black Concrete Fire Pit (`atouchofclass:black_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:black_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_fire_pit.json)
 
 ## black-concrete-sink
 
@@ -1528,6 +1641,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_sink.json)
 
+## black-concrete-wall-from-black-concrete-stonecutting
+
+**Output:** 1 × Black Concrete Wall (`atouchofclass:black_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:black_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_wall_from_black_concrete_stonecutting.json)
+
+## black-concrete-wall
+
+**Output:** 6 × Black Concrete Wall (`atouchofclass:black_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:black_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_wall.json)
+
 ## black-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Black Glazed Terracotta Wall Tiles (`atouchofclass:black_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -1541,6 +1675,49 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_glazed_terracotta_wall_tiles.json)
 
+## black-patio-chair-from-dye
+
+**Output:** 1 × Black Patio Chair (`atouchofclass:black_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:black_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_patio_chair_from_dye.json)
+
+## black-patio-chair
+
+**Output:** 1 × Black Patio Chair (`atouchofclass:black_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:black_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_patio_chair.json)
+
+## blue-bar-stool-from-dye
+
+**Output:** 1 × Blue Bar Stool (`atouchofclass:blue_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:blue_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_bar_stool_from_dye.json)
+
+## blue-bar-stool
+
+**Output:** 1 × Blue Bar Stool (`atouchofclass:blue_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:blue_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_bar_stool.json)
+
 ## blue-concrete-countertop
 
 **Output:** 6 × Blue Concrete Countertop (`atouchofclass:blue_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -1552,6 +1729,19 @@ SSS
 `S` = `minecraft:blue_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_countertop.json)
+
+## blue-concrete-fire-pit
+
+**Output:** 2 × Blue Concrete Fire Pit (`atouchofclass:blue_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:blue_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_fire_pit.json)
 
 ## blue-concrete-sink
 
@@ -1565,6 +1755,27 @@ S.S
 `S` = `minecraft:blue_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_sink.json)
+
+## blue-concrete-wall-from-blue-concrete-stonecutting
+
+**Output:** 1 × Blue Concrete Wall (`atouchofclass:blue_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:blue_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_wall_from_blue_concrete_stonecutting.json)
+
+## blue-concrete-wall
+
+**Output:** 6 × Blue Concrete Wall (`atouchofclass:blue_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:blue_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_wall.json)
 
 ## blue-glazed-terracotta-wall-tiles
 
@@ -1592,6 +1803,27 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_orchid_bunch.json)
 
+## blue-patio-chair-from-dye
+
+**Output:** 1 × Blue Patio Chair (`atouchofclass:blue_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:blue_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_patio_chair_from_dye.json)
+
+## blue-patio-chair
+
+**Output:** 1 × Blue Patio Chair (`atouchofclass:blue_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:blue_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_patio_chair.json)
+
 ## brick-window-ledge
 
 **Output:** 16 × Brick Window Ledge (`atouchofclass:brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
@@ -1604,6 +1836,28 @@ BB
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brick_window_ledge.json)
 
+## brown-bar-stool-from-dye
+
+**Output:** 1 × Brown Bar Stool (`atouchofclass:brown_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:brown_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_bar_stool_from_dye.json)
+
+## brown-bar-stool
+
+**Output:** 1 × Brown Bar Stool (`atouchofclass:brown_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:brown_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_bar_stool.json)
+
 ## brown-concrete-countertop
 
 **Output:** 6 × Brown Concrete Countertop (`atouchofclass:brown_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -1615,6 +1869,19 @@ SSS
 `S` = `minecraft:brown_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_countertop.json)
+
+## brown-concrete-fire-pit
+
+**Output:** 2 × Brown Concrete Fire Pit (`atouchofclass:brown_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:brown_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_fire_pit.json)
 
 ## brown-concrete-sink
 
@@ -1629,6 +1896,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_sink.json)
 
+## brown-concrete-wall-from-brown-concrete-stonecutting
+
+**Output:** 1 × Brown Concrete Wall (`atouchofclass:brown_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:brown_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_wall_from_brown_concrete_stonecutting.json)
+
+## brown-concrete-wall
+
+**Output:** 6 × Brown Concrete Wall (`atouchofclass:brown_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:brown_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_wall.json)
+
 ## brown-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Brown Glazed Terracotta Wall Tiles (`atouchofclass:brown_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -1641,6 +1929,27 @@ G.
 `G` = `minecraft:brown_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_glazed_terracotta_wall_tiles.json)
+
+## brown-patio-chair-from-dye
+
+**Output:** 1 × Brown Patio Chair (`atouchofclass:brown_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:brown_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_patio_chair_from_dye.json)
+
+## brown-patio-chair
+
+**Output:** 1 × Brown Patio Chair (`atouchofclass:brown_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:brown_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_patio_chair.json)
 
 ## brushed-stainless-steel
 
@@ -1869,6 +2178,20 @@ S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/casing.json)
 
+## cherry-adirondack-chair
+
+**Output:** 2 × Cherry Adirondack Chair (`atouchofclass:cherry_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:cherry_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_adirondack_chair.json)
+
 ## cherry-baluster
 
 **Output:** 32 × Cherry Baluster (`atouchofclass:cherry_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -1936,6 +2259,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:cherry_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_brown_four_post_bed.json)
+
+## cherry-coffee-table
+
+**Output:** 4 × Cherry Coffee Table (`atouchofclass:cherry_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:cherry_planks`; `W` = `minecraft:stripped_cherry_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_coffee_table.json)
 
 ## cherry-corbel
 
@@ -2629,6 +2964,20 @@ PGP
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cornflower_wallpaper.json)
 
+## crimson-adirondack-chair
+
+**Output:** 2 × Crimson Adirondack Chair (`atouchofclass:crimson_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:crimson_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_adirondack_chair.json)
+
 ## crimson-baluster
 
 **Output:** 32 × Crimson Baluster (`atouchofclass:crimson_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -2696,6 +3045,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:crimson_stems`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_brown_four_post_bed.json)
+
+## crimson-coffee-table
+
+**Output:** 4 × Crimson Coffee Table (`atouchofclass:crimson_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:crimson_planks`; `W` = `minecraft:stripped_crimson_hyphae`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_coffee_table.json)
 
 ## crimson-corbel
 
@@ -3146,6 +3507,28 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cut_copper_sink.json)
 
+## cyan-bar-stool-from-dye
+
+**Output:** 1 × Cyan Bar Stool (`atouchofclass:cyan_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:cyan_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_bar_stool_from_dye.json)
+
+## cyan-bar-stool
+
+**Output:** 1 × Cyan Bar Stool (`atouchofclass:cyan_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:cyan_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_bar_stool.json)
+
 ## cyan-concrete-countertop
 
 **Output:** 6 × Cyan Concrete Countertop (`atouchofclass:cyan_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -3157,6 +3540,19 @@ SSS
 `S` = `minecraft:cyan_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_countertop.json)
+
+## cyan-concrete-fire-pit
+
+**Output:** 2 × Cyan Concrete Fire Pit (`atouchofclass:cyan_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:cyan_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_fire_pit.json)
 
 ## cyan-concrete-sink
 
@@ -3171,6 +3567,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_sink.json)
 
+## cyan-concrete-wall-from-cyan-concrete-stonecutting
+
+**Output:** 1 × Cyan Concrete Wall (`atouchofclass:cyan_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:cyan_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_wall_from_cyan_concrete_stonecutting.json)
+
+## cyan-concrete-wall
+
+**Output:** 6 × Cyan Concrete Wall (`atouchofclass:cyan_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:cyan_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_wall.json)
+
 ## cyan-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Cyan Glazed Terracotta Wall Tiles (`atouchofclass:cyan_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -3183,6 +3600,27 @@ G.
 `G` = `minecraft:cyan_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_glazed_terracotta_wall_tiles.json)
+
+## cyan-patio-chair-from-dye
+
+**Output:** 1 × Cyan Patio Chair (`atouchofclass:cyan_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:cyan_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_patio_chair_from_dye.json)
+
+## cyan-patio-chair
+
+**Output:** 1 × Cyan Patio Chair (`atouchofclass:cyan_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:cyan_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_patio_chair.json)
 
 ## dado-rail
 
@@ -3222,6 +3660,20 @@ PGP
 `B` = `minecraft:blue_dye`; `G` = `atouchofclass:bucket_of_plaster`; `K` = `minecraft:black_dye`; `P` = `minecraft:paper`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_blue_floral_wallpaper.json)
+
+## dark-oak-adirondack-chair
+
+**Output:** 2 × Dark Oak Adirondack Chair (`atouchofclass:dark_oak_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:dark_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_adirondack_chair.json)
 
 ## dark-oak-baluster
 
@@ -3290,6 +3742,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:dark_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_brown_four_post_bed.json)
+
+## dark-oak-coffee-table
+
+**Output:** 4 × Dark Oak Coffee Table (`atouchofclass:dark_oak_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:dark_oak_planks`; `W` = `minecraft:stripped_dark_oak_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_coffee_table.json)
 
 ## dark-oak-corbel
 
@@ -4011,6 +4475,27 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/granite_countertop.json)
 
+## granite-paver-from-granite-stonecutting
+
+**Output:** 1 × Granite Paver (`atouchofclass:granite_paver`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:granite`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/granite_paver_from_granite_stonecutting.json)
+
+## granite-paver
+
+**Output:** 2 × Granite Paver (`atouchofclass:granite_paver`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SS
+SS
+```
+
+`S` = `minecraft:granite_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/granite_paver.json)
+
 ## granite-sink
 
 **Output:** 6 × Granite Sink (`atouchofclass:granite_sink`). **Type:** `minecraft:crafting_shaped`.
@@ -4024,6 +4509,28 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/granite_sink.json)
 
+## gray-bar-stool-from-dye
+
+**Output:** 1 × Gray Bar Stool (`atouchofclass:gray_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:gray_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_bar_stool_from_dye.json)
+
+## gray-bar-stool
+
+**Output:** 1 × Gray Bar Stool (`atouchofclass:gray_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:gray_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_bar_stool.json)
+
 ## gray-concrete-countertop
 
 **Output:** 6 × Gray Concrete Countertop (`atouchofclass:gray_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4035,6 +4542,19 @@ SSS
 `S` = `minecraft:gray_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_countertop.json)
+
+## gray-concrete-fire-pit
+
+**Output:** 2 × Gray Concrete Fire Pit (`atouchofclass:gray_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:gray_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_fire_pit.json)
 
 ## gray-concrete-sink
 
@@ -4049,6 +4569,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_sink.json)
 
+## gray-concrete-wall-from-gray-concrete-stonecutting
+
+**Output:** 1 × Gray Concrete Wall (`atouchofclass:gray_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:gray_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_wall_from_gray_concrete_stonecutting.json)
+
+## gray-concrete-wall
+
+**Output:** 6 × Gray Concrete Wall (`atouchofclass:gray_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:gray_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_wall.json)
+
 ## gray-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Gray Glazed Terracotta Wall Tiles (`atouchofclass:gray_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -4062,6 +4603,49 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_glazed_terracotta_wall_tiles.json)
 
+## gray-patio-chair-from-dye
+
+**Output:** 1 × Gray Patio Chair (`atouchofclass:gray_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:gray_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_patio_chair_from_dye.json)
+
+## gray-patio-chair
+
+**Output:** 1 × Gray Patio Chair (`atouchofclass:gray_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:gray_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_patio_chair.json)
+
+## green-bar-stool-from-dye
+
+**Output:** 1 × Green Bar Stool (`atouchofclass:green_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:green_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_bar_stool_from_dye.json)
+
+## green-bar-stool
+
+**Output:** 1 × Green Bar Stool (`atouchofclass:green_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:green_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_bar_stool.json)
+
 ## green-concrete-countertop
 
 **Output:** 6 × Green Concrete Countertop (`atouchofclass:green_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4073,6 +4657,19 @@ SSS
 `S` = `minecraft:green_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_countertop.json)
+
+## green-concrete-fire-pit
+
+**Output:** 2 × Green Concrete Fire Pit (`atouchofclass:green_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:green_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_fire_pit.json)
 
 ## green-concrete-sink
 
@@ -4087,6 +4684,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_sink.json)
 
+## green-concrete-wall-from-green-concrete-stonecutting
+
+**Output:** 1 × Green Concrete Wall (`atouchofclass:green_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:green_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_wall_from_green_concrete_stonecutting.json)
+
+## green-concrete-wall
+
+**Output:** 6 × Green Concrete Wall (`atouchofclass:green_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:green_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_wall.json)
+
 ## green-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Green Glazed Terracotta Wall Tiles (`atouchofclass:green_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -4100,6 +4718,27 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_glazed_terracotta_wall_tiles.json)
 
+## green-patio-chair-from-dye
+
+**Output:** 1 × Green Patio Chair (`atouchofclass:green_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:green_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_patio_chair_from_dye.json)
+
+## green-patio-chair
+
+**Output:** 1 × Green Patio Chair (`atouchofclass:green_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:green_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_patio_chair.json)
+
 ## induction-cooktop
 
 **Output:** 1 × Induction Cooktop (`atouchofclass:induction_cooktop`). **Type:** `minecraft:crafting_shaped`.
@@ -4112,6 +4751,20 @@ IRI
 `G` = `minecraft:black_stained_glass`; `I` = `minecraft:iron_ingot`; `R` = `minecraft:redstone`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/induction_cooktop.json)
+
+## jungle-adirondack-chair
+
+**Output:** 2 × Jungle Adirondack Chair (`atouchofclass:jungle_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:jungle_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_adirondack_chair.json)
 
 ## jungle-baluster
 
@@ -4180,6 +4833,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:jungle_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_brown_four_post_bed.json)
+
+## jungle-coffee-table
+
+**Output:** 4 × Jungle Coffee Table (`atouchofclass:jungle_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:jungle_planks`; `W` = `minecraft:stripped_jungle_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_coffee_table.json)
 
 ## jungle-corbel
 
@@ -4674,6 +5339,28 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/leather_sofa.json)
 
+## light-blue-bar-stool-from-dye
+
+**Output:** 1 × Light Blue Bar Stool (`atouchofclass:light_blue_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:light_blue_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_bar_stool_from_dye.json)
+
+## light-blue-bar-stool
+
+**Output:** 1 × Light Blue Bar Stool (`atouchofclass:light_blue_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:light_blue_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_bar_stool.json)
+
 ## light-blue-concrete-countertop
 
 **Output:** 6 × Light Blue Concrete Countertop (`atouchofclass:light_blue_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4685,6 +5372,19 @@ SSS
 `S` = `minecraft:light_blue_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_countertop.json)
+
+## light-blue-concrete-fire-pit
+
+**Output:** 2 × Light Blue Concrete Fire Pit (`atouchofclass:light_blue_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:light_blue_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_fire_pit.json)
 
 ## light-blue-concrete-sink
 
@@ -4699,6 +5399,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_sink.json)
 
+## light-blue-concrete-wall-from-light-blue-concrete-stonecutting
+
+**Output:** 1 × Light Blue Concrete Wall (`atouchofclass:light_blue_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:light_blue_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_wall_from_light_blue_concrete_stonecutting.json)
+
+## light-blue-concrete-wall
+
+**Output:** 6 × Light Blue Concrete Wall (`atouchofclass:light_blue_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:light_blue_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_wall.json)
+
 ## light-blue-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Light Blue Glazed Terracotta Wall Tiles (`atouchofclass:light_blue_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -4712,6 +5433,49 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_glazed_terracotta_wall_tiles.json)
 
+## light-blue-patio-chair-from-dye
+
+**Output:** 1 × Light Blue Patio Chair (`atouchofclass:light_blue_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:light_blue_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_patio_chair_from_dye.json)
+
+## light-blue-patio-chair
+
+**Output:** 1 × Light Blue Patio Chair (`atouchofclass:light_blue_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:light_blue_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_patio_chair.json)
+
+## light-gray-bar-stool-from-dye
+
+**Output:** 1 × Light Gray Bar Stool (`atouchofclass:light_gray_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:light_gray_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_bar_stool_from_dye.json)
+
+## light-gray-bar-stool
+
+**Output:** 1 × Light Gray Bar Stool (`atouchofclass:light_gray_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:light_gray_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_bar_stool.json)
+
 ## light-gray-concrete-countertop
 
 **Output:** 6 × Light Gray Concrete Countertop (`atouchofclass:light_gray_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4723,6 +5487,19 @@ SSS
 `S` = `minecraft:light_gray_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_countertop.json)
+
+## light-gray-concrete-fire-pit
+
+**Output:** 2 × Light Gray Concrete Fire Pit (`atouchofclass:light_gray_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:light_gray_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_fire_pit.json)
 
 ## light-gray-concrete-sink
 
@@ -4737,6 +5514,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_sink.json)
 
+## light-gray-concrete-wall-from-light-gray-concrete-stonecutting
+
+**Output:** 1 × Light Gray Concrete Wall (`atouchofclass:light_gray_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:light_gray_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_wall_from_light_gray_concrete_stonecutting.json)
+
+## light-gray-concrete-wall
+
+**Output:** 6 × Light Gray Concrete Wall (`atouchofclass:light_gray_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:light_gray_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_wall.json)
+
 ## light-gray-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Light Gray Glazed Terracotta Wall Tiles (`atouchofclass:light_gray_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -4749,6 +5547,27 @@ G.
 `G` = `minecraft:light_gray_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_glazed_terracotta_wall_tiles.json)
+
+## light-gray-patio-chair-from-dye
+
+**Output:** 1 × Light Gray Patio Chair (`atouchofclass:light_gray_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:light_gray_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_patio_chair_from_dye.json)
+
+## light-gray-patio-chair
+
+**Output:** 1 × Light Gray Patio Chair (`atouchofclass:light_gray_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:light_gray_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_patio_chair.json)
 
 ## lilac-bunch
 
@@ -4776,6 +5595,28 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lily_of_the_valley_bunch.json)
 
+## lime-bar-stool-from-dye
+
+**Output:** 1 × Lime Bar Stool (`atouchofclass:lime_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:lime_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_bar_stool_from_dye.json)
+
+## lime-bar-stool
+
+**Output:** 1 × Lime Bar Stool (`atouchofclass:lime_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:lime_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_bar_stool.json)
+
 ## lime-concrete-countertop
 
 **Output:** 6 × Lime Concrete Countertop (`atouchofclass:lime_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4787,6 +5628,19 @@ SSS
 `S` = `minecraft:lime_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_countertop.json)
+
+## lime-concrete-fire-pit
+
+**Output:** 2 × Lime Concrete Fire Pit (`atouchofclass:lime_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:lime_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_fire_pit.json)
 
 ## lime-concrete-sink
 
@@ -4801,6 +5655,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_sink.json)
 
+## lime-concrete-wall-from-lime-concrete-stonecutting
+
+**Output:** 1 × Lime Concrete Wall (`atouchofclass:lime_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:lime_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_wall_from_lime_concrete_stonecutting.json)
+
+## lime-concrete-wall
+
+**Output:** 6 × Lime Concrete Wall (`atouchofclass:lime_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:lime_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_wall.json)
+
 ## lime-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Lime Glazed Terracotta Wall Tiles (`atouchofclass:lime_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -4814,6 +5689,49 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_glazed_terracotta_wall_tiles.json)
 
+## lime-patio-chair-from-dye
+
+**Output:** 1 × Lime Patio Chair (`atouchofclass:lime_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:lime_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_patio_chair_from_dye.json)
+
+## lime-patio-chair
+
+**Output:** 1 × Lime Patio Chair (`atouchofclass:lime_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:lime_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_patio_chair.json)
+
+## magenta-bar-stool-from-dye
+
+**Output:** 1 × Magenta Bar Stool (`atouchofclass:magenta_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:magenta_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_bar_stool_from_dye.json)
+
+## magenta-bar-stool
+
+**Output:** 1 × Magenta Bar Stool (`atouchofclass:magenta_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:magenta_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_bar_stool.json)
+
 ## magenta-concrete-countertop
 
 **Output:** 6 × Magenta Concrete Countertop (`atouchofclass:magenta_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4825,6 +5743,19 @@ SSS
 `S` = `minecraft:magenta_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_countertop.json)
+
+## magenta-concrete-fire-pit
+
+**Output:** 2 × Magenta Concrete Fire Pit (`atouchofclass:magenta_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:magenta_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_fire_pit.json)
 
 ## magenta-concrete-sink
 
@@ -4839,6 +5770,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_sink.json)
 
+## magenta-concrete-wall-from-magenta-concrete-stonecutting
+
+**Output:** 1 × Magenta Concrete Wall (`atouchofclass:magenta_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:magenta_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_wall_from_magenta_concrete_stonecutting.json)
+
+## magenta-concrete-wall
+
+**Output:** 6 × Magenta Concrete Wall (`atouchofclass:magenta_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:magenta_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_wall.json)
+
 ## magenta-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Magenta Glazed Terracotta Wall Tiles (`atouchofclass:magenta_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -4851,6 +5803,41 @@ G.
 `G` = `minecraft:magenta_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_glazed_terracotta_wall_tiles.json)
+
+## magenta-patio-chair-from-dye
+
+**Output:** 1 × Magenta Patio Chair (`atouchofclass:magenta_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:magenta_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_patio_chair_from_dye.json)
+
+## magenta-patio-chair
+
+**Output:** 1 × Magenta Patio Chair (`atouchofclass:magenta_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:magenta_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_patio_chair.json)
+
+## mangrove-adirondack-chair
+
+**Output:** 2 × Mangrove Adirondack Chair (`atouchofclass:mangrove_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:mangrove_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_adirondack_chair.json)
 
 ## mangrove-baluster
 
@@ -4919,6 +5906,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:mangrove_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_brown_four_post_bed.json)
+
+## mangrove-coffee-table
+
+**Output:** 4 × Mangrove Coffee Table (`atouchofclass:mangrove_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:mangrove_planks`; `W` = `minecraft:stripped_mangrove_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_coffee_table.json)
 
 ## mangrove-corbel
 
@@ -5369,6 +6368,20 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/nether_brick_sink.json)
 
+## oak-adirondack-chair
+
+**Output:** 2 × Oak Adirondack Chair (`atouchofclass:oak_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_adirondack_chair.json)
+
 ## oak-baluster
 
 **Output:** 32 × Oak Baluster (`atouchofclass:oak_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -5436,6 +6449,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_brown_four_post_bed.json)
+
+## oak-coffee-table
+
+**Output:** 4 × Oak Coffee Table (`atouchofclass:oak_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:oak_planks`; `W` = `minecraft:stripped_oak_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_coffee_table.json)
 
 ## oak-corbel
 
@@ -5888,6 +6913,28 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/open_eyeblossom_bunch.json)
 
+## orange-bar-stool-from-dye
+
+**Output:** 1 × Orange Bar Stool (`atouchofclass:orange_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:orange_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_bar_stool_from_dye.json)
+
+## orange-bar-stool
+
+**Output:** 1 × Orange Bar Stool (`atouchofclass:orange_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:orange_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_bar_stool.json)
+
 ## orange-concrete-countertop
 
 **Output:** 6 × Orange Concrete Countertop (`atouchofclass:orange_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -5899,6 +6946,19 @@ SSS
 `S` = `minecraft:orange_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_countertop.json)
+
+## orange-concrete-fire-pit
+
+**Output:** 2 × Orange Concrete Fire Pit (`atouchofclass:orange_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:orange_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_fire_pit.json)
 
 ## orange-concrete-sink
 
@@ -5913,6 +6973,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_sink.json)
 
+## orange-concrete-wall-from-orange-concrete-stonecutting
+
+**Output:** 1 × Orange Concrete Wall (`atouchofclass:orange_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:orange_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_wall_from_orange_concrete_stonecutting.json)
+
+## orange-concrete-wall
+
+**Output:** 6 × Orange Concrete Wall (`atouchofclass:orange_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:orange_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_wall.json)
+
 ## orange-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Orange Glazed Terracotta Wall Tiles (`atouchofclass:orange_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -5925,6 +7006,27 @@ G.
 `G` = `minecraft:orange_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_glazed_terracotta_wall_tiles.json)
+
+## orange-patio-chair-from-dye
+
+**Output:** 1 × Orange Patio Chair (`atouchofclass:orange_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:orange_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_patio_chair_from_dye.json)
+
+## orange-patio-chair
+
+**Output:** 1 × Orange Patio Chair (`atouchofclass:orange_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:orange_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_patio_chair.json)
 
 ## orange-tulip-bunch
 
@@ -5990,6 +7092,20 @@ S.S
 `S` = `minecraft:oxidized_cut_copper_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oxidized_cut_copper_sink.json)
+
+## pale-oak-adirondack-chair
+
+**Output:** 2 × Pale Oak Adirondack Chair (`atouchofclass:pale_oak_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:pale_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_adirondack_chair.json)
 
 ## pale-oak-baluster
 
@@ -6058,6 +7174,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:pale_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_brown_four_post_bed.json)
+
+## pale-oak-coffee-table
+
+**Output:** 4 × Pale Oak Coffee Table (`atouchofclass:pale_oak_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:pale_oak_planks`; `W` = `minecraft:stripped_pale_oak_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_coffee_table.json)
 
 ## pale-oak-corbel
 
@@ -6482,6 +7610,28 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/peony_bunch.json)
 
+## pink-bar-stool-from-dye
+
+**Output:** 1 × Pink Bar Stool (`atouchofclass:pink_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:pink_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_bar_stool_from_dye.json)
+
+## pink-bar-stool
+
+**Output:** 1 × Pink Bar Stool (`atouchofclass:pink_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:pink_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_bar_stool.json)
+
 ## pink-concrete-countertop
 
 **Output:** 6 × Pink Concrete Countertop (`atouchofclass:pink_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -6493,6 +7643,19 @@ SSS
 `S` = `minecraft:pink_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_countertop.json)
+
+## pink-concrete-fire-pit
+
+**Output:** 2 × Pink Concrete Fire Pit (`atouchofclass:pink_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:pink_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_fire_pit.json)
 
 ## pink-concrete-sink
 
@@ -6506,6 +7669,27 @@ S.S
 `S` = `minecraft:pink_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_sink.json)
+
+## pink-concrete-wall-from-pink-concrete-stonecutting
+
+**Output:** 1 × Pink Concrete Wall (`atouchofclass:pink_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:pink_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_wall_from_pink_concrete_stonecutting.json)
+
+## pink-concrete-wall
+
+**Output:** 6 × Pink Concrete Wall (`atouchofclass:pink_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:pink_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_wall.json)
 
 ## pink-floral-wallpaper
 
@@ -6547,6 +7731,27 @@ G.
 `G` = `minecraft:pink_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_glazed_terracotta_wall_tiles.json)
+
+## pink-patio-chair-from-dye
+
+**Output:** 1 × Pink Patio Chair (`atouchofclass:pink_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:pink_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_patio_chair_from_dye.json)
+
+## pink-patio-chair
+
+**Output:** 1 × Pink Patio Chair (`atouchofclass:pink_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:pink_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_patio_chair.json)
 
 ## pink-petals-bunch
 
@@ -6765,6 +7970,20 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/polished_granite_sink.json)
 
+## poplar-adirondack-chair
+
+**Output:** 2 × Poplar Adirondack Chair (`atouchofclass:poplar_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_adirondack_chair.json)
+
 ## poplar-baluster
 
 **Output:** 32 × Poplar Baluster (`atouchofclass:poplar_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -6832,6 +8051,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:poplar_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_brown_four_post_bed.json)
+
+## poplar-coffee-table
+
+**Output:** 4 × Poplar Coffee Table (`atouchofclass:poplar_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:poplar_planks`; `W` = `minecraft:stripped_poplar_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_coffee_table.json)
 
 ## poplar-corbel
 
@@ -7295,6 +8526,28 @@ P.P
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/prismarine_fish_scale_wall_tiles.json)
 
+## purple-bar-stool-from-dye
+
+**Output:** 1 × Purple Bar Stool (`atouchofclass:purple_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:purple_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_bar_stool_from_dye.json)
+
+## purple-bar-stool
+
+**Output:** 1 × Purple Bar Stool (`atouchofclass:purple_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:purple_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_bar_stool.json)
+
 ## purple-concrete-countertop
 
 **Output:** 6 × Purple Concrete Countertop (`atouchofclass:purple_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -7306,6 +8559,19 @@ SSS
 `S` = `minecraft:purple_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_countertop.json)
+
+## purple-concrete-fire-pit
+
+**Output:** 2 × Purple Concrete Fire Pit (`atouchofclass:purple_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:purple_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_fire_pit.json)
 
 ## purple-concrete-sink
 
@@ -7320,6 +8586,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_sink.json)
 
+## purple-concrete-wall-from-purple-concrete-stonecutting
+
+**Output:** 1 × Purple Concrete Wall (`atouchofclass:purple_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:purple_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_wall_from_purple_concrete_stonecutting.json)
+
+## purple-concrete-wall
+
+**Output:** 6 × Purple Concrete Wall (`atouchofclass:purple_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:purple_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_wall.json)
+
 ## purple-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Purple Glazed Terracotta Wall Tiles (`atouchofclass:purple_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -7332,6 +8619,27 @@ G.
 `G` = `minecraft:purple_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_glazed_terracotta_wall_tiles.json)
+
+## purple-patio-chair-from-dye
+
+**Output:** 1 × Purple Patio Chair (`atouchofclass:purple_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:purple_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_patio_chair_from_dye.json)
+
+## purple-patio-chair
+
+**Output:** 1 × Purple Patio Chair (`atouchofclass:purple_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:purple_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_patio_chair.json)
 
 ## purpur-countertop
 
@@ -7406,6 +8714,28 @@ NNN
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/rain_shower_head.json)
 
+## red-bar-stool-from-dye
+
+**Output:** 1 × Red Bar Stool (`atouchofclass:red_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:red_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_bar_stool_from_dye.json)
+
+## red-bar-stool
+
+**Output:** 1 × Red Bar Stool (`atouchofclass:red_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:red_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_bar_stool.json)
+
 ## red-brick
 
 **Output:** 16 × Red Brick Siding (`atouchofclass:red_brick`). **Type:** `minecraft:crafting_shaped`.
@@ -7431,6 +8761,19 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_countertop.json)
 
+## red-concrete-fire-pit
+
+**Output:** 2 × Red Concrete Fire Pit (`atouchofclass:red_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:red_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_fire_pit.json)
+
 ## red-concrete-sink
 
 **Output:** 6 × Red Concrete Sink (`atouchofclass:red_concrete_sink`). **Type:** `minecraft:crafting_shaped`.
@@ -7443,6 +8786,27 @@ S.S
 `S` = `minecraft:red_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_sink.json)
+
+## red-concrete-wall-from-red-concrete-stonecutting
+
+**Output:** 1 × Red Concrete Wall (`atouchofclass:red_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:red_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_wall_from_red_concrete_stonecutting.json)
+
+## red-concrete-wall
+
+**Output:** 6 × Red Concrete Wall (`atouchofclass:red_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:red_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_wall.json)
 
 ## red-glazed-terracotta-wall-tiles
 
@@ -7481,6 +8845,27 @@ S.S
 `S` = `minecraft:red_nether_brick_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_nether_brick_sink.json)
+
+## red-patio-chair-from-dye
+
+**Output:** 1 × Red Patio Chair (`atouchofclass:red_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:red_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_patio_chair_from_dye.json)
+
+## red-patio-chair
+
+**Output:** 1 × Red Patio Chair (`atouchofclass:red_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:red_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_patio_chair.json)
 
 ## red-tulip-bunch
 
@@ -7678,6 +9063,20 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/smooth_stone_sink.json)
 
+## spruce-adirondack-chair
+
+**Output:** 2 × Spruce Adirondack Chair (`atouchofclass:spruce_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:spruce_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_adirondack_chair.json)
+
 ## spruce-baluster
 
 **Output:** 32 × Spruce Baluster (`atouchofclass:spruce_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -7745,6 +9144,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:spruce_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_brown_four_post_bed.json)
+
+## spruce-coffee-table
+
+**Output:** 4 × Spruce Coffee Table (`atouchofclass:spruce_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:spruce_planks`; `W` = `minecraft:stripped_spruce_wood`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_coffee_table.json)
 
 ## spruce-corbel
 
@@ -8232,6 +9643,27 @@ SSS
 `S` = `minecraft:stone_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/stone_countertop.json)
+
+## stone-paver-from-stone-stonecutting
+
+**Output:** 1 × Stone Paver (`atouchofclass:stone_paver`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:stone`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/stone_paver_from_stone_stonecutting.json)
+
+## stone-paver
+
+**Output:** 2 × Stone Paver (`atouchofclass:stone_paver`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SS
+SS
+```
+
+`S` = `minecraft:stone_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/stone_paver.json)
 
 ## stone-quoin
 
@@ -8893,6 +10325,20 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/wall_tile_trim_strip.json)
 
+## warped-adirondack-chair
+
+**Output:** 2 × Warped Adirondack Chair (`atouchofclass:warped_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:warped_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_adirondack_chair.json)
+
 ## warped-baluster
 
 **Output:** 32 × Warped Baluster (`atouchofclass:warped_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -8960,6 +10406,18 @@ LL
 `B` = `minecraft:brown_bed`; `L` = `#minecraft:warped_stems`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_brown_four_post_bed.json)
+
+## warped-coffee-table
+
+**Output:** 4 × Warped Coffee Table (`atouchofclass:warped_coffee_table`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+PWP
+```
+
+`P` = `minecraft:warped_planks`; `W` = `minecraft:stripped_warped_hyphae`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_coffee_table.json)
 
 ## warped-corbel
 
@@ -9880,6 +11338,20 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/weathered_cut_copper_sink.json)
 
+## white-bar-stool
+
+**Output:** 1 × White Bar Stool (`atouchofclass:white_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:white_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_bar_stool.json)
+
 ## white-concrete-countertop
 
 **Output:** 6 × White Concrete Countertop (`atouchofclass:white_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -9891,6 +11363,19 @@ SSS
 `S` = `minecraft:white_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_countertop.json)
+
+## white-concrete-fire-pit
+
+**Output:** 2 × White Concrete Fire Pit (`atouchofclass:white_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:white_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_fire_pit.json)
 
 ## white-concrete-sink
 
@@ -9905,6 +11390,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_sink.json)
 
+## white-concrete-wall-from-white-concrete-stonecutting
+
+**Output:** 1 × White Concrete Wall (`atouchofclass:white_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:white_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_wall_from_white_concrete_stonecutting.json)
+
+## white-concrete-wall
+
+**Output:** 6 × White Concrete Wall (`atouchofclass:white_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:white_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_wall.json)
+
 ## white-glazed-terracotta-wall-tiles
 
 **Output:** 16 × White Glazed Terracotta Wall Tiles (`atouchofclass:white_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -9917,6 +11423,19 @@ G.
 `G` = `minecraft:white_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_glazed_terracotta_wall_tiles.json)
+
+## white-patio-chair
+
+**Output:** 1 × White Patio Chair (`atouchofclass:white_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:white_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_patio_chair.json)
 
 ## white-stucco
 
@@ -9984,6 +11503,28 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/wither_rose_bunch.json)
 
+## yellow-bar-stool-from-dye
+
+**Output:** 1 × Yellow Bar Stool (`atouchofclass:yellow_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:yellow_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_bar_stool_from_dye.json)
+
+## yellow-bar-stool
+
+**Output:** 1 × Yellow Bar Stool (`atouchofclass:yellow_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:yellow_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_bar_stool.json)
+
 ## yellow-concrete-countertop
 
 **Output:** 6 × Yellow Concrete Countertop (`atouchofclass:yellow_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -9995,6 +11536,19 @@ SSS
 `S` = `minecraft:yellow_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_countertop.json)
+
+## yellow-concrete-fire-pit
+
+**Output:** 2 × Yellow Concrete Fire Pit (`atouchofclass:yellow_concrete_fire_pit`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+CGC
+.F.
+```
+
+`C` = `minecraft:yellow_concrete`; `F` = `minecraft:campfire`; `G` = `minecraft:gravel`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_fire_pit.json)
 
 ## yellow-concrete-sink
 
@@ -10009,6 +11563,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_sink.json)
 
+## yellow-concrete-wall-from-yellow-concrete-stonecutting
+
+**Output:** 1 × Yellow Concrete Wall (`atouchofclass:yellow_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:yellow_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_wall_from_yellow_concrete_stonecutting.json)
+
+## yellow-concrete-wall
+
+**Output:** 6 × Yellow Concrete Wall (`atouchofclass:yellow_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:yellow_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_wall.json)
+
 ## yellow-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Yellow Glazed Terracotta Wall Tiles (`atouchofclass:yellow_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -10021,3 +11596,24 @@ G.
 `G` = `minecraft:yellow_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_glazed_terracotta_wall_tiles.json)
+
+## yellow-patio-chair-from-dye
+
+**Output:** 1 × Yellow Patio Chair (`atouchofclass:yellow_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:yellow_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_patio_chair_from_dye.json)
+
+## yellow-patio-chair
+
+**Output:** 1 × Yellow Patio Chair (`atouchofclass:yellow_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:yellow_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_patio_chair.json)

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": { "#": "minecraft:brown_concrete" },
+  "pattern": ["###", "###"],
+  "result": { "count": 6, "id": "atouchofclass:brown_concrete_wall" }
+}

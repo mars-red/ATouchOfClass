@@ -1,0 +1,6 @@
+{
+  "parent": "atouchofclass:block/template_patio_chair",
+  "textures": {
+    "fabric": "minecraft:block/blue_wool"
+  }
+}

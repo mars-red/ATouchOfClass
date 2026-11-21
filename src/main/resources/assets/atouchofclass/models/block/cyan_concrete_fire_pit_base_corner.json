@@ -1,0 +1,59 @@
+{
+  "textures": {
+    "concrete": "minecraft:block/cyan_concrete",
+    "particle": "minecraft:block/cyan_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        2,
+        0,
+        2
+      ],
+      "faces": {
+        "down": {
+          "texture": "#concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        2,
+        2,
+        0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        0,
+        2,
+        2
+      ],
+      "faces": {
+        "west": {
+          "texture": "#concrete"
+        }
+      }
+    }
+  ]
+}

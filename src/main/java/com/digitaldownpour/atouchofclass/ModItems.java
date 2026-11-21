@@ -12,6 +12,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -70,6 +71,12 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("buff_brick_stairs", ModBlocks.BUFF_BRICK_STAIRS);
     public static final DeferredItem<BlockItem> BUFF_BRICK_WALL =
             ITEMS.registerSimpleBlockItem("buff_brick_wall", ModBlocks.BUFF_BRICK_WALL);
+    public static final java.util.List<DeferredItem<BlockItem>> CONCRETE_WALL_ITEMS =
+            ModBlocks.CONCRETE_WALLS.values().stream().map(ITEMS::registerSimpleBlockItem).toList();
+    public static final DeferredItem<BlockItem> GRANITE_PAVER =
+            ITEMS.registerSimpleBlockItem("granite_paver", ModBlocks.GRANITE_PAVER);
+    public static final DeferredItem<BlockItem> STONE_PAVER =
+            ITEMS.registerSimpleBlockItem("stone_paver", ModBlocks.STONE_PAVER);
     public static final DeferredItem<BlockItem> CALCITE_COUNTERTOP =
             ITEMS.registerSimpleBlockItem("calcite_countertop", ModBlocks.CALCITE_COUNTERTOP);
     public static final DeferredItem<BlockItem> CALCITE_SINK =
@@ -329,6 +336,7 @@ public class ModItems {
     public static final DeferredItem<BlockItem> OAK_SIDE_TABLE_ITEM = SIDE_TABLE_ITEMS.get("oak_side_table");
     public static final java.util.Map<String, DeferredItem<BlockItem>> DINING_TABLE_ITEMS = registerDiningTableItems();
     public static final DeferredItem<BlockItem> OAK_DINING_TABLE_ITEM = DINING_TABLE_ITEMS.get("oak_dining_table");
+    public static final java.util.Map<String, DeferredItem<BlockItem>> COFFEE_TABLE_ITEMS = registerCoffeeTableItems();
     public static final java.util.Map<String, DeferredItem<BlockItem>> NIGHTSTAND_ITEMS = registerNightstandItems();
     public static final DeferredItem<BlockItem> OAK_NIGHTSTAND_ITEM = NIGHTSTAND_ITEMS.get("oak_nightstand");
     public static final DeferredItem<BlockItem> LEATHER_LOVE_SEAT_ITEM =
@@ -337,6 +345,30 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("leather_sofa", ModBlocks.LEATHER_SOFA);
     public static final DeferredItem<BlockItem> LEATHER_CHAIR_ITEM =
             ITEMS.registerSimpleBlockItem("leather_chair", ModBlocks.LEATHER_CHAIR);
+    public static final java.util.Map<DyeColor, DeferredItem<BlockItem>> PATIO_CHAIR_ITEMS =
+            registerDyeableChairItems(ModBlocks.PATIO_CHAIRS);
+    public static final java.util.Map<DyeColor, DeferredItem<BlockItem>> BAR_STOOL_ITEMS =
+            registerDyeableChairItems(ModBlocks.BAR_STOOLS);
+
+    public static final java.util.Map<String, DeferredItem<BlockItem>> ADIRONDACK_CHAIR_ITEMS =
+            registerAdirondackChairItems();
+    public static final DeferredItem<BlockItem> SPRUCE_ADIRONDACK_CHAIR_ITEM =
+            ADIRONDACK_CHAIR_ITEMS.get("spruce_adirondack_chair");
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerAdirondackChairItems() {
+        var items = new java.util.LinkedHashMap<String, DeferredItem<BlockItem>>();
+        ModBlocks.ADIRONDACK_CHAIRS.forEach((id, block) ->
+                items.put(id, ITEMS.registerSimpleBlockItem(id, block)));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
+    private static java.util.Map<DyeColor, DeferredItem<BlockItem>> registerDyeableChairItems(
+            java.util.Map<DyeColor, ? extends net.neoforged.neoforge.registries.DeferredBlock<?>> blocks) {
+        var items = new java.util.EnumMap<DyeColor, DeferredItem<BlockItem>>(DyeColor.class);
+        blocks.forEach((color, block) -> items.put(color, ITEMS.registerSimpleBlockItem(block)));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
     public static final java.util.Map<String, DeferredItem<BlockItem>> DINING_CHAIR_ITEMS = registerDiningChairItems();
     public static final DeferredItem<BlockItem> OAK_DINING_CHAIR_ITEM = DINING_CHAIR_ITEMS.get("oak_dining_chair");
 
@@ -355,10 +387,27 @@ public class ModItems {
         return java.util.Collections.unmodifiableMap(items);
     }
 
+    public static final java.util.Map<String, DeferredItem<BlockItem>> FIRE_PIT_ITEMS = registerFirePitItems();
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerFirePitItems() {
+        java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
+        FirePitVariants.VALUES.forEach(definition -> items.put(definition.id(),
+                ITEMS.registerSimpleBlockItem(definition.id(), ModBlocks.FIRE_PITS.get(definition.id()))));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
     private static java.util.Map<String, DeferredItem<BlockItem>> registerDiningTableItems() {
         java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
         DiningTableVariants.VALUES.forEach(definition -> items.put(definition.id(),
                 ITEMS.registerSimpleBlockItem(definition.id(), ModBlocks.DINING_TABLES.get(definition.id()))));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerCoffeeTableItems() {
+        java.util.Map<String, DeferredItem<BlockItem>> items = new java.util.LinkedHashMap<>();
+        DiningTableVariants.VALUES.forEach(definition -> items.put(definition.coffeeTableId(),
+                ITEMS.registerSimpleBlockItem(definition.coffeeTableId(),
+                        ModBlocks.COFFEE_TABLES.get(definition.coffeeTableId()))));
         return java.util.Collections.unmodifiableMap(items);
     }
 
@@ -890,11 +939,16 @@ public class ModItems {
             DRESSER_ITEMS.values().forEach(event::accept);
             SIDE_TABLE_ITEMS.values().forEach(event::accept);
             DINING_TABLE_ITEMS.values().forEach(event::accept);
+            COFFEE_TABLE_ITEMS.values().forEach(event::accept);
+            FIRE_PIT_ITEMS.values().forEach(event::accept);
             NIGHTSTAND_ITEMS.values().forEach(event::accept);
             event.accept(LEATHER_LOVE_SEAT_ITEM);
             event.accept(LEATHER_SOFA_ITEM);
             event.accept(LEATHER_CHAIR_ITEM);
             DINING_CHAIR_ITEMS.values().forEach(event::accept);
+            PATIO_CHAIR_ITEMS.values().forEach(event::accept);
+            BAR_STOOL_ITEMS.values().forEach(event::accept);
+            ADIRONDACK_CHAIR_ITEMS.values().forEach(event::accept);
             event.accept(REFRIGERATOR_ITEM);
             COPPER_REFRIGERATOR_ITEMS.forEach(event::accept);
             event.accept(OVEN_ITEM);
@@ -1010,6 +1064,9 @@ public class ModItems {
             event.accept(BUFF_BRICK_SLAB);
             event.accept(BUFF_BRICK_STAIRS);
             event.accept(BUFF_BRICK_WALL);
+            CONCRETE_WALL_ITEMS.forEach(event::accept);
+            event.accept(GRANITE_PAVER);
+            event.accept(STONE_PAVER);
             event.accept(CALCITE_COUNTERTOP);
             event.accept(CALCITE_SINK);
             event.accept(KITCHEN_SINK);

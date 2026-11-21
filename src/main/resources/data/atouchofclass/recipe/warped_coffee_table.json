@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PWP"
+  ],
+  "key": {
+    "P": "minecraft:warped_planks",
+    "W": "minecraft:stripped_warped_hyphae"
+  },
+  "result": {
+    "id": "atouchofclass:warped_coffee_table",
+    "count": 4
+  }
+}

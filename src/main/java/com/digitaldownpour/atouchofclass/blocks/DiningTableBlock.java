@@ -23,11 +23,20 @@ public class DiningTableBlock extends Block {
             BooleanProperty.create("north_east"), BooleanProperty.create("south_east"),
             BooleanProperty.create("south_west"), BooleanProperty.create("north_west")};
     private static final Direction[] DIRECTIONS = {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
-    private static final VoxelShape[] SHAPES = createShapes();
+    private static final VoxelShape[] SHAPES = createShapes(0);
     private static final VoxelShape TOP_SUPPORT = box(0, 15, 0, 16, 16, 16);
+    private static final VoxelShape[] COFFEE_SHAPES = createShapes(6);
+    private static final VoxelShape COFFEE_TOP_SUPPORT = box(0, 9, 0, 16, 10, 16);
+    private final boolean coffee;
 
     public DiningTableBlock(Properties properties) {
+        this(properties, false);
+    }
+
+    /** Coffee tables share all connection logic but sit six pixels lower. */
+    public DiningTableBlock(Properties properties, boolean coffee) {
         super(properties);
+        this.coffee = coffee;
         BlockState state = stateDefinition.any();
         for (BooleanProperty edge : EDGES) state = state.setValue(edge, false);
         for (BooleanProperty leg : LEGS) state = state.setValue(leg, true);
@@ -96,10 +105,12 @@ public class DiningTableBlock extends Block {
             if (state.getValue(EDGES[i])) index |= 1 << i;
             if (state.getValue(LEGS[i])) index |= 1 << (i + 4);
         }
-        return SHAPES[index];
+        return (coffee ? COFFEE_SHAPES : SHAPES)[index];
     }
 
-    @Override protected VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) { return TOP_SUPPORT; }
+    @Override protected VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) {
+        return coffee ? COFFEE_TOP_SUPPORT : TOP_SUPPORT;
+    }
 
     @Override protected BlockState rotate(BlockState state, Rotation rotation) {
         BlockState result = state;
@@ -127,22 +138,23 @@ public class DiningTableBlock extends Block {
         builder.add(EDGES).add(LEGS);
     }
 
-    private static VoxelShape[] createShapes() {
+    private static VoxelShape[] createShapes(int drop) {
         VoxelShape[] shapes = new VoxelShape[256];
+        int top = 16 - drop, mid = 13 - drop, low = 11 - drop;
         for (int mask = 0; mask < 256; mask++) {
             boolean n = (mask & 1) != 0, e = (mask & 2) != 0, s = (mask & 4) != 0, w = (mask & 8) != 0;
-            VoxelShape shape = Shapes.or(box(1, 13, 0, 15, 16, 16), box(0, 13, 1, 1, 16, 15), box(15, 13, 1, 16, 16, 15));
-            if (n || w) shape = Shapes.or(shape, box(0, 13, 0, 1, 16, 1));
-            if (n || e) shape = Shapes.or(shape, box(15, 13, 0, 16, 16, 1));
-            if (s || w) shape = Shapes.or(shape, box(0, 13, 15, 1, 16, 16));
-            if (s || e) shape = Shapes.or(shape, box(15, 13, 15, 16, 16, 16));
-            if (!n) shape = Shapes.or(shape, box(w ? 0 : 3.25, 11, 2.25, e ? 16 : 12.75, 13, 3.25));
-            if (!s) shape = Shapes.or(shape, box(w ? 0 : 3.25, 11, 12.75, e ? 16 : 12.75, 13, 13.75));
-            if (!w) shape = Shapes.or(shape, box(2.25, 11, n ? 0 : 3.25, 3.25, 13, s ? 16 : 12.75));
-            if (!e) shape = Shapes.or(shape, box(12.75, 11, n ? 0 : 3.25, 13.75, 13, s ? 16 : 12.75));
+            VoxelShape shape = Shapes.or(box(1, mid, 0, 15, top, 16), box(0, mid, 1, 1, top, 15), box(15, mid, 1, 16, top, 15));
+            if (n || w) shape = Shapes.or(shape, box(0, mid, 0, 1, top, 1));
+            if (n || e) shape = Shapes.or(shape, box(15, mid, 0, 16, top, 1));
+            if (s || w) shape = Shapes.or(shape, box(0, mid, 15, 1, top, 16));
+            if (s || e) shape = Shapes.or(shape, box(15, mid, 15, 16, top, 16));
+            if (!n) shape = Shapes.or(shape, box(w ? 0 : 3.25, low, 2.25, e ? 16 : 12.75, mid, 3.25));
+            if (!s) shape = Shapes.or(shape, box(w ? 0 : 3.25, low, 12.75, e ? 16 : 12.75, mid, 13.75));
+            if (!w) shape = Shapes.or(shape, box(2.25, low, n ? 0 : 3.25, 3.25, mid, s ? 16 : 12.75));
+            if (!e) shape = Shapes.or(shape, box(12.75, low, n ? 0 : 3.25, 13.75, mid, s ? 16 : 12.75));
             for (int i = 0; i < 4; i++) if ((mask & (1 << (i + 4))) != 0) {
                 int x = i < 2 ? 12 : 2, z = (i == 0 || i == 3) ? 2 : 12;
-                shape = Shapes.or(shape, box(x, 0, z, x + 2, 13, z + 2));
+                shape = Shapes.or(shape, box(x, 0, z, x + 2, mid, z + 2));
             }
             shapes[mask] = shape.optimize();
         }

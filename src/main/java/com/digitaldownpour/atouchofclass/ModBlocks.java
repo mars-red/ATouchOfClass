@@ -60,6 +60,10 @@ import com.digitaldownpour.atouchofclass.blocks.LoveSeatBlock;
 import com.digitaldownpour.atouchofclass.blocks.SofaBlock;
 import com.digitaldownpour.atouchofclass.blocks.ChairBlock;
 import com.digitaldownpour.atouchofclass.blocks.DiningChairBlock;
+import com.digitaldownpour.atouchofclass.blocks.PatioChairBlock;
+import com.digitaldownpour.atouchofclass.blocks.BarStoolBlock;
+import com.digitaldownpour.atouchofclass.blocks.AdirondackChairBlock;
+import net.minecraft.world.item.DyeColor;
 import com.digitaldownpour.atouchofclass.blocks.SideTableBlock;
 import com.digitaldownpour.atouchofclass.blocks.DiningTableBlock;
 import com.digitaldownpour.atouchofclass.blocks.NightstandBlock;
@@ -148,6 +152,28 @@ public class ModBlocks {
             BLOCKS.register("buff_brick_wall", registryName -> new WallBlock(
                     BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_WALL)
                             .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+
+    public static final java.util.Map<DyeColor, DeferredBlock<WallBlock>> CONCRETE_WALLS = registerConcreteWalls();
+
+    public static final DeferredBlock<Block> GRANITE_PAVER =
+            BLOCKS.register("granite_paver", registryName -> new Block(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<Block> STONE_PAVER =
+            BLOCKS.register("stone_paver", registryName -> new Block(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+
+    private static java.util.Map<DyeColor, DeferredBlock<WallBlock>> registerConcreteWalls() {
+        var walls = new java.util.EnumMap<DyeColor, DeferredBlock<WallBlock>>(DyeColor.class);
+        for (DyeColor color : DyeColor.values()) {
+            walls.put(color, BLOCKS.register(color.getName() + "_concrete_wall", registryName -> new WallBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_WALL)
+                            .mapColor(color)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName)))));
+        }
+        return java.util.Collections.unmodifiableMap(walls);
+    }
 
     public static final DeferredBlock<CountertopBlock> CALCITE_COUNTERTOP =
             BLOCKS.register("calcite_countertop", registryName -> new CountertopBlock(
@@ -1104,6 +1130,9 @@ public class ModBlocks {
     public static final java.util.Map<String, DeferredBlock<DiningTableBlock>> DINING_TABLES = registerDiningTables();
     public static final DeferredBlock<DiningTableBlock> OAK_DINING_TABLE = DINING_TABLES.get("oak_dining_table");
 
+    public static final java.util.Map<String, DeferredBlock<DiningTableBlock>> COFFEE_TABLES = registerCoffeeTables();
+    public static final DeferredBlock<DiningTableBlock> OAK_COFFEE_TABLE = COFFEE_TABLES.get("oak_coffee_table");
+
     public static final java.util.Map<String, DeferredBlock<NightstandBlock>> NIGHTSTANDS = registerNightstands();
     public static final DeferredBlock<NightstandBlock> OAK_NIGHTSTAND = NIGHTSTANDS.get("oak_nightstand");
 
@@ -1226,6 +1255,36 @@ public class ModBlocks {
         return properties;
     }
 
+    public static final java.util.Map<DyeColor, DeferredBlock<PatioChairBlock>> PATIO_CHAIRS =
+            registerDyeableChairs("patio_chair", PatioChairBlock::new);
+    public static final java.util.Map<DyeColor, DeferredBlock<BarStoolBlock>> BAR_STOOLS =
+            registerDyeableChairs("bar_stool", BarStoolBlock::new);
+
+    public static final java.util.Map<String, DeferredBlock<AdirondackChairBlock>> ADIRONDACK_CHAIRS =
+            registerAdirondackChairs();
+    public static final DeferredBlock<AdirondackChairBlock> SPRUCE_ADIRONDACK_CHAIR =
+            ADIRONDACK_CHAIRS.get("spruce_adirondack_chair");
+
+    private static java.util.Map<String, DeferredBlock<AdirondackChairBlock>> registerAdirondackChairs() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<AdirondackChairBlock>>();
+        for (var wood : DiningChairVariants.VALUES) {
+            String id = wood.wood() + "_adirondack_chair";
+            blocks.put(id, BLOCKS.register(id, name ->
+                    new AdirondackChairBlock(furnitureProperties(wood.sourceBlock(), name))));
+        }
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
+    private static <T extends Block> java.util.Map<DyeColor, DeferredBlock<T>> registerDyeableChairs(
+            String suffix, java.util.function.BiFunction<BlockBehaviour.Properties, DyeColor, T> factory) {
+        var blocks = new java.util.EnumMap<DyeColor, DeferredBlock<T>>(DyeColor.class);
+        for (DyeColor color : DyeColor.values()) {
+            blocks.put(color, BLOCKS.register(color.getName() + "_" + suffix, name ->
+                    factory.apply(furnitureProperties(Blocks.IRON_BLOCK, name), color)));
+        }
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
     private static java.util.Map<String, DeferredBlock<DiningChairBlock>> registerDiningChairs() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<DiningChairBlock>>();
         DiningChairVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
@@ -1237,6 +1296,19 @@ public class ModBlocks {
         return java.util.Collections.unmodifiableMap(blocks);
     }
 
+    public static final java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FirePitBlock>> FIRE_PITS = registerFirePits();
+
+    private static java.util.Map<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FirePitBlock>> registerFirePits() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<com.digitaldownpour.atouchofclass.blocks.FirePitBlock>>();
+        FirePitVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
+                BLOCKS.register(definition.id(), registryName -> new com.digitaldownpour.atouchofclass.blocks.FirePitBlock(
+                        BlockBehaviour.Properties.ofFullCopy(definition.sourceBlock())
+                                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                                .noOcclusion()
+                                .lightLevel(state -> state.getValue(com.digitaldownpour.atouchofclass.blocks.FirePitBlock.LIT) ? 15 : 0)))));
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
     private static java.util.Map<String, DeferredBlock<DiningTableBlock>> registerDiningTables() {
         var blocks = new java.util.LinkedHashMap<String, DeferredBlock<DiningTableBlock>>();
         DiningTableVariants.VALUES.forEach(definition -> blocks.put(definition.id(),
@@ -1245,6 +1317,14 @@ public class ModBlocks {
                     BlockBehaviour.Properties properties = furnitureProperties(source, registryName);
                     return new DiningTableBlock(properties);
                 })));
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
+
+    private static java.util.Map<String, DeferredBlock<DiningTableBlock>> registerCoffeeTables() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<DiningTableBlock>>();
+        DiningTableVariants.VALUES.forEach(definition -> blocks.put(definition.coffeeTableId(),
+                BLOCKS.register(definition.coffeeTableId(), registryName -> new DiningTableBlock(
+                        furnitureProperties(definition.sourceBlock(), registryName), true))));
         return java.util.Collections.unmodifiableMap(blocks);
     }
 
