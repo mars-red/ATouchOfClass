@@ -470,6 +470,19 @@
     "atouchofclass:pale_oak_coffee_table",
     "atouchofclass:bamboo_coffee_table",
     "atouchofclass:crimson_coffee_table",
-    "atouchofclass:warped_coffee_table"
+    "atouchofclass:warped_coffee_table",
+    "atouchofclass:spruce_adirondack_chair",
+    "atouchofclass:oak_adirondack_chair",
+    "atouchofclass:birch_adirondack_chair",
+    "atouchofclass:poplar_adirondack_chair",
+    "atouchofclass:jungle_adirondack_chair",
+    "atouchofclass:acacia_adirondack_chair",
+    "atouchofclass:dark_oak_adirondack_chair",
+    "atouchofclass:mangrove_adirondack_chair",
+    "atouchofclass:cherry_adirondack_chair",
+    "atouchofclass:pale_oak_adirondack_chair",
+    "atouchofclass:bamboo_adirondack_chair",
+    "atouchofclass:crimson_adirondack_chair",
+    "atouchofclass:warped_adirondack_chair"
   ]
 }

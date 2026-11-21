@@ -2,7 +2,8 @@ package com.digitaldownpour.atouchofclass.entities;
 
 import com.digitaldownpour.atouchofclass.ModBlocks;
 import com.digitaldownpour.atouchofclass.blocks.DiningChairBlock;
-import com.digitaldownpour.atouchofclass.blocks.PatioChairBlock;
+import com.digitaldownpour.atouchofclass.blocks.OutdoorChairBlock;
+import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -45,8 +46,16 @@ public class SeatEntity extends Entity {
                 || state.is(ModBlocks.LEATHER_SOFA.get())
                 || state.is(ModBlocks.LEATHER_CHAIR.get())
                 || state.getBlock() instanceof DiningChairBlock
-                || state.getBlock() instanceof PatioChairBlock
+                || state.getBlock() instanceof OutdoorChairBlock
                 || state.is(ModBlocks.TOILET.get());
+    }
+
+    @Override
+    protected Vec3 getPassengerAttachmentPoint(Entity passenger, EntityDimensions dimensions, float scale) {
+        if (level().getBlockState(blockPosition()).getBlock() instanceof OutdoorChairBlock chair) {
+            return new Vec3(0, blockPosition().getY() + chair.seatHeight() - getY(), 0);
+        }
+        return super.getPassengerAttachmentPoint(passenger, dimensions, scale);
     }
 
     /** Mount first, then turn the rider's body, head, and client camera together. */
@@ -73,7 +82,7 @@ public class SeatEntity extends Entity {
         BlockPos pos = blockPosition();
         var state = level().getBlockState(pos);
         boolean tallBackChair = state.getBlock() instanceof DiningChairBlock
-                || state.getBlock() instanceof PatioChairBlock;
+                || state.getBlock() instanceof OutdoorChairBlock;
         boolean leatherSeating = state.is(ModBlocks.LEATHER_CHAIR.get())
                 || state.is(ModBlocks.LEATHER_LOVE_SEAT.get()) || state.is(ModBlocks.LEATHER_SOFA.get());
         if (!tallBackChair && !leatherSeating) {

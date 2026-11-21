@@ -5,6 +5,7 @@ import com.digitaldownpour.atouchofclass.entities.SeatEntity;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.network.chat.Component;
@@ -74,6 +75,72 @@ public class PatioChairGameTests {
             helper.assertTrue(seat.isRemoved(), Component.literal("The mount must be removed after dismount"));
             helper.setBlock(POS.relative(front), Blocks.AIR);
             level.destroyBlock(pos, false);
+        }
+        helper.succeed();
+    }
+
+    public static void adirondackLowSeatKeepsItsMountAndDismountsToOpenSide(GameTestHelper helper) {
+        var level = helper.getLevel();
+        var pos = helper.absolutePos(POS);
+        helper.setBlock(POS.below(), Blocks.STONE);
+        for (Direction direction : Direction.Plane.HORIZONTAL) {
+            helper.setBlock(POS.below().relative(direction), Blocks.STONE);
+        }
+        var chair = ModBlocks.SPRUCE_ADIRONDACK_CHAIR.get();
+        for (Direction front : Direction.Plane.HORIZONTAL) {
+            var player = helper.makeMockPlayer(GameType.SURVIVAL);
+            player.setYRot(front.getOpposite().toYRot());
+            var stack = new ItemStack(ModItems.SPRUCE_ADIRONDACK_CHAIR_ITEM.get());
+            var hit = new BlockHitResult(Vec3.atCenterOf(pos.below()), Direction.UP, pos.below(), false);
+            stack.useOn(new UseOnContext(level, player, InteractionHand.MAIN_HAND, stack, hit));
+            var state = level.getBlockState(pos);
+            helper.assertTrue(state.is(chair) && state.getValue(PatioChairBlock.FACING) == front,
+                    Component.literal("The Adirondack chair must face its placer"));
+
+            helper.useBlock(POS, player);
+            var seat = GameTestChecks.requireType(player.getVehicle(), SeatEntity.class);
+            seat.tick();
+            helper.assertTrue(!seat.isRemoved() && seat.blockPosition().equals(pos)
+                            && player.getYRot() == front.toYRot()
+                            && Math.abs(seat.getPassengerRidingPosition(player).y - pos.getY() - chair.seatHeight()) < 0.0001,
+                    Component.literal("The rider must face forward and sit at the lowered seat height"));
+
+            helper.setBlock(POS.relative(front), Blocks.STONE);
+            player.stopRiding();
+            helper.assertTrue(player.blockPosition().equals(pos.relative(front.getClockWise())) && level.noCollision(player),
+                    Component.literal("Dismount must find the open side when the front is blocked"));
+            seat.tick();
+            helper.assertTrue(seat.isRemoved(), Component.literal("Dismount must clean up the mount"));
+            helper.setBlock(POS.relative(front), Blocks.AIR);
+            level.destroyBlock(pos, false);
+        }
+        helper.succeed();
+    }
+
+    public static void adirondackVariantsCraftWithMatchingPlanks(GameTestHelper helper) {
+        var level = helper.getLevel();
+        var server = level.getServer();
+        for (var wood : DiningChairVariants.VALUES) {
+            String id = wood.wood() + "_adirondack_chair";
+            var chair = ModBlocks.ADIRONDACK_CHAIRS.get(id).get();
+            var item = ModItems.ADIRONDACK_CHAIR_ITEMS.get(id).get();
+            helper.assertTrue(item.getBlock() == chair, Component.literal(id + " must place its matching block"));
+
+            var planks = new ItemStack(BuiltInRegistries.ITEM.getValue(
+                    Identifier.withDefaultNamespace(wood.wood() + "_planks")));
+            var empty = ItemStack.EMPTY;
+            var input = CraftingInput.of(3, 3, List.of(planks, empty, empty, planks, planks, empty, planks, empty, planks));
+            var key = ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(ATouchofClass.MODID, id));
+            var recipe = (ShapedRecipe) server.getRecipeManager().byKey(key).orElseThrow().value();
+            var result = recipe.assemble(input);
+            helper.assertTrue(recipe.matches(input, level) && result.is(item) && result.getCount() == 2,
+                    Component.literal(id + " must yield two chairs from matching planks"));
+            var wrong = new ItemStack(wood.wood().equals("oak") ? Blocks.SPRUCE_PLANKS : Blocks.OAK_PLANKS);
+            var mixed = CraftingInput.of(3, 3, List.of(wrong, empty, empty, planks, planks, empty, planks, empty, planks));
+            helper.assertTrue(!recipe.matches(mixed, level), Component.literal(id + " must reject mixed planks"));
+            helper.assertTrue(server.getAdvancements().get(Identifier.fromNamespaceAndPath(
+                            ATouchofClass.MODID, "recipes/decorations/" + id)) != null,
+                    Component.literal(id + " must have a recipe advancement"));
         }
         helper.succeed();
     }

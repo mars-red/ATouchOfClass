@@ -85,6 +85,8 @@ public final class ModGameTests {
         FUNCTIONS.register("diningchairgametests.stickandoakslabrecipemakestwochairs", () -> DiningChairGameTests::stickAndOakSlabRecipeMakesTwoChairs);
         FUNCTIONS.register("patiochairgametests.chairsfaceandseatplayerandkeepriderwhendyed", () -> PatioChairGameTests::chairsFaceAndSeatPlayerAndKeepRiderWhenDyed);
         FUNCTIONS.register("patiochairgametests.allcolorscraftwithmatchingwoolordye", () -> PatioChairGameTests::allColorsCraftWithMatchingWoolOrDye);
+        FUNCTIONS.register("patiochairgametests.adirondacklowseatkeepsitsmountanddismountstoopenside", () -> PatioChairGameTests::adirondackLowSeatKeepsItsMountAndDismountsToOpenSide);
+        FUNCTIONS.register("patiochairgametests.adirondackvariantscraftwithmatchingplanks", () -> PatioChairGameTests::adirondackVariantsCraftWithMatchingPlanks);
         FUNCTIONS.register("diningtablegametests.rectanglehasfourlegsandcontinuoustop", () -> DiningTableGameTests::rectangleHasFourLegsAndContinuousTop);
         FUNCTIONS.register("diningtablegametests.diagonalremovalcreatesandrefillsinsidecorner", () -> DiningTableGameTests::diagonalRemovalCreatesAndRefillsInsideCorner);
         FUNCTIONS.register("diningtablegametests.isolatedmatchessidetableanddoesnotjoinotherfurniture", () -> DiningTableGameTests::isolatedMatchesSideTableAndDoesNotJoinOtherFurniture);
