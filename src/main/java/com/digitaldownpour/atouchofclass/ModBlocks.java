@@ -154,6 +154,15 @@ public class ModBlocks {
 
     public static final java.util.Map<DyeColor, DeferredBlock<WallBlock>> CONCRETE_WALLS = registerConcreteWalls();
 
+    public static final DeferredBlock<Block> GRANITE_PAVER =
+            BLOCKS.register("granite_paver", registryName -> new Block(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<Block> STONE_PAVER =
+            BLOCKS.register("stone_paver", registryName -> new Block(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+
     private static java.util.Map<DyeColor, DeferredBlock<WallBlock>> registerConcreteWalls() {
         var walls = new java.util.EnumMap<DyeColor, DeferredBlock<WallBlock>>(DyeColor.class);
         for (DyeColor color : DyeColor.values()) {

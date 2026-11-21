@@ -70,6 +70,8 @@
                    "atouchofclass:calcite_tile",
                    "atouchofclass:calcite_slab",
                    "atouchofclass:buff_bricks",
+                   "atouchofclass:granite_paver",
+                   "atouchofclass:stone_paver",
                    "atouchofclass:buff_brick_slab",
                    "atouchofclass:buff_brick_stairs",
                    "atouchofclass:buff_brick_wall",
