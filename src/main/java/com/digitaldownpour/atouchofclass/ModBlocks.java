@@ -60,6 +60,8 @@ import com.digitaldownpour.atouchofclass.blocks.LoveSeatBlock;
 import com.digitaldownpour.atouchofclass.blocks.SofaBlock;
 import com.digitaldownpour.atouchofclass.blocks.ChairBlock;
 import com.digitaldownpour.atouchofclass.blocks.DiningChairBlock;
+import com.digitaldownpour.atouchofclass.blocks.PatioChairBlock;
+import net.minecraft.world.item.DyeColor;
 import com.digitaldownpour.atouchofclass.blocks.SideTableBlock;
 import com.digitaldownpour.atouchofclass.blocks.DiningTableBlock;
 import com.digitaldownpour.atouchofclass.blocks.NightstandBlock;
@@ -1227,6 +1229,17 @@ public class ModBlocks {
                 .noOcclusion();
         if (source.defaultBlockState().ignitedByLava()) properties.ignitedByLava();
         return properties;
+    }
+
+    public static final java.util.Map<DyeColor, DeferredBlock<PatioChairBlock>> PATIO_CHAIRS = registerPatioChairs();
+
+    private static java.util.Map<DyeColor, DeferredBlock<PatioChairBlock>> registerPatioChairs() {
+        var blocks = new java.util.EnumMap<DyeColor, DeferredBlock<PatioChairBlock>>(DyeColor.class);
+        for (DyeColor color : DyeColor.values()) {
+            blocks.put(color, BLOCKS.register(color.getName() + "_patio_chair", name ->
+                    new PatioChairBlock(furnitureProperties(Blocks.IRON_BLOCK, name), color)));
+        }
+        return java.util.Collections.unmodifiableMap(blocks);
     }
 
     private static java.util.Map<String, DeferredBlock<DiningChairBlock>> registerDiningChairs() {

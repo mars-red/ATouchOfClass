@@ -1,0 +1,17 @@
+{
+  "category": "building",
+  "type": "minecraft:crafting_shaped",
+  "group": "atouchofclass:patio_chair",
+  "pattern": [
+    "ICI",
+    "I I"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "C": "minecraft:green_wool"
+  },
+  "result": {
+    "id": "atouchofclass:green_patio_chair",
+    "count": 1
+  }
+}

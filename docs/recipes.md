@@ -1590,6 +1590,27 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_glazed_terracotta_wall_tiles.json)
 
+## black-patio-chair-from-dye
+
+**Output:** 1 × Black Patio Chair (`atouchofclass:black_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:black_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_patio_chair_from_dye.json)
+
+## black-patio-chair
+
+**Output:** 1 × Black Patio Chair (`atouchofclass:black_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:black_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_patio_chair.json)
+
 ## blue-concrete-countertop
 
 **Output:** 6 × Blue Concrete Countertop (`atouchofclass:blue_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -1654,6 +1675,27 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_orchid_bunch.json)
 
+## blue-patio-chair-from-dye
+
+**Output:** 1 × Blue Patio Chair (`atouchofclass:blue_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:blue_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_patio_chair_from_dye.json)
+
+## blue-patio-chair
+
+**Output:** 1 × Blue Patio Chair (`atouchofclass:blue_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:blue_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_patio_chair.json)
+
 ## brick-window-ledge
 
 **Output:** 16 × Brick Window Ledge (`atouchofclass:brick_window_ledge`). **Type:** `minecraft:crafting_shaped`.
@@ -1716,6 +1758,27 @@ G.
 `G` = `minecraft:brown_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_glazed_terracotta_wall_tiles.json)
+
+## brown-patio-chair-from-dye
+
+**Output:** 1 × Brown Patio Chair (`atouchofclass:brown_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:brown_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_patio_chair_from_dye.json)
+
+## brown-patio-chair
+
+**Output:** 1 × Brown Patio Chair (`atouchofclass:brown_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:brown_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_patio_chair.json)
 
 ## brushed-stainless-steel
 
@@ -3296,6 +3359,27 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_glazed_terracotta_wall_tiles.json)
 
+## cyan-patio-chair-from-dye
+
+**Output:** 1 × Cyan Patio Chair (`atouchofclass:cyan_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:cyan_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_patio_chair_from_dye.json)
+
+## cyan-patio-chair
+
+**Output:** 1 × Cyan Patio Chair (`atouchofclass:cyan_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:cyan_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_patio_chair.json)
+
 ## dado-rail
 
 **Output:** 16 × Dado Rail (`atouchofclass:dado_rail`). **Type:** `minecraft:crafting_shaped`.
@@ -4199,6 +4283,27 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_glazed_terracotta_wall_tiles.json)
 
+## gray-patio-chair-from-dye
+
+**Output:** 1 × Gray Patio Chair (`atouchofclass:gray_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:gray_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_patio_chair_from_dye.json)
+
+## gray-patio-chair
+
+**Output:** 1 × Gray Patio Chair (`atouchofclass:gray_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:gray_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_patio_chair.json)
+
 ## green-concrete-countertop
 
 **Output:** 6 × Green Concrete Countertop (`atouchofclass:green_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4249,6 +4354,27 @@ G.
 `G` = `minecraft:green_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_glazed_terracotta_wall_tiles.json)
+
+## green-patio-chair-from-dye
+
+**Output:** 1 × Green Patio Chair (`atouchofclass:green_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:green_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_patio_chair_from_dye.json)
+
+## green-patio-chair
+
+**Output:** 1 × Green Patio Chair (`atouchofclass:green_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:green_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_patio_chair.json)
 
 ## induction-cooktop
 
@@ -4887,6 +5013,27 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_glazed_terracotta_wall_tiles.json)
 
+## light-blue-patio-chair-from-dye
+
+**Output:** 1 × Light Blue Patio Chair (`atouchofclass:light_blue_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:light_blue_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_patio_chair_from_dye.json)
+
+## light-blue-patio-chair
+
+**Output:** 1 × Light Blue Patio Chair (`atouchofclass:light_blue_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:light_blue_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_patio_chair.json)
+
 ## light-gray-concrete-countertop
 
 **Output:** 6 × Light Gray Concrete Countertop (`atouchofclass:light_gray_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4937,6 +5084,27 @@ G.
 `G` = `minecraft:light_gray_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_glazed_terracotta_wall_tiles.json)
+
+## light-gray-patio-chair-from-dye
+
+**Output:** 1 × Light Gray Patio Chair (`atouchofclass:light_gray_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:light_gray_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_patio_chair_from_dye.json)
+
+## light-gray-patio-chair
+
+**Output:** 1 × Light Gray Patio Chair (`atouchofclass:light_gray_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:light_gray_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_patio_chair.json)
 
 ## lilac-bunch
 
@@ -5015,6 +5183,27 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_glazed_terracotta_wall_tiles.json)
 
+## lime-patio-chair-from-dye
+
+**Output:** 1 × Lime Patio Chair (`atouchofclass:lime_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:lime_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_patio_chair_from_dye.json)
+
+## lime-patio-chair
+
+**Output:** 1 × Lime Patio Chair (`atouchofclass:lime_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:lime_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_patio_chair.json)
+
 ## magenta-concrete-countertop
 
 **Output:** 6 × Magenta Concrete Countertop (`atouchofclass:magenta_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -5065,6 +5254,27 @@ G.
 `G` = `minecraft:magenta_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_glazed_terracotta_wall_tiles.json)
+
+## magenta-patio-chair-from-dye
+
+**Output:** 1 × Magenta Patio Chair (`atouchofclass:magenta_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:magenta_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_patio_chair_from_dye.json)
+
+## magenta-patio-chair
+
+**Output:** 1 × Magenta Patio Chair (`atouchofclass:magenta_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:magenta_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_patio_chair.json)
 
 ## mangrove-baluster
 
@@ -6177,6 +6387,27 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_glazed_terracotta_wall_tiles.json)
 
+## orange-patio-chair-from-dye
+
+**Output:** 1 × Orange Patio Chair (`atouchofclass:orange_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:orange_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_patio_chair_from_dye.json)
+
+## orange-patio-chair
+
+**Output:** 1 × Orange Patio Chair (`atouchofclass:orange_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:orange_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_patio_chair.json)
+
 ## orange-tulip-bunch
 
 **Output:** 1 × Orange Tulip Bunch (`atouchofclass:orange_tulip_bunch`). **Type:** `minecraft:crafting_shaped`.
@@ -6823,6 +7054,27 @@ G.
 `G` = `minecraft:pink_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_glazed_terracotta_wall_tiles.json)
+
+## pink-patio-chair-from-dye
+
+**Output:** 1 × Pink Patio Chair (`atouchofclass:pink_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:pink_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_patio_chair_from_dye.json)
+
+## pink-patio-chair
+
+**Output:** 1 × Pink Patio Chair (`atouchofclass:pink_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:pink_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_patio_chair.json)
 
 ## pink-petals-bunch
 
@@ -7634,6 +7886,27 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_glazed_terracotta_wall_tiles.json)
 
+## purple-patio-chair-from-dye
+
+**Output:** 1 × Purple Patio Chair (`atouchofclass:purple_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:purple_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_patio_chair_from_dye.json)
+
+## purple-patio-chair
+
+**Output:** 1 × Purple Patio Chair (`atouchofclass:purple_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:purple_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_patio_chair.json)
+
 ## purpur-countertop
 
 **Output:** 6 × Purpur Countertop (`atouchofclass:purpur_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -7795,6 +8068,27 @@ S.S
 `S` = `minecraft:red_nether_brick_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_nether_brick_sink.json)
+
+## red-patio-chair-from-dye
+
+**Output:** 1 × Red Patio Chair (`atouchofclass:red_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:red_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_patio_chair_from_dye.json)
+
+## red-patio-chair
+
+**Output:** 1 × Red Patio Chair (`atouchofclass:red_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:red_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_patio_chair.json)
 
 ## red-tulip-bunch
 
@@ -10269,6 +10563,19 @@ G.
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_glazed_terracotta_wall_tiles.json)
 
+## white-patio-chair
+
+**Output:** 1 × White Patio Chair (`atouchofclass:white_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:white_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_patio_chair.json)
+
 ## white-stucco
 
 **Output:** 1 × White Stucco (`atouchofclass:white_stucco`). **Type:** `minecraft:crafting_shaped`.
@@ -10385,3 +10692,24 @@ G.
 `G` = `minecraft:yellow_glazed_terracotta`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_glazed_terracotta_wall_tiles.json)
+
+## yellow-patio-chair-from-dye
+
+**Output:** 1 × Yellow Patio Chair (`atouchofclass:yellow_patio_chair`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_patio_chair`, `minecraft:yellow_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_patio_chair_from_dye.json)
+
+## yellow-patio-chair
+
+**Output:** 1 × Yellow Patio Chair (`atouchofclass:yellow_patio_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ICI
+I.I
+```
+
+`C` = `minecraft:yellow_wool`; `I` = `minecraft:iron_ingot`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_patio_chair.json)

@@ -240,7 +240,23 @@
                    "atouchofclass:brown_concrete_fire_pit",
                    "atouchofclass:green_concrete_fire_pit",
                    "atouchofclass:red_concrete_fire_pit",
-                   "atouchofclass:black_concrete_fire_pit"
+                   "atouchofclass:black_concrete_fire_pit",
+                   "atouchofclass:white_patio_chair",
+                   "atouchofclass:orange_patio_chair",
+                   "atouchofclass:magenta_patio_chair",
+                   "atouchofclass:light_blue_patio_chair",
+                   "atouchofclass:yellow_patio_chair",
+                   "atouchofclass:lime_patio_chair",
+                   "atouchofclass:pink_patio_chair",
+                   "atouchofclass:gray_patio_chair",
+                   "atouchofclass:light_gray_patio_chair",
+                   "atouchofclass:cyan_patio_chair",
+                   "atouchofclass:purple_patio_chair",
+                   "atouchofclass:blue_patio_chair",
+                   "atouchofclass:brown_patio_chair",
+                   "atouchofclass:green_patio_chair",
+                   "atouchofclass:red_patio_chair",
+                   "atouchofclass:black_patio_chair"
                ],
     "replace":  false
 }

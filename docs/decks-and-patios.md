@@ -2,7 +2,7 @@
 
 [Manual contents](README.md) · [Recipes](recipes.md) · [Catalog](catalog.md)
 
-Outdoor living pieces for decks, terraces, and patios. This chapter currently covers the fire pit.
+Outdoor living pieces for decks, terraces, and patios include patio chairs and concrete fire pits.
 
 ## Fire pits
 
@@ -33,6 +33,29 @@ Fire pits of the **same color** join automatically with their orthogonal neighbo
 - A lit pit emits light level **15**, crackles, and releases smoke. Living creatures standing in a lit pit take fire damage, as with a campfire.
 - Each pit is lit and extinguished separately, even when joined. Flames need no fuel and do not burn out.
 - The pit cannot cook food and cannot be waterlogged.
+
+## Patio chairs
+
+![patio-chairs.png](images/decks-and-patios/patio-chairs.png)
+
+Patio chairs have a dark gray frame and a pair of wool cushions in any of the 16 dye colors. Each chair seats one player.
+
+### Placement and seating
+
+Place the chair on a sturdy surface with room above for the backrest. The chair faces you when placed. Use it to sit facing the chair's front. Sneak to dismount.
+
+### Crafting and dyeing
+
+Use four iron ingots (`I`) and one block of wool (`C`) in the desired cushion color.
+
+```text
+I C I
+I . I
+```
+
+The recipe yields **1** patio chair and unlocks when you pick up the matching wool. See the [white patio chair recipe](recipes.md#white-patio-chair) for an example.
+
+Use a dye on a placed **white patio chair** to color both cushions. You can also combine one white chair and one dye in a crafting grid. Only white chairs accept dye. See the [blue patio chair dyeing recipe](recipes.md#blue-patio-chair-from-dye) for an example.
 
 ## Troubleshooting
 

@@ -2,11 +2,11 @@
 
 [Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)
 
-Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, coffee-table, dining-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, concrete-fire-pit, wood-railing, wood-trim, and copper-appliance registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
+Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, coffee-table, dining-chair, patio-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, concrete-fire-pit, wood-railing, wood-trim, and copper-appliance registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**828 registered player-content items.**
+**844 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -127,16 +127,19 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Black Concrete Fire Pit | `atouchofclass:black_concrete_fire_pit` | Survival obtainable — [black_concrete_fire_pit](recipes.md#black-concrete-fire-pit) |
 | Black Concrete Sink | `atouchofclass:black_concrete_sink` | Survival obtainable — [black_concrete_sink](recipes.md#black-concrete-sink) |
 | Black Glazed Terracotta Wall Tiles | `atouchofclass:black_glazed_terracotta_wall_tiles` | Survival obtainable — [black_glazed_terracotta_wall_tiles](recipes.md#black-glazed-terracotta-wall-tiles) |
+| Black Patio Chair | `atouchofclass:black_patio_chair` | Survival obtainable — [black_patio_chair_from_dye](recipes.md#black-patio-chair-from-dye), [black_patio_chair](recipes.md#black-patio-chair) |
 | Blue Concrete Countertop | `atouchofclass:blue_concrete_countertop` | Survival obtainable — [blue_concrete_countertop](recipes.md#blue-concrete-countertop) |
 | Blue Concrete Fire Pit | `atouchofclass:blue_concrete_fire_pit` | Survival obtainable — [blue_concrete_fire_pit](recipes.md#blue-concrete-fire-pit) |
 | Blue Concrete Sink | `atouchofclass:blue_concrete_sink` | Survival obtainable — [blue_concrete_sink](recipes.md#blue-concrete-sink) |
 | Blue Glazed Terracotta Wall Tiles | `atouchofclass:blue_glazed_terracotta_wall_tiles` | Survival obtainable — [blue_glazed_terracotta_wall_tiles](recipes.md#blue-glazed-terracotta-wall-tiles) |
 | Blue Orchid Bunch | `atouchofclass:blue_orchid_bunch` | Survival obtainable — [blue_orchid_bunch](recipes.md#blue-orchid-bunch) |
+| Blue Patio Chair | `atouchofclass:blue_patio_chair` | Survival obtainable — [blue_patio_chair_from_dye](recipes.md#blue-patio-chair-from-dye), [blue_patio_chair](recipes.md#blue-patio-chair) |
 | Brick Window Ledge | `atouchofclass:brick_window_ledge` | Survival obtainable — [brick_window_ledge](recipes.md#brick-window-ledge) |
 | Brown Concrete Countertop | `atouchofclass:brown_concrete_countertop` | Survival obtainable — [brown_concrete_countertop](recipes.md#brown-concrete-countertop) |
 | Brown Concrete Fire Pit | `atouchofclass:brown_concrete_fire_pit` | Survival obtainable — [brown_concrete_fire_pit](recipes.md#brown-concrete-fire-pit) |
 | Brown Concrete Sink | `atouchofclass:brown_concrete_sink` | Survival obtainable — [brown_concrete_sink](recipes.md#brown-concrete-sink) |
 | Brown Glazed Terracotta Wall Tiles | `atouchofclass:brown_glazed_terracotta_wall_tiles` | Survival obtainable — [brown_glazed_terracotta_wall_tiles](recipes.md#brown-glazed-terracotta-wall-tiles) |
+| Brown Patio Chair | `atouchofclass:brown_patio_chair` | Survival obtainable — [brown_patio_chair_from_dye](recipes.md#brown-patio-chair-from-dye), [brown_patio_chair](recipes.md#brown-patio-chair) |
 | Brushed Stainless Steel | `atouchofclass:brushed_stainless_steel` | Survival obtainable — [brushed_stainless_steel](recipes.md#brushed-stainless-steel) |
 | Bucket of Plaster | `atouchofclass:bucket_of_plaster` | Survival obtainable — [bucket_of_plaster](recipes.md#bucket-of-plaster) |
 | Buff Brick Siding | `atouchofclass:buff_brick` | Survival obtainable — [buff_brick](recipes.md#buff-brick) |
@@ -253,6 +256,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Cyan Concrete Fire Pit | `atouchofclass:cyan_concrete_fire_pit` | Survival obtainable — [cyan_concrete_fire_pit](recipes.md#cyan-concrete-fire-pit) |
 | Cyan Concrete Sink | `atouchofclass:cyan_concrete_sink` | Survival obtainable — [cyan_concrete_sink](recipes.md#cyan-concrete-sink) |
 | Cyan Glazed Terracotta Wall Tiles | `atouchofclass:cyan_glazed_terracotta_wall_tiles` | Survival obtainable — [cyan_glazed_terracotta_wall_tiles](recipes.md#cyan-glazed-terracotta-wall-tiles) |
+| Cyan Patio Chair | `atouchofclass:cyan_patio_chair` | Survival obtainable — [cyan_patio_chair_from_dye](recipes.md#cyan-patio-chair-from-dye), [cyan_patio_chair](recipes.md#cyan-patio-chair) |
 | Dado Rail | `atouchofclass:dado_rail` | Survival obtainable — [dado_rail](recipes.md#dado-rail) |
 | Dandelion Bunch | `atouchofclass:dandelion_bunch` | Survival obtainable — [dandelion_bunch](recipes.md#dandelion-bunch) |
 | Dark Blue Floral Wallpaper | `atouchofclass:dark_blue_floral_wallpaper` | Survival obtainable — [dark_blue_floral_wallpaper](recipes.md#dark-blue-floral-wallpaper) |
@@ -333,10 +337,12 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Gray Concrete Fire Pit | `atouchofclass:gray_concrete_fire_pit` | Survival obtainable — [gray_concrete_fire_pit](recipes.md#gray-concrete-fire-pit) |
 | Gray Concrete Sink | `atouchofclass:gray_concrete_sink` | Survival obtainable — [gray_concrete_sink](recipes.md#gray-concrete-sink) |
 | Gray Glazed Terracotta Wall Tiles | `atouchofclass:gray_glazed_terracotta_wall_tiles` | Survival obtainable — [gray_glazed_terracotta_wall_tiles](recipes.md#gray-glazed-terracotta-wall-tiles) |
+| Gray Patio Chair | `atouchofclass:gray_patio_chair` | Survival obtainable — [gray_patio_chair_from_dye](recipes.md#gray-patio-chair-from-dye), [gray_patio_chair](recipes.md#gray-patio-chair) |
 | Green Concrete Countertop | `atouchofclass:green_concrete_countertop` | Survival obtainable — [green_concrete_countertop](recipes.md#green-concrete-countertop) |
 | Green Concrete Fire Pit | `atouchofclass:green_concrete_fire_pit` | Survival obtainable — [green_concrete_fire_pit](recipes.md#green-concrete-fire-pit) |
 | Green Concrete Sink | `atouchofclass:green_concrete_sink` | Survival obtainable — [green_concrete_sink](recipes.md#green-concrete-sink) |
 | Green Glazed Terracotta Wall Tiles | `atouchofclass:green_glazed_terracotta_wall_tiles` | Survival obtainable — [green_glazed_terracotta_wall_tiles](recipes.md#green-glazed-terracotta-wall-tiles) |
+| Green Patio Chair | `atouchofclass:green_patio_chair` | Survival obtainable — [green_patio_chair_from_dye](recipes.md#green-patio-chair-from-dye), [green_patio_chair](recipes.md#green-patio-chair) |
 | Induction Cooktop | `atouchofclass:induction_cooktop` | Survival obtainable — [induction_cooktop](recipes.md#induction-cooktop) |
 | Jungle Baluster | `atouchofclass:jungle_baluster` | Survival obtainable — [jungle_baluster](recipes.md#jungle-baluster) |
 | Jungle Balustrade | `atouchofclass:jungle_balustrade` | Survival obtainable — [jungle_balustrade](recipes.md#jungle-balustrade) |
@@ -384,20 +390,24 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Light Blue Concrete Fire Pit | `atouchofclass:light_blue_concrete_fire_pit` | Survival obtainable — [light_blue_concrete_fire_pit](recipes.md#light-blue-concrete-fire-pit) |
 | Light Blue Concrete Sink | `atouchofclass:light_blue_concrete_sink` | Survival obtainable — [light_blue_concrete_sink](recipes.md#light-blue-concrete-sink) |
 | Light Blue Glazed Terracotta Wall Tiles | `atouchofclass:light_blue_glazed_terracotta_wall_tiles` | Survival obtainable — [light_blue_glazed_terracotta_wall_tiles](recipes.md#light-blue-glazed-terracotta-wall-tiles) |
+| Light Blue Patio Chair | `atouchofclass:light_blue_patio_chair` | Survival obtainable — [light_blue_patio_chair_from_dye](recipes.md#light-blue-patio-chair-from-dye), [light_blue_patio_chair](recipes.md#light-blue-patio-chair) |
 | Light Gray Concrete Countertop | `atouchofclass:light_gray_concrete_countertop` | Survival obtainable — [light_gray_concrete_countertop](recipes.md#light-gray-concrete-countertop) |
 | Light Gray Concrete Fire Pit | `atouchofclass:light_gray_concrete_fire_pit` | Survival obtainable — [light_gray_concrete_fire_pit](recipes.md#light-gray-concrete-fire-pit) |
 | Light Gray Concrete Sink | `atouchofclass:light_gray_concrete_sink` | Survival obtainable — [light_gray_concrete_sink](recipes.md#light-gray-concrete-sink) |
 | Light Gray Glazed Terracotta Wall Tiles | `atouchofclass:light_gray_glazed_terracotta_wall_tiles` | Survival obtainable — [light_gray_glazed_terracotta_wall_tiles](recipes.md#light-gray-glazed-terracotta-wall-tiles) |
+| Light Gray Patio Chair | `atouchofclass:light_gray_patio_chair` | Survival obtainable — [light_gray_patio_chair_from_dye](recipes.md#light-gray-patio-chair-from-dye), [light_gray_patio_chair](recipes.md#light-gray-patio-chair) |
 | Lilac Bunch | `atouchofclass:lilac_bunch` | Survival obtainable — [lilac_bunch](recipes.md#lilac-bunch) |
 | Lily Of The Valley Bunch | `atouchofclass:lily_of_the_valley_bunch` | Survival obtainable — [lily_of_the_valley_bunch](recipes.md#lily-of-the-valley-bunch) |
 | Lime Concrete Countertop | `atouchofclass:lime_concrete_countertop` | Survival obtainable — [lime_concrete_countertop](recipes.md#lime-concrete-countertop) |
 | Lime Concrete Fire Pit | `atouchofclass:lime_concrete_fire_pit` | Survival obtainable — [lime_concrete_fire_pit](recipes.md#lime-concrete-fire-pit) |
 | Lime Concrete Sink | `atouchofclass:lime_concrete_sink` | Survival obtainable — [lime_concrete_sink](recipes.md#lime-concrete-sink) |
 | Lime Glazed Terracotta Wall Tiles | `atouchofclass:lime_glazed_terracotta_wall_tiles` | Survival obtainable — [lime_glazed_terracotta_wall_tiles](recipes.md#lime-glazed-terracotta-wall-tiles) |
+| Lime Patio Chair | `atouchofclass:lime_patio_chair` | Survival obtainable — [lime_patio_chair_from_dye](recipes.md#lime-patio-chair-from-dye), [lime_patio_chair](recipes.md#lime-patio-chair) |
 | Magenta Concrete Countertop | `atouchofclass:magenta_concrete_countertop` | Survival obtainable — [magenta_concrete_countertop](recipes.md#magenta-concrete-countertop) |
 | Magenta Concrete Fire Pit | `atouchofclass:magenta_concrete_fire_pit` | Survival obtainable — [magenta_concrete_fire_pit](recipes.md#magenta-concrete-fire-pit) |
 | Magenta Concrete Sink | `atouchofclass:magenta_concrete_sink` | Survival obtainable — [magenta_concrete_sink](recipes.md#magenta-concrete-sink) |
 | Magenta Glazed Terracotta Wall Tiles | `atouchofclass:magenta_glazed_terracotta_wall_tiles` | Survival obtainable — [magenta_glazed_terracotta_wall_tiles](recipes.md#magenta-glazed-terracotta-wall-tiles) |
+| Magenta Patio Chair | `atouchofclass:magenta_patio_chair` | Survival obtainable — [magenta_patio_chair_from_dye](recipes.md#magenta-patio-chair-from-dye), [magenta_patio_chair](recipes.md#magenta-patio-chair) |
 | Mangrove Baluster | `atouchofclass:mangrove_baluster` | Survival obtainable — [mangrove_baluster](recipes.md#mangrove-baluster) |
 | Mangrove Balustrade | `atouchofclass:mangrove_balustrade` | Survival obtainable — [mangrove_balustrade](recipes.md#mangrove-balustrade) |
 | Mangrove Four-Post Bed (Black) | `atouchofclass:mangrove_black_four_post_bed` | Survival obtainable — [mangrove_black_four_post_bed](recipes.md#mangrove-black-four-post-bed) |
@@ -480,6 +490,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Orange Concrete Fire Pit | `atouchofclass:orange_concrete_fire_pit` | Survival obtainable — [orange_concrete_fire_pit](recipes.md#orange-concrete-fire-pit) |
 | Orange Concrete Sink | `atouchofclass:orange_concrete_sink` | Survival obtainable — [orange_concrete_sink](recipes.md#orange-concrete-sink) |
 | Orange Glazed Terracotta Wall Tiles | `atouchofclass:orange_glazed_terracotta_wall_tiles` | Survival obtainable — [orange_glazed_terracotta_wall_tiles](recipes.md#orange-glazed-terracotta-wall-tiles) |
+| Orange Patio Chair | `atouchofclass:orange_patio_chair` | Survival obtainable — [orange_patio_chair_from_dye](recipes.md#orange-patio-chair-from-dye), [orange_patio_chair](recipes.md#orange-patio-chair) |
 | Orange Tulip Bunch | `atouchofclass:orange_tulip_bunch` | Survival obtainable — [orange_tulip_bunch](recipes.md#orange-tulip-bunch) |
 | Oven | `atouchofclass:oven` | Survival obtainable — [oven](recipes.md#oven) |
 | Oxeye Daisy Bunch | `atouchofclass:oxeye_daisy_bunch` | Survival obtainable — [oxeye_daisy_bunch](recipes.md#oxeye-daisy-bunch) |
@@ -540,6 +551,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Pink Floral Wallpaper | `atouchofclass:pink_floral_wallpaper` | Survival obtainable — [pink_floral_wallpaper](recipes.md#pink-floral-wallpaper) |
 | Pink Geometric Wallpaper | `atouchofclass:pink_geometric_wallpaper` | Survival obtainable — [pink_geometric_wallpaper](recipes.md#pink-geometric-wallpaper) |
 | Pink Glazed Terracotta Wall Tiles | `atouchofclass:pink_glazed_terracotta_wall_tiles` | Survival obtainable — [pink_glazed_terracotta_wall_tiles](recipes.md#pink-glazed-terracotta-wall-tiles) |
+| Pink Patio Chair | `atouchofclass:pink_patio_chair` | Survival obtainable — [pink_patio_chair_from_dye](recipes.md#pink-patio-chair-from-dye), [pink_patio_chair](recipes.md#pink-patio-chair) |
 | Pink Petals Bunch | `atouchofclass:pink_petals_bunch` | Survival obtainable — [pink_petals_bunch](recipes.md#pink-petals-bunch) |
 | Pink Tulip Bunch | `atouchofclass:pink_tulip_bunch` | Survival obtainable — [pink_tulip_bunch](recipes.md#pink-tulip-bunch) |
 | Pitcher Plant Bunch | `atouchofclass:pitcher_plant_bunch` | Survival obtainable — [pitcher_plant_bunch](recipes.md#pitcher-plant-bunch) |
@@ -601,6 +613,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Purple Concrete Fire Pit | `atouchofclass:purple_concrete_fire_pit` | Survival obtainable — [purple_concrete_fire_pit](recipes.md#purple-concrete-fire-pit) |
 | Purple Concrete Sink | `atouchofclass:purple_concrete_sink` | Survival obtainable — [purple_concrete_sink](recipes.md#purple-concrete-sink) |
 | Purple Glazed Terracotta Wall Tiles | `atouchofclass:purple_glazed_terracotta_wall_tiles` | Survival obtainable — [purple_glazed_terracotta_wall_tiles](recipes.md#purple-glazed-terracotta-wall-tiles) |
+| Purple Patio Chair | `atouchofclass:purple_patio_chair` | Survival obtainable — [purple_patio_chair_from_dye](recipes.md#purple-patio-chair-from-dye), [purple_patio_chair](recipes.md#purple-patio-chair) |
 | Purpur Countertop | `atouchofclass:purpur_countertop` | Survival obtainable — [purpur_countertop](recipes.md#purpur-countertop) |
 | Purpur Sink | `atouchofclass:purpur_sink` | Survival obtainable — [purpur_sink](recipes.md#purpur-sink) |
 | Quartz Countertop | `atouchofclass:quartz_countertop` | Survival obtainable — [quartz_countertop](recipes.md#quartz-countertop) |
@@ -614,6 +627,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Red Glazed Terracotta Wall Tiles | `atouchofclass:red_glazed_terracotta_wall_tiles` | Survival obtainable — [red_glazed_terracotta_wall_tiles](recipes.md#red-glazed-terracotta-wall-tiles) |
 | Red Nether Brick Countertop | `atouchofclass:red_nether_brick_countertop` | Survival obtainable — [red_nether_brick_countertop](recipes.md#red-nether-brick-countertop) |
 | Red Nether Brick Sink | `atouchofclass:red_nether_brick_sink` | Survival obtainable — [red_nether_brick_sink](recipes.md#red-nether-brick-sink) |
+| Red Patio Chair | `atouchofclass:red_patio_chair` | Survival obtainable — [red_patio_chair_from_dye](recipes.md#red-patio-chair-from-dye), [red_patio_chair](recipes.md#red-patio-chair) |
 | Red Tulip Bunch | `atouchofclass:red_tulip_bunch` | Survival obtainable — [red_tulip_bunch](recipes.md#red-tulip-bunch) |
 | Refrigerator | `atouchofclass:refrigerator` | Survival obtainable — [refrigerator](recipes.md#refrigerator) |
 | Resin Brick Countertop | `atouchofclass:resin_brick_countertop` | Survival obtainable — [resin_brick_countertop](recipes.md#resin-brick-countertop) |
@@ -829,6 +843,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | White Concrete Fire Pit | `atouchofclass:white_concrete_fire_pit` | Survival obtainable — [white_concrete_fire_pit](recipes.md#white-concrete-fire-pit) |
 | White Concrete Sink | `atouchofclass:white_concrete_sink` | Survival obtainable — [white_concrete_sink](recipes.md#white-concrete-sink) |
 | White Glazed Terracotta Wall Tiles | `atouchofclass:white_glazed_terracotta_wall_tiles` | Survival obtainable — [white_glazed_terracotta_wall_tiles](recipes.md#white-glazed-terracotta-wall-tiles) |
+| White Patio Chair | `atouchofclass:white_patio_chair` | Survival obtainable — [white_patio_chair](recipes.md#white-patio-chair) |
 | White Stucco | `atouchofclass:white_stucco` | Survival obtainable — [white_stucco](recipes.md#white-stucco) |
 | White Tulip Bunch | `atouchofclass:white_tulip_bunch` | Survival obtainable — [white_tulip_bunch](recipes.md#white-tulip-bunch) |
 | Wildflowers Bunch | `atouchofclass:wildflowers_bunch` | Survival obtainable — [wildflowers_bunch](recipes.md#wildflowers-bunch) |
@@ -838,3 +853,4 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Yellow Concrete Fire Pit | `atouchofclass:yellow_concrete_fire_pit` | Survival obtainable — [yellow_concrete_fire_pit](recipes.md#yellow-concrete-fire-pit) |
 | Yellow Concrete Sink | `atouchofclass:yellow_concrete_sink` | Survival obtainable — [yellow_concrete_sink](recipes.md#yellow-concrete-sink) |
 | Yellow Glazed Terracotta Wall Tiles | `atouchofclass:yellow_glazed_terracotta_wall_tiles` | Survival obtainable — [yellow_glazed_terracotta_wall_tiles](recipes.md#yellow-glazed-terracotta-wall-tiles) |
+| Yellow Patio Chair | `atouchofclass:yellow_patio_chair` | Survival obtainable — [yellow_patio_chair_from_dye](recipes.md#yellow-patio-chair-from-dye), [yellow_patio_chair](recipes.md#yellow-patio-chair) |
