@@ -35,6 +35,7 @@ $woods = Named-List 'FourPostBedVariants.java' 'WOODS'
 $colors = Named-List 'FourPostBedVariants.java' 'COLORS'
 foreach ($color in $colors) {
     Add-Id ($color + '_concrete_fire_pit')
+    Add-Id ($color + '_concrete_wall')
     Add-Id ($color + '_patio_chair')
 }
 foreach ($wood in $woods) { foreach ($color in $colors) { Add-Id ($wood + '_' + $color + '_four_post_bed') } }
@@ -88,7 +89,7 @@ function Ingredient($value) {
     throw 'Unsupported ingredient format'
 }
 $catalog = [Collections.Generic.List[string]]::new()
-@('# Content catalog','','[Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)','','Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, coffee-table, dining-chair, Adirondack-chair, patio-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, concrete-fire-pit, wood-railing, wood-trim, and copper-appliance registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.','','Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.','') | ForEach-Object { $catalog.Add($_) }
+@('# Content catalog','','[Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)','','Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, coffee-table, dining-chair, Adirondack-chair, patio-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, concrete-fire-pit, concrete-wall, wood-railing, wood-trim, and copper-appliance registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.','','Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.','') | ForEach-Object { $catalog.Add($_) }
 $catalog.Add("**$($registered.Count) registered player-content items.**")
 $catalog.Add('')
 $catalog.Add('| Item | Identifier | Acquisition |')

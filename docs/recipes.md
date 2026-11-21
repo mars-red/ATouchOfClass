@@ -1619,6 +1619,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_sink.json)
 
+## black-concrete-wall-from-black-concrete-stonecutting
+
+**Output:** 1 × Black Concrete Wall (`atouchofclass:black_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:black_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_wall_from_black_concrete_stonecutting.json)
+
+## black-concrete-wall
+
+**Output:** 6 × Black Concrete Wall (`atouchofclass:black_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:black_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_concrete_wall.json)
+
 ## black-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Black Glazed Terracotta Wall Tiles (`atouchofclass:black_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -1690,6 +1711,27 @@ S.S
 `S` = `minecraft:blue_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_sink.json)
+
+## blue-concrete-wall-from-blue-concrete-stonecutting
+
+**Output:** 1 × Blue Concrete Wall (`atouchofclass:blue_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:blue_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_wall_from_blue_concrete_stonecutting.json)
+
+## blue-concrete-wall
+
+**Output:** 6 × Blue Concrete Wall (`atouchofclass:blue_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:blue_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_concrete_wall.json)
 
 ## blue-glazed-terracotta-wall-tiles
 
@@ -1787,6 +1829,27 @@ S.S
 `S` = `minecraft:brown_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_sink.json)
+
+## brown-concrete-wall-from-brown-concrete-stonecutting
+
+**Output:** 1 × Brown Concrete Wall (`atouchofclass:brown_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:brown_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_wall_from_brown_concrete_stonecutting.json)
+
+## brown-concrete-wall
+
+**Output:** 6 × Brown Concrete Wall (`atouchofclass:brown_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:brown_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_concrete_wall.json)
 
 ## brown-glazed-terracotta-wall-tiles
 
@@ -3416,6 +3479,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_sink.json)
 
+## cyan-concrete-wall-from-cyan-concrete-stonecutting
+
+**Output:** 1 × Cyan Concrete Wall (`atouchofclass:cyan_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:cyan_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_wall_from_cyan_concrete_stonecutting.json)
+
+## cyan-concrete-wall
+
+**Output:** 6 × Cyan Concrete Wall (`atouchofclass:cyan_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:cyan_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_concrete_wall.json)
+
 ## cyan-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Cyan Glazed Terracotta Wall Tiles (`atouchofclass:cyan_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -4354,6 +4438,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_sink.json)
 
+## gray-concrete-wall-from-gray-concrete-stonecutting
+
+**Output:** 1 × Gray Concrete Wall (`atouchofclass:gray_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:gray_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_wall_from_gray_concrete_stonecutting.json)
+
+## gray-concrete-wall
+
+**Output:** 6 × Gray Concrete Wall (`atouchofclass:gray_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:gray_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_concrete_wall.json)
+
 ## gray-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Gray Glazed Terracotta Wall Tiles (`atouchofclass:gray_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -4425,6 +4530,27 @@ S.S
 `S` = `minecraft:green_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_sink.json)
+
+## green-concrete-wall-from-green-concrete-stonecutting
+
+**Output:** 1 × Green Concrete Wall (`atouchofclass:green_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:green_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_wall_from_green_concrete_stonecutting.json)
+
+## green-concrete-wall
+
+**Output:** 6 × Green Concrete Wall (`atouchofclass:green_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:green_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_concrete_wall.json)
 
 ## green-glazed-terracotta-wall-tiles
 
@@ -5098,6 +5224,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_sink.json)
 
+## light-blue-concrete-wall-from-light-blue-concrete-stonecutting
+
+**Output:** 1 × Light Blue Concrete Wall (`atouchofclass:light_blue_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:light_blue_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_wall_from_light_blue_concrete_stonecutting.json)
+
+## light-blue-concrete-wall
+
+**Output:** 6 × Light Blue Concrete Wall (`atouchofclass:light_blue_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:light_blue_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_concrete_wall.json)
+
 ## light-blue-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Light Blue Glazed Terracotta Wall Tiles (`atouchofclass:light_blue_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -5169,6 +5316,27 @@ S.S
 `S` = `minecraft:light_gray_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_sink.json)
+
+## light-gray-concrete-wall-from-light-gray-concrete-stonecutting
+
+**Output:** 1 × Light Gray Concrete Wall (`atouchofclass:light_gray_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:light_gray_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_wall_from_light_gray_concrete_stonecutting.json)
+
+## light-gray-concrete-wall
+
+**Output:** 6 × Light Gray Concrete Wall (`atouchofclass:light_gray_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:light_gray_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_concrete_wall.json)
 
 ## light-gray-glazed-terracotta-wall-tiles
 
@@ -5268,6 +5436,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_sink.json)
 
+## lime-concrete-wall-from-lime-concrete-stonecutting
+
+**Output:** 1 × Lime Concrete Wall (`atouchofclass:lime_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:lime_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_wall_from_lime_concrete_stonecutting.json)
+
+## lime-concrete-wall
+
+**Output:** 6 × Lime Concrete Wall (`atouchofclass:lime_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:lime_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_concrete_wall.json)
+
 ## lime-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Lime Glazed Terracotta Wall Tiles (`atouchofclass:lime_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -5339,6 +5528,27 @@ S.S
 `S` = `minecraft:magenta_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_sink.json)
+
+## magenta-concrete-wall-from-magenta-concrete-stonecutting
+
+**Output:** 1 × Magenta Concrete Wall (`atouchofclass:magenta_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:magenta_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_wall_from_magenta_concrete_stonecutting.json)
+
+## magenta-concrete-wall
+
+**Output:** 6 × Magenta Concrete Wall (`atouchofclass:magenta_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:magenta_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_concrete_wall.json)
 
 ## magenta-glazed-terracotta-wall-tiles
 
@@ -6500,6 +6710,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_sink.json)
 
+## orange-concrete-wall-from-orange-concrete-stonecutting
+
+**Output:** 1 × Orange Concrete Wall (`atouchofclass:orange_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:orange_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_wall_from_orange_concrete_stonecutting.json)
+
+## orange-concrete-wall
+
+**Output:** 6 × Orange Concrete Wall (`atouchofclass:orange_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:orange_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_concrete_wall.json)
+
 ## orange-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Orange Glazed Terracotta Wall Tiles (`atouchofclass:orange_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -7153,6 +7384,27 @@ S.S
 `S` = `minecraft:pink_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_sink.json)
+
+## pink-concrete-wall-from-pink-concrete-stonecutting
+
+**Output:** 1 × Pink Concrete Wall (`atouchofclass:pink_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:pink_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_wall_from_pink_concrete_stonecutting.json)
+
+## pink-concrete-wall
+
+**Output:** 6 × Pink Concrete Wall (`atouchofclass:pink_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:pink_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_concrete_wall.json)
 
 ## pink-floral-wallpaper
 
@@ -8027,6 +8279,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_sink.json)
 
+## purple-concrete-wall-from-purple-concrete-stonecutting
+
+**Output:** 1 × Purple Concrete Wall (`atouchofclass:purple_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:purple_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_wall_from_purple_concrete_stonecutting.json)
+
+## purple-concrete-wall
+
+**Output:** 6 × Purple Concrete Wall (`atouchofclass:purple_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:purple_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_concrete_wall.json)
+
 ## purple-glazed-terracotta-wall-tiles
 
 **Output:** 16 × Purple Glazed Terracotta Wall Tiles (`atouchofclass:purple_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -8184,6 +8457,27 @@ S.S
 `S` = `minecraft:red_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_sink.json)
+
+## red-concrete-wall-from-red-concrete-stonecutting
+
+**Output:** 1 × Red Concrete Wall (`atouchofclass:red_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:red_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_wall_from_red_concrete_stonecutting.json)
+
+## red-concrete-wall
+
+**Output:** 6 × Red Concrete Wall (`atouchofclass:red_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:red_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_concrete_wall.json)
 
 ## red-glazed-terracotta-wall-tiles
 
@@ -10732,6 +11026,27 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_sink.json)
 
+## white-concrete-wall-from-white-concrete-stonecutting
+
+**Output:** 1 × White Concrete Wall (`atouchofclass:white_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:white_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_wall_from_white_concrete_stonecutting.json)
+
+## white-concrete-wall
+
+**Output:** 6 × White Concrete Wall (`atouchofclass:white_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:white_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_concrete_wall.json)
+
 ## white-glazed-terracotta-wall-tiles
 
 **Output:** 16 × White Glazed Terracotta Wall Tiles (`atouchofclass:white_glazed_terracotta_wall_tiles`). **Type:** `minecraft:crafting_shaped`.
@@ -10861,6 +11176,27 @@ S.S
 `S` = `minecraft:yellow_concrete_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_sink.json)
+
+## yellow-concrete-wall-from-yellow-concrete-stonecutting
+
+**Output:** 1 × Yellow Concrete Wall (`atouchofclass:yellow_concrete_wall`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:yellow_concrete`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_wall_from_yellow_concrete_stonecutting.json)
+
+## yellow-concrete-wall
+
+**Output:** 6 × Yellow Concrete Wall (`atouchofclass:yellow_concrete_wall`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+###
+###
+```
+
+`#` = `minecraft:yellow_concrete`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_concrete_wall.json)
 
 ## yellow-glazed-terracotta-wall-tiles
 

@@ -71,6 +71,8 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("buff_brick_stairs", ModBlocks.BUFF_BRICK_STAIRS);
     public static final DeferredItem<BlockItem> BUFF_BRICK_WALL =
             ITEMS.registerSimpleBlockItem("buff_brick_wall", ModBlocks.BUFF_BRICK_WALL);
+    public static final java.util.List<DeferredItem<BlockItem>> CONCRETE_WALL_ITEMS =
+            ModBlocks.CONCRETE_WALLS.values().stream().map(ITEMS::registerSimpleBlockItem).toList();
     public static final DeferredItem<BlockItem> CALCITE_COUNTERTOP =
             ITEMS.registerSimpleBlockItem("calcite_countertop", ModBlocks.CALCITE_COUNTERTOP);
     public static final DeferredItem<BlockItem> CALCITE_SINK =
@@ -1053,6 +1055,7 @@ public class ModItems {
             event.accept(BUFF_BRICK_SLAB);
             event.accept(BUFF_BRICK_STAIRS);
             event.accept(BUFF_BRICK_WALL);
+            CONCRETE_WALL_ITEMS.forEach(event::accept);
             event.accept(CALCITE_COUNTERTOP);
             event.accept(CALCITE_SINK);
             event.accept(KITCHEN_SINK);

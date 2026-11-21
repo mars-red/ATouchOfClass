@@ -1,6 +1,22 @@
 {
   "replace": false,
   "values": [
-    "atouchofclass:buff_brick_wall"
+    "atouchofclass:buff_brick_wall",
+    "atouchofclass:white_concrete_wall",
+    "atouchofclass:orange_concrete_wall",
+    "atouchofclass:magenta_concrete_wall",
+    "atouchofclass:light_blue_concrete_wall",
+    "atouchofclass:yellow_concrete_wall",
+    "atouchofclass:lime_concrete_wall",
+    "atouchofclass:pink_concrete_wall",
+    "atouchofclass:gray_concrete_wall",
+    "atouchofclass:light_gray_concrete_wall",
+    "atouchofclass:cyan_concrete_wall",
+    "atouchofclass:purple_concrete_wall",
+    "atouchofclass:blue_concrete_wall",
+    "atouchofclass:brown_concrete_wall",
+    "atouchofclass:green_concrete_wall",
+    "atouchofclass:red_concrete_wall",
+    "atouchofclass:black_concrete_wall"
   ]
 }
