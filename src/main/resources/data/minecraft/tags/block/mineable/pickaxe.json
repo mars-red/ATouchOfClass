@@ -224,7 +224,23 @@
                    "atouchofclass:weathered_copper_oven",
                    "atouchofclass:waxed_weathered_copper_oven",
                    "atouchofclass:oxidized_copper_oven",
-                   "atouchofclass:waxed_oxidized_copper_oven"
+                   "atouchofclass:waxed_oxidized_copper_oven",
+                   "atouchofclass:white_concrete_fire_pit",
+                   "atouchofclass:orange_concrete_fire_pit",
+                   "atouchofclass:magenta_concrete_fire_pit",
+                   "atouchofclass:light_blue_concrete_fire_pit",
+                   "atouchofclass:yellow_concrete_fire_pit",
+                   "atouchofclass:lime_concrete_fire_pit",
+                   "atouchofclass:pink_concrete_fire_pit",
+                   "atouchofclass:gray_concrete_fire_pit",
+                   "atouchofclass:light_gray_concrete_fire_pit",
+                   "atouchofclass:cyan_concrete_fire_pit",
+                   "atouchofclass:purple_concrete_fire_pit",
+                   "atouchofclass:blue_concrete_fire_pit",
+                   "atouchofclass:brown_concrete_fire_pit",
+                   "atouchofclass:green_concrete_fire_pit",
+                   "atouchofclass:red_concrete_fire_pit",
+                   "atouchofclass:black_concrete_fire_pit"
                ],
     "replace":  false
 }

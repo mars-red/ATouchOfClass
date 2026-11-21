@@ -1,0 +1,25 @@
+{
+  "textures": {
+    "gravel": "minecraft:block/gravel",
+    "particle": "minecraft:block/gravel"
+  },
+  "elements": [
+    {
+      "from": [
+        12,
+        9,
+        0
+      ],
+      "to": [
+        16,
+        9,
+        4
+      ],
+      "faces": {
+        "up": {
+          "texture": "#gravel"
+        }
+      }
+    }
+  ]
+}

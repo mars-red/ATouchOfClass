@@ -10,14 +10,15 @@ Start as a [player](getting-started.md), [server owner](server-owners.md), or [m
 2. [Building and architectural details](building.md)
 3. [Tall doors, keys, and access](doors-and-access.md)
 4. [Furniture and storage](furniture.md)
-5. [Kitchens and bathrooms](kitchens-and-bathrooms.md)
-6. [Lighting and copper finishes](lighting.md)
-7. [Elevators](elevators.md)
-8. [Server owner guide](server-owners.md)
-9. [Modpack author guide](modpack-authors.md)
-10. [Reference and troubleshooting](reference.md)
+5. [Decks and patios](decks-and-patios.md)
+6. [Kitchens and bathrooms](kitchens-and-bathrooms.md)
+7. [Lighting and copper finishes](lighting.md)
+8. [Elevators](elevators.md)
+9. [Server owner guide](server-owners.md)
+10. [Modpack author guide](modpack-authors.md)
+11. [Reference and troubleshooting](reference.md)
 
-The [content catalog](catalog.md) covers 812 registered player-content items. The [recipe reference](recipes.md) contains all 779 bundled recipes, including vanilla-item outputs supplied by the mod.
+The [content catalog](catalog.md) covers 828 registered player-content items. The [recipe reference](recipes.md) contains all 795 bundled recipes, including vanilla-item outputs supplied by the mod.
 
 ## Availability labels
 

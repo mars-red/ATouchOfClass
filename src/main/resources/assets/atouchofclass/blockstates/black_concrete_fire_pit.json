@@ -1,0 +1,341 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_core"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/fire_pit_gravel_core"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_wall"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face_west_ext"
+      },
+      "when": {
+        "north": "false",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face_east_ext"
+      },
+      "when": {
+        "north": "false",
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_strip"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/fire_pit_gravel_strip"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_corner"
+      },
+      "when": {
+        "north": "true",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_post"
+      },
+      "when": {
+        "north_east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/fire_pit_gravel_corner"
+      },
+      "when": {
+        "north_east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_wall",
+        "y": 90
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face",
+        "y": 90
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face_west_ext",
+        "y": 90
+      },
+      "when": {
+        "east": "false",
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face_east_ext",
+        "y": 90
+      },
+      "when": {
+        "east": "false",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_strip",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/fire_pit_gravel_strip",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_corner",
+        "y": 90
+      },
+      "when": {
+        "east": "true",
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_post",
+        "y": 90
+      },
+      "when": {
+        "south_east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/fire_pit_gravel_corner",
+        "y": 90
+      },
+      "when": {
+        "south_east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_wall",
+        "y": 180
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face",
+        "y": 180
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face_west_ext",
+        "y": 180
+      },
+      "when": {
+        "south": "false",
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face_east_ext",
+        "y": 180
+      },
+      "when": {
+        "south": "false",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_strip",
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/fire_pit_gravel_strip",
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_corner",
+        "y": 180
+      },
+      "when": {
+        "south": "true",
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_post",
+        "y": 180
+      },
+      "when": {
+        "south_west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/fire_pit_gravel_corner",
+        "y": 180
+      },
+      "when": {
+        "south_west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_wall",
+        "y": 270
+      },
+      "when": {
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face",
+        "y": 270
+      },
+      "when": {
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face_west_ext",
+        "y": 270
+      },
+      "when": {
+        "west": "false",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_face_east_ext",
+        "y": 270
+      },
+      "when": {
+        "west": "false",
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_strip",
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/fire_pit_gravel_strip",
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_base_corner",
+        "y": 270
+      },
+      "when": {
+        "west": "true",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/black_concrete_fire_pit_post",
+        "y": 270
+      },
+      "when": {
+        "north_west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "atouchofclass:block/fire_pit_gravel_corner",
+        "y": 270
+      },
+      "when": {
+        "north_west": "true"
+      }
+    }
+  ]
+}

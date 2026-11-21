@@ -22,6 +22,11 @@ public final class ModGameTests {
         FUNCTIONS.register("cabinetattachmentgametests.cooktoppairssplitineveryfacing", () -> CabinetAttachmentGameTests::cooktopPairsSplitInEveryFacing);
         FUNCTIONS.register("cabinetattachmentgametests.kitchenpairssplitineveryfacing", () -> CabinetAttachmentGameTests::kitchenPairsSplitInEveryFacing);
         FUNCTIONS.register("cabinetattachmentgametests.attachedcopperwaxesscrapesandweathers", () -> CabinetAttachmentGameTests::attachedCopperWaxesScrapesAndWeathers);
+        FUNCTIONS.register("firepitgametests.squarejoinsaroundopencentergravel", () -> FirePitGameTests::squareJoinsAroundOpenCenterGravel);
+        FUNCTIONS.register("firepitgametests.differentcoloursdonotjoin", () -> FirePitGameTests::differentColoursDoNotJoin);
+        FUNCTIONS.register("firepitgametests.collisionhasrimaroundgravelbed", () -> FirePitGameTests::collisionHasRimAroundGravelBed);
+        FUNCTIONS.register("firepitgametests.igniteanddouse", () -> FirePitGameTests::igniteAndDouse);
+        FUNCTIONS.register("firepitgametests.everycolourcraftstwo", () -> FirePitGameTests::everyColourCraftsTwo);
         FUNCTIONS.register("walltiletrimstripgametests.placementandrecipe", () -> WallTileTrimStripGameTests::placementAndRecipe);
         FUNCTIONS.register("windowpanegametests.pairsstayseparateandupdate", () -> WindowPaneGameTests::pairsStaySeparateAndUpdate);
         FUNCTIONS.register("windowpanegametests.unrelatedneighborsstaysingle", () -> WindowPaneGameTests::unrelatedNeighborsStaySingle);

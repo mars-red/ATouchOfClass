@@ -155,3 +155,8 @@ Added dado rail placement, height, inside/outside corners, and casing connection
 ## Coffee tables - November 20, 2026
 
 Added coffee tables (13 woods, 10 pixels tall, joining like dining tables, `PWP` recipe yielding four) to the furniture chapter and reference. The update helper now counts coffee tables via the dining-table variant list. Regenerated the catalog and recipe reference: 812 player-content items, 779 recipes, and no unresolved acquisition routes. The game-test server passed (132 tests) with a coffee-table height/leg/join check; no in-game visual review was done.
+
+
+## Fire pits - November 21, 2026
+
+Added the Decks and patios chapter documenting the concrete fire pit (16 colors, CGC/ F  recipe yielding two, same-color joining, flint-and-steel/fire-charge ignition, shovel dousing, light 15). Source references: `FirePitBlock`, `FirePitRenderer`, `FirePitVariants`. The update helper now counts fire pits via the bed color list. Regenerated catalog and recipe reference: 828 player-content items, 795 recipes, no unresolved acquisition routes. The game-test server passed (137 tests); no in-game visual review or Sodium/Iris check was done.

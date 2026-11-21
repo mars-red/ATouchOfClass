@@ -1,0 +1,25 @@
+{
+  "textures": {
+    "concrete": "minecraft:block/orange_concrete",
+    "particle": "minecraft:block/orange_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        14,
+        0,
+        2
+      ],
+      "to": [
+        16,
+        2,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#concrete"
+        }
+      }
+    }
+  ]
+}

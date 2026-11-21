@@ -1286,5 +1286,21 @@
     "block.atouchofclass.pale_oak_coffee_table": "Pale Oak Coffee Table",
     "block.atouchofclass.bamboo_coffee_table": "Bamboo Coffee Table",
     "block.atouchofclass.crimson_coffee_table": "Crimson Coffee Table",
-    "block.atouchofclass.warped_coffee_table": "Warped Coffee Table"
+    "block.atouchofclass.warped_coffee_table": "Warped Coffee Table",
+    "block.atouchofclass.white_concrete_fire_pit":  "White Concrete Fire Pit",
+    "block.atouchofclass.orange_concrete_fire_pit":  "Orange Concrete Fire Pit",
+    "block.atouchofclass.magenta_concrete_fire_pit":  "Magenta Concrete Fire Pit",
+    "block.atouchofclass.light_blue_concrete_fire_pit":  "Light Blue Concrete Fire Pit",
+    "block.atouchofclass.yellow_concrete_fire_pit":  "Yellow Concrete Fire Pit",
+    "block.atouchofclass.lime_concrete_fire_pit":  "Lime Concrete Fire Pit",
+    "block.atouchofclass.pink_concrete_fire_pit":  "Pink Concrete Fire Pit",
+    "block.atouchofclass.gray_concrete_fire_pit":  "Gray Concrete Fire Pit",
+    "block.atouchofclass.light_gray_concrete_fire_pit":  "Light Gray Concrete Fire Pit",
+    "block.atouchofclass.cyan_concrete_fire_pit":  "Cyan Concrete Fire Pit",
+    "block.atouchofclass.purple_concrete_fire_pit":  "Purple Concrete Fire Pit",
+    "block.atouchofclass.blue_concrete_fire_pit":  "Blue Concrete Fire Pit",
+    "block.atouchofclass.brown_concrete_fire_pit":  "Brown Concrete Fire Pit",
+    "block.atouchofclass.green_concrete_fire_pit":  "Green Concrete Fire Pit",
+    "block.atouchofclass.red_concrete_fire_pit":  "Red Concrete Fire Pit",
+    "block.atouchofclass.black_concrete_fire_pit":  "Black Concrete Fire Pit"
 }
