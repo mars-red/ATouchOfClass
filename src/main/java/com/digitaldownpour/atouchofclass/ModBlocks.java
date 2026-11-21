@@ -61,6 +61,7 @@ import com.digitaldownpour.atouchofclass.blocks.SofaBlock;
 import com.digitaldownpour.atouchofclass.blocks.ChairBlock;
 import com.digitaldownpour.atouchofclass.blocks.DiningChairBlock;
 import com.digitaldownpour.atouchofclass.blocks.PatioChairBlock;
+import com.digitaldownpour.atouchofclass.blocks.BarStoolBlock;
 import com.digitaldownpour.atouchofclass.blocks.AdirondackChairBlock;
 import net.minecraft.world.item.DyeColor;
 import com.digitaldownpour.atouchofclass.blocks.SideTableBlock;
@@ -1254,7 +1255,10 @@ public class ModBlocks {
         return properties;
     }
 
-    public static final java.util.Map<DyeColor, DeferredBlock<PatioChairBlock>> PATIO_CHAIRS = registerPatioChairs();
+    public static final java.util.Map<DyeColor, DeferredBlock<PatioChairBlock>> PATIO_CHAIRS =
+            registerDyeableChairs("patio_chair", PatioChairBlock::new);
+    public static final java.util.Map<DyeColor, DeferredBlock<BarStoolBlock>> BAR_STOOLS =
+            registerDyeableChairs("bar_stool", BarStoolBlock::new);
 
     public static final java.util.Map<String, DeferredBlock<AdirondackChairBlock>> ADIRONDACK_CHAIRS =
             registerAdirondackChairs();
@@ -1271,11 +1275,12 @@ public class ModBlocks {
         return java.util.Collections.unmodifiableMap(blocks);
     }
 
-    private static java.util.Map<DyeColor, DeferredBlock<PatioChairBlock>> registerPatioChairs() {
-        var blocks = new java.util.EnumMap<DyeColor, DeferredBlock<PatioChairBlock>>(DyeColor.class);
+    private static <T extends Block> java.util.Map<DyeColor, DeferredBlock<T>> registerDyeableChairs(
+            String suffix, java.util.function.BiFunction<BlockBehaviour.Properties, DyeColor, T> factory) {
+        var blocks = new java.util.EnumMap<DyeColor, DeferredBlock<T>>(DyeColor.class);
         for (DyeColor color : DyeColor.values()) {
-            blocks.put(color, BLOCKS.register(color.getName() + "_patio_chair", name ->
-                    new PatioChairBlock(furnitureProperties(Blocks.IRON_BLOCK, name), color)));
+            blocks.put(color, BLOCKS.register(color.getName() + "_" + suffix, name ->
+                    factory.apply(furnitureProperties(Blocks.IRON_BLOCK, name), color)));
         }
         return java.util.Collections.unmodifiableMap(blocks);
     }

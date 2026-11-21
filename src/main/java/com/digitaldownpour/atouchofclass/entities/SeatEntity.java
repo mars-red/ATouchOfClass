@@ -115,8 +115,9 @@ public class SeatEntity extends Entity {
 
         // With all exits blocked, stand just above the seat. A small forward
         // offset keeps a standing player's body clear of the tall back posts.
+        double seatHeight = state.getBlock() instanceof OutdoorChairBlock chair ? chair.seatHeight() : 10.0 / 16;
         Vec3 aboveSeat = new Vec3(pos.getX() + 0.5 + front.getStepX() * 0.125,
-                pos.getY() + 10.0 / 16 + 0.01,
+                pos.getY() + seatHeight + 0.01,
                 pos.getZ() + 0.5 + front.getStepZ() * 0.125);
         if (DismountHelper.canDismountTo(level(), aboveSeat, passenger, passenger.getPose())) return aboveSeat;
 

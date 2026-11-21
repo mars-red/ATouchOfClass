@@ -1581,6 +1581,28 @@ LL
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_yellow_four_post_bed.json)
 
+## black-bar-stool-from-dye
+
+**Output:** 1 × Black Bar Stool (`atouchofclass:black_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:black_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_bar_stool_from_dye.json)
+
+## black-bar-stool
+
+**Output:** 1 × Black Bar Stool (`atouchofclass:black_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:black_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_bar_stool.json)
+
 ## black-concrete-countertop
 
 **Output:** 6 × Black Concrete Countertop (`atouchofclass:black_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -1673,6 +1695,28 @@ I.I
 `C` = `minecraft:black_wool`; `I` = `minecraft:iron_ingot`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/black_patio_chair.json)
+
+## blue-bar-stool-from-dye
+
+**Output:** 1 × Blue Bar Stool (`atouchofclass:blue_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:blue_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_bar_stool_from_dye.json)
+
+## blue-bar-stool
+
+**Output:** 1 × Blue Bar Stool (`atouchofclass:blue_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:blue_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/blue_bar_stool.json)
 
 ## blue-concrete-countertop
 
@@ -1791,6 +1835,28 @@ BB
 `B` = `minecraft:bricks`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brick_window_ledge.json)
+
+## brown-bar-stool-from-dye
+
+**Output:** 1 × Brown Bar Stool (`atouchofclass:brown_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:brown_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_bar_stool_from_dye.json)
+
+## brown-bar-stool
+
+**Output:** 1 × Brown Bar Stool (`atouchofclass:brown_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:brown_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/brown_bar_stool.json)
 
 ## brown-concrete-countertop
 
@@ -3441,6 +3507,28 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cut_copper_sink.json)
 
+## cyan-bar-stool-from-dye
+
+**Output:** 1 × Cyan Bar Stool (`atouchofclass:cyan_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:cyan_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_bar_stool_from_dye.json)
+
+## cyan-bar-stool
+
+**Output:** 1 × Cyan Bar Stool (`atouchofclass:cyan_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:cyan_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cyan_bar_stool.json)
+
 ## cyan-concrete-countertop
 
 **Output:** 6 × Cyan Concrete Countertop (`atouchofclass:cyan_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4421,6 +4509,28 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/granite_sink.json)
 
+## gray-bar-stool-from-dye
+
+**Output:** 1 × Gray Bar Stool (`atouchofclass:gray_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:gray_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_bar_stool_from_dye.json)
+
+## gray-bar-stool
+
+**Output:** 1 × Gray Bar Stool (`atouchofclass:gray_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:gray_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_bar_stool.json)
+
 ## gray-concrete-countertop
 
 **Output:** 6 × Gray Concrete Countertop (`atouchofclass:gray_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -4513,6 +4623,28 @@ I.I
 `C` = `minecraft:gray_wool`; `I` = `minecraft:iron_ingot`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/gray_patio_chair.json)
+
+## green-bar-stool-from-dye
+
+**Output:** 1 × Green Bar Stool (`atouchofclass:green_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:green_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_bar_stool_from_dye.json)
+
+## green-bar-stool
+
+**Output:** 1 × Green Bar Stool (`atouchofclass:green_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:green_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/green_bar_stool.json)
 
 ## green-concrete-countertop
 
@@ -5207,6 +5339,28 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/leather_sofa.json)
 
+## light-blue-bar-stool-from-dye
+
+**Output:** 1 × Light Blue Bar Stool (`atouchofclass:light_blue_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:light_blue_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_bar_stool_from_dye.json)
+
+## light-blue-bar-stool
+
+**Output:** 1 × Light Blue Bar Stool (`atouchofclass:light_blue_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:light_blue_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_bar_stool.json)
+
 ## light-blue-concrete-countertop
 
 **Output:** 6 × Light Blue Concrete Countertop (`atouchofclass:light_blue_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -5299,6 +5453,28 @@ I.I
 `C` = `minecraft:light_blue_wool`; `I` = `minecraft:iron_ingot`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_blue_patio_chair.json)
+
+## light-gray-bar-stool-from-dye
+
+**Output:** 1 × Light Gray Bar Stool (`atouchofclass:light_gray_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:light_gray_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_bar_stool_from_dye.json)
+
+## light-gray-bar-stool
+
+**Output:** 1 × Light Gray Bar Stool (`atouchofclass:light_gray_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:light_gray_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/light_gray_bar_stool.json)
 
 ## light-gray-concrete-countertop
 
@@ -5419,6 +5595,28 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lily_of_the_valley_bunch.json)
 
+## lime-bar-stool-from-dye
+
+**Output:** 1 × Lime Bar Stool (`atouchofclass:lime_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:lime_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_bar_stool_from_dye.json)
+
+## lime-bar-stool
+
+**Output:** 1 × Lime Bar Stool (`atouchofclass:lime_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:lime_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_bar_stool.json)
+
 ## lime-concrete-countertop
 
 **Output:** 6 × Lime Concrete Countertop (`atouchofclass:lime_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -5511,6 +5709,28 @@ I.I
 `C` = `minecraft:lime_wool`; `I` = `minecraft:iron_ingot`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/lime_patio_chair.json)
+
+## magenta-bar-stool-from-dye
+
+**Output:** 1 × Magenta Bar Stool (`atouchofclass:magenta_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:magenta_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_bar_stool_from_dye.json)
+
+## magenta-bar-stool
+
+**Output:** 1 × Magenta Bar Stool (`atouchofclass:magenta_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:magenta_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_bar_stool.json)
 
 ## magenta-concrete-countertop
 
@@ -6693,6 +6913,28 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/open_eyeblossom_bunch.json)
 
+## orange-bar-stool-from-dye
+
+**Output:** 1 × Orange Bar Stool (`atouchofclass:orange_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:orange_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_bar_stool_from_dye.json)
+
+## orange-bar-stool
+
+**Output:** 1 × Orange Bar Stool (`atouchofclass:orange_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:orange_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_bar_stool.json)
+
 ## orange-concrete-countertop
 
 **Output:** 6 × Orange Concrete Countertop (`atouchofclass:orange_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -7367,6 +7609,28 @@ FF
 `F` = `minecraft:peony`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/peony_bunch.json)
+
+## pink-bar-stool-from-dye
+
+**Output:** 1 × Pink Bar Stool (`atouchofclass:pink_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:pink_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_bar_stool_from_dye.json)
+
+## pink-bar-stool
+
+**Output:** 1 × Pink Bar Stool (`atouchofclass:pink_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:pink_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pink_bar_stool.json)
 
 ## pink-concrete-countertop
 
@@ -8262,6 +8526,28 @@ P.P
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/prismarine_fish_scale_wall_tiles.json)
 
+## purple-bar-stool-from-dye
+
+**Output:** 1 × Purple Bar Stool (`atouchofclass:purple_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:purple_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_bar_stool_from_dye.json)
+
+## purple-bar-stool
+
+**Output:** 1 × Purple Bar Stool (`atouchofclass:purple_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:purple_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/purple_bar_stool.json)
+
 ## purple-concrete-countertop
 
 **Output:** 6 × Purple Concrete Countertop (`atouchofclass:purple_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -8427,6 +8713,28 @@ NNN
 `N` = `minecraft:iron_nugget`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/rain_shower_head.json)
+
+## red-bar-stool-from-dye
+
+**Output:** 1 × Red Bar Stool (`atouchofclass:red_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:red_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_bar_stool_from_dye.json)
+
+## red-bar-stool
+
+**Output:** 1 × Red Bar Stool (`atouchofclass:red_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:red_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/red_bar_stool.json)
 
 ## red-brick
 
@@ -11030,6 +11338,20 @@ S.S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/weathered_cut_copper_sink.json)
 
+## white-bar-stool
+
+**Output:** 1 × White Bar Stool (`atouchofclass:white_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:white_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/white_bar_stool.json)
+
 ## white-concrete-countertop
 
 **Output:** 6 × White Concrete Countertop (`atouchofclass:white_concrete_countertop`). **Type:** `minecraft:crafting_shaped`.
@@ -11180,6 +11502,28 @@ FF
 `F` = `minecraft:wither_rose`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/wither_rose_bunch.json)
+
+## yellow-bar-stool-from-dye
+
+**Output:** 1 × Yellow Bar Stool (`atouchofclass:yellow_bar_stool`). **Type:** `minecraft:crafting_shapeless`.
+
+**Ingredients (each occurrence is one item):** `atouchofclass:white_bar_stool`, `minecraft:yellow_dye`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_bar_stool_from_dye.json)
+
+## yellow-bar-stool
+
+**Output:** 1 × Yellow Bar Stool (`atouchofclass:yellow_bar_stool`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IWI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_ingot`; `W` = `minecraft:yellow_wool`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/yellow_bar_stool.json)
 
 ## yellow-concrete-countertop
 

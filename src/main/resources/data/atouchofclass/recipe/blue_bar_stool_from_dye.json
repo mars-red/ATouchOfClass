@@ -1,0 +1,13 @@
+{
+  "category": "building",
+  "type": "minecraft:crafting_shapeless",
+  "group": "atouchofclass:bar_stool_dyeing",
+  "ingredients": [
+    "atouchofclass:white_bar_stool",
+    "minecraft:blue_dye"
+  ],
+  "result": {
+    "id": "atouchofclass:blue_bar_stool",
+    "count": 1
+  }
+}

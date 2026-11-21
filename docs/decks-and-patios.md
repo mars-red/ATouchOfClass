@@ -2,7 +2,7 @@
 
 [Manual contents](README.md) · [Recipes](recipes.md) · [Catalog](catalog.md)
 
-Build patio floors with granite or stone pavers, then furnish the space with Adirondack chairs, patio chairs, and concrete fire pits.
+Build patio floors with granite or stone pavers, then furnish the space with Adirondack chairs, patio chairs, bar stools, and concrete fire pits.
 
 ## Pavers
 
@@ -90,6 +90,23 @@ P . .
 P P .
 P . P
 ```
+
+## Bar stools
+
+![Bar stools with dark gray frames and colored cushions](images/decks-and-patios/bar-stools.png)
+
+Bar stools have a dark gray frame with a footrest, a cushioned seat 12 units above the floor, and a slightly reclined cushioned back. The cushions come in all 16 dye colors. Placement, seating, and dismounting work the same way as for patio chairs.
+
+Use six iron ingots (`I`) and one block of wool (`W`) in the desired cushion color to craft **1** stool. Picking up the matching wool unlocks its recipe. See the [white bar stool recipe](recipes.md#white-bar-stool) for an example.
+
+```text
+I W I
+I . I
+I . I
+```
+
+Use dye directly on a placed **white bar stool** to color both cushions, or combine one white stool and one dye in a crafting grid. Only white stools accept dye. See the [blue bar stool dyeing recipe](recipes.md#blue-bar-stool-from-dye) for an example.
+
 
 ## Troubleshooting
 
