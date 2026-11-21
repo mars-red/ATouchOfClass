@@ -1,0 +1,1277 @@
+{
+  "gui_light": "side",
+  "textures": {
+    "particle": "#wood"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        45,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "translation": [
+        0,
+        -1,
+        0
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        1.5,
+        0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        1.5,
+        0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        1,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        1,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    }
+  },
+  "elements": [
+    {
+      "name": "left front post",
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        2.5,
+        10,
+        4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            1.5,
+            10
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            1.5,
+            10
+          ],
+          "texture": "#wood"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            3,
+            10
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            3,
+            10
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            1.5,
+            3
+          ],
+          "texture": "#wood"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            1.5,
+            3
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "right front post",
+      "from": [
+        13.5,
+        0,
+        1
+      ],
+      "to": [
+        15.0,
+        10,
+        4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            1.5,
+            10
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            1.5,
+            10
+          ],
+          "texture": "#wood"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            3,
+            10
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            3,
+            10
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            1.5,
+            3
+          ],
+          "texture": "#wood"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            1.5,
+            3
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "left armrest",
+      "from": [
+        0,
+        10,
+        0
+      ],
+      "to": [
+        3.5,
+        11.25,
+        13.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            3.5,
+            1.25
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            3.5,
+            1.25
+          ],
+          "texture": "#wood"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            1.25,
+            13.5
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1.25,
+            13.5
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            3.5,
+            13.5
+          ],
+          "texture": "#wood"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            3.5,
+            13.5
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "right armrest",
+      "from": [
+        12.5,
+        10,
+        0
+      ],
+      "to": [
+        16.0,
+        11.25,
+        13.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            3.5,
+            1.25
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            3.5,
+            1.25
+          ],
+          "texture": "#wood"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            1.25,
+            13.5
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1.25,
+            13.5
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            3.5,
+            13.5
+          ],
+          "texture": "#wood"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            3.5,
+            13.5
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "left continuous seat rail and rear leg",
+      "from": [
+        1,
+        0,
+        1.25
+      ],
+      "to": [
+        2.75,
+        1.9474,
+        15.3
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          15.3
+        ],
+        "axis": "x",
+        "angle": 18
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            1.75,
+            1.6
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            1.75,
+            1.6
+          ],
+          "texture": "#wood"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            1.6,
+            14.5
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1.6,
+            14.5
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            1.75,
+            14.5
+          ],
+          "texture": "#wood"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            1.75,
+            14.5
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "right continuous seat rail and rear leg",
+      "from": [
+        13.25,
+        0,
+        1.25
+      ],
+      "to": [
+        15.0,
+        1.9474,
+        15.3
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          15.3
+        ],
+        "axis": "x",
+        "angle": 18
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            1.75,
+            1.6
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            1.75,
+            1.6
+          ],
+          "texture": "#wood"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            1.6,
+            14.5
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1.6,
+            14.5
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            1.75,
+            14.5
+          ],
+          "texture": "#wood"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            1.75,
+            14.5
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "seat slat 1",
+      "from": [
+        2.5,
+        1.9474,
+        1.3763
+      ],
+      "to": [
+        13.5,
+        2.9474,
+        3.7476
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          15.3
+        ],
+        "axis": "x",
+        "angle": 18
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            1.0,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            1.0,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            1.0
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            1.0
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "name": "seat slat 2",
+      "from": [
+        2.5,
+        1.9474,
+        3.9412
+      ],
+      "to": [
+        13.5,
+        2.9474,
+        6.3125
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          15.3
+        ],
+        "axis": "x",
+        "angle": 18
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            1.0,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            1.0,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            1.0
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            1.0
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "name": "seat slat 3",
+      "from": [
+        2.5,
+        1.9474,
+        6.506
+      ],
+      "to": [
+        13.5,
+        2.9474,
+        8.8773
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          15.3
+        ],
+        "axis": "x",
+        "angle": 18
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            1.0,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            1.0,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            1.0
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            1.0
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "name": "seat slat 4",
+      "from": [
+        2.5,
+        1.9474,
+        9.0709
+      ],
+      "to": [
+        13.5,
+        2.9474,
+        11.4422
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          15.3
+        ],
+        "axis": "x",
+        "angle": 18
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            1.0,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            1.0,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            1.0
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            1.0
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2.45,
+            11.0
+          ],
+          "texture": "#wood",
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "name": "back slat 1",
+      "from": [
+        2.5,
+        3.5,
+        10.3
+      ],
+      "to": [
+        4.54,
+        16.1,
+        11.5
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          3.5,
+          10.3
+        ],
+        "axis": "x",
+        "angle": 15
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            12.6
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            12.6
+          ],
+          "texture": "#wood"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            1.2,
+            12.6
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1.2,
+            12.6
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            1.2
+          ],
+          "texture": "#wood"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            1.2
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "back slat 2",
+      "from": [
+        4.74,
+        3.5,
+        10.3
+      ],
+      "to": [
+        6.78,
+        18.1,
+        11.5
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          3.5,
+          10.3
+        ],
+        "axis": "x",
+        "angle": 15
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            14.6
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            14.6
+          ],
+          "texture": "#wood"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            1.2,
+            14.6
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1.2,
+            14.6
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            1.2
+          ],
+          "texture": "#wood"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            1.2
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "back slat 3",
+      "from": [
+        6.98,
+        3.5,
+        10.3
+      ],
+      "to": [
+        9.02,
+        19.7,
+        11.5
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          3.5,
+          10.3
+        ],
+        "axis": "x",
+        "angle": 15
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            16
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            16
+          ],
+          "texture": "#wood"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            1.2,
+            16
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1.2,
+            16
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            1.2
+          ],
+          "texture": "#wood"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            1.2
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "back slat 4",
+      "from": [
+        9.22,
+        3.5,
+        10.3
+      ],
+      "to": [
+        11.260000000000002,
+        18.1,
+        11.5
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          3.5,
+          10.3
+        ],
+        "axis": "x",
+        "angle": 15
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            14.6
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            14.6
+          ],
+          "texture": "#wood"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            1.2,
+            14.6
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1.2,
+            14.6
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            1.2
+          ],
+          "texture": "#wood"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            1.2
+          ],
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "name": "back slat 5",
+      "from": [
+        11.46,
+        3.5,
+        10.3
+      ],
+      "to": [
+        13.5,
+        16.1,
+        11.5
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          3.5,
+          10.3
+        ],
+        "axis": "x",
+        "angle": 15
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            12.6
+          ],
+          "texture": "#wood"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            12.6
+          ],
+          "texture": "#wood"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            1.2,
+            12.6
+          ],
+          "texture": "#wood"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1.2,
+            12.6
+          ],
+          "texture": "#wood"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            1.2
+          ],
+          "texture": "#wood"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2.04,
+            1.2
+          ],
+          "texture": "#wood"
+        }
+      }
+    }
+  ]
+}

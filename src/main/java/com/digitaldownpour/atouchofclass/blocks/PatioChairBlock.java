@@ -11,20 +11,14 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.shapes.BooleanOp;
-import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.Nullable;
 
-public class PatioChairBlock extends ChairBlock {
+public class PatioChairBlock extends OutdoorChairBlock {
     private static final VoxelShape NORTH = Shapes.or(
             box(0, 0, 0, 2, 13, 2), box(14, 0, 0, 16, 13, 2),
             box(0, 0, 14, 2, 13, 16), box(14, 0, 14, 16, 13, 16),
@@ -35,56 +29,17 @@ public class PatioChairBlock extends ChairBlock {
             box(2, 10, 11.25, 14, 14, 16),
             box(2, 14, 11.75, 14, 17, 16),
             box(2, 17, 12.2, 14, 20, 16));
-    private static final VoxelShape EAST = rotateShape(NORTH, 1);
-    private static final VoxelShape SOUTH = rotateShape(NORTH, 2);
-    private static final VoxelShape WEST = rotateShape(NORTH, 3);
 
     private final DyeColor color;
 
     public PatioChairBlock(Properties properties, DyeColor color) {
-        super(properties);
+        super(properties, NORTH, 10.0 / 16);
         this.color = color;
-    }
-
-    @Override
-    public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
-        BlockState state = super.getStateForPlacement(context);
-        return state != null && state.canSurvive(context.getLevel(), context.getClickedPos()) ? state : null;
-    }
-
-    @Override
-    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        BlockPos above = pos.above();
-        if (!super.canSurvive(state, level, pos) || above.getY() >= level.getMaxY()) return false;
-        VoxelShape overhead = level.getBlockState(above).getCollisionShape(level, above).move(0, 1, 0);
-        return !Shapes.joinIsNotEmpty(shape(state), overhead, BooleanOp.AND);
-    }
-
-    @Override
-    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return shape(state);
-    }
-
-    private static VoxelShape shape(BlockState state) {
-        return switch (state.getValue(FACING)) {
-            case EAST -> EAST;
-            case SOUTH -> SOUTH;
-            case WEST -> WEST;
-            default -> NORTH;
-        };
     }
 
     @Override
     protected boolean keepsSeat(BlockState replacement) {
         return replacement.getBlock() instanceof PatioChairBlock;
-    }
-
-    @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
-                                               Player player, BlockHitResult hit) {
-        if (player.isShiftKeyDown()) return InteractionResult.PASS;
-        // The seat attachment is 0.55 blocks above the mount's origin.
-        return mountSeat(state, level, pos, player, 10.0 / 16 - 0.55);
     }
 
     @Override

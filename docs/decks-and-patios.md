@@ -2,7 +2,7 @@
 
 [Manual contents](README.md) · [Recipes](recipes.md) · [Catalog](catalog.md)
 
-Outdoor living pieces for decks, terraces, and patios include patio chairs and concrete fire pits.
+Outdoor living pieces for decks, terraces, and patios include Adirondack chairs, patio chairs, and concrete fire pits.
 
 ## Fire pits
 
@@ -56,6 +56,20 @@ I . I
 The recipe yields **1** patio chair and unlocks when you pick up the matching wool. See the [white patio chair recipe](recipes.md#white-patio-chair) for an example.
 
 Use a dye on a placed **white patio chair** to color both cushions. You can also combine one white chair and one dye in a crafting grid. Only white chairs accept dye. See the [blue patio chair dyeing recipe](recipes.md#blue-patio-chair-from-dye) for an example.
+
+## Adirondack chairs
+
+![adirondacks.png](images/decks-and-patios/adirondacks.png)
+
+Adirondack chairs come in all 13 wood types. Each has a stripped wood finish, a reclined slatted back, and a seat that slopes down toward the rear. Placement, seating, and dismounting work the same way as for patio chairs.
+
+Use five planks of the same wood type (`P`) to craft **2** chairs. Picking up matching planks unlocks the recipe. See the [spruce Adirondack chair recipe](recipes.md#spruce-adirondack-chair) for an example.
+
+```text
+P . .
+P P .
+P . P
+```
 
 ## Troubleshooting
 

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/bamboo_adirondack_chair"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/bamboo_adirondack_chair",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/bamboo_adirondack_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/bamboo_adirondack_chair",
+      "y": 270
+    }
+  }
+}

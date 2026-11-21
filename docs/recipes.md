@@ -6,6 +6,20 @@ Generated from every recipe under the mod namespace. Names below are recipe IDs 
 
 Use the catalog links or search this page for the item ID. Recipes listed here are the bundled defaults; data packs can override them.
 
+## acacia-adirondack-chair
+
+**Output:** 2 × Acacia Adirondack Chair (`atouchofclass:acacia_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:acacia_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/acacia_adirondack_chair.json)
+
 ## acacia-baluster
 
 **Output:** 32 × Acacia Baluster (`atouchofclass:acacia_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -547,6 +561,20 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/azure_bluet_bunch.json)
 
+## bamboo-adirondack-chair
+
+**Output:** 2 × Bamboo Adirondack Chair (`atouchofclass:bamboo_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:bamboo_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/bamboo_adirondack_chair.json)
+
 ## bamboo-baluster
 
 **Output:** 32 × Bamboo Baluster (`atouchofclass:bamboo_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -1048,6 +1076,20 @@ SSP
 `P` = `atouchofclass:bucket_of_plaster`; `S` = `#minecraft:wooden_slabs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/baseboard.json)
+
+## birch-adirondack-chair
+
+**Output:** 2 × Birch Adirondack Chair (`atouchofclass:birch_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:birch_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/birch_adirondack_chair.json)
 
 ## birch-baluster
 
@@ -2007,6 +2049,20 @@ S
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/casing.json)
 
+## cherry-adirondack-chair
+
+**Output:** 2 × Cherry Adirondack Chair (`atouchofclass:cherry_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:cherry_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cherry_adirondack_chair.json)
+
 ## cherry-baluster
 
 **Output:** 32 × Cherry Baluster (`atouchofclass:cherry_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -2779,6 +2835,20 @@ PGP
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/cornflower_wallpaper.json)
 
+## crimson-adirondack-chair
+
+**Output:** 2 × Crimson Adirondack Chair (`atouchofclass:crimson_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:crimson_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/crimson_adirondack_chair.json)
+
 ## crimson-baluster
 
 **Output:** 32 × Crimson Baluster (`atouchofclass:crimson_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -3418,6 +3488,20 @@ PGP
 `B` = `minecraft:blue_dye`; `G` = `atouchofclass:bucket_of_plaster`; `K` = `minecraft:black_dye`; `P` = `minecraft:paper`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_blue_floral_wallpaper.json)
+
+## dark-oak-adirondack-chair
+
+**Output:** 2 × Dark Oak Adirondack Chair (`atouchofclass:dark_oak_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:dark_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/dark_oak_adirondack_chair.json)
 
 ## dark-oak-baluster
 
@@ -4389,6 +4473,20 @@ IRI
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/induction_cooktop.json)
 
+## jungle-adirondack-chair
+
+**Output:** 2 × Jungle Adirondack Chair (`atouchofclass:jungle_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:jungle_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/jungle_adirondack_chair.json)
+
 ## jungle-baluster
 
 **Output:** 32 × Jungle Baluster (`atouchofclass:jungle_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -5276,6 +5374,20 @@ I.I
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/magenta_patio_chair.json)
 
+## mangrove-adirondack-chair
+
+**Output:** 2 × Mangrove Adirondack Chair (`atouchofclass:mangrove_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:mangrove_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/mangrove_adirondack_chair.json)
+
 ## mangrove-baluster
 
 **Output:** 32 × Mangrove Baluster (`atouchofclass:mangrove_baluster`). **Type:** `minecraft:crafting_shaped`.
@@ -5804,6 +5916,20 @@ S.S
 `S` = `minecraft:nether_brick_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/nether_brick_sink.json)
+
+## oak-adirondack-chair
+
+**Output:** 2 × Oak Adirondack Chair (`atouchofclass:oak_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oak_adirondack_chair.json)
 
 ## oak-baluster
 
@@ -6472,6 +6598,20 @@ S.S
 `S` = `minecraft:oxidized_cut_copper_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/oxidized_cut_copper_sink.json)
+
+## pale-oak-adirondack-chair
+
+**Output:** 2 × Pale Oak Adirondack Chair (`atouchofclass:pale_oak_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:pale_oak_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_adirondack_chair.json)
 
 ## pale-oak-baluster
 
@@ -7292,6 +7432,20 @@ S.S
 `S` = `minecraft:polished_granite_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/polished_granite_sink.json)
+
+## poplar-adirondack-chair
+
+**Output:** 2 × Poplar Adirondack Chair (`atouchofclass:poplar_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:poplar_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/poplar_adirondack_chair.json)
 
 ## poplar-baluster
 
@@ -8285,6 +8439,20 @@ S.S
 `S` = `minecraft:smooth_stone_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/smooth_stone_sink.json)
+
+## spruce-adirondack-chair
+
+**Output:** 2 × Spruce Adirondack Chair (`atouchofclass:spruce_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:spruce_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/spruce_adirondack_chair.json)
 
 ## spruce-baluster
 
@@ -9512,6 +9680,20 @@ SSS
 `S` = `atouchofclass:brushed_stainless_steel`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/wall_tile_trim_strip.json)
+
+## warped-adirondack-chair
+
+**Output:** 2 × Warped Adirondack Chair (`atouchofclass:warped_adirondack_chair`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+P..
+PP.
+P.P
+```
+
+`P` = `minecraft:warped_planks`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/warped_adirondack_chair.json)
 
 ## warped-baluster
 

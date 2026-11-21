@@ -341,6 +341,18 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("leather_chair", ModBlocks.LEATHER_CHAIR);
     public static final java.util.Map<DyeColor, DeferredItem<BlockItem>> PATIO_CHAIR_ITEMS = registerPatioChairItems();
 
+    public static final java.util.Map<String, DeferredItem<BlockItem>> ADIRONDACK_CHAIR_ITEMS =
+            registerAdirondackChairItems();
+    public static final DeferredItem<BlockItem> SPRUCE_ADIRONDACK_CHAIR_ITEM =
+            ADIRONDACK_CHAIR_ITEMS.get("spruce_adirondack_chair");
+
+    private static java.util.Map<String, DeferredItem<BlockItem>> registerAdirondackChairItems() {
+        var items = new java.util.LinkedHashMap<String, DeferredItem<BlockItem>>();
+        ModBlocks.ADIRONDACK_CHAIRS.forEach((id, block) ->
+                items.put(id, ITEMS.registerSimpleBlockItem(id, block)));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
     private static java.util.Map<DyeColor, DeferredItem<BlockItem>> registerPatioChairItems() {
         var items = new java.util.EnumMap<DyeColor, DeferredItem<BlockItem>>(DyeColor.class);
         ModBlocks.PATIO_CHAIRS.forEach((color, block) -> items.put(color, ITEMS.registerSimpleBlockItem(block)));
@@ -925,6 +937,7 @@ public class ModItems {
             event.accept(LEATHER_CHAIR_ITEM);
             DINING_CHAIR_ITEMS.values().forEach(event::accept);
             PATIO_CHAIR_ITEMS.values().forEach(event::accept);
+            ADIRONDACK_CHAIR_ITEMS.values().forEach(event::accept);
             event.accept(REFRIGERATOR_ITEM);
             COPPER_REFRIGERATOR_ITEMS.forEach(event::accept);
             event.accept(OVEN_ITEM);

@@ -61,6 +61,7 @@ import com.digitaldownpour.atouchofclass.blocks.SofaBlock;
 import com.digitaldownpour.atouchofclass.blocks.ChairBlock;
 import com.digitaldownpour.atouchofclass.blocks.DiningChairBlock;
 import com.digitaldownpour.atouchofclass.blocks.PatioChairBlock;
+import com.digitaldownpour.atouchofclass.blocks.AdirondackChairBlock;
 import net.minecraft.world.item.DyeColor;
 import com.digitaldownpour.atouchofclass.blocks.SideTableBlock;
 import com.digitaldownpour.atouchofclass.blocks.DiningTableBlock;
@@ -1232,6 +1233,21 @@ public class ModBlocks {
     }
 
     public static final java.util.Map<DyeColor, DeferredBlock<PatioChairBlock>> PATIO_CHAIRS = registerPatioChairs();
+
+    public static final java.util.Map<String, DeferredBlock<AdirondackChairBlock>> ADIRONDACK_CHAIRS =
+            registerAdirondackChairs();
+    public static final DeferredBlock<AdirondackChairBlock> SPRUCE_ADIRONDACK_CHAIR =
+            ADIRONDACK_CHAIRS.get("spruce_adirondack_chair");
+
+    private static java.util.Map<String, DeferredBlock<AdirondackChairBlock>> registerAdirondackChairs() {
+        var blocks = new java.util.LinkedHashMap<String, DeferredBlock<AdirondackChairBlock>>();
+        for (var wood : DiningChairVariants.VALUES) {
+            String id = wood.wood() + "_adirondack_chair";
+            blocks.put(id, BLOCKS.register(id, name ->
+                    new AdirondackChairBlock(furnitureProperties(wood.sourceBlock(), name))));
+        }
+        return java.util.Collections.unmodifiableMap(blocks);
+    }
 
     private static java.util.Map<DyeColor, DeferredBlock<PatioChairBlock>> registerPatioChairs() {
         var blocks = new java.util.EnumMap<DyeColor, DeferredBlock<PatioChairBlock>>(DyeColor.class);

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "atouchofclass:adirondack_chair",
+  "pattern": [
+    "P  ",
+    "PP ",
+    "P P"
+  ],
+  "key": {
+    "P": "minecraft:spruce_planks"
+  },
+  "result": {
+    "id": "atouchofclass:spruce_adirondack_chair",
+    "count": 2
+  }
+}

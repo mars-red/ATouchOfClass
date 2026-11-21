@@ -1,0 +1,6 @@
+{
+  "parent": "atouchofclass:block/template_adirondack_chair",
+  "textures": {
+    "wood": "minecraft:block/stripped_cherry_log"
+  }
+}
