@@ -1302,5 +1302,21 @@
     "block.atouchofclass.brown_concrete_fire_pit":  "Brown Concrete Fire Pit",
     "block.atouchofclass.green_concrete_fire_pit":  "Green Concrete Fire Pit",
     "block.atouchofclass.red_concrete_fire_pit":  "Red Concrete Fire Pit",
-    "block.atouchofclass.black_concrete_fire_pit":  "Black Concrete Fire Pit"
+    "block.atouchofclass.black_concrete_fire_pit":  "Black Concrete Fire Pit",
+    "block.atouchofclass.white_patio_chair": "White Patio Chair",
+    "block.atouchofclass.orange_patio_chair": "Orange Patio Chair",
+    "block.atouchofclass.magenta_patio_chair": "Magenta Patio Chair",
+    "block.atouchofclass.light_blue_patio_chair": "Light Blue Patio Chair",
+    "block.atouchofclass.yellow_patio_chair": "Yellow Patio Chair",
+    "block.atouchofclass.lime_patio_chair": "Lime Patio Chair",
+    "block.atouchofclass.pink_patio_chair": "Pink Patio Chair",
+    "block.atouchofclass.gray_patio_chair": "Gray Patio Chair",
+    "block.atouchofclass.light_gray_patio_chair": "Light Gray Patio Chair",
+    "block.atouchofclass.cyan_patio_chair": "Cyan Patio Chair",
+    "block.atouchofclass.purple_patio_chair": "Purple Patio Chair",
+    "block.atouchofclass.blue_patio_chair": "Blue Patio Chair",
+    "block.atouchofclass.brown_patio_chair": "Brown Patio Chair",
+    "block.atouchofclass.green_patio_chair": "Green Patio Chair",
+    "block.atouchofclass.red_patio_chair": "Red Patio Chair",
+    "block.atouchofclass.black_patio_chair": "Black Patio Chair"
 }

@@ -58,20 +58,28 @@ public class ChairBlock extends HorizontalDirectionalBlock {
     @Override
     protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
         BlockState replacement = level.getBlockState(pos);
-        if (!level.isClientSide() && !replacement.is(this)) {
+        if (!level.isClientSide() && !keepsSeat(replacement)) {
             level.getEntitiesOfClass(SeatEntity.class, new AABB(pos).inflate(0.25))
                     .forEach(SeatEntity::discard);
         }
         super.affectNeighborsAfterRemoval(state, level, pos, moved);
     }
 
+    protected boolean keepsSeat(BlockState replacement) {
+        return replacement.is(this);
+    }
+
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                                Player player, BlockHitResult hitResult) {
+        return mountSeat(state, level, pos, player, 0.1);
+    }
+
+    protected InteractionResult mountSeat(BlockState state, Level level, BlockPos pos, Player player, double height) {
         if (level.isClientSide()) return InteractionResult.SUCCESS;
         if (player.isPassenger()) return InteractionResult.CONSUME;
 
-        Vec3 seatPosition = new Vec3(pos.getX() + 0.5, pos.getY() + 0.1, pos.getZ() + 0.5);
+        Vec3 seatPosition = new Vec3(pos.getX() + 0.5, pos.getY() + height, pos.getZ() + 0.5);
         AABB search = new AABB(seatPosition, seatPosition).inflate(0.2);
         List<SeatEntity> nearby = level.getEntitiesOfClass(SeatEntity.class, search);
         SeatEntity seat = nearby.stream().findFirst().orElse(null);
@@ -110,7 +118,7 @@ public class ChairBlock extends HorizontalDirectionalBlock {
         return shapes;
     }
 
-    private static VoxelShape rotateShape(VoxelShape base, int turns) {
+    protected static VoxelShape rotateShape(VoxelShape base, int turns) {
         VoxelShape[] result = {Shapes.empty()};
         base.forAllBoxes((x0, y0, z0, x1, y1, z1) -> {
             for (int turn = 0; turn < turns; turn++) {

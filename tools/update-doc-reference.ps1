@@ -30,9 +30,12 @@ foreach ($family in @('SideTable','DiningTable','DiningChair','Nightstand','Shut
     }
 }
 foreach ($m in [regex]::Matches((Get-Content (Join-Path $java 'DiningTableVariants.java') -Raw), 'new Definition\("([a-z0-9_]+)"')) { Add-Id ($m.Groups[1].Value + '_coffee_table') }
-foreach ($color in (Named-List 'FourPostBedVariants.java' 'COLORS')) { Add-Id ($color + '_concrete_fire_pit') }
 $woods = Named-List 'FourPostBedVariants.java' 'WOODS'
 $colors = Named-List 'FourPostBedVariants.java' 'COLORS'
+foreach ($color in $colors) {
+    Add-Id ($color + '_concrete_fire_pit')
+    Add-Id ($color + '_patio_chair')
+}
 foreach ($wood in $woods) { foreach ($color in $colors) { Add-Id ($wood + '_' + $color + '_four_post_bed') } }
 $railSource = Get-Content (Join-Path $java 'WoodRailingVariants.java') -Raw
 $railMatch = [regex]::Match($railSource, 'new String\[\]\{([^}]+)\}')
@@ -84,7 +87,7 @@ function Ingredient($value) {
     throw 'Unsupported ingredient format'
 }
 $catalog = [Collections.Generic.List[string]]::new()
-@('# Content catalog','','[Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)','','Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, coffee-table, dining-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, concrete-fire-pit, wood-railing, wood-trim, and copper-appliance registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.','','Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.','') | ForEach-Object { $catalog.Add($_) }
+@('# Content catalog','','[Manual](README.md) · [Recipes](recipes.md) · [Reference](reference.md)','','Generated from explicit item registrations and the basic-block, dresser, side-table, dining-table, coffee-table, dining-chair, patio-chair, nightstand, shutter, window-box, flower-bunch, patio-door, transom, window-pane, four-post-bed, concrete-fire-pit, wood-railing, wood-trim, and copper-appliance registration families. The internal tab icon is excluded. Run `tools/update-doc-reference.ps1` after changing these families; a new registration mechanism requires updating that helper. This is a source-derived catalog, not a runtime registry dump.','','Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.','') | ForEach-Object { $catalog.Add($_) }
 $catalog.Add("**$($registered.Count) registered player-content items.**")
 $catalog.Add('')
 $catalog.Add('| Item | Identifier | Acquisition |')

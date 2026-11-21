@@ -12,6 +12,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -338,6 +339,14 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("leather_sofa", ModBlocks.LEATHER_SOFA);
     public static final DeferredItem<BlockItem> LEATHER_CHAIR_ITEM =
             ITEMS.registerSimpleBlockItem("leather_chair", ModBlocks.LEATHER_CHAIR);
+    public static final java.util.Map<DyeColor, DeferredItem<BlockItem>> PATIO_CHAIR_ITEMS = registerPatioChairItems();
+
+    private static java.util.Map<DyeColor, DeferredItem<BlockItem>> registerPatioChairItems() {
+        var items = new java.util.EnumMap<DyeColor, DeferredItem<BlockItem>>(DyeColor.class);
+        ModBlocks.PATIO_CHAIRS.forEach((color, block) -> items.put(color, ITEMS.registerSimpleBlockItem(block)));
+        return java.util.Collections.unmodifiableMap(items);
+    }
+
     public static final java.util.Map<String, DeferredItem<BlockItem>> DINING_CHAIR_ITEMS = registerDiningChairItems();
     public static final DeferredItem<BlockItem> OAK_DINING_CHAIR_ITEM = DINING_CHAIR_ITEMS.get("oak_dining_chair");
 
@@ -915,6 +924,7 @@ public class ModItems {
             event.accept(LEATHER_SOFA_ITEM);
             event.accept(LEATHER_CHAIR_ITEM);
             DINING_CHAIR_ITEMS.values().forEach(event::accept);
+            PATIO_CHAIR_ITEMS.values().forEach(event::accept);
             event.accept(REFRIGERATOR_ITEM);
             COPPER_REFRIGERATOR_ITEMS.forEach(event::accept);
             event.accept(OVEN_ITEM);
