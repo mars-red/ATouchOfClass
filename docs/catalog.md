@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**873 registered player-content items.**
+**875 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -342,6 +342,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Golden Dandelion Bunch | `atouchofclass:golden_dandelion_bunch` | Survival obtainable — [golden_dandelion_bunch](recipes.md#golden-dandelion-bunch) |
 | Gothic Wallpaper | `atouchofclass:gothic_wallpaper` | Survival obtainable — [gothic_wallpaper](recipes.md#gothic-wallpaper) |
 | Granite Countertop | `atouchofclass:granite_countertop` | Survival obtainable — [granite_countertop](recipes.md#granite-countertop) |
+| Granite Paver | `atouchofclass:granite_paver` | Survival obtainable — [granite_paver_from_granite_stonecutting](recipes.md#granite-paver-from-granite-stonecutting), [granite_paver](recipes.md#granite-paver) |
 | Granite Sink | `atouchofclass:granite_sink` | Survival obtainable — [granite_sink](recipes.md#granite-sink) |
 | Gray Concrete Countertop | `atouchofclass:gray_concrete_countertop` | Survival obtainable — [gray_concrete_countertop](recipes.md#gray-concrete-countertop) |
 | Gray Concrete Fire Pit | `atouchofclass:gray_concrete_fire_pit` | Survival obtainable — [gray_concrete_fire_pit](recipes.md#gray-concrete-fire-pit) |
@@ -711,6 +712,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Stone Brick Countertop | `atouchofclass:stone_brick_countertop` | Survival obtainable — [stone_brick_countertop](recipes.md#stone-brick-countertop) |
 | Stone Brick Sink | `atouchofclass:stone_brick_sink` | Survival obtainable — [stone_brick_sink](recipes.md#stone-brick-sink) |
 | Stone Countertop | `atouchofclass:stone_countertop` | Survival obtainable — [stone_countertop](recipes.md#stone-countertop) |
+| Stone Paver | `atouchofclass:stone_paver` | Survival obtainable — [stone_paver_from_stone_stonecutting](recipes.md#stone-paver-from-stone-stonecutting), [stone_paver](recipes.md#stone-paver) |
 | Stone Quoin | `atouchofclass:stone_quoin` | Survival obtainable — [stone_quoin](recipes.md#stone-quoin) |
 | Stone Sink | `atouchofclass:stone_sink` | Survival obtainable — [stone_sink](recipes.md#stone-sink) |
 | Striped Wallpaper | `atouchofclass:striped_wallpaper` | Survival obtainable — [striped_wallpaper](recipes.md#striped-wallpaper) |

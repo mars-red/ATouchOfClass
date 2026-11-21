@@ -4387,6 +4387,27 @@ SSS
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/granite_countertop.json)
 
+## granite-paver-from-granite-stonecutting
+
+**Output:** 1 × Granite Paver (`atouchofclass:granite_paver`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:granite`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/granite_paver_from_granite_stonecutting.json)
+
+## granite-paver
+
+**Output:** 2 × Granite Paver (`atouchofclass:granite_paver`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SS
+SS
+```
+
+`S` = `minecraft:granite_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/granite_paver.json)
+
 ## granite-sink
 
 **Output:** 6 × Granite Sink (`atouchofclass:granite_sink`). **Type:** `minecraft:crafting_shaped`.
@@ -9314,6 +9335,27 @@ SSS
 `S` = `minecraft:stone_slab`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/stone_countertop.json)
+
+## stone-paver-from-stone-stonecutting
+
+**Output:** 1 × Stone Paver (`atouchofclass:stone_paver`). **Type:** `minecraft:stonecutting`.
+
+**Input:** `minecraft:stone`.
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/stone_paver_from_stone_stonecutting.json)
+
+## stone-paver
+
+**Output:** 2 × Stone Paver (`atouchofclass:stone_paver`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+SS
+SS
+```
+
+`S` = `minecraft:stone_slab`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/stone_paver.json)
 
 ## stone-quoin
 

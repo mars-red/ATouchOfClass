@@ -2,7 +2,27 @@
 
 [Manual contents](README.md) · [Recipes](recipes.md) · [Catalog](catalog.md)
 
-Outdoor living pieces for decks, terraces, and patios include Adirondack chairs, patio chairs, and concrete fire pits.
+Build patio floors with granite or stone pavers, then furnish the space with Adirondack chairs, patio chairs, and concrete fire pits.
+
+## Pavers
+
+![Granite and stone patio pavers](images/decks-and-patios/pavers.png)
+
+Granite Pavers and Stone Pavers are full 16 × 16 × 16 blocks for patio floors and paths. Mine them with a pickaxe to pick them back up.
+
+Arrange four matching granite or stone slabs (`S`) in a 2 × 2 square to make **2** pavers of that material. Picking up a matching slab unlocks the crafting recipe.
+
+```text
+S S
+S S
+```
+
+A stonecutter turns one full granite or stone block into **1** matching paver.
+
+| Paver | Crafting grid | Stonecutter |
+| --- | --- | --- |
+| Granite Paver | [4 Granite Slabs](recipes.md#granite-paver) | [1 Granite](recipes.md#granite-paver-from-granite-stonecutting) |
+| Stone Paver | [4 Stone Slabs](recipes.md#stone-paver) | [1 Stone](recipes.md#stone-paver-from-stone-stonecutting) |
 
 ## Fire pits
 

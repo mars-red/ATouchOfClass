@@ -180,6 +180,8 @@
     "item.atouchofclass.red_brick":  "Red Brick Siding",
     "item.atouchofclass.buff_brick":  "Buff Brick Siding",
     "block.atouchofclass.buff_bricks":  "Buff Bricks",
+    "block.atouchofclass.granite_paver":  "Granite Paver",
+    "block.atouchofclass.stone_paver":  "Stone Paver",
     "block.atouchofclass.buff_brick_slab":  "Buff Brick Slab",
     "block.atouchofclass.buff_brick_stairs":  "Buff Brick Stairs",
     "block.atouchofclass.buff_brick_wall":  "Buff Brick Wall",
