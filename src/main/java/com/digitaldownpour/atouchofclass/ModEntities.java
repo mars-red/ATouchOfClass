@@ -12,6 +12,7 @@ import com.digitaldownpour.atouchofclass.entities.RefrigeratorBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.OvenBlockEntity;
 import com.digitaldownpour.atouchofclass.entities.SeatEntity;
 import com.digitaldownpour.atouchofclass.entities.MergedFixtureBlockEntity;
+import com.digitaldownpour.atouchofclass.entities.OutdoorUplightBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
@@ -80,6 +81,10 @@ public class ModEntities {
                     com.digitaldownpour.atouchofclass.entities.FirePitBlockEntity::new,
                     ModBlocks.FIRE_PITS.values().stream().map(DeferredHolder::get).toArray(Block[]::new)
             ));
+
+    public static final Supplier<BlockEntityType<OutdoorUplightBlockEntity>> OUTDOOR_UPLIGHT_BE =
+            BLOCK_ENTITY_TYPES.register("outdoor_uplight", () -> new BlockEntityType<>(
+                    OutdoorUplightBlockEntity::new, ModBlocks.OUTDOOR_UPLIGHT.get()));
 
     public static final Supplier<BlockEntityType<RefrigeratorBlockEntity>> REFRIGERATOR_BE =
             BLOCK_ENTITY_TYPES.register("refrigerator_be", () -> new BlockEntityType<>(

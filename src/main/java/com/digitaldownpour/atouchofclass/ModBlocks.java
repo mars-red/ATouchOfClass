@@ -12,6 +12,7 @@ import com.digitaldownpour.atouchofclass.blocks.CopperChandelierBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperLampPostBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperFloorLampBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperCeilingLightBlock;
+import com.digitaldownpour.atouchofclass.blocks.OutdoorUplightBlock;
 import com.digitaldownpour.atouchofclass.blocks.CopperTableLampBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperChandelierChainBlock;
 import com.digitaldownpour.atouchofclass.blocks.WeatheringCopperChandelierBlock;
@@ -2001,6 +2002,11 @@ public class ModBlocks {
                     : new WeatheringCopperCeilingLightBlock(age, coffered, properties);
         });
     }
+
+    public static final DeferredBlock<OutdoorUplightBlock> OUTDOOR_UPLIGHT =
+            BLOCKS.registerBlock("outdoor_uplight", OutdoorUplightBlock::new,
+                    properties -> properties.strength(2.0F).requiresCorrectToolForDrops()
+                            .sound(net.minecraft.world.level.block.SoundType.METAL).noOcclusion().lightLevel(state -> 6));
 
     public static final DeferredBlock<CopperTableLampBlock> COPPER_TABLE_LAMP = registerCopperTableLamp("copper_table_lamp", WeatherState.UNAFFECTED, false);
     public static final DeferredBlock<CopperTableLampBlock> EXPOSED_COPPER_TABLE_LAMP = registerCopperTableLamp("exposed_copper_table_lamp", WeatherState.EXPOSED, false);

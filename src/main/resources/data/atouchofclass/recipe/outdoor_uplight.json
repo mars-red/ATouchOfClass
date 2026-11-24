@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IGI",
+    "ITI",
+    " I "
+  ],
+  "key": {
+    "I": "minecraft:iron_nugget",
+    "G": "minecraft:glass_pane",
+    "T": "minecraft:torch"
+  },
+  "result": {
+    "id": "atouchofclass:outdoor_uplight",
+    "count": 1
+  }
+}
