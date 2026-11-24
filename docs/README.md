@@ -10,7 +10,7 @@ Start as a [player](getting-started.md), [server owner](server-owners.md), or [m
 2. [Building and architectural details](building.md)
 3. [Tall doors, keys, and access](doors-and-access.md)
 4. [Furniture and storage](furniture.md)
-5. [Decks and patios](decks-and-patios.md)
+5. [Decks, patios, and landscape](decks-and-patios.md)
 6. [Kitchens and bathrooms](kitchens-and-bathrooms.md)
 7. [Lighting and copper finishes](lighting.md)
 8. [Elevators](elevators.md)

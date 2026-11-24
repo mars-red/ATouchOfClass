@@ -1,8 +1,8 @@
-# Decks and patios
+# Decks, patios, and landscape
 
 [Manual contents](README.md) · [Recipes](recipes.md) · [Catalog](catalog.md)
 
-Build patio floors with granite or stone pavers, then furnish the space with Adirondack chairs, patio chairs, bar stools, and concrete fire pits.
+Build patio floors with granite or stone pavers, then furnish the space with Adirondack chairs, patio chairs, bar stools, and concrete fire pits. Use outdoor uplights to illuminate walls and other nearby surfaces.
 
 ## Pavers
 
@@ -107,6 +107,24 @@ I . I
 
 Use dye directly on a placed **white bar stool** to color both cushions, or combine one white stool and one dye in a crafting grid. Only white stools accept dye. See the [blue bar stool dyeing recipe](recipes.md#blue-bar-stool-from-dye) for an example.
 
+
+## Outdoor uplights
+
+![outdoor-uplight.png](images/decks-and-patios/outdoor-uplight.png)
+
+Place an Outdoor Uplight on top of a solid block while facing the surface you want to illuminate. The fixture tilts away from you and emits vanilla block light at level 6.
+
+With a compatible Iris shader pack active, the uplight projects a warm spotlight up to 9.2 blocks. Overhangs and other solid features can catch the light and cast shadows. Right-click the fixture to cycle through **Narrow**, **Medium**, **Wide**, and **Extra Wide**. Extra Wide doubles the horizontal spread of Narrow, and each fixture remembers its setting.
+
+With shaders off, the fixture casts a decorative wash onto nearby solid wall faces. If a shader pack causes rendering problems, set `forceDisableOutdoorUplightSpotlight = true` in `config/atouchofclass-client.toml` to use the wall wash.
+
+Craft **1** Outdoor Uplight using five iron nuggets (`I`), one glass pane (`G`), and one torch (`T`). Picking up a torch unlocks the recipe.
+
+```text
+I G I
+I T I
+. I .
+```
 
 ## Troubleshooting
 

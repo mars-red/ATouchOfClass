@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "atouchofclass:block/outdoor_uplight"
+    },
+    "facing=east": {
+      "model": "atouchofclass:block/outdoor_uplight",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "atouchofclass:block/outdoor_uplight",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atouchofclass:block/outdoor_uplight",
+      "y": 270
+    }
+  }
+}

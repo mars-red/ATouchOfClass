@@ -7951,3 +7951,4 @@ repo
 /.gradle-run/wrapper/dists/CACHEDIR.TAG
 /.gradle-run/
 /logs/
+/releases/

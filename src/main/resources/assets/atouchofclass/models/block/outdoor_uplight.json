@@ -1,0 +1,248 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "body": "atouchofclass:block/outdoor_uplight_body",
+    "cap": "atouchofclass:block/outdoor_uplight_cap",
+    "lens": "atouchofclass:block/outdoor_uplight_lens",
+    "particle": "#body"
+  },
+  "elements": [
+    {
+      "from": [
+        6.757359,
+        0.803848,
+        5
+      ],
+      "to": [
+        9.242641,
+        9.548914,
+        11
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          8
+        ],
+        "x": -15.0,
+        "y": 0.0,
+        "z": -0.0
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#body"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#body"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0.803848,
+        6.757359
+      ],
+      "to": [
+        11,
+        9.548914,
+        9.242641
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          8
+        ],
+        "x": -15.0,
+        "y": 0.0,
+        "z": -0.0
+      },
+      "faces": {
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#body"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#body"
+        }
+      }
+    },
+    {
+      "from": [
+        6.757359,
+        0.803848,
+        5
+      ],
+      "to": [
+        9.242641,
+        9.548914,
+        11
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          8
+        ],
+        "x": -20.753571,
+        "y": 43.079517,
+        "z": -14.510819
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#body"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#body"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0.803848,
+        6.757359
+      ],
+      "to": [
+        11,
+        9.548914,
+        9.242641
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          8
+        ],
+        "x": -20.753571,
+        "y": 43.079517,
+        "z": -14.510819
+      },
+      "faces": {
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#body"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#body"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0.803848,
+        5
+      ],
+      "to": [
+        11,
+        9.548914,
+        11
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          8
+        ],
+        "x": -15.0,
+        "y": 0.0,
+        "z": -0.0
+      },
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#cap"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        9.548914,
+        5
+      ],
+      "to": [
+        11,
+        9.548914,
+        11
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          0,
+          8
+        ],
+        "x": -15.0,
+        "y": 0.0,
+        "z": -0.0
+      },
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#lens"
+        }
+      },
+      "light_emission": 12,
+      "shade": false
+    }
+  ]
+}
