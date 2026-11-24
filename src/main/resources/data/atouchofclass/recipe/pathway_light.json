@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ITI",
+    "I I",
+    "I I"
+  ],
+  "key": {
+    "I": "minecraft:iron_nugget",
+    "T": "minecraft:torch"
+  },
+  "result": {
+    "id": "atouchofclass:pathway_light",
+    "count": 1
+  }
+}

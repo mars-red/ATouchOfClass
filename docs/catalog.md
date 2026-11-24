@@ -6,7 +6,7 @@ Generated from explicit item registrations and the basic-block, dresser, side-ta
 
 Acquisition describes the bundled mod. Recipes using tags may accept different materials in a modpack. Copper aging is an in-world transformation, not a crafting recipe.
 
-**891 registered player-content items.**
+**893 registered player-content items.**
 
 | Item | Identifier | Acquisition |
 | --- | --- | --- |
@@ -524,6 +524,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Orange Glazed Terracotta Wall Tiles | `atouchofclass:orange_glazed_terracotta_wall_tiles` | Survival obtainable — [orange_glazed_terracotta_wall_tiles](recipes.md#orange-glazed-terracotta-wall-tiles) |
 | Orange Patio Chair | `atouchofclass:orange_patio_chair` | Survival obtainable — [orange_patio_chair_from_dye](recipes.md#orange-patio-chair-from-dye), [orange_patio_chair](recipes.md#orange-patio-chair) |
 | Orange Tulip Bunch | `atouchofclass:orange_tulip_bunch` | Survival obtainable — [orange_tulip_bunch](recipes.md#orange-tulip-bunch) |
+| Outdoor Uplight | `atouchofclass:outdoor_uplight` | Survival obtainable — [outdoor_uplight](recipes.md#outdoor-uplight) |
 | Oven | `atouchofclass:oven` | Survival obtainable — [oven](recipes.md#oven) |
 | Oxeye Daisy Bunch | `atouchofclass:oxeye_daisy_bunch` | Survival obtainable — [oxeye_daisy_bunch](recipes.md#oxeye-daisy-bunch) |
 | Oxidized Copper Bowl Ceiling Light | `atouchofclass:oxidized_copper_bowl_ceiling_light` | Survival obtainable — oxidation of `atouchofclass:weathered_copper_bowl_ceiling_light` |
@@ -577,6 +578,7 @@ Acquisition describes the bundled mod. Recipes using tags may accept different m
 | Pale Oak Window Box | `atouchofclass:pale_oak_window_box` | Survival obtainable — [pale_oak_window_box](recipes.md#pale-oak-window-box) |
 | Pale Oak Window Pane | `atouchofclass:pale_oak_window_pane` | Survival obtainable — [pale_oak_window_pane](recipes.md#pale-oak-window-pane) |
 | Pale Oak Four-Post Bed (Yellow) | `atouchofclass:pale_oak_yellow_four_post_bed` | Survival obtainable — [pale_oak_yellow_four_post_bed](recipes.md#pale-oak-yellow-four-post-bed) |
+| Pathway Light | `atouchofclass:pathway_light` | Survival obtainable — [pathway_light](recipes.md#pathway-light) |
 | Peony Bunch | `atouchofclass:peony_bunch` | Survival obtainable — [peony_bunch](recipes.md#peony-bunch) |
 | Pink Bar Stool | `atouchofclass:pink_bar_stool` | Survival obtainable — [pink_bar_stool_from_dye](recipes.md#pink-bar-stool-from-dye), [pink_bar_stool](recipes.md#pink-bar-stool) |
 | Pink Concrete Countertop | `atouchofclass:pink_concrete_countertop` | Survival obtainable — [pink_concrete_countertop](recipes.md#pink-concrete-countertop) |

@@ -7041,6 +7041,20 @@ FF
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/orange_tulip_bunch.json)
 
+## outdoor-uplight
+
+**Output:** 1 × Outdoor Uplight (`atouchofclass:outdoor_uplight`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+IGI
+ITI
+.I.
+```
+
+`G` = `minecraft:glass_pane`; `I` = `minecraft:iron_nugget`; `T` = `minecraft:torch`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/outdoor_uplight.json)
+
 ## oven
 
 **Output:** 1 × Oven (`atouchofclass:oven`). **Type:** `minecraft:crafting_shaped`.
@@ -7596,6 +7610,20 @@ LL
 `B` = `minecraft:yellow_bed`; `L` = `#minecraft:pale_oak_logs`
 
 [Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pale_oak_yellow_four_post_bed.json)
+
+## pathway-light
+
+**Output:** 1 × Pathway Light (`atouchofclass:pathway_light`). **Type:** `minecraft:crafting_shaped`.
+
+```text
+ITI
+I.I
+I.I
+```
+
+`I` = `minecraft:iron_nugget`; `T` = `minecraft:torch`
+
+[Recipe JSON](../src/main/resources/data/atouchofclass/recipe/pathway_light.json)
 
 ## peony-bunch
 
