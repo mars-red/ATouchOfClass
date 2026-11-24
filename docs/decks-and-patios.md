@@ -2,7 +2,7 @@
 
 [Manual contents](README.md) · [Recipes](recipes.md) · [Catalog](catalog.md)
 
-Build patio floors with granite or stone pavers, then furnish the space with Adirondack chairs, patio chairs, bar stools, and concrete fire pits. Use outdoor uplights to illuminate walls and other nearby surfaces.
+Build patio floors with granite or stone pavers, then furnish the space with Adirondack chairs, patio chairs, bar stools, and concrete fire pits. Line walkways with pathway lights and use outdoor uplights to illuminate walls and other nearby surfaces.
 
 ## Pavers
 
@@ -124,6 +124,20 @@ Craft **1** Outdoor Uplight using five iron nuggets (`I`), one glass pane (`G`),
 I G I
 I T I
 . I .
+```
+
+## Pathway lights
+
+![Pathway lights with dark metal frames and warm illuminated panels](images/decks-and-patios/pathway-lights.png)
+
+Place Pathway Lights along walkways, patio edges, or garden beds. Each fixture stands one block tall, has warm glowing panels on all four sides, and emits block light at level 12.
+
+Craft **1** Pathway Light using six iron nuggets (`I`) and one torch (`T`). Picking up a torch unlocks the [Pathway Light recipe](recipes.md#pathway-light).
+
+```text
+I T I
+I . I
+I . I
 ```
 
 ## Troubleshooting

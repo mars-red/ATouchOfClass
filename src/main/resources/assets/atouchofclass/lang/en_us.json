@@ -244,6 +244,7 @@
     "block.atouchofclass.waxed_weathered_copper_floor_lamp":  "Waxed Weathered Copper Floor Lamp",
     "block.atouchofclass.oxidized_copper_floor_lamp":  "Oxidized Copper Floor Lamp",
     "block.atouchofclass.waxed_oxidized_copper_floor_lamp":  "Waxed Oxidized Copper Floor Lamp",
+    "block.atouchofclass.pathway_light":  "Pathway Light",
     "block.atouchofclass.outdoor_uplight":  "Outdoor Uplight",
     "message.atouchofclass.outdoor_uplight.beam_width":  "Uplight beam width %s/4 (%s)",
     "message.atouchofclass.outdoor_uplight.beam_width.1":  "Narrow",
